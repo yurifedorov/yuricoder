@@ -1,0 +1,84 @@
+{% extends "base.njk" %}
+
+{% set path = '../' %}
+
+{# variables #}
+{% set title        = 'взаимодействие с пользователем' %}
+{% set description  = 'Операторы для взаимодействия с пользователем: alert, prompt, confirm' %}
+{% set category     = 'справочник' %}
+{% set subcategory  = 'технологии' %}
+{% set segment      = 'javascript' %}
+{% set code_language = 'language-js' %}
+
+{# <head> #}
+{% block head %}
+  <title>{{ segment | capitalize }} - {{ title }}</title>
+  <meta name="description" content="{{description}}" />
+  <link rel="stylesheet" href="{{path}}../../{{ prism_css }}">
+  <script src="{{path}}../../{{ prism_js }}"></script>
+{% endblock %}
+
+{% block main %}
+
+  <h1 class="{{ title_class }}">{{ title | capitalize }}</h1>
+  <p>Операторы: alert, prompt, confirm</p>
+
+  <section>
+    {% set anchor = '#alert' %}
+    <h2><a href="{{resource}}{{anchor}}" title="{{link_title}}">alert</a></h2>
+    {# uibasic1_1 #}
+    <p>Выводит модальное окно с сообщением и приостанавливает выполнение скрипта, пока пользователь не нажмёт «ОК»</p>
+    {% set title = 'alert' %}
+    {% set name  = 'uibasic1_1' %}
+    {% set code  = 'examples/javascript/uibasic1_1.njk' %}
+    {% include codeExample %}
+  </section>
+
+  <section>
+    {% set anchor = '#prompt' %}
+    <h2><a href="{{resource}}{{anchor}}" title="{{link_title}}">prompt</a></h2>
+    {# uibasic2_1 #}
+    <p>Выводит модальное окно с заголовком title, полем для ввода текста, заполненным строкой по умолчанию default и кнопками OK/CANCEL.</p>
+    {% set title = 'prompt синтаксис' %}
+    {% set name  = 'uibasic2_1' %}
+    {% set code  = 'examples/javascript/uibasic2_1.njk' %}
+    {% include codeExample %}
+    {# uibasic2_2 #}
+    <b>Вызов prompt возвращает то, что ввёл посетитель – строку или специальное значение null, если ввод отменён.</b>
+    {% set title = 'Пример' %}
+    {% set name  = 'uibasic2_2' %}
+    {% set code  = 'examples/javascript/uibasic2_2.njk' %}
+    {% include codeExample %}
+    <b>Лучше всегда указывать default иначе в IE в поле ввода выдаст 'undefined'.</b>
+    {# uibasic2_3 #}
+    <p>Тут не указан default (в браузере IE поле ввода выдаст 'undefined'):</p>
+    {% set title = 'Так писать не надо!' %}
+    {% set name  = 'uibasic2_3' %}
+    {% set code  = 'examples/javascript/uibasic2_3.njk' %}
+    {% include codeExample %}
+  </section>
+
+  <section>
+    {% set anchor = '#confirm' %}
+    <h2><a href="{{resource}}{{anchor}}" title="{{link_title}}">confirm</a></h2>
+    {# uibasic3_1 #}
+    <p>Выводит окно с вопросом question с двумя кнопками: OK и CANCEL.</p>
+    {% set title = 'confirm синтаксис' %}
+    {% set name  = 'uibasic3_1' %}
+    {% set code  = 'examples/javascript/uibasic3_1.njk' %}
+    {% include codeExample %}
+    <b>Вернет true при нажатии OK и false – при CANCEL(Esc)</b>
+    {# uibasic3_2 #}
+    {% set title = 'Пример' %}
+    {% set name  = 'uibasic3_2' %}
+    {% set code  = 'examples/javascript/uibasic3_2.njk' %}
+    {% include codeExample %}
+    {# uibasic3_3 #}
+    <p>Проверка на возраст</p>
+    {% set title = 'Проверка на возраст' %}
+    {% set name  = 'uibasic3_3' %}
+    {% set code  = 'examples/javascript/uibasic3_3.njk' %}
+    {% include codeExample %}
+  </section>
+
+{% endblock %}

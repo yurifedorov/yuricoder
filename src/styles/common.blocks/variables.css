@@ -1,0 +1,10 @@
+/* с указанием всех классов, где используются переменные */
+/* правило именования: имяБлока_имя-свойства */
+
+:root{
+  --asideTop-height: 30px; /* .aside_top | .aside_left | .aside_right */
+  --asideLeft-width: 100px; /* .aside_left | .aside_top */
+  --asideRight-width: 100px; /* .aside-right | .aside_top */
+  --main_padding-left: 20px; /* .main | .tile | .title_fullscreen */
+  --main_padding-right: 20px; /* .main | .tile | .title_fullscreen */
+}

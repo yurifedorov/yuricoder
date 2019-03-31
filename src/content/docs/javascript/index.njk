@@ -1,0 +1,26 @@
+{% extends "base.njk" %}
+
+{# variables #}
+{% set title        = 'javascript' %}
+{% set category     = 'справочник' %}
+{% set subcategory_del = 'delete' %}
+{% set segment_del  = 'delete' %}
+{% set subsegment_del  = 'delete' %}
+
+{# ===================================== #}
+
+{% block head %}
+  <title>Справочник по JavaScript</title>
+  <meta name="description" content="Мои заметки по языку JavaScript. Выдержки из официальной документации, применение на практике." />
+{% endblock %}
+
+{% block aside_top %}{% include aside_top %}{% endblock %}
+{% block aside_left %}{% include aside_left %}{% endblock %}
+
+{% block main %}
+
+  <h1>Справочник по JavaScript</h1>
+  <p>Мои заметки по языку JavaScript. Выдержки из официальной документации, применение на практике</p>
+  {% include 'parts/navigation/javascript_list.njk' %}
+    
+{% endblock %}

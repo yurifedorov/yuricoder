@@ -1,0 +1,17 @@
+.list__item {
+  line-height: auto;
+  margin-bottom: 5px;
+}
+
+.list__item > summary {
+  background: #dadada;
+  text-indent: 15px;
+}
+
+.list__item > a {
+  font-size: auto;
+}
+
+.list__item > small {
+  color: gray;
+}

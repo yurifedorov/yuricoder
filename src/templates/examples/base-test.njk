@@ -1,0 +1,17 @@
+{# ТЕСТОВЫЙ БАЗОВЫЙ ШАБЛОН (Только для испльзования в codeExecuted) #}
+{# !!! вместо тегов header, main и footer использовал div с классами, чтобы избежать конфликтов с основным сайтом #}
+
+<html lang="en">
+  <head>
+    {% block head %} {# содержимое <head> #} {% endblock %}
+  </head>
+
+  <body>
+    <div class="header-test">header</div>
+    <div class="main-test">
+      {% block main %}{% endblock %}
+    </div>
+    <div class="footer-test">footer</div>
+  </body>
+  
+</html>

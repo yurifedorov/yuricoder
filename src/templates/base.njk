@@ -1,0 +1,103 @@
+{# БАЗОВЫЙ ШАБЛОН #}
+
+{# Common variable #}
+{#---------------------------------------------------------------------#}
+
+{# What are these variables? #} {#
+
+1)  [стили]       style            - основные стили
+2)  [скрипты]     main_js          - основной скрипт
+3)  [скрипты]     ContainerQueries - скрипт для работы 'контейнерных запросов'
+4)  [библиотеки]  split_js         - скрипт для управления шириной контейнеров
+5)  [библиотеки]  split_init       - инициализация скрипта для управления шириной контейнеров
+6)  [библиотеки]  prism_js         - скрипт для подсветки синтаксиса в примерах хода
+7)  [библиотеки]  prism_css        - стили для "prism"
+8)  [библиотеки]  peppermint_js    - скрипт для touch слайдера
+9)  [библиотеки]  peppermint_css   - обязательные стили для работы "peppermint"
+10) [библиотеки]  peppermint_init  - инициализация и настройки слайдера "peppermint"
+11) [скрипты]     autocomplete     - скрипт для автозаполнения форм при вводе
+12) [шаблоны]     header_block     - хедер
+13) [шаблоны]     aside            - aside
+14) [шаблоны]     footer_block     - футер
+15) [шаблоны]     splitExample     - шаблон для split-блоков
+16) [шаблоны]     codeExample      - шаблон для примеров кода
+17) [атрибуты]    link_title       - подсказка для ссылок (при наведении)
+18) [классы]      body             - дефолтный класс для <body>
+19) [классы]      body_mod         - модификатор для <body> (сейчас не используется)
+20) [классы]      header           - дефолтный класс для <header>
+21) [классы]      nav              - дефолтный класс для <nav>
+22) [классы]      nav__item        - дефолтный класс для пунктов меню
+23) [классы]      tile             - дефолтный класс для контейнера с "плитками"
+24) [классы]      tile__item       - дефолтный класс для "плиток"
+25) [классы]      title_class      - дефолтный класс для "заголовков" (префик _class потому что у nunjucks есть уже переменная "title")
+26) [классы]      title_small      - маленький шрифт для заголовков (модификатор)
+27) [классы]      title_sticky     - заголовок всегда в поле видимости при скролле
+--) [классы]      aside            - дефолтный класс для <aside>
+29) [классы]      aside_sticky     - <aside> всегда в поле видимости при скролле
+30) [классы]      main             - дефолтный класс для <main>
+31) [классы]      footer           - дефолтный класс для <footer>
+
+#}
+
+{# blocks #}
+{% set aside_top    = 'parts/blocks/aside-top.njk' %} {# ?? #}
+{% set aside_left   = 'parts/blocks/aside-left.njk' %} {# ?? #}
+{% set aside_right  = 'parts/blocks/aside-right.njk' %} {# ?? #}
+{% set section      = 'parts/blocks/section.njk' %} {# ?? #}
+{% set split        = 'parts/blocks/split-example.njk' %}
+{% set codeExample  = 'parts/blocks/code-example.njk' %} {# 16 #}
+
+{# codeExample_beta #}
+{% set codeExample_beta  = 'parts/code-example/code-example.njk' %} {# 16 #}
+{% set toolbar = 'parts/code-example/toolbar_beta.njk' %}
+
+{% set codeExecuted = 'parts/blocks/code-executed.njk' %} {# ?? #}
+
+
+{# scripts #}
+{% set ContainerQueries = 'parts/scripts/resize-observer.min.js' %} {# 3 #}
+{% set split_init       = 'parts/scripts/split_init.mjs' %} {# 5 #}
+
+{# Libs #}
+{% set prism_js                = 'libs/prism/prism.min.js' %} {# 6 #}
+{% set prism_css               = 'libs/prism/prism.min.css' %} {# 7 #}
+{% set split_js                = 'libs/split-js/split.min.js' %} {# 4 #}
+
+{# ================================================================================== #}
+
+<html lang="en" data-observe-resizes>
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="favicon.svg" rel="icon" type="image/svg+xml">
+    <link rel="stylesheet" href="/style.min.css">
+    {% block head %} {# дополнительные ресурсы #} {% endblock %}
+  </head>
+
+  <body data-observe-resizes>
+    <header>
+      <a href="/index.html" class="logo"></a>
+      {% include 'parts/navigation/navigation.njk' %}
+    </header>
+    {% block aside_top %} {# контент #} {% endblock %}
+    {% block aside_left %} {# строго перед 'main' #} {% endblock %}
+    {% block aside_right %} {# строго после 'main' #} {% endblock %}
+
+    <main data-observe-resizes>
+      {% block main %} {# контент #} {% endblock %}
+    </main>
+
+    <footer>
+      <i>footer</i>
+      <i>footer</i>
+      <i>footer</i>
+    </footer>
+    {# инлайновые скрипты для ВСЕХ страниц #}
+    <script>{% include ContainerQueries %}</script>
+    {# дополнительные инлайновые скрипты #}
+    {% block inlineScripts %}{% endblock %}
+  </body>
+
+</html>

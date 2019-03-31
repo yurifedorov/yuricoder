@@ -1,0 +1,27 @@
+{% extends "base.njk" %}
+
+{# variables #}
+{% set title           = 'css' %}
+{% set category        = 'справочник' %}
+{% set subcategory_del = 'delete' %}
+{% set segment_del     = 'delete' %}
+{% set subsegment_del  = 'delete' %}
+{% set path = '../' %}
+
+{# ===================================== #}
+
+{% block head %}
+  <title>Справочник по CSS</title>
+  <meta name="description" content="Мои заметки по использованию CSS." />
+{% endblock %}
+
+{% block aside_top %}{% include aside_top %}{% endblock %}
+{% block aside_left %}{% include aside_left %}{% endblock %}
+
+{% block main %}
+
+  <h1>Справочник по CSS</h1>
+  <p>Мои заметки по использованию CSS.</p>
+  {% include 'parts/navigation/css_list.njk' %}
+
+{% endblock %}

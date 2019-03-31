@@ -1,0 +1,25 @@
+{% extends "base.njk" %}
+
+{# variables #}
+{% set title           = 'tile' %}
+{% set category        = 'справочник' %}
+{% set subcategory     = 'nunjucks' %}
+{% set segment         = 'мои шаблоны' %}
+{% set subsegment_del  = 'delete' %}
+
+{# <head> #}
+{% block head %}
+  <title>Шаблон для генерации плитки</title>
+  <meta name="description" content="Шаблон для вывода блока 'плитка'." />
+{% endblock %}
+
+{% block aside_top %}{% include aside_top %}{% endblock %}
+{% block aside_left %}{% include aside_left %}{% endblock %}
+
+{# <body> #}
+{% block main %}
+
+  <h1>Tile</h1>
+  <p>Шаблон для вывода блока 'плитка'. Герерация контента из JSON.</p>
+
+{% endblock %}

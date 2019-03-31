@@ -1,0 +1,13 @@
+{# имя 'njk' - это сокращение nunjucks #}
+{# для подсветки синтаксиса в prism.js используется класс "language-jinja2" #}
+
+{% raw %}
+  {# nunjucks / jinja2 (example-5) #}
+  &lt;div class="tile"&gt;
+    {% for category in docs %}
+    &lt;div class="tile__item"&gt;
+      &lt;a href="{{category.link}}"&gt;{{category.name | title }}&lt;/a&gt;
+    &lt;/div&gt;
+    {% endfor %}
+  &lt;/div&gt;
+{% endraw %}

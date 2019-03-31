@@ -1,0 +1,9 @@
+{# шаблон блока "tile" (плитка) #}
+
+<div class="tile tile_small">
+  {% for category in docs %}
+  <div class="tile__item">
+    <a href="{{category.link}}">{{category.name | title }}</a>
+  </div>
+  {% endfor %}
+</div>

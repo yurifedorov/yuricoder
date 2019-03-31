@@ -1,0 +1,13 @@
+{# Макрос для создания плитки #}
+
+{% macro tile(name='', array='') %}
+
+<div class="tile tile_small">
+  {% for name in tile %}
+  <div class="tile__item">
+    <a href="{{category.link}}">{{category.name | title }}</a>
+  </div>
+  {% endfor %}
+</div>
+
+{% endmacro %}

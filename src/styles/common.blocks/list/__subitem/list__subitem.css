@@ -1,0 +1,10 @@
+.list__subitem {
+  line-height: 1.2em;
+  font-weight: 100;
+  list-style: none;
+  padding-bottom: 10px;
+}
+
+.list__subitem > a {
+  text-decoration: none;
+}

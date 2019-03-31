@@ -1,0 +1,15 @@
+language: node_js                               # Для сборки нужен будет NodeJS
+node_js:
+  - stable                                      # Выбираем последнюю стабильную версию NodeJS
+script:
+  - npm run prod                                # Запускаем продакшн сборку, скрипт из package.json
+  - echo yuricoder.dev > dist/CNAME             # Создать файл CNAME и записать в него домен
+deploy:
+  provider: pages                               # Используется GitHub Pages
+  skip_cleanup: true                            # Не чистить рабочую дерикторию
+
+                                                # GITHUB_TOKEN - обеспечивает интеграцию Travis и GitHub
+                                                # Сгенерировать токен можно здесь https://github.com/settings/tokens
+
+  github_token: $GITHUB_TOKEN                   # токен добавляется в настройках репозитория на сайте Travis (тут ничего не стирать)
+  local_dir: dist                               # название директории, из которой будут отдаваться файлы на сервер

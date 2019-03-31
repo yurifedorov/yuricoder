@@ -1,0 +1,25 @@
+{% extends "base.njk" %}
+
+{# variables #}
+{% set title           = 'split' %}
+{% set category        = 'справочник' %}
+{% set subcategory     = 'nunjucks' %}
+{% set segment         = 'мои шаблоны' %}
+{% set subsegment_del  = 'delete' %}
+
+{# <head> #}
+{% block head %}
+  <title>Управление шириной блоков с помощью мыши (split)</title>
+  <meta name="description" content="Блок, состоящий нескольких контейнеров, где каждый из них можно сузить/расширить." />
+{% endblock %}
+
+{% block aside_top %}{% include aside_top %}{% endblock %}
+{% block aside_left %}{% include aside_left %}{% endblock %}
+
+{# <body> #}
+{% block main %}
+
+  <h1>Split</h1>
+  <p>Блок, состоящий нескольких контейнеров, где каждый из них можно сузить/расширить</p>
+
+{% endblock %}

@@ -1,0 +1,68 @@
+{% extends "base.njk" %}
+
+{# variables #}
+{% set title           = 'операторы' %}
+{% set category        = 'справочник' %}
+{% set subcategory     = 'javascript' %}
+{% set segment_del     = 'delete' %}
+{% set subsegment_del  = 'delete' %}
+{% set code_language   = 'language-js' %}
+
+{# ===================================== #}
+
+{% block head %}
+  <title>Все операторы в JavaScript</title>
+  <meta name="description" content="Список операторов в JavaScript." />
+{% endblock %}
+
+{% block aside_top %}{% include aside_top %}{% endblock %}
+{% block aside_left %}{% include aside_left %}{% endblock %}
+
+{% block main %}
+
+  <h1 class="{{ title_class }}">{{ title | capitalize }}</h1>
+
+  <ul>
+    <li>&#10004; <a href="binary-plus.html">сложение (бинарный плюс)</a><br><small> [ A + A ] арифметические операторы</small></li>
+    <li>&#10004; <a href="binary-minus.html">вычитание (бинарный минус)</a><br><small> [ A - A ] арифметические операторы</small></li>
+    <li><a href="#">деление</a><br><small> [ / ] арифметические операторы</small></li>
+    <li><a href="#">умножение</a><br><small> [ * ] арифметические операторы</small></li>
+    <li>&#10004; <a href="remainder.html">остаток от деления</a><br><small> [ % ] арифметические операторы</small></li>
+    <li><a href="#">возведение в степень</a><br><small> [ ** ] арифметические операторы</small></li>
+    <li>&#10004; <a href="increment.html">инкремент</a><br><small> [ A++ или ++A ] инкремент и декремент</small></li>
+    <li>&#10004; <a href="decrement.html">декремент</a><br><small> [ A-- или --A ] инкремент и декремент</small></li>
+    <li>&#10004; <a href="unary-plus.html">унарный плюс</a><br><small> [ +A ] унарные операторы</small></li>
+    <li>&#10004; <a href="unary-minus.html">унарный минус</a><br><small> [ -A ] унарные операторы</small></li>
+    <li><a href="#">логическое НЕ</a><br><small> [ ! ] унарные операторы</small></li>
+    <li><a href="#">больше</a><br><small> [ &gt; ] операторы сравнения</small></li>
+    <li><a href="#">меньше</a><br><small>[ &lt; ] операторы сравнения</small></li>
+    <li><a href="#">больше или равно</a><br><small> [ &gt;= ] операторы сравнения</small></li>
+    <li><a href="#">меньше или равно</a><br><small> [ &lt;= ] операторы сравнения</small></li>
+    <li><a href="#">равно</a><br><small> [ == ] операторы равенства</small></li>
+    <li><a href="#">не равно</a><br><small> [ != ] операторы равенства</small></li>
+    <li><a href="#">строго равно</a><br><small> [ === ] операторы равенства</small></li>
+    <li><a href="#">строго не равно</a><br><small> [ !== ] операторы равенства</small></li>
+    <li><a href="#">побитовое И</a><br><small> [ a &amp; b ] побитовые операторы</small></li>
+    <li><a href="#">побитовое ИЛИ</a><br><small> [ a | b ] побитовые операторы</small></li>
+    <li><a href="#">побитовое исключающее ИЛИ</a><br><small> [ a ^ b ] побитовые операторы</small></li>
+    <li><a href="#">логическое И</a><br><small> [ a &amp;&amp;  b ] логические операторы</small></li>
+    <li><a href="#">логическое ИЛИ</a><br><small> [ a || b ] логические операторы</small></li>
+    <li><a href="#">условный (тернарный) оператор</a><br><small> [ условие ? выражение1 : выражение2 ] условные операторы</small></li>
+    <li>&#10004; <a href="assign.html">присваивание</a><br><small> [ = ] операторы присваивания</small></li>
+    <li><a href="#">присваивание с умножением</a><br><small> [ *= ] операторы присваивания</small></li>
+    <li><a href="#">присваивание с делением</a><br><small> [ /= ] операторы присваивания</small></li>
+    <li><a href="#">присваивание с взятием остатка от деления</a><small> [ %= ] операторы присваивания</small></li>
+    <li><a href="#">присваивание со сложением</a><br><small> [ += ] операторы присваивания</small></li>
+    <li><a href="#">присваивание с вычитанием</a><br><small> [ -= ] операторы присваивания</small></li>
+    <li><a href="#">присваивание со сдвигом влево</a><br><small> [ &lt;&lt;= ] операторы присваивания</small></li>
+    <li><a href="#">присваивание со знаковым сдвигом вправо</a><br><small> [ >>= ] операторы присваивания</small></li>
+    <li><a href="#">присваивание с беззнаковым сдвигом вправо</a><br><small> [ >>>= ] операторы присваивания</small></li>
+    <li><a href="#">присваивание с побитовым И</a><br><small> [ &amp;= ] операторы присваивания</small></li>
+    <li><a href="#">присваивание с побитовым ИСКЛЮЧАЮЩИМ ИЛИ</a><br><small> [ ^= ] операторы присваивания</small></li>
+    <li><a href="#">присваивание с побитовым ИЛИ</a><br><small> [ |= ] операторы присваивания</small></li>
+    <li><a href="comma.html">запятая</a><br><small> [ , ]</small></li>
+    <li><a href="operator-precedence.html">приоритет операторов</a></li>
+  </ul>
+
+
+{% endblock %}

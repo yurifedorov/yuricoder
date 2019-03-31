@@ -1,0 +1,56 @@
+{% extends "base.njk" %}
+
+{# variables #}
+{% set title        = 'бинарный плюс' %}
+{% set category        = 'справочник' %}
+{% set subcategory     = 'javascript' %}
+{% set segment         = 'операторы' %}
+{% set subsegment_del  = 'delete' %}
+{% set code_language = 'language-js' %}
+
+{# ===================================== #}
+
+{% block head %}
+  <title>Бинарный плюс</title>
+  <meta name="description" content="Как действует бинарный плюс в JavaScript." />
+  <link rel="stylesheet" href="../../../{{ prism_css }}">
+  <script src="../../../{{ prism_js }}"></script>
+{% endblock %}
+
+{% block aside_top %}{% include aside_top %}{% endblock %}
+{% block aside_left %}{% include aside_left %}{% endblock %}
+
+{% block main %}
+
+  <h1>{{ title | capitalize }}</h1>
+
+  <section>
+    {# binary_plus #}
+    {% set title = 'Описание' %}
+    {% set description = 'выполняет сложение двух операндов (чисел), объединеняет строки, преобразует строки в числа.' %}
+    {% set onclick = 'onclick=' %}
+    {% set function = "binary_plus()" %}
+    {% set code = 'examples/javascript/operators/binary_plus.njk' %}
+    {% include codeExample %}
+    <table>
+      <tr>
+        <td>2</td>
+        <td>сложение двух числел</td>
+      </tr>
+      <tr>
+        <td>11</td>
+        <td>объединение двух строк</td>
+      </tr>
+      <tr>
+        <td>11</td>
+        <td>если один из аргументов является строкой, то второй будет также преобразован к строке <b>*</b></td>
+      </tr>
+      <tr>
+        <td>0</td>
+        <td>другие операторы наоборот преобразуют строки в числа</td>
+      </tr>
+    </table>
+    <p><span>* </span><small>Это особенность только "<b>бинарного плюса</b>", остальные арифметические операторы работают только с числами и приводят строки к числам.</small></p>
+  </section>
+
+{% endblock %}

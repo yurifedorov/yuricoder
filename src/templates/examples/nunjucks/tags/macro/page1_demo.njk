@@ -1,0 +1,15 @@
+{% extends "examples/base-test.njk" %}
+
+{% block exampleContent %}
+{#======================== Демо ========================#}
+
+{% block main %}
+
+    {% from "examples/nunjucks/tags/macro/macro_demo.njk" import tile %}
+    {{ tile('category', 'docs') }}
+    {{ tile('pass', type='password') }}
+
+{% endblock %}
+
+{#======================================================#}
+{% endblock %}

@@ -1,0 +1,53 @@
+/* временно расположить в ряд по три code-example */
+.wrapper_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
+}
+
+/* code-example БЕТА версия */
+.code-example-beta {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* для 5 табов */
+  grid-template-rows: auto auto max-content;
+  grid-gap: 1px 2px;
+  box-sizing: border-box;
+}
+
+/* нужно переопределить оригинальные стили prism.js */
+.code-example-beta pre[class*=language-] {
+  margin: 0;
+}
+
+.code-example-beta > label {
+  background: purple;
+  color: white;
+  padding: 7px;
+  text-align: center;
+  height: 20px;
+}
+
+/* скрыть инпуты */
+input[name=button] {
+  z-index: 99;
+  height: 0;
+  grid-row: 2; /* не трогать */
+  display: none;
+}
+
+/* активная кнопка меняет цвет */
+input[name=button]:checked + label {
+  background: orange;
+}
+
+.code, .demo {
+  display: grid;
+  grid-column: 1 / -1;
+  grid-row: 3; /* не трогать */
+  background:#2d2d2d; /* цвет из prism.js - #2d2d2d */
+}
+
+.demo {
+  background: red;
+  padding: 0 10px;
+}

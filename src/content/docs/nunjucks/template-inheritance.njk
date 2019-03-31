@@ -1,0 +1,67 @@
+{% extends "base.njk" %}
+
+{# variables #}
+{% set title          = 'наследование шаблонов' %}
+{% set category       = 'справочник' %}
+{% set subcategory    = 'nunjucks' %}
+{% set segment_del    = 'delete' %}
+{% set subsegment_del = 'delete' %}
+{% set path          = '../' %}
+
+{# <head> #}
+{% block head %}
+  <title>Наследование шаблонов в Nunjucks</title>
+  <meta name="description" content="Самая сильная сторона Nunjucks - это возможность создавать шаблоны для каждого отдельно взятого компонента веб-сайта." />
+  <link rel="stylesheet" href="{{path}}../../{{ prism_css }}">
+  <script src="{{path}}../../{{ prism_js }}" async></script>
+{% endblock %}
+
+{% block aside_top %}{% include aside_top %}{% endblock %}
+{% block aside_left %}{% include aside_left %}{% endblock %}
+
+{% block main %}
+
+  <h1>{{ title | capitalize }}</h1>
+  <p>{{ description }}</p>
+  <p>Практически любой многостраничный сайт имеет одинаковые части, например: <b>&lt;header&gt;</b>, <b> &lt;footer&gt;</b> и возможно <b>&lt;aside&gt;</b>.</p>
+  <p>Без шаблонизаторов изменять 'шапку' или 'футер' ужасно долгое занятие. Для этого придется открыть каждый html документ, найти в нем нужный кусок кода и вставить туда новую инфомацию. Хорошо, если это лендинг или 2-3 страничный сайт - тогда шаблонизатор особо и не нужен.</p>
+  <p>Мой <a href="https://yuricoder.dev/">сайт</a> имеет много страниц и <a href="https://mozilla.github.io/nunjucks/">Nunjucks</a> стал моим спасением!</p>
+
+  <h2>Базовый шаблон</h2>
+  <p>Имеет общий &lt;header&gt;, &lt;footer&gt; и некоторые данные для поисковых систем:</p>
+
+  {% set title = 'base.njk' %}
+  {% set name  = 'base' %}
+  {% set code  = 'examples/nunjucks/template-inheritance/base_code.njk' %}
+  {% set code_language = 'language-jinja2' %}
+  {% include codeExample %}
+
+  <p>В шаблоне <b>base.njk</b> стандартная HTML-разметка веб-страницы. В &lt;head&gt; подключены общие метаданные, favicon и css.</p>
+  
+  <h3>Блок head. Зачем он нужен? </h3>
+  <p>Иногда надо подключить какой-нибудь скрипт или библиотеку на одну из страниц. Если подключать их в <b>base.njk</b>, то они будут на каждой странице сайта, где они не нужны. Объявив блок <b>head</b>, все дополнительные ресурсы можно подключить в дочернем шаблоне и после сборки мы получим набор html-страниц содержащий только самое необходимое.</p>
+
+  <h2>Дочерние шаблоны</h2>
+  <p>Это любая страница сайта.</p>
+
+  {% set title = 'дочерний шаблон №1' %}
+  {% set name  = 'child_1' %}
+  {% set code  = 'examples/nunjucks/template-inheritance/child-1_code.njk' %}
+  {% set code_language  = 'language-jinja2' %}
+  {% include codeExample %}
+  {% set demo = 'examples/nunjucks/template-inheritance/child-1_demo.njk' %}
+  {% include codeExecuted %}
+
+  {% set title = 'дочерний шаблон №2' %}
+  {% set name  = 'child_2' %}
+  {% set code  = 'examples/nunjucks/template-inheritance/child-2_code.njk' %}
+  {% set code_language = 'language-jinja2' %}
+  {% include codeExample %}
+  {% set demo = 'examples/nunjucks/template-inheritance/child-2_demo.njk' %}
+  {% include codeExecuted %}
+  <p><b>Итог:</b> &lt;header&gt; и &lt;footer&gt; сгенерировался из base.njk, а контент из дочерних шаблонов.</p>
+  <span class="warning">Сканируя файлы шаблонов, Nunjucks вначале находит родителя. <br><br> Поэтому тег <b>extends</b> должен быть первым в шаблоне.</span>
+
+
+
+{% endblock %}

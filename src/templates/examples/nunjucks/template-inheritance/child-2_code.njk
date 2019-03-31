@@ -1,0 +1,19 @@
+{% block code %}
+{% raw %}
+
+{% extends "parts/base.njk" %}
+
+{% block head %}
+  &lt;title>Страница №2&lt;/title>
+  &lt;meta name="description" content="описание этой страницы" />
+  {# скрипт, необходимый только для этой страницы #}
+  &lt;script src="super-libs.js" async>&lt;/script>
+{% endblock %}
+
+{% block main %}
+&lt;h1>Вторая страница&lt;/h1>
+&lt;p>Я дочерний шаблон №1&lt;/p>
+{% endblock %}
+
+{% endraw %}
+{% endblock %}

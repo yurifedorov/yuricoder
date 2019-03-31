@@ -1,0 +1,50 @@
+{% extends "base.njk" %}
+
+{# variables #}
+{% set title        = 'проблемы' %} {# Заголовок #}
+{% set category     = 'справочник' %} {# категория #}
+{% set subcategory  = 'инструменты' %} {# подкатегория #}
+{% set segment_del  = 'delete' %} {# подкатегория #}
+{% set path = '../' %}
+{% set code_language = 'language-jinja2' %}
+
+{# <head> #}
+{% block head %}
+  <title>Не возможно задать имя массива через переменную</title>
+  <meta name="description" content="Неприятные ситуации в процессе работы с шаблонизатором Nunjucks" />
+  <link rel="stylesheet" href="{{path}}../../../{{ prism_css }}">
+  <script src="{{path}}../../../{{ prism_js }}"></script>
+{% endblock %}
+
+{# <body> #}
+{% block main %}
+
+  <h1>задать имя массива через переменную</h1>
+  <p>Если сделать так, как я описал - то будет ошибка "Template render error"</p>
+
+  <section>
+    {# example1 #}
+    {% set title = 'шаблон блока tile' %}
+    {% set description = 'хочу задать массив docs через переменную - вот так {{ array }} и чтобы на это место подставилось нужное значение.' %}
+    {% set button_display = 'hidden' %}
+    {% set code = 'examples/nunjucks/issues/issue-1/example1.njk' %}
+    {% include codeExample %}
+  </section>
+
+  <section>
+    {# example2 #}
+    {% set title = 'страница, где будет блок tile' %}
+    {% set description = 'генерация будет на основе data.json, поэтому хотелось бы просто указать имя массива и ниже вставить блок (всего 2 строки).' %}
+    {% set code = 'examples/nunjucks/issues/issue-1/example2.njk' %}
+    {% include codeExample %}
+  </section>
+
+  <section>
+    {# example2 #}
+    {% set title = 'Собственно data.json' %}
+    {% set description = 'пример массива.' %}
+    {% set code = 'examples/nunjucks/issues/issue-1/example3.njk' %}
+    {% include codeExample %}
+  </section>
+
+{% endblock %}

@@ -1,0 +1,9 @@
+.title_sticky {
+    line-height: 2em;
+    background: white;
+    margin: 0;
+    text-align: center;
+    position: sticky;
+    top: 121.5;
+    z-index: 1;
+}

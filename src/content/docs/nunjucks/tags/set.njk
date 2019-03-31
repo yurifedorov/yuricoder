@@ -1,0 +1,31 @@
+{% extends "base.njk" %}
+
+{# variables #}
+{% set title          = 'set' %}
+{% set category       = 'справочник' %}
+{% set subcategory    = 'nunjucks' %}
+{% set segment        = 'теги' %}
+{% set subsegment_del = 'delete' %}
+
+{# <head> #}
+{% block head %}
+  <title>Переменные в Nunjucks</title>
+  <meta name="description" content="Тег 'set' позволяет создавать и изменять переменную." />
+  <link rel="stylesheet" href="../../../{{ prism_css }}">
+  <script src="../../../{{ prism_js }}"></script>
+{% endblock %}
+
+{% block aside_top %}{% include aside_top %}{% endblock %}
+{% block aside_left %}{% include aside_left %}{% endblock %}
+
+{% block main %}
+
+  <h1>Переменные в Nunjucks</h1>
+  <p>Создать переменную можно с помощью встроенного тега 'set'.</p>
+
+  <p>В документации этого не написано, но переменной можно присвоить другую переменную или даже вот так:</p>
+  <b>{ % set code = directory + "unary_plus.njk" % } (без пробелов между % и } )</b>
+
+
+
+{% endblock %}

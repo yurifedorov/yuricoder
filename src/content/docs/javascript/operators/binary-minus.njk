@@ -1,0 +1,37 @@
+{% extends "base.njk" %}
+
+{# variables #}
+{% set title        = 'бинарный минус' %}
+{% set category        = 'справочник' %}
+{% set subcategory     = 'javascript' %}
+{% set segment         = 'операторы' %}
+{% set subsegment_del  = 'delete' %}
+{% set code_language = 'language-js' %}
+
+{# ===================================== #}
+
+{% block head %}
+  <title>Бинарный минус</title>
+  <meta name="description" content="Как действует бинарный минус в JavaScript." />
+  <link rel="stylesheet" href="../../../{{ prism_css }}">
+  <script src="../../../{{ prism_js }}"></script>
+{% endblock %}
+
+{% block aside_top %}{% include aside_top %}{% endblock %}
+{% block aside_left %}{% include aside_left %}{% endblock %}
+
+{% block main %}
+
+  <h1>{{ title | capitalize }}</h1>
+
+  <section>
+    {# binary_minus #}
+    {% set title = 'Описание' %}
+    {% set description = 'выполняет вычитание.' %}
+    {% set onclick = 'onclick=' %}
+    {% set function = "binary_minus()" %}
+    {% set code = 'examples/javascript/operators/binary_minus.njk' %}
+    {% include codeExample %}
+  </section>
+
+{% endblock %}

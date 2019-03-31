@@ -1,0 +1,29 @@
+table {
+  width: calc(100% + 20px); /* не трогать */
+  border-collapse: collapse; /* не трогать */
+  margin: 5px -10px 40px -10px; /* не трогать */
+  font-size: 0.9em;
+}
+
+table b {
+  background: whitesmoke; /* не трогать */
+  padding: 0 7px; /* не трогать */
+  border-radius: 2px /* не трогать */
+}
+
+table caption {
+  text-align: left;
+  text-indent: 10px;
+  font-weight: bold;
+  line-height: 2em;
+}
+
+table td:first-child {
+  text-align: center;
+  padding: 5px;
+}
+
+table td {
+  border: 1px solid #eee;
+  padding: 5px 20px 5px 10px;
+}

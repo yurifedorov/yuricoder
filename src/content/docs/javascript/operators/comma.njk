@@ -1,0 +1,39 @@
+{% extends "base.njk" %}
+
+{# variables #}
+{% set title        = 'запятая' %}
+{% set category     = 'справочник' %}
+{% set subcategory  = 'javascript' %}
+{% set segment      = 'javascript' %}
+{% set subsegment   = 'операторы' %}
+{% set code_language = 'language-js' %}
+
+{# ===================================== #}
+
+{% block head %}
+  <title>Запятая</title>
+  <meta name="description" content="Оператор 'запятая' в JavaScript." />
+  <link rel="stylesheet" href="../../../{{ prism_css }}">
+  <script src="../../../{{ prism_js }}"></script>
+{% endblock %}
+
+{% block aside_top %}{% include aside_top %}{% endblock %}
+{% block aside_left %}{% include aside_left %}{% endblock %}
+
+{% block main %}
+
+  <h1>{{ title | capitalize }}</h1>
+
+  <section>
+    {# comma #}
+    {% set title = 'Перечисление выражений' %}
+    {% set description = 'Позволяет перечислять выражения, разделяя их запятой.' %}
+    {% set onclick = 'onclick=' %}
+    {% set function = "comma()" %}
+    {% set code = 'examples/javascript/operators/comma.njk' %}
+    {% include codeExample %}
+    <p>Каждое из них вычисляется и отбрасывается, за исключением последнего, которое возвращается.</p>
+    <b>Запятая имеет самый низкий приоритет [ 1 ]</b>
+  </section>
+
+{% endblock %}

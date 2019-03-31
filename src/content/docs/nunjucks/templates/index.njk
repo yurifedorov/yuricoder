@@ -1,0 +1,44 @@
+{% extends "base.njk" %}
+
+{# variables #}
+{% set title        = 'мои шаблоны' %}
+{% set category     = 'справочник' %}
+{% set subcategory  = 'nunjucks' %}
+{% set segment_del  = 'delete' %}
+{% set subsegment_del  = 'delete' %}
+
+{# <head> #}
+{% block head %}
+  <title>Примеры шаблонов Nunjucks</title>
+  <meta name="description" content="Шаблоны для различных элементов интерфейса" />
+{% endblock %}
+
+{% block aside_top %}{% include aside_top %}{% endblock %}
+{% block aside_left %}{% include aside_left %}{% endblock %}
+
+{# <body> #}
+{% block main %}
+
+  <h1>Примеры шаблонов Nunjucks</h1>
+  <p>Шаблоны для различных элементов интерфейса.</p>
+
+  <ul>
+    <li>
+      <a href="code-example">codeExample</a><br>
+      <small>для демонстрации примеров кода</small>
+    </li>
+    <li>
+      <a href="code-execution">codeExecution</a><br>
+      <small>для вывода результатов из codeExample (имитация окна браузера)</small>
+    </li>
+    <li>
+      <a href="split">split</a><br>
+      <small>разделение на несколько элементов + возможность управлять их шириной</small>
+    </li>
+    <li>
+      <a href="tile">tile</a><br>
+      <small>плика</small>
+    </li>
+  </ul>
+
+{% endblock %}

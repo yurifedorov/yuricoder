@@ -1,0 +1,31 @@
+.nav__toggle {
+    position: absolute;
+    top: 0.3em;
+    right: 0.5em;
+    cursor: pointer;
+    font-size: 2em;
+    line-height: 1;
+    z-index: 101; /* над nav_main*/
+}
+
+/* чтобы верстка не ломалась при видимом чекбоксе */
+input[id="nav-toggle"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+  }
+
+.nav__toggle:after {
+    content: '\2630'; /* гамбургер */
+}
+
+
+[id='nav-toggle']:checked ~ .nav__toggle:after {
+    transition: 2s;
+    content: '\2715'; /* крестик */
+    color: white;
+    position: fixed; /* крестик всегда в поле видимости */
+    top: 0.3em;
+    right: 0.5em;
+}

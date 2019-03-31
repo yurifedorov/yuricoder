@@ -1,0 +1,23 @@
+{# шаблон для примеров кода #}
+{# class="line-numbers" - для включения нумераций строк #}
+<div class="code-example">
+
+  <h3>{{title | capitalize }}</h3>
+  <p>{{ description | capitalize }}</p>
+
+  <pre class="line-numbers">
+    <code class="{{code_language}}">
+        {# content #}
+        {% include code %}
+    </code>
+    <script>
+      function {{function}} { 
+        {% include code %}
+      }
+    </script>
+  </pre>
+  <div class="code-example__toolbar">
+    <button {{button_display}} {{onclick}}{{function}}>Запустить</button>
+    <button {{button_display}} disabled>Скопировать</button>
+  </div>
+</div>

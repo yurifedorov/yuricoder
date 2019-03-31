@@ -1,0 +1,19 @@
+{% extends "base.njk" %}
+
+{# variables #}
+{% set title = 'Web Developer' %}
+
+
+{# ===================================== #}
+
+{% block head %}
+  <title>Yuri Fedorov - {{ title | capitalize }}</title>
+  <meta name="description" content="Веб-разработчик из Санкт-Петербурга" />
+{% endblock %}
+
+{% block main %}
+
+  <h1 class="title_fullscreen">Yuri Fedorov<br><span>{{ title }}</span></h1>
+  <p>content</p>
+  
+{% endblock %}

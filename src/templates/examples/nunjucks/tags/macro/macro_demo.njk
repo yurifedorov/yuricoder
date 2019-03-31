@@ -1,0 +1,11 @@
+{% macro tile(name='', array='') %}
+
+<div class="tile">
+  {% for category in docs %}
+  <div class="tile__item">
+    <a href="{{category.link}}">{{category.name }}</a>
+  </div>
+  {% endfor %}
+</div>
+
+{% endmacro %}

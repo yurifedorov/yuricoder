@@ -1,0 +1,8 @@
+section {
+    background: transparent; /* временно */
+    margin-top: 35px;
+}
+
+section > h2 > a {
+    text-decoration: none;
+}

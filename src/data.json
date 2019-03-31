@@ -1,0 +1,257 @@
+{
+
+  "docs": [{
+    "name": "HTML",
+    "link": "#"
+  }, {
+    "name": "CSS",
+    "link": "css"
+  }, {
+    "name": "JavaScript",
+    "link": "javascript"
+  }, {
+    "name": "SVG",
+    "link": "#"
+  }, {
+    "name": "WebGL",
+    "link": "#"
+  }, {
+    "name": "Nunjucks",
+    "link": "nunjucks"
+  }, {
+    "name": "Gulp",
+    "link": "#"
+  }],
+
+  "html": [{
+    "category": "Теги",
+    "subcategories": [
+      {
+        "name": "пункт 1",
+        "link": "#"
+      },
+      {
+        "name": "пункт 2",
+        "link": "#"
+      }
+    ]
+  }, {
+    "category": "Атрибуты",
+    "subcategories": [
+      {
+        "name": "Подкатегория №1",
+        "link": "#"
+      },
+      {
+        "name": "Подкатегория №2",
+        "link": "#"
+      }
+    ]
+  }],
+
+  "css": [{
+    "category": "Компоненты веб-страницы",
+    "subcategories": [
+      {
+        "name": "Структурные блоки",
+        "link": "structural-blocks.html"
+      },
+      {
+        "name": "пункт 2",
+        "link": "#"
+      }
+    ]
+  }, {
+    "category": "Псевдоклассы",
+    "subcategories": [
+      {
+        "name": "Подкатегория №1",
+        "link": "#"
+      },
+      {
+        "name": "Подкатегория №2",
+        "link": "#"
+      }
+    ]
+  }, {
+    "category": "Псевдоклассы",
+    "subcategories": [
+      {
+        "name": "Подкатегория №1",
+        "link": "#"
+      },
+      {
+        "name": "Подкатегория №2",
+        "link": "#"
+      }
+    ]
+  }],
+
+  "javascript": [{
+    "category": "Основы JavaScript",
+    "subcategories": [
+      {
+        "name": "операторы",
+        "link": "operators"
+      },
+      {
+        "name": "операторы сравнения и логические значения",
+        "link": "comparison.html"
+      },
+      {
+        "name": "побитовые операторы",
+        "link": "bitwise-operators.html"
+      },
+      {
+        "name": "взаимодействие с пользователем",
+        "link": "uibasic.html"
+      },
+      {
+        "name": "условные операторы",
+        "link": "ifelse.html"
+      },
+      {
+        "name": "логические операторы",
+        "link": "logical-ops.html"
+      },
+      {
+        "name": "преобразование типов",
+        "link": "types-conversion.html"
+      }
+    ]
+  }, {
+    "category": "Пункт 2",
+    "subcategories": [
+      {
+        "name": "Подкатегория №1",
+        "link": "#"
+      },
+      {
+        "name": "Подкатегория №2",
+        "link": "#"
+      }
+    ]
+  }, {
+    "category": "Пункт 3",
+    "subcategories": [
+      {
+        "name": "Подкатегория №1",
+        "link": "#"
+      },
+      {
+        "name": "Подкатегория №2",
+        "link": "#"
+      }
+    ]
+  }, {
+    "category": "Пункт 4",
+    "subcategories": [
+      {
+        "name": "Подкатегория №1",
+        "link": "#"
+      },
+      {
+        "name": "Подкатегория №2",
+        "link": "#"
+      }
+    ]
+  }],
+
+  "nunjucks": [{
+    "category": "Шаблоны",
+    "subcategories": [
+      {
+        "name": "Наследование шаблонов",
+        "link": "template-inheritance.html"
+      },
+      {
+        "name": "Теги",
+        "link": "tags"
+      },
+      {
+        "name": "Сборка статического сайта с Nunjucks",
+        "link": "static-site-with-nunjucks.html"
+      },
+      {
+        "name": "Цикл for в nunjucks",
+        "link": "generate-from-json.html"
+      },
+      {
+        "name": "Мои шаблоны",
+        "link": "templates"
+      },
+      {
+        "name": "Проблемы",
+        "link": "issues"
+      }
+    ]
+  }],
+
+
+  "site_map": [{
+    "section": [
+      {"name": "about", "link": "about.html"}
+    ]
+  }, {
+    "section": [
+      {"name": "porfolio", "link": "portfolio/"}
+    ]
+  }, {
+    "section": [
+      {
+        "name": "docs", 
+        "link": "docs/", 
+        "categories": [
+          {
+            "category": [
+              {
+                "name": "технологии", 
+                "link": "docs/",
+                "subcategories": [
+                  {
+                    "subcategory": [
+                      {"name": "html", "link": "#html"},
+                      {"name": "css", "link": "#css"},
+                      {"name": "javascript", "link": "docs/javascript"}
+                    ]
+                  }
+                ]
+              },
+              {"name": "инструменты", "link": "docs/"}
+            ]}
+        ]}
+    ]
+  }],
+
+  "arrayTest": [{
+    "id": "#1",
+    "buttons": [{"num": "1"}, {"num": "2"}, {"num": "3"}]
+  }, {
+    "id": "#2",
+    "buttons": [{"num": "1"}, {"num": "2"}]
+  }, {
+    "id": "#3",
+    "buttons": [{"num": "1"}]
+  }, {
+    "id": "#4",
+    "buttons": [{"num": "1"}]
+  }],
+
+  "tile_items": [{
+    "title": "title-1",
+    "description": "Lorem ipsum, dolor sit amet."
+  }, {
+    "title": "title-2",
+    "description": "Lorem ipsum, dolor sit amet."
+  }, {
+    "title": "title-3",
+    "description": "Lorem ipsum, dolor sit amet."
+  }, {
+    "title": "title-4",
+    "description": "Lorem ipsum, dolor sit amet."
+  }, {
+    "title": "title-5",
+    "description": "Lorem ipsum, dolor sit amet."
+  }]
+
+}

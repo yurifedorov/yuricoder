@@ -1,0 +1,17 @@
+{# variables #}
+{% set path = '/docs/javascript/' %}
+
+<nav class="nav" {{ResizeObserver}}>
+  <ul class="list list_no-marker">
+  {% for item in javascript %}
+  <details class="list__item">
+    <summary>{{item.category}}</summary>
+    <ul class="list__sublist">
+    {% for subitem in item.subcategories %}
+      <li class="list__subitem"><a href="{{ path }}{{ subitem.link }}">{{ subitem.name | capitalize }}</a></li>
+    {% endfor %}
+    </ul>
+  </details>
+  {% endfor %}
+  </ul>
+</nav>

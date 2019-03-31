@@ -1,0 +1,49 @@
+{% extends "base.njk" %}
+
+{# variables #}
+{% set title          = 'цикл for в nunjucks' %}
+{% set category       = 'справочник' %}
+{% set subcategory    = 'nunjucks' %}
+{% set segment_del    = 'delete' %}
+{% set subsegment_del = 'delete' %}
+
+{# <head> #}
+{% block head %}
+  <title>Цикл for в nunjucks</title>
+  <meta name="description" content="Пример использования встроенного блока 'for' для генерации HTML-разметки" />
+  <link rel="stylesheet" href="{{path}}../../{{ prism_css }}">
+  <script src="../../{{ prism_js }}" async></script>
+  <script src="../../{{ split_js }}"></script>
+{% endblock %}
+
+{% block aside_top %}{% include aside_top %}{% endblock %}
+{% block aside_left %}{% include aside_left %}{% endblock %}
+
+{% block main %}
+
+  <h1>{{ title | capitalize }}</h1>
+  <p>Генерация кода из многомерного массива</p>
+
+  {% set demo = 'examples/nunjucks/generate-from-json/generate-from-json_demo.njk' %}
+  {% include split %}
+
+  {# nunjucks_for_template #}
+  {% set title = 'Шаблон' %}
+  {% set name = 'nunjucks_for_template' %}
+  {% set code = 'examples/nunjucks/generate-from-json/generate-from-json_code.njk' %}
+  {% set code_language = 'language-jinja2' %}
+  {% include codeExample %}
+
+  {# nunjucks_for_json #}
+  {% set title = 'JSON' %}
+  {% set name = 'nunjucks_for_json' %}
+  {% set code = 'examples/nunjucks/generate-from-json/generate-from-json_json.njk' %}
+  {% set code_language = 'language-json' %}
+  {% include codeExample %}
+
+{% endblock %}
+
+{% block inlineScripts %}
+  {# инлайновые скрипты для этой страницы #}
+  <script>{% include split_init %}</script>
+{% endblock %}

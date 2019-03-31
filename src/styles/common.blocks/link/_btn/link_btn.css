@@ -1,0 +1,18 @@
+.link_btn {
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: #6200ee;
+    color: #fff;
+    text-align: center;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.link_btn:hover,
+.link_btn:focus {
+    background-color: #eeeeee;
+    color: black;
+}

@@ -1,0 +1,20 @@
+{% block code %}
+{% raw %}
+&lt;html lang="en">
+  &lt;head>
+    &lt;meta charset="UTF-8">
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0">
+    &lt;meta http-equiv="X-UA-Compatible" content="ie=edge">
+    &lt;link href="favicon.svg" rel="icon" type="image/svg+xml">
+    &lt;link rel="stylesheet" href="style.min.css">
+    {# Все что выше этой строки относится ко всем страницам сайта #}
+    {% block head %} {# это пригодится позже #} {% endblock %}
+  &lt;/head>
+  &lt;body>
+    &lt;header> {# общий header#} &lt;/header>
+    {% block main %} {# контент из дочерних шаблонов #} {% endblock %}
+    &lt;footer> {# общий footer#} &lt;/footer>
+  &lt;/body>
+&lt;/html>
+{% endraw %}
+{% endblock %}

@@ -1,0 +1,15 @@
+{% block exampleContent %}
+{#======================== Демо ========================#}
+
+  <div class="tile" data-observe-resizes>
+    {% for item in arrayTest %}
+    <div id="{{item.id}}" class="tile__item">
+      {% for buttons in item.buttons %}
+        <button class="{{button}}">{{buttons.num}}</button>
+      {% endfor %}
+    </div>
+    {% endfor %}
+  </div>
+
+{#==========================================================#}
+{% endblock %}

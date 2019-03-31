@@ -1,0 +1,30 @@
+/* тег <main> только один на странице, поэтому для чистоты html-кода использую селектор тега (вместо создания класса) */
+
+main {
+    flex: 1; /* не трогать */
+    order: 3; /* не трогать */
+    min-height: 100vh; /* если контента мало, то footer остается внизу */
+    box-sizing: border-box; /* не трогать! */
+    padding-left: var(--main_padding-left);
+    padding-right: var(--main_padding-right);
+    padding-bottom: 20px;
+}
+
+main img {
+    padding: 2%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+main li {
+    margin-bottom: 1em;
+}
+
+main > b {
+    display: block;
+    background: wheat;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 7px;
+    font-weight: 200;
+}

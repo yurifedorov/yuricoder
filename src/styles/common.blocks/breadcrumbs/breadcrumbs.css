@@ -1,0 +1,7 @@
+.breadcrumbs {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(6, max-content);
+  margin: 0;
+  padding: 0;
+}

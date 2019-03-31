@@ -1,0 +1,18 @@
+{% extends "base.njk" %}
+
+{# variables #}
+{% set title = 'портфолио' %}
+
+{# ===================================== #}
+
+{% block head %}
+  <title>Yuri Fedorov - {{ title | capitalize }}</title>
+  <meta name="description" content="Работы Юрия Федорова, веб-разработчика из Санкт-Петербурга" />
+{% endblock %}
+
+{% block main %}
+
+  <h1 class="{{ title_class }}">{{ title | capitalize }}</h1>
+  <p>Мои веб-проекты</p>
+
+{% endblock %}

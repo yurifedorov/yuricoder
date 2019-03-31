@@ -1,0 +1,12 @@
+{% block exampleContent %}
+<div data-observe-resizes>
+  <div class="tile">
+    {% for tile in tile_items %}
+    <div class="tile__item">
+      <h3>{{tile.title}}</h3>
+      <p>{{tile.description}}</p>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}

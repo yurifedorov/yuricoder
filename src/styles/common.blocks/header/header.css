@@ -1,0 +1,13 @@
+/* тег <header> только один на странице, поэтому для чистоты html-кода использую селектор тега (вместо создания класса) */
+header {
+    flex: 1 100%; /* не трогать */
+    display: grid;
+    grid-template-columns: 60px 1fr 60px;
+    height: auto;
+    padding: 10px;
+    justify-items: center;
+    align-items: center;
+    background: whitesmoke;
+    position: relative;
+
+}

@@ -1,0 +1,14 @@
+{# !!! ТОЛЬКО ДЛЯ ПРИМЕРА !!! #}
+
+<html lang="en">
+  <head>
+    {% block head %} {# содержимое <head> #} {% endblock %}
+  </head>
+
+  <body>
+    <header class="header-test">header</header>
+    <main class="main-test">{% block main %}{% endblock %}</main>
+    <footer class="footer-test">footer</footer>
+  </body>
+  
+</html>

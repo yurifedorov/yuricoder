@@ -1,0 +1,69 @@
+{% extends "base.njk" %}
+
+{# variables #}
+{% set title        = 'инкремент' %}
+{% set category        = 'справочник' %}
+{% set subcategory     = 'javascript' %}
+{% set segment         = 'операторы' %}
+{% set subsegment_del  = 'delete' %}
+{% set code_language = 'language-js' %}
+
+{# ===================================== #}
+
+{% block head %}
+  <title>Инкремент</title>
+  <meta name="description" content="Оператор для увеличения значения на единицу в JavaScript." />
+  <link rel="stylesheet" href="../../../{{ prism_css }}">
+  <script src="../../../{{ prism_js }}"></script>
+{% endblock %}
+
+{% block aside_top %}{% include aside_top %}{% endblock %}
+{% block aside_left %}{% include aside_left %}{% endblock %}
+
+{% block main %}
+
+  <h1>{{ title | capitalize }}</h1>
+  <p>Увеличивает значение на 1, существуют два вида инкремента и действуют они по-разному.</p>
+
+  <section>
+    {# postfix_increment #}
+    {% set title = 'Постфикcный инкремент' %}
+    {% set description = 'Увеличивает значение на 1, но при этом возвращает старое значение.' %}
+    {% set onclick = 'onclick=' %}
+    {% set function = "postfix_increment()" %}
+    {% set code = 'examples/javascript/operators/postfix_increment.njk' %}
+    {% include codeExample %}
+    <table>
+      <tr>
+        <td>1</td>
+        <td>значение <b>i</b> увелилось на 1 и сохранилось в <b>a</b> , а вывелось старое</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>в качестве проверки выводим <b>i</b> и видим, что значение действительно увеличилось</td>
+      </tr>
+    </table>
+  </section>
+
+  <section>
+    {# prefix_increment #}
+    {% set title = 'Префикcный инкремент' %}
+    {% set description = 'Увеличивает значение на 1 и возвращает новое значение.' %}
+    {% set onclick = 'onclick=' %}
+    {% set function = "prefix_increment()" %}
+    {% set code = 'examples/javascript/operators/prefix_increment.njk' %}
+    {% include codeExample %}
+    <table>
+      <tr>
+        <td>2</td>
+        <td>значение <b>i</b> увелилось на 1 и сохранилось в <b>a</b> , вывелось уже измененное</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>в качестве проверки выводим <b>i</b> и видим, что значение действительно увеличилось</td>
+      </tr>
+    </table>
+    <b>Инкремент/декремент можно применить только к переменной: 5++ даст ошибку.</b>
+  </section>
+
+{% endblock %}

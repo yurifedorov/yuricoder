@@ -1,0 +1,37 @@
+{% extends "base.njk" %}
+
+{# variables #}
+{% set title           = 'отстаток от деления' %}
+{% set category        = 'справочник' %}
+{% set subcategory     = 'javascript' %}
+{% set segment         = 'операторы' %}
+{% set subsegment_del  = 'delete' %}
+
+{# ===================================== #}
+
+{% block head %}
+  <title>отстаток от деления</title>
+  <meta name="description" content="Оператор '%' для получения остатка в JavaScript." />
+  <link rel="stylesheet" href="../../../{{ prism_css }}">
+  <script src="../../../{{ prism_js }}"></script>
+{% endblock %}
+
+{% block aside_top %}{% include aside_top %}{% endblock %}
+{% block aside_left %}{% include aside_left %}{% endblock %}
+
+{% block main %}
+
+  <h1>{{ title | capitalize }}</h1>
+
+  <section>
+    {# remainder #}
+    {% set title = 'описание' %}
+    {% set description = 'Оператор % нужен чтобы найти остаток от деления.' %}
+    {% set onclick = 'onclick=' %}
+    {% set function = "remainder()" %}
+    {% set code = 'examples/javascript/operators/remainder.njk' %}
+    {% set code_language = 'language-js' %}
+    {% include codeExample %}
+  </section>
+
+{% endblock %}

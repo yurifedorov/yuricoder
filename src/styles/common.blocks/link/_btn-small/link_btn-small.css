@@ -1,0 +1,17 @@
+/* ссылка-кнопка (маленькая) */
+.link_btn-small {
+    display: inline-block;
+    background-color: white;
+    line-height: 1.6em;
+    padding: 5px 10px;
+    margin: 4px 0;
+    border-radius: 4px;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.link_btn-small:hover,
+.link_btn-small:focus {
+    background-color: #dd8e8e;
+    color: black;
+}

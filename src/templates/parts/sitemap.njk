@@ -1,0 +1,27 @@
+{# карта сайта #}
+
+<h1>Карта сайта</h1>
+  <ul>
+    {# построение списка разделов #}
+    {% for item in site_map %}
+    <li>
+      {% for section in item.section %}
+        <a href="{{section.link}}">{{section.name}}</a>
+          {% for categories in section.categories %}
+            <ul>
+              {% for category in categories.category %}
+              <li><a href="{{category.link}}">{{category.name}}</a>
+                {% for subcategories in category.subcategories %}
+                <ul>
+                  {% for subcategory in subcategories.subcategory %}
+                    <li><a href="{{subcategory.link}}">{{subcategory.name}}</a>
+                  {% endfor %}
+                </ul>
+                {% endfor %}
+              {% endfor %}
+            </ul>
+          {% endfor %}
+      {% endfor %}
+    </li>
+    {% endfor %}
+  </ul>

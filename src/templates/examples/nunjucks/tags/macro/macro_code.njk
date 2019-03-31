@@ -1,0 +1,13 @@
+{% raw %}
+{% macro tile(name='', array='') %}
+
+&lt;div class="tile tile_small"&gt;
+  {% for name in array %}
+  &lt;div class="tile__item"&gt;
+    &lt;a href="{{category.link}}"&gt;{{category.name | title }}&lt;/a&gt;
+  &lt;/div&gt;
+  {% endfor %}
+&lt;/div&gt;
+
+{% endmacro %}
+{% endraw %}

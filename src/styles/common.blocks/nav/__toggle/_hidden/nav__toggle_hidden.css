@@ -1,0 +1,5 @@
+/* удаление переключателей из DOM */
+
+.nav__toggle_hidden {
+  display: none;
+}

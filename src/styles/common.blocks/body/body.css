@@ -1,0 +1,13 @@
+/* тег <body> только один на странице, поэтому для чистоты html-кода использую селектор тега (вместо создания класса) */
+body {
+    display: flex;  
+    flex-flow: row wrap;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    position: relative; /* есть зависимости: aside_left */
+}
+
+/* класс для удаления из DOM */
+.delete {
+    display: none;
+}

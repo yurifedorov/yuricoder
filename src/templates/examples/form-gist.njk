@@ -1,0 +1,17 @@
+{# форма с автозаполнением #}
+
+{% block exampleContent %}
+
+<div data-observe-resizes>
+  <form autocomplete="off" class="form">
+    {% for input in form %}
+    <div>
+      <input id="{{input.id}}" type="search" required>
+      <label>{{input.name}}</label>
+    </div>
+    {% endfor %}
+    <button>Продожить</button>
+  </form>
+</div>
+
+{% endblock %}

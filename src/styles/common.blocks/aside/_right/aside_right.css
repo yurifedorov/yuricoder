@@ -1,0 +1,11 @@
+.aside_right {
+  flex: 0 0 var(--asideRight-width); /* не трогать */
+  order: 4; /* не трогать */
+  margin-top: calc(0px - var(--asideTop-height)); /* не трогать */
+  background: #eee; /* временно */
+  display: none;
+}
+
+.LG > .aside_right {
+  display: block;
+}

@@ -1,0 +1,79 @@
+{% extends "base.njk" %}
+
+{# variables #}
+{% set title           = 'структурные блоки' %}
+{% set category        = 'справочник' %}
+{% set subcategory     = 'css' %}
+{% set segment_del     = 'delete' %}
+{% set subsegment_del  = 'delete' %}
+{% set path            = '../' %}
+
+{# ===================================== #}
+
+{% block head %}
+  <title>Основные структурные блоки сайта</title>
+  <meta name="description" content="Описание основных частей веб-страницы и способы их реализации" />
+{% endblock %}
+
+{% block aside_top %}{% include aside_top %}{% endblock %}
+{% block aside_left %}{% include aside_left %}{% endblock %}
+
+{% block main %}
+
+  <h1>Основные структурные блоки</h1>
+  <p>Описание основных частей веб-страницы и способы их реализации.</p>
+  <ul>
+    <li>body (основа)</li>
+    <li>header (верхняя часть)</li>
+    <li>aside (один или несколько)</li>
+    <li>main (контент)</li>
+    <li>footer (нижняя часть)</li>
+  </ul>
+  <hr>
+  <section>
+    <h2>body</h2>
+    <p>Основа (тело) всей видимой части страницы, родитель для всех остальных блоков.</p>
+    <p>примеры стилизации css</p>
+  </section>
+
+  <hr>
+  <section>
+    <h2>header</h2>
+    <p>Верхняя часть, в которой обычно находится логотип и навигационное меню.</p>
+    <p>примеры стилизации css + модификации</p>
+  </section>
+
+  <hr>
+  <section>
+    <h2>aside</h2>
+    <p>Любой блок, который имеет косвенное отношение к основному содержимому.</p>
+    <p> Страница может содержать один и более <b>aside</b>.</p>
+    <p>примеры стилизации css, вариации сайдбаров (top, left, right) + модификации</p>
+  </section>
+
+  <hr>
+  <section>
+    <h2>main</h2>
+    <p></p>
+    <p>примеры стилизации css + модификации</p>
+  </section>
+
+  <hr>
+  <section>
+    <h2>footer</h2>
+    <p>примеры стилизации css + модификации</p>
+  </section>
+
+  <table>
+    <tr>
+      <td><a href="test-page-1.html">test-page-1.html</a></td><td>простая страница</td>
+    </tr>
+    <tr>
+      <td><a href="test-page-2.html">test-page-2.html</a></td><td>страница с левым aside</td>
+    </tr>
+    <tr>
+      <td><a href="test-page-3.html">test-page-3.html</a></td><td>страница с левым и правым aside</td>
+    </tr>
+  </table>
+ 
+{% endblock %}

@@ -1,0 +1,13 @@
+/* Базовые стили, работающие на всех экранах */
+.tile {
+  display: grid;
+  grid-auto-rows: max-content;
+  margin-left: calc(0px - var(--main_padding-left));
+  margin-right: calc(0px - var(--main_padding-right));
+  grid-gap: 5px;
+  padding: 5px;
+}
+
+.SM > .tile {
+  padding: 20px;
+}

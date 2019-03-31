@@ -1,0 +1,68 @@
+{% extends "base.njk" %}
+
+{# variables #}
+{% set title        = 'декремент' %}
+{% set category        = 'справочник' %}
+{% set subcategory     = 'javascript' %}
+{% set segment         = 'операторы' %}
+{% set subsegment_del  = 'delete' %}
+{% set code_language = 'language-js' %}
+
+{# ===================================== #}
+
+{% block head %}
+  <title>Декремент</title>
+  <meta name="description" content="Оператор для уменьшения значения на единицу в JavaScript." />
+  <link rel="stylesheet" href="../../../{{ prism_css }}">
+  <script src="../../../{{ prism_js }}"></script>
+{% endblock %}
+
+{% block aside_top %}{% include aside_top %}{% endblock %}
+{% block aside_left %}{% include aside_left %}{% endblock %}
+
+{% block main %}
+
+  <h1>{{ title | capitalize }}</h1>
+  <p>Уменьшает значение на 1, существуют два вида декремента и действуют они по-разному.</p>
+
+  <section>
+    {# postfix_decrement #}
+    {% set title = 'Постфиксный декремент' %}
+    {% set description = 'уменьшает значение на 1, но при этом возвращает старое значение.' %}
+    {% set onclick = 'onclick=' %}
+    {% set function = "postfix_decrement()" %}
+    {% set code = 'examples/javascript/operators/postfix_decrement.njk' %}
+    {% include codeExample %}
+    <table>
+      <tr>
+        <td>1</td>
+        <td>значение <b>i</b> увелилось на 1 и сохранилось в <b>a</b> , а вывелось старое</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>в качестве проверки выводим <b>i</b> и видим, что значение действительно уменьшилось</td>
+      </tr>
+    </table>
+  </section>
+
+  <section>
+    {# prefix_decrement #}
+    {% set title = 'Префикcный декремент' %}
+    {% set description = 'уменьшает значение на 1 и возвращает новое значение.' %}
+    {% set onclick = 'onclick=' %}
+    {% set function = "prefix_decrement()" %}
+    {% set code = 'examples/javascript/operators/prefix_decrement.njk' %}
+    {% include codeExample %}
+    <table>
+      <tr>
+        <td>2</td>
+        <td>значение <b>i</b> уменьшилось на 1 и сохранилось в <b>a</b> , вывелось уже измененное</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>в качестве проверки выводим <b>i</b> и видим, что значение действительно уменьшилось</td>
+      </tr>
+    </table>
+  </section>
+
+{% endblock %}

@@ -1,0 +1,14 @@
+{# variables #}
+{% set path = '/docs/html/' %}
+
+
+{% for item in html %}
+<details class="list__subitem">
+  <summary>{{item.category}}</summary>
+  <ul>
+  {% for subitem in item.subcategories %}
+    <li><a href="{{ path }}{{ subitem.link }}">{{ subitem.name | capitalize }}</a></li>
+  {% endfor %}
+  </ul>
+</details>
+{% endfor %}

@@ -1,0 +1,19 @@
+{% block exampleContent %}
+{#======================== Code ===========================#}
+{# ============== {% raw %} ... {% endraw %} ==============#}
+{# ! Для вывода html нужно заменить < и > на &lt; и &gt; ! #}
+
+  {% raw %}
+  &lt;div class="tile" data-observe-resizes&gt;
+    {% for item in arrayTest %}
+    &lt;div id="{{item.id}}" class="tile__item"&gt;
+      {% for buttons in item.buttons %}
+        &lt;button&gt;{{buttons.num}}&lt;/button&gt;
+      {% endfor %}
+    &lt;/div&gt;
+    {% endfor %}
+  &lt;/div&gt;
+  {% endraw %}
+
+{#==========================================================#}
+{% endblock %}

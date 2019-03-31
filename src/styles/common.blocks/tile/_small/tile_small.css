@@ -1,0 +1,19 @@
+.tile_small {
+  grid-template-columns: repeat(3,1fr);
+}
+
+.SM > .tile_small {
+  grid-template-columns: repeat(5,1fr);
+}
+
+.MD > .tile_small {
+  grid-template-columns: repeat(7,1fr);
+}
+
+.XL > .tile_small {
+  grid-template-columns: repeat(9,1fr);
+}
+
+.XXL > .tile_small {
+  grid-template-columns: repeat(14,1fr);
+}

@@ -1,0 +1,178 @@
+{% extends "base.njk" %}
+
+{# variables #}
+{% set title           = 'codeExample' %}
+{% set category        = 'справочник' %}
+{% set subcategory     = 'nunjucks' %}
+{% set segment         = 'мои шаблоны' %}
+{% set subsegment_del  = 'delete' %}
+
+{# <head> #}
+{% block head %}
+  <title>Демонстрация примеров кода на сайте</title>
+  <meta name="description" content="Все необходимое для вывода примеров html, js, css и других примеров кода." />
+  <link rel="stylesheet" href="/libs/prism/prism.min.css">
+  <script src="/libs/prism/prism.min.js" async></script>
+  <script src="/libs/split-js/split.min.js" async></script>
+{% endblock %}
+
+{% block aside_top %}{% include aside_top %}{% endblock %}
+{% block aside_left %}{% include aside_left %}{% endblock %}
+
+{# <body> #}
+{% block main %}
+
+  <h1>codeExample</h1>
+  <p>Шаблон для демонстрации html, js, css и прочих примеров кода.</p>
+
+  <pre class="line-numbers">
+    <code class="language-css">
+    .class {
+      font-size: 20px;
+      background: red;
+      transition: 2s;
+    }
+    </code>
+  </pre>
+
+  <h2>Список неисправленных багов</h2>
+ <ol>
+   <li>на iPad класс .code отображается криво</li>
+ </ol>
+
+  <br>
+  <hr>
+
+  <h2>Простые примеры</h2>
+  <p>Для простейших примеров, типа синтаксиса</p>
+  <div class="wrapper_grid">
+
+    <section>
+      <h3>[ 1 ] нумерация + копирование</h3>
+      {% set example_id = 'example1' %} {# требуется для работы кнопок checkbox/label #}
+      {% set html = 'parts/code-example/codes/example1/html.html' %} {# путь к примеру html #}
+      {% set njk = '' %} {# путь к примеру njk #}
+      {% set css = '' %} {# путь к примеру css #}
+      {% set js = '' %} {# путь к примеру js #}
+      {% set demo = '' %}
+      {% include codeExample_beta %}
+    </section>
+
+    <section>
+      <h3>[ 2 ] только копирование</h3>
+      {% set example_id = 'example2' %} {# требуется для работы кнопок checkbox/label #}
+      {% set html = '' %} {# путь к примеру html #}
+      {% set njk = '' %} {# путь к примеру njk #}
+      {% set css = 'parts/code-example/codes/example2/css.css' %} {# путь к примеру css #}
+      {% set js = '' %} {# путь к примеру js #}
+      {% set demo = '' %}
+      {% include codeExample_beta %}
+    </section>
+
+    <section>
+      <h3>[ 3 ] только код</h3>
+      {% set example_id = 'example3' %} {# требуется для работы кнопок checkbox/label #}
+      {% set html = '' %} {# путь к примеру html #}
+      {% set njk = '' %} {# путь к примеру njk #}
+      {% set css = '' %} {# путь к примеру css #}
+      {% set js = 'parts/code-example/codes/example3/javascript.js' %} {# путь к примеру js #}
+      {% set demo = '' %}
+      {% include codeExample_beta %}
+    </section>
+
+  </div>
+
+
+  <br>
+  <hr>
+
+
+  <h2>Примеры + Демо</h2>
+  <p>Когда нужно продемонстрировать пример работы скрипта (html + js + css)</p>
+  <div class="wrapper_grid">
+
+    <section>
+      <h3>[ 4 ] toolbar, нумерация</h3>
+      {% set example_id = 'example4' %} {# требуется для работы кнопок checkbox/label #}
+      {% set html = 'parts/code-example/codes/example4/html.html' %} {# путь к примеру html #}
+      {% set njk = 'parts/code-example/codes/example4/jinja2.njk' %} {# путь к примеру njk #}
+      {% set css = 'parts/code-example/codes/example4/css.css' %} {# путь к примеру css #}
+      {% set js = 'parts/code-example/codes/example4/javascript.js' %} {# путь к примеру js #}
+      {% set demo = 'parts/code-example/codes/example4/demo.njk' %}
+      {% include codeExample_beta %}
+    </section>
+
+    <section>
+      <h3>[ 5 ] toolbar и копирование</h3>
+      {% set example_id = 'example5' %} {# требуется для работы кнопок checkbox/label #}
+      {% set html = 'parts/code-example/codes/example5/html.html' %} {# путь к примеру html #}
+      {% set njk = 'parts/code-example/codes/example5/jinja2.njk' %} {# путь к примеру njk #}
+      {% set css = '' %} {# путь к примеру css #}
+      {% set js = '' %} {# путь к примеру js #}
+      {% set demo = 'parts/code-example/codes/example5/demo.njk' %}
+      {% include codeExample_beta %}
+    </section>
+
+    <section>
+      <h3>[ 6 ] только код и toolbar</h3>
+      {% set example_id = 'example6' %} {# требуется для работы кнопок checkbox/label #}
+      {% set html = '' %} {# путь к примеру html #}
+      {% set njk = 'parts/code-example/codes/example6/jinja2.njk' %} {# путь к примеру njk #}
+      {% set css = 'parts/code-example/codes/example6/css.css' %} {# путь к примеру css #}
+      {% set js = '' %} {# путь к примеру js #}
+      {% set demo = 'parts/code-example/codes/example6/demo.njk' %}
+      {% include codeExample_beta %}
+    </section>
+
+  </div>
+
+  <br>
+  <hr>
+
+  <h2>Примеры + Responsive Демо</h2>
+  <p>Специально для демонстрации резиновых веб-компонентов (с добавлением split режима).</p>
+  <div class="wrapper_grid">
+
+    <section>
+      <h3>[ 7 ] toolbar, нумерация, копирование</h3>
+      {% set example_id = 'example7' %} {# требуется для работы кнопок checkbox/label #}
+      {% set html = '' %} {# путь к примеру html #}
+      {% set njk = '' %} {# путь к примеру njk #}
+      {% set css = '' %} {# путь к примеру css #}
+      {% set js = 'parts/code-example/codes/example7/javascript.js' %} {# путь к примеру js #}
+      {% set demo = 'parts/code-example/codes/example7/demo.njk' %}
+      {% include codeExample_beta %}
+    </section>
+
+    <section>
+      <h3>[ 8 ] toolbar и копирование</h3>
+      {% set example_id = 'example8' %} {# требуется для работы кнопок checkbox/label #}
+      {% set html = '' %} {# путь к примеру html #}
+      {% set njk = '' %} {# путь к примеру njk #}
+      {% set css = '' %} {# путь к примеру css #}
+      {% set js = 'parts/code-example/codes/example8/javascript.js' %} {# путь к примеру js #}
+      {% set demo = 'parts/code-example/codes/example8/demo.njk' %}
+      {% include codeExample_beta %}
+    </section>
+
+    <section>
+      <h3>[ 9 ] только код и toolbar</h3>
+      {% set example_id = 'example9' %} {# требуется для работы кнопок checkbox/label #}
+      {% set html = '' %} {# путь к примеру html #}
+      {% set njk = '' %} {# путь к примеру njk #}
+      {% set css = '' %} {# путь к примеру css #}
+      {% set js = 'parts/code-example/codes/example9/javascript.js' %} {# путь к примеру js #}
+      {% set demo = 'parts/code-example/codes/example9/demo.njk' %}
+      {% include codeExample_beta %}
+    </section>
+
+  </div>
+
+
+
+{% endblock %}
+
+{% block inlineScripts %}
+  {# инлайновые скрипты для этой страницы #}
+
+{% endblock %}

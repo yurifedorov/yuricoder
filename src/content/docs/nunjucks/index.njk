@@ -1,0 +1,26 @@
+{% extends "base.njk" %}
+
+{# variables #}
+{% set title           = 'nunjucks' %}
+{% set category        = 'справочник' %}
+{% set subcategory_del = 'delete' %}
+{% set segment_del     = 'delete' %}
+{% set subsegment_del  = 'delete' %}
+{% set path            = '../' %}
+
+{# <head> #}
+{% block head %}
+  <title>{{ category | capitalize }} - {{ title | capitalize }}</title>
+  <meta name="description" content="Полезная информация по использованию шаблонизатора Nunjucks" />
+{% endblock %}
+
+{% block aside_top %}{% include aside_top %}{% endblock %}
+{% block aside_left %}{% include aside_left %}{% endblock %}
+
+{% block main %}
+
+  <h1 class="{{ title_class }}">Справочник по Nunjucks</h1>
+  <p>Полезная информация по использованию шаблонизатора Nunjucks</p>
+  {% include 'parts/navigation/nunjucks_list.njk' %}
+
+{% endblock %}

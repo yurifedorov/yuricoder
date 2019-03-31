@@ -1,0 +1,38 @@
+.nav_main {
+    display: grid;
+    grid-template-columns: 50px auto;
+    grid-template-rows: 50px auto;
+    width: 240px;
+    position: fixed;
+    top: 0;
+    right: -240px;
+    height: 100vh; /* именно 100vh!! (100% не годится, т.к. при скроллинге нижная часть будет дергатся)*/
+    z-index: 100;
+    background: #16a085;
+}
+
+/**
+ * профиксим баг в Android <= 4.1.2
+ * см: http://timpietrusky.com/advanced-checkbox-hack
+**/
+
+[id='nav-toggle']:checked ~ .nav_main {
+    transition: 300ms;
+    right: 0;
+}
+
+.nav_main > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.nav_main a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    font-size: 1.5em;
+    line-height: 2.5em;
+}

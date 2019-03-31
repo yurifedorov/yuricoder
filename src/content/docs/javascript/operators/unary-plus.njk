@@ -1,0 +1,47 @@
+{% extends "base.njk" %}
+
+{# variables #}
+{% set title        = 'унарный плюс' %}
+{% set category        = 'справочник' %}
+{% set subcategory     = 'javascript' %}
+{% set segment         = 'операторы' %}
+{% set subsegment_del  = 'delete' %}
+{% set code_language = 'language-js' %}
+
+{# ===================================== #}
+
+{% block head %}
+  <title>Унарный плюс</title>
+  <meta name="description" content="Как действует унарный плюс в JavaScript." />
+  <link rel="stylesheet" href="../../../{{ prism_css }}">
+  <script src="../../../{{ prism_js }}"></script>
+{% endblock %}
+
+{% block aside_top %}{% include aside_top %}{% endblock %}
+{% block aside_left %}{% include aside_left %}{% endblock %}
+
+{% block main %}
+
+  <h1>{{ title | capitalize }}</h1>
+
+  <section>
+    {# unary_plus #}
+    {% set title = 'Описание' %}
+    {% set description = 'преобразует строковое значение в числовое' %}
+    {% set onclick = 'onclick=' %}
+    {% set function = "unary_plus()" %}
+    {% set code = 'examples/javascript/operators/unary_plus.njk' %}
+    {% include codeExample %}
+    <table>
+      <tr>
+        <td>12</td>
+        <td>произойдет обычная конкатенация строк</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>сначала выполнится преобразование в число, затем сложение</td>
+      </tr>
+    </table>
+  </section>
+
+{% endblock %}

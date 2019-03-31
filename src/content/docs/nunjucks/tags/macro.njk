@@ -1,0 +1,49 @@
+{% extends "base.njk" %}
+
+{# variables #}
+{% set title          = 'macro' %}
+{% set category       = 'справочник' %}
+{% set subcategory    = 'nunjucks' %}
+{% set segment        = 'теги' %}
+{% set subsegment_del = 'delete' %}
+
+{# <head> #}
+{% block head %}
+  <title>Макросы в Nunjucks</title>
+  <meta name="description" content="Макросы позволяют определить повторно используемые фрагменты." />
+  <link rel="stylesheet" href="../../../{{ prism_css }}">
+  <script src="../../../{{ prism_js }}"></script>
+{% endblock %}
+
+{% block aside_top %}{% include aside_top %}{% endblock %}
+{% block aside_left %}{% include aside_left %}{% endblock %}
+
+{% block main %}
+
+  <h1>Макросы в Nunjucks</h1>
+  <p>Позволяет определить повторно используемые фрагменты</p>
+
+  <section>
+    <h2>Создание макроса</h2>
+    {# create-macro_code #}
+    {% set title = 'пример' %}
+    {% set description = 'макрос для создания плитки.' %}
+    {# set button_display = 'hidden' #}
+    {% set code = 'examples/nunjucks/tags/macro/macro_code.njk' %}
+    {% set code_language = 'language-jinja2' %}
+    {% include codeExample %}
+  </section>
+
+  <section>
+    <h2>Результат</h2>
+    {# демо 1 #}
+    {% set demo = 'examples/nunjucks/tags/macro/page1_demo.njk' %}
+    {% include codeExecuted %}
+
+    {# демо 2 #}
+    {% set demo = 'examples/nunjucks/tags/macro/page2_demo.njk' %}
+    {% include codeExecuted %}
+  </section>
+
+
+{% endblock %}

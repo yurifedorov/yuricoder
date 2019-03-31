@@ -1,0 +1,43 @@
+/* заголовок во весь экран */
+.title_fullscreen {
+    display: grid;
+    align-content: center;
+    justify-items: center;
+    position: relative;
+    margin-top: 0;
+    margin-left: calc(0px - var(--main_padding-left));
+    margin-bottom: 0;
+    margin-right: calc(0px - var(--main_padding-right));
+    height: 60vh;
+    background: url('img/australia-bay_small.jpg');
+    background-position: center;
+    font-size: 1.8em;
+    color: white;
+    z-index: 1;
+}
+
+.LG > .title_fullscreen {
+    background: url('img/australia-bay_medium.jpg');
+    background-position: center;
+}
+
+.XL > .title_fullscreen {
+    background: url('img/australia-bay_large.jpg');
+    background-position: center;
+}
+
+.title_fullscreen::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: -1;
+}
+
+.title_fullscreen > span {
+    font-size: 0.5em;
+    font-weight: 100;
+}

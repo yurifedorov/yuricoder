@@ -1,0 +1,27 @@
+{% extends "examples/nunjucks/template-inheritance/base_demo.njk" %}
+
+{% block exampleContent %}
+{#======================== Демо ========================#}
+
+{% block head %}
+  <style>
+    .header-test,
+    .footer-test {
+      background: skyblue;
+      line-height: 40px;
+      padding-left: 10px;
+    }
+    .main-test {
+      background: white;
+      padding: 20px
+    }
+  </style>
+{% endblock %}
+
+{% block main %}
+<h1>Первая страница</h1>
+<p>Я дочерний шаблон №1</p>
+{% endblock %}
+
+{#==========================================================#}
+{% endblock %}

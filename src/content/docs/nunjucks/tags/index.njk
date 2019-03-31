@@ -1,0 +1,30 @@
+{% extends "base.njk" %}
+
+{# variables #}
+{% set title          = 'теги' %}
+{% set category       = 'справочник' %}
+{% set subcategory    = 'nunjucks' %}
+{% set segment_del    = 'delete' %}
+{% set subsegment_del = 'delete' %}
+{% set path = '../' %}
+
+{# <head> #}
+{% block head %}
+  <title>Список тегов встроенных в Nunjucks</title>
+  <meta name="description" content="Список специальных блоков, выполяющих операции над разделами шаблона." />
+{% endblock %}
+
+{% block aside_top %}{% include aside_top %}{% endblock %}
+{% block aside_left %}{% include aside_left %}{% endblock %}
+
+{% block main %}
+
+  <h1>Теги в Nunjucks</h1>
+  <p>Список специальных блоков, выполяющих операции над разделами шаблона</p>
+
+  <ol>
+    <li><a href="macro.html">macro</a></li>
+    <li><a href="set.html">set</a></li>
+  </ol>
+
+{% endblock %}
