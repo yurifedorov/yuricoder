@@ -13,13 +13,14 @@
     {# HTML #}
     {# вывести html если html=true  #}
     {% if html %}
-      {# вывести кнопку HTML, только если demo=true #}
+      {# вывести кнопку HTML, только если html=true #}
       {% if demo %}
         {# Чтобы не засорять основной style.css, селекторы :checked задаю инлайново #}
         {# Они нужны только внутри блока и больше нигде! #}
+        {# выводить селектор только если html=true #}
         {% if html %}
         <style>
-        input[name=button]:checked ~ #{{example_id}}-html-code {z-index: 1;}
+        input[name=button]:checked ~ #{{example_id}}-html-code {z-index: 2;}
         </style>
         {% endif %}
         <input type="radio" name="button" id="{{example_id}}-html-checkbox">
@@ -38,13 +39,14 @@
     {# NJK #}
     {# вывести njk если njk=true  #}
     {% if njk %}
-      {# вывести кнопку NJK, только если demo=true #}
+      {# вывести кнопку NJK, только если njk=true #}
       {% if demo %}
         {# Чтобы не засорять основной style.css, селекторы :checked задаю инлайново #}
         {# Они нужны только внутри блока и больше нигде! #}
+        {# выводить селектор только если njk=true #}
         {% if njk %}
         <style>
-        [id='{{example_id}}-njk-checkbox']:checked ~ #{{example_id}}-njk-code {z-index: 1;}
+        [id='{{example_id}}-njk-checkbox']:checked ~ #{{example_id}}-njk-code {z-index: 2;}
         </style>
         {% endif %}
         <input type="radio" name="button" id="{{example_id}}-njk-checkbox">
@@ -67,9 +69,10 @@
       {% if demo %}
         {# Чтобы не засорять основной style.css, селекторы :checked задаю инлайново #}
         {# Они нужны только внутри блока и больше нигде! #}
+        {# выводить селектор только если css=true #}
         {% if css %}
         <style>
-        [id='{{example_id}}-css-checkbox']:checked ~ #{{example_id}}-css-code {z-index: 1;}
+        [id='{{example_id}}-css-checkbox']:checked ~ #{{example_id}}-css-code {z-index: 2;}
         </style>
         {% endif %}
         <input type="radio" name="button" id="{{example_id}}-css-checkbox">
@@ -92,9 +95,10 @@
       {% if demo %}
         {# Чтобы не засорять основной style.css, селекторы :checked задаю инлайново #}
         {# Они нужны только внутри блока и больше нигде! #}
+        {# выводить селектор только если js=true #}
         {% if js %}
         <style>
-        [id='{{example_id}}-js-checkbox']:checked ~ #{{example_id}}-js-code {z-index: 1;}
+        [id='{{example_id}}-js-checkbox']:checked ~ #{{example_id}}-js-code {z-index: 2;}
         </style>
         {% endif %}
         <input type="radio" name="button" id="{{example_id}}-js-checkbox">
@@ -117,9 +121,10 @@
       {% if demo %}
         {# Чтобы не засорять основной style.css, селекторы :checked задаю инлайново #}
         {# Они нужны только внутри блока и больше нигде! #}
+        {# выводить селектор только если demo=true #}
         {% if demo %}
         <style>
-        [id='{{example_id}}-demo-checkbox']:checked ~ #{{example_id}}-demo {z-index: 1;}
+        [id='{{example_id}}-demo-checkbox']:checked ~ #{{example_id}}-demo {z-index: 2;}
         </style>
         {% endif %}
         <input type="radio" name="button" id="{{example_id}}-demo-checkbox">

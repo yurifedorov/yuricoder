@@ -241,7 +241,6 @@ div.code-toolbar > .toolbar span:focus {
 	margin-left: -16px;
 
 	opacity: 0;
-	/*z-index: 99;*/
 	-webkit-transition: opacity .25s;
 	-o-transition: opacity .25s;
 	transition: opacity .25s;
