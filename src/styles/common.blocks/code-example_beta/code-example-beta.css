@@ -45,9 +45,12 @@ input[name=button]:checked + label {
   grid-column: 1 / -1;
   grid-row: 3; /* не трогать */
   background:#2d2d2d; /* цвет из prism.js - #2d2d2d */
+  overflow-x: auto;
+  opacity: 0.08; /* изначально .code невидим (opacity: 1 при клике на кнопку) */
 }
 
 .demo {
   background: red;
   padding: 0 10px;
+  opacity: 1;
 }
