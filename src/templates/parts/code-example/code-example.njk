@@ -29,9 +29,11 @@
       <div id="{{example_id}}-html-code" class="code">
         {# вывести КОД html если html=true  #}
         {% if html %}
-        <pre class="line-numbers">
-          <code class="language-html">{% include html %}</code>
-        </pre>
+          {% if numeration %}{# вывести нумерацию строк если numeration=true #}
+          <pre class="line-numbers"><code class="language-html">{% include html %}</code></pre>
+          {% else %}{# иначе вывести без класса "line-numbers" #}
+          <pre><code class="language-html">{% include html %}</code></pre>
+          {% endif %}
         {% endif %}
       </div>
     {% endif %}
@@ -55,9 +57,11 @@
       <div id="{{example_id}}-njk-code" class="code">
         {# вывести КОД njk если njk=true #}
         {% if njk %}
-        <pre class="line-numbers">
-          <code class="language-jinja2">{% include njk %}</code>
-        </pre>
+          {% if numeration %}{# вывести нумерацию строк если numeration=true #}
+          <pre class="line-numbers"><code class="language-jinja2">{% include njk %}</code></pre>
+          {% else %}{# иначе вывести без класса "line-numbers" #}
+          <pre><code class="language-jinja2">{% include njk %}</code></pre>
+          {% endif %}
         {% endif %}
       </div>
     {% endif %}
@@ -81,9 +85,11 @@
       <div id="{{example_id}}-css-code" class="code">
         {# вывести КОД css если css=true #}
         {% if css %}
-        <pre class="line-numbers">
-          <code class="language-css">{% include css %}</code>
-        </pre>
+          {% if numeration %}{# вывести нумерацию строк если numeration=true #}
+          <pre class="line-numbers"><code class="language-css">{% include css %}</code></pre>
+          {% else %}{# иначе вывести без класса "line-numbers" #}
+          <pre><code class="language-css">{% include css %}</code></pre>
+          {% endif %}
         {% endif %}
       </div>
     {% endif %}
@@ -107,9 +113,11 @@
       <div id="{{example_id}}-js-code" class="code">
         {# вывести КОД js если js=true #}
         {% if js %}
-        <pre class="line-numbers">
-          <code class="language-js">{% include js %}</code>
-        </pre>
+          {% if numeration %}{# вывести нумерацию строк если numeration=true #}
+          <pre class="line-numbers"><code class="language-js">{% include js %}</code></pre>
+          {% else %}{# иначе вывести без класса "line-numbers" #}
+          <pre><code class="language-js">{% include js %}</code></pre>
+          {% endif %}
         {% endif %}
       </div>
     {% endif %}
@@ -128,7 +136,7 @@
         </style>
         {% endif %}
         <input type="radio" name="button" id="{{example_id}}-demo-checkbox">
-        <label for="{{example_id}}-demo-checkbox" onclick>DEMO</label>
+        <label for="{{example_id}}-demo-checkbox" class="demo_button" onclick>DEMO</label>
       {% endif %}
       <div id="{{example_id}}-demo" class="demo">
         {# вывести блок DEMO если demo=true #}

@@ -1,14 +1,14 @@
 /* временно расположить в ряд по три code-example */
 .wrapper_grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-gap: 10px;
 }
 
 /* code-example БЕТА версия */
 .code-example-beta {
   display: grid;
-  grid-template-columns: repeat(5, 1fr); /* для 5 табов */
+  grid-template-columns: repeat(7, 1fr) 150px; /* для 7 табов + 1 (150px) */
   grid-template-rows: auto auto max-content;
   grid-gap: 1px 2px;
   box-sizing: border-box;
@@ -33,6 +33,16 @@
   padding: 7px;
   text-align: center;
   height: 20px;
+  cursor: pointer;
+}
+
+/* кнопка demo всегда справа */
+.code-example-beta > label[class="demo_button"] {
+  grid-column: 8;
+}
+
+.code-example-beta > label:hover {
+  background: lightsalmon;
 }
 
 /* скрыть инпуты */

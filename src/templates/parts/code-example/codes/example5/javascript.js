@@ -1,3 +1,5 @@
 // javascript (example-5)
-var a = "test"
-alert(a);
+i = 1;
+a = i++;
+alert(a); // 1
+alert(i); // 2
