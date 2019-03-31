@@ -14,9 +14,17 @@
   box-sizing: border-box;
 }
 
-/* нужно переопределить оригинальные стили prism.js */
+/* чтобы не вмешиваться в оригинальные стили prism.js все переопределения я делаю в style.css */
+/* это нужно для того, чтобы при скачивании новой конфигурации prism.js не приходилось каждый раз лезть в prism.css */
+
+/* убрать margin у блока с кодом */
 .code-example-beta pre[class*=language-] {
   margin: 0;
+}
+
+/* изменить z-index у reviewer (иначе он не будет работать в codeExample) */
+.prism-previewer {
+  z-index: 2;
 }
 
 .code-example-beta > label {
@@ -30,7 +38,6 @@
 /* скрыть инпуты */
 input[name=button] {
   z-index: 99;
-  height: 0;
   grid-row: 2; /* не трогать */
   display: none;
 }
@@ -40,17 +47,20 @@ input[name=button]:checked + label {
   background: orange;
 }
 
-.code, .demo {
+.code {
   display: grid;
   grid-column: 1 / -1;
   grid-row: 3; /* не трогать */
   background:#2d2d2d; /* цвет из prism.js - #2d2d2d */
   overflow-x: auto;
-  opacity: 0.08; /* изначально .code невидим (opacity: 1 при клике на кнопку) */
+  z-index: 0;
 }
 
 .demo {
-  background: red;
+  grid-column: 1 / -1;
+  grid-row: 3; /* не трогать */
+  overflow-x: auto;
   padding: 0 10px;
-  opacity: 1;
+  background: white;
+  border: 1px solid;
 }

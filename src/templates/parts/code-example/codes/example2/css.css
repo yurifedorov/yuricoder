@@ -2,5 +2,9 @@
 .class {
   font-size: 20px;
   background: yellow;
+  color: rgba(147, 32, 34, 0.8);
   transition: 2s;
+  transition-timing-function: linear;
+  transition-timing-function: ease;
+  transform: rotate(30deg);
 }
