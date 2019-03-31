@@ -11,9 +11,8 @@
 {% block head %}
   <title>Демонстрация примеров кода на сайте</title>
   <meta name="description" content="Все необходимое для вывода примеров html, js, css и других примеров кода." />
-  <link rel="stylesheet" href="/libs/prism/prism.min.css">
-  <script src="/libs/prism/prism.min.js" async></script>
-  <script src="/libs/split-js/split.min.js" async></script>
+  <link rel="stylesheet" href="{{prism_css}}">
+  <script src="{{prism_js}}" async></script>
 {% endblock %}
 
 {% block aside_top %}{% include aside_top %}{% endblock %}

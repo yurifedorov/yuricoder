@@ -14,8 +14,8 @@
 {% block head %}
   <title>{{ segment | capitalize }} - {{ title }}</title>
   <meta name="description" content="{{description}}" />
-  <link rel="stylesheet" href="{{path}}../../{{ prism_css }}">
-  <script src="{{path}}../../{{ prism_js }}"></script>
+  <link rel="stylesheet" href="{{prism_css}}">
+  <script src="{{prism_js}}" async></script>
 {% endblock %}
 
 {% block main %}

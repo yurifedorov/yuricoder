@@ -5,7 +5,7 @@ const concat          = require('gulp-concat');
 const cssnano         = require('gulp-cssnano');
 const browserSync     = require('browser-sync');
 const data            = require('gulp-data');
-const compress        = require('gulp-babel-minify');
+const minify          = require('gulp-minify');
 const pump            = require('pump');
 const rename          = require('gulp-rename');
 const imagemin        = require('gulp-imagemin');
@@ -58,9 +58,8 @@ gulp.task('scripts', function (cb) {
     // 1. сжатие всех скриптов библиотек
     // 2. добавление суффикса .min
     pump([
-        gulp.src('src/libs/**/*.js'),
-        compress(),
-        rename({suffix: '.min'}),
+        gulp.src('src/libs/**/*.+(js|mjs)'),
+        minify(),
         gulp.dest('dist/libs'),
         browserSync.reload({stream: true})
       ],
@@ -71,7 +70,7 @@ gulp.task('scripts', function (cb) {
     pump([
         gulp.src('src/libs/**/*.css'),
         cssnano(),
-        rename({suffix: '.min'}),
+        rename({suffix: '-min'}),
         gulp.dest('dist/libs'),
         browserSync.reload({stream: true})
       ],
@@ -106,8 +105,7 @@ gulp.task('scripts', function (cb) {
                 'src/scripts/resize-observer.js',
                 'src/scripts/peppermint_init.js'
                 ]),
-            compress(),
-            rename({suffix: '.min'}),
+            minify(),
             gulp.dest('src/templates/parts/scripts/')
         ],
         cb
