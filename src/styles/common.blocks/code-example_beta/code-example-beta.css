@@ -1,24 +1,11 @@
-/* временно расположить в ряд по три code-example */
-.wrapper_grid {
-  display: grid;
-  grid-gap: 40px;
-}
-
-.XXL > .wrapper_grid {
-  grid-template-columns: 1fr 1fr;
-}
-
-.wrapper_grid > section {
-  background: #eee;
-  padding: 0 1em 1em 1em;
-}
-
 /* code-example БЕТА версия */
 .code-example-beta {
   display: grid;
-  grid-template-columns: repeat(6, 1fr); /* 6 табов равной ширины */
+  grid-template-columns: repeat(5, 1fr); /* 5 табов равной ширины */
   grid-template-rows: auto auto max-content;
   grid-gap: 1px 2px;
+  margin-left: -10px;
+  margin-right: -10px;
   box-sizing: border-box;
 }
 
@@ -46,7 +33,7 @@
 
 /* кнопка demo всегда справа */
 .code-example-beta > label[class="demo_button"] {
-  grid-column: 6;
+  grid-column: 5; /* заменить число, если количество табов изменится */
 }
 
 .code-example-beta > label:hover {
@@ -82,9 +69,10 @@ input[name=button] {
 .run-js {
   position: absolute;
   top: 4;
-  bottom: 4;
   right: 4;
-  padding: 4px 5px 4px 7px;
+  bottom: 4;
+  padding: 3px 7px;
+  box-sizing: border-box;
   background: white;
   color: black;
   opacity: 0.6;

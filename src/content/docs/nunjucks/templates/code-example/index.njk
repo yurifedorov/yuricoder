@@ -13,6 +13,22 @@
   <meta name="description" content="Все необходимое для вывода примеров html, js, css и других примеров кода." />
   <link rel="stylesheet" href="{{prism_css}}">
   <script src="{{prism_js}}" async></script>
+  <style>
+  /* только для этой страницы */
+  .wrapper_grid {
+    display: grid;
+  }
+
+  .XXL > .wrapper_grid {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 40px;
+  }
+
+  .wrapper_grid > section {
+    background: #eee;
+    padding: 0 1em 5px 1em;
+  }
+  </style>
 {% endblock %}
 
 {% block aside_top %}{% include aside_top %}{% endblock %}
