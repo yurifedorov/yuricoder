@@ -1,19 +1,22 @@
 /* временно расположить в ряд по три code-example */
 .wrapper_grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
   grid-gap: 40px;
+}
+
+.XXL > .wrapper_grid {
+  grid-template-columns: 1fr 1fr;
 }
 
 .wrapper_grid > section {
   background: #eee;
-  padding: 0 20px 20px 20px;
+  padding: 0 1em 1em 1em;
 }
 
 /* code-example БЕТА версия */
 .code-example-beta {
   display: grid;
-  grid-template-columns: repeat(4, 1fr) 150px; /* для 4 табов + 1 (150px) */
+  grid-template-columns: repeat(6, 1fr); /* 6 табов равной ширины */
   grid-template-rows: auto auto max-content;
   grid-gap: 1px 2px;
   box-sizing: border-box;
@@ -43,7 +46,7 @@
 
 /* кнопка demo всегда справа */
 .code-example-beta > label[class="demo_button"] {
-  grid-column: 5;
+  grid-column: 6;
 }
 
 .code-example-beta > label:hover {
@@ -60,7 +63,20 @@ input[name=button] {
 
 /* кнопка для запуска js скриптов */
 /* кнопка JS = relative */
-.js-button {position: relative;}
+.code-example-beta > label[class="js-button"] {
+  position: relative;
+  min-width: 50px;
+  text-align: left; /* чтобы не пересекалось с .run-js */
+}
+
+.SM .code-example-beta > label[class="js-button"] {
+  padding-left: 25%;
+}
+
+.XL .code-example-beta > label[class="js-button"] {
+  padding-left: 0;
+  text-align: center;
+}
 
 /* позиция + стили для кнопки run-js */
 .run-js {
