@@ -8,7 +8,7 @@
 /* code-example БЕТА версия */
 .code-example-beta {
   display: grid;
-  grid-template-columns: repeat(7, 1fr) 150px; /* для 7 табов + 1 (150px) */
+  grid-template-columns: repeat(4, 1fr) 150px; /* для 4 табов + 1 (150px) */
   grid-template-rows: auto auto max-content;
   grid-gap: 1px 2px;
   box-sizing: border-box;
@@ -28,7 +28,7 @@
 }
 
 .code-example-beta > label {
-  background: purple;
+  background: black;
   color: white;
   padding: 7px;
   text-align: center;
@@ -38,11 +38,12 @@
 
 /* кнопка demo всегда справа */
 .code-example-beta > label[class="demo_button"] {
-  grid-column: 8;
+  grid-column: 5;
 }
 
 .code-example-beta > label:hover {
-  background: lightsalmon;
+  background: silver;
+  color: black;
 }
 
 /* скрыть инпуты */
@@ -51,6 +52,34 @@ input[name=button] {
   grid-row: 2; /* не трогать */
   display: none;
 }
+
+/* кнопка для запуска js скриптов */
+/* кнопка JS = relative */
+.js-button {position: relative;}
+
+/* позиция + стили для кнопки run-js */
+.run-js {
+  position: absolute;
+  top: 4;
+  bottom: 4;
+  right: 4;
+  padding: 4px 5px 4px 7px;
+  background: white;
+  color: black;
+  opacity: 0.8;
+}
+
+.run-js:after {
+  content: '\0025B6'; /* play */
+}
+
+.run-js:hover{
+  background: black;
+  color: white;
+  opacity: 1;
+}
+
+
 
 /* активная кнопка меняет цвет */
 input[name=button]:checked + label {
