@@ -24,20 +24,11 @@
   <h1>codeExample</h1>
   <p>Шаблон для демонстрации html, js, css и прочих примеров кода.</p>
 
-  <h2>Список неисправленных багов</h2>
- <ol>
-   <li>на iPad класс .code отображается криво</li>
- </ol>
-
-  <br>
-  <hr>
-
-  <h2>Простые примеры</h2>
-  <p>Для простейших примеров, типа синтаксиса</p>
   <div class="wrapper_grid">
 
     <section>
-      <h3>[ 1 ] с нумерацией строк</h3>
+      <h3>[ 1 ] код (с нумерацией строк)</h3>
+      <p>Демонстрация одного примера</p>
       {% set example_id = 'example1' %} {# требуется для работы кнопок checkbox/label #}
       {% set numeration = 'true' %} {# true = включена / '' (пустая строка) = отключена #}
       {% set html = 'parts/code-example/codes/example1/html.html' %} {# путь к примеру html #}
@@ -49,7 +40,8 @@
     </section>
 
     <section>
-      <h3>[ 2 ] без нумерациии строк</h3>
+      <h3>[ 2 ] код (без нумерациии строк)</h3>
+      <p>Демонстрация одного примера</p>
       {% set example_id = 'example2' %} {# требуется для работы кнопок checkbox/label #}
       {% set numeration = '' %} {# true = включена / '' (пустая строка) = отключена #}
       {% set html = '' %} {# путь к примеру html #}
@@ -62,17 +54,11 @@
 
   </div>
 
-
-  <br>
-  <hr>
-
-
-  <h2>Примеры + Демо</h2>
-  <p>Когда нужно продемонстрировать пример работы скрипта (html + js + css)</p>
   <div class="wrapper_grid">
 
     <section>
-      <h3>[ 3 ] с нумерацией строк</h3>
+      <h3>[ 3 ] код (с нумерацией строк) + Toolbar</h3>
+      <p>Демонстрация нескольких примеров (html + js + css и т.д.). Возможен запуск JS скриптов.</p>
       {% set example_id = 'example3' %} {# требуется для работы кнопок checkbox/label #}
       {% set numeration = 'true' %} {# true = включена / '' (пустая строка) = отключена #}
       {% set html = 'parts/code-example/codes/example3/html.html' %} {# путь к примеру html #}
@@ -84,7 +70,8 @@
     </section>
 
     <section>
-      <h3>[ 4 ] без нумерациии строк</h3>
+      <h3>[ 4 ] код (без нумерациии строк) + Toolbar</h3>
+      <p>Демонстрация нескольких примеров (html + js + css и т.д.). Возможен запуск JS скриптов.</p>
       {% set example_id = 'example4' %} {# требуется для работы кнопок checkbox/label #}
       {% set numeration = '' %} {# true = включена / '' (пустая строка) = отключена #}
       {% set html = 'parts/code-example/codes/example4/html.html' %} {# путь к примеру html #}
@@ -97,18 +84,14 @@
 
   </div>
 
-  <br>
-  <hr>
-
-  <h2>Примеры + Responsive Демо</h2>
-  <p>Специально для демонстрации резиновых веб-компонентов (с добавлением split режима).</p>
   <div class="wrapper_grid">
 
     <section>
-      <h3>[ 5 ] с нумерацией строк</h3>
+      <h3>[ 5 ] код (с нумерацией строк) + Toolbar + Responsive Демо</h3>
+      <p>Демонстрация <b>responsive-компонентов</b> с возможностью изменения ширины контейнера DEMO</p>
       {% set example_id = 'example5' %} {# требуется для работы кнопок checkbox/label #}
       {% set numeration = 'true' %} {# true = включена / '' (пустая строка) = отключена #}
-      {% set html = '' %} {# путь к примеру html #}
+      {% set html = 'parts/code-example/codes/example5/html.html' %} {# путь к примеру html #}
       {% set njk = '' %} {# путь к примеру njk #}
       {% set css = '' %} {# путь к примеру css #}
       {% set js = 'parts/code-example/codes/example5/javascript.js' %} {# путь к примеру js #}
@@ -117,7 +100,7 @@
     </section>
 
     <section>
-      <h3>[ 6 ] без нумерациии строк</h3>
+      <h3>[ 6 ] код (без нумерации строк) + Toolbar + Responsive Демо</h3>
       {% set example_id = 'example6' %} {# требуется для работы кнопок checkbox/label #}
       {% set numeration = '' %} {# true = включена / '' (пустая строка) = отключена #}
       {% set html = '' %} {# путь к примеру html #}
@@ -129,6 +112,14 @@
     </section>
 
   </div>
+
+  <br>
+  <hr>
+
+  <h2>Список неисправленных багов</h2>
+  <ol>
+    <li>на iPad класс .code отображается криво</li>
+  </ol>
 
 
 

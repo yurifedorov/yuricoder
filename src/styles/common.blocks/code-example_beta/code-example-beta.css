@@ -2,7 +2,12 @@
 .wrapper_grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 10px;
+  grid-gap: 40px;
+}
+
+.wrapper_grid > section {
+  background: #eee;
+  padding: 0 20px 20px 20px;
 }
 
 /* code-example БЕТА версия */
@@ -48,9 +53,9 @@
 
 /* скрыть инпуты */
 input[name=button] {
+  display: none;
   z-index: 99;
   grid-row: 2; /* не трогать */
-  display: none;
 }
 
 /* кнопка для запуска js скриптов */
@@ -66,7 +71,8 @@ input[name=button] {
   padding: 4px 5px 4px 7px;
   background: white;
   color: black;
-  opacity: 0.8;
+  opacity: 0.6;
+  transition: 1s;
 }
 
 .run-js:after {
