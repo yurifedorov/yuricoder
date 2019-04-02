@@ -25,8 +25,8 @@
 .code-example-beta > label {
   background: black;
   color: white;
-  padding: 7px;
-  text-align: center;
+  padding: 7px 10px;
+  text-align: left;
   height: 20px;
   cursor: pointer;
 }
@@ -54,15 +54,6 @@ input[name=button] {
   position: relative;
   min-width: 50px;
   text-align: left; /* чтобы не пересекалось с .run-js */
-}
-
-.SM .code-example-beta > label[class="js-button"] {
-  padding-left: 25%;
-}
-
-.XL .code-example-beta > label[class="js-button"] {
-  padding-left: 0;
-  text-align: center;
 }
 
 /* позиция + стили для кнопки run-js */
