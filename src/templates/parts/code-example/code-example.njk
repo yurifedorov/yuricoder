@@ -121,9 +121,16 @@
       <style>[id='{{example_id}}-demo-checkbox']:checked ~ #{{example_id}}-demo {z-index: 2;}</style>
       <input type="radio" name="button" id="{{example_id}}-demo-checkbox">
       <label for="{{example_id}}-demo-checkbox" class="demo_button" onclick>DEMO</label>
-      <div id="{{example_id}}-demo" class="demo">
-        {% if demo %}{% include demo %}{% endif %}{# вывести блок DEMO если demo=true #}
-      </div>
+      {% if demo %}
+        <div id="{{example_id}}-demo" class="demo">{% include demo %}{# вывести блок DEMO если demo=true #}</div>
+      {% endif %}
+      {% if demo and split %}
+        <div class="split-parent">
+          <div id="box-1" data-observe-resizes>
+            <p>test split</p>
+          </div>
+        </div>
+      {% endif %}
     {% endif %}
 
 </div>
