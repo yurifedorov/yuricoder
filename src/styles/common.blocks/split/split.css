@@ -7,9 +7,16 @@
   background: #eee;
 }
 
+.split-parent > div[id="box-1"],
+.split-parent > div[id="box-2"],
+.split-parent > div[id="box-3"] {
+  background: wheat;
+  padding: 0 20px;
+}
+
 .gutter {
   border-left: 1px solid;
   border-right: 1px solid;
   cursor: ew-resize;
-  margin: 0 30px;
+  margin: 0 10px;
 }
