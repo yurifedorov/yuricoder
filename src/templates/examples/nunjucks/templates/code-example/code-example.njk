@@ -1,0 +1,103 @@
+{% raw %}
+
+&lt;div class="code-example-beta"&gt;
+
+    {# HTML #}
+    {% if html %}
+      {% if demo %}
+        &lt;style&gt;input[name=button]:checked ~ #{{example_id}}-html-code {z-index: 2;}&lt;/style&gt;
+        &lt;input type="radio" name="button" id="{{example_id}}-html-checkbox"&gt;
+        &lt;label for="{{example_id}}-html-checkbox" onclick>HTML&lt;/label&gt;
+      {% endif %}
+      &lt;div id="{{example_id}}-html-code" class="code"&gt;
+        {% if html %}
+          {% if numeration %}
+          &lt;pre class="line-numbers"&gt;&lt;code class="language-html"&gt;{% include html %}&lt;/code&gt;&lt;/pre&gt;
+          {% else %}
+          &lt;pre&gt;&lt;code class="language-html"&gt;{% include html %}&lt;/code&gt;&lt;/pre&gt;
+          {% endif %}
+        {% endif %}
+      &lt;/div&gt;
+    {% endif %}
+
+    {# NJK #}
+    {% if njk %}
+      {% if demo %}
+        &lt;style&gt;[id='{{example_id}}-njk-checkbox']:checked ~ #{{example_id}}-njk-code {z-index: 2;}&lt;/style&gt;
+        &lt;input type="radio" name="button" id="{{example_id}}-njk-checkbox"&gt;
+        &lt;label for="{{example_id}}-njk-checkbox" onclick&gt;NJK&lt;/label&gt;
+      {% endif %}
+      &lt;div id="{{example_id}}-njk-code" class="code"&gt;
+        {% if njk %}
+          {% if numeration %}
+          &lt;pre class="line-numbers"&gt;&lt;code class="language-jinja2""&gt;{% include njk %}&lt;/code&gt;&lt;/pre&gt;
+          {% else %}
+          &lt;pre&gt;&lt;code class="language-jinja2"&gt;{% include njk %}&lt;/code&gt;&lt;/pre&gt;
+          {% endif %}
+        {% endif %}
+      &lt;/div&gt;
+    {% endif %}
+
+    {# CSS #}
+    {% if css %}
+      {% if demo %}
+        &lt;style&gt;[id='{{example_id}}-css-checkbox']:checked ~ #{{example_id}}-css-code {z-index: 2;}&lt;/style&gt;
+        &lt;input type="radio" name="button" id="{{example_id}}-css-checkbox"&gt;
+        &lt;label for="{{example_id}}-css-checkbox" onclick>CSS&lt;/label&gt;
+      {% endif %}
+      &lt;div id="{{example_id}}-css-code" class="code"&gt;
+        {% if css %}
+          {% if numeration %}
+          &lt;pre class="line-numbers"&gt;&lt;code class="language-css"&gt;{% include css %}&lt;/code&gt;&lt;/pre&gt;
+          {% else %}
+          &lt;pre&gt;&lt;code class="language-css"&gt;{% include css %}&lt;/code&gt;&lt;/pre&gt;
+          {% endif %}
+        {% endif %}
+      &lt;/div&gt;
+    {% endif %}
+
+    {# JS #}
+    {% if js %}
+      {% if demo %}
+        &lt;style&gt;[id='{{example_id}}-js-checkbox']:checked ~ #{{example_id}}-js-code {z-index: 2;}&lt;/style&gt;
+        &lt;input type="radio" name="button" id="{{example_id}}-js-checkbox"&gt;
+        &lt;label for="{{example_id}}-js-checkbox" class="js-button" onclick>JS <span class="run-js" title="Run" onclick="{{example_id}}()"></span></label>
+      {% endif %}
+      &lt;div id="{{example_id}}-js-code" class="code"&gt;
+        {% if js %}
+          {% if numeration %}
+          &lt;pre class="line-numbers"&gt;
+            &lt;code class="language-js"&gt;{% include js %}&lt;/code&gt;
+            &lt;script&gt; function {{example_id}}() { {% include js %} } &lt;/script&gt;
+          &lt;/pre&gt;
+          {% else %}
+          &lt;pre&gt;
+            &lt;code class="language-js"&gt;{% include js %}&lt;/code&gt;
+            &lt;script&gt; function {{example_id}}() { {% include js %} } &lt;/script&gt;
+          &lt;/pre&gt;
+          {% endif %}
+        {% endif %}
+      &lt;/div&gt;
+    {% endif %}
+
+    {# DEMO #}
+    {% if demo %}
+      &lt;style&gt;[id='{{example_id}}-demo-checkbox']:checked ~ #{{example_id}}-demo {z-index: 2;}&lt;/style&gt;
+      &lt;input type="radio" name="button" id="{{example_id}}-demo-checkbox"&gt;
+      &lt;label for="{{example_id}}-demo-checkbox" class="demo_button" onclick&gt;DEMO&lt;/label&gt;
+      {% if demo %}
+        &lt;div id="{{example_id}}-demo" class="demo"&gt;
+          {% include demo %}
+        &lt;/div&gt;
+      {% endif %}
+      {% if demo and split %}
+      &lt;div id="{{example_id}}-demo" class="demo split-parent"&gt;
+        &lt;div id="box-1" data-observe-resizes&gt;
+          {% include demo %}
+        &lt;/div&gt;
+      &lt;/div&gt;
+      {% endif %}
+    {% endif %}
+
+&lt;/div&gt;
+{% endraw %}
