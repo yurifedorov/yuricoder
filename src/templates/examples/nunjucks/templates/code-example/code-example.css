@@ -1,0 +1,93 @@
+.code-example {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 табов равной ширины */
+  grid-template-rows: auto auto max-content;
+  grid-gap: 1px 2px;
+  margin-left: -10px;
+  margin-right: -10px;
+  box-sizing: border-box;
+}
+
+.code-example pre[class*=language-] {
+  margin: 0;
+}
+
+.prism-previewer {
+  z-index: 2;
+}
+
+.code-example > label {
+  background: black;
+  color: white;
+  padding: 7px 10px;
+  text-align: left;
+  height: 20px;
+  cursor: pointer;
+}
+
+.code-example > label[class="demo_button"] {
+  grid-column: 5;
+}
+
+.code-example > label:hover {
+  background: silver;
+  color: black;
+}
+
+input[name=button] {
+  display: none;
+  z-index: 99;
+  grid-row: 2;
+}
+
+.code-example > label[class="js-button"] {
+  position: relative;
+  min-width: 50px;
+  text-align: left;
+}
+
+.run-js {
+  position: absolute;
+  top: 4;
+  right: 4;
+  bottom: 4;
+  padding: 3px 7px;
+  box-sizing: border-box;
+  background: white;
+  color: black;
+  opacity: 0.6;
+  transition: 1s;
+}
+
+.run-js:after {
+  content: '\0025B6';
+}
+
+.run-js:hover{
+  background: black;
+  color: white;
+  opacity: 1;
+}
+
+input[name=button]:checked + label {
+  background: orange;
+}
+
+.code {
+  display: grid;
+  grid-column: 1 / -1;
+  grid-row: 3;
+  background:#2d2d2d;
+  overflow-x: auto;
+  z-index: 0;
+}
+
+.demo {
+  grid-column: 1 / -1;
+  grid-row: 3;
+  overflow-x: auto;
+  padding: 0 10px;
+  background: white;
+  border: 1px solid;
+  z-index: 1;
+}
