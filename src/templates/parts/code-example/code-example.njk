@@ -122,10 +122,20 @@
       <input type="radio" name="button" id="{{example_id}}-demo-checkbox">
       <label for="{{example_id}}-demo-checkbox" class="demo_button" onclick>DEMO</label>
 
+      {# вывести блок demo если demo=true #}
       {% if demo %}
         <div id="{{example_id}}-demo" class="demo">
           {% include demo %}
         </div>
+      {% endif %}
+
+      {# включить режим split если demo=true и split=true #}
+      {% if demo and split %}
+      <div id="{{example_id}}-demo" class="demo split-parent">
+        <div id="box-1" data-observe-resizes>
+          {% include demo %}
+        </div>
+      </div>
       {% endif %}
 
     {% endif %}
@@ -134,10 +144,10 @@
 
 {# шаблон для демонстрации resize observer
 
-<div class="split-parent">
-  <div id="box-1" data-observe-resizes>
-    {% block exampleContent %} {% include demo %} {% endblock %}
+  <div id="{{example_id}}-demo" class="demo split-parent">
+    <div id="box-1" data-observe-resizes>
+      {% include demo %}
+    </div>
   </div>
-</div>
 
 #}
