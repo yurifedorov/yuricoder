@@ -22,16 +22,17 @@
 {% block main %}
 
   <h1>{{ title | capitalize }}</h1>
+  <p>Оператор % нужен чтобы найти остаток от деления.</p>
 
-  <section>
-    {# remainder #}
-    {% set title = 'описание' %}
-    {% set description = 'Оператор % нужен чтобы найти остаток от деления.' %}
-    {% set onclick = 'onclick=' %}
-    {% set function = "remainder()" %}
-    {% set code = 'examples/javascript/operators/remainder.njk' %}
-    {% set code_language = 'language-js' %}
-    {% include codeExample %}
-  </section>
+  {% set example_id = 'remainder' %} {# требуется для работы кнопок checkbox/label #}
+  {% set numeration = '' %} {# true = включена / '' (пустая строка) = отключена #}
+  {% set split = '' %} {# true = включен / '' (пустая строка) = отключен #}
+  {% set html = '' %} {# путь к примеру html #}
+  {% set njk = '' %} {# путь к примеру njk #}
+  {% set css = '' %} {# путь к примеру css #}
+  {% set js = 'examples/javascript/operators/remainder.js' %} {# путь к примеру js #}
+  {% set demo = '' %}
+  {% include codeExample_beta %}
+
 
 {% endblock %}

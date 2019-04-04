@@ -23,25 +23,26 @@
 {% block main %}
 
   <h1>{{ title | capitalize }}</h1>
+  <p>Преобразует строковое значение в числовое.</p>
 
-  <section>
-    {# unary_plus #}
-    {% set title = 'Описание' %}
-    {% set description = 'преобразует строковое значение в числовое' %}
-    {% set onclick = 'onclick=' %}
-    {% set function = "unary_plus()" %}
-    {% set code = 'examples/javascript/operators/unary_plus.njk' %}
-    {% include codeExample %}
-    <table>
-      <tr>
-        <td>12</td>
-        <td>произойдет обычная конкатенация строк</td>
-      </tr>
-      <tr>
-        <td>3</td>
-        <td>сначала выполнится преобразование в число, затем сложение</td>
-      </tr>
-    </table>
-  </section>
+  {% set example_id = 'unary_plus' %}
+  {% set numeration = '' %}
+  {% set split = '' %}
+  {% set html = '' %}
+  {% set njk = '' %}
+  {% set css = '' %}
+  {% set js = 'examples/javascript/operators/unary_plus.js' %}
+  {% set demo = '' %}
+  {% include codeExample_beta %}
+  <table>
+    <tr>
+      <td>12</td>
+      <td>произойдет обычная конкатенация строк</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>сначала выполнится преобразование в число, затем сложение</td>
+    </tr>
+  </table>
 
 {% endblock %}

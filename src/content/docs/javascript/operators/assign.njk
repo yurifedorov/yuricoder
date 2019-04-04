@@ -24,25 +24,32 @@
 {% block main %}
 
   <h1>{{ title | capitalize }}</h1>
+  <p>Присваивание производится знаком равно ( = ).</p>
 
   <section>
-    {# assign #}
-    {% set title = 'cинтаксис' %}
-    {% set description = 'присваивание производится знаком равно ( = ).' %}
-    {% set onclick = 'onclick=' %}
-    {% set function = "assign()" %}
-    {% set code = 'examples/javascript/operators/assign.njk' %}
-    {% include codeExample %}
+    {% set example_id = 'assign' %}
+    {% set numeration = '' %}
+    {% set split = '' %}
+    {% set html = '' %}
+    {% set njk = '' %}
+    {% set css = '' %}
+    {% set js = 'examples/javascript/operators/assign.js' %}
+    {% set demo = '' %}
+    {% include codeExample_beta %}
   </section>
 
   <section>
-    {# assign_priority #}
-    {% set title = 'приоритет присваивания' %}
-    {% set description = 'оператор присваивания имеет низкий приоритет, поэтому сначала всегда производится арифметика, а затем результат присваивается переменной.' %}
-    {% set onclick = 'onclick=' %}
-    {% set function = "assign_priority()" %}
-    {% set code = 'examples/javascript/operators/assign_priority.njk' %}
-    {% include codeExample %}
+    <h2>Приоритет присваивания</h2>
+    <p>Оператор присваивания имеет низкий приоритет, поэтому сначала всегда производится арифметика, а затем результат присваивается переменной.</p>
+    {% set example_id = 'assign_priority' %}
+    {% set numeration = '' %}
+    {% set split = '' %}
+    {% set html = '' %}
+    {% set njk = '' %}
+    {% set css = '' %}
+    {% set js = 'examples/javascript/operators/assign_priority.js' %}
+    {% set demo = '' %}
+    {% include codeExample_beta %}
     <table>
       <tr>
         <td>5</td>
@@ -52,13 +59,17 @@
   </section>
 
   <section>
-    {# assign_by_chain #}
-    {% set title = 'направление присваивания' %}
-    {% set description = 'Производится справа налево.' %}
-    {% set onclick = 'onclick=' %}
-    {% set function = "assign_by_chain()" %}
-    {% set code = 'examples/javascript/operators/assign_by_chain.njk' %}
-    {% include codeExample %}
+    <h2>Направление присваивания</h2>
+    <p>Производится справа налево.</p>
+    {% set example_id = 'assign_by_chain' %}
+    {% set numeration = '' %}
+    {% set split = '' %}
+    {% set html = '' %}
+    {% set njk = '' %}
+    {% set css = '' %}
+    {% set js = 'examples/javascript/operators/assign_by_chain.js' %}
+    {% set demo = '' %}
+    {% include codeExample_beta %}
     <table>
       <tr>
         <td>4</td>
@@ -76,13 +87,17 @@
   </section>
 
   <section>
-    {# assign_abbreviated_syntax #}
-    {% set title = 'сокращенный синтаксис' %}
-    {% set description = 'при помощи совмещённых операторов можно укорачивать запись' %}
-    {% set onclick = 'onclick=' %}
-    {% set function = "assign_abbreviated_syntax()" %}
-    {% set code = 'examples/javascript/operators/assign_abbreviated_syntax.njk' %}
-    {% include codeExample %}
+    <h2>Сокращенный синтаксис</h2>
+    <p>При помощи совмещённых операторов можно укорачивать запись</p>
+    {% set example_id = 'assign_abbreviated_syntax' %}
+    {% set numeration = '' %}
+    {% set split = '' %}
+    {% set html = '' %}
+    {% set njk = '' %}
+    {% set css = '' %}
+    {% set js = 'examples/javascript/operators/assign_abbreviated_syntax.js' %}
+    {% set demo = '' %}
+    {% include codeExample_beta %}
   </section>
 
 {% endblock %}

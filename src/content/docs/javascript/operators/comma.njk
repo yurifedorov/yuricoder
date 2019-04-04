@@ -23,17 +23,19 @@
 {% block main %}
 
   <h1>{{ title | capitalize }}</h1>
+  <p>Позволяет перечислять выражения, разделяя их запятой.</p>
 
-  <section>
-    {# comma #}
-    {% set title = 'Перечисление выражений' %}
-    {% set description = 'Позволяет перечислять выражения, разделяя их запятой.' %}
-    {% set onclick = 'onclick=' %}
-    {% set function = "comma()" %}
-    {% set code = 'examples/javascript/operators/comma.njk' %}
-    {% include codeExample %}
-    <p>Каждое из них вычисляется и отбрасывается, за исключением последнего, которое возвращается.</p>
-    <b>Запятая имеет самый низкий приоритет [ 1 ]</b>
-  </section>
+  {% set example_id = 'comma' %}
+  {% set numeration = '' %}
+  {% set split = '' %}
+  {% set html = '' %}
+  {% set njk = '' %}
+  {% set css = '' %}
+  {% set js = 'examples/javascript/operators/comma.js' %}
+  {% set demo = '' %}
+  {% include codeExample_beta %}
+  
+  <p>Каждое из них вычисляется и отбрасывается, за исключением последнего, которое возвращается.</p>
+  <b>Запятая имеет самый низкий приоритет [ 1 ]</b>
 
 {% endblock %}

@@ -1,7 +1,5 @@
-{% block code %}
 alert( 1 + 1 ); // 2
 alert( "1" + "1" ); // 11
 alert( 1 + "1" ); // 11
 
 alert( 1 - "1" ); // 0
-{% endblock %}

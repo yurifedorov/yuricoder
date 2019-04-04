@@ -26,13 +26,17 @@
   <p>Увеличивает значение на 1, существуют два вида инкремента и действуют они по-разному.</p>
 
   <section>
-    {# postfix_increment #}
-    {% set title = 'Постфикcный инкремент' %}
-    {% set description = 'Увеличивает значение на 1, но при этом возвращает старое значение.' %}
-    {% set onclick = 'onclick=' %}
-    {% set function = "postfix_increment()" %}
-    {% set code = 'examples/javascript/operators/postfix_increment.njk' %}
-    {% include codeExample %}
+    <h2>Постфикcный инкремент</h2>
+    <p>Увеличивает значение на 1, но при этом возвращает старое значение.</p>
+    {% set example_id = 'postfix_increment' %}
+    {% set numeration = '' %}
+    {% set split = '' %}
+    {% set html = '' %}
+    {% set njk = '' %}
+    {% set css = '' %}
+    {% set js = 'examples/javascript/operators/postfix_increment.js' %}
+    {% set demo = '' %}
+    {% include codeExample_beta %}
     <table>
       <tr>
         <td>1</td>
@@ -46,13 +50,17 @@
   </section>
 
   <section>
-    {# prefix_increment #}
-    {% set title = 'Префикcный инкремент' %}
-    {% set description = 'Увеличивает значение на 1 и возвращает новое значение.' %}
-    {% set onclick = 'onclick=' %}
-    {% set function = "prefix_increment()" %}
-    {% set code = 'examples/javascript/operators/prefix_increment.njk' %}
-    {% include codeExample %}
+    <h2>Префикcный инкремент</h2>
+    <p>Увеличивает значение на 1 и возвращает новое значение.</p>
+    {% set example_id = 'prefix_increment' %}
+    {% set numeration = '' %}
+    {% set split = '' %}
+    {% set html = '' %}
+    {% set njk = '' %}
+    {% set css = '' %}
+    {% set js = 'examples/javascript/operators/prefix_increment.js' %}
+    {% set demo = '' %}
+    {% include codeExample_beta %}
     <table>
       <tr>
         <td>2</td>
@@ -63,7 +71,9 @@
         <td>в качестве проверки выводим <b>i</b> и видим, что значение действительно увеличилось</td>
       </tr>
     </table>
-    <b>Инкремент/декремент можно применить только к переменной: 5++ даст ошибку.</b>
   </section>
+
+  <b>Инкремент/декремент можно применить только к переменной: 5++ даст ошибку.</b>
+
 
 {% endblock %}

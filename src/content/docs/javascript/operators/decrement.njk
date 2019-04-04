@@ -26,17 +26,21 @@
   <p>Уменьшает значение на 1, существуют два вида декремента и действуют они по-разному.</p>
 
   <section>
-    {# postfix_decrement #}
-    {% set title = 'Постфиксный декремент' %}
-    {% set description = 'уменьшает значение на 1, но при этом возвращает старое значение.' %}
-    {% set onclick = 'onclick=' %}
-    {% set function = "postfix_decrement()" %}
-    {% set code = 'examples/javascript/operators/postfix_decrement.njk' %}
-    {% include codeExample %}
+    <h2>Постфиксный декремент</h2>
+    <p>Уменьшает значение на 1, но при этом возвращает старое значение.</p>
+    {% set example_id = 'postfix_decrement' %}
+    {% set numeration = '' %}
+    {% set split = '' %}
+    {% set html = '' %}
+    {% set njk = '' %}
+    {% set css = '' %}
+    {% set js = 'examples/javascript/operators/postfix_decrement.js' %}
+    {% set demo = '' %}
+    {% include codeExample_beta %}
     <table>
       <tr>
         <td>1</td>
-        <td>значение <b>i</b> увелилось на 1 и сохранилось в <b>a</b> , а вывелось старое</td>
+        <td>значение <b>i</b> уменьшилось на 1 и сохранилось в <b>a</b> , а вывелось старое</td>
       </tr>
       <tr>
         <td>2</td>
@@ -46,13 +50,17 @@
   </section>
 
   <section>
-    {# prefix_decrement #}
-    {% set title = 'Префикcный декремент' %}
-    {% set description = 'уменьшает значение на 1 и возвращает новое значение.' %}
-    {% set onclick = 'onclick=' %}
-    {% set function = "prefix_decrement()" %}
-    {% set code = 'examples/javascript/operators/prefix_decrement.njk' %}
-    {% include codeExample %}
+    <h2>Префикcный декремент</h2>
+    <p>Уменьшает значение на 1 и возвращает новое значение.</p>
+    {% set example_id = 'prefix_decrement' %}
+    {% set numeration = '' %}
+    {% set split = '' %}
+    {% set html = '' %}
+    {% set njk = '' %}
+    {% set css = '' %}
+    {% set js = 'examples/javascript/operators/prefix_decrement.js' %}
+    {% set demo = '' %}
+    {% include codeExample_beta %}
     <table>
       <tr>
         <td>2</td>

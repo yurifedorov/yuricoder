@@ -23,16 +23,16 @@
 {% block main %}
 
   <h1>{{ title | capitalize }}</h1>
+  <p>Применяется к одному операнду и меняет знак числа на противоположный.</p>
 
-  <section>
-    {# unary-minus #}
-    {% set title = 'Описание' %}
-    {% set description = 'Применяется к одному операнду и меняет знак числа на противоположный.' %}
-    {% set onclick = 'onclick=' %}
-    {% set function = "unary_minus()" %}
-    {% set code = 'examples/javascript/operators/unary_minus.njk' %}
-    {% include codeExample %}
-  </section>
-
+  {% set example_id = 'unary_minus' %}
+  {% set numeration = '' %}
+  {% set split = '' %}
+  {% set html = '' %}
+  {% set njk = '' %}
+  {% set css = '' %}
+  {% set js = 'examples/javascript/operators/unary_minus.js' %}
+  {% set demo = '' %}
+  {% include codeExample_beta %}
 
 {% endblock %}
