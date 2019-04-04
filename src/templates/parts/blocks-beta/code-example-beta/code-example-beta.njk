@@ -25,9 +25,13 @@
         {# вывести КОД html если html=true  #}
         {% if html %}
           {% if numeration %}{# вывести нумерацию строк если numeration=true #}
-          <pre class="line-numbers"><code class="language-html">{% include html %}</code></pre>
+          <pre class="line-numbers">
+            <code class="language-html">{% include examples_dir + example_id + '/' + html %}</code>
+          </pre>
           {% else %}{# иначе вывести без класса "line-numbers" #}
-          <pre><code class="language-html">{% include html %}</code></pre>
+          <pre>
+            <code class="language-html">{% include examples_dir + example_id + '/' + html %}</code>
+          </pre>
           {% endif %}
         {% endif %}
       </div>

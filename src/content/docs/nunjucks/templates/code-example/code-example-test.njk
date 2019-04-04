@@ -7,7 +7,7 @@
 {% set segment         = 'мои шаблоны' %}
 {% set subsegment_del  = 'delete' %}
 
-{# путь к примерам code-example-beta #}
+{# путь к примерам code-example-beta [НЕ УДАЛЯТЬ] #}
 {% set examples_dir    = 'parts/blocks-beta/code-example-beta/examples/' %}
 
 {# <head> #}
@@ -51,10 +51,10 @@
       {% set example_id = 'example1' %} {# требуется для работы кнопок checkbox/label #}
       {% set numeration = 'true' %} {# true = включена / '' (пустая строка) = отключена #}
       {% set split      = '' %} {# true = включен / '' (пустая строка) = отключен #}
-      {% set html       = '' %} {# путь к примеру html #}
+      {% set html       = 'example1.html' %} {# путь к примеру html #}
       {% set njk        = '' %} {# путь к примеру njk #}
       {% set css        = '' %} {# путь к примеру css #}
-      {% set js         = examples_dir + example_id + '/' + example_id + '.js' %} {# путь к примеру js #}
+      {% set js         = '' %} {# путь к примеру js #}
       {# путь js:         parts/blocks-beta/code-example-beta/examples/example1/javascript.js #}
       {% set demo       = '' %}
       {% include codeExample_beta %}
@@ -65,9 +65,9 @@
       {% set example_id = 'example2' %}
       {% set numeration = '' %}
       {% set split      = '' %}
-      {% set html       = '' %}
+      {% set html       = 'example2.html' %}
       {% set njk        = '' %}
-      {% set css        = examples_dir + 'example2/css.css' %}
+      {% set css        = '' %}
       {% set js         = '' %}
       {% set demo       = '' %}
       {% include codeExample_beta %}
@@ -82,10 +82,10 @@
       {% set example_id = 'example3' %}
       {% set numeration = 'true' %}
       {% set split      = '' %}
-      {% set html       = examples_dir + 'example3/html.html' %}
-      {% set njk        = examples_dir + 'example3/jinja2.njk' %}
-      {% set css        = examples_dir + 'example3/css.css' %}
-      {% set js         = examples_dir + 'example3/javascript.js' %}
+      {% set html       = 'example3.html' %}
+      {% set njk        = examples_dir + 'example3/example3.njk' %}
+      {% set css        = examples_dir + 'example3/example3.css' %}
+      {% set js         = examples_dir + 'example3/example3.js' %}
       {% set demo       = 'parts/blocks-beta/code-example-beta/examples/example3/demo.njk' %}
       {% include codeExample_beta %}
     </section>
@@ -95,10 +95,10 @@
       {% set example_id = 'example4' %}
       {% set numeration = '' %}
       {% set split      = '' %}
-      {% set html       = examples_dir + 'example4/html.html' %}
-      {% set njk        = examples_dir + 'example4/jinja2.njk' %}
-      {% set css        = examples_dir + 'example4/css.css' %}
-      {% set js         = examples_dir + 'example4/javascript.js' %}
+      {% set html       = 'example4.html' %}
+      {% set njk        = examples_dir + 'example4/example4.njk' %}
+      {% set css        = examples_dir + 'example4/example4.css' %}
+      {% set js         = examples_dir + 'example4/example4.js' %}
       {% set demo       = 'parts/blocks-beta/code-example-beta/examples/example4/demo.njk' %}
       {% include codeExample_beta %}
     </section>
@@ -112,10 +112,10 @@
       {% set example_id = 'example5' %}
       {% set numeration = 'true' %}
       {% set split      = 'true' %}
-      {% set html       = examples_dir + 'example5/html.html' %}
+      {% set html       = 'example5.html' %}
       {% set njk        = '' %}
-      {% set css        = examples_dir + 'example5/css.css' %}
-      {% set js         = examples_dir + 'example5/javascript.js' %}
+      {% set css        = examples_dir + 'example5/example5.css' %}
+      {% set js         = examples_dir + 'example5/example5.js' %}
       {% set demo       = 'parts/blocks-beta/code-example-beta/examples/example5/demo.njk' %}
       {% include codeExample_beta %}
     </section>
@@ -125,9 +125,9 @@
       {% set example_id = 'example6' %}
       {% set numeration = '' %}
       {% set split      = 'true' %}
-      {% set html       = examples_dir + 'example6/html.html' %}
+      {% set html       = 'example6.html' %}
       {% set njk        = '' %}
-      {% set css        = examples_dir + 'example6/css.css' %}
+      {% set css        = examples_dir + 'example6/example6.css' %}
       {% set js         = '' %}
       {% set demo       = 'parts/blocks-beta/code-example-beta/examples/example6/demo.njk' %}
       {% include codeExample_beta %}
