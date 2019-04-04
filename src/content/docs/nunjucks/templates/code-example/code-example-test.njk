@@ -7,6 +7,9 @@
 {% set segment         = 'мои шаблоны' %}
 {% set subsegment_del  = 'delete' %}
 
+{# путь к примерам code-example-beta #}
+{% set examples_dir    = 'parts/blocks-beta/code-example-beta/examples/' %}
+
 {# <head> #}
 {% block head %}
   <title>Демонстрация примеров кода на сайте</title>
@@ -47,12 +50,12 @@
       <h4>Код (с нумерацией строк)</h4>
       {% set example_id = 'example1' %} {# требуется для работы кнопок checkbox/label #}
       {% set numeration = 'true' %} {# true = включена / '' (пустая строка) = отключена #}
-      {% set split = '' %} {# true = включен / '' (пустая строка) = отключен #}
-      {% set html = '' %} {# путь к примеру html #}
-      {% set njk = '' %} {# путь к примеру njk #}
-      {% set css = '' %} {# путь к примеру css #}
-      {% set js = 'parts/code-example/codes/example1/javascript.js' %} {# путь к примеру js #}
-      {% set demo = '' %}
+      {% set split      = '' %} {# true = включен / '' (пустая строка) = отключен #}
+      {% set html       = '' %} {# путь к примеру html #}
+      {% set njk        = '' %} {# путь к примеру njk #}
+      {% set css        = '' %} {# путь к примеру css #}
+      {% set js         = examples_dir + 'example1/javascript.js' %} {# путь к примеру js #}
+      {% set demo       = '' %}
       {% include codeExample_beta %}
     </section>
 
@@ -60,12 +63,12 @@
       <h4>Код (без нумерациии строк)</h4>
       {% set example_id = 'example2' %} {# требуется для работы кнопок checkbox/label #}
       {% set numeration = '' %} {# true = включена / '' (пустая строка) = отключена #}
-      {% set split = '' %} {# true = включен / '' (пустая строка) = отключен #}
-      {% set html = '' %} {# путь к примеру html #}
-      {% set njk = '' %} {# путь к примеру njk #}
-      {% set css = 'parts/code-example/codes/example2/css.css' %} {# путь к примеру css #}
-      {% set js = '' %} {# путь к примеру js #}
-      {% set demo = '' %}
+      {% set split      = '' %} {# true = включен / '' (пустая строка) = отключен #}
+      {% set html       = '' %} {# путь к примеру html #}
+      {% set njk        = '' %} {# путь к примеру njk #}
+      {% set css        = examples_dir + 'example2/css.css' %} {# путь к примеру css #}
+      {% set js         = '' %} {# путь к примеру js #}
+      {% set demo       = '' %}
       {% include codeExample_beta %}
     </section>
 
@@ -77,12 +80,12 @@
       <h4>Код (с нумерацией строк) + Toolbar</h4>
       {% set example_id = 'example3' %} {# требуется для работы кнопок checkbox/label #}
       {% set numeration = 'true' %} {# true = включена / '' (пустая строка) = отключена #}
-      {% set split = '' %} {# true = включен / '' (пустая строка) = отключен #}
-      {% set html = 'parts/code-example/codes/example3/html.html' %} {# путь к примеру html #}
-      {% set njk = 'parts/code-example/codes/example3/jinja2.njk' %} {# путь к примеру njk #}
-      {% set css = 'parts/code-example/codes/example3/css.css' %} {# путь к примеру css #}
-      {% set js = 'parts/code-example/codes/example3/javascript.js' %} {# путь к примеру js #}
-      {% set demo = 'parts/code-example/codes/example3/demo.njk' %}
+      {% set split      = '' %} {# true = включен / '' (пустая строка) = отключен #}
+      {% set html       = examples_dir + 'example3/html.html' %} {# путь к примеру html #}
+      {% set njk        = examples_dir + 'example3/jinja2.njk' %} {# путь к примеру njk #}
+      {% set css        = examples_dir + 'example3/css.css' %} {# путь к примеру css #}
+      {% set js         = examples_dir + 'example3/javascript.js' %} {# путь к примеру js #}
+      {% set demo       = 'parts/blocks-beta/code-example-beta/examples/example3/demo.njk' %}
       {% include codeExample_beta %}
     </section>
 
@@ -90,12 +93,12 @@
       <h4>Код (без нумерациии строк) + Toolbar</h4>
       {% set example_id = 'example4' %} {# требуется для работы кнопок checkbox/label #}
       {% set numeration = '' %} {# true = включена / '' (пустая строка) = отключена #}
-      {% set split = '' %} {# true = включен / '' (пустая строка) = отключен #}
-      {% set html = 'parts/code-example/codes/example4/html.html' %} {# путь к примеру html #}
-      {% set njk = 'parts/code-example/codes/example4/jinja2.njk' %} {# путь к примеру njk #}
-      {% set css = 'parts/code-example/codes/example4/css.css' %} {# путь к примеру css #}
-      {% set js = 'parts/code-example/codes/example4/javascript.js' %} {# путь к примеру js #}
-      {% set demo = 'parts/code-example/codes/example4/demo.njk' %}
+      {% set split      = '' %} {# true = включен / '' (пустая строка) = отключен #}
+      {% set html       = examples_dir + 'example4/html.html' %} {# путь к примеру html #}
+      {% set njk        = examples_dir + 'example4/jinja2.njk' %} {# путь к примеру njk #}
+      {% set css        = examples_dir + 'example4/css.css' %} {# путь к примеру css #}
+      {% set js         = examples_dir + 'example4/javascript.js' %} {# путь к примеру js #}
+      {% set demo       = 'parts/blocks-beta/code-example-beta/examples/example4/demo.njk' %}
       {% include codeExample_beta %}
     </section>
 
@@ -107,12 +110,12 @@
       <h4>Код (с нумерацией строк) + Toolbar + Responsive Демо</h4>
       {% set example_id = 'example5' %} {# требуется для работы кнопок checkbox/label #}
       {% set numeration = 'true' %} {# true = включена / '' (пустая строка) = отключена #}
-      {% set split = 'true' %} {# true = включен / '' (пустая строка) = отключен #}
-      {% set html = 'parts/code-example/codes/example5/html.html' %} {# путь к примеру html #}
-      {% set njk = '' %} {# путь к примеру njk #}
-      {% set css = 'parts/code-example/codes/example5/css.css' %} {# путь к примеру css #}
-      {% set js = 'parts/code-example/codes/example5/javascript.js' %} {# путь к примеру js #}
-      {% set demo = 'parts/code-example/codes/example5/demo.njk' %}
+      {% set split      = 'true' %} {# true = включен / '' (пустая строка) = отключен #}
+      {% set html       = examples_dir + 'example5/html.html' %} {# путь к примеру html #}
+      {% set njk        = '' %} {# путь к примеру njk #}
+      {% set css        = examples_dir + 'example5/css.css' %} {# путь к примеру css #}
+      {% set js         = examples_dir + 'example5/javascript.js' %} {# путь к примеру js #}
+      {% set demo       = 'parts/blocks-beta/code-example-beta/examples/example5/demo.njk' %}
       {% include codeExample_beta %}
     </section>
 
@@ -120,12 +123,12 @@
       <h4>Код (без нумерации строк) + Toolbar + Responsive Демо</h4>
       {% set example_id = 'example6' %} {# требуется для работы кнопок checkbox/label #}
       {% set numeration = '' %} {# true = включен / '' (пустая строка) = отключен #}
-      {% set split = 'true' %} {# true = включен / '' (пустая строка) = отключен #}
-      {% set html = 'parts/code-example/codes/example6/html.html' %} {# путь к примеру html #}
-      {% set njk = '' %} {# путь к примеру njk #}
-      {% set css = 'parts/code-example/codes/example6/css.css' %} {# путь к примеру css #}
-      {% set js = '' %} {# путь к примеру js #}
-      {% set demo = 'parts/code-example/codes/example6/demo.njk' %}
+      {% set split      = 'true' %} {# true = включен / '' (пустая строка) = отключен #}
+      {% set html       = examples_dir + 'example6/html.html' %} {# путь к примеру html #}
+      {% set njk        = '' %} {# путь к примеру njk #}
+      {% set css        = examples_dir + 'example6/css.css' %} {# путь к примеру css #}
+      {% set js         = '' %} {# путь к примеру js #}
+      {% set demo       = 'parts/blocks-beta/code-example-beta/examples/example6/demo.njk' %}
       {% include codeExample_beta %}
     </section>
 
