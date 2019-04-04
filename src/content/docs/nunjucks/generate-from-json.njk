@@ -23,22 +23,22 @@
   <h1>{{ title | capitalize }}</h1>
   <p>Генерация кода из многомерного массива</p>
 
+  {#
   {% set demo = 'examples/nunjucks/generate-from-json/generate-from-json_demo.njk' %}
   {% include split %}
 
-  {# nunjucks_for_template #}
   {% set title = 'Шаблон' %}
   {% set name = 'nunjucks_for_template' %}
   {% set code = 'examples/nunjucks/generate-from-json/generate-from-json_code.njk' %}
   {% set code_language = 'language-jinja2' %}
   {% include codeExample %}
 
-  {# nunjucks_for_json #}
   {% set title = 'JSON' %}
   {% set name = 'nunjucks_for_json' %}
   {% set code = 'examples/nunjucks/generate-from-json/generate-from-json_json.njk' %}
   {% set code_language = 'language-json' %}
   {% include codeExample %}
+  #}
 
 {% endblock %}
 
