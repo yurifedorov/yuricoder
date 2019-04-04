@@ -35,6 +35,18 @@ gulp.task('concatCSS', function(cb) {
       ],
       cb
     );
+    // отдельный файл стилей для бета-версий
+    pump([
+        gulp.src('src/styles/beta.blocks/**/*.css'),
+        concat('beta.css'),
+        autoprefixer(),
+        cssnano(),
+        rename({suffix: '.min'}),
+        gulp.dest('dist'),
+        browserSync.reload({stream: true})
+      ],
+      cb
+    );
 });
 
 gulp.task('scripts', function (cb) {
