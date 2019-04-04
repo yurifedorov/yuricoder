@@ -27,13 +27,14 @@
 
   <section>
     <h2><a href="{{resource}}{{anchor}}" title="{{link_title}}">Логические значения</a></h2>
-    {# comparison1_1 #}
+    
+    {#
     <p>Их всего два - true и false.</p>
     {% set title = 'true & false' %}
     {% set name  = 'comparison1_1' %}
     {% set code  = 'examples/javascript/comparison1_1.njk' %}
     {% include codeExample %}
-    {# comparison1_2 #}
+    
     <p>Результат сравнения можно присвоить переменной:</p>
     {% set title = 'Присвоение результата переменной' %}
     {% set name  = 'comparison1_2' %}
@@ -43,47 +44,47 @@
 
   <section>
     <h2><a href="{{resource}}{{anchor}}" title="{{link_title}}">Сравнение строк</a></h2>
-    {# comparison2_1 #}
+    
     <p>Строки сравниваются побуквенно, у буквы 'Б' номер выше чем у 'А'</p>
     {% set title = 'Сравнение строк' %}
     {% set name  = 'comparison2_1' %}
     {% set code  = 'examples/javascript/comparison2_1.njk' %}
     {% include codeExample %}
     <b>JavaScript использует кодировку Unicode. В кодировке Unicode обычно код у строчной буквы больше, чем у прописной.</b>
-    {# comparison2_2 #}
+    
     <p>Поэтому регистр имеет значение:</p>
     {% set title = 'Обращать внимание на регистр' %}
     {% set name  = 'comparison2_2' %}
     {% set code  = 'examples/javascript/comparison2_2.njk' %}
     {% include codeExample %}
     <p>'Я' [код: 1071], 'а' [код: 1072] <a href="http://yoksel.github.io/unicode-table/#0400..04FF%20Cyrillic">таблица</a></p>
-    {# comparison2_3 #}
+    }
     <p>Если строка состоит из нескольких букв, cначала сравниваются первые буквы, потом вторые, и так далее.</p>
     {% set title = 'Сравнение слева-направо' %}
     {% set name  = 'comparison2_3' %}
     {% set code  = 'examples/javascript/comparison2_3.njk' %}
     {% include codeExample %}
-    {# comparison2_4 #}
+    
     <p>Здесь первые и вторые буквы одинаковы, решающей будет третья</p>
     {% set title = 'Остановка на 3-й букве' %}
     {% set name  = 'comparison2_4' %}
     {% set code  = 'examples/javascript/comparison2_4.njk' %}
     {% include codeExample %}
-    {# comparison2_5 #}
+    
     <p>Любая буква больше отсутствия буквы</p>
     {% set title = 'Остановка на 4-й букве' %}
     {% set name  = 'comparison2_5' %}
     {% set code  = 'examples/javascript/comparison2_5.njk' %}
     {% include codeExample %}
     <b>Обычно от пользователя приходят значения в виде строк</b>
-    {# comparison2_6 #}
+    
     <p>При сравнивании чисел ответ будет неверным:</p>
     {% set title = 'Неверный результат сравнения' %}
     {% set name  = 'comparison2_6' %}
     {% set code  = 'examples/javascript/comparison2_6.njk' %}
     {% include codeExample %}
     <p>2 оказалось больше 14, потому что строки сравниваются посимвольно, а первый символ '2' больше '1'.</p>
-    {# comparison2_7 #}
+    
     <p>Нужно сначала преобразовать строку в число</p>
     {% set title = 'Верный результат сравнения' %}
     {% set name  = 'comparison2_7' %}
@@ -93,7 +94,7 @@
 
   <section>
     <h2><a href="{{resource}}{{anchor}}" title="{{link_title}}">Сравнение разных типов</a></h2>
-    {# comparison3_1 #}
+    
     <p>При сравнивании разных типов оба значения преобразуются в число</p>
     {% set title = 'Сравнение типов' %}
     {% set name  = 'comparison3_1' %}
@@ -103,7 +104,7 @@
 
   <section>
     <h2><a href="{{resource}}{{anchor}}" title="{{link_title}}">Строгое равенство</a></h2>
-    {# comparison4_1 #}
+    
     <p>Обычный оператор равенства ' == ' не может отличить 0 от false</p>
     {% set title = 'Обычное неравенство' %}
     {% set name  = 'comparison4_1' %}
@@ -111,7 +112,7 @@
     {% include codeExample %}
     <p>Это следствие того, что операнды разных типов преобразовались к числу. Пустая строка, как и false, при преобразовании к числу дают 0.</p>
     <b>Для проверки равенства без преобразования типов используются операторы строгого равенства === (тройное равно) и !==.</b>
-    {# comparison4_2 #}
+    
     {% set title = 'Строгое неравенство' %}
     {% set name  = 'comparison4_2' %}
     {% set code  = 'examples/javascript/comparison4_2.njk' %}
@@ -124,12 +125,12 @@
     <b>Значения null и undefined равны == друг другу и не равны чему бы то ни было ещё.</b>
     <b>При преобразовании в число null становится 0, а undefined становится NaN.</b>
     <h3>Некорректный результат сравнения null с 0</h3>
-    {# comparison5_1 #}
+    
     {% set title = 'False' %}
     {% set name  = 'comparison5_1' %}
     {% set code  = 'examples/javascript/comparison5_1.njk' %}
     {% include codeExample %}
-    {# comparison5_2 #}
+    
     {% set title = 'True' %}
     {% set name  = 'comparison5_2' %}
     {% set code  = 'examples/javascript/comparison5_2.njk' %}
@@ -137,7 +138,7 @@
     <p>Сравнение приводит null к числу, получается ноль. А при проверке равенства значения null и undefined обрабатываются особым образом: они равны друг другу, но не равны чему-то ещё.</p>
     <p>В результате получается странная с точки зрения здравого смысла ситуация.</p>
     <h3>Несравнимый undefined</h3>
-    {# comparison5_3 #}
+    
     {% set title = 'Пример' %}
     {% set name  = 'comparison5_3' %}
     {% set code  = 'examples/javascript/comparison5_3.njk' %}
@@ -145,5 +146,7 @@
     <a href="https://learn.javascript.ru/comparison#nesravnimyy-undefined">пояснения тут</a>
     <p>Любые сравнения с undefined/null, кроме точного ===, следует делать с осторожностью.</p>
   </section>
+
+  #}
 
 {% endblock %}

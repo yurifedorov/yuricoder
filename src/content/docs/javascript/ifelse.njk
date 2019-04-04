@@ -24,16 +24,17 @@
     <h1 class="{{ title_class }}">{{ title | capitalize }}</h1>
     <p>Операторы: if и ?</p>
 
+    {#
     <section>
       {% set anchor = '#operator-if' %}
       <h2><a href="{{resource}}{{anchor}}" title="{{link_title}}">Оператор if</a></h2>
-      {# ifelse1_1 #}
+      
       <p>Оператор if («если») получает условие. Если оно true - то выполняет команду.</p>
       {% set title = 'Оператор if' %}
       {% set name  = 'ifelse1_1' %}
       {% set code  = 'examples/javascript/ifelse1_1.njk' %}
       {% include codeExample %}
-      {# ifelse1_2 #}
+      
       <p>Без фигурных скобок тоже работает, но для лучшей читаемости кода их рекомендуется оставить.</p>
       {% set title = 'Не рекомендуемый, но рабочий способ' %}
       {% set name  = 'ifelse1_2' %}
@@ -49,19 +50,19 @@
         <li>Число 0, пустая строка " ", null и undefined, а также NaN являются false.</li>
         <li>Все остальные значения – true.</li>
       </ul>
-      {# ifelse2_1 #}
+      
       <p>Условие выполнится, т.к. число 1 является true</p>
       {% set title = '1 == true' %}
       {% set name  = 'ifelse2_1' %}
       {% set code  = 'examples/javascript/ifelse2_1.njk' %}
       {% include codeExample %}
-      {# ifelse2_2 #}
+      
       <p>Условие не выполнится, т.к. число 0 = false</p>
       {% set title = '0 == false' %}
       {% set name  = 'ifelse2_2' %}
       {% set code  = 'examples/javascript/ifelse2_2.njk' %}
       {% include codeExample %}
-      {# ifelse2_3 #}
+      
       <p>Можно передать уже готовое значение, заранее вычисленное в переменной:</p>
       {% set title = 'Пример' %}
       {% set name  = 'ifelse2_3' %}
@@ -72,7 +73,7 @@
     <section>
       {% set anchor = '#nevernoe-uslovie-else' %}
       <h2><a href="{{resource}}{{anchor}}" title="{{link_title}}">Неверное условие, else</a></h2>
-      {# ifelse3_1 #}
+      
       <p>else («иначе») выполняется, если условие неверно</p>
       {% set title = 'Применение else' %}
       {% set name  = 'ifelse3_1' %}
@@ -83,7 +84,7 @@
     <section>
       {% set anchor = '#neskolko-usloviy-else-if' %}
       <h2><a href="{{resource}}{{anchor}}" title="{{link_title}}">Несколько условий, else if</a></h2>
-      {# ifelse4_1 #}
+      
       <p>else if - для проверки нескольких условий</p>
       {% set title = 'Применение else if' %}
       {% set name  = 'ifelse4_1' %}
@@ -94,25 +95,25 @@
     <section>
       {% set anchor = '#operator-voprositelnyy-znak' %}
       <h2><a href="{{resource}}{{anchor}}" title="{{link_title}}">Оператор вопросительный знак ' ? '</a></h2>
-      {# ifelse5_1 #}
+      
       <p>Иногда нужно в зависимости от условия присвоить переменную.</p>
       {% set title = 'Обычный способ' %}
       {% set name  = 'uibasic5_1' %}
       {% set code  = 'examples/javascript/ifelse5_1.njk' %}
       {% include codeExample %}
-      {# ifelse5_2 #}
+      
       <p>Оператор вопросительный знак '?' позволяет делать это короче и проще.</p>
       {% set title = 'Оператор ? синтаксис' %}
       {% set name  = 'ifelse5_2' %}
       {% set code  = 'examples/javascript/ifelse5_2.njk' %}
       {% include codeExample %}
-      {# ifelse5_3 #}
+      
       <p>Проверяется условие, затем если оно верно – возвращается значение1, если неверно – значение2, например:</p>
       {% set title = 'Сокращенный способ' %}
       {% set name  = 'ifelse5_3' %}
       {% set code  = 'examples/javascript/ifelse5_3.njk' %}
       {% include codeExample %}
-      {# ifelse5_4 #}
+      
       <b>В данной конкретной ситуации можно было бы обойтись и без оператора ' ? ',</b>
       {% set title = 'Пример, когда ? не нужен' %}
       {% set name  = 'ifelse5_4' %}
@@ -124,14 +125,14 @@
     <section>
       {% set anchor = '#neskolko-operatorov' %}
       <h2><a href="{{resource}}{{anchor}}" title="{{link_title}}">Несколько операторов ' ? '</a></h2>
-      {# ifelse6_1 #}
+      
       <p>Последовательность операторов '?' позволяет вернуть значение в зависимости не от одного условия, а от нескольких.</p>
       {% set title = 'Несколько операторов ? (короче)' %}
       {% set name  = 'ifelse6_1' %}
       {% set code  = 'examples/javascript/ifelse6_1.njk' %}
       {% include codeExample %}
       <p>Вопросительный знак проверяет сначала age < 3, если верно – возвращает 'Здравствуй, малыш!', если нет – идет за двоеточие и проверяет age < 18. Если это верно – возвращает 'Привет!', иначе проверка age < 100 и 'Здравствуйте!'… И наконец, если ничего из этого не верно, то 'Какой необычный возраст!'</p>
-      {# ifelse6_1 #}
+      
       <p>Все то же самое, только через else..if</p>
       {% set title = 'Несколько операторов else if (длинее)' %}
       {% set name  = 'ifelse6_2' %}
@@ -143,7 +144,7 @@
       {% set anchor = '#netraditsionnoe-ispolzovanie' %}
       <h2><a href="{{resource}}{{anchor}}" title="{{link_title}}">Нетрадиционное использование „?“</a></h2>
       <p>Оператор вопросительный знак '?' используют как замену if</p>
-      {# ifelse7_1 #}
+      
       {% set title = 'Так делать не рекомендуется' %}
       {% set name  = 'ifelse7_1' %}
       {% set code  = 'examples/javascript/ifelse7_1.njk' %}
@@ -155,7 +156,7 @@
     <section>
       <h2>Задача:</h2>
       <p>Сделать проверку логина и пароля используя else..if</p>
-      {# ifelse_task_1 #}
+      
       {% set title = 'Решение' %}
       {% set name  = 'ifelse_task_1' %}
       {% set code  = 'examples/javascript/ifelse_task_1.njk' %}
@@ -165,13 +166,13 @@
     <section>
       <h2>Задача:</h2>
       <p>Упростить проверку логина и пароля</p>
-      {# ifelse_task_2 #}
+      
       {% set title = 'Решение' %}
       {% set name  = 'ifelse_task_2' %}
       {% set code  = 'examples/javascript/ifelse_task_2.njk' %}
       {% include codeExample %}
       <p>Проверка пароля выполняется с помощью оператора ' ? '</p>
     </section>
-
+    #}
 
 {% endblock %}

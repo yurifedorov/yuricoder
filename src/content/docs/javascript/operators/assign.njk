@@ -7,7 +7,9 @@
 {% set segment         = 'операторы' %}
 {% set subsegment_del  = 'delete' %}
 {% set code_language = 'language-js' %}
-{% set directory = 'examples/javascript/operators/' %}
+
+{# путь к примерам code-example-beta [НЕ УДАЛЯТЬ] #}
+{% set examples_dir    = 'examples/javascript/operators/' %}
 
 {# ===================================== #}
 
@@ -33,7 +35,7 @@
     {% set html = '' %}
     {% set njk = '' %}
     {% set css = '' %}
-    {% set js = 'examples/javascript/operators/assign.js' %}
+    {% set js = 'assign.js' %}
     {% set demo = '' %}
     {% include codeExample_beta %}
   </section>
@@ -47,7 +49,7 @@
     {% set html = '' %}
     {% set njk = '' %}
     {% set css = '' %}
-    {% set js = 'examples/javascript/operators/assign_priority.js' %}
+    {% set js = 'assign_priority.js' %}
     {% set demo = '' %}
     {% include codeExample_beta %}
     <table>
@@ -67,7 +69,7 @@
     {% set html = '' %}
     {% set njk = '' %}
     {% set css = '' %}
-    {% set js = 'examples/javascript/operators/assign_by_chain.js' %}
+    {% set js = 'assign_by_chain.js' %}
     {% set demo = '' %}
     {% include codeExample_beta %}
     <table>
@@ -95,7 +97,7 @@
     {% set html = '' %}
     {% set njk = '' %}
     {% set css = '' %}
-    {% set js = 'examples/javascript/operators/assign_abbreviated_syntax.js' %}
+    {% set js = 'assign_abbreviated_syntax.js' %}
     {% set demo = '' %}
     {% include codeExample_beta %}
   </section>

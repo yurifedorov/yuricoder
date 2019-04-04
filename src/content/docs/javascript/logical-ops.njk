@@ -29,7 +29,8 @@
   <section>
     {% set anchor = '#ili' %}
     <h2><a href="{{resource}}{{anchor}}" title="{{link_title}}">|| (ИЛИ)</a></h2>
-    {# logical_ops1_1 #}
+    
+    {#
     <p>Оператор ИЛИ выглядит как двойной символ вертикальной черты</p>
     {% set title = 'Синтаксис' %}
     {% set name  = 'logical_ops1_1' %}
@@ -37,25 +38,25 @@
     {% include codeExample %}
     <p>В классическом программировании || (ИЛИ) работает следующим образом: "если хотя бы один из аргументов true, то возвращает true, иначе – false".</p>
     <p>В JavaScript это немного по-другому.</p>
-    {# logical_ops1_2 #}
+    
     <p>Для начала пример только с логическими значениями:</p>
     {% set title = 'Как это работает' %}
     {% set name  = 'logical_ops1_2' %}
     {% set code  = 'examples/javascript/logical_ops1_2.njk' %}
     {% include codeExample %}
-    {# logical_ops1_3 #}
+    
     <p>Если значение не логического типа – то оно к нему приводится в целях вычислений. Например, число 1 будет воспринято как true, а 0 – как false:</p>
     {% set title = 'Совместно с if' %}
     {% set name  = 'logical_ops1_3' %}
     {% set code  = 'examples/javascript/logical_ops1_3.njk' %}
     {% include codeExample %}
-    {# logical_ops1_4 #}
+    
     <p>Обычно оператор ИЛИ используют в if, чтобы проверить, выполняется ли хотя бы одно из условий, например:</p>
     {% set title = 'Проверка двух условий' %}
     {% set name  = 'logical_ops1_4' %}
     {% set code  = 'examples/javascript/logical_ops1_4.njk' %}
     {% include codeExample %}
-    {# logical_ops1_5 #}
+    
     <p>Можно передать и больше условий (isWeekend == выходной):</p>
     {% set title = 'Проверка трех условий' %}
     {% set name  = 'logical_ops1_5' %}
@@ -69,13 +70,13 @@
     <p>JavaScript вычисляет несколько ИЛИ слева направо. При этом, чтобы экономить ресурсы, используется так называемый «короткий цикл вычисления».</p>
     <p>Допустим, вычисляются несколько ИЛИ подряд: a || b || c || .... Если первый аргумент – true, то результат заведомо будет true (хотя бы одно из значений – true), и остальные значения игнорируются.</p>
     <p>Это особенно заметно, когда выражение, переданное в качестве второго аргумента, имеет сторонний эффект – например, присваивает переменную.</p>
-    {# logical_ops2_1 #}
+    
     {% set title = 'Пример' %}
     {% set name  = 'logical_ops2_1' %}
     {% set code  = 'examples/javascript/logical_ops2_1.njk' %}
     {% include codeExample %}
     <p>Теперь первый аргумент – false, так что ИЛИ попытается вычислить второй, запустив тем самым присваивание:</p>
-    {# logical_ops2_2 #}
+    
     {% set title = 'Пример' %}
     {% set name  = 'logical_ops2_2' %}
     {% set code  = 'examples/javascript/logical_ops2_2.njk' %}
@@ -87,19 +88,19 @@
     <h2><a href="{{resource}}{{anchor}}" title="{{link_title}}">Значение ИЛИ</a></h2>
     <p>Оператор ИЛИ вычисляет ровно столько значений, сколько необходимо – до первого true.</p>
     <p>При этом оператор ИЛИ возвращает то значение, на котором остановились вычисления. Причём, не преобразованное к логическому типу.</p>
-    {# logical_ops3_1 #}
+    
     {% set title = 'Проверка до первого true' %}
     {% set name  = 'logical_ops3_1' %}
     {% set code  = 'examples/javascript/logical_ops3_1.njk' %}
     {% include codeExample %}
-    {# logical_ops3_2 #}
+    
     <p>Это используют, в частности, чтобы выбрать первое «истинное» значение из списка:</p>
     {% set title = 'Проверка до первого true' %}
     {% set name  = 'logical_ops3_2' %}
     {% set code  = 'examples/javascript/logical_ops3_2.njk' %}
     {% include codeExample %}
     <p>Если все значения «ложные», то || возвратит последнее из них:</p>
-    {# logical_ops3_3 #}
+    
     {% set title = 'Когда все false' %}
     {% set name  = 'logical_ops3_3' %}
     {% set code  = 'examples/javascript/logical_ops3_3.njk' %}
@@ -110,56 +111,56 @@
     {% set anchor = '#i' %}
     <h2><a href="{{resource}}{{anchor}}" title="{{link_title}}">&& (И)</a></h2>
     <p>Оператор И пишется как два амперсанда &&:</p>
-    {# logical_ops4_1 #}
+    
     {% set title = 'Синтаксис && (И)' %}
     {% set name  = 'logical_ops4_1' %}
     {% set code  = 'examples/javascript/logical_ops4_1.njk' %}
     {% include codeExample %}
     <p>В классическом программировании && (И) возвращает true, если оба аргумента истинны, а иначе – false:</p>
-    {# logical_ops4_2 #}
+    
     {% set title = 'Как работает && (И)' %}
     {% set name  = 'logical_ops4_2' %}
     {% set code  = 'examples/javascript/logical_ops4_2.njk' %}
     {% include codeExample %}
-    {# logical_ops4_3 #}
+    
     {% set title = 'Пример с if' %}
     {% set name  = 'logical_ops4_3' %}
     {% set code  = 'examples/javascript/logical_ops4_3.njk' %}
     {% include codeExample %}
-    {# logical_ops4_4 #}
+    
     {% set title = 'Допустимы любые значения' %}
     {% set name  = 'logical_ops4_4' %}
     {% set code  = 'examples/javascript/logical_ops4_4.njk' %}
     {% include codeExample %}
     <p>К && (И) применим тот же принцип «короткого цикла вычислений», но немного по-другому, чем к ИЛИ.</p>
-    {# logical_ops4_5 #}
+    
     <p>Если левый аргумент – false, оператор И возвращает его и заканчивает вычисления. Иначе – вычисляет и возвращает правый аргумент.</p>
     {% set title = 'Пример' %}
     {% set name  = 'logical_ops4_5' %}
     {% set code  = 'examples/javascript/logical_ops4_5.njk' %}
     {% include codeExample %}
-    {# logical_ops4_6 #}
+    
     <p>Можно передать и несколько значений подряд, при этом возвратится первое «ложное» (на котором остановились вычисления), а если его нет – то последнее:</p>
     {% set title = 'Выводится первое false' %}
     {% set name  = 'logical_ops4_6' %}
     {% set code  = 'examples/javascript/logical_ops4_6.njk' %}
     {% include codeExample %}
     <b>Приоритет у && больше, чем у ||</b>
-    {# logical_ops4_7 #}
+    
     <p>Поэтому в следующем примере сначала будет вычислено правое И: 1 && 0 = 0, а уже потом – ИЛИ.</p>
     {% set title = 'Порядок выполнения' %}
     {% set name  = 'logical_ops4_7' %}
     {% set code  = 'examples/javascript/logical_ops4_7.njk' %}
     {% include codeExample %}
     <b>Не надо использовать && вместо if</b>
-    {# logical_ops4_8 #}
+    
     <p>Оператор && в простых случаях можно использовать вместо if, например:</p>
     {% set title = 'Так лучше не делать' %}
     {% set name  = 'logical_ops4_8' %}
     {% set code  = 'examples/javascript/logical_ops4_8.njk' %}
     {% include codeExample %}
     <p>Действие в правой части && выполнится только в том случае, если до него дойдут вычисления. То есть, alert сработает, если в левой части будет true.</p>
-    {# logical_ops4_9 #}
+    
     <p>Что является аналогом этого:</p>
     {% set title = 'Рекомендуется вот так' %}
     {% set name  = 'logical_ops4_9' %}
@@ -172,7 +173,7 @@
     {% set anchor = '#ne' %}
     <h2><a href="{{resource}}{{anchor}}" title="{{link_title}}">! (НЕ)</a></h2>
     <p>Оператор ! (НЕ) – самый простой. Он получает один аргумент.</p>
-    {# logical_ops5_1 #}
+    
     {% set title = 'Синтаксис ! (НЕ)' %}
     {% set name  = 'logical_ops5_1' %}
     {% set code  = 'examples/javascript/logical_ops5_1.njk' %}
@@ -182,17 +183,18 @@
       <li>Сначала приводит аргумент к логическому типу true/false.</li>
       <li>Затем возвращает противоположное значение.</li>
     </ol>
-    {# logical_ops5_2 #}
+    
     {% set title = 'Как работает ! (НЕ)' %}
     {% set name  = 'logical_ops5_2' %}
     {% set code  = 'examples/javascript/logical_ops5_2.njk' %}
     {% include codeExample %}
     <b>Иногда двойное НЕ используют для преобразования значений к логическому типу</b>
-    {# logical_ops5_3 #}
+    
     {% set title = 'Использование !! (двойного НЕ)' %}
     {% set name  = 'logical_ops5_3' %}
     {% set code  = 'examples/javascript/logical_ops5_3.njk' %}
     {% include codeExample %}
   </section>
-
+  #}
+  
 {% endblock %}

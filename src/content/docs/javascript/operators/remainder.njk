@@ -7,6 +7,9 @@
 {% set segment         = 'операторы' %}
 {% set subsegment_del  = 'delete' %}
 
+{# путь к примерам code-example-beta [НЕ УДАЛЯТЬ] #}
+{% set examples_dir    = 'examples/javascript/operators/' %}
+
 {# ===================================== #}
 
 {% block head %}
@@ -30,7 +33,7 @@
   {% set html = '' %}
   {% set njk = '' %}
   {% set css = '' %}
-  {% set js = 'examples/javascript/operators/remainder.js' %}
+  {% set js = 'remainder.js' %}
   {% set demo = '' %}
   {% include codeExample_beta %}
 
