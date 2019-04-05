@@ -26,11 +26,11 @@
         {% if html %}
           {% if numeration %}{# вывести нумерацию строк если numeration=true #}
           <pre class="line-numbers">
-            <code class="language-html">{% include examples_dir + example_id + '/' + html %}</code>
+            <code class="language-html">{% include examples_dir + html + '.html' %}</code>
           </pre>
           {% else %}{# иначе вывести без класса "line-numbers" #}
           <pre>
-            <code class="language-html">{% include examples_dir + example_id + '/' + html %}</code>
+            <code class="language-html">{% include examples_dir + html + '.html' %}</code>
           </pre>
           {% endif %}
         {% endif %}
@@ -53,10 +53,10 @@
         {% if njk %}
           {% if numeration %}{# вывести нумерацию строк если numeration=true #}
           <pre class="line-numbers">
-            <code class="language-jinja2">{% include examples_dir + njk %}</code>
+            <code class="language-jinja2">{% include examples_dir + njk + '.njk' %}</code>
           </pre>
           {% else %}{# иначе вывести без класса "line-numbers" #}
-          <pre><code class="language-jinja2">{% include examples_dir + njk %}</code></pre>
+          <pre><code class="language-jinja2">{% include examples_dir + njk + '.njk' %}</code></pre>
           {% endif %}
         {% endif %}
       </div>
@@ -78,11 +78,11 @@
         {% if css %}
           {% if numeration %}{# вывести нумерацию строк если numeration=true #}
           <pre class="line-numbers">
-            <code class="language-css">{% include examples_dir + example_id + '/' + css %}</code>
+            <code class="language-css">{% include examples_dir + css + '.css' %}</code>
           </pre>
           {% else %}{# иначе вывести без класса "line-numbers" #}
           <pre>
-            <code class="language-css">{% include examples_dir + example_id + '/' + css %}</code>
+            <code class="language-css">{% include examples_dir + css + '.css' %}</code>
           </pre>
           {% endif %}
         {% endif %}
@@ -105,16 +105,16 @@
         {% if js %}
           {% if numeration %}{# вывести нумерацию строк если numeration=true #}
           <pre class="line-numbers">
-            <code class="language-js">{% include examples_dir + js %}</code>
+            <code class="language-js">{% include examples_dir + js + '.js' %}</code>
             {# вывести содержимое js в тег script, для возможности выполнения (для примеров с нумерацией) #}
-            <script>function {{example_id}}() { {% include examples_dir + js %}
+            <script>function {{example_id}}() { {% include examples_dir + js + '.js' %}
 }</script>
           </pre>
           {% else %}{# иначе вывести без класса "line-numbers" #}
           <pre>
-            <code class="language-js">{% include examples_dir + js %}</code>
+            <code class="language-js">{% include examples_dir + js + '.js' %}</code>
             {# вывести содержимое js в тег script, для возможности выполнения (для примеров без нумерации) #}
-            <script>function {{example_id}}() { {% include examples_dir + js %}
+            <script>function {{example_id}}() { {% include examples_dir + js + '.js' %}
 }</script>
           </pre>
           {% endif %}

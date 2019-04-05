@@ -35,11 +35,11 @@
     {% set numeration = 'true' %} {# true = включена / '' (пустая строка) = отключена #}
     {% set split = '' %} {# true = включен / '' (пустая строка) = отключен #}
     {% set html = '' %} {# путь к примеру html #}
-    {% set njk = 'code-example.njk' %} {# путь к примеру njk #}
-    {% set css = 'code-example.css' %} {# путь к примеру css #}
+    {% set njk = 'code-example' %} {# путь к примеру njk #}
+    {% set css = 'code-example' %} {# путь к примеру css #}
     {% set js = '' %} {# путь к примеру js #}
     {% set demo = 'examples/nunjucks/templates/code-example/demo.njk' %}
-    {% include codeExample_beta %}
+    {% include codeExample %}
   </section>
 
 {% endblock %}
