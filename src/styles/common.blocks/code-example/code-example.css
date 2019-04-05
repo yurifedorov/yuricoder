@@ -1,40 +1,106 @@
 .code-example {
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto auto auto auto;
+  grid-template-columns: repeat(5, 1fr); /* 5 табов равной ширины */
+  grid-template-rows: auto auto max-content;
+  grid-gap: 1px 2px;
   margin-left: -10px;
   margin-right: -10px;
-  padding: 10px;
-  background: #eee;
+  box-sizing: border-box;
 }
 
-.code-example > h3 {
+/* чтобы не вмешиваться в оригинальные стили prism.js все переопределения я делаю в style.css */
+/* это нужно для того, чтобы при скачивании новой конфигурации prism.js не приходилось каждый раз лезть в prism.css */
+
+/* убрать margin у блока с кодом */
+.code-example pre[class*=language-] {
   margin: 0;
+  position: relative;
 }
 
-.code-example > h3, p, .code-toolbar {
-  grid-column: 1 / -1;
+/* изменить z-index у reviewer (иначе он не будет работать в codeExample) */
+.prism-previewer {
+  z-index: 2;
 }
 
-.XL .code-example {
+/* кнопка 'copy' видна всегда (в оригинале opacity: 0;)*/
+div.code-toolbar > .toolbar {
+  opacity: 1 !important;
+}
+
+.code-example label {
+  background: black;
+  color: white;
+  padding: 7px 10px;
+  text-align: left;
+  height: 20px;
+  cursor: pointer;
+}
+
+/* кнопка demo всегда справа */
+.code-example label[class="demo_button"] {
+  grid-column: 5; /* заменить число, если количество табов изменится */
+}
+
+.code-example label:hover {
+  background: silver;
+  color: black;
+}
+
+/* скрыть инпуты */
+.code-example input[name=button] {
+  display: none;
+  z-index: 99;
+  grid-row: 2; /* не трогать */
+}
+
+/* позиция + стили для кнопки run-js */
+.code-example .run-js {
+  position: absolute;
+  top: 25;
+  right: .2em;
+  padding: 5px 14px;
+  box-sizing: border-box;
+  background: white;
+  color: black;
+  opacity: 0.3;
+  transition: 1s;
+  border-radius: .5em;
+  z-index: 99;
+}
+
+.code-example .run-js:after {
+  content: '\0025B6'; /* play */
+}
+
+.code-example .run-js:hover{
+  background: black;
+  color: white;
+  opacity: 1;
+}
+
+
+
+/* активная кнопка меняет цвет */
+.code-example input[name=button]:checked + label {
+  background: orange;
+}
+
+.code-example .code {
   display: grid;
-  grid-template-columns: 450px;
-  grid-template-rows: max-content auto 50px;
+  grid-column: 1 / -1;
+  grid-row: 3; /* не трогать */
+  background:#2d2d2d; /* цвет из prism.js - #2d2d2d */
+  overflow-x: auto;
+  z-index: 0; /* не трогать */
+  position: relative;
 }
 
-.XL .code-example > .code-toolbar {
-  grid-column: 1;
-  grid-row: 1 / -1;
-}
-
-.XL .code-example > h3 {
-  grid-column: 2 / -1;
-  padding-left: 20px;
-}
-
-.XL .code-example > p {
-  grid-column: 2 / -1;
-  padding-left: 20px;
-  padding-right: 20px;
-  margin: 5px 0;
+.code-example .demo {
+  grid-column: 1 / -1;
+  grid-row: 3; /* не трогать */
+  overflow-x: auto;
+  padding: 0 10px;
+  background: white;
+  border: 1px solid;
+  z-index: 1;
 }
