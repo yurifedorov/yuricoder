@@ -49,27 +49,26 @@
     <section title="Демонстрация одного примера">
       <h4>Код (с нумерацией строк)</h4>
       {% set example_id = 'example1' %} {# требуется для работы кнопок checkbox/label #}
-      {% set numeration = 'true' %} {# true = включена / '' (пустая строка) = отключена #}
-      {% set split      = '' %} {# true = включен / '' (пустая строка) = отключен #}
-      {% set html       = 'true' %} {# путь к примеру html #}
-      {% set njk        = '' %} {# путь к примеру njk #}
-      {% set css        = '' %} {# путь к примеру css #}
-      {% set js         = '' %} {# путь к примеру js #}
-      {# путь js:         parts/blocks-beta/code-example-beta/examples/example1/javascript.js #}
-      {% set demo       = '' %}
+      {% set numeration = true %} {# true = включена / '' (пустая строка) = отключена #}
+      {% set split      = false %} {# true = включен / '' (пустая строка) = отключен #}
+      {% set html       = true %} {# путь к примеру html #}
+      {% set njk        = false %} {# путь к примеру njk #}
+      {% set css        = false %} {# путь к примеру css #}
+      {% set js         = false %} {# путь к примеру js #}
+      {% set demo       = false %}
       {% include codeExample_beta %}
     </section>
 
     <section title="Демонстрация одного примера">
       <h4>Код (без нумерациии строк)</h4>
       {% set example_id = 'example2' %}
-      {% set numeration = '' %}
-      {% set split      = '' %}
-      {% set html       = 'true' %}
-      {% set njk        = '' %}
-      {% set css        = '' %}
-      {% set js         = '' %}
-      {% set demo       = '' %}
+      {% set numeration = false %}
+      {% set split      = false %}
+      {% set html       = false %}
+      {% set njk        = false %}
+      {% set css        = false %}
+      {% set js         = true %}
+      {% set demo       = false %}
       {% include codeExample_beta %}
     </section>
 
@@ -80,12 +79,12 @@
     <section title="Демонстрация нескольких примеров (html + js + css и т.д.). Возможен запуск JS скриптов.">
       <h4>Код (с нумерацией строк) + Toolbar</h4>
       {% set example_id = 'example3' %}
-      {% set numeration = 'true' %}
-      {% set split      = '' %}
-      {% set html       = 'true' %}
-      {% set njk        = 'true' %}
-      {% set css        = 'true' %}
-      {% set js         = 'true' %}
+      {% set numeration = true %}
+      {% set split      = false %}
+      {% set html       = true %}
+      {% set njk        = true %}
+      {% set css        = true %}
+      {% set js         = true %}
       {% set demo       = 'example3-demo.njk' %}
       {% include codeExample_beta %}
     </section>
@@ -93,12 +92,12 @@
     <section title="Демонстрация нескольких примеров (html + js + css и т.д.). Возможен запуск JS скриптов.">
       <h4>Код (без нумерациии строк) + Toolbar</h4>
       {% set example_id = 'example4' %}
-      {% set numeration = '' %}
-      {% set split      = '' %}
-      {% set html       = 'true' %}
-      {% set njk        = 'true' %}
-      {% set css        = 'true' %}
-      {% set js         = 'true' %}
+      {% set numeration = false %}
+      {% set split      = false %}
+      {% set html       = true %}
+      {% set njk        = true %}
+      {% set css        = true %}
+      {% set js         = true %}
       {% set demo       = 'example4-demo.njk' %}
       {% include codeExample_beta %}
     </section>
@@ -110,12 +109,12 @@
     <section title="Демонстрация responsive-компонентов с возможностью изменения ширины контейнера DEMO">
       <h4>Код (с нумерацией строк) + Toolbar + Responsive Демо</h4>
       {% set example_id = 'example5' %}
-      {% set numeration = 'true' %}
-      {% set split      = 'true' %}
-      {% set html       = 'true' %}
-      {% set njk        = '' %}
-      {% set css        = 'true' %}
-      {% set js         = 'true' %}
+      {% set numeration = true %}
+      {% set split      = true %}
+      {% set html       = true %}
+      {% set njk        = false %}
+      {% set css        = true %}
+      {% set js         = true %}
       {% set demo       = 'example5-demo.njk' %}
       {% include codeExample_beta %}
     </section>
@@ -123,12 +122,12 @@
     <section title="Демонстрация responsive-компонентов с возможностью изменения ширины контейнера DEMO">
       <h4>Код (без нумерации строк) + Toolbar + Responsive Демо</h4>
       {% set example_id = 'example6' %}
-      {% set numeration = '' %}
-      {% set split      = 'true' %}
-      {% set html       = 'true' %}
-      {% set njk        = '' %}
-      {% set css        = 'true' %}
-      {% set js         = '' %}
+      {% set numeration = false %}
+      {% set split      = true %}
+      {% set html       = true %}
+      {% set njk        = false %}
+      {% set css        = true %}
+      {% set js         = false %}
       {% set demo       = 'example6-demo.njk' %}
       {% include codeExample_beta %}
     </section>
