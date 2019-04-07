@@ -1,7 +1,7 @@
 {% extends "base.njk" %}
 
 {# variables #}
-{% set title        = 'умножение' %}
+{% set title        = 'возведение в степень' %}
 {% set category        = 'справочник' %}
 {% set subcategory     = 'javascript' %}
 {% set segment         = 'операторы' %}
@@ -13,8 +13,8 @@
 {# ===================================== #}
 
 {% block head %}
-  <title>Multiplication operator in JavaScript</title>
-  <meta name="description" content="Оператор возвращает произведение операндов." />
+  <title>Exponentiation operator in JavaScript</title>
+  <meta name="description" content="Оператор ** возвращает результат первого операнда в степень." />
   <link rel="stylesheet" href="{{prism_css}}">
   <script src="{{prism_js}}" async></script>
 {% endblock %}
@@ -24,10 +24,10 @@
 
 {% block main %}
 
-  <h1>{{ title | capitalize }} [ * ]</h1>
-  <p>Оператор возвращает произведение операндов.</p>
+  <h1>{{ title | capitalize }} [ ** ]</h1>
+  <p>Оператор ** возвращает результат первого операнда в степень.</p>
 
-  {% set example_id = 'multiplication' %}
+  {% set example_id = 'exponentiation' %}
   {% set numeration = false %}
   {% set split      = false %}
   {% set html       = false %}
@@ -36,11 +36,5 @@
   {% set js         = true %}
   {% set demo       = false %}
   {% include codeExample %}
-  <table>
-    <tr>
-      <td>4</td>
-      <td>произведение двух операндов <b>x</b> и <b>y</b> (2 * 2 = 4)</td>
-    </tr>
-  </table>
 
 {% endblock %}
