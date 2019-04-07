@@ -1,7 +1,7 @@
 {% extends "base.njk" %}
 
 {# variables #}
-{% set title           = 'remainder (%)' %}
+{% set title        = 'greater than operator' %}
 {% set category        = 'docs' %}
 {% set subcategory     = 'javascript' %}
 {% set segment         = 'operators' %}
@@ -13,8 +13,8 @@
 {# ===================================== #}
 
 {% block head %}
-  <title>Remainder (%) operator in JavaScript</title>
-  <meta name="description" content="Оператор '%' для получения остатка в JavaScript." />
+  <title>Greater than operator (>) in JavaScript</title>
+  <meta name="description" content="Оператор 'больше' возвращает true, если левый операнд больше правого операнда." />
   <link rel="stylesheet" href="{{prism_css}}">
   <script src="{{prism_js}}" async></script>
 {% endblock %}
@@ -24,10 +24,10 @@
 
 {% block main %}
 
-  <h1>{{ title | capitalize }}</h1>
-  <p>Оператор % нужен чтобы найти остаток от деления.</p>
+  <h1>{{ title | capitalize }} [ &gt; ]</h1>
+  <p>Оператор <b>больше ( > )</b>  возвращает <b>true</b>, если левый операнд больше правого операнда или <b>false</b> если наоборот.</p>
 
-  {% set example_id = 'remainder' %}
+  {% set example_id = 'greater_than' %}
   {% set numeration = false %}
   {% set split      = false %}
   {% set html       = false %}
@@ -36,6 +36,15 @@
   {% set js         = true %}
   {% set demo       = false %}
   {% include codeExample %}
-
+  <table>
+    <tr>
+      <td>true</td>
+      <td>потому что <b>5</b> больше чем <b>1</b></td>
+    </tr>
+    <tr>
+      <td>false</td>
+      <td>потому что <b>1</b> не может быть больше чем <b>5</b></td>
+    </tr>
+  </table>
 
 {% endblock %}

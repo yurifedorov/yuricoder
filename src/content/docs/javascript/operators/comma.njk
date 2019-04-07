@@ -1,11 +1,11 @@
 {% extends "base.njk" %}
 
 {# variables #}
-{% set title        = 'запятая' %}
-{% set category     = 'справочник' %}
+{% set title        = 'comma' %}
+{% set category     = 'docs' %}
 {% set subcategory  = 'javascript' %}
-{% set segment      = 'javascript' %}
-{% set subsegment   = 'операторы' %}
+{% set segment      = 'operators' %}
+{% set subsegment_del  = 'delete' %}
 
 {# путь к примерам code-example-beta [НЕ УДАЛЯТЬ] #}
 {% set example_dir    = 'examples/javascript/operators/' %}
@@ -13,7 +13,7 @@
 {# ===================================== #}
 
 {% block head %}
-  <title>Запятая</title>
+  <title>Operator comma in JavaScript</title>
   <meta name="description" content="Оператор 'запятая' в JavaScript." />
   <link rel="stylesheet" href="{{prism_css}}">
   <script src="{{prism_js}}" async></script>
@@ -24,7 +24,7 @@
 
 {% block main %}
 
-  <h1>{{ title | capitalize }}</h1>
+  <h1>{{ title | capitalize }} [ , ]</h1>
   <p>Позволяет перечислять выражения, разделяя их запятой.</p>
 
   {% set example_id = 'comma' %}

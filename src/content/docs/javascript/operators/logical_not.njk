@@ -2,10 +2,10 @@
 
 {# variables #}
 {% set title        = 'логическое НЕ' %}
-{% set category     = 'справочник' %}
+{% set category     = 'docs' %}
 {% set subcategory  = 'javascript' %}
-{% set segment      = 'javascript' %}
-{% set subsegment   = 'операторы' %}
+{% set segment      = 'operators' %}
+{% set subsegment_del  = 'delete' %}
 
 {# путь к примерам code-example-beta [НЕ УДАЛЯТЬ] #}
 {% set example_dir    = 'examples/javascript/operators/' %}
@@ -13,7 +13,7 @@
 {# ===================================== #}
 
 {% block head %}
-  <title>Logical NOT in JavaScript</title>
+  <title>Logical NOT (!) in JavaScript</title>
   <meta name="description" content="Оператор с одним аргументом, который сначала приводит значение к логическому типу true/false, затем возвращает его противоположное значение." />
   <link rel="stylesheet" href="{{prism_css}}">
   <script src="{{prism_js}}" async></script>
@@ -24,7 +24,7 @@
 
 {% block main %}
 
-  <h1>Логическое НЕ</h1>
+  <h1>Логическое НЕ [ ! ]</h1>
 
   {% set example_id = 'logical_not' %}
   {% set numeration = false %}

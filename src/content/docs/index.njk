@@ -1,19 +1,17 @@
 {% extends "base.njk" %}
 
 {# variables #}
-{% set title = 'справочник по веб-разработке' %}
 
 {# ===================================== #}
 
 {% block head %}
-  <title>{{ title | capitalize }}</title>
+  <title>Web Technology Reference</title>
   <meta name="description" content="База знаний по созданию современных сайтов" />
 {% endblock %}
 
 {% block main %}
 
-  <h1>{{ title | capitalize }}</h1>
-  <p>Полезная информация по веб-технологиям</p>
+  <h1>Web docs</h1>
 
   <div class="tile tile_small">
     {% for category in docs %}
