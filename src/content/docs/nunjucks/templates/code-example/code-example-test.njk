@@ -24,7 +24,7 @@
     display: grid;
   }
 
-  .XXL > .wrapper_grid {
+  .XL > .wrapper_grid {
     grid-template-columns: 1fr 1fr;
     grid-gap: 20px;
   }
@@ -32,6 +32,19 @@
   .wrapper_grid > section {
     background: #eee;
     padding: 0 1em 5px 1em;
+    margin-top: 10px;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+
+  .wrapper_grid > section > h4 {
+    margin-top: 7px;
+    margin-bottom: 7px;
+  }
+
+  .XL > .wrapper_grid > section {
+    margin-left: 0;
+    margin-right: 0;
   }
   </style>
 {% endblock %}
@@ -46,11 +59,11 @@
 
   <div class="wrapper_grid">
 
-    <section title="Демонстрация одного примера">
+    <section>
       <h4>Код (с нумерацией строк)</h4>
       {% set example_id = 'example1' %} {# требуется для работы кнопок checkbox/label #}
-      {% set numeration = true %} {# true = включена / '' (пустая строка) = отключена #}
-      {% set split      = false %} {# true = включен / '' (пустая строка) = отключен #}
+      {% set numeration = true %} {# true = включен / false = отключен #}
+      {% set split      = false %} {# true = включеy / false = отключена #}
       {% set html       = false %} {# путь к примеру html #}
       {% set njk        = false %} {# путь к примеру njk #}
       {% set css        = false %} {# путь к примеру css #}
@@ -59,7 +72,7 @@
       {% include codeExample_beta %}
     </section>
 
-    <section title="Демонстрация одного примера">
+    <section>
       <h4>Код (без нумерациии строк)</h4>
       {% set example_id = 'example2' %}
       {% set numeration = false %}
@@ -76,7 +89,7 @@
 
   <div class="wrapper_grid">
 
-    <section title="Демонстрация нескольких примеров (html + js + css и т.д.). Возможен запуск JS скриптов.">
+    <section>
       <h4>Код (с нумерацией строк) + Toolbar</h4>
       {% set example_id = 'example3' %}
       {% set numeration = true %}
@@ -89,7 +102,7 @@
       {% include codeExample_beta %}
     </section>
 
-    <section title="Демонстрация нескольких примеров (html + js + css и т.д.). Возможен запуск JS скриптов.">
+    <section>
       <h4>Код (без нумерациии строк) + Toolbar</h4>
       {% set example_id = 'example4' %}
       {% set numeration = false %}
@@ -106,7 +119,7 @@
 
   <div class="wrapper_grid">
 
-    <section title="Демонстрация responsive-компонентов с возможностью изменения ширины контейнера DEMO">
+    <section>
       <h4>Код (с нумерацией строк) + Toolbar + Responsive Демо</h4>
       {% set example_id = 'example5' %}
       {% set numeration = true %}
@@ -119,7 +132,7 @@
       {% include codeExample_beta %}
     </section>
 
-    <section title="Демонстрация responsive-компонентов с возможностью изменения ширины контейнера DEMO">
+    <section>
       <h4>Код (без нумерации строк) + Toolbar + Responsive Демо</h4>
       {% set example_id = 'example6' %}
       {% set numeration = false %}
