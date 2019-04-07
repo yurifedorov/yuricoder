@@ -1,7 +1,7 @@
 {% extends "base.njk" %}
 
 {# variables #}
-{% set title        = 'инкремент' %}
+{% set title        = 'increment' %}
 {% set category        = 'docs' %}
 {% set subcategory     = 'javascript' %}
 {% set segment         = 'operators' %}
@@ -13,8 +13,8 @@
 {# ===================================== #}
 
 {% block head %}
-  <title>Инкремент</title>
-  <meta name="description" content="Оператор для увеличения значения на единицу в JavaScript." />
+  <title>The increment operator in JavaScript</title>
+  <meta name="description" content="This operator increments the value of a variable by one in JavaScript." />
   <link rel="stylesheet" href="{{prism_css}}">
   <script src="{{prism_js}}" async></script>
 {% endblock %}
@@ -24,11 +24,11 @@
 
 {% block main %}
 
-  <h1>{{ title | capitalize }}</h1>
+  <h1>{{ title | capitalize }} [ ++ ]</h1>
   <p>Увеличивает значение на 1, существуют два вида инкремента и действуют они по-разному.</p>
 
   <section>
-    <h2>Постфикcный инкремент</h2>
+    <h2>Postfix increment</h2>
     <p>Увеличивает значение на 1, но при этом возвращает старое значение.</p>
     {% set example_id = 'postfix_increment' %}
     {% set numeration = false %}
@@ -52,7 +52,7 @@
   </section>
 
   <section>
-    <h2>Префикcный инкремент</h2>
+    <h2>Prefix increment</h2>
     <p>Увеличивает значение на 1 и возвращает новое значение.</p>
     {% set example_id = 'prefix_increment' %}
     {% set numeration = false %}

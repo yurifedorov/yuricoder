@@ -1,7 +1,7 @@
 {% extends "base.njk" %}
 
 {# variables #}
-{% set title        = 'присваивание' %}
+{% set title        = 'assign' %}
 {% set category        = 'docs' %}
 {% set subcategory     = 'javascript' %}
 {% set segment         = 'operators' %}
@@ -13,7 +13,7 @@
 {# ===================================== #}
 
 {% block head %}
-  <title>Оператор присваивания</title>
+  <title>Assignment operator in JavaScript</title>
   <meta name="description" content="Оператор для присваивания значений в JavaScript." />
   <link rel="stylesheet" href="{{prism_css}}">
   <script src="{{prism_js}}" async></script>
@@ -24,7 +24,7 @@
 
 {% block main %}
 
-  <h1>{{ title | capitalize }}</h1>
+  <h1>{{ title | capitalize }} [ = ]</h1>
   <p>Присваивание производится знаком равно ( = ).</p>
 
   <section>
