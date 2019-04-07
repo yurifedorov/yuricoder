@@ -1,7 +1,7 @@
 {% extends "base.njk" %}
 
 {# variables #}
-{% set title        = 'бинарный минус' %}
+{% set title        = 'вычитание (бинарный минус)' %}
 {% set category        = 'справочник' %}
 {% set subcategory     = 'javascript' %}
 {% set segment         = 'операторы' %}
@@ -14,7 +14,7 @@
 {# ===================================== #}
 
 {% block head %}
-  <title>Бинарный минус</title>
+  <title>Subtraction operator in JavaScript</title>
   <meta name="description" content="Как действует бинарный минус в JavaScript." />
   <link rel="stylesheet" href="{{prism_css}}">
   <script src="{{prism_js}}" async></script>
@@ -28,7 +28,7 @@
   <h1>{{ title | capitalize }}</h1>
   <p>Выполняет вычитание.</p>
 
-  {% set example_id = 'binary_minus' %}
+  {% set example_id = 'subtraction' %}
   {% set numeration = false %}
   {% set split      = false %}
   {% set html       = false %}

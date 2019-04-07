@@ -1,7 +1,7 @@
 {% extends "base.njk" %}
 
 {# variables #}
-{% set title        = 'бинарный плюс' %}
+{% set title        = 'сложение (бинарный плюс)' %}
 {% set category        = 'справочник' %}
 {% set subcategory     = 'javascript' %}
 {% set segment         = 'операторы' %}
@@ -14,7 +14,7 @@
 {# ===================================== #}
 
 {% block head %}
-  <title>Бинарный плюс</title>
+  <title>Addition operator in JavaScript</title>
   <meta name="description" content="Как действует бинарный плюс в JavaScript." />
   <link rel="stylesheet" href="{{prism_css}}">
   <script src="{{prism_js}}" async></script>
@@ -28,7 +28,7 @@
   <h1>{{ title | capitalize }}</h1>
   <p>Выполняет сложение двух операндов (чисел), объединеняет строки, преобразует строки в числа.</p>
 
-  {% set example_id = 'binary_plus' %}
+  {% set example_id = 'addition' %}
   {% set numeration = false %}
   {% set split      = false %}
   {% set html       = false %}
