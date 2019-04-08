@@ -18,19 +18,14 @@ table caption {
   line-height: 2em;
 }
 
-table td:first-child {
-  text-align: center;
-  padding: 5px;
-}
-
 table td {
   border: 1px solid #eee;
   padding: 5px 20px 5px 10px;
 }
 
 table td:first-child {
-  width: min-content;
-  padding: 0;
+  text-align: center;
+  padding: 5px 10px;
   background: wheat;
 }
 
