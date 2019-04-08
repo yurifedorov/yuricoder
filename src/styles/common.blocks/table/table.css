@@ -1,7 +1,7 @@
 table {
-  width: 100%;
+  width: calc(100% + var(--main_padding-right)); /* не трогать */
   border-collapse: collapse; /* не трогать */
-  margin: 5px 0 40px 0; /* не трогать */
+  margin: 5px 0 40px -10px; /* не трогать */
   font-size: 0.9em;
 }
 
@@ -26,4 +26,14 @@ table td:first-child {
 table td {
   border: 1px solid #eee;
   padding: 5px 20px 5px 10px;
+}
+
+table td:first-child {
+  width: min-content;
+  padding: 0;
+  background: wheat;
+}
+
+table td:nth-child(2) {
+  width: 90%;
 }

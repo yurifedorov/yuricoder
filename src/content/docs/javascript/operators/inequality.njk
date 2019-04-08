@@ -1,0 +1,58 @@
+{% extends "base.njk" %}
+
+{# variables #}
+{% set title           = 'inequality' %}
+{% set category        = 'docs' %}
+{% set subcategory     = 'javascript' %}
+{% set segment         = 'operators' %}
+{% set subsegment_del  = 'delete' %}
+
+{# путь к примерам code-example-beta [НЕ УДАЛЯТЬ] #}
+{% set example_dir    = 'examples/javascript/operators/' %}
+
+{# ===================================== #}
+
+{% block head %}
+  <title>Inequality operator in JavaScript</title>
+  <meta name="description" content="Оператор возвращает true, если операнды не равны." />
+  <link rel="stylesheet" href="{{prism_css}}">
+  <script src="{{prism_js}}" async></script>
+{% endblock %}
+
+{% block aside_top %}{% include aside_top %}{% endblock %}
+{% block aside_left %}{% include aside_left %}{% endblock %}
+
+{% block main %}
+
+  <h1>{{ title | capitalize }} [ != ]</h1>
+  <p>Оператор возвращает true, если операнды не равны.</p>
+
+  {% set example_id = 'inequality' %}
+  {% set numeration = false %}
+  {% set split      = false %}
+  {% set html       = false %}
+  {% set njk        = false %}
+  {% set css        = false %}
+  {% set js         = true %}
+  {% set demo       = false %}
+  {% include codeExample %}
+  <table>
+    <tr>
+      <td>false</td>
+      <td>5 равно 5</td>
+    </tr>
+    <tr>
+      <td>false</td>
+      <td>содержимое строк одинаковое</td>
+    </tr>
+    <tr>
+      <td>true</td>
+      <td>содержимое строк разное</td>
+    </tr>
+    <tr>
+      <td>true</td>
+      <td>5 не равно 4</td>
+    </tr>
+  </table>
+
+{% endblock %}
