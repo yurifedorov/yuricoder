@@ -1,0 +1,46 @@
+{% extends "base.njk" %}
+
+{# variables #}
+{% set title           = 'division assignment' %}
+{% set category        = 'docs' %}
+{% set subcategory     = 'javascript' %}
+{% set segment         = 'operators' %}
+{% set subsegment_del  = 'delete' %}
+
+{# путь к примерам code-example-beta [НЕ УДАЛЯТЬ] #}
+{% set example_dir    = 'examples/javascript/operators/' %}
+
+{# ===================================== #}
+
+{% block head %}
+  <title>Division assignment operator in JavaScript</title>
+  <meta name="description" content="Оператор делит переменную на значение правого операнда и присваивает результат переменной." />
+  <link rel="stylesheet" href="{{prism_css}}">
+  <script src="{{prism_js}}" async></script>
+{% endblock %}
+
+{% block aside_top %}{% include aside_top %}{% endblock %}
+{% block aside_left %}{% include aside_left %}{% endblock %}
+
+{% block main %}
+
+  <h1>Division assignment [ /= ]</h1>
+  <p>Оператор делит переменную на значение правого операнда и присваивает результат переменной.</p>
+
+  {% set example_id = 'division_assignment' %}
+  {% set numeration = false %}
+  {% set split      = false %}
+  {% set html       = false %}
+  {% set njk        = false %}
+  {% set css        = false %}
+  {% set js         = true %}
+  {% set demo       = false %}
+  {% include codeExample %}
+  <table>
+    <tr>
+      <td>5</td>
+      <td>сначала значение левого операнда <b>x</b> было поделено на значение правого <b>y</b>, полученный результат присвоился <b>x</b></td>
+    </tr>
+  </table>
+
+{% endblock %}
