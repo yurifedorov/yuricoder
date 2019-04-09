@@ -39,9 +39,9 @@
 
   <section>
   <h2>For example</h2>
-  <p>Если ВСЕ аргументы <b>true</b>, то выводится сообщение 'success'.</p>
-  {% set example_id = 'logical_or_examples' %}
-  {% set numeration = false %}
+  <p>Если один из аргументов <b>true</b>, то выводится сообщение 'success'.</p>
+  {% set example_id = 'logical_or_example' %}
+  {% set numeration = true %}
   {% set split      = false %}
   {% set html       = false %}
   {% set njk        = false %}
@@ -52,7 +52,7 @@
   <table>
     <tr>
       <td>b = '0'</td>
-      <td>Если </td>
+      <td>Если значение аргумента не логического типа (true или false), то в целях вычисления оно к нему приводится автоматически. <br><br> Число 1 воспринимается как <b>true</b>, число 0 <b>false</b>. </td>
     </tr>
   </table>
   </section>

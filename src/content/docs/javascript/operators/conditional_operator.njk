@@ -1,7 +1,7 @@
 {% extends "base.njk" %}
 
 {# variables #}
-{% set title           = 'logical and' %}
+{% set title           = 'conditional operator' %}
 {% set category        = 'docs' %}
 {% set subcategory     = 'javascript' %}
 {% set segment         = 'operators' %}
@@ -13,7 +13,7 @@
 {# ===================================== #}
 
 {% block head %}
-  <title>Logical AND operator in JavaScript</title>
+  <title>Conditional (ternary) operator in JavaScript</title>
   <meta name="description" content="The logical AND operator returns true if both arguments are true, otherwise false." />
   <link rel="stylesheet" href="{{prism_css}}">
   <script src="{{prism_js}}" async></script>
@@ -24,10 +24,10 @@
 
 {% block main %}
 
-  <h1>Logical AND [ &amp; ]</h1>
-  <p>Оператор логического И возвращает <b>true</b>, если оба аргумента истинны, а иначе – <b>false</b>.</p>
+  <h1>Conditional (ternary) operator [ ? ]</h1>
+  <p>Единственный оператор в JavaScript, который принимает три операнда.</p>
 
-  {% set example_id = 'logical_and' %}
+  {% set example_id = 'conditional_operator' %}
   {% set numeration = false %}
   {% set split      = false %}
   {% set html       = false %}
@@ -38,17 +38,17 @@
   {% include codeExample %}
 
   <section>
-  <h2>For example</h2>
-  <p>Если ВСЕ аргументы <b>true</b>, то выводится сообщение 'success'.</p>
-  {% set example_id = 'logical_and_example' %}
-  {% set numeration = true %}
-  {% set split      = false %}
-  {% set html       = false %}
-  {% set njk        = false %}
-  {% set css        = false %}
-  {% set js         = true %}
-  {% set demo       = false %}
-  {% include codeExample %}
+    <h2>For example</h2>
+    <p>Проверяется условие: если <b>x == 4,</b> значит <b>true</b> (ответ правильный), иначе <b>false</b>.</p>
+    {% set example_id = 'conditional_operator_example' %}
+    {% set numeration = true %}
+    {% set split      = false %}
+    {% set html       = false %}
+    {% set njk        = false %}
+    {% set css        = false %}
+    {% set js         = true %}
+    {% set demo       = false %}
+    {% include codeExample %}
   </section>
 
 {% endblock %}

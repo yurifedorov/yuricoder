@@ -24,11 +24,8 @@ table td {
 }
 
 table td:first-child {
+  min-width: 50px;
   text-align: center;
   padding: 5px 10px;
   background: wheat;
-}
-
-table td:nth-child(2) {
-  width: 90%;
 }
