@@ -1,0 +1,60 @@
+{% extends "base.njk" %}
+
+{# variables #}
+{% set title           = 'logical or' %}
+{% set category        = 'docs' %}
+{% set subcategory     = 'javascript' %}
+{% set segment         = 'operators' %}
+{% set subsegment_del  = 'delete' %}
+
+{# путь к примерам code-example-beta [НЕ УДАЛЯТЬ] #}
+{% set example_dir    = 'examples/javascript/operators/' %}
+
+{# ===================================== #}
+
+{% block head %}
+  <title>Logical OR operator in JavaScript</title>
+  <meta name="description" content="The logical AND operator returns true if both arguments are true, otherwise false." />
+  <link rel="stylesheet" href="{{prism_css}}">
+  <script src="{{prism_js}}" async></script>
+{% endblock %}
+
+{% block aside_top %}{% include aside_top %}{% endblock %}
+{% block aside_left %}{% include aside_left %}{% endblock %}
+
+{% block main %}
+
+  <h1>Logical OR [ || ]</h1>
+  <p>Если хотя бы один аргумент <b>true</b>, то возвращается <b>true</b>, иначе <b>false</b> .</p>
+
+  {% set example_id = 'logical_or' %}
+  {% set numeration = false %}
+  {% set split      = false %}
+  {% set html       = false %}
+  {% set njk        = false %}
+  {% set css        = false %}
+  {% set js         = true %}
+  {% set demo       = false %}
+  {% include codeExample %}
+
+  <section>
+  <h2>For example</h2>
+  <p>Если ВСЕ аргументы <b>true</b>, то выводится сообщение 'success'.</p>
+  {% set example_id = 'logical_or_examples' %}
+  {% set numeration = false %}
+  {% set split      = false %}
+  {% set html       = false %}
+  {% set njk        = false %}
+  {% set css        = false %}
+  {% set js         = true %}
+  {% set demo       = false %}
+  {% include codeExample %}
+  <table>
+    <tr>
+      <td>b = '0'</td>
+      <td>Если </td>
+    </tr>
+  </table>
+  </section>
+
+{% endblock %}

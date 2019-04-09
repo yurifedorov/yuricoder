@@ -99,6 +99,16 @@
     {% set js         = true %}
     {% set demo       = false %}
     {% include codeExample %}
+    <table>
+      <tr>
+        <td>14</td>
+        <td>сначала <b>n + 5</b> (2 + 5), потом и <b>n * 2</b> (7 * 2)</td>
+      </tr>
+      <tr>
+        <td>14</td>
+        <td><b>n=7</b> (работает как n = n + 5), <b>n=14</b> (работает как n = n * 2)</td>
+      </tr>
+    </table>
   </section>
 
 {% endblock %}
