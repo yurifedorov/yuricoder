@@ -16,10 +16,6 @@ main img {
     box-sizing: border-box;
 }
 
-main li {
-    margin-bottom: 1em;
-}
-
 main > b {
     display: block;
     background: wheat;

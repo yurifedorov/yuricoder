@@ -24,7 +24,7 @@
   }
 
   .XL > .wrapper_grid {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-gap: 20px;
   }
 
@@ -59,10 +59,10 @@
   <div class="wrapper_grid">
 
     <section>
-      <h2>Default</h2>
+      <h2>default</h2>
       <p>Вариант без стилей</p>
       {% set example_id = 'list_default' %} {# требуется для работы кнопок checkbox/label #}
-      {% set numeration = true %} {# true = включен / false = отключен #}
+      {% set numeration = false %} {# true = включен / false = отключен #}
       {% set split      = false %} {# true = включеy / false = отключена #}
       {% set html       = true %} {# путь к примеру html #}
       {% set njk        = false %} {# путь к примеру njk #}
@@ -73,16 +73,30 @@
     </section>
 
     <section>
-      <h2>Custom</h2>
-      <p>Класс <b>.list</b> для незначительных изменений</p>
+      <h2>.list</h2>
+      <p>Для незначительных изменений (размер шрифта, тип маркеров и т.д.)</p>
       {% set example_id = 'list_custom' %} {# требуется для работы кнопок checkbox/label #}
-      {% set numeration = true %} {# true = включен / false = отключен #}
+      {% set numeration = false %} {# true = включен / false = отключен #}
       {% set split      = false %} {# true = включеy / false = отключена #}
       {% set html       = true %} {# путь к примеру html #}
       {% set njk        = false %} {# путь к примеру njk #}
       {% set css        = true %} {# путь к примеру css #}
       {% set js         = false %} {# путь к примеру js #}
       {% set demo       = 'list_custom-demo.njk' %}
+      {% include codeExample %}
+    </section>
+
+   <section>
+      <h2>.list_tile</h2>
+      <p>Модификатор <b>_tile</b> делает список в виде плитки</p>
+      {% set example_id = 'list_tile' %} {# требуется для работы кнопок checkbox/label #}
+      {% set numeration = false %} {# true = включен / false = отключен #}
+      {% set split      = false %} {# true = включеy / false = отключена #}
+      {% set html       = true %} {# путь к примеру html #}
+      {% set njk        = false %} {# путь к примеру njk #}
+      {% set css        = true %} {# путь к примеру css #}
+      {% set js         = false %} {# путь к примеру js #}
+      {% set demo       = 'list_tile-demo.njk' %}
       {% include codeExample %}
     </section>
 

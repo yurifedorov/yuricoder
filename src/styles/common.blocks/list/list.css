@@ -1,21 +1,7 @@
-.list {
-  padding-inline-start: 30px;
-  padding-inline-end: 20px;
+ul[class='list'] {
+  list-style: circle;
 }
 
-.list > li {
-  margin-bottom: 10px;
-}
-
-.MD > .list {
-  grid-template-columns: repeat(3, 1fr);
-}
-
-.XL > .list {
-  grid-template-columns: repeat(5, 1fr);
-}
-
-/* стили для списка javascript-operators */
-ul[name="javascript-operators"] {
-  list-style: none;
+ul[class='list'] > li {
+  line-height: 1.5em;
 }

@@ -137,8 +137,6 @@
     {# вывести блок demo если demo=true #}
     {% if demo %}
       <div id="{{example_id}}-demo" class="demo">
-        {# inline style чтобы демки оформлялись как указано в примере #}
-        <style>{% include example_dir + example_id + '.css' %}</style>
         {% include example_dir + demo %}
       </div>
     {% endif %}

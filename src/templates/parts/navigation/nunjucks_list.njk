@@ -1,17 +1,15 @@
 {# variables #}
 {% set path = '/docs/nunjucks/' %}
 
-<nav class="nav" {{ResizeObserver}}>
-  <ul class="list list_no-marker">
+  <ul>
   {% for item in nunjucks %}
-  <details class="list__item">
+  <details>
     <summary>{{item.category}}</summary>
-    <ul class="list__sublist">
+    <ul>
     {% for subitem in item.subcategories %}
-      <li class="list__subitem"><a href="{{ path }}{{ subitem.link }}">{{ subitem.name | capitalize }}</a></li>
+      <li><a href="{{ path }}{{ subitem.link }}">{{ subitem.name | capitalize }}</a></li>
     {% endfor %}
     </ul>
   </details>
   {% endfor %}
   </ul>
-</nav>
