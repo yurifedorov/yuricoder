@@ -1,0 +1,7 @@
+
+ul[class='list'] {
+  font-size: 1.2em;
+  font-family: 'Times New Roman', Times, serif;
+  list-style: circle;
+  background: #eee;
+}

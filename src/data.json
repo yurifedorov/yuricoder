@@ -53,8 +53,12 @@
     "category": "Компоненты веб-страницы",
     "subcategories": [
       {
-        "name": "Структурные блоки",
+        "name": "structural blocks",
         "link": "structural-blocks.html"
+      },
+      {
+        "name": "lists",
+        "link": "lists.html"
       },
       {
         "name": "пункт 2",
@@ -91,7 +95,7 @@
     "category": "Основы JavaScript",
     "subcategories": [
       {
-        "name": "операторы",
+        "name": "operators",
         "link": "operators"
       },
       {

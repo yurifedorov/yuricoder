@@ -1,0 +1,91 @@
+{% extends "base.njk" %}
+
+{# variables #}
+{% set title           = 'lists' %}
+{% set category        = 'справочник' %}
+{% set subcategory     = 'css' %}
+{% set segment_del     = 'delete' %}
+{% set subsegment_del  = 'delete' %}
+
+{# путь к примерам #}
+{% set example_dir    = 'examples/css/lists/' %}
+
+{# ===================================== #}
+
+{% block head %}
+  <title>List styling in CSS</title>
+  <meta name="description" content="How I tried to create maximally universal styles for lists." />
+  <link rel="stylesheet" href="{{prism_css}}">
+  <script src="{{prism_js}}" async></script>
+  <style>
+  /* только для этой страницы */
+  .wrapper_grid {
+    display: grid;
+  }
+
+  .XL > .wrapper_grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+  }
+
+  .wrapper_grid > section {
+    background: #eee;
+    padding: 0 1em 5px 1em;
+    margin-top: 10px;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+
+  .wrapper_grid > section > h4 {
+    margin-top: 7px;
+    margin-bottom: 7px;
+  }
+
+  .XL > .wrapper_grid > section {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  </style>
+{% endblock %}
+
+{% block aside_top %}{% include aside_top %}{% endblock %}
+{% block aside_left %}{% include aside_left %}{% endblock %}
+
+{% block main %}
+
+  <h1>Lists</h1>
+  <p>Стилизация списков в CSS.</p>
+
+  <div class="wrapper_grid">
+
+    <section>
+      <h2>Default</h2>
+      <p>Вариант без стилей</p>
+      {% set example_id = 'list_default' %} {# требуется для работы кнопок checkbox/label #}
+      {% set numeration = true %} {# true = включен / false = отключен #}
+      {% set split      = false %} {# true = включеy / false = отключена #}
+      {% set html       = true %} {# путь к примеру html #}
+      {% set njk        = false %} {# путь к примеру njk #}
+      {% set css        = true %} {# путь к примеру css #}
+      {% set js         = false %} {# путь к примеру js #}
+      {% set demo       = 'list_default-demo.njk' %}
+      {% include codeExample %}
+    </section>
+
+    <section>
+      <h2>Custom</h2>
+      <p>Класс <b>.list</b> для незначительных изменений</p>
+      {% set example_id = 'list_custom' %} {# требуется для работы кнопок checkbox/label #}
+      {% set numeration = true %} {# true = включен / false = отключен #}
+      {% set split      = false %} {# true = включеy / false = отключена #}
+      {% set html       = true %} {# путь к примеру html #}
+      {% set njk        = false %} {# путь к примеру njk #}
+      {% set css        = true %} {# путь к примеру css #}
+      {% set js         = false %} {# путь к примеру js #}
+      {% set demo       = 'list_custom-demo.njk' %}
+      {% include codeExample %}
+    </section>
+
+  </div>
+ 
+{% endblock %}
