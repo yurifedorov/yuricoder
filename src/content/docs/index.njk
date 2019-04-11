@@ -13,12 +13,12 @@
 
   <h1>Web docs</h1>
 
-  <div class="tile tile_small">
+  <ul class="list list_tile">
     {% for category in docs %}
-    <div class="tile__item">
+    <li>
       <a href="{{category.link}}">{{category.name}}</a>
-    </div>
+    </li>
     {% endfor %}
-  </div>
+  </ul>
 
 {% endblock %}

@@ -9,7 +9,24 @@ ul[class='list list_tile'] {
 
 /* элементы списка */
 ul[class='list list_tile'] > li {
-  height: var(--tile-size);
-  list-style: none;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: calc(100% - 19px);
+  padding-bottom: 100%; /* пропорции блока определяются здесь */
   background: plum;
+  box-sizing: border-box;
+}
+
+/* временно */
+ul[class='list list_tile'] > li > a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 19px)
+}
+
+ul[class='list list_tile'] > li > a:hover {
+  background: wheat;
 }
