@@ -9,7 +9,7 @@
 .split-parent > div[id="box-1"],
 .split-parent > div[id="box-2"],
 .split-parent > div[id="box-3"] {
-  background: wheat;
+  background: transparent;
 }
 
 .gutter {

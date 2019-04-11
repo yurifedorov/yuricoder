@@ -9,16 +9,15 @@ ul[class='list list_tile'] {
 
 /* элементы списка */
 ul[class='list list_tile'] > li {
-  overflow: hidden;
+  list-style: none;
   position: relative;
-  width: 100%;
   height: var(--tile-size);
-  padding-bottom: 100%; /* пропорции блока определяются здесь */
+  padding-bottom: 100%;
   background: plum;
   box-sizing: border-box;
 }
 
-/* временно */
+/* ссылка растягивается на всю площадь */
 ul[class='list list_tile'] > li > a {
   position: absolute;
   text-align: center;
@@ -27,7 +26,6 @@ ul[class='list list_tile'] > li > a {
   bottom: 0;
   width: 100%;
   padding-top: 40%;
-  background: lightgreen;
 }
 
 ul[class='list list_tile'] > li > a:hover {
