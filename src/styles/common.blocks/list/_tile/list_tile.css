@@ -1,22 +1,15 @@
+/* контейнер списка */
 ul[class='list list_tile'] {
   display: grid;
-  grid-template-columns: repeat(3, var(--tile-size));
-  grid-auto-rows: var(--tile-size);
+  grid-template-columns: repeat(auto-fit, minmax(var(--tile-size), 1fr));
   grid-gap: 10px;
   margin: 0;
   padding-inline-start: 0;
-  padding-inline-end: 0;
-  width: min-content;
 }
 
-.MD > ul[class='list list_tile'] {
-  grid-template-columns: repeat(7, var(--tile-size));
-  grid-gap: 11px;
-}
-
+/* элементы списка */
 ul[class='list list_tile'] > li {
+  height: var(--tile-size);
   list-style: none;
   background: plum;
-  text-align: center;
-  padding-top: 40%;
 }

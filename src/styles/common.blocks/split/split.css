@@ -12,6 +12,10 @@
   background: wheat;
 }
 
+.split-parent > div[id="box-1"] {
+  min-width: 320px;
+}
+
 .gutter {
   border-left: 1px solid;
   border-right: 1px solid;
