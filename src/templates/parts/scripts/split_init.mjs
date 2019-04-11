@@ -9,9 +9,9 @@ switch (true) {
 	box2.id = "box-2";
 	box3.id = "box-3";
 	Split(['#box-1', '#box-2', '#box-3'], {
-		sizes: [15, 25, 60],
-		gutterSize: 3,
-		elementStyle: function (dimension, size, gutterSize) {return {'width': 'calc(' + size + '% - ' + gutterSize + 'px)',}},
+		sizes: [320, 768, 590],
+		gutterSize: 2,
+		elementStyle: function (dimension, size, gutterSize) {return {'width': 'calc(' + size + 'px - ' + gutterSize + 'px + 1px)',}},
 		gutterStyle: function (dimension, gutterSize) {return {'width': gutterSize + 'px',}}
 	})
 	break;
@@ -23,9 +23,9 @@ switch (true) {
 	box1.parentNode.insertBefore(box2, box1.nextSibling);
 	box2.id = "box-2";
 	Split(['#box-1', '#box-2'], {
-		sizes: [25, 75],
-		gutterSize: 3,
-		elementStyle: function (dimension, size, gutterSize) {return {'width': 'calc(' + size + '% - ' + gutterSize + 'px)',}},
+		sizes: [320, 768],
+		gutterSize: 2,
+		elementStyle: function (dimension, size, gutterSize) {return {'width': 'calc(' + size + 'px - ' + gutterSize + 'px + 1px)',}},
 		gutterStyle: function (dimension, gutterSize) {return {'width': gutterSize + 'px',}}
 	})
 	break;

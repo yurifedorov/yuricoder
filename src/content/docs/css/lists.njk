@@ -17,6 +17,7 @@
   <meta name="description" content="Примеры оформления списков с помощью CSS и БЭМ." />
   <link rel="stylesheet" href="{{prism_css}}">
   <script src="{{prism_js}}" async></script>
+  <script src="{{split_js}}" async></script>
   <style>
   /* только для этой страницы */
   .wrapper_grid {
@@ -25,15 +26,18 @@
 
   .XL > .wrapper_grid {
     grid-template-columns: 1fr 1fr;
-    grid-gap: 20px;
+    grid-gap: 40px;
   }
 
   .wrapper_grid > section {
-    background: #eee;
     padding: 0 1em 5px 1em;
     margin-top: 10px;
     margin-left: -20px;
     margin-right: -20px;
+  }
+
+  .wrapper_grid > section:nth-child(3) {
+    grid-column: 1 / -1;
   }
 
   .wrapper_grid > section > h4 {
@@ -91,7 +95,7 @@
       <p>Модификатор <b>_tile</b> делает список в виде плитки</p>
       {% set example_id = 'list_tile' %} {# требуется для работы кнопок checkbox/label #}
       {% set numeration = false %} {# true = включен / false = отключен #}
-      {% set split      = false %} {# true = включеy / false = отключена #}
+      {% set split      = true %} {# true = включеy / false = отключена #}
       {% set html       = true %} {# путь к примеру html #}
       {% set njk        = false %} {# путь к примеру njk #}
       {% set css        = true %} {# путь к примеру css #}
@@ -102,4 +106,9 @@
 
   </div>
  
+{% endblock %}
+
+{% block inlineScripts %}
+  {# инлайновые скрипты для этой страницы #}
+  <script>{% include split_init %}</script>
 {% endblock %}
