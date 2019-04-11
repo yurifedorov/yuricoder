@@ -2,7 +2,7 @@
 ul[class='list list_tile'] {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(var(--tile-size), 1fr));
-  grid-gap: 10px;
+  grid-gap: 5px;
   margin: 0;
   padding-inline-start: 0;
 }
@@ -12,7 +12,7 @@ ul[class='list list_tile'] > li {
   overflow: hidden;
   position: relative;
   width: 100%;
-  height: calc(100% - 19px);
+  height: var(--tile-size);
   padding-bottom: 100%; /* пропорции блока определяются здесь */
   background: plum;
   box-sizing: border-box;
@@ -21,10 +21,13 @@ ul[class='list list_tile'] > li {
 /* временно */
 ul[class='list list_tile'] > li > a {
   position: absolute;
+  text-align: center;
   top: 0;
   left: 0;
+  bottom: 0;
   width: 100%;
-  height: calc(100% - 19px)
+  padding-top: 40%;
+  background: lightgreen;
 }
 
 ul[class='list list_tile'] > li > a:hover {
