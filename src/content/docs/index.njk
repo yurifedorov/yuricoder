@@ -15,7 +15,7 @@
 
   <ul class="list list_tile">
     {% for category in docs %}
-    <li>
+    <li data-breakpoints='{"C2":150,"C3":200}' data-observe-resizes>
       <a href="{{category.link}}">{{category.name}}</a>
     </li>
     {% endfor %}

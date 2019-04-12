@@ -8,12 +8,12 @@
 {% set subsegment_del  = 'delete' %}
 
 {# путь к примерам #}
-{% set example_dir    = 'examples/css/lists/' %}
+{% set example_dir    = 'examples/css/lists/list_tile/' %}
 
 {# ===================================== #}
 
 {% block head %}
-  <title>Styling lists using the BEM methodology</title>
+  <title>Tiled list options</title>
   <meta name="description" content="Примеры оформления списков с помощью CSS и БЭМ." />
   <link rel="stylesheet" href="{{prism_css}}">
   <script src="{{prism_js}}" async></script>
@@ -25,7 +25,7 @@
   }
 
   .XL > .wrapper_grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-gap: 40px;
   }
 
@@ -34,15 +34,6 @@
     margin-top: 10px;
     margin-left: -20px;
     margin-right: -20px;
-  }
-
-  .wrapper_grid > section:nth-child(3) {
-    grid-column: 1 / -1;
-  }
-
-  .wrapper_grid > section > h4 {
-    margin-top: 7px;
-    margin-bottom: 7px;
   }
 
   .XL > .wrapper_grid > section {
@@ -57,50 +48,25 @@
 
 {% block main %}
 
-  <h1>Styles for lists</h1>
+  <h1>list_tile</h1>
   <p>Примеры оформления списков с помощью CSS и БЭМ.</p>
 
   <div class="wrapper_grid">
 
-    <section>
-      <h2>default</h2>
-      <p>Вариант без стилей</p>
-      {% set example_id = 'list_default' %}
-      {% set numeration = false %}
-      {% set split      = false %}
-      {% set html       = true %}
-      {% set njk        = false %}
-      {% set css        = true %}
-      {% set js         = false %}
-      {% set demo       = 'list_default-demo.njk' %}
-      {% include codeExample %}
-    </section>
-
-    <section>
-      <h2>.list</h2>
-      <p>Для незначительных изменений (размер шрифта, тип маркеров и т.д.)</p>
-      {% set example_id = 'list_custom' %}
-      {% set numeration = false %}
-      {% set split      = false %}
-      {% set html       = true %}
-      {% set njk        = false %}
-      {% set css        = true %}
-      {% set js         = false %}
-      {% set demo       = 'list_custom-demo.njk' %}
-      {% include codeExample %}
-    </section>
-
    <section>
-      <h2>.list_tile</h2>
-      <p>Модификатор <b>_tile</b> делает список в виде плитки (размер плитки в переменной <b>--tile-size</b>)</p>
-      {% set example_id = 'list_tile' %}
+      <h2>Только ссылка</h2>
+      <p>Плитка содержит только ссылку, которая растягивается на всю плющадь родителя.</p>
+      <ol>
+        <li>размер шрифта увеличивается вместе с плиткой; <br><small><a href="#">Как я это сделал?</a></small></li>
+      </ol>
+      {% set example_id = 'list_tile_with_link' %}
       {% set numeration = false %}
       {% set split      = true %}
       {% set html       = true %}
       {% set njk        = false %}
       {% set css        = true %}
       {% set js         = false %}
-      {% set demo       = 'list_tile-demo.njk' %}
+      {% set demo       = 'list_tile_with_link-demo.njk' %}
       {% include codeExample %}
     </section>
 

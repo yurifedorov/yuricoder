@@ -1,0 +1,15 @@
+/* ссылка растягивается на всю площадь */
+ul[class='list list_tile'] > li > a {
+  position: absolute;
+  text-align: center;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding-top: 40%;
+}
+
+/* стили при наведении курсора */
+ul[class='list list_tile'] > li > a:hover {
+  background: wheat;
+}

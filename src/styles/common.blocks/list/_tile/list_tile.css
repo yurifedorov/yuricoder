@@ -28,6 +28,12 @@ ul[class='list list_tile'] > li > a {
   padding-top: 40%;
 }
 
+/* Breakpoint: C2 (ширина <li> более 150px  ) */
+.C2 > a { font-size: 1.5em; }
+
+/* Breakpoint: C3 (ширина <li> более 200px  ) */
+.C3 > a { font-size: 2em; }
+
 ul[class='list list_tile'] > li > a:hover {
   background: wheat;
 }

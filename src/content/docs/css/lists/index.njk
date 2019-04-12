@@ -1,0 +1,115 @@
+{% extends "base.njk" %}
+
+{# variables #}
+{% set title           = 'lists' %}
+{% set category        = 'справочник' %}
+{% set subcategory     = 'css' %}
+{% set segment_del     = 'delete' %}
+{% set subsegment_del  = 'delete' %}
+
+{# путь к примерам #}
+{% set example_dir    = 'examples/css/lists/' %}
+
+{# ===================================== #}
+
+{% block head %}
+  <title>Styling lists using the BEM methodology</title>
+  <meta name="description" content="Примеры оформления списков с помощью CSS и БЭМ." />
+  <link rel="stylesheet" href="{{prism_css}}">
+  <script src="{{prism_js}}" async></script>
+  <script src="{{split_js}}" async></script>
+  <style>
+  /* только для этой страницы */
+  .wrapper_grid {
+    display: grid;
+  }
+
+  .XL > .wrapper_grid {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 40px;
+  }
+
+  .wrapper_grid > section {
+    padding: 0 1em 5px 1em;
+    margin-top: 10px;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+
+  .wrapper_grid > section:nth-child(3) {
+    grid-column: 1 / -1;
+  }
+
+  .wrapper_grid > section > h4 {
+    margin-top: 7px;
+    margin-bottom: 7px;
+  }
+
+  .XL > .wrapper_grid > section {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  </style>
+{% endblock %}
+
+{% block aside_top %}{% include aside_top %}{% endblock %}
+{% block aside_left %}{% include aside_left %}{% endblock %}
+
+{% block main %}
+
+  <h1>Styles for lists</h1>
+  <p>Примеры оформления списков с помощью CSS и БЭМ.</p>
+
+  <div class="wrapper_grid">
+
+    <section>
+      <h2>default</h2>
+      <p>Вариант без стилей</p>
+      {% set example_id = 'list_default' %}
+      {% set numeration = false %}
+      {% set split      = false %}
+      {% set html       = true %}
+      {% set njk        = false %}
+      {% set css        = true %}
+      {% set js         = false %}
+      {% set demo       = 'list_default-demo.njk' %}
+      {% include codeExample %}
+    </section>
+
+    <section>
+      <h2>.list</h2>
+      <p>Для незначительных изменений (размер шрифта, тип маркеров и т.д.)</p>
+      {% set example_id = 'list_custom' %}
+      {% set numeration = false %}
+      {% set split      = false %}
+      {% set html       = true %}
+      {% set njk        = false %}
+      {% set css        = true %}
+      {% set js         = false %}
+      {% set demo       = 'list_custom-demo.njk' %}
+      {% include codeExample %}
+    </section>
+
+   <section>
+      <h2>.list_tile</h2>
+      <p>Модификатор <b>_tile</b> делает список в виде плитки (размер плитки в переменной <b>--tile-size</b>)</p>
+      <p><a href="list_tile.html">Все варианты</a></p>
+      {% set example_id = 'list_tile' %}
+      {% set numeration = false %}
+      {% set split      = true %}
+      {% set html       = true %}
+      {% set njk        = false %}
+      {% set css        = true %}
+      {% set js         = false %}
+      {% set demo       = 'list_tile-demo.njk' %}
+      {% include codeExample %}
+    </section>
+
+  </div>
+ 
+{% endblock %}
+
+{% block inlineScripts %}
+  {# инлайновые скрипты для этой страницы #}
+  <script>{% include split_init %}</script>
+{% endblock %}
