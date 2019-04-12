@@ -68,6 +68,14 @@
               <br><small>ширина родителя: <b>113.6px</b> (увеличенная ширина при ресайзе)</small>
               <br><small>остаток: <b>13.6px</b> (на столько пикселей увеличилась ширина)</small>
               <br><small>font-size: calc( 1em + остаток) /* получился font-size: 29.6px (дефолтные 16px(1em) + 13.6) */</small>
+              <p>Подумать над этим позже...</p>
+              <br><br><b>Пока что я сделал вот так:</b>
+              <br><small>Шрифт меняется прерывисто на брекпоинтах <b>width: 150px</b> и <b>width: 200px</b></small>
+              <br><small>1) в теге &lt;li&gt; я задал 2 брекпоинта C2 и С3: <b>data-breakpoints='{"C2":150,"C3":200}'</b> (числа это пиксели)</small>
+              <br><small>2) в CSS для этих брекпоинтов я задал стили:</small>
+              <br><br><small>.C2 > a { font-size: 1.5em; }</small>
+              <br><small>.C3 > a { font-size: 2em; }</small>
+              <br>
             </div>
           </details>
         </li>
