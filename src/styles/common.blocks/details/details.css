@@ -1,0 +1,17 @@
+details > summary {
+  width: fit-content;  /* блок раскрывается при щелчке по кнопке, а не по всей строке */
+  outline-style: none;  /* удалить обводку при фокусе */
+  cursor: pointer;
+  color: blue;
+}
+
+details > div {
+  margin-top: 10px;
+  background: wheat;
+  padding: 10px 25px;
+}
+
+/* нестандартный псевдоэлемент Google Chrome */
+details > summary::-webkit-details-marker { 
+  display: none;
+}
