@@ -1,15 +1,16 @@
-/* ссылка растягивается на всю площадь */
 ul[class='list list_tile'] > li > a {
   position: absolute;
   text-align: center;
+  text-decoration: none;
   top: 0;
   left: 0;
   bottom: 0;
   width: 100%;
   padding-top: 40%;
+  transition: 0.5s;
+  cursor: pointer;
 }
 
-/* стили при наведении курсора */
 ul[class='list list_tile'] > li > a:hover {
   background: wheat;
 }

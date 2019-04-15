@@ -1,0 +1,18 @@
+/* ссылка "логотип" */
+ul[class='list list_tile'] > li > a[class='logo'] {
+  padding-top: 15%;
+  font-size: 3em;
+}
+
+/* маленький текст */
+ul[class='list list_tile'] > li > small {
+  position: absolute;
+  text-align: center;
+  cursor: pointer;
+  left: 0;
+  right: 0;  
+  bottom: 0;
+  background: gainsboro;
+  height: 40px;
+  padding: 10px 0;
+}
