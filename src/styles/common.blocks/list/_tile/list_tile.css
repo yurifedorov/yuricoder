@@ -1,7 +1,7 @@
 /* контейнер списка */
 ul[class='list list_tile'] {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(var(--tile-size), 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(var(--tile-size), 1fr)); /* было auto-fit */
   grid-gap: 5px;
   margin: 0;
   padding-inline-start: 0;
@@ -28,11 +28,15 @@ ul[class='list list_tile'] > li > a {
   padding-top: 40%;
 }
 
+/* ================================================================================ */
+/* увеличение шрифта при увеличении элементов списка (при использовании 'auto-fit') */
+
 /* Breakpoint: C2 (ширина <li> более 150px  ) */
 .C2 > a { font-size: 1.5em; }
 
 /* Breakpoint: C3 (ширина <li> более 200px  ) */
 .C3 > a { font-size: 2em; }
+/* ================================================================================ */
 
 ul[class='list list_tile'] > li > a:hover {
   background: wheat;

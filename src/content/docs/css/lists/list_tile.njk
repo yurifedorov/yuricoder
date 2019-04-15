@@ -76,6 +76,8 @@
               <br><br><small>.C2 > a { font-size: 1.5em; }</small>
               <br><small>.C3 > a { font-size: 2em; }</small>
               <br>
+              <p>P.S. актуально если используется <b>auto-fit</b> при построении колонок</p>
+              
             </div>
           </details>
         </li>
@@ -88,6 +90,19 @@
       {% set css        = true %}
       {% set js         = false %}
       {% set demo       = 'list_tile_with_link-demo.njk' %}
+      {% include codeExample %}
+    </section>
+
+    <section>
+      <h2>Ссылка + текст</h2>
+      {% set example_id = 'list_tile_link_and_text' %}
+      {% set numeration = false %}
+      {% set split      = true %}
+      {% set html       = true %}
+      {% set njk        = false %}
+      {% set css        = true %}
+      {% set js         = false %}
+      {% set demo       = 'list_tile_link_and_text.njk' %}
       {% include codeExample %}
     </section>
 
