@@ -1,10 +1,10 @@
 {% extends "base.njk" %}
 
 {# variables #}
-{% set title           = 'tile' %}
+{% set title           = 'tile_flip (mod)' %}
 {% set category        = 'справочник' %}
 {% set subcategory     = 'css' %}
-{% set segment_del     = 'delete' %}
+{% set segment         = 'tile' %}
 {% set subsegment_del  = 'delete' %}
 
 {# путь к примерам #}
@@ -25,17 +25,22 @@
 
 {% block main %}
 
-  <h1>Element "Tile"</h1>
-  <p>Блок, содержащий элементы строго квадратной формы.</p>
-  <p>Варианты реализации представлены ниже:</p>
+  <h1>.tile_flip (модификатор)</h1>
+  <p>Модификатор <b>flip</b> добавляет возможность переворачивать элементы при наведении мышы.</p>
 
-  <ul class="list">
-    <li><a href="tile.html">.tile</a><small> (default)</small></li>
-    <li><a href="tile_flip.html">.tile_flip</a><small> (модификатор)</small></li>
-  </ul>
+  {% set example_id = 'tile_flip' %}
+  {% set numeration = false %}
+  {% set split      = true %}
+  {% set html       = true %}
+  {% set njk        = false %}
+  {% set css        = true %}
+  {% set js         = false %}
+  {% set demo       = 'tile_flip-demo.njk' %}
+  {% include codeExample %}
  
 {% endblock %}
 
 {% block inlineScripts %}
   {# инлайновые скрипты для этой страницы #}
+  <script>{% include split_init %}</script>
 {% endblock %}

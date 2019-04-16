@@ -3,5 +3,10 @@ ul[class='list'] {
 }
 
 ul[class='list'] > li {
-  list-style-type: circle;
+  list-style-type: square;
+}
+
+ul[class='list'] > li > a {
+  text-decoration: none;
+  cursor: pointer;
 }
