@@ -1,20 +1,20 @@
 {% extends "base.njk" %}
 
 {# variables #}
-{% set title           = 'lists' %}
+{% set title           = 'tile' %}
 {% set category        = 'справочник' %}
 {% set subcategory     = 'css' %}
 {% set segment_del     = 'delete' %}
 {% set subsegment_del  = 'delete' %}
 
 {# путь к примерам #}
-{% set example_dir    = 'examples/css/lists/' %}
+{% set example_dir    = 'examples/css/tile/' %}
 
 {# ===================================== #}
 
 {% block head %}
-  <title>Styling lists using the BEM methodology</title>
-  <meta name="description" content="Примеры оформления списков с помощью CSS и БЭМ." />
+  <title>Creating a tile using HTML and CSS</title>
+  <meta name="description" content="Варианты реализации элементов плитки с помощью CSS и HTML." />
   <link rel="stylesheet" href="{{prism_css}}">
   <script src="{{prism_js}}" async></script>
   <script src="{{split_js}}" async></script>
@@ -25,7 +25,7 @@
   }
 
   .XL > .wrapper_grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-gap: 40px;
   }
 
@@ -34,6 +34,10 @@
     margin-top: 10px;
     margin-left: -20px;
     margin-right: -20px;
+  }
+
+  .wrapper_grid > section:nth-child(3) {
+    grid-column: 1 / -1;
   }
 
   .wrapper_grid > section > h4 {
@@ -53,36 +57,24 @@
 
 {% block main %}
 
-  <h1>Styles for lists</h1>
-  <p>Примеры оформления списков с помощью CSS и БЭМ.</p>
+  <h1>Element "Tile"</h1>
+  <p>Варианты реализации элементов плитки с помощью CSS и HTML.</p>
 
   <div class="wrapper_grid">
 
-    <section>
-      <h2>default</h2>
-      <p>Вариант без стилей</p>
-      {% set example_id = 'list_default' %}
-      {% set numeration = false %}
-      {% set split      = false %}
-      {% set html       = true %}
-      {% set njk        = false %}
-      {% set css        = true %}
-      {% set js         = false %}
-      {% set demo       = 'list_default-demo.njk' %}
-      {% include codeExample %}
-    </section>
+   <section>
+      <h2>.tile</h2>
+      <p>Блок, содержащий элементы квадратной формы (наподобие плитки)</p>
+      <p>Плитка - это по сути список элементов, поэтому я решил сделать его на основе <b>&lt;ul&gt;</b> и <b>&lt;li&gt;</b>.</p>
 
-    <section>
-      <h2>.list</h2>
-      <p>Для незначительных изменений (размер шрифта, тип маркеров и т.д.)</p>
-      {% set example_id = 'list_custom' %}
+      {% set example_id = 'tile' %}
       {% set numeration = false %}
-      {% set split      = false %}
+      {% set split      = true %}
       {% set html       = true %}
       {% set njk        = false %}
       {% set css        = true %}
       {% set js         = false %}
-      {% set demo       = 'list_custom-demo.njk' %}
+      {% set demo       = 'tile-demo.njk' %}
       {% include codeExample %}
     </section>
 

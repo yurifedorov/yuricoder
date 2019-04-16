@@ -1,13 +1,51 @@
-/* Базовые стили, работающие на всех экранах */
-.tile {
+/* контейнер списка */
+ul[class='tile'] {
   display: grid;
-  grid-auto-rows: max-content;
-  margin-left: calc(0px - var(--main_padding-left));
-  margin-right: calc(0px - var(--main_padding-right));
+  grid-template-columns: repeat(auto-fill, minmax(var(--tile-size), 1fr)); /* было auto-fit */
   grid-gap: 5px;
-  padding: 5px;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  padding-inline-start: 0;
+  list-style-type: none;
 }
 
-.SM > .tile {
-  padding: 20px;
+/* элементы списка */
+ul[class='tile'] > li {
+  position: relative;
+  padding-bottom: 100%;
+  background: darkgray;
 }
+
+/* ссылка растягивается на всю площадь */
+ul[class='tile'] > li > a {
+  position: absolute;
+  text-align: center;
+  text-decoration: none;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding-top: 40%;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+/* ссылка "логотип" */
+ul[class='tile'] > li > a[class='logo'] {
+  padding-top: 20%;
+  font-size: 3em;
+}
+
+ul[class='tile'] > li > a:hover {
+  background: wheat;
+}
+
+/* ================================================================================ */
+/* увеличение шрифта при увеличении элементов списка (при использовании 'auto-fit') */
+
+/* Breakpoint: C2 (ширина <li> более 150px  ) */
+.C2 > a { font-size: 1.5em; }
+
+/* Breakpoint: C3 (ширина <li> более 200px  ) */
+.C3 > a { font-size: 2em; }
+/* ================================================================================ */

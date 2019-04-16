@@ -61,8 +61,8 @@
         "link": "lists"
       },
       {
-        "name": "пункт 2",
-        "link": "#"
+        "name": "tile",
+        "link": "tile"
       }
     ]
   }, {
