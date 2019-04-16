@@ -16,7 +16,7 @@ ul[class='tile'] > li {
   background: darkgray;
 }
 
-/* ссылка растягивается на всю площадь элемента */
+/* ссылка */
 ul[class='tile'] > li > a {
   position: absolute;
   text-align: center;
@@ -28,4 +28,8 @@ ul[class='tile'] > li > a {
   padding-top: 40%;
   transition: 0.5s;
   cursor: pointer;
+}
+
+ul[class='tile'] > li > a:hover {
+  background: wheat;
 }
