@@ -16,6 +16,11 @@
   margin: 0;
   min-height: 30px; /* чтобы не появлялась вертикальная полоса прокрутки из-за кнопки[class='run-js'] */
   position: relative;
+  font-size: 0.8em; /* немного уменьшил шрифт кода на маленьких экранах */
+}
+
+.MD > .code-example pre[class*=language-] {
+  font-size: 1em;
 }
 
 /* изменить z-index у reviewer (иначе он не будет работать в codeExample) */

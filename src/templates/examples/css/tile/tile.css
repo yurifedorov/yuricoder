@@ -1,34 +1,38 @@
-/* контейнер */
-ul[class='tile'] {
+.tile {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(var(--tile-size), 1fr));
-  grid-gap: 5px; /* расстояние между элементами */
-  margin-block-start: 0; /* default - 1em */
-  margin-block-end: 0; /* default - 1em */
-  padding-inline-start: 0; /* default - 40px */
-  list-style-type: none; /* default - disc */
+  grid-gap: 5px;
+  margin-block-start: 0;   /* reset */
+  margin-block-end: 0;     /* reset */
+  padding-inline-start: 0; /* reset */
+  list-style-type: none;   /* reset */
 }
 
-/* элементы */
 .tile > li {
   position: relative;
-  padding-bottom: 100%; /* делает элементы строго квадратными */
+  padding-bottom: 100%;
   background: darkgray;
 }
 
-.tile > li > a {
+.tile > li > a,
+.tile > li > div {
   position: absolute;
   text-align: center;
   text-decoration: none;
   top: 0;
   left: 0;
+  right: 0;
   bottom: 0;
-  width: 100%;
   padding-top: 40%;
   transition: 0.5s;
   cursor: pointer;
 }
 
-.tile > li > a:hover {
+.tile > li > div {
+  padding-top: 30%;
+}
+
+.tile > li > a:hover,
+.tile > li > div:hover {
   background: wheat;
 }
