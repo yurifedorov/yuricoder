@@ -1,7 +1,7 @@
-ul[class='list'] {
+.list {
   font-size: 1.2em;
 }
 
-ul[class='list'] > li {
+.list > li {
   list-style-type: square;
 }

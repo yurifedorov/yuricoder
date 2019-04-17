@@ -10,13 +10,13 @@ ul[class='tile'] {
 }
 
 /* элементы */
-ul[class='tile'] > li {
+.tile > li {
   position: relative;
   padding-bottom: 100%; /* делает элементы строго квадратными */
   background: darkgray;
 }
 
-ul[class='tile'] > li > a {
+.tile > li > a {
   position: absolute;
   text-align: center;
   text-decoration: none;
@@ -29,6 +29,6 @@ ul[class='tile'] > li > a {
   cursor: pointer;
 }
 
-ul[class='tile'] > li > a:hover {
+.tile > li > a:hover {
   background: wheat;
 }

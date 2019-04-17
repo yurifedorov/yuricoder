@@ -1,12 +1,12 @@
-ul[class='list'] {
+.list {
   font-size: 1.2em;
 }
 
-ul[class='list'] > li {
+.list > li {
   list-style-type: square;
 }
 
-ul[class='list'] > li > a {
+.list > li > a {
   text-decoration: none;
   cursor: pointer;
 }

@@ -29,6 +29,10 @@
     grid-gap: 40px;
   }
 
+  .XL > .wrapper_grid > p {
+    grid-column: 1 / -1;
+  }
+
   .wrapper_grid > section {
     padding: 0 1em 5px 1em;
     margin-top: 10px;
@@ -85,6 +89,8 @@
       {% set demo       = 'list_custom-demo.njk' %}
       {% include codeExample %}
     </section>
+
+    <p>Закрывающий тег <b>&lt;/li&gt;</b> можно не писать, если другой элемент <b>&lt;li&gt;</b> следует сразу за предыдущим или если нет содержания в элементе, в который вложен тег.</p>
 
   </div>
  

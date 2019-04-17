@@ -1,5 +1,5 @@
 /* контейнер списка */
-ul[class='tile'] {
+.tile {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(var(--tile-size), 1fr)); /* было auto-fit */
   grid-gap: 5px;
@@ -10,42 +10,36 @@ ul[class='tile'] {
 }
 
 /* элементы списка */
-ul[class='tile'] > li {
+.tile > li {
   position: relative;
   padding-bottom: 100%;
   background: darkgray;
 }
 
-/* ссылка */
-ul[class='tile'] > li > a {
+
+/* <a> и <div> для двух случаев */
+/* <a> когда ребенок <li> только ссылка */
+/* <div> когда ребенок <li> это контейнер, который включает несколько элементов */
+.tile > li > a,
+.tile > li > div {
   position: absolute;
   text-align: center;
   text-decoration: none;
   top: 0;
   left: 0;
+  right: 0;
   bottom: 0;
-  width: 100%;
   padding-top: 40%;
   transition: 0.5s;
   cursor: pointer;
 }
 
-/* ссылка "логотип" */
-ul[class='tile'] > li > a[class='logo'] {
-  padding-top: 20%;
-  font-size: 3em;
+/* уменьшаю верхний padding только у контейнера <div> для вертикальной центровки */
+.tile > li > div {
+  padding-top: 30%;
 }
 
-ul[class='tile'] > li > a:hover {
+.tile > li > a:hover,
+.tile > li > div:hover {
   background: wheat;
 }
-
-/* ================================================================================ */
-/* увеличение шрифта при увеличении элементов списка (при использовании 'auto-fit') */
-
-/* Breakpoint: C2 (ширина <li> более 150px  ) */
-.C2 > a { font-size: 1.5em; }
-
-/* Breakpoint: C3 (ширина <li> более 200px  ) */
-.C3 > a { font-size: 2em; }
-/* ================================================================================ */
