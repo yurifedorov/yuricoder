@@ -45,6 +45,25 @@
   background-image: url('img/australia-bay_large.jpg');
 }
 
+
+/* тест */
 .banner[name='tile'] {
-  background-image: url('img/docs/css/tile/tile.png');
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  background: pink;
+}
+
+.banner[name='tile'] > h1 {
+  justify-self: end;
+  font-size: 5em;
+}
+
+.banner[name='tile'] > p {
+  justify-self: end;
+}
+
+.banner[name='tile'] > img {
+  grid-column: 2;
+  grid-row: 1 / -1;
+  justify-self: start;
 }
