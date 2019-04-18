@@ -3,6 +3,8 @@
   order: 1; /* не трогать */
   height: var(--asideTop-height); /* не трогать */
   overflow: auto; /* не трогать */
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 2; /* должен быть выше чем у .banner */
 }
 
 /* РЕШИТЬ ПОЗЖЕ */

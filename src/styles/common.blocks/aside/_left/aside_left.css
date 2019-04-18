@@ -4,6 +4,7 @@
   margin-top: calc(0px - var(--asideTop-height));
   background: #eee; /* временно */
   display: none;
+  z-index: 3; /* должен быть выше чем у .aside_top */
 }
 
 .LG > .aside_left {

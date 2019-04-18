@@ -1,0 +1,44 @@
+/* класс баннер делает секцию на вест экран */
+.banner {
+  display: grid;
+  margin-top: calc(0px - var(--asideTop-height));
+  margin-left: calc(0px - var(--main_padding-left));
+  margin-right: calc(0px - var(--main_padding-right));
+  margin-bottom: 0;
+  height: 60vh;
+  background-position: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* затемнение для размещения светлого текста */
+.banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: -1;
+}
+
+.banner > h1 {
+  justify-self: center;
+  align-self: end;
+  color: white;
+  font-size: 3em;
+  margin: 0;
+}
+
+.banner > p {
+  justify-self: center;
+  align-self: start;
+  color: white;
+}
+
+/* список background-image */
+
+.banner[name='hero'] {
+  background-image: url('img/australia-bay_large.jpg');
+}
