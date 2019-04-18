@@ -5,8 +5,9 @@
   margin-left: calc(0px - var(--main_padding-left));
   margin-right: calc(0px - var(--main_padding-right));
   margin-bottom: 0;
-  height: 60vh;
+  height: 50vh;
   background-position: center;
+  background-repeat: no-repeat;
   position: relative;
   z-index: 1;
 }
@@ -42,4 +43,8 @@
 .banner[name='hero'] {
   margin-top: 0; /* reset отступа --asideTop-height */
   background-image: url('img/australia-bay_large.jpg');
+}
+
+.banner[name='tile'] {
+  background-image: url('img/docs/css/tile/tile.png');
 }
