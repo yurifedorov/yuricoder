@@ -1,17 +1,29 @@
 /* класс баннер делает секцию на вест экран */
 .banner {
   display: grid;
-  grid-auto-columns: auto auto;
-  grid-auto-rows: 1fr 1fr;
-  margin-top: calc(0px - var(--asideTop-height));
+  grid-auto-rows: 100px auto auto;
+  margin-top: 0;
   margin-left: calc(0px - var(--main_padding-left));
   margin-right: calc(0px - var(--main_padding-right));
   margin-bottom: 0;
-  height: 60vh;
+  height: 70vh;
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
   z-index: 1;
+}
+
+.SM > .banner {
+  grid-auto-columns: 1fr 1fr;
+  grid-auto-rows: 1fr 1fr;
+}
+
+.LG > .banner {
+  height: 60vh;
+}
+
+.XXL > .banner {
+  margin-top: calc(0px - var(--asideTop-height));
 }
 
 /* затемнение для размещения светлого текста */
@@ -50,23 +62,35 @@
 
 /* тест */
 .banner[name='tile'] {
-  background: pink;
+  background: transparent;
+}
+.banner[name='tile'] > h1 {
+  justify-self: center;
+  align-self: end;
+  font-size: 3em;
 }
 
-.banner[name='tile'] > h1 {
+.SM > .banner[name='tile'] > h1 {
   justify-self: end;
-  align-self: end;
-  font-size: 5em;
-  grid-column: 1;
 }
 
 .banner[name='tile'] > p {
+  justify-self: center;
+  text-align: center;
+}
+
+.SM > .banner[name='tile'] > p {
   justify-self: end;
+  text-align: right;
   grid-column: 1;
   grid-row: 2;
 }
 
 .banner[name='tile'] > img {
+  grid-row: 3;
+}
+
+.SM > .banner[name='tile'] > img {
   grid-column: 2;
   grid-row: 1 / 3;
   align-self: center;
