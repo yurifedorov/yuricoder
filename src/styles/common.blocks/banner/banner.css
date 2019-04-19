@@ -1,11 +1,13 @@
 /* класс баннер делает секцию на вест экран */
 .banner {
   display: grid;
+  grid-auto-columns: auto auto;
+  grid-auto-rows: 1fr 1fr;
   margin-top: calc(0px - var(--asideTop-height));
   margin-left: calc(0px - var(--main_padding-left));
   margin-right: calc(0px - var(--main_padding-right));
   margin-bottom: 0;
-  height: 50vh;
+  height: 60vh;
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
@@ -26,7 +28,7 @@
 
 .banner > h1 {
   justify-self: center;
-  align-self: end;
+  align-self: center;
   color: white;
   font-size: 3em;
   margin: 0;
@@ -48,22 +50,24 @@
 
 /* тест */
 .banner[name='tile'] {
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
   background: pink;
 }
 
 .banner[name='tile'] > h1 {
   justify-self: end;
+  align-self: end;
   font-size: 5em;
+  grid-column: 1;
 }
 
 .banner[name='tile'] > p {
   justify-self: end;
+  grid-column: 1;
+  grid-row: 2;
 }
 
 .banner[name='tile'] > img {
   grid-column: 2;
-  grid-row: 1 / -1;
-  justify-self: start;
+  grid-row: 1 / 3;
+  align-self: center;
 }
