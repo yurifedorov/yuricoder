@@ -28,16 +28,24 @@
   right: 0;
   bottom: 0;
   padding-top: 40%;
+  padding-left: 10px;
+  padding-right: 10px;
   transition: 0.5s;
   cursor: pointer;
 }
 
 /* уменьшаю верхний padding только у контейнера <div> для вертикальной центровки */
 .tile > li > div {
-  padding-top: 30%;
+  padding-top: 25%; 
 }
 
-.tile > li > a:hover,
-.tile > li > div:hover {
+.tile > li > div > p {
+  background: red;
+  
+}
+
+/* при наведении на <li> */
+.tile > li:hover > a,
+.tile > li:hover > div {
   background: wheat;
 }

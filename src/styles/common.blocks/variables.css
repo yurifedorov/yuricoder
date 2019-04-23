@@ -8,4 +8,5 @@
   --main_padding-left: 20px; /* .main | .banner */
   --main_padding-right: 20px; /* .main | .banner */
   --tile-size: 100px; /* .list_tile */
+  --backside-color: greenyellow; /* .tile_flip */
 }

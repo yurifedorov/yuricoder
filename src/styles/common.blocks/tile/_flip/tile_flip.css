@@ -3,33 +3,22 @@
   backface-visibility: hidden; /* скрывает задний текст */
 }
 
-/* стили для содержимого контейнера .back */
-.tile > li > .back > p {
-  margin-top: 0;
-}
-
-.front {
-  z-index: 2;
+/* контейнер .front */
+.tile_flip > li > .front {
   background: lightblue;
 }
 
-.back {
-  z-index: 1;  
-  transform: rotateY(-180deg);  
-  background: greenyellow;
+/* контейнер .back */
+.tile_flip > li > .back {
+  transform: rotateY(-180deg);
+ 
 }
 
-.tile_flip > li:hover .front {
-  z-index: 1;
+.tile_flip > li:hover > .front {
   transform: rotateY(180deg);
 }
 
-.tile_flip > li:hover .back {
-  z-index: 2;   
+.tile_flip > li:hover > .back {
   transform: rotateX(0deg);
-}
-
-/* сброс hover стилей, указанных в [.tile > li > tile > li > div:hover] */
-.tile_flip > li > div[class='front']:hover {
-  background: none;
+  background-color: var(--backside-color);
 }

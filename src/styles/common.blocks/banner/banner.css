@@ -41,19 +41,19 @@
 }
 
 .SM > .banner > h1 {
-  justify-self: end;
+  
   align-self: end;
 }
 
 /* абзацы в .banner */
 .banner > p {
+  justify-self: center;
   text-align: center; 
   color: white;
 }
 
 .SM > .banner > p {
   align-self: start;
-  justify-self: end;
   text-align: right;
   grid-column: 1;
   grid-row: 2;
