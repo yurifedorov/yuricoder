@@ -10,12 +10,6 @@ main {
     padding-bottom: 20px;
 }
 
-main img {
-    padding: 2%;
-    max-width: 100%;
-    box-sizing: border-box;
-}
-
 main > b {
     display: block;
     background: wheat;
