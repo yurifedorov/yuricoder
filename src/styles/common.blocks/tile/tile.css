@@ -15,6 +15,7 @@
   padding-bottom: 100%; /* делаем квадрат */
   list-style-type: none;
   box-sizing: border-box;
+<<<<<<< HEAD
 }
 
 .tile > li > div {
@@ -22,16 +23,27 @@
   height: 0;
   padding-bottom: 100%; /* делаем квадрат */
   box-sizing: border-box;
+=======
+>>>>>>> 32363793499eb424d25b011edfbddff415df0629
 }
 
 
 /* <a> и <div> для двух случаев */
 /* <a> когда ребенок <li> только ссылка */
 /* <div> когда ребенок <li> это контейнер, который включает несколько элементов */
+<<<<<<< HEAD
 .tile > li a {
   text-align: center;
   text-decoration: none;
   font-size: 1.5em;
+=======
+.tile > li > a {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  font-size: 2em;
+  align-self: center;
+>>>>>>> 32363793499eb424d25b011edfbddff415df0629
   background: red;
 }
 
