@@ -7,6 +7,6 @@
   --asideRight-width: 50px; /* .aside-right | .aside_top */
   --main_padding-left: 20px; /* .main | .banner */
   --main_padding-right: 20px; /* .main | .banner */
-  --tile-size: 100px; /* .list_tile */
+  --tile-size: 150px; /* .list_tile */
   --backside-color: greenyellow; /* .tile_flip */
 }

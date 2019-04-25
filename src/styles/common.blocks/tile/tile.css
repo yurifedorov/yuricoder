@@ -1,47 +1,39 @@
 .tile {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(var(--tile-size), 1fr));
+  grid-auto-rows: minmax(var(--tile-size), 1fr);
   grid-gap: 5px;
   margin-block-start: 0;
   margin-block-end: 0;
   padding-inline-start: 0;
-  list-style-type: none;
 }
 
 .tile > li {
-  position: relative;
-  padding-bottom: 100%;
-  background: darkgray;
+  display: grid;
+  background: #ddd;
+  height: 0;
+  padding-bottom: 100%; /* делаем квадрат */
+  list-style-type: none;
+  box-sizing: border-box;
 }
 
 
 /* <a> и <div> для двух случаев */
 /* <a> когда ребенок <li> только ссылка */
 /* <div> когда ребенок <li> это контейнер, который включает несколько элементов */
-.tile > li > a,
-.tile > li > div {
-  position: absolute;
-  text-align: center;
+.tile > li > a {
+  display: block;
   text-decoration: none;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  padding-top: 40%;
-  padding-left: 10px;
-  padding-right: 10px;
-  transition: 0.5s;
-  cursor: pointer;
-}
-
-/* уменьшаю верхний padding только у контейнера <div> для вертикальной центровки */
-.tile > li > div {
-  padding-top: 25%; 
+  text-align: center;
+  font-size: 2em;
+  align-self: center;
+  background: red;
 }
 
 .tile > li > div > p {
-  background: red;
-  
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 /* при наведении на <li> */

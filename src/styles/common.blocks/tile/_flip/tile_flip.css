@@ -11,7 +11,7 @@
 /* контейнер .back */
 .tile_flip > li > .back {
   transform: rotateY(-180deg);
- 
+  
 }
 
 .tile_flip > li:hover > .front {
