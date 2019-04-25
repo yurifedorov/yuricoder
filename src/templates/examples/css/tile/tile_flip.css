@@ -1,0 +1,23 @@
+.tile_flip > li > div {
+  transition: all .5s;
+  backface-visibility: hidden; /* скрывает задний текст */
+}
+
+/* контейнер .front */
+.tile_flip > li > .front {
+  background: lightblue;
+}
+
+/* контейнер .back */
+.tile_flip > li > .back {
+  transform: rotateY(-180deg);
+}
+
+.tile_flip > li:hover > .front {
+  transform: rotateY(180deg);
+}
+
+.tile_flip > li:hover > .back {
+  transform: rotateX(0deg);
+  background-color: var(--backside-color);
+}

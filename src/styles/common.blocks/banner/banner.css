@@ -1,15 +1,22 @@
 /* класс баннер делает секцию на вест экран */
 .banner {
   display: grid;
-  margin-top: calc(0px - var(--asideTop-height));
+  grid-auto-rows: auto auto auto;
+  grid-column-gap: 20px;
+  margin-top: 0;
   margin-left: calc(0px - var(--main_padding-left));
   margin-right: calc(0px - var(--main_padding-right));
   margin-bottom: 0;
-  height: 50vh;
+  padding: 10px;
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
   z-index: 1;
+}
+
+.SM > .banner {
+  grid-auto-columns: 1fr 1fr;
+  grid-auto-rows: 1fr 1fr;
 }
 
 /* затемнение для размещения светлого текста */
@@ -24,46 +31,47 @@
   z-index: -1;
 }
 
+/* заголовки в .banner */
 .banner > h1 {
   justify-self: center;
-  align-self: end;
+  align-self: center;
   color: white;
   font-size: 3em;
-  margin: 0;
+  margin-bottom: 0;
 }
 
+.SM > .banner > h1 {
+  
+  align-self: end;
+}
+
+/* абзацы в .banner */
 .banner > p {
   justify-self: center;
-  align-self: start;
+  text-align: center; 
   color: white;
 }
 
-/* список background-image */
-
-.banner[name='hero'] {
-  margin-top: 0; /* reset отступа --asideTop-height */
-  background-image: url('img/australia-bay_large.jpg');
+.SM > .banner > p {
+  align-self: start;
+  text-align: right;
+  grid-column: 1;
+  grid-row: 2;
 }
 
-
-/* тест */
-.banner[name='tile'] {
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  background: pink;
+/* изображения в .banner */
+.banner > img {
+  max-width: 100%;
 }
 
-.banner[name='tile'] > h1 {
-  justify-self: end;
-  font-size: 5em;
-}
-
-.banner[name='tile'] > p {
-  justify-self: end;
-}
-
-.banner[name='tile'] > img {
+.SM > .banner > img {
   grid-column: 2;
-  grid-row: 1 / -1;
-  justify-self: start;
+  grid-row: 1 / 3;
+}
+
+
+/* список background-image */
+.banner[name='hero'] {
+  background-image: url('img/australia-bay_large.jpg');
+  height: 60vh;
 }
