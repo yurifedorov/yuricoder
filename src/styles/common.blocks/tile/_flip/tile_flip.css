@@ -5,24 +5,16 @@
 
 /* контейнер .front */
 .tile_flip > li > .front {
-<<<<<<< HEAD
   grid-column: 1 / -1;
   grid-row: 1;
-=======
->>>>>>> 32363793499eb424d25b011edfbddff415df0629
   background: lightblue;
 }
 
 /* контейнер .back */
 .tile_flip > li > .back {
-<<<<<<< HEAD
   grid-column: 1 / -1;
   grid-row: 1;
   transform: rotateY(-180deg);
-=======
-  transform: rotateY(-180deg);
-  
->>>>>>> 32363793499eb424d25b011edfbddff415df0629
 }
 
 .tile_flip > li:hover > .front {
