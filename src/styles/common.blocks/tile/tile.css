@@ -8,42 +8,50 @@
   padding-inline-start: 0;
 }
 
-.tile > li,
-.tile > li > div {
+.tile > li {
   position: relative;
-  background: yellow;
+  background-color: #dadada;  
   height: 0;
   padding-bottom: 100%; /* делаем квадрат */
   box-sizing: border-box;
   cursor: pointer;
   list-style-type: none;
+  z-index: 1;
+}
+
+.tile > li > div {
+  display: grid;
 }
 
 /* <a> и <div> для двух случаев */
 /* <a> когда ребенок <li> только ссылка */
 /* <div> когда ребенок <li> это контейнер, который включает несколько элементов */
-.tile > li > a {
+.tile > li a {
   position: absolute;
-  width: 100%;
-  height: 100%;
-  align-self: stretch;
+  top: 0;  
+  right: 0;
+  bottom: 0;
+  left: 0;
   text-decoration: none;
   text-align: center;
-  font-size: 2em;
+  line-height: var(--tile-size);
+  font-size: 1.5em;
   align-self: center;
-  background: red;
+  z-index: 2;
 }
 
 .tile > li > div > p {
-  background: blue;
-  color: white;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  left: 0;
+  text-align: center;
   /*overflow: hidden;*/
   /*white-space: nowrap;*/
   /*text-overflow: ellipsis;*/
 }
 
 /* при наведении на <li> */
-.tile > li:hover > a,
-.tile > li:hover > div {
-  background: wheat;
+.tile > li:hover {
+  background-color: wheat;
 }

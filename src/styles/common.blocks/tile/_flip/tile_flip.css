@@ -5,15 +5,11 @@
 
 /* контейнер .front */
 .tile_flip > li > .front {
-  grid-column: 1 / -1;
-  grid-row: 1;
   background: lightblue;
 }
 
 /* контейнер .back */
 .tile_flip > li > .back {
-  grid-column: 1 / -1;
-  grid-row: 1;
   transform: rotateY(-180deg);
 }
 
