@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(var(--tile-size), 1fr));
   grid-auto-rows: minmax(var(--tile-size), 1fr);
-  grid-gap: 5px;
+  grid-gap: 10px;
   margin-block-start: 0;
   margin-block-end: 0;
   padding-inline-start: 0;
@@ -10,17 +10,22 @@
 
 .tile > li {
   position: relative;
-  background-color: #dadada;  
+  outline: 1px solid #dadada; /* рамка */
   height: 0;
   padding-bottom: 100%; /* делаем квадрат */
   box-sizing: border-box;
-  cursor: pointer;
   list-style-type: none;
-  z-index: 1;
+  cursor: pointer;
+  box-sizing: border-box;
 }
 
+/* для элементов, содержащих ссылку и текст */
 .tile > li > div {
-  display: grid;
+  position: absolute;
+  top: 0;  
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 
 /* <a> и <div> для двух случаев */
@@ -37,21 +42,17 @@
   line-height: var(--tile-size);
   font-size: 1.5em;
   align-self: center;
-  z-index: 2;
+  background: #eee;
+}
+
+.tile a:hover {
+  background: wheat;
 }
 
 .tile > li > div > p {
   position: absolute;
-  top: 50%;
+  top: 55%;
   right: 0;
   left: 0;
   text-align: center;
-  /*overflow: hidden;*/
-  /*white-space: nowrap;*/
-  /*text-overflow: ellipsis;*/
-}
-
-/* при наведении на <li> */
-.tile > li:hover {
-  background-color: wheat;
 }
