@@ -9,7 +9,7 @@ switch (true) {
 	box2.id = "box-2";
 	box3.id = "box-3";
 	Split(['#box-1', '#box-2', '#box-3'], {
-		sizes: [320, 768, 590],
+		sizes: [320, 768, 490],
 		gutterSize: 2,
 		elementStyle: function (dimension, size, gutterSize) {return {'width': 'calc(' + size + 'px - ' + gutterSize + 'px + 1px)',}},
 		gutterStyle: function (dimension, gutterSize) {return {'width': gutterSize + 'px',}}
