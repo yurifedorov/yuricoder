@@ -1,36 +1,19 @@
-.tile_flip > li > div {
+.tile_flip div {
   transition: all .5s;
   backface-visibility: hidden; /* скрывает задний текст */
 }
 
-/* контейнер .front */
-.tile_flip > li > .front {
-  background: lightblue;
-}
-
 /* контейнер .back */
-.tile_flip > li > .back {
+.tile_flip .back {
   display: grid;
   transform: rotateY(-180deg);
 }
 
-.tile_flip > li:hover > .front {
+.tile_flip li:hover > .front {
   transform: rotateY(180deg);
 }
 
-.tile_flip > li:hover > .back {
+.tile_flip li:hover > .back {
   transform: rotateX(0deg);
   background: var(--backside-color);
-}
-
-.tile_flip .back > p {
-  position: static;
-  padding: 0 10px;
-  align-self: end;
-}
-
-.tile_flip .back > button {
-  align-self: start;
-  justify-self: center;
-  padding: 5px 10px;
 }

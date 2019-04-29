@@ -8,19 +8,22 @@
   padding-inline-start: 0;
 }
 
-.tile > li {
+.tile li {
+  display: grid;
   position: relative;
   outline: 1px solid #dadada; /* рамка */
-  height: 0;
-  padding-bottom: 100%; /* делаем квадрат */
+  height: 0; /* для квадратной формы */
+  padding-bottom: 100%; /* для квадратной формы */
   box-sizing: border-box;
   list-style-type: none;
   cursor: pointer;
   box-sizing: border-box;
+  background: #eee;
 }
 
-/* для элементов, содержащих ссылку и текст */
-.tile > li > div {
+/* контейнер, содержащий ссылку и текст */
+.tile div {
+  display: grid;
   position: absolute;
   top: 0;  
   right: 0;
@@ -28,10 +31,7 @@
   left: 0;
 }
 
-/* <a> и <div> для двух случаев */
-/* <a> когда ребенок <li> только ссылка */
-/* <div> когда ребенок <li> это контейнер, который включает несколько элементов */
-.tile > li a {
+.tile a {
   position: absolute;
   top: 0;  
   right: 0;
@@ -42,17 +42,23 @@
   line-height: var(--tile-size);
   font-size: 1.5em;
   align-self: center;
-  background: #eee;
+  z-index: 99;
 }
 
-.tile a:hover {
-  background: wheat;
+.tile li:hover {
+  outline: 1px solid black;
 }
 
-.tile > li > div > p {
-  position: absolute;
-  top: 55%;
-  right: 0;
-  left: 0;
+.tile p {
+  padding: 0 10px 20px 10px;
   text-align: center;
+  align-self: end;
+}
+
+.tile button {
+  justify-self: center;
+  align-self: end;
+  height: 30px;
+  padding: 5px 10px;
+  margin-bottom: 20px;
 }
