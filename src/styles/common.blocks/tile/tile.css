@@ -40,6 +40,7 @@
   left: 0;
   text-decoration: none;
   align-self: end;
+  line-height: var(--tile-size);
   text-align: center;
   font-size: 1.5em;
   z-index: 99;
