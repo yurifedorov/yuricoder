@@ -161,6 +161,42 @@
     ]
   }],
 
+  "arithmetic_operators": [{
+    "name": "+",
+    "description": "сложение",
+    "link": "addition.html"
+  }, {
+    "name": "-",
+    "description": "вычитание",
+    "link": "subtraction.html"
+  }, {
+    "name": "/",
+    "description": "деление",
+    "link": "division.html"
+  }, {
+    "name": "*",
+    "description": "умножение",
+    "link": "multiplication.html"
+  }, {
+    "name": "%",
+    "description": "остаток от деления",
+    "link": "remainder.html"
+  }, {
+    "name": "**",
+    "description": "возведение в степень",
+    "link": "exponentiation.html"
+  }],
+
+  "increment_and_decrement": [{
+    "name": "++",
+    "description": "инкремент",
+    "link": "increment.html"
+  }, {
+    "name": "--",
+    "description": "декремент",
+    "link": "decrement.html"
+  }],
+
   "nunjucks": [{
     "category": "Шаблоны",
     "subcategories": [
