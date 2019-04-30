@@ -27,7 +27,7 @@
       {% for item in arithmetic_operators %}
       <li>
         <div>
-          <a href="{{item.link}}">{{item.name}}</a>
+          <a href="{{item.link}}"><span>{{item.name}}</span></a>
           <p>{{item.description}}</p>
         </div>
       </li>
@@ -41,7 +41,91 @@
       {% for item in increment_and_decrement %}
       <li>
         <div>
-          <a href="{{item.link}}">{{item.name}}</a>
+          <a href="{{item.link}}"><span>{{item.name}}</span></a>
+          <p>{{item.description}}</p>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <section>
+    <h2>Унарные операторы</h2>
+    <ul class="tile">
+      {% for item in unary_operators %}
+      <li>
+        <div>
+          <a href="{{item.link}}"><span>{{item.name}}</span></a>
+          <p>{{item.description}}</p>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <section>
+    <h2>Операторы сравнения</h2>
+    <ul class="tile">
+      {% for item in comparison_operators %}
+      <li>
+        <div>
+          <a href="{{item.link}}"><span>{{item.name}}</span></a>
+          <p>{{item.description}}</p>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <section>
+    <h2>Операторы равенства</h2>
+    <ul class="tile">
+      {% for item in equality_operators %}
+      <li>
+        <div>
+          <a href="{{item.link}}"><span>{{item.name}}</span></a>
+          <p>{{item.description}}</p>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <section>
+    <h2>Побитовые операторы</h2>
+    <ul class="tile">
+      {% for item in bitwise_operators %}
+      <li>
+        <div>
+          <a href="{{item.link}}"><span>{{item.name}}</span></a>
+          <p>{{item.description}}</p>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <section>
+    <h2>Логические операторы</h2>
+    <ul class="tile">
+      {% for item in logical_operators %}
+      <li>
+        <div>
+          <a href="{{item.link}}"><span>{{item.name}}</span></a>
+          <p>{{item.description}}</p>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <section>
+    <h2>Операторы присваивания</h2>
+    <ul class="tile">
+      {% for item in assignment_operators %}
+      <li>
+        <div>
+          <a href="{{item.link}}"><span>{{item.name}}</span></a>
           <p>{{item.description}}</p>
         </div>
       </li>
@@ -53,35 +137,6 @@
   <h3>Исходники</h3>
 
   <ul name="javascript-operators">
-    <li>&#10004; <a href="unary-plus.html">унарный плюс</a><br><small> [ +A ] унарные операторы</small></li>
-    <li>&#10004; <a href="unary-negation.html">унарный минус</a><br><small> [ -A ] унарные операторы</small></li>
-    <li>&#10004; <a href="logical_not.html">логическое НЕ</a><br><small> [ ! ] унарные операторы</small></li>
-    <li>&#10004; <a href="greater_than.html">больше</a><br><small> [ &gt; ] операторы сравнения</small></li>
-    <li>&#10004; <a href="less_than.html">меньше</a><br><small>[ &lt; ] операторы сравнения</small></li>
-    <li>&#10004; <a href="greater_than_or_equal.html">больше или равно</a><br><small> [ &gt;= ] операторы сравнения</small></li>
-    <li>&#10004; <a href="less_than_or_equal.html">меньше или равно</a><br><small> [ &lt;= ] операторы сравнения</small></li>
-    <li>&#10004; <a href="equality.html">равно</a><br><small> [ == ] операторы равенства</small></li>
-    <li>&#10004; <a href="inequality.html">не равно</a><br><small> [ != ] операторы равенства</small></li>
-    <li>&#10004; <a href="identity.html">строго равно</a><br><small> [ === ] операторы равенства</small></li>
-    <li>&#10004; <a href="nonidentity.html">строго не равно</a><br><small> [ !== ] операторы равенства</small></li>
-    <li>- <a href="bitwise_and.html">побитовое И</a><br><small> [ a &amp; b ] побитовые операторы</small></li>
-    <li>- <a href="bitwise_or.html">побитовое ИЛИ</a><br><small> [ a | b ] побитовые операторы</small></li>
-    <li>- <a href="bitwise_xor.html">побитовое исключающее ИЛИ</a><br><small> [ a ^ b ] побитовые операторы</small></li>
-    <li>&#10004; <a href="logical_and.html">логическое И</a><br><small> [ a &amp;&amp;  b ] логические операторы</small></li>
-    <li>&#10004; <a href="logical_or.html">логическое ИЛИ</a><br><small> [ a || b ] логические операторы</small></li>
-    <li>&#10004; <a href="conditional_operator.html">условный (тернарный) оператор</a><br><small> [ условие ? выражение1 : выражение2 ] условные операторы</small></li>
-    <li>&#10004; <a href="assignment.html">присваивание</a><br><small> [ = ] операторы присваивания</small></li>
-    <li>&#10004; <a href="multiplication_assignment.html">присваивание с умножением</a><br><small> [ *= ] операторы присваивания</small></li>
-    <li>&#10004; <a href="division_assignment.html">присваивание с делением</a><br><small> [ /= ] операторы присваивания</small></li>
-    <li>&#10004; <a href="remainder_assignment.html">присваивание с взятием остатка от деления</a><br><small> [ %= ] операторы присваивания</small></li>
-    <li>&#10004; <a href="addition_assignment.html">присваивание со сложением</a><br><small> [ += ] операторы присваивания</small></li>
-    <li>&#10004; <a href="subtraction_assignment.html">присваивание с вычитанием</a><br><small> [ -= ] операторы присваивания</small></li>
-    <li>- <a href="left_shift_assignment.html">присваивание со сдвигом влево</a><br><small> [ &lt;&lt;= ] операторы присваивания</small></li>
-    <li>- <a href="right_shift_assignment.html">присваивание со знаковым сдвигом вправо</a><br><small> [ >>= ] операторы присваивания</small></li>
-    <li>- <a href="unsigned_right_shift_assignment.html">присваивание с беззнаковым сдвигом вправо</a><br><small> [ >>>= ] операторы присваивания</small></li>
-    <li>- <a href="bitwise_and_assignment.html">присваивание с побитовым И</a><br><small> [ &amp;= ] операторы присваивания</small></li>
-    <li>- <a href="bitwise_xor_assignment.html">присваивание с побитовым ИСКЛЮЧАЮЩИМ ИЛИ</a><br><small> [ ^= ] операторы присваивания</small></li>
-    <li>- <a href="bitwise_or_assignment.html">присваивание с побитовым ИЛИ</a><br><small> [ |= ] операторы присваивания</small></li>
     <li>&#10004; <a href="comma.html">запятая</a><br><small> [ , ]</small></li>
     <li>&#10004; <a href="operator-precedence.html">приоритет операторов</a></li>
   </ul>
