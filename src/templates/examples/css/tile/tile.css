@@ -24,6 +24,7 @@
 /* контейнер, содержащий ссылку и текст */
 .tile div {
   display: grid;
+  grid-template-rows: 40% 60%;
   position: absolute;
   top: 0;  
   right: 0;
@@ -33,16 +34,25 @@
 
 .tile a {
   position: absolute;
-  top: 0;  
+  top: 0;
   right: 0;
   bottom: 0;
   left: 0;
   text-decoration: none;
-  text-align: center;
+  align-self: end;
   line-height: var(--tile-size);
+  text-align: center;
   font-size: 1.5em;
-  align-self: center;
   z-index: 99;
+}
+
+.tile a > span {
+  display: inline-block;
+  width: 100%;
+  line-height: 40px;
+  border: 2px solid #eee;
+  background: white;
+  box-sizing: border-box;
 }
 
 .tile li:hover {
@@ -50,9 +60,12 @@
 }
 
 .tile p {
-  padding: 0 10px 20px 10px;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 5px;
+  grid-row: 2;
   text-align: center;
-  align-self: end;
+  font-size: 13px;
 }
 
 .tile button {
