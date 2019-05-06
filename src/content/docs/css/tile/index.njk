@@ -45,18 +45,67 @@
     </li>
   </ul>
 
-  <h2>.tile (default)</h2>
-  
-  <p>Плитка - это по сути список элементов, поэтому я решил сделать его на основе <b>&lt;ul&gt;</b> и <b>&lt;li&gt;</b> (отсюда появилась необходимость сброса стандартных стилей для <b>ul</b>).</p>
+  <h2>Процесс верстки</h2>
+  <section>
+    <h3>Контейнер</h3>
+    <p>Плитка по сути является списком элементов квадратной формы (другие формы тут не рассматриваю).</p>
+    <p>В качестве контейнера я использовал тег <b>&lt;ul&gt;</b>, в котором теги <b>&lt;li&gt;</b> являются квадратными плитками.</p>
+    <ol>
+      <li>для <b>&lt;ul&gt;</b> задаю класс <b>.tile</b></li>
+      <li>сбрасываю дефолтные стили для &lt;ul&gt;</li>
+      <li>делаю грид-контейнер</li>
+    </ol>
+    <p>На этом все...</p>
+    {# Примемер контейнера для блока "плитка" #}
+    {% set example_id = 'tile-container' %}
+    {% set numeration = false %}
+    {% set split      = false %}
+    {% set html       = true %}
+    {% set njk        = false %}
+    {% set css        = true %}
+    {% set js         = false %}
+    {% include codeExample %}
+  </section>
 
-  {% set example_id = 'tile' %}
+  <section>
+    <h3>Элементы</h3>
+    <p>Здесь я не стал придерживаться правил БЭМ и использовал селектор <b>.tile > li</b> (вместо .tile__item). Пунктов (плиток) может быть много, просто не хотелось 'раздувать' html код этим классом.</p>
+    <p>Для того чтобы <b>&lt;li&gt;</b> принял форму квадрата нужны только эти свойства:</p>
+    <ul>
+      <li>height: 0;</li>
+      <li>padding-bottom: 100%;</li>
+    </ul>
+    <p>Чтобы все потомки позиционировались относительно своего &lt;li&gt; контейнера добавлю:</p>
+    <ul>
+      <li>position: relative;</li>
+    </ul>
+    <p>Все остальное это визуальная составляющая.</p>
+    {# Примемер элемента блока "плитка" #}
+    {% set example_id = 'tile__item' %}
+    {% set numeration = false %}
+    {% set split      = false %}
+    {% set html       = true %}
+    {% set njk        = false %}
+    {% set css        = true %}
+    {% set js         = false %}
+    {% set demo       = 'tile__item-demo.njk' %}
+    {% include codeExample %}
+  </section>
+
+  <section>
+    <h3>Когда весь элемент является ссылкой</h3>
+    <p>Чтобы при клике в любую область <b>&lt;li&gt;</b> перейти по ссылке, нужно растянуть <b>&lt;a&gt;</b> на всю площадь.</p>
+    <p>Вначале хотел использовать селектор <b>.tile a</b>, но в таком случае абсолютно все ссылки растянутся.</p>
+    <p>Решил сохранить возможность добавления разных типов ссылок в рамках одно контейнера <b>.tile</b> и добавил к нужным ссылкам класс <b>.link_stretch</b></p>
+  </section>
+  {% set example_id = 'full-size-link' %}
   {% set numeration = false %}
   {% set split      = true %}
   {% set html       = true %}
   {% set njk        = false %}
   {% set css        = true %}
   {% set js         = false %}
-  {% set demo       = 'tile-demo.njk' %}
+  {% set demo       = 'full-size-link-demo.njk' %}
   {% include codeExample %}
 
 {% endblock %}

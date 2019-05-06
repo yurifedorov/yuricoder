@@ -13,14 +13,13 @@
   {# HTML #}
   {# вывести html если html=true  #}
   {% if html %}
-    {% if demo %}{# вывести кнопку HTML, только если demo=true (иначе в простых примерах она тоже появится) #}
       {# Чтобы не засорять основной style.css, селекторы :checked задаю инлайново #}
       {# Они нужны только внутри блока и больше нигде! #}
       {# выводить style только если demo=true #}
       <style>input[name=button]:checked ~ #{{example_id}}-html-code {z-index: 2;}</style>
       <input type="radio" name="button" id="{{example_id}}-html-checkbox">
       <label for="{{example_id}}-html-checkbox" onclick>HTML</label>
-    {% endif %}
+    
     <div id="{{example_id}}-html-code" class="code">
       {# вывести КОД html если html=true  #}
       {% if html %}
@@ -40,14 +39,12 @@
   {# NJK #}
   {# вывести njk если njk=true  #}
   {% if njk %}
-    {% if demo %}{# вывести кнопку NJK, только если demo=true (иначе в простых примерах она тоже появится) #}
       {# Чтобы не засорять основной style.css, селекторы :checked задаю инлайново #}
       {# Они нужны только внутри блока и больше нигде! #}
       {# выводить style только если demo=true #}
       <style>[id='{{example_id}}-njk-checkbox']:checked ~ #{{example_id}}-njk-code {z-index: 2;}</style>
       <input type="radio" name="button" id="{{example_id}}-njk-checkbox">
       <label for="{{example_id}}-njk-checkbox" onclick>NJK</label>
-    {% endif %}
     <div id="{{example_id}}-njk-code" class="code">
       {# вывести КОД njk если njk=true #}
       {% if njk %}
@@ -65,14 +62,12 @@
   {# CSS #}
   {# вывести КОД css если css=true  #}
   {% if css %}
-    {% if demo %}{# вывести кнопку CSS, только если demo=true (иначе в простых примерах она тоже появится) #}
       {# Чтобы не засорять основной style.css, селекторы :checked задаю инлайново #}
       {# Они нужны только внутри блока и больше нигде! #}
       {# выводить style только если demo=true #}
       <style>[id='{{example_id}}-css-checkbox']:checked ~ #{{example_id}}-css-code {z-index: 2;}</style>
       <input type="radio" name="button" id="{{example_id}}-css-checkbox">
       <label for="{{example_id}}-css-checkbox" onclick>CSS</label>
-    {% endif %}
     <div id="{{example_id}}-css-code" class="code">
       {# вывести КОД css если css=true #}
       {% if css %}
@@ -92,14 +87,12 @@
   {# JS #}
   {# вывести js если js=true  #}
   {% if js %}
-    {% if demo %}{# вывести кнопку JS, только если demo=true (иначе в простых примерах она тоже появится) #}
       {# Чтобы не засорять основной style.css, селекторы :checked задаю инлайново #}
       {# Они нужны только внутри блока и больше нигде! #}
       {# выводить style только если demo=true #}
       <style>[id='{{example_id}}-js-checkbox']:checked ~ #{{example_id}}-js-code {z-index: 2;}</style>
       <input type="radio" name="button" id="{{example_id}}-js-checkbox">
       <label for="{{example_id}}-js-checkbox" class="js-button" onclick>JS</label>
-    {% endif %}
     <div id="{{example_id}}-js-code" class="code">
       {# вывести КОД js если js=true #}
       {% if js %}

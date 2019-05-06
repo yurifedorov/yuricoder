@@ -1,0 +1,8 @@
+.tile > li {
+  position: relative;
+  height: 0;
+  padding-bottom: 100%;
+  cursor: pointer;
+  background: #eee;
+  outline: 1px solid #dadada;
+}
