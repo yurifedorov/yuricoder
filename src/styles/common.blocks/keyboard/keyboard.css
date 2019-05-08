@@ -1,0 +1,11 @@
+/* я использую это для выделения в тексте различной информации */
+kbd {
+  background: #eee;
+  border-radius: 3px;
+  padding: 5px;
+  line-height: 2.5em;
+ }
+
+ kbd a {
+   text-decoration: none;
+ }

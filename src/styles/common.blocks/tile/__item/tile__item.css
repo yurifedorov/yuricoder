@@ -1,9 +1,21 @@
 .tile > li {
   position: relative;
+  display: grid;
   height: 0;
   padding-bottom: 100%;
   background: #eee;
   outline: 1px solid #dadada;
+}
+
+.tile > li > p,
+.tile > li > a {
+  margin: 0;
+  position: absolute;
+  top: calc(50% - 19px);
+  left: 0;
+  right: 0;
+  text-align: center;
+  background: red;
 }
 
 /* контейнер, содержащий ссылку и текст */
