@@ -94,7 +94,7 @@
       <li><kbd>padding-bottom: 100%;</kbd> (для придания квадратной формы)</li>
       <li><kbd><a href="#tile">grid-template-columns</a></kbd> (для компановки элементов)</li>
     </ol>
-    <p>Проблему решил, с помощью <kbd>display: grid;</kbd></p>
+    <p>Добавив <kbd>display: grid;</kbd> вместе с <kbd>align-items: center;</kbd> проблему решить не получися, из-за <kbd>height: 0;</kbd> (который тоже нельзя трогать).</p>
     {# Примемер элемента блока "плитка" #}
     {% set example_id = 'tile__item' %}
     {% set numeration = false %}
