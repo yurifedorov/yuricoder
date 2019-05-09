@@ -1,7 +1,7 @@
 .tile > li {
   position: relative;
-  display: grid;
-  align-items: center;
+  display: flex;
+  justify-content: center;
   height: 0;
   padding-bottom: 100%;
   background: #eee;
@@ -11,8 +11,9 @@
 .tile > li > p,
 .tile > li > a {
   margin: 0;
-  text-align: center;
-  background: red;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
 }
 
 /* контейнер, содержащий ссылку и текст */

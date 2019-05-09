@@ -1,8 +1,9 @@
 .tile > li {
   position: relative;
+  display: flex;
+  justify-content: center;
   height: 0;
   padding-bottom: 100%;
-  cursor: pointer;
   background: #eee;
   outline: 1px solid #dadada;
 }
@@ -11,8 +12,6 @@
 .tile > li > a {
   margin: 0;
   position: absolute;
-  top: calc(50% - 19px);
-  left: 0;
-  right: 0;
-  text-align: center;
+  top: 50%;
+  transform: translate(0, -50%);
 }
