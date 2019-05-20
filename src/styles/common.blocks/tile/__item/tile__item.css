@@ -14,6 +14,7 @@
   position: absolute;
   top: 50%;
   transform: translate(0, -50%);
+  background: red;
 }
 
 /* контейнер, содержащий ссылку и текст */
@@ -28,10 +29,11 @@
 }
 
 /* для ссылок на всю ширину элемента */
-.link_stretch {
+.tile > li > .link_stretch {
   position: absolute;
-  top: 0;
+  transform: translate(0, 0); /* добавил это !!!!!!!!!!!!!!!!!! */
   right: 0;
+  top: 0;
   bottom: 0;
   left: 0;
   padding: 10px;
