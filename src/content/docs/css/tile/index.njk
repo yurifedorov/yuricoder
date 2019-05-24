@@ -118,6 +118,10 @@
     <ul>
       <li><kbd>margin: 0</kbd> уберет дефолтный отступ у <b>&lt;p&gt;</b></li>
       <li><kbd>top: 50%</kbd> поместит элемент посередине контейнера.</li>
+    </ul>
+    <p>Тогда верхняя граница текстового блока будет строго по центру, но при этом сам текст будет смещен ниже.</p>
+    <p>Исправляется легко: <kbd>transform</kbd> может приподнять текст на 50% от своей высоты вот так:</p>
+    <ul>
       <li><kbd>transform: translate(0, -50%)</kbd> переместит элемент вверх на половину своей собственной высоты.</li>
     </ul>
   </section>
@@ -125,18 +129,25 @@
   <section>
     <h3>Когда весь элемент является ссылкой</h3>
     <p>Сделать ссылкой непосредственно элемент-плитку <b>&lt;li&gt;</b> можно путем растягивания <b>&lt;a&gt;</b> на всю площадь родителя.</p>
+    {% set example_id = 'full-size-link' %}
+    {% set numeration = false %}
+    {% set split      = false %}
+    {% set html       = true %}
+    {% set njk        = false %}
+    {% set css        = true %}
+    {% set js         = false %}
+    {% set demo       = 'full-size-link-demo.njk' %}
+    {% include codeExample %}
     <p>Вначале хотел использовать селектор <kbd>.tile a</kbd>, но в таком случае абсолютно все ссылки растянутся.</p>
-    <p>Чтобы сохранить возможность добавления, в рамках одно контейнера <kbd>.tile</kbd>, разных видов ссылок я добавил к &lt;a&gt; класс <kbd>.link_stretch</kbd>.</p>
+    <p>Чтобы сохранить возможность добавления, в рамках одно контейнера <kbd>.tile</kbd>, разных видов ссылок я добавил к &lt;a&gt; класс <kbd>.link_stretch</kbd> со следующими свойствами:</p>
+    <ul>
+      <li><kbd>transform: translate(0, 0)</kbd> отменяет вертикальное смещение обычных ссылок <kbd>translate(0, 50%)</kbd> так как теперь ссылка должна занимать всю площадь <kbd>&lt;li&gt;</kbd></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
   </section>
-  {% set example_id = 'full-size-link' %}
-  {% set numeration = false %}
-  {% set split      = true %}
-  {% set html       = true %}
-  {% set njk        = false %}
-  {% set css        = true %}
-  {% set js         = false %}
-  {% set demo       = 'full-size-link-demo.njk' %}
-  {% include codeExample %}
+
 
 {% endblock %}
 

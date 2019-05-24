@@ -30,8 +30,7 @@
 
 /* для ссылок на всю ширину элемента */
 .tile > li > .link_stretch {
-  position: absolute;
-  transform: translate(0, 0); /* добавил это !!!!!!!!!!!!!!!!!! */
+  transform: translate(0, 0);
   right: 0;
   top: 0;
   bottom: 0;
