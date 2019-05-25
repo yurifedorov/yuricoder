@@ -8,10 +8,10 @@
   outline: 1px solid #dadada;
 }
 
-.tile > li > p,
 .tile > li > a {
   margin: 0;
   position: absolute;
   top: 50%;
   transform: translate(0, -50%);
+  text-align: center;
 }
