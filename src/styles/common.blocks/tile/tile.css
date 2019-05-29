@@ -11,14 +11,19 @@
 
 /* tire-fitting */
 .tile[name='tire-fitting'] {
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  margin-block-end: 100px;
+  grid-template-columns: repeat(3, 100px);
+  align-self: center;
 }
+
+.MD .tile[name='tire-fitting'] {
+  grid-template-columns: repeat(3, 250px);
+}
+
 .tile[name='tire-fitting'] > li {
   background: rgba(0, 0, 0, 0.5)
 }
 
 .tile[name='tire-fitting'] > li > a {
   color: white;
-  font-size: 30px;
+  font-size: 2em;
 }
