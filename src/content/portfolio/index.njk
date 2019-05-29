@@ -15,4 +15,12 @@
   <h1>{{ title | capitalize }}</h1>
   <p>Мои веб-проекты</p>
 
+  <ul class="tile">
+    {% for category in portfolio %}
+    <li>
+      <a href="{{category.link}}" class="link_stretch">{{category.name}}</a>
+    </li>
+    {% endfor %}
+  </ul>
+
 {% endblock %}
