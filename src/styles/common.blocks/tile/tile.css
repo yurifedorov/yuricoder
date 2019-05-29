@@ -7,3 +7,11 @@
   padding-inline-start: 0; /* reset */
   list-style-type: none; /* reset */
 }
+
+.tile[name='tire-fitting'] {
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  font-size: 30px;
+}
+.tile[name='tire-fitting'] > li {
+  
+}

@@ -12,7 +12,14 @@
 
 {% block main %}
 
-  <h1>{{ title | capitalize }}</h1>
-  <p>text</p>
+  <section class="banner" name="tire-fitting">
+    <h1>{{ title | capitalize }}</h1>
+    <p><span>Емельянова 10</span></p>
+    <ul class="tile" name="tire-fitting">
+      <li><a href="service" class="link_stretch">Услуги</a></li>
+      <li><a href="catalog" class="link_stretch">Каталог шин</a></li>
+      <li><a href="storage" class="link_stretch">Хранение</a></li>
+  </ul>
+  </section>
 
 {% endblock %}

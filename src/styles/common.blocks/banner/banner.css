@@ -75,3 +75,8 @@
   background-image: url('img/australia-bay_large.jpg');
   height: 60vh;
 }
+
+.banner[name='tire-fitting'] {
+  background-image: url('img/tire-fitting/shinka_large.jpg');
+  height: 80vh;
+}
