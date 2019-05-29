@@ -8,10 +8,17 @@
   list-style-type: none; /* reset */
 }
 
+
+/* tire-fitting */
 .tile[name='tire-fitting'] {
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  font-size: 30px;
+  margin-block-end: 100px;
 }
 .tile[name='tire-fitting'] > li {
-  
+  background: rgba(0, 0, 0, 0.5)
+}
+
+.tile[name='tire-fitting'] > li > a {
+  color: white;
+  font-size: 30px;
 }

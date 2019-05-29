@@ -29,7 +29,7 @@
 
 /* ссылка */
 .tile > li > a {
-  background: yellow;
+  /*background: yellow;*/
 }
 
 /* ссылки на всю ширину элемента */
