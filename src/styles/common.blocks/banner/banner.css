@@ -75,22 +75,3 @@
   background-image: url('img/australia-bay_large.jpg');
   height: 60vh;
 }
-
-.banner[name='tire-fitting'] {
-  grid-auto-rows: 30% 30px auto;
-  background-image: url('img/tire-fitting/shinka_large.jpg');
-  height: 100vh;
-  justify-items: center;
-}
-
-.banner[name='tire-fitting'] h1 {
- text-transform: uppercase;
- font-size: 5em;
-}
-
-.banner[name='tire-fitting'] span {
-  display: block;
-  font-family: 'Caveat', cursive;
-  font-size: 4em;
-  transform: rotate(-7deg);
-}
