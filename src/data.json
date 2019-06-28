@@ -102,7 +102,7 @@
     ]
   }],
 
-  "javascript": [{
+  "javascript_docs": [{
     "category": "Основы JavaScript",
     "subcategories": [
       {
@@ -132,6 +132,56 @@
       {
         "name": "преобразование типов",
         "link": "types-conversion.html"
+      }
+    ]
+  }, {
+    "category": "Пункт 2",
+    "subcategories": [
+      {
+        "name": "Подкатегория №1",
+        "link": "#"
+      },
+      {
+        "name": "Подкатегория №2",
+        "link": "#"
+      }
+    ]
+  }, {
+    "category": "Пункт 3",
+    "subcategories": [
+      {
+        "name": "Подкатегория №1",
+        "link": "#"
+      },
+      {
+        "name": "Подкатегория №2",
+        "link": "#"
+      }
+    ]
+  }, {
+    "category": "Пункт 4",
+    "subcategories": [
+      {
+        "name": "Подкатегория №1",
+        "link": "#"
+      },
+      {
+        "name": "Подкатегория №2",
+        "link": "#"
+      }
+    ]
+  }],
+
+  "javascript_apps": [{
+    "category": "Фильтры",
+    "subcategories": [
+      {
+        "name": "простейший фильтр",
+        "link": "apps/filters/simplest-filter.html"
+      },
+      {
+        "name": "Подкатегория №2",
+        "link": "#"
       }
     ]
   }, {

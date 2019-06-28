@@ -1,0 +1,54 @@
+{% extends "base.njk" %}
+
+{# variables #}
+{% set title           = 'simplest-filter' %}
+{% set category        = 'docs' %}
+{% set subcategory     = 'javascript' %}
+{% set segment         = 'apps' %}
+{% set subsegment      = 'filters' %}
+
+{# путь к примерам code-example-beta [НЕ УДАЛЯТЬ] #}
+{% set example_dir    = 'examples/javascript/apps/filters/' %}
+
+{# ===================================== #}
+
+{% block head %}
+  <title>Простейший фильтр на JavaScript</title>
+  <meta name="description" content="List of all javascript operators with usage examples." />
+  <link rel="stylesheet" href="{{prism_css}}">
+  <script src="{{prism_js}}" async></script>
+{% endblock %}
+
+{% block aside_top %}{% include aside_top %}{% endblock %}
+{% block aside_left %}{% include aside_left %}{% endblock %}
+
+{% block main %}
+
+  <h1>Простейший фильтр на JavaScript</h1>
+  <p>Задача следующая: разобраться как работает пройстейший фильтр, написанный на чистом JS.</p>
+  <p>Нашел на <a href="https://habr.com/ru/post/342922/">хабре</a> полезную статью, где описывается процесс создания и представлен рабочий пример:</p>
+  
+  {% set example_id = 'simplest_filter' %}
+  {% set numeration = true %}
+  {% set split      = false %}
+  {% set html       = true %}
+  {% set njk        = false %}
+  {% set css        = false %}
+  {% set js         = true %}
+  {% set demo       = 'simplest_filter-demo.njk' %}
+  {% include codeExample %}
+
+  <p>Особенно здесь мне нравится, то что результаты рендерятся с помощью функции JS. Поэтому HTML максимально короткий (только <b>input</b> и пустой блок списка).</p>
+
+  <p>Вот эта функция:</p>
+  {% set example_id = 'simplest_filter_render_function' %}
+  {% set numeration = true %}
+  {% set split      = false %}
+  {% set html       = false %}
+  {% set njk        = false %}
+  {% set css        = false %}
+  {% set js         = true %}
+  {% set demo       = false %}
+  {% include codeExample %}
+
+{% endblock %}

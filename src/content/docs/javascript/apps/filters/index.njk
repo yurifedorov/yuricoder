@@ -1,0 +1,25 @@
+{% extends "base.njk" %}
+
+{# variables #}
+{% set title           = 'filters' %}
+{% set category        = 'docs' %}
+{% set subcategory     = 'javascript' %}
+{% set segment         = 'apps' %}
+{% set subsegment_del  = 'delete' %}
+
+{# ===================================== #}
+
+{% block head %}
+  <title>Фильтры написанные на JavaScript</title>
+  <meta name="description" content="List of all javascript operators with usage examples." />
+{% endblock %}
+
+{% block aside_top %}{% include aside_top %}{% endblock %}
+{% block aside_left %}{% include aside_left %}{% endblock %}
+
+{% block main %}
+
+  <h1>Фильтры написанные на JavaScript</h1>
+  <p>Общий список всех фильтров, написанных на JS</p>
+
+{% endblock %}
