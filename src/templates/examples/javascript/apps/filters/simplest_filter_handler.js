@@ -1,0 +1,1 @@
+document.getElementById('search').addEventListener('input',e=>renderList(filter(e.target.value,list),result))

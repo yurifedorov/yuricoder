@@ -42,7 +42,7 @@
   <h2>Подробный разбор JS кода</h2>
   <p>Радует тот факт, что результаты генерируются в JS коде (функция <b>renderList</b>), от этого HTML максимально короткий (только <b>input</b> и пустой блок списка).</p>
 
-  <p>Вот эта функция:</p>
+  <h3>Функция для отрисовки списка</h3>
   {% set example_id = 'simplest_filter_render_function' %}
   {% set numeration = true %}
   {% set split      = false %}
@@ -55,24 +55,24 @@
 
   <table>
     <tr>
-      <td>строка</td>
-      <td>описание</td>
+      <td><b>строка</b></td>
+      <td><b>описание</b></td>
     </tr>
     <tr>
       <td>1</td>
-      <td>Функция принимает два аргумента: массив <b>_list</b> с элементами и элемент DOM-дерева, в который нужно нарисовать список (если первый аргумент не задан, то мы говорим функции, что это пустой массив).</td>
+      <td>функция принимает два аргумента: массив <b>_list</b> с элементами и элемент DOM-дерева, в который нужно нарисовать список (если первый аргумент не задан, то мы говорим функции, что это пустой массив).</td>
     </tr>
     <tr>
       <td>2</td>
-      <td>Рахобраться что за <b>el.innerHTML='';</b> ??????</td>
+      <td>очищаем родительский элемент перед рендером, добавляем строку <b>el.innerHTML=' ';</b></td>
     </tr>
     <tr>
       <td>3</td>
-      <td>Метод <b>forEach()</b> выполняет указанную функцию один раз для каждого элемента в массиве. <small><a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach">подробнее на MDN</a></small></td>
+      <td>метод <b>forEach()</b> выполняет указанную функцию один раз для каждого элемента в массиве. <small><a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach">подробнее на MDN</a></small></td>
     </tr>
     <tr>
       <td>4</td>
-      <td>Директива <b>let</b> объявляет переменную с областью видимости, ограниченной текущим блоком кода (в данном примере создаем переменную с именем <b>new_el</b>). <small><a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Statements/let">подробнее на MDN</a></small> <br>Затем создаем DOM-узел <b>document.createElement('li')</b> и присваиваиваем переменной <b>new_el</b>.</td>
+      <td>директива <b>let</b> объявляет переменную с областью видимости, ограниченной текущим блоком кода (в данном примере создаем переменную с именем <b>new_el</b>). <small><a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Statements/let">подробнее на MDN</a></small> <br>затем создаем DOM-узел <b>document.createElement('li')</b> и присваиваиваем переменной <b>new_el</b>.</td>
     </tr>
     <tr>
       <td>5</td>
@@ -84,19 +84,76 @@
     </tr>
     <tr>
       <td>7</td>
-      <td>-</td>
+      <td>закрываем цикл <b>forEach</b></td>
     </tr>
     <tr>
       <td>8</td>
-      <td>Метод <b>console.timeEnd()</b> - отобразит в консоли время (в миллисекундах), прошедшее с момента запуска таймера (<b>'test'</b> - это текстовая метка, отображаемая в консоли). <small><a href="https://developer.mozilla.org/ru/docs/Web/API/Console/time">подробнее на MDN</a></small></td>
+      <td>метод <b>console.timeEnd()</b> завершает работу таймера и отображает в консоли время (в миллисекундах), прошедшее с момента запуска таймера (<b>'test'</b> - это текстовая метка, отображаемая в консоли). <br>для запуска таймера используется метод <b>console.time('test');</b><br><small><a href="https://developer.mozilla.org/ru/docs/Web/API/Console/time">подробнее на MDN</a></small></td>
     </tr>
     <tr>
       <td>9</td>
-      <td>-</td>
+      <td>закрываем функцию <b>renderList</b></td>
     </tr>
     <tr>
   </table>
 
   <q>Нижнее подчеркивание перед именем массива <b>_list=[ ]</b> это просто общепринятое соглашение об именовании <small>(узнал тут <a href="http://www.codeharmony.ru/materials/69">9 сбивающих с толку соглашений об именовании</a>)</small></q>
+  <br>
+  <br>
+  <h3>Функция для фильтрации</h3>
+  <p>Функция на вход берет подстроку (запрос пользователя) и массив всех элементов, а на выходе выдает массив отфильтрованных элементов.</p>
+  <p>Вариант №1, который можно укоротить:</p>
+  {% set example_id = 'simplest_filter_function_filter' %}
+  {% set numeration = true %}
+  {% set split      = false %}
+  {% set html       = false %}
+  {% set njk        = false %}
+  {% set css        = false %}
+  {% set js         = true %}
+  {% set demo       = false %}
+  {% include codeExample %}
+
+  <p>Более подробно описано <a href="https://habr.com/ru/post/342922/">на хабре</a></p>
+  <table>
+    <tr>
+      <td><b>строка</b></td>
+      <td><b>описание</b></td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>заменяем <b>if</b> на тернарный оператор, вот так: <pre>(i.indexOf(val)!=-1)?result.push(i):'';</pre></td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>используя <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#.7E_.28Bitwise_NOT.29">побитовое отрицание</a> <b>~i</b> можно сделать так: <pre>(~i.indexOf(val))?result.push(i):'';</pre></td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>вместо <b>forEach</b> можно использовать метод для перебора массива <b>filter</b> (он появился в ES6) <pre>return list.filter(i=>(~i.indexOf(val)))</pre></td>
+    </tr>
+  </table>
+
+  <p>Более красивый вариант:</p>
+  {% set example_id = 'simplest_filter_function_filter_short' %}
+  {% set numeration = true %}
+  {% set split      = false %}
+  {% set html       = false %}
+  {% set njk        = false %}
+  {% set css        = false %}
+  {% set js         = true %}
+  {% set demo       = false %}
+  {% include codeExample %}
+
+  <h3>Обработчик</h3>
+  <p>Берем отфильтрованный массив и кидаем его как аргумент для рендера.</p>
+  {% set example_id = 'simplest_filter_handler' %}
+  {% set numeration = true %}
+  {% set split      = false %}
+  {% set html       = false %}
+  {% set njk        = false %}
+  {% set css        = false %}
+  {% set js         = true %}
+  {% set demo       = false %}
+  {% include codeExample %}
 
 {% endblock %}
