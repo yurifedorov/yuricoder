@@ -2,15 +2,21 @@
 
 {# variables #}
 {% set title           = 'split' %}
-{% set category        = 'справочник' %}
+{% set category        = 'docs' %}
 {% set subcategory     = 'nunjucks' %}
 {% set segment         = 'мои шаблоны' %}
 {% set subsegment_del  = 'delete' %}
+
+{# путь к примерам code-example-beta [НЕ УДАЛЯТЬ] #}
+{% set example_dir    = 'examples/nunjucks/templates/split/' %}
 
 {# <head> #}
 {% block head %}
   <title>Управление шириной блоков с помощью мыши (split)</title>
   <meta name="description" content="Блок, состоящий нескольких контейнеров, где каждый из них можно сузить/расширить." />
+  <link rel="stylesheet" href="/beta.min.css">
+  <link rel="stylesheet" href="{{prism_css}}">
+  <script src="{{prism_js}}" async></script>
 {% endblock %}
 
 {% block aside_top %}{% include aside_top %}{% endblock %}
@@ -21,5 +27,18 @@
 
   <h1>Split</h1>
   <p>Блок, состоящий нескольких контейнеров, где каждый из них можно сузить/расширить</p>
+
+  <section>
+    <h4>Split</h4>
+    {% set example_id = 'split' %}
+    {% set numeration = true %}
+    {% set split      = false %}
+    {% set html       = false %}
+    {% set njk        = true %}
+    {% set css        = true  %}
+    {% set js         = false %}
+    {% set demo       = 'split_demo.njk'  %}
+    {% include codeExample %}
+  </section>
 
 {% endblock %}

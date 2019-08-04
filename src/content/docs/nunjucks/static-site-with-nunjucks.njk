@@ -8,6 +8,9 @@
 {% set subsegment_del = 'delete' %}
 {% set path = '../' %}
 
+{# путь к примерам code-example-beta [НЕ УДАЛЯТЬ] #}
+{% set example_dir    = 'examples/nunjucks/static-site-with-nunjucks/' %}
+
 {% block head %}
   <title>{{ title | capitalize }}</title>
   <meta name="description" content="Как Nunjucks собирает веб-страницы? Пример сборки простого сайта из двух страниц с одинаковым 'хедером' и 'футером'." />
@@ -24,24 +27,42 @@
   <p>Благодаря <a href="template-inheritance.html">наследованию шаблонов</a> можно собрать неограниченное число статических страниц с в одном стиле.</p>
   <p>Ниже привожу простейший пример, где есть шаблон (base.njk) с общими частями кода и две страницы с уникальным контетом.</p>
 
-  {#
+  
   <section class="section">
     <h2>Примеры страниц и код шаблонов </h2>
     <p>Верхняя и нижняя часть формируется из base.njk, а контент для страниц "прайс лист" и "контакты" извлекается из дочерних шаблонов.</p>
-    {% set demo = 'examples/nunjucks/static-site-with-nunjucks/page1_demo.njk' %}
-    {% include codeExecuted %}
 
-    {% set title = 'page1.njk' %}
-    {% set code  = 'examples/nunjucks/static-site-with-nunjucks/page1_code.njk' %}
-    {% set code_language  = 'language-jinja2' %} 
+    <h3>base.njk</h3>
+    {% set example_id = 'base_code' %}
+    {% set numeration = true %}
+    {% set split      = false %}
+    {% set html       = false %}
+    {% set njk        = true %}
+    {% set css        = false  %}
+    {% set js         = false %}
+    {% set demo       = false  %}
     {% include codeExample %}
 
-    {% set demo = 'examples/nunjucks/static-site-with-nunjucks/page2_demo.njk' %}
-    {% include codeExecuted %}
+    <h3>page-1</h3>
+    {% set example_id = 'page1_code' %}
+    {% set numeration = true %}
+    {% set split      = false %}
+    {% set html       = false %}
+    {% set njk        = true %}
+    {% set css        = false  %}
+    {% set js         = false %}
+    {% set demo       = 'page1_demo.njk'  %}
+    {% include codeExample %}
 
-    {% set title = 'page2.njk' %}
-    {% set code  = 'examples/nunjucks/static-site-with-nunjucks/page2_code.njk' %}
-    {% set code_language  = 'language-jinja2' %} 
+    <h3>page-2</h3>
+    {% set example_id = 'page2_code' %}
+    {% set numeration = true %}
+    {% set split      = false %}
+    {% set html       = false %}
+    {% set njk        = true %}
+    {% set css        = false  %}
+    {% set js         = false %}
+    {% set demo       = 'page2_demo.njk'  %}
     {% include codeExample %}
 
   </section>
@@ -59,6 +80,5 @@
     </ol>
     <p>Как результат, мы имееи две html-страницы <b>page1.html</b> и <b>page2.html</b> (страниц может быть любое количество).</p>
   </section>
-  #}
   
 {% endblock %}
