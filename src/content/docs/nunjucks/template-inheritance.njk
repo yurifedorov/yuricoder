@@ -16,12 +16,6 @@
   <title>Наследование шаблонов в Nunjucks</title>
   <meta name="description" content="Самая сильная сторона Nunjucks - это возможность создавать шаблоны для каждого отдельно взятого компонента веб-сайта." />
   <link rel="stylesheet" href="{{prism_css}}">
-  <style>
-    main-test {
-      background: red;
-      height: 10px;
-    }
-  </style>
   <script src="{{prism_js}}" async></script>
 {% endblock %}
 
@@ -40,13 +34,13 @@
   <p>Имеет общий &lt;header&gt;, &lt;footer&gt; и некоторые данные для поисковых систем:</p>
 
     {% set example_id = 'base_code' %}
-    {% set numeration = true %}
+    {% set numeration = true  %}
     {% set split      = false %}
     {% set html       = false %}
-    {% set njk        = true %}
-    {% set css        = false  %}
+    {% set njk        = true  %}
+    {% set css        = false %}
     {% set js         = false %}
-    {% set demo       = 'base_demo.njk'  %}
+    {% set demo       = false %}
     {% include codeExample %}
 
   <p>В шаблоне <b>base.njk</b> стандартная HTML-разметка веб-страницы. В &lt;head&gt; подключены общие метаданные, favicon и css.</p>

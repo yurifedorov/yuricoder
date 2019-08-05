@@ -1,19 +1,22 @@
 {% extends "examples/nunjucks/template-inheritance/base_demo.njk" %}
 
-{% block exampleContent %}
-{#======================== Демо ========================#}
-
 {% block head %}
   <style>
-    .header-test,
-    .footer-test {
-      background: skyblue;
-      line-height: 40px;
-      padding-left: 10px;
+    .header-test {
+      background: skyblue !important;
+      height: 40px !important;
+      display: block;
+      box-sizing: border-box;
     }
     .main-test {
-      background: white;
-      padding: 20px
+      background: yellow !important;
+      min-height: 180px !important;
+      padding: 20px;
+    }
+    .footer-test {
+      background: skyblue !important;
+      height: 40px !important;
+      display: block;
     }
   </style>
 {% endblock %}
@@ -21,7 +24,4 @@
 {% block main %}
 <h1>Первая страница</h1>
 <p>Я дочерний шаблон №1</p>
-{% endblock %}
-
-{#==========================================================#}
 {% endblock %}

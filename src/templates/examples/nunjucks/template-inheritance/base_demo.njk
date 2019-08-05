@@ -1,14 +1,25 @@
-{# !!! ТОЛЬКО ДЛЯ ПРИМЕРА !!! #}
+<html lang="en" data-observe-resizes>
 
-<html lang="en">
   <head>
-    {% block head %} {# содержимое <head> #} {% endblock %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="/img/favicon.jpg" rel="icon" type="image/svg+xml">
+    <link rel="stylesheet" href="/style.min.css">
+    {% block head %} {# дополнительные ресурсы #} {% endblock %}
   </head>
 
   <body>
-    <header class="header-test">header</header>
-    <main class="main-test">{% block main %}{% endblock %}</main>
-    <footer class="footer-test">footer</footer>
+    <header class='header-test'>header задан в base.njk</header>
+    {% block aside_top %} {# include aside_top #} {% endblock %}
+    {% block aside_left %} {# include aside_left #} {% endblock %}
+    {% block aside_right %} {# include aside_right #} {% endblock %}
+
+    <main data-observe-resizes class='main-test'>
+      {% block main %} {# контент #} {% endblock %}
+    </main>
+
+    <footer class='footer-test'>footer задан в base.njk</footer>
   </body>
-  
+
 </html>
