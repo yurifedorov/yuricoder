@@ -1,29 +1,22 @@
 {% block code %}
 {% raw %}
-&lt;html lang="en" data-observe-resizes>
-
+&lt;html lang="en">
   &lt;head>
     &lt;meta charset="UTF-8">
     &lt;meta name="viewport" content="width=device-width, initial-scale=1.0">
     &lt;meta http-equiv="X-UA-Compatible" content="ie=edge">
     &lt;link href="/img/favicon.jpg" rel="icon" type="image/svg+xml">
     &lt;link rel="stylesheet" href="/style.min.css">
-    {% block head %} {# дополнительные ресурсы #} {% endblock %}
+    {% block head %} {# ресурсы, указываемые в дочерних шаблонах #} {% endblock %}
   &lt;/head>
-
   &lt;body>
-    &lt;header> {# общий header#} &lt;/header>
+    &lt;header> {# общий header #} &lt;/header>
     {% block aside_top %} {# include aside_top #} {% endblock %}
     {% block aside_left %} {# include aside_left #} {% endblock %}
     {% block aside_right %} {# include aside_right #} {% endblock %}
-
-    &lt;main data-observe-resizes>
-      {% block main %} {# контент #} {% endblock %}
-    &lt;/main>
-
-    &lt;footer> {# общий footer#} &lt;/footer>
+    &lt;main>{% block main %} {# контент #} {% endblock %}&lt;/main>
+    &lt;footer> {# общий footer #} &lt;/footer>
   &lt;/body>
-
 &lt;/html>
 {% endraw %}
 {% endblock %}
