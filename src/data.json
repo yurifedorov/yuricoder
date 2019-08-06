@@ -110,28 +110,8 @@
         "link": "operators"
       },
       {
-        "name": "операторы сравнения и логические значения",
-        "link": "comparison.html"
-      },
-      {
-        "name": "побитовые операторы",
-        "link": "bitwise-operators.html"
-      },
-      {
-        "name": "взаимодействие с пользователем",
-        "link": "uibasic.html"
-      },
-      {
-        "name": "условные операторы",
-        "link": "ifelse.html"
-      },
-      {
-        "name": "логические операторы",
-        "link": "logical-ops.html"
-      },
-      {
-        "name": "преобразование типов",
-        "link": "types-conversion.html"
+        "name": "пункт 2",
+        "link": "#"
       }
     ]
   }, {

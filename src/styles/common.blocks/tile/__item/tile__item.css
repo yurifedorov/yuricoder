@@ -27,11 +27,6 @@
   background: pink;
 }
 
-/* ссылка */
-.tile > li > a {
-  /*background: yellow;*/
-}
-
 /* ссылки на всю ширину элемента */
 .tile > li > .link_stretch {
   transform: translate(0, 0);
