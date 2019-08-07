@@ -98,10 +98,13 @@
       <i>footer</i>
       <i>footer</i>
     </footer>
+
     {# инлайновые скрипты для ВСЕХ страниц #}
     <script>{% include ContainerQueries %}</script>
+
     {# дополнительные инлайновые скрипты #}
-    {% block inlineScripts %}{% endblock %}
+    {% block inlineScripts %} {% endblock %}
+
   </body>
 
 </html>

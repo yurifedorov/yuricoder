@@ -1,0 +1,26 @@
+{% extends "base.njk" %}
+
+{# variables #}
+{% set title        = 'html' %}
+{% set category     = 'docs' %}
+{% set subcategory_del = 'delete' %}
+{% set segment_del  = 'delete' %}
+{% set subsegment_del  = 'delete' %}
+
+{# ===================================== #}
+
+{% block head %}
+  <title>Справочник по HTML</title>
+  <meta name="description" content="Мои заметки по HTML. Выдержки из официальной документации, применение на практике." />
+{% endblock %}
+
+{% block aside_top %}{% include aside_top %}{% endblock %}
+{% block aside_left %}{% include aside_left %}{% endblock %}
+
+{% block main %}
+
+  <h1>Справочник по HTML</h1>
+  <p>Мои заметки по HTML. Выдержки из официальной документации, применение на практике.</p>
+  {% include 'parts/navigation/html_docs.njk' %}
+    
+{% endblock %}

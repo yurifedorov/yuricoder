@@ -13,7 +13,7 @@
 
   "docs": [{
     "name": "HTML",
-    "link": "#"
+    "link": "html"
   }, {
     "name": "CSS",
     "link": "css"
@@ -140,6 +140,32 @@
     ]
   }, {
     "category": "Пункт 4",
+    "subcategories": [
+      {
+        "name": "Подкатегория №1",
+        "link": "#"
+      },
+      {
+        "name": "Подкатегория №2",
+        "link": "#"
+      }
+    ]
+  }],
+
+  "html_docs": [{
+    "category": "Все про html",
+    "subcategories": [
+      {
+        "name": "мои заметки",
+        "link": "notes"
+      },
+      {
+        "name": "пункт 2",
+        "link": "#"
+      }
+    ]
+  }, {
+    "category": "Пункт 2",
     "subcategories": [
       {
         "name": "Подкатегория №1",
