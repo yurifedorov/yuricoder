@@ -17,15 +17,12 @@
 {% block head %}
   <title>Расстановка блоков на веб-странице</title>
   <meta name="description" content="Оператор возвращает true, если операнды строго равны. В отличии от обычного оператора 'равно', он не не приводит операнды к одному типу. " />
-  <link rel="stylesheet" href="{{prism_css}}">
-  <script src="{{prism_js}}" async></script>
 {% endblock %}
 
 {% block aside_top %}{% include aside_top %}{% endblock %}
 {% block aside_left %}{% include aside_left %}{% endblock %}
 
 {% block main %}
-
   <h1>Как я думал над расположением блоков на странице</h1>
   <p>Мне не понравилось что на странице слишком много пустого простанства справа и очень убого выглядит навигация по разделам (я понял, что "плитка" тут не подходит).</p>
   <img src="{{images_dir}}/before.png" alt="пустое пространство на странице">
@@ -85,10 +82,34 @@
   <p>Если мне понадобится сделать какое-то глобальное изменение со всем этими контейнерами - то будет беда, как с атрибутом 'data-observe-resizes' о котором я писал ранее.</p>
 
   <h3>Прибегнуть к JS?</h3>
-  <p>С помощью одной строки JS просто добавить нужный класс к 'main'</p>
+  <p>С помощью JS можно просто добавить нужный класс к 'main'</p>
+    <pre>
+    &lt;script&gt;
+      let main = document.getElementsByTagName('main');
+      main[0].classList.add("two_columns");
+    &lt;/script&gt;
+  </pre>
+  <p>Сначала выбрал все теги 'main' с помощью <b>getElementsByTagName</b> (хотя по факту он всего один) и сохранил в переменной <b>main</b></p>
+  <p>Затем методом <b>classList.add</b> добавил класс 'two_columns'.</p>
+  <p>У меня сначала не работало, т.к. во всем интернете предлагался подобный вариант:</p>
+  <pre>
+    &lt;script&gt;
+      let main = document.getElementsByTagName('main');
+      main.classList.add("two_columns");
+    &lt;/script&gt;
+  </pre>
+  <b>Нигде не было скаано, что надо задавать номера элемента [0]</b>
   <p>Я конечно не хотел использовать JS потому что:</p>
   <ul>
     <li>любой скрипт увеличивает время загрузки страницы (хотя там наверно )</li>
     <li>класс не добавится если у пользователя отключен JS</li>
   </ul>
+{% endblock %}
+
+{% block inlineScripts %}
+  {# инлайновые скрипты для этой страницы #}
+  <script>
+    let main = document.getElementsByTagName('main');
+    main[0].classList.add("two_columns");
+  </script>
 {% endblock %}
