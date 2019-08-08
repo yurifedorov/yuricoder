@@ -1,0 +1,31 @@
+/* main в 2 колонки */
+.main_two-columns {
+  display: grid;
+  grid-template-columns: 250px auto;
+  grid-column-gap: 20px;
+}
+
+.main_two-columns > h1, p {
+  grid-column: 1 / -1;
+}
+
+.main_two-columns > .list {
+  grid-column: 1;
+  padding: 10px;
+}
+
+.main_two-columns > .list ul {
+  list-style-type: none;
+  padding-inline-start: 0;
+}
+
+.main_two-columns > .list li {
+  font-size: 15px;
+}
+
+.main_two-columns > .content {
+  background: #dadada; /*временно*/
+  padding: 30px;
+  grid-column: 2;
+  grid-row: 3;
+}

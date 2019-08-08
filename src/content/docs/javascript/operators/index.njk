@@ -20,125 +20,22 @@
 {% block main %}
 
   <h1>All operators in JavaScript</h1>
+  <p>Список всех операторов в JavaScript с примерами</p>
 
-  <section>
-    <h3>Арифметические операторы</h3>
-    <ul class="tile">
-      {% for item in arithmetic_operators %}
-      <li>
-        <div>
-          <a href="{{item.link}}">{{item.name}}</a>
-          <p>{{item.description}}</p>
-        </div>
-      </li>
-      {% endfor %}
-    </ul>
+  <section class="list">
+    {% include 'parts/navigation/js_operators.njk' %}
   </section>
 
-  <section>
-    <h3>Инкремент и декремент</h3>
-    <ul class="tile">
-      {% for item in increment_and_decrement %}
-      <li>
-        <div>
-          <a href="{{item.link}}"><span>{{item.name}}</span></a>
-          <p>{{item.description}}</p>
-        </div>
-      </li>
-      {% endfor %}
-    </ul>
+  <section class="content">
+    <p>контент загружается сюда</p>
   </section>
 
-  <section>
-    <h3>Унарные операторы</h3>
-    <ul class="tile">
-      {% for item in unary_operators %}
-      <li>
-        <div>
-          <a href="{{item.link}}"><span>{{item.name}}</span></a>
-          <p>{{item.description}}</p>
-        </div>
-      </li>
-      {% endfor %}
-    </ul>
-  </section>
+{% endblock %}
 
-  <section>
-    <h3>Операторы сравнения</h3>
-    <ul class="tile">
-      {% for item in comparison_operators %}
-      <li>
-        <div>
-          <a href="{{item.link}}"><span>{{item.name}}</span></a>
-          <p>{{item.description}}</p>
-        </div>
-      </li>
-      {% endfor %}
-    </ul>
-  </section>
-
-  <section>
-    <h3>Операторы равенства</h3>
-    <ul class="tile">
-      {% for item in equality_operators %}
-      <li>
-        <div>
-          <a href="{{item.link}}"><span>{{item.name}}</span></a>
-          <p>{{item.description}}</p>
-        </div>
-      </li>
-      {% endfor %}
-    </ul>
-  </section>
-
-  <section>
-    <h3>Побитовые операторы</h3>
-    <ul class="tile">
-      {% for item in bitwise_operators %}
-      <li>
-        <div>
-          <a href="{{item.link}}"><span>{{item.name}}</span></a>
-          <p>{{item.description}}</p>
-        </div>
-      </li>
-      {% endfor %}
-    </ul>
-  </section>
-
-  <section>
-    <h3>Логические операторы</h3>
-    <ul class="tile">
-      {% for item in logical_operators %}
-      <li>
-        <div>
-          <a href="{{item.link}}"><span>{{item.name}}</span></a>
-          <p>{{item.description}}</p>
-        </div>
-      </li>
-      {% endfor %}
-    </ul>
-  </section>
-
-  <section>
-    <h3>Операторы присваивания</h3>
-    <ul class="tile">
-      {% for item in assignment_operators %}
-      <li>
-        <div>
-          <a href="{{item.link}}"><span>{{item.name}}</span></a>
-          <p>{{item.description}}</p>
-        </div>
-      </li>
-      {% endfor %}
-    </ul>
-  </section>
-
-  <section>
-    <h3>Прочее</h3>
-    <ul name="javascript-operators">
-      <li><a href="comma.html">запятая</a></li>
-      <li><a href="operator-precedence.html">приоритет операторов</a></li>
-    </ul>
-  </section>
-
+{% block inlineScripts %}
+  {# инлайновые скрипты для этой страницы #}
+  <script>
+    let main = document.getElementsByTagName('main');
+    main[0].classList.add("main_two-columns");
+  </script>
 {% endblock %}
