@@ -1,8 +1,8 @@
 /* main в 2 колонки */
 .main_two-columns {
   display: grid;
-  grid-template-columns: 450px auto;
-  grid-template-rows: 50px 40px auto;
+  grid-template-columns: 100px auto;
+  grid-template-rows: 50px auto;
   grid-column-gap: 20px;
 }
 
@@ -11,6 +11,7 @@
 }
 
 .main_two-columns > .list {
+  background: #eee; /*временно*/
   grid-column: 1;
   padding: 10px;
 }
@@ -24,14 +25,15 @@
   display: grid;
   grid-template-columns: 80px auto;
   grid-column-gap: 10px;
+  background: white;
   font-size: 15px;
-  padding: 5px;
+  padding: 5px 10px;
   margin-bottom: 15px;
   text-decoration: none;
 }
 
 .main_two-columns > .list li:hover {
-  background: #eee;
+  background: yellow;
 }
 
 .main_two-columns > .list a {
@@ -39,14 +41,9 @@
   text-decoration: none;
 }
 
-.main_two-columns > .list p {
-  grid-column: 2;
-  margin: 0;
-}
-
 .main_two-columns > .content {
-  background: #dadada; /*временно*/
-  padding: 30px;
+  background: #eee; /*временно*/
+  padding: 10px 30px;
   grid-column: 2;
-  grid-row: 3;
+  grid-row: 2;
 }

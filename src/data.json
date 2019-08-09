@@ -232,181 +232,130 @@
     ]
   }],
 
-  "arithmetic_operators": [{
+  "operators": [{
     "name": "+",
-    "description": "сложение",
     "link": "addition.html"
   }, {
     "name": "-",
-    "description": "вычитание",
     "link": "subtraction.html"
   }, {
     "name": "/",
-    "description": "деление",
     "link": "division.html"
   }, {
     "name": "*",
-    "description": "умножение",
     "link": "multiplication.html"
   }, {
     "name": "%",
-    "description": "остаток от деления",
     "link": "remainder.html"
   }, {
     "name": "**",
-    "description": "возведение в степень",
     "link": "exponentiation.html"
-  }],
-
-  "increment_and_decrement": [{
+  }, {
     "name": "i++",
-    "description": "инкремент",
     "link": "increment.html"
   }, {
     "name": "i--",
-    "description": "декремент",
     "link": "decrement.html"
-  }],
-
-  "unary_operators": [{
+  }, {
     "name": "+i",
-    "description": "унарный плюс",
     "link": "unary-plus.html"
   }, {
     "name": "-i",
-    "description": "унарный минус",
     "link": "unary-negation.html"
   }, {
     "name": "!",
-    "description": "логическое НЕ",
     "link": "logical_not.html"
-  }],
-
-  "comparison_operators": [{
+  }, {
     "name": ">",
-    "description": "больше",
     "link": "greater_than.html"
   }, {
     "name": "<",
-    "description": "меньше",
     "link": "less_than.html"
   }, {
     "name": ">=",
-    "description": "больше или равно",
     "link": "greater_than_or_equal.html"
   }, {
     "name": "<=",
-    "description": "меньше или равно",
     "link": "less_than_or_equal.html"
-  }],
-
-  "equality_operators": [{
+  }, {
     "name": "==",
-    "description": "равно",
     "link": "equality.html"
   }, {
     "name": "!=",
-    "description": "не равно",
     "link": "inequality.html"
   }, {
     "name": "===",
-    "description": "строго равно",
     "link": "identity.html"
   }, {
     "name": "!==",
-    "description": "строго не равно",
     "link": "nonidentity.html"
-  }],
-
-  "bitwise_operators": [{
+  }, {
     "name": "&",
-    "description": "побитовое И",
     "link": "bitwise_and.html"
   }, {
     "name": "|",
-    "description": "побитовое ИЛИ",
     "link": "bitwise_or.html"
   }, {
     "name": "^",
-    "description": "побитовое исключающее ИЛИ",
     "link": "bitwise_xor.html"
-  }],
-
-  "logical_operators": [{
+  }, {
     "name": "&&",
-    "description": "логическое И",
     "link": "logical_and.html"
   }, {
     "name": "||",
-    "description": "логическое ИЛИ",
     "link": "logical_or.html"
   }, {
     "name": "?",
-    "description": "условный (тернарный) оператор",
     "link": "conditional_operator.html"
-  }],
-
-  "assignment_operators": [{
+  }, {
     "name": "=",
-    "description": "присваивание",
     "link": "assignment.html"
   }, {
     "name": "*=",
-    "description": "присваивание с умножением",
     "link": "multiplication_assignment.html"
   }, {
     "name": "/=",
-    "description": "присваивание с делением",
     "link": "division_assignment.html"
   }, {
     "name": "%=",
-    "description": "присваивание с взятием остатка от деления",
     "link": "remainder_assignment.html"
   }, {
     "name": "+=",
-    "description": "присваивание со сложением",
     "link": "addition_assignment.html"
   }, {
     "name": "-= ",
-    "description": "присваивание с вычитанием",
     "link": "subtraction_assignment.html"
   }, {
     "name": "<<=",
-    "description": "присваивание со сдвигом влево",
     "link": "left_shift_assignment.html"
   }, {
     "name": ">>=",
-    "description": "присваивание со знаковым сдвигом вправо",
     "link": "right_shift_assignment.html"
   }, {
     "name": ">>>= ",
-    "description": "присваивание с беззнаковым сдвигом вправо",
     "link": "unsigned_right_shift_assignment.html"
   }, {
     "name": "&=",
-    "description": "присваивание с побитовым И",
     "link": "bitwise_and_assignment.html"
   }, {
     "name": "^=",
-    "description": "присваивание с побитовым ИСКЛЮЧАЮЩИМ ИЛИ",
     "link": "bitwise_xor_assignment.html"
   }, {
     "name": "|=",
-    "description": "присваивание с побитовым ИЛИ",
     "link": "bitwise_or_assignment.html"
+  }, {
+    "name": ",",
+    "link": "comma.html"
   }],
 
   "methods": [{
-    "name": "alert",
-    "description": "Отображает предупреждающее диалоговое окно",
+    "name": "alert()",
     "link": "alert.html"
   }, {
-    "name": "prompt",
-    "description": "Возвращает текст, введенный пользователем",
+    "name": "prompt()",
     "link": "prompt.html"
   }, {
-    "name": "confirm",
-    "description": "Отображает диалог с сообщением, на которое пользователь должен ответить",
+    "name": "confirm()",
     "link": "confirm.html"
   }],
 

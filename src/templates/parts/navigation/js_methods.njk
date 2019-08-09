@@ -1,8 +1,5 @@
-<section>
-  <h5>alert, prompt и confirm</h5>
-  <ul>
-    {% for item in methods %}
-    <li><a href="{{item.link}}">{{item.name}}</a><p>{{item.description}}</p>
-    {% endfor %}
-  </ul>
-</section>
+<ul>
+  {% for item in methods %}
+  <li><a href="{{item.link}}">{{item.name}}</a>
+  {% endfor %}
+</ul>

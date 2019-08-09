@@ -4,7 +4,7 @@
 {% set title           = 'prompt()' %}
 {% set category        = 'docs' %}
 {% set subcategory     = 'javascript' %}
-{% set segment         = 'operators' %}
+{% set segment         = 'methods' %}
 {% set subsegment_del  = 'delete' %}
 
 {# путь к примерам code-example-beta [НЕ УДАЛЯТЬ] #}
@@ -24,17 +24,32 @@
 
 {% block main %}
 
-  <h1>{{ title}}</h1>
-  <p>Возвращает текст, введенный пользователем.</p>
+  <h1>Список методов JavaScript</h1>
 
-  {% set example_id = 'prompt_method' %}
-  {% set numeration = true %}
-  {% set split      = false %}
-  {% set html       = false %}
-  {% set njk        = false %}
-  {% set css        = false %}
-  {% set js         = true %}
-  {% set demo       = false %}
-  {% include codeExample %}
+  <section class="list">
+    {% include 'parts/navigation/js_methods.njk' %}
+  </section>
 
+  <section class="content">
+    <h2>{{ title}}</h2>
+    <p>Отображает предупреждающее диалоговое окно.</p>
+    {% set example_id = 'prompt_method' %}
+    {% set numeration = true %}
+    {% set split      = false %}
+    {% set html       = false %}
+    {% set njk        = false %}
+    {% set css        = false %}
+    {% set js         = true %}
+    {% set demo       = false %}
+    {% include codeExample %}
+  </section>
+
+{% endblock %}
+
+{% block inlineScripts %}
+  {# инлайновые скрипты для этой страницы #}
+  <script>
+    let main = document.getElementsByTagName('main');
+    main[0].classList.add("main_two-columns");
+  </script>
 {% endblock %}
