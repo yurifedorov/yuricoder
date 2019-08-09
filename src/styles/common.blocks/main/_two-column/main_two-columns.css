@@ -1,7 +1,7 @@
 /* main в 2 колонки */
 .main_two-columns {
   display: grid;
-  grid-template-columns: 250px auto;
+  grid-template-columns: 350px auto;
   grid-column-gap: 20px;
 }
 
@@ -21,6 +21,28 @@
 
 .main_two-columns > .list li {
   font-size: 15px;
+  line-height: 30px;
+  margin-bottom: 5px;
+  text-decoration: none;
+}
+
+.main_two-columns > .list li:hover {
+  background: yellow;
+}
+
+.main_two-columns > .list a {
+  display: block;
+  text-decoration: none;
+}
+
+.main_two-columns > .list span {
+  display: block;
+  background: #eee;
+  text-align: center;
+  width: 30px;
+  float: left;
+  font-weight: bold;
+  margin-right: 10px;
 }
 
 .main_two-columns > .content {

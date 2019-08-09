@@ -2,7 +2,7 @@
   <h5>Арифметические операторы</h5>
   <ul>
     {% for item in arithmetic_operators %}
-    <li><a href="{{item.link}}">{{item.name}} ({{item.description}})</a>
+    <li><a href="{{item.link}}"><span>{{item.name}}</span>{{item.description}}</a>
     {% endfor %}
   </ul>
 </section>
@@ -11,7 +11,7 @@
   <h5>Инкремент и декремент</h5>
   <ul>
     {% for item in increment_and_decrement %}
-    <li><a href="{{item.link}}">{{item.name}} ({{item.description}})</a>
+    <li><a href="{{item.link}}"><span>{{item.name}}</span>{{item.description}}</a>
     {% endfor %}
   </ul>
 </section>
@@ -20,7 +20,7 @@
   <h5>Унарные операторы</h5>
   <ul>
     {% for item in unary_operators %}
-    <li><a href="{{item.link}}">{{item.name}} ({{item.description}})</a>
+    <li><a href="{{item.link}}"><span>{{item.name}}</span>{{item.description}}</a>
     {% endfor %}
   </ul>
 </section>
@@ -29,7 +29,7 @@
   <h5>Операторы сравнения</h5>
   <ul>
     {% for item in comparison_operators %}
-    <li><a href="{{item.link}}">{{item.name}} ({{item.description}})</a>
+    <li><a href="{{item.link}}"><span>{{item.name}}</span>{{item.description}}</a>
     {% endfor %}
   </ul>
 </section>
@@ -38,7 +38,7 @@
   <h5>Операторы равенства</h5>
   <ul>
     {% for item in equality_operators %}
-    <li><a href="{{item.link}}">{{item.name}} ({{item.description}})</a>
+    <li><a href="{{item.link}}"><span>{{item.name}}</span>{{item.description}}</a>
     {% endfor %}
   </ul>
 </section>
@@ -47,7 +47,7 @@
   <h5>Побитовые операторы</h5>
   <ul>
     {% for item in bitwise_operators %}
-    <li><a href="{{item.link}}">{{item.name}} ({{item.description}})</a>
+    <li><a href="{{item.link}}"><span>{{item.name}}</span>{{item.description}}</a>
     {% endfor %}
   </ul>
 </section>
@@ -56,7 +56,7 @@
   <h5>Логические операторы</h5>
   <ul>
     {% for item in logical_operators %}
-    <li><a href="{{item.link}}">{{item.name}} ({{item.description}})</a>
+    <li><a href="{{item.link}}"><span>{{item.name}}</span>{{item.description}}</a>
     {% endfor %}
   </ul>
 </section>
@@ -65,7 +65,7 @@
   <h5>Операторы присваивания</h5>
   <ul>
     {% for item in assignment_operators %}
-    <li><a href="{{item.link}}">{{item.name}} ({{item.description}})</a>
+    <li><a href="{{item.link}}"><span>{{item.name}}</span>{{item.description}}</a>
     {% endfor %}
   </ul>
 </section>
