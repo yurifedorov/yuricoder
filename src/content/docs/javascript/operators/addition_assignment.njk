@@ -24,24 +24,39 @@
 
 {% block main %}
 
-  <h1>Addition assignment [ += ]</h1>
-  <small>группа: операторы присваивания</small>
-  <p>Оператор прибавляет к значению левого операнда значение правого.</p>
+  <h1>Операторы в JavaScript</h1>
 
-  {% set example_id = 'addition_assignment' %}
-  {% set numeration = false %}
-  {% set split      = false %}
-  {% set html       = false %}
-  {% set njk        = false %}
-  {% set css        = false %}
-  {% set js         = true %}
-  {% set demo       = false %}
-  {% include codeExample %}
-  <table>
-    <tr>
-      <td>4</td>
-      <td>к значению левого операнда <b>x</b> прибавилось значение <b>y</b>, результат присвоился переменной <b>x</b> (2 + 2 = 4).</td>
-    </tr>
-  </table>
+  <section class="list">
+    {% include 'parts/navigation/js_operators.njk' %}
+  </section>
 
+  <section class="content">
+    <h2>Addition assignment [ += ]</h2>
+    <small>группа: операторы присваивания</small>
+    <p>Оператор прибавляет к значению левого операнда значение правого.</p>
+    {% set example_id = 'addition_assignment' %}
+    {% set numeration = false %}
+    {% set split      = false %}
+    {% set html       = false %}
+    {% set njk        = false %}
+    {% set css        = false %}
+    {% set js         = true %}
+    {% set demo       = false %}
+    {% include codeExample %}
+    <table>
+      <tr>
+        <td>4</td>
+        <td>к значению левого операнда <b>x</b> прибавилось значение <b>y</b>, результат присвоился переменной <b>x</b> (2 + 2 = 4).</td>
+      </tr>
+    </table>
+  </section>
+
+{% endblock %}
+
+{% block inlineScripts %}
+  {# инлайновые скрипты для этой страницы #}
+  <script>
+    let main = document.getElementsByTagName('main');
+    main[0].classList.add("main_two-columns");
+  </script>
 {% endblock %}

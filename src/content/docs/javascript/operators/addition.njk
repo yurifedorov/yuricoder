@@ -24,37 +24,51 @@
 
 {% block main %}
 
-  <h1>{{ title | capitalize }}</h1>
-  <small>группа: арифметические операторы</small>
-  <p>Оператор сложения иначе называют "бинарный плюс". Выполняет сложение двух операндов (чисел), объединеняет строки, преобразует строки в числа.</p>
+  <h1>Операторы в JavaScript</h1>
 
-  {% set example_id = 'addition' %}
-  {% set numeration = false %}
-  {% set split      = false %}
-  {% set html       = false %}
-  {% set njk        = false %}
-  {% set css        = false %}
-  {% set js         = true %}
-  {% set demo       = false %}
-  {% include codeExample %}
-  <table>
-    <tr>
-      <td>2</td>
-      <td>сложение двух числел</td>
-    </tr>
-    <tr>
-      <td>11</td>
-      <td>объединение двух строк</td>
-    </tr>
-    <tr>
-      <td>11</td>
-      <td>если один из аргументов является строкой, то второй будет также преобразован к строке <b>*</b></td>
-    </tr>
-    <tr>
-      <td>0</td>
-      <td>другие операторы наоборот преобразуют строки в числа (пример бинарного минуса)</td>
-    </tr>
-  </table>
-  <p><span>* </span><small>Это особенность только "<b>бинарного плюса</b>", остальные арифметические операторы работают только с числами и приводят строки к числам.</small></p>
+  <section class="list">
+    {% include 'parts/navigation/js_operators.njk' %}
+  </section>
 
+  <section class="content">
+    <h2>{{ title | capitalize }}</h2>
+    <small>группа: арифметические операторы</small>
+    <p>Оператор сложения иначе называют "бинарный плюс". Выполняет сложение двух операндов (чисел), объединеняет строки, преобразует строки в числа.</p>
+    {% set example_id = 'addition' %}
+    {% set numeration = false %}
+    {% set split      = false %}
+    {% set html       = false %}
+    {% set njk        = false %}
+    {% set css        = false %}
+    {% set js         = true %}
+    {% set demo       = false %}
+    {% include codeExample %}
+    <table>
+      <tr>
+        <td>2</td>
+        <td>сложение двух числел</td>
+      </tr>
+      <tr>
+        <td>11</td>
+        <td>объединение двух строк</td>
+      </tr>
+      <tr>
+        <td>11</td>
+        <td>если один из аргументов является строкой, то второй будет также преобразован к строке <b>*</b></td>
+      </tr>
+      <tr>
+        <td>0</td>
+        <td>другие операторы наоборот преобразуют строки в числа (пример бинарного минуса)</td>
+      </tr>
+    </table>
+    <p><span>* </span><small>Это особенность только "<b>бинарного плюса</b>", остальные арифметические операторы работают только с числами и приводят строки к числам.</small></p>
+  </section>
+{% endblock %}
+
+{% block inlineScripts %}
+  {# инлайновые скрипты для этой страницы #}
+  <script>
+    let main = document.getElementsByTagName('main');
+    main[0].classList.add("main_two-columns");
+  </script>
 {% endblock %}
