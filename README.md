@@ -4,4 +4,4 @@
 
 My personal website
 
-<a href="yuricoder.com">yuricoder.com</a>
+<a href="https://yuricoder.dev/">yuricoder.com</a>
