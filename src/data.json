@@ -110,7 +110,11 @@
         "link": "operators"
       },
       {
-        "name": "пункт 2",
+        "name": "methods",
+        "link": "methods"
+      },
+      {
+        "name": "пункт 3",
         "link": "#"
       }
     ]
@@ -390,6 +394,20 @@
     "name": "|=",
     "description": "присваивание с побитовым ИЛИ",
     "link": "bitwise_or_assignment.html"
+  }],
+
+  "methods": [{
+    "name": "alert",
+    "description": "Отображает предупреждающее диалоговое окно",
+    "link": "alert.html"
+  }, {
+    "name": "prompt",
+    "description": "Возвращает текст, введенный пользователем",
+    "link": "prompt.html"
+  }, {
+    "name": "confirm",
+    "description": "Отображает диалог с сообщением, на которое пользователь должен ответить",
+    "link": "confirm.html"
   }],
 
   "nunjucks": [{

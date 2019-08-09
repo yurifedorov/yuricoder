@@ -1,0 +1,40 @@
+{% extends "base.njk" %}
+
+{# variables #}
+{% set title        = 'alert()' %}
+{% set category        = 'docs' %}
+{% set subcategory     = 'javascript' %}
+{% set segment         = 'operators' %}
+{% set subsegment_del  = 'delete' %}
+
+{# путь к примерам code-example-beta [НЕ УДАЛЯТЬ] #}
+{% set example_dir    = 'examples/javascript/methods/' %}
+
+{# ===================================== #}
+
+{% block head %}
+  <title>{{title}} method in JavaScript</title>
+  <meta name="description" content="Отображает предупреждающее диалоговое окно." />
+  <link rel="stylesheet" href="{{prism_css}}">
+  <script src="{{prism_js}}" async></script>
+{% endblock %}
+
+{% block aside_top %}{% include aside_top %}{% endblock %}
+{% block aside_left %}{% include aside_left %}{% endblock %}
+
+{% block main %}
+
+  <h1>{{ title}}</h1>
+  <p>Отображает предупреждающее диалоговое окно.</p>
+
+  {% set example_id = 'alert_method' %}
+  {% set numeration = true %}
+  {% set split      = false %}
+  {% set html       = false %}
+  {% set njk        = false %}
+  {% set css        = false %}
+  {% set js         = true %}
+  {% set demo       = false %}
+  {% include codeExample %}
+
+{% endblock %}
