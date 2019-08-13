@@ -8,7 +8,7 @@
 {% set subsegment_del  = 'delete' %}
 
 {# путь к примерам code-example-beta [НЕ УДАЛЯТЬ] #}
-{% set example_dir    = 'examples/javascript/operators/' %}
+{# set example_dir    = 'examples/javascript/operators/' #}
 
 {# ===================================== #}
 
@@ -112,4 +112,12 @@
     </table>
   </section>
 
+{% endblock %}
+
+{% block inlineScripts %}
+  {# инлайновые скрипты для этой страницы #}
+  <script>
+    let main = document.getElementsByTagName('main');
+    main[0].classList.add("main_two-columns");
+  </script>
 {% endblock %}

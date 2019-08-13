@@ -1,0 +1,41 @@
+{% extends "base.njk" %}
+
+{# variables #}
+{% set title           = 'bitwise or' %}
+{% set category        = 'docs' %}
+{% set subcategory     = 'javascript' %}
+{% set segment         = 'operators' %}
+{% set subsegment_del  = 'delete' %}
+
+{# путь к примерам code-example-beta [НЕ УДАЛЯТЬ] #}
+{% set example_dir    = 'examples/javascript/operators/' %}
+
+{# ===================================== #}
+
+{% block head %}
+  <title>Bitwise OR operator in JavaScript</title>
+  <meta name="description" content="Оператор 'побитового ИЛИ'." />
+  <link rel="stylesheet" href="{{prism_css}}">
+  <script src="{{prism_js}}" async></script>
+{% endblock %}
+
+{% block aside_top %}{% include aside_top %}{% endblock %}
+{% block aside_left %}{% include aside_left %}{% endblock %}
+
+{% block main %}
+
+  <h1>Bitwise OR [ | ]</h1>
+  <small>группа: операторы равенства</small>
+  <p>Оператор 'побитового ИЛИ'</p>
+
+  {% set example_id = 'bitwise_or' %}
+  {% set numeration = false %}
+  {% set split      = false %}
+  {% set html       = false %}
+  {% set njk        = false %}
+  {% set css        = false %}
+  {% set js         = true %}
+  {% set demo       = false %}
+  {% include codeExample %}
+
+{% endblock %}

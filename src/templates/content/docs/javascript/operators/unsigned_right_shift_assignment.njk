@@ -1,7 +1,7 @@
 {% extends "base.njk" %}
 
 {# variables #}
-{% set title        = 'subtraction' %}
+{% set title           = 'unsigned right shift assignment' %}
 {% set category        = 'docs' %}
 {% set subcategory     = 'javascript' %}
 {% set segment         = 'operators' %}
@@ -13,8 +13,8 @@
 {# ===================================== #}
 
 {% block head %}
-  <title>Subtraction operator in JavaScript</title>
-  <meta name="description" content="Как действует бинарный минус в JavaScript." />
+  <title>Unsigned right shift assignment operator in JavaScript</title>
+  <meta name="description" content="Unsigned right shift assignment moves the specified number of bits to the right and assigns the result to a variable." />
   <link rel="stylesheet" href="{{prism_css}}">
   <script src="{{prism_js}}" async></script>
 {% endblock %}
@@ -24,11 +24,11 @@
 
 {% block main %}
 
-  <h1>{{ title | capitalize }}</h1>
-  <small>группа: арифметические операторы</small>
-  <p>Оператор вычитания иначе называют "бинарный минус".</p>
+  <h1>Unsigned right shift assignment [ >>>= ]</h1>
+  <small>группа: операторы присваивания</small>
+  <p>Оператор перемещает указанное количество битов вправо и присваивает результат переменной.</p>
 
-  {% set example_id = 'subtraction' %}
+  {% set example_id = 'unsigned_right_shift_assignment' %}
   {% set numeration = false %}
   {% set split      = false %}
   {% set html       = false %}

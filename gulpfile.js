@@ -113,7 +113,7 @@ gulp.task('scripts', function (cb) {
   });
 
 gulp.task('nunjucks', function() {
-  return gulp.src('src/content/**/*.njk')
+  return gulp.src('src/pages/**/*.njk')
     .pipe(data(function() {
         return require('./src/data.json')
     }))

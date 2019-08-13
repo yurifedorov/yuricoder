@@ -1,0 +1,41 @@
+{% extends "base.njk" %}
+
+{# variables #}
+{% set title        = 'возведение в степень' %}
+{% set category        = 'docs' %}
+{% set subcategory     = 'javascript' %}
+{% set segment         = 'operators' %}
+{% set subsegment_del  = 'delete' %}
+
+{# путь к примерам code-example-beta [НЕ УДАЛЯТЬ] #}
+{% set example_dir    = 'examples/javascript/operators/' %}
+
+{# ===================================== #}
+
+{% block head %}
+  <title>Exponentiation operator in JavaScript</title>
+  <meta name="description" content="Оператор ** возвращает результат первого операнда в степень." />
+  <link rel="stylesheet" href="{{prism_css}}">
+  <script src="{{prism_js}}" async></script>
+{% endblock %}
+
+{% block aside_top %}{% include aside_top %}{% endblock %}
+{% block aside_left %}{% include aside_left %}{% endblock %}
+
+{% block main %}
+
+  <h1>{{ title | capitalize }} [ ** ]</h1>
+  <small>группа: арифметические операторы</small>
+  <p>Оператор ** возвращает результат первого операнда в степень.</p>
+
+  {% set example_id = 'exponentiation' %}
+  {% set numeration = false %}
+  {% set split      = false %}
+  {% set html       = false %}
+  {% set njk        = false %}
+  {% set css        = false %}
+  {% set js         = true %}
+  {% set demo       = false %}
+  {% include codeExample %}
+
+{% endblock %}

@@ -234,115 +234,115 @@
 
   "operators": [{
     "name": "+",
-    "link": "addition.html"
+    "link": "addition"
   }, {
     "name": "-",
-    "link": "subtraction.html"
+    "link": "subtraction"
   }, {
     "name": "/",
-    "link": "division.html"
+    "link": "division"
   }, {
     "name": "*",
-    "link": "multiplication.html"
+    "link": "multiplication"
   }, {
     "name": "%",
-    "link": "remainder.html"
+    "link": "remainder"
   }, {
     "name": "**",
-    "link": "exponentiation.html"
+    "link": "exponentiation"
   }, {
     "name": "i++",
-    "link": "increment.html"
+    "link": "increment"
   }, {
     "name": "i--",
-    "link": "decrement.html"
+    "link": "decrement"
   }, {
     "name": "+i",
-    "link": "unary-plus.html"
+    "link": "unary-plus"
   }, {
     "name": "-i",
-    "link": "unary-negation.html"
+    "link": "unary-negation"
   }, {
     "name": "!",
-    "link": "logical_not.html"
+    "link": "logical_not"
   }, {
     "name": ">",
-    "link": "greater_than.html"
+    "link": "greater_than"
   }, {
     "name": "<",
-    "link": "less_than.html"
+    "link": "less_than"
   }, {
     "name": ">=",
-    "link": "greater_than_or_equal.html"
+    "link": "greater_than_or_equal"
   }, {
     "name": "<=",
-    "link": "less_than_or_equal.html"
+    "link": "less_than_or_equal"
   }, {
     "name": "==",
-    "link": "equality.html"
+    "link": "equality"
   }, {
     "name": "!=",
-    "link": "inequality.html"
+    "link": "inequality"
   }, {
     "name": "===",
-    "link": "identity.html"
+    "link": "identity"
   }, {
     "name": "!==",
-    "link": "nonidentity.html"
+    "link": "nonidentity"
   }, {
     "name": "&",
-    "link": "bitwise_and.html"
+    "link": "bitwise_and"
   }, {
     "name": "|",
-    "link": "bitwise_or.html"
+    "link": "bitwise_or"
   }, {
     "name": "^",
-    "link": "bitwise_xor.html"
+    "link": "bitwise_xor"
   }, {
     "name": "&&",
-    "link": "logical_and.html"
+    "link": "logical_and"
   }, {
     "name": "||",
-    "link": "logical_or.html"
+    "link": "logical_or"
   }, {
     "name": "?",
-    "link": "conditional_operator.html"
+    "link": "conditional_operator"
   }, {
     "name": "=",
-    "link": "assignment.html"
+    "link": "assignment"
   }, {
     "name": "*=",
-    "link": "multiplication_assignment.html"
+    "link": "multiplication_assignment"
   }, {
     "name": "/=",
-    "link": "division_assignment.html"
+    "link": "division_assignment"
   }, {
     "name": "%=",
-    "link": "remainder_assignment.html"
+    "link": "remainder_assignment"
   }, {
     "name": "+=",
-    "link": "addition_assignment.html"
+    "link": "addition_assignment"
   }, {
     "name": "-= ",
-    "link": "subtraction_assignment.html"
+    "link": "subtraction_assignment"
   }, {
     "name": "<<=",
-    "link": "left_shift_assignment.html"
+    "link": "left_shift_assignment"
   }, {
     "name": ">>=",
-    "link": "right_shift_assignment.html"
+    "link": "right_shift_assignment"
   }, {
     "name": ">>>= ",
-    "link": "unsigned_right_shift_assignment.html"
+    "link": "unsigned_right_shift_assignment"
   }, {
     "name": "&=",
-    "link": "bitwise_and_assignment.html"
+    "link": "bitwise_and_assignment"
   }, {
     "name": "^=",
-    "link": "bitwise_xor_assignment.html"
+    "link": "bitwise_xor_assignment"
   }, {
     "name": "|=",
-    "link": "bitwise_or_assignment.html"
+    "link": "bitwise_or_assignment"
   }, {
     "name": ",",
     "link": "comma.html"

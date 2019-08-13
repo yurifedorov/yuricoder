@@ -1,0 +1,59 @@
+{% extends "base.njk" %}
+
+{# variables #}
+{% set title        = 'less than or equal operator' %}
+{% set category        = 'docs' %}
+{% set subcategory     = 'javascript' %}
+{% set segment         = 'operators' %}
+{% set subsegment_del  = 'delete' %}
+
+{# путь к примерам code-example-beta [НЕ УДАЛЯТЬ] #}
+{% set example_dir    = 'examples/javascript/operators/' %}
+
+{# ===================================== #}
+
+{% block head %}
+  <title>Less than or equal operator in JavaScript</title>
+  <meta name="description" content="Оператор 'меньше' возвращает true, если левый операнд меньше или равен правому операнду или false если наоборот." />
+  <link rel="stylesheet" href="{{prism_css}}">
+  <script src="{{prism_js}}" async></script>
+{% endblock %}
+
+{% block aside_top %}{% include aside_top %}{% endblock %}
+{% block aside_left %}{% include aside_left %}{% endblock %}
+
+{% block main %}
+
+  <h1>Less than or equal operator [ &lt;= ]</h1>
+  <small>группа: операторы сравнения</small>
+  <p>Оператор <b>меньше или равно ( &lt;= )</b>  возвращает <b>true</b>, если левый операнд меньше или равен правому операнду или <b>false</b> если наоборот.</p>
+
+  {% set example_id = 'less_than_or_equal' %}
+  {% set numeration = false %}
+  {% set split      = false %}
+  {% set html       = false %}
+  {% set njk        = false %}
+  {% set css        = false %}
+  {% set js         = true %}
+  {% set demo       = false %}
+  {% include codeExample %}
+  <table>
+    <tr>
+      <td>true</td>
+      <td>потому что <b>5</b> меньше чем <b>10</b></td>
+    </tr>
+    <tr>
+      <td>true</td>
+      <td>потому что <b>10</b> равно <b>10</b></td>
+    </tr>
+    <tr>
+      <td>false</td>
+      <td>потому что <b>20</b> не меньше и не равен <b>10</b></td>
+    </tr>
+    <tr>
+      <td>false</td>
+      <td>потому что <b>11</b> не меньше и не равен <b>10</b></td>
+    </tr>
+  </table>
+
+{% endblock %}

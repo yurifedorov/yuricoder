@@ -1,0 +1,47 @@
+{% extends "base.njk" %}
+
+{# variables #}
+{% set title        = 'multiplication' %}
+{% set category        = 'docs' %}
+{% set subcategory     = 'javascript' %}
+{% set segment         = 'operators' %}
+{% set subsegment_del  = 'delete' %}
+
+{# путь к примерам code-example-beta [НЕ УДАЛЯТЬ] #}
+{% set example_dir    = 'examples/javascript/operators/' %}
+
+{# ===================================== #}
+
+{% block head %}
+  <title>Multiplication operator in JavaScript</title>
+  <meta name="description" content="Оператор возвращает произведение операндов." />
+  <link rel="stylesheet" href="{{prism_css}}">
+  <script src="{{prism_js}}" async></script>
+{% endblock %}
+
+{% block aside_top %}{% include aside_top %}{% endblock %}
+{% block aside_left %}{% include aside_left %}{% endblock %}
+
+{% block main %}
+
+  <h1>{{ title | capitalize }} [ * ]</h1>
+  <small>группа: арифметические операторы</small>
+  <p>Оператор <b>умножения</b> возвращает произведение операндов.</p>
+
+  {% set example_id = 'multiplication' %}
+  {% set numeration = false %}
+  {% set split      = false %}
+  {% set html       = false %}
+  {% set njk        = false %}
+  {% set css        = false %}
+  {% set js         = true %}
+  {% set demo       = false %}
+  {% include codeExample %}
+  <table>
+    <tr>
+      <td>4</td>
+      <td>произведение двух операндов <b>x</b> и <b>y</b> (2 * 2 = 4)</td>
+    </tr>
+  </table>
+
+{% endblock %}
