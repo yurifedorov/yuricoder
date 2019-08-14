@@ -1,20 +1,20 @@
 {% extends "base.njk" %}
 
 {# variables #}
-{% set title           = 'alert()' %}
+{% set title           = 'addition assignment' %}
 {% set category        = 'docs' %}
 {% set subcategory     = 'javascript' %}
-{% set segment         = 'methods' %}
+{% set segment         = 'operators' %}
 {% set subsegment_del  = 'delete' %}
 
 {# путь к примерам code-example-beta [НЕ УДАЛЯТЬ] #}
-{% set example_dir    = 'examples/docs/javascript/methods/' %}
+{% set example_dir    = 'examples/docs/javascript/operators/' %}
 
 {# ===================================== #}
 
 {% block head %}
-  <title>{{title}} method in JavaScript</title>
-  <meta name="description" content="Отображает предупреждающее диалоговое окно." />
+  <title>Addition assignment operator in JavaScript</title>
+  <meta name="description" content="Оператор прибавляет к значению левого операнда значение правого." />
   <link rel="stylesheet" href="{{prism_css}}">
   <script src="{{prism_js}}" async></script>
 {% endblock %}
@@ -24,17 +24,18 @@
 
 {% block main %}
 
-  <h1>Список методов JavaScript</h1>
+  <h1>Операторы в JavaScript</h1>
 
   <section class="list">
-    {% include 'parts/navigation/js_methods.njk' %}
+    {% include 'parts/navigation/js_operators.njk' %}
   </section>
 
   <section class="content">
-    <h2>{{ title}}</h2>
-    <p>Отображает предупреждающее диалоговое окно.</p>
-    {% set example_id = 'alert_method' %}
-    {% set numeration = true %}
+    <h2>Addition assignment [ += ]</h2>
+    <small>группа: операторы присваивания</small>
+    <p>Оператор прибавляет к значению левого операнда значение правого.</p>
+    {% set example_id = 'addition_assignment' %}
+    {% set numeration = false %}
     {% set split      = false %}
     {% set html       = false %}
     {% set njk        = false %}
@@ -42,6 +43,12 @@
     {% set js         = true %}
     {% set demo       = false %}
     {% include codeExample %}
+    <table>
+      <tr>
+        <td>4</td>
+        <td>к значению левого операнда <b>x</b> прибавилось значение <b>y</b>, результат присвоился переменной <b>x</b> (2 + 2 = 4).</td>
+      </tr>
+    </table>
   </section>
 
 {% endblock %}

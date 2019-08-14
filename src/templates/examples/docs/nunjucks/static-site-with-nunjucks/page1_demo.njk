@@ -1,0 +1,21 @@
+{% extends "examples/docs/nunjucks/template-inheritance/base_demo.njk" %}
+
+{% block exampleContent %}
+{#======================== Демо ========================#}
+
+{% block head %}
+
+{% endblock %}
+
+{% block main %}
+<h1>Прайс лист</h1>
+<table>
+  <tr><td>Виды работ</td><td>Стоимость</td></tr>
+  <tr><td>Строительство фундамента</td><td><b>2500$</b></td></tr>
+  <tr><td>Монтаж стен и перекрытий</td><td><b>4000$</b></td></tr>
+  <tr><td>Кровельные работы</td><td><b>3000$</b></td></tr>
+</table>
+{% endblock %}
+
+{#==========================================================#}
+{% endblock %}
