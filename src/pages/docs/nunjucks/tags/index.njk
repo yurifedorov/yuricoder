@@ -1,12 +1,12 @@
 {% extends "base.njk" %}
 
-{# variables #}
+{# СТРОГОЕ СООТВЕТСТВИЕ С ИМЕНАМИ В ФАЙЛОВОЙ СИСТЕМЕ #}
+{# URL: site / category / subcategory / segment / subsegment / #}
 {% set title          = 'теги' %}
 {% set category       = 'docs' %}
 {% set subcategory    = 'nunjucks' %}
 {% set segment_del    = 'delete' %}
 {% set subsegment_del = 'delete' %}
-{% set path = '../' %}
 
 {# <head> #}
 {% block head %}

@@ -1,55 +1,26 @@
-{% extends "base.njk" %}
+<h2>{{ file_name | capitalize }}</h2>
+<p>Оператор возвращает true, если операнды строго равны. В отличии от обычного оператора 'равно', он не не приводит операнды к одному типу.</p>
 
-{# variables #}
-{% set title           = 'identity' %}
-{% set category        = 'docs' %}
-{% set subcategory     = 'javascript' %}
-{% set segment         = 'operators' %}
-{% set subsegment_del  = 'delete' %}
-
-{# путь к примерам code-example-beta [НЕ УДАЛЯТЬ] #}
-{% set example_dir    = 'examples/docs/javascript/operators/' %}
-
-{# ===================================== #}
-
-{% block head %}
-  <title>Identity operator in JavaScript</title>
-  <meta name="description" content="Оператор возвращает true, если операнды строго равны. В отличии от обычного оператора 'равно', он не не приводит операнды к одному типу. " />
-  <link rel="stylesheet" href="{{prism_css}}">
-  <script src="{{prism_js}}" async></script>
-{% endblock %}
-
-{% block aside_top %}{% include aside_top %}{% endblock %}
-{% block aside_left %}{% include aside_left %}{% endblock %}
-
-{% block main %}
-
-  <h1>{{ title | capitalize }} [ === ]</h1>
-   <small>группа: операторы равенства</small>
-  <p>Оператор возвращает true, если операнды строго равны. В отличии от обычного оператора 'равно', он не не приводит операнды к одному типу.</p>
-
-  {% set example_id = 'identity' %}
-  {% set numeration = false %}
-  {% set split      = false %}
-  {% set html       = false %}
-  {% set njk        = false %}
-  {% set css        = false %}
-  {% set js         = true %}
-  {% set demo       = false %}
-  {% include codeExample %}
-  <table>
-    <tr>
-      <td>true</td>
-      <td>обычный оператор <b>равно</b> привел операнды к одному типу и сравнил (1 равен 1)</td>
-    </tr>
-    <tr>
-      <td>false</td>
-      <td>оператор <b>строгое равно</b> не приводит операнды к одному типу, поэтому false (число 1 не равно строке '1')</td>
-    </tr>
-    <tr>
-      <td>true</td>
-      <td>число 1 равно числу 1</td>
-    </tr>
-  </table>
-
-{% endblock %}
+{% set example_id = 'identity' %}
+{% set numeration = false %}
+{% set split      = false %}
+{% set html       = false %}
+{% set njk        = false %}
+{% set css        = false %}
+{% set js         = true %}
+{% set demo       = false %}
+{% include codeExample %}
+<table>
+  <tr>
+    <td>true</td>
+    <td>обычный оператор <b>равно</b> привел операнды к одному типу и сравнил (1 равен 1)</td>
+  </tr>
+  <tr>
+    <td>false</td>
+    <td>оператор <b>строгое равно</b> не приводит операнды к одному типу, поэтому false (число 1 не равно строке '1')</td>
+  </tr>
+  <tr>
+    <td>true</td>
+    <td>число 1 равно числу 1</td>
+  </tr>
+</table>

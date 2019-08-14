@@ -1,8 +1,12 @@
 {% extends "base.njk" %}
 
-{# variables #}
-
-{# ===================================== #}
+{# СТРОГОЕ СООТВЕТСТВИЕ С ИМЕНАМИ В ФАЙЛОВОЙ СИСТЕМЕ #}
+{# URL: site / category / subcategory / segment / subsegment / #}
+{% set file_name   = '' %}
+{% set category    = '' %}
+{% set subcategory = '' %}
+{% set segment     = '' %}
+{% set subsegment  = '' %}
 
 {% block head %}
   <title>Web Technology Reference</title>

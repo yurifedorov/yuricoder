@@ -1,13 +1,10 @@
 {% extends "base.njk" %}
 
-{# variables #}
-{% set title           = 'subtraction' %}
-{% set category        = 'docs' %}
-{% set subcategory     = 'javascript' %}
-{% set segment         = 'operators' %}
-{% set subsegment_del  = 'delete' %}
-
-{# ===================================== #}
+{% set file_name   = 'subtraction' %}
+{% set category    = 'docs' %}
+{% set subcategory = 'javascript' %}
+{% set segment     = 'operators' %}
+{% set subsegment  = '' %}
 
 {% block head %}
   <title>Subtraction operator in JavaScript</title>
@@ -20,26 +17,11 @@
 {% block aside_left %}{% include aside_left %}{% endblock %}
 
 {% block main %}
-
   <h1>Операторы в JavaScript</h1>
-
-  {# список операторов #}
-  <section class="list">
-    {% include 'parts/navigation/js_operators.njk' %}
-  </section>
-
-  {# контент #}
-  <section class="content">
-    <h2>{{ title | capitalize }}</h2>
-    {% include 'content/docs/javascript/operators/subtraction.njk' %}
-  </section>
-
+  <section class="list">{% include js_operators %}</section>
+  <section class="content">{% include content %}</section>
 {% endblock %}
 
 {% block inlineScripts %}
-  {# инлайновые скрипты для этой страницы #}
-  <script>
-    let main = document.getElementsByTagName('main');
-    main[0].classList.add("main_two-columns");
-  </script>
+  <script>{% include add_class %}</script>
 {% endblock %}

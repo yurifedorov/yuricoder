@@ -1,16 +1,11 @@
 {% extends "base.njk" %}
 
-{# variables #}
-{% set title           = 'split' %}
-{% set category        = 'docs' %}
-{% set subcategory     = 'nunjucks' %}
-{% set segment         = 'мои шаблоны' %}
-{% set subsegment_del  = 'delete' %}
+{% set file_name   = 'split' %}
+{% set category    = 'docs' %}
+{% set subcategory = 'nunjucks' %}
+{% set segment     = 'templates' %}
+{% set subsegment  = 'split' %}
 
-{# путь к примерам code-example-beta [НЕ УДАЛЯТЬ] #}
-{% set example_dir    = 'examples/docs/nunjucks/templates/split/' %}
-
-{# <head> #}
 {% block head %}
   <title>Управление шириной блоков с помощью мыши (split)</title>
   <meta name="description" content="Блок, состоящий нескольких контейнеров, где каждый из них можно сузить/расширить." />

@@ -1,0 +1,23 @@
+<h2>{{ file_name | capitalize }}</h2>
+<p>Преобразует строковое значение в числовое.</p>
+
+{% set example_id = 'unary_plus' %}
+{% set numeration = false %}
+{% set split      = false %}
+{% set html       = false %}
+{% set njk        = false %}
+{% set css        = false %}
+{% set js         = true %}
+{% set demo       = false %}
+{% include codeExample %}
+
+<table>
+  <tr>
+    <td>12</td>
+    <td>произойдет обычная конкатенация строк</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>сначала выполнится преобразование в число, затем сложение</td>
+  </tr>
+</table>

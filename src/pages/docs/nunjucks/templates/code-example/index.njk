@@ -1,14 +1,10 @@
 {% extends "base.njk" %}
 
-{# variables #}
-{% set title           = 'codeExample (описание)' %}
-{% set category        = 'docs' %}
-{% set subcategory     = 'nunjucks' %}
-{% set segment         = 'мои шаблоны' %}
-{% set subsegment_del  = 'delete' %}
-
-{# путь к примерам code-example-beta [НЕ УДАЛЯТЬ] #}
-{% set example_dir    = 'examples/docs/nunjucks/templates/code-example/' %}
+{% set file_name   = 'code-example' %}
+{% set category    = 'docs' %}
+{% set subcategory = 'nunjucks' %}
+{% set segment     = 'templates' %}
+{% set subsegment  = 'code-example' %}
 
 {# <head> #}
 {% block head %}

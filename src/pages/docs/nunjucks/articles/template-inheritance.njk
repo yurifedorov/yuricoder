@@ -1,17 +1,11 @@
 {% extends "base.njk" %}
 
-{# variables #}
-{% set title          = 'наследование шаблонов' %}
-{% set category       = 'docs' %}
-{% set subcategory    = 'nunjucks' %}
-{% set segment_del    = 'delete' %}
-{% set subsegment_del = 'delete' %}
-{% set path          = '../' %}
+{% set file_name   = 'template-inheritance' %}
+{% set category    = 'docs' %}
+{% set subcategory = 'nunjucks' %}
+{% set segment     = 'articles' %}
+{% set subsegment  = 'template-inheritance' %}
 
-{# путь к примерам code-example-beta [НЕ УДАЛЯТЬ] #}
-{% set example_dir    = 'examples/docs/nunjucks/template-inheritance/' %}
-
-{# <head> #}
 {% block head %}
   <title>Наследование шаблонов в Nunjucks</title>
   <meta name="description" content="Самая сильная сторона Nunjucks - это возможность создавать шаблоны для каждого отдельно взятого компонента веб-сайта." />

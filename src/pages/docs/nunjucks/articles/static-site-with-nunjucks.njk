@@ -1,18 +1,13 @@
 {% extends "base.njk" %}
 
-{# variables #}
-{% set title          = 'cборка статического сайта с Nunjucks' %}
+{% set file_name      = 'static-site-with-nunjucks' %}
 {% set category       = 'docs' %}
 {% set subcategory    = 'nunjucks' %}
-{% set segment_del    = 'delete' %}
-{% set subsegment_del = 'delete' %}
-{% set path = '../' %}
-
-{# путь к примерам code-example-beta [НЕ УДАЛЯТЬ] #}
-{% set example_dir    = 'examples/docs/nunjucks/static-site-with-nunjucks/' %}
+{% set segment        = 'articles' %}
+{% set subsegment     = 'static-site-with-nunjucks' %}
 
 {% block head %}
-  <title>{{ title | capitalize }}</title>
+  <title>Cборка статического сайта с Nunjucks</title>
   <meta name="description" content="Как Nunjucks собирает веб-страницы? Пример сборки простого сайта из двух страниц с одинаковым 'хедером' и 'футером'." />
   <link rel="stylesheet" href="{{prism_css}}">
   <script src="{{prism_js}}" async></script>

@@ -1,13 +1,11 @@
 {% extends "base.njk" %}
 
-{# variables #}
-{% set title           = 'tile' %}
-{% set category        = 'справочник' %}
-{% set subcategory     = 'nunjucks' %}
-{% set segment         = 'мои шаблоны' %}
-{% set subsegment_del  = 'delete' %}
+{% set file_name   = 'tile' %}
+{% set category    = 'docs' %}
+{% set subcategory = 'nunjucks' %}
+{% set segment     = 'templates' %}
+{% set subsegment  = 'tile' %}
 
-{# <head> #}
 {% block head %}
   <title>Шаблон для генерации плитки</title>
   <meta name="description" content="Шаблон для вывода блока 'плитка'." />
@@ -16,7 +14,6 @@
 {% block aside_top %}{% include aside_top %}{% endblock %}
 {% block aside_left %}{% include aside_left %}{% endblock %}
 
-{# <body> #}
 {% block main %}
 
   <h1>Tile</h1>

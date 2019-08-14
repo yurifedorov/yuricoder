@@ -1,16 +1,11 @@
 {% extends "base.njk" %}
 
-{# variables #}
-{% set title           = 'codeExample (test)' %}
-{% set category        = 'docs' %}
-{% set subcategory     = 'nunjucks' %}
-{% set segment         = 'мои шаблоны' %}
-{% set subsegment_del  = 'delete' %}
+{% set file_name   = '' %}
+{% set category    = 'docs' %}
+{% set subcategory = 'nunjucks' %}
+{% set segment     = 'templates' %}
+{% set subsegment  = 'code-example' %}
 
-{# путь к примерам code-example-beta [НЕ УДАЛЯТЬ] #}
-{% set example_dir    = 'parts/blocks-beta/code-example-beta/examples/' %}
-
-{# <head> #}
 {% block head %}
   <title>Демонстрация примеров кода на сайте</title>
   <meta name="description" content="Все необходимое для вывода примеров html, js, css и других примеров кода." />
@@ -55,16 +50,16 @@
   <h1>codeExample - ТЕСТЫ</h1>
 
   <div class="wrapper_grid">
-
+{#
     <section>
       <h4>Код (с нумерацией строк)</h4>
-      {% set example_id = 'example1' %} {# требуется для работы кнопок checkbox/label #}
-      {% set numeration = true %} {# true = включен / false = отключен #}
-      {% set split      = false %} {# true = включеy / false = отключена #}
-      {% set html       = false %} {# путь к примеру html #}
-      {% set njk        = false %} {# путь к примеру njk #}
-      {% set css        = false %} {# путь к примеру css #}
-      {% set js         = true %} {# путь к примеру js #}
+      {% set example_id = 'example1' %}
+      {% set numeration = true %}
+      {% set split      = false %}
+      {% set html       = false %}
+      {% set njk        = false %}
+      {% set css        = false %}
+      {% set js         = true %}
       {% set demo       = false %}
       {% include codeExample_beta %}
     </section>
@@ -141,7 +136,7 @@
       {% set demo       = 'example6-demo.njk' %}
       {% include codeExample_beta %}
     </section>
-
+#}
   </div>
 
   <br>

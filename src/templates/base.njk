@@ -16,6 +16,7 @@
 9)  [библиотеки]  peppermint_css   - обязательные стили для работы "peppermint"
 10) [библиотеки]  peppermint_init  - инициализация и настройки слайдера "peppermint"
 11) [скрипты]     autocomplete     - скрипт для автозаполнения форм при вводе
+--) [скрипты]     add_class        - добавляет класс к блоку
 12) [шаблоны]     header_block     - хедер
 13) [шаблоны]     aside            - aside
 14) [шаблоны]     footer_block     - футер
@@ -57,13 +58,19 @@
 {# scripts #}
 {% set ContainerQueries = 'parts/scripts/resize-observer-min.js' %} {# 3 #}
 {% set split_init       = 'parts/scripts/split_init.mjs' %} {# 5 #}
+{% set add_class        = 'parts/scripts/add_class.js' %} {# -- #}
 
 {# Libs #}
 {% set prism_js                = '/libs/prism/prism-min.js' %} {# 6 #}
 {% set prism_css               = '/libs/prism/prism-min.css' %} {# 7 #}
 {% set split_js                = '/libs/split-js/split-min.js' %} {# 4 #}
 
-{# Служебные переменные #}
+{# Paths: site / category / subcategory / segment /  subsegment / file_name #}
+{% set example_dir = 'examples/' + category + '/' + subcategory + '/' + segment + '/' + subsegment + '/' %}
+{% set content     = 'content/' + category + '/' + subcategory + '/' + segment + '/' + subsegment + '/' + file_name + '.njk' %}
+
+{# Navigation #}
+{% set js_operators = 'parts/navigation/js_operators.njk' %}
 
 {# ================================================================================== #}
 

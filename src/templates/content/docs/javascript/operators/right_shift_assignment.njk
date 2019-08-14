@@ -1,41 +1,12 @@
-{% extends "base.njk" %}
+<h2>{{ file_name | capitalize }}</h2>
+<p>Оператор перемещает указанное количество битов вправо и присваивает результат переменной.</p>
 
-{# variables #}
-{% set title           = 'right shift assignment' %}
-{% set category        = 'docs' %}
-{% set subcategory     = 'javascript' %}
-{% set segment         = 'operators' %}
-{% set subsegment_del  = 'delete' %}
-
-{# путь к примерам code-example-beta [НЕ УДАЛЯТЬ] #}
-{% set example_dir    = 'examples/docs/javascript/operators/' %}
-
-{# ===================================== #}
-
-{% block head %}
-  <title>Right shift assignment operator in JavaScript</title>
-  <meta name="description" content="Right shift assignment moves the specified number of bits to the right and assigns the result to a variable." />
-  <link rel="stylesheet" href="{{prism_css}}">
-  <script src="{{prism_js}}" async></script>
-{% endblock %}
-
-{% block aside_top %}{% include aside_top %}{% endblock %}
-{% block aside_left %}{% include aside_left %}{% endblock %}
-
-{% block main %}
-
-  <h1>Right shift assignment [ >>= ]</h1>
-  <small>группа: операторы присваивания</small>
-  <p>Оператор перемещает указанное количество битов вправо и присваивает результат переменной.</p>
-
-  {% set example_id = 'right_shift_assignment' %}
-  {% set numeration = false %}
-  {% set split      = false %}
-  {% set html       = false %}
-  {% set njk        = false %}
-  {% set css        = false %}
-  {% set js         = true %}
-  {% set demo       = false %}
-  {% include codeExample %}
-
-{% endblock %}
+{% set example_id = 'right_shift_assignment' %}
+{% set numeration = false %}
+{% set split      = false %}
+{% set html       = false %}
+{% set njk        = false %}
+{% set css        = false %}
+{% set js         = true %}
+{% set demo       = false %}
+{% include codeExample %}

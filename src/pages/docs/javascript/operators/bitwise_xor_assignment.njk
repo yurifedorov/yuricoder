@@ -1,16 +1,10 @@
 {% extends "base.njk" %}
 
-{# variables #}
-{% set title           = 'bitwise xor assignment' %}
-{% set category        = 'docs' %}
-{% set subcategory     = 'javascript' %}
-{% set segment         = 'operators' %}
-{% set subsegment_del  = 'delete' %}
-
-{# путь к примерам code-example-beta [НЕ УДАЛЯТЬ] #}
-{% set example_dir    = 'examples/docs/javascript/operators/' %}
-
-{# ===================================== #}
+{% set file_name   = 'bitwise_xor_assignment' %}
+{% set category    = 'docs' %}
+{% set subcategory = 'javascript' %}
+{% set segment     = 'operators' %}
+{% set subsegment  = '' %}
 
 {% block head %}
   <title>Bitwise XOR assignment operator in JavaScript</title>
@@ -23,19 +17,11 @@
 {% block aside_left %}{% include aside_left %}{% endblock %}
 
 {% block main %}
+  <h1>Операторы в JavaScript</h1>
+  <section class="list">{% include js_operators %}</section>
+  <section class="content">{% include content %}</section>
+{% endblock %}
 
-  <h1>Bitwise XOR assignment [ ^= ]</h1>
-  <small>группа: операторы присваивания</small>
-  <p>Оператор использует двоичное представление обоих операндов, выполняет над ними побитовую операцию XOR и присваивает результат переменной.</p>
-
-  {% set example_id = 'bitwise_xor_assignment' %}
-  {% set numeration = false %}
-  {% set split      = false %}
-  {% set html       = false %}
-  {% set njk        = false %}
-  {% set css        = false %}
-  {% set js         = true %}
-  {% set demo       = false %}
-  {% include codeExample %}
-
+{% block inlineScripts %}
+  <script>{% include add_class %}</script>
 {% endblock %}

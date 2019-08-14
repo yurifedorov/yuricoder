@@ -1,16 +1,10 @@
 {% extends "base.njk" %}
 
-{# variables #}
-{% set title           = 'logical or' %}
-{% set category        = 'docs' %}
-{% set subcategory     = 'javascript' %}
-{% set segment         = 'operators' %}
-{% set subsegment_del  = 'delete' %}
-
-{# путь к примерам code-example-beta [НЕ УДАЛЯТЬ] #}
-{% set example_dir    = 'examples/docs/javascript/operators/' %}
-
-{# ===================================== #}
+{% set file_name   = 'logical_or' %}
+{% set category    = 'docs' %}
+{% set subcategory = 'javascript' %}
+{% set segment     = 'operators' %}
+{% set subsegment  = '' %}
 
 {% block head %}
   <title>Logical OR operator in JavaScript</title>
@@ -23,39 +17,11 @@
 {% block aside_left %}{% include aside_left %}{% endblock %}
 
 {% block main %}
+  <h1>Операторы в JavaScript</h1>
+  <section class="list">{% include js_operators %}</section>
+  <section class="content">{% include content %}</section>
+{% endblock %}
 
-  <h1>Logical OR [ || ]</h1>
-  <small>группа: логические операторы</small>
-  <p>Если хотя бы один аргумент <b>true</b>, то возвращается <b>true</b>, иначе <b>false</b> .</p>
-
-  {% set example_id = 'logical_or' %}
-  {% set numeration = false %}
-  {% set split      = false %}
-  {% set html       = false %}
-  {% set njk        = false %}
-  {% set css        = false %}
-  {% set js         = true %}
-  {% set demo       = false %}
-  {% include codeExample %}
-
-  <section>
-  <h2>For example</h2>
-  <p>Если один из аргументов <b>true</b>, то выводится сообщение 'success'.</p>
-  {% set example_id = 'logical_or_example' %}
-  {% set numeration = true %}
-  {% set split      = false %}
-  {% set html       = false %}
-  {% set njk        = false %}
-  {% set css        = false %}
-  {% set js         = true %}
-  {% set demo       = false %}
-  {% include codeExample %}
-  <table>
-    <tr>
-      <td>b = '0'</td>
-      <td>Если значение аргумента не логического типа (true или false), то в целях вычисления оно к нему приводится автоматически. <br><br> Число 1 воспринимается как <b>true</b>, число 0 <b>false</b>. </td>
-    </tr>
-  </table>
-  </section>
-
+{% block inlineScripts %}
+  <script>{% include add_class %}</script>
 {% endblock %}

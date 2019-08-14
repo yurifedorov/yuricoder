@@ -1,14 +1,11 @@
 {% extends "base.njk" %}
 
 {# variables #}
-{% set title           = 'tile_flip' %}
-{% set category        = 'справочник' %}
-{% set subcategory     = 'css' %}
-{% set segment         = 'tile' %}
-{% set subsegment_del  = 'delete' %}
-
-{# путь к примерам #}
-{% set example_dir    = 'examples/docs/css/tile/' %}
+{% set file_name   = 'tile_flip' %}
+{% set category    = 'docs' %}
+{% set subcategory = 'css' %}
+{% set segment     = 'tile' %}
+{% set subsegment  = '' %}
 
 {# ===================================== #}
 
@@ -47,6 +44,5 @@
 {% endblock %}
 
 {% block inlineScripts %}
-  {# инлайновые скрипты для этой страницы #}
   <script>{% include split_init %}</script>
 {% endblock %}

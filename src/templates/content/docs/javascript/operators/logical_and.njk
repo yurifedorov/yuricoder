@@ -1,55 +1,26 @@
-{% extends "base.njk" %}
+<h2>{{ file_name | capitalize }}</h2>
+<p>Оператор логического И возвращает <b>true</b>, если оба аргумента истинны, а иначе – <b>false</b>.</p>
 
-{# variables #}
-{% set title           = 'logical and' %}
-{% set category        = 'docs' %}
-{% set subcategory     = 'javascript' %}
-{% set segment         = 'operators' %}
-{% set subsegment_del  = 'delete' %}
+{% set example_id = 'logical_and' %}
+{% set numeration = false %}
+{% set split      = false %}
+{% set html       = false %}
+{% set njk        = false %}
+{% set css        = false %}
+{% set js         = true %}
+{% set demo       = false %}
+{% include codeExample %}
 
-{# путь к примерам code-example-beta [НЕ УДАЛЯТЬ] #}
-{% set example_dir    = 'examples/docs/javascript/operators/' %}
-
-{# ===================================== #}
-
-{% block head %}
-  <title>Logical AND operator in JavaScript</title>
-  <meta name="description" content="The logical AND operator returns true if both arguments are true, otherwise false." />
-  <link rel="stylesheet" href="{{prism_css}}">
-  <script src="{{prism_js}}" async></script>
-{% endblock %}
-
-{% block aside_top %}{% include aside_top %}{% endblock %}
-{% block aside_left %}{% include aside_left %}{% endblock %}
-
-{% block main %}
-
-  <h1>Logical AND [ &amp; ]</h1>
-  <small>группа: логические операторы</small>
-  <p>Оператор логического И возвращает <b>true</b>, если оба аргумента истинны, а иначе – <b>false</b>.</p>
-
-  {% set example_id = 'logical_and' %}
-  {% set numeration = false %}
-  {% set split      = false %}
-  {% set html       = false %}
-  {% set njk        = false %}
-  {% set css        = false %}
-  {% set js         = true %}
-  {% set demo       = false %}
-  {% include codeExample %}
-
-  <section>
-  <h2>For example</h2>
-  <p>Если ВСЕ аргументы <b>true</b>, то выводится сообщение 'success'.</p>
-  {% set example_id = 'logical_and_example' %}
-  {% set numeration = true %}
-  {% set split      = false %}
-  {% set html       = false %}
-  {% set njk        = false %}
-  {% set css        = false %}
-  {% set js         = true %}
-  {% set demo       = false %}
-  {% include codeExample %}
-  </section>
-
-{% endblock %}
+<section>
+<h2>For example</h2>
+<p>Если ВСЕ аргументы <b>true</b>, то выводится сообщение 'success'.</p>
+{% set example_id = 'logical_and_example' %}
+{% set numeration = true %}
+{% set split      = false %}
+{% set html       = false %}
+{% set njk        = false %}
+{% set css        = false %}
+{% set js         = true %}
+{% set demo       = false %}
+{% include codeExample %}
+</section>

@@ -1,16 +1,11 @@
 {% extends "base.njk" %}
 
-{# variables #}
-{% set title        = 'проблемы' %} {# Заголовок #}
-{% set category     = 'docs' %} {# категория #}
-{% set subcategory  = 'инструменты' %} {# подкатегория #}
-{% set segment_del  = 'delete' %} {# подкатегория #}
-{% set path = '../' %}
+{% set file_name   = 'issue-1' %}
+{% set category    = 'docs' %}
+{% set subcategory = 'nunjucks' %}
+{% set segment     = 'issues' %}
+{% set subsegment  = 'issue-1' %}
 
-{# путь к примерам code-example-beta [НЕ УДАЛЯТЬ] #}
-{% set example_dir    = 'examples/docs/nunjucks/issues/issue-1/' %}
-
-{# <head> #}
 {% block head %}
   <title>Не возможно задать имя массива через переменную</title>
   <meta name="description" content="Неприятные ситуации в процессе работы с шаблонизатором Nunjucks" />
@@ -18,7 +13,6 @@
   <script src="{{prism_js}}" async></script>
 {% endblock %}
 
-{# <body> #}
 {% block main %}
 
   <h1>задать имя массива через переменную</h1>

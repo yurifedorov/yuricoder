@@ -1,19 +1,13 @@
 {% extends "base.njk" %}
 
-{# variables #}
-{% set title           = 'confirm()' %}
-{% set category        = 'docs' %}
-{% set subcategory     = 'javascript' %}
-{% set segment         = 'methods' %}
-{% set subsegment_del  = 'delete' %}
-
-{# путь к примерам code-example-beta [НЕ УДАЛЯТЬ] #}
-{% set example_dir    = 'examples/docs/javascript/methods/' %}
-
-{# ===================================== #}
+{% set file_name   = 'confirm' %}
+{% set category    = 'docs' %}
+{% set subcategory = 'javascript' %}
+{% set segment     = 'methods' %}
+{% set subsegment  = '' %}
 
 {% block head %}
-  <title>{{title}} method in JavaScript</title>
+  <title>{{file_name}}() method in JavaScript</title>
   <meta name="description" content="Отображает диалог с сообщением, на которое пользователь должен ответить 'OK' или 'Отмена'." />
   <link rel="stylesheet" href="{{prism_css}}">
   <script src="{{prism_js}}" async></script>
@@ -31,7 +25,7 @@
   </section>
 
   <section class="content">
-    <h2>{{ title}}</h2>
+    <h2>{{file_name}}()</h2>
     <p>Отображает предупреждающее диалоговое окно.</p>
     {% set example_id = 'confirm_method' %}
     {% set numeration = true %}
@@ -47,9 +41,10 @@
 {% endblock %}
 
 {% block inlineScripts %}
-  {# инлайновые скрипты для этой страницы #}
+
   <script>
     let main = document.getElementsByTagName('main');
     main[0].classList.add("main_two-columns");
   </script>
+  
 {% endblock %}

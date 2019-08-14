@@ -1,14 +1,11 @@
 {% extends "base.njk" %}
 
-{# variables #}
 {% set title           = 'nunjucks' %}
 {% set category        = 'docs' %}
 {% set subcategory_del = 'delete' %}
 {% set segment_del     = 'delete' %}
 {% set subsegment_del  = 'delete' %}
-{% set path            = '../' %}
 
-{# <head> #}
 {% block head %}
   <title>{{ category | capitalize }} - {{ title | capitalize }}</title>
   <meta name="description" content="Полезная информация по использованию шаблонизатора Nunjucks" />

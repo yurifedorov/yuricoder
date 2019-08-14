@@ -1,16 +1,10 @@
 {% extends "base.njk" %}
 
-{# variables #}
-{% set title        = 'increment' %}
-{% set category        = 'docs' %}
-{% set subcategory     = 'javascript' %}
-{% set segment         = 'operators' %}
-{% set subsegment_del  = 'delete' %}
-
-{# путь к примерам code-example-beta [НЕ УДАЛЯТЬ] #}
-{% set example_dir    = 'examples/docs/javascript/operators/' %}
-
-{# ===================================== #}
+{% set file_name   = 'increment' %}
+{% set category    = 'docs' %}
+{% set subcategory = 'javascript' %}
+{% set segment     = 'operators' %}
+{% set subsegment  = '' %}
 
 {% block head %}
   <title>The increment operator in JavaScript</title>
@@ -23,60 +17,11 @@
 {% block aside_left %}{% include aside_left %}{% endblock %}
 
 {% block main %}
+  <h1>Операторы в JavaScript</h1>
+  <section class="list">{% include js_operators %}</section>
+  <section class="content">{% include content %}</section>
+{% endblock %}
 
-  <h1>{{ title | capitalize }} [ ++ ]</h1>
-  <small>группа: инкремент и декремент</small>
-  <p>Увеличивает значение на 1, существуют два вида инкремента и действуют они по-разному.</p>
-
-  <section>
-    <h2>Postfix increment</h2>
-    <p>Увеличивает значение на 1, но при этом возвращает старое значение.</p>
-    {% set example_id = 'postfix_increment' %}
-    {% set numeration = false %}
-    {% set split      = false %}
-    {% set html       = false %}
-    {% set njk        = false %}
-    {% set css        = false %}
-    {% set js         = true %}
-    {% set demo       = false %}
-    {% include codeExample %}
-    <table>
-      <tr>
-        <td>1</td>
-        <td>значение <b>i</b> увелилось на 1 и сохранилось в <b>a</b> , а вывелось старое</td>
-      </tr>
-      <tr>
-        <td>2</td>
-        <td>в качестве проверки выводим <b>i</b> и видим, что значение действительно увеличилось</td>
-      </tr>
-    </table>
-  </section>
-
-  <section>
-    <h2>Prefix increment</h2>
-    <p>Увеличивает значение на 1 и возвращает новое значение.</p>
-    {% set example_id = 'prefix_increment' %}
-    {% set numeration = false %}
-    {% set split      = false %}
-    {% set html       = false %}
-    {% set njk        = false %}
-    {% set css        = false %}
-    {% set js         = true %}
-    {% set demo       = false %}
-    {% include codeExample %}
-    <table>
-      <tr>
-        <td>2</td>
-        <td>значение <b>i</b> увелилось на 1 и сохранилось в <b>a</b> , вывелось уже измененное</td>
-      </tr>
-      <tr>
-        <td>2</td>
-        <td>в качестве проверки выводим <b>i</b> и видим, что значение действительно увеличилось</td>
-      </tr>
-    </table>
-  </section>
-
-  <b>Инкремент/декремент можно применить только к переменной: 5++ даст ошибку.</b>
-
-
+{% block inlineScripts %}
+  <script>{% include add_class %}</script>
 {% endblock %}

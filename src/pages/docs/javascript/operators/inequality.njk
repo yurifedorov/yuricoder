@@ -1,16 +1,10 @@
 {% extends "base.njk" %}
 
-{# variables #}
-{% set title           = 'inequality' %}
-{% set category        = 'docs' %}
-{% set subcategory     = 'javascript' %}
-{% set segment         = 'operators' %}
-{% set subsegment_del  = 'delete' %}
-
-{# путь к примерам code-example-beta [НЕ УДАЛЯТЬ] #}
-{% set example_dir    = 'examples/docs/javascript/operators/' %}
-
-{# ===================================== #}
+{% set file_name   = 'inequality' %}
+{% set category    = 'docs' %}
+{% set subcategory = 'javascript' %}
+{% set segment     = 'operators' %}
+{% set subsegment  = '' %}
 
 {% block head %}
   <title>Inequality operator in JavaScript</title>
@@ -23,37 +17,11 @@
 {% block aside_left %}{% include aside_left %}{% endblock %}
 
 {% block main %}
+  <h1>Операторы в JavaScript</h1>
+  <section class="list">{% include js_operators %}</section>
+  <section class="content">{% include content %}</section>
+{% endblock %}
 
-  <h1>{{ title | capitalize }} [ != ]</h1>
-  <small>группа: операторы равенства</small>
-  <p>Оператор возвращает true, если операнды не равны.</p>
-
-  {% set example_id = 'inequality' %}
-  {% set numeration = false %}
-  {% set split      = false %}
-  {% set html       = false %}
-  {% set njk        = false %}
-  {% set css        = false %}
-  {% set js         = true %}
-  {% set demo       = false %}
-  {% include codeExample %}
-  <table>
-    <tr>
-      <td>false</td>
-      <td>5 равно 5</td>
-    </tr>
-    <tr>
-      <td>false</td>
-      <td>содержимое строк одинаковое</td>
-    </tr>
-    <tr>
-      <td>true</td>
-      <td>содержимое строк разное</td>
-    </tr>
-    <tr>
-      <td>true</td>
-      <td>5 не равно 4</td>
-    </tr>
-  </table>
-
+{% block inlineScripts %}
+  <script>{% include add_class %}</script>
 {% endblock %}

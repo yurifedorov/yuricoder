@@ -1,51 +1,22 @@
-{% extends "base.njk" %}
+<h2>{{ file_name | capitalize }}</h2>
+<p>Оператор <b>больше ( > )</b>  возвращает <b>true</b>, если левый операнд больше правого операнда или <b>false</b> если наоборот.</p>
 
-{# variables #}
-{% set title        = 'greater than operator' %}
-{% set category        = 'docs' %}
-{% set subcategory     = 'javascript' %}
-{% set segment         = 'operators' %}
-{% set subsegment_del  = 'delete' %}
-
-{# путь к примерам code-example-beta [НЕ УДАЛЯТЬ] #}
-{% set example_dir    = 'examples/docs/javascript/operators/' %}
-
-{# ===================================== #}
-
-{% block head %}
-  <title>Greater than operator (>) in JavaScript</title>
-  <meta name="description" content="Оператор 'больше' возвращает true, если левый операнд больше правого операнда." />
-  <link rel="stylesheet" href="{{prism_css}}">
-  <script src="{{prism_js}}" async></script>
-{% endblock %}
-
-{% block aside_top %}{% include aside_top %}{% endblock %}
-{% block aside_left %}{% include aside_left %}{% endblock %}
-
-{% block main %}
-
-  <h1>{{ title | capitalize }} [ &gt; ]</h1>
-  <small>группа: операторы сравнения</small>
-  <p>Оператор <b>больше ( > )</b>  возвращает <b>true</b>, если левый операнд больше правого операнда или <b>false</b> если наоборот.</p>
-
-  {% set example_id = 'greater_than' %}
-  {% set numeration = false %}
-  {% set split      = false %}
-  {% set html       = false %}
-  {% set njk        = false %}
-  {% set css        = false %}
-  {% set js         = true %}
-  {% set demo       = false %}
-  {% include codeExample %}
-  <table>
-    <tr>
-      <td>true</td>
-      <td>потому что <b>5</b> больше чем <b>1</b></td>
-    </tr>
-    <tr>
-      <td>false</td>
-      <td>потому что <b>1</b> не может быть больше чем <b>5</b></td>
-    </tr>
-  </table>
-
-{% endblock %}
+{% set example_id = 'greater_than' %}
+{% set numeration = false %}
+{% set split      = false %}
+{% set html       = false %}
+{% set njk        = false %}
+{% set css        = false %}
+{% set js         = true %}
+{% set demo       = false %}
+{% include codeExample %}
+<table>
+  <tr>
+    <td>true</td>
+    <td>потому что <b>5</b> больше чем <b>1</b></td>
+  </tr>
+  <tr>
+    <td>false</td>
+    <td>потому что <b>1</b> не может быть больше чем <b>5</b></td>
+  </tr>
+</table>

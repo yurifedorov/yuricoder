@@ -1,16 +1,10 @@
 {% extends "base.njk" %}
 
-{# variables #}
-{% set title        = 'assignment' %}
-{% set category        = 'docs' %}
-{% set subcategory     = 'javascript' %}
-{% set segment         = 'operators' %}
-{% set subsegment_del  = 'delete' %}
-
-{# путь к примерам code-example-beta [НЕ УДАЛЯТЬ] #}
-{% set example_dir    = 'examples/docs/javascript/operators/' %}
-
-{# ===================================== #}
+{% set file_name   = 'assignment' %}
+{% set category    = 'docs' %}
+{% set subcategory = 'javascript' %}
+{% set segment     = 'operators' %}
+{% set subsegment  = '' %}
 
 {% block head %}
   <title>Assignment operator in JavaScript</title>
@@ -23,101 +17,11 @@
 {% block aside_left %}{% include aside_left %}{% endblock %}
 
 {% block main %}
-
-  <h1>{{ title | capitalize }} [ = ]</h1>
-  <small>группа: операторы присваивания</small>
-  <p>Присваивание производится знаком равно ( = ).</p>
-
-  <section>
-    {% set example_id = 'assignment' %}
-    {% set numeration = false %}
-    {% set split      = false %}
-    {% set html       = false %}
-    {% set njk        = false %}
-    {% set css        = false %}
-    {% set js         = true %}
-    {% set demo       = false %}
-    {% include codeExample %}
-  </section>
-
-  <section>
-    <h2>Приоритет присваивания</h2>
-    <p>Оператор присваивания имеет низкий приоритет, поэтому сначала всегда производится арифметика, а затем результат присваивается переменной.</p>
-    {% set example_id = 'assignment_priority' %}
-    {% set numeration = false %}
-    {% set split      = false %}
-    {% set html       = false %}
-    {% set njk        = false %}
-    {% set css        = false %}
-    {% set js         = true %}
-    {% set demo       = false %}
-    {% include codeExample %}
-    <table>
-      <tr>
-        <td>5</td>
-        <td>сначала выполнены арифметические операции, затем результат присваивается переменной <b>x</b></td>
-      </tr>
-    </table>
-  </section>
-
-  <section>
-    <h2>Направление присваивания</h2>
-    <p>Производится справа налево.</p>
-    {% set example_id = 'assignment_by_chain' %}
-    {% set numeration = false %}
-    {% set split      = false %}
-    {% set html       = false %}
-    {% set njk        = false %}
-    {% set css        = false %}
-    {% set js         = true %}
-    {% set demo       = false %}
-    {% include codeExample %}
-    <table>
-      <tr>
-        <td>4</td>
-        <td>сначала вычислится самое правое выражение 2+2 и присвоится переменной <b>c</b></td>
-      </tr>
-      <tr>
-        <td>4</td>
-        <td>затем <b>c</b> присвоится <b>b</b> (b = c)</td>
-      </tr>
-      <tr>
-        <td>4</td>
-        <td>затем <b>b</b> присвоится <b>a</b> (b = a)</td>
-      </tr>
-    </table>
-  </section>
-
-  <section>
-    <h2>Сокращенный синтаксис</h2>
-    <p>При помощи совмещённых операторов можно укорачивать запись</p>
-    {% set example_id = 'assignment_abbreviated_syntax' %}
-    {% set numeration = false %}
-    {% set split      = false %}
-    {% set html       = false %}
-    {% set njk        = false %}
-    {% set css        = false %}
-    {% set js         = true %}
-    {% set demo       = false %}
-    {% include codeExample %}
-    <table>
-      <tr>
-        <td>14</td>
-        <td>сначала <b>n + 5</b> (2 + 5), потом и <b>n * 2</b> (7 * 2)</td>
-      </tr>
-      <tr>
-        <td>14</td>
-        <td><b>n=7</b> (работает как n = n + 5), <b>n=14</b> (работает как n = n * 2)</td>
-      </tr>
-    </table>
-  </section>
-
+  <h1>Операторы в JavaScript</h1>
+  <section class="list">{% include js_operators %}</section>
+  <section class="content">{% include content %}</section>
 {% endblock %}
 
 {% block inlineScripts %}
-  {# инлайновые скрипты для этой страницы #}
-  <script>
-    let main = document.getElementsByTagName('main');
-    main[0].classList.add("main_two-columns");
-  </script>
+  <script>{% include add_class %}</script>
 {% endblock %}

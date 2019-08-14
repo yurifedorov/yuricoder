@@ -1,13 +1,10 @@
 {% extends "base.njk" %}
 
-{# variables #}
-{% set title           = 'methods' %}
-{% set category        = 'docs' %}
-{% set subcategory     = 'javascript' %}
-{% set segment_del     = 'delete' %}
-{% set subsegment_del  = 'delete' %}
-
-{# ===================================== #}
+{% set file_name   = 'methods' %}
+{% set category    = 'docs' %}
+{% set subcategory = 'javascript' %}
+{% set segment     = 'delete' %}
+{% set subsegment  = 'delete' %}
 
 {% block head %}
   <title>All methods in JavaScript</title>
@@ -32,9 +29,10 @@
 {% endblock %}
 
 {% block inlineScripts %}
-  {# инлайновые скрипты для этой страницы #}
+
   <script>
     let main = document.getElementsByTagName('main');
     main[0].classList.add("main_two-columns");
   </script>
+  
 {% endblock %}

@@ -1,61 +1,31 @@
-{% extends "base.njk" %}
+<h2>{{ file_name | capitalize }}</h2>
+<p>Если хотя бы один аргумент <b>true</b>, то возвращается <b>true</b>, иначе <b>false</b> .</p>
 
-{# variables #}
-{% set title           = 'logical or' %}
-{% set category        = 'docs' %}
-{% set subcategory     = 'javascript' %}
-{% set segment         = 'operators' %}
-{% set subsegment_del  = 'delete' %}
+{% set example_id = 'logical_or' %}
+{% set numeration = false %}
+{% set split      = false %}
+{% set html       = false %}
+{% set njk        = false %}
+{% set css        = false %}
+{% set js         = true %}
+{% set demo       = false %}
+{% include codeExample %}
 
-{# путь к примерам code-example-beta [НЕ УДАЛЯТЬ] #}
-{% set example_dir    = 'examples/docs/javascript/operators/' %}
 
-{# ===================================== #}
-
-{% block head %}
-  <title>Logical OR operator in JavaScript</title>
-  <meta name="description" content="The logical AND operator returns true if both arguments are true, otherwise false." />
-  <link rel="stylesheet" href="{{prism_css}}">
-  <script src="{{prism_js}}" async></script>
-{% endblock %}
-
-{% block aside_top %}{% include aside_top %}{% endblock %}
-{% block aside_left %}{% include aside_left %}{% endblock %}
-
-{% block main %}
-
-  <h1>Logical OR [ || ]</h1>
-  <small>группа: логические операторы</small>
-  <p>Если хотя бы один аргумент <b>true</b>, то возвращается <b>true</b>, иначе <b>false</b> .</p>
-
-  {% set example_id = 'logical_or' %}
-  {% set numeration = false %}
-  {% set split      = false %}
-  {% set html       = false %}
-  {% set njk        = false %}
-  {% set css        = false %}
-  {% set js         = true %}
-  {% set demo       = false %}
-  {% include codeExample %}
-
-  <section>
-  <h2>For example</h2>
-  <p>Если один из аргументов <b>true</b>, то выводится сообщение 'success'.</p>
-  {% set example_id = 'logical_or_example' %}
-  {% set numeration = true %}
-  {% set split      = false %}
-  {% set html       = false %}
-  {% set njk        = false %}
-  {% set css        = false %}
-  {% set js         = true %}
-  {% set demo       = false %}
-  {% include codeExample %}
-  <table>
-    <tr>
-      <td>b = '0'</td>
-      <td>Если значение аргумента не логического типа (true или false), то в целях вычисления оно к нему приводится автоматически. <br><br> Число 1 воспринимается как <b>true</b>, число 0 <b>false</b>. </td>
-    </tr>
-  </table>
-  </section>
-
-{% endblock %}
+<h2>For example</h2>
+<p>Если один из аргументов <b>true</b>, то выводится сообщение 'success'.</p>
+{% set example_id = 'logical_or_example' %}
+{% set numeration = true %}
+{% set split      = false %}
+{% set html       = false %}
+{% set njk        = false %}
+{% set css        = false %}
+{% set js         = true %}
+{% set demo       = false %}
+{% include codeExample %}
+<table>
+  <tr>
+    <td>b = '0'</td>
+    <td>Если значение аргумента не логического типа (true или false), то в целях вычисления оно к нему приводится автоматически. <br><br> Число 1 воспринимается как <b>true</b>, число 0 <b>false</b>. </td>
+  </tr>
+</table>

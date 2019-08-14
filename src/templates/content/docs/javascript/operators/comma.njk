@@ -1,43 +1,15 @@
-{% extends "base.njk" %}
+<h2>{{ file_name | capitalize }}</h2>
+<p>Позволяет перечислять выражения, разделяя их запятой.</p>
 
-{# variables #}
-{% set title        = 'comma' %}
-{% set category     = 'docs' %}
-{% set subcategory  = 'javascript' %}
-{% set segment      = 'operators' %}
-{% set subsegment_del  = 'delete' %}
+{% set example_id = 'comma' %}
+{% set numeration = false %}
+{% set split      = false %}
+{% set html       = false %}
+{% set njk        = false %}
+{% set css        = false %}
+{% set js         = true %}
+{% set demo       = false %}
+{% include codeExample %}
 
-{# путь к примерам code-example-beta [НЕ УДАЛЯТЬ] #}
-{% set example_dir    = 'examples/docs/javascript/operators/' %}
-
-{# ===================================== #}
-
-{% block head %}
-  <title>Operator comma in JavaScript</title>
-  <meta name="description" content="Оператор 'запятая' в JavaScript." />
-  <link rel="stylesheet" href="{{prism_css}}">
-  <script src="{{prism_js}}" async></script>
-{% endblock %}
-
-{% block aside_top %}{% include aside_top %}{% endblock %}
-{% block aside_left %}{% include aside_left %}{% endblock %}
-
-{% block main %}
-
-  <h1>{{ title | capitalize }} [ , ]</h1>
-  <p>Позволяет перечислять выражения, разделяя их запятой.</p>
-
-  {% set example_id = 'comma' %}
-  {% set numeration = false %}
-  {% set split      = false %}
-  {% set html       = false %}
-  {% set njk        = false %}
-  {% set css        = false %}
-  {% set js         = true %}
-  {% set demo       = false %}
-  {% include codeExample %}
-  
-  <p>Каждое из них вычисляется и отбрасывается, за исключением последнего, которое возвращается.</p>
-  <b>Запятая имеет самый низкий приоритет [ 1 ]</b>
-
-{% endblock %}
+<p>Каждое из них вычисляется и отбрасывается, за исключением последнего, которое возвращается.</p>
+<b>Запятая имеет самый низкий приоритет [ 1 ]</b>

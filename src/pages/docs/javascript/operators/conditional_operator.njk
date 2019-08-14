@@ -1,16 +1,10 @@
 {% extends "base.njk" %}
 
-{# variables #}
-{% set title           = 'conditional operator' %}
-{% set category        = 'docs' %}
-{% set subcategory     = 'javascript' %}
-{% set segment         = 'operators' %}
-{% set subsegment_del  = 'delete' %}
-
-{# путь к примерам code-example-beta [НЕ УДАЛЯТЬ] #}
-{% set example_dir    = 'examples/docs/javascript/operators/' %}
-
-{# ===================================== #}
+{% set file_name   = 'conditional_operator' %}
+{% set category    = 'docs' %}
+{% set subcategory = 'javascript' %}
+{% set segment     = 'operators' %}
+{% set subsegment  = '' %}
 
 {% block head %}
   <title>Conditional (ternary) operator in JavaScript</title>
@@ -23,33 +17,11 @@
 {% block aside_left %}{% include aside_left %}{% endblock %}
 
 {% block main %}
+  <h1>Операторы в JavaScript</h1>
+  <section class="list">{% include js_operators %}</section>
+  <section class="content">{% include content %}</section>
+{% endblock %}
 
-  <h1>Conditional (ternary) operator [ ? ]</h1>
-  <small>группа: логические операторы</small>
-  <p>Единственный оператор в JavaScript, который принимает три операнда.</p>
-
-  {% set example_id = 'conditional_operator' %}
-  {% set numeration = false %}
-  {% set split      = false %}
-  {% set html       = false %}
-  {% set njk        = false %}
-  {% set css        = false %}
-  {% set js         = true %}
-  {% set demo       = false %}
-  {% include codeExample %}
-
-  <section>
-    <h2>For example</h2>
-    <p>Проверяется условие: если <b>x == 4,</b> значит <b>true</b> (ответ правильный), иначе <b>false</b>.</p>
-    {% set example_id = 'conditional_operator_example' %}
-    {% set numeration = true %}
-    {% set split      = false %}
-    {% set html       = false %}
-    {% set njk        = false %}
-    {% set css        = false %}
-    {% set js         = true %}
-    {% set demo       = false %}
-    {% include codeExample %}
-  </section>
-
+{% block inlineScripts %}
+  <script>{% include add_class %}</script>
 {% endblock %}

@@ -1,41 +1,12 @@
-{% extends "base.njk" %}
+<h2>{{ file_name | capitalize }}</h2>
+<p>Оператор использует двоичное представление обоих операндов, выполняет над ними побитовую операцию AND, затем присваивает результат переменной.</p>
 
-{# variables #}
-{% set title           = 'bitwise and assignment' %}
-{% set category        = 'docs' %}
-{% set subcategory     = 'javascript' %}
-{% set segment         = 'operators' %}
-{% set subsegment_del  = 'delete' %}
-
-{# путь к примерам code-example-beta [НЕ УДАЛЯТЬ] #}
-{% set example_dir    = 'examples/docs/javascript/operators/' %}
-
-{# ===================================== #}
-
-{% block head %}
-  <title>Bitwise AND assignment operator in JavaScript</title>
-  <meta name="description" content="Оператор использует двоичное представление обоих операндов, выполняет над ними побитовую операцию И, затем присваивает результат переменной." />
-  <link rel="stylesheet" href="{{prism_css}}">
-  <script src="{{prism_js}}" async></script>
-{% endblock %}
-
-{% block aside_top %}{% include aside_top %}{% endblock %}
-{% block aside_left %}{% include aside_left %}{% endblock %}
-
-{% block main %}
-
-  <h1>Bitwise AND assignment [ &amp;= ]</h1>
-  <small>группа: операторы присваивания</small>
-  <p>Оператор использует двоичное представление обоих операндов, выполняет над ними побитовую операцию AND, затем присваивает результат переменной.</p>
-
-  {% set example_id = 'bitwise_and_assignment' %}
-  {% set numeration = false %}
-  {% set split      = false %}
-  {% set html       = false %}
-  {% set njk        = false %}
-  {% set css        = false %}
-  {% set js         = true %}
-  {% set demo       = false %}
-  {% include codeExample %}
-
-{% endblock %}
+{% set example_id = 'bitwise_and_assignment' %}
+{% set numeration = false %}
+{% set split      = false %}
+{% set html       = false %}
+{% set njk        = false %}
+{% set css        = false %}
+{% set js         = true %}
+{% set demo       = false %}
+{% include codeExample %}

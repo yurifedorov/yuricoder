@@ -1,16 +1,10 @@
 {% extends "base.njk" %}
 
-{# variables #}
-{% set title           = 'lists' %}
-{% set category        = 'справочник' %}
-{% set subcategory     = 'css' %}
-{% set segment_del     = 'delete' %}
-{% set subsegment_del  = 'delete' %}
-
-{# путь к примерам #}
-{% set example_dir    = 'examples/docs/css/lists/' %}
-
-{# ===================================== #}
+{% set file_name   = 'lists' %}
+{% set category    = 'docs' %}
+{% set subcategory = 'css' %}
+{% set segment     = 'lists' %}
+{% set subsegment  = '' %}
 
 {% block head %}
   <title>Styling lists using the BEM methodology</title>

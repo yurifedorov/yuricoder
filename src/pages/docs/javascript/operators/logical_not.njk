@@ -1,16 +1,10 @@
 {% extends "base.njk" %}
 
-{# variables #}
-{% set title        = 'logical NOT' %}
-{% set category     = 'docs' %}
-{% set subcategory  = 'javascript' %}
-{% set segment      = 'operators' %}
-{% set subsegment_del  = 'delete' %}
-
-{# путь к примерам code-example-beta [НЕ УДАЛЯТЬ] #}
-{% set example_dir    = 'examples/docs/javascript/operators/' %}
-
-{# ===================================== #}
+{% set file_name   = 'logical_not' %}
+{% set category    = 'docs' %}
+{% set subcategory = 'javascript' %}
+{% set segment     = 'operators' %}
+{% set subsegment  = '' %}
 
 {% block head %}
   <title>Logical NOT (!) in JavaScript</title>
@@ -23,28 +17,11 @@
 {% block aside_left %}{% include aside_left %}{% endblock %}
 
 {% block main %}
+  <h1>Операторы в JavaScript</h1>
+  <section class="list">{% include js_operators %}</section>
+  <section class="content">{% include content %}</section>
+{% endblock %}
 
-  <h1>Logical NOT [ ! ]</h1>
-  <small>группа: унарные операторы</small>
-
-  {% set example_id = 'logical_not' %}
-  {% set numeration = false %}
-  {% set split      = false %}
-  {% set html       = false %}
-  {% set njk        = false %}
-  {% set css        = false %}
-  {% set js         = true %}
-  {% set demo       = false %}
-  {% include codeExample %}
-  <table>
-    <tr>
-      <td>-</td>
-      <td>сначала оператор<b>НЕ (!)</b> преобразует значение <b>x</b> к логическому типу <b>true/false</b></td>
-    </tr>
-    <tr>
-      <td>-</td>
-      <td>затем возвращает его противоположное значение</td>
-    </tr>
-  </table>
-
+{% block inlineScripts %}
+  <script>{% include add_class %}</script>
 {% endblock %}

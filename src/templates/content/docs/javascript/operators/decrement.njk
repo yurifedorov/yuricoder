@@ -1,79 +1,50 @@
-{% extends "base.njk" %}
+<h2>{{ file_name | capitalize }}</h2>
+<p>Уменьшает значение на 1, существуют два вида декремента и действуют они по-разному.</p>
 
-{# variables #}
-{% set title        = 'decrement' %}
-{% set category        = 'docs' %}
-{% set subcategory     = 'javascript' %}
-{% set segment         = 'operators' %}
-{% set subsegment_del  = 'delete' %}
+<section>
+  <h2>Postfix decrement</h2>
+  <p>Уменьшает значение на 1, но при этом возвращает старое значение.</p>
+  {% set example_id = 'postfix_decrement' %}
+  {% set numeration = false %}
+  {% set split      = false %}
+  {% set html       = false %}
+  {% set njk        = false %}
+  {% set css        = false %}
+  {% set js         = true %}
+  {% set demo       = false %}
+  {% include codeExample %}
+  <table>
+    <tr>
+      <td>1</td>
+      <td>значение <b>i</b> уменьшилось на 1 и сохранилось в <b>a</b> , а вывелось старое</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>в качестве проверки выводим <b>i</b> и видим, что значение действительно уменьшилось</td>
+    </tr>
+  </table>
+</section>
 
-{# путь к примерам code-example-beta [НЕ УДАЛЯТЬ] #}
-{% set example_dir    = 'examples/docs/javascript/operators/' %}
-
-{# ===================================== #}
-
-{% block head %}
-  <title>The decrement operator in JavaScript</title>
-  <meta name="description" content="This operator decrement the value of a variable by one in JavaScript." />
-  <link rel="stylesheet" href="{{prism_css}}">
-  <script src="{{prism_js}}" async></script>
-{% endblock %}
-
-{% block aside_top %}{% include aside_top %}{% endblock %}
-{% block aside_left %}{% include aside_left %}{% endblock %}
-
-{% block main %}
-
-  <h1>{{ title | capitalize }} [ -- ]</h1>
-  <small>группа: инкремент и декремент</small>
-  <p>Уменьшает значение на 1, существуют два вида декремента и действуют они по-разному.</p>
-
-  <section>
-    <h2>Postfix decrement</h2>
-    <p>Уменьшает значение на 1, но при этом возвращает старое значение.</p>
-    {% set example_id = 'postfix_decrement' %}
-    {% set numeration = false %}
-    {% set split      = false %}
-    {% set html       = false %}
-    {% set njk        = false %}
-    {% set css        = false %}
-    {% set js         = true %}
-    {% set demo       = false %}
-    {% include codeExample %}
-    <table>
-      <tr>
-        <td>1</td>
-        <td>значение <b>i</b> уменьшилось на 1 и сохранилось в <b>a</b> , а вывелось старое</td>
-      </tr>
-      <tr>
-        <td>2</td>
-        <td>в качестве проверки выводим <b>i</b> и видим, что значение действительно уменьшилось</td>
-      </tr>
-    </table>
-  </section>
-
-  <section>
-    <h2>Prefix decrement</h2>
-    <p>Уменьшает значение на 1 и возвращает новое значение.</p>
-    {% set example_id = 'prefix_decrement' %}
-    {% set numeration = false %}
-    {% set split      = false %}
-    {% set html       = false %}
-    {% set njk        = false %}
-    {% set css        = false %}
-    {% set js         = true %}
-    {% set demo       = false %}
-    {% include codeExample %}
-    <table>
-      <tr>
-        <td>2</td>
-        <td>значение <b>i</b> уменьшилось на 1 и сохранилось в <b>a</b> , вывелось уже измененное</td>
-      </tr>
-      <tr>
-        <td>2</td>
-        <td>в качестве проверки выводим <b>i</b> и видим, что значение действительно уменьшилось</td>
-      </tr>
-    </table>
-  </section>
-
-{% endblock %}
+<section>
+  <h2>Prefix decrement</h2>
+  <p>Уменьшает значение на 1 и возвращает новое значение.</p>
+  {% set example_id = 'prefix_decrement' %}
+  {% set numeration = false %}
+  {% set split      = false %}
+  {% set html       = false %}
+  {% set njk        = false %}
+  {% set css        = false %}
+  {% set js         = true %}
+  {% set demo       = false %}
+  {% include codeExample %}
+  <table>
+    <tr>
+      <td>2</td>
+      <td>значение <b>i</b> уменьшилось на 1 и сохранилось в <b>a</b> , вывелось уже измененное</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>в качестве проверки выводим <b>i</b> и видим, что значение действительно уменьшилось</td>
+    </tr>
+  </table>
+</section>
