@@ -364,7 +364,7 @@
     "subcategories": [
       {
         "name": "Наследование шаблонов",
-        "link": "template-inheritance.html"
+        "link": "articles/template-inheritance.html"
       },
       {
         "name": "Теги",
@@ -372,11 +372,11 @@
       },
       {
         "name": "Сборка статического сайта с Nunjucks",
-        "link": "static-site-with-nunjucks.html"
+        "link": "articles/static-site-with-nunjucks.html"
       },
       {
         "name": "Цикл for в nunjucks",
-        "link": "generate-from-json.html"
+        "link": "articles/generate-from-json.html"
       },
       {
         "name": "Мои шаблоны",
