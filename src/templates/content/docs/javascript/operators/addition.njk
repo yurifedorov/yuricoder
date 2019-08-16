@@ -1,34 +1,81 @@
 <h2>{{ file_name | capitalize }}</h2>
 
-<p>Оператор сложения иначе называют "бинарный плюс". Выполняет сложение двух операндов (чисел), объединеняет строки, преобразует строки в числа.</p>
+<p>Оператор сложения иначе называют "бинарный плюс", выполняет сложение чисел, объединеняет строки, преобразует строки в числа.</p>
 
-{% set example_dir = 'examples/docs/javascript/operators/' %}
-{% set example_id  = 'addition' %}
-{% set numeration  = false %}
-{% set split       = false %}
-{% set html        = false %}
-{% set njk         = false %}
-{% set css         = false %}
-{% set js          = true %}
-{% set demo        = false %}
-{% include codeExample %}
+<section>
+  <h1>Number + number</h1>
+  <p>Простая математика, ничего интересного...</p>
+  {% set example_id  = 'addition' %}
+  {% set numeration  = false %}
+  {% set split       = false %}
+  {% set html        = false %}
+  {% set njk         = false %}
+  {% set css         = false %}
+  {% set js          = true %}
+  {% set demo        = false %}
+  {% include codeExample %}
+</section>
 
-<table>
-  <tr>
-    <td>2</td>
-    <td>сложение двух числел</td>
-  </tr>
-  <tr>
-    <td>11</td>
-    <td>объединение двух строк</td>
-  </tr>
-  <tr>
-    <td>11</td>
-    <td>если один из аргументов является строкой, то второй будет также преобразован к строке <b>*</b></td>
-  </tr>
-  <tr>
-    <td>0</td>
-    <td>другие операторы наоборот преобразуют строки в числа (пример бинарного минуса)</td>
-  </tr>
-</table>
-<p><span>* </span><small>Это особенность только "<b>бинарного плюса</b>", остальные арифметические операторы работают только с числами и приводят строки к числам.</small></p>
+
+<section>
+  <h3>Number + boolean</h3>
+  <p>Когда оператор + находится между number и boolean, последний конвертируется в number.</p>
+  <p>При этом true конвертируется в 1, a false в 0.</p>
+  {% set example_id  = 'number_and_boolean' %}
+  {% set numeration  = false %}
+  {% set split       = false %}
+  {% set html        = false %}
+  {% set njk         = false %}
+  {% set css         = false %}
+  {% set js          = true %}
+  {% set demo        = false %}
+  {% include codeExample %}
+</section>
+
+<section>
+  <h3>Boolean + boolean</h3>
+  <p>Когда оператор + размещен между двумя булевыми значениями, они оба конвертируются в числа.</p>
+  {% set example_id  = 'boolean_and_boolean' %}
+  {% set numeration  = false %}
+  {% set split       = false %}
+  {% set html        = false %}
+  {% set njk         = false %}
+  {% set css         = false %}
+  {% set js          = true %}
+  {% set demo        = false %}
+  {% include codeExample %}
+</section>
+
+<section>
+  <h3>String + number</h3>
+  <p>Когда оператор + находится между string и number, это сконвертирует number или boolean в строку и свяжет их.</p>
+  <p>Операторы - наоборот преобразуют строки в числа (пример бинарного минуса)</p>
+  {% set example_id  = 'string_and_number' %}
+  {% set numeration  = false %}
+  {% set split       = false %}
+  {% set html        = false %}
+  {% set njk         = false %}
+  {% set css         = false %}
+  {% set js          = true %}
+  {% set demo        = false %}
+  {% include codeExample %}
+</section>
+
+<section>
+  <h3>Boolean + string</h3>
+  <p>Так-же как в прошлом примере boolean сконвертируется в string значение и свяжет его c другим string.</p>
+  {% set example_id  = 'string_and_boolean' %}
+  {% set numeration  = false %}
+  {% set split       = false %}
+  {% set html        = false %}
+  {% set njk         = false %}
+  {% set css         = false %}
+  {% set js          = true %}
+  {% set demo        = false %}
+  {% include codeExample %}
+</section>
+
+<section>
+  <h3>Порядок операций имеет значение</h3>
+  <p>Описать подробно</p>
+</section>
