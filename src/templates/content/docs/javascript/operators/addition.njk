@@ -77,5 +77,54 @@
 
 <section>
   <h3>Порядок операций имеет значение</h3>
-  <p>Описать подробно</p>
+  {% set example_id  = 'operations_order' %}
+  {% set numeration  = false %}
+  {% set split       = false %}
+  {% set html        = false %}
+  {% set njk         = false %}
+  {% set css         = false %}
+  {% set js          = true %}
+  {% set demo        = false %}
+  {% include codeExample %}
+  <p>В JS все операции выполняются слева направо, поэтому получаем следующее:</p>
+  <table>
+    <tr>
+      <td>21</td>
+      <td>сначала выполняется сложение 1 + 1 = 2, затем 2 + '1', в результате '2' сконвертируется в строку и произойдет конкатенация (21).</td>
+    </tr>
+    <tr>
+      <td>111</td>
+      <td>когда строчное значение на первом месте, происходит следующее: '1' + 1 = 11, затем '11' + 1 = '111'.</td>
+    </tr>
+  </table>
 </section>
+
+<section>
+  <h3>Как унарный минус влияет на результат</h3>
+  <p>Следуя логике из предыдущего примера, выражение '2' + 2 будет равно 22.</p>
+  <p>Все меняет <a href="unary-negation.html">унарный минус</a>, который сконвертирует строку в число и сделает его отрицательным -2 + 2 = 0.</p>
+  {% set example_id  = 'unary_minus_string_and_number' %}
+  {% set numeration  = false %}
+  {% set split       = false %}
+  {% set html        = false %}
+  {% set njk         = false %}
+  {% set css         = false %}
+  {% set js          = true %}
+  {% set demo        = false %}
+  {% include codeExample %}
+</section>
+
+<section>
+  <h3>Если унарный оператор минуса является строкой</h3>
+  <p>Значение наподобие 'giddyup' не может быть сконвертировано в число, то JavaScript возвращает NaN (англ. Not-a-Number, «нечисло»).</p>
+  {% set example_id  = 'unary_minus_nan' %}
+  {% set numeration  = false %}
+  {% set split       = false %}
+  {% set html        = false %}
+  {% set njk         = false %}
+  {% set css         = false %}
+  {% set js          = true %}
+  {% set demo        = false %}
+  {% include codeExample %}
+</section>
+
