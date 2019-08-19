@@ -1,10 +1,6 @@
-<h2>{{ file_name | capitalize }}</h2>
-
-<p>Оператор сложения иначе называют "бинарный плюс", выполняет сложение чисел, объединеняет строки, преобразует строки в числа.</p>
-
 <section>
-  <h1>Number + number</h1>
-  <p>Простая математика, ничего интересного...</p>
+  <h2>{{ file_name | capitalize }}</h2>
+  <p>Оператор сложения иначе называют "бинарный плюс", выполняет сложение чисел, объединеняет строки, преобразует строки в числа.</p>
   {% set example_id  = 'addition' %}
   {% set numeration  = false %}
   {% set split       = false %}
@@ -16,9 +12,10 @@
   {% include codeExample %}
 </section>
 
-
 <section>
-  <h3>Number + boolean</h3>
+  <h2>Некоторые особенности бинарного плюса</h2>
+
+  <h3>1. Number + boolean</h3>
   <p>Когда оператор + находится между number и boolean, последний конвертируется в number.</p>
   <p>При этом true конвертируется в 1, a false в 0.</p>
   {% set example_id  = 'number_and_boolean' %}
@@ -30,10 +27,8 @@
   {% set js          = true %}
   {% set demo        = false %}
   {% include codeExample %}
-</section>
 
-<section>
-  <h3>Boolean + boolean</h3>
+  <h3>2. Boolean + boolean</h3>
   <p>Когда оператор + размещен между двумя булевыми значениями, они оба конвертируются в числа.</p>
   {% set example_id  = 'boolean_and_boolean' %}
   {% set numeration  = false %}
@@ -44,10 +39,8 @@
   {% set js          = true %}
   {% set demo        = false %}
   {% include codeExample %}
-</section>
 
-<section>
-  <h3>String + number</h3>
+  <h3>3. String + number</h3>
   <p>Когда оператор + находится между string и number, это сконвертирует number или boolean в строку и свяжет их.</p>
   <p>Операторы - наоборот преобразуют строки в числа (пример бинарного минуса)</p>
   {% set example_id  = 'string_and_number' %}
@@ -59,10 +52,8 @@
   {% set js          = true %}
   {% set demo        = false %}
   {% include codeExample %}
-</section>
 
-<section>
-  <h3>Boolean + string</h3>
+  <h3>4. Boolean + string</h3>
   <p>Так-же как в прошлом примере boolean сконвертируется в string значение и свяжет его c другим string.</p>
   {% set example_id  = 'string_and_boolean' %}
   {% set numeration  = false %}
@@ -73,10 +64,8 @@
   {% set js          = true %}
   {% set demo        = false %}
   {% include codeExample %}
-</section>
 
-<section>
-  <h3>Порядок операций имеет значение</h3>
+  <h3>5. Порядок операций имеет значение</h3>
   {% set example_id  = 'operations_order' %}
   {% set numeration  = false %}
   {% set split       = false %}
@@ -97,10 +86,8 @@
       <td>когда строчное значение на первом месте, происходит следующее: '1' + 1 = 11, затем '11' + 1 = '111'.</td>
     </tr>
   </table>
-</section>
 
-<section>
-  <h3>Как унарный минус влияет на результат</h3>
+  <h3>6. Как унарный минус влияет на результат</h3>
   <p>Следуя логике из предыдущего примера, выражение '2' + 2 будет равно 22.</p>
   <p>Все меняет <a href="unary-negation.html">унарный минус</a>, который сконвертирует строку в число и сделает его отрицательным -2 + 2 = 0.</p>
   {% set example_id  = 'unary_minus_string_and_number' %}
@@ -112,10 +99,8 @@
   {% set js          = true %}
   {% set demo        = false %}
   {% include codeExample %}
-</section>
 
-<section>
-  <h3>Если унарный оператор минуса является строкой</h3>
+  <h3>7. Если унарный оператор минуса является строкой</h3>
   <p>Значение наподобие 'giddyup' не может быть сконвертировано в число, то JavaScript возвращает NaN (англ. Not-a-Number, «нечисло»).</p>
   {% set example_id  = 'unary_minus_nan' %}
   {% set numeration  = false %}
@@ -126,5 +111,15 @@
   {% set js          = true %}
   {% set demo        = false %}
   {% include codeExample %}
+
+</section>
+
+<hr>
+
+<section>
+  <h4>Источники знаний:</h4>
+  <ul>
+    <li><a href="https://codeburst.io/javascript-why-does-3-true-4-and-7-other-tricky-equations-9dd13cb2a92a">JavaScript: Why does 3 + true = 4? (and 7 other tricky equations)</a></li>
+  </ul>
 </section>
 
