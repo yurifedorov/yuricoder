@@ -2,7 +2,7 @@
   flex: var(--asideLeft-width) 0 0; /* не трогать */
   order: 2; /* не трогать */
   margin-top: calc(0px - var(--asideTop-height));
-  background: #eee; /* временно */
+  background: rgb(233, 230, 230); /* временно */
   display: none;
   z-index: 3; /* должен быть выше чем у .aside_top */
 }

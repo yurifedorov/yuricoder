@@ -17,11 +17,10 @@
 {% block aside_left %}{% include aside_left %}{% endblock %}
 
 {% block main %}
-  <h1>Операторы в JavaScript</h1>
-  <section class="list">{% include js_operators %}</section>
+  <h1>{{file_name | capitalize }}</h1>
   <section class="content">{% include content %}</section>
 {% endblock %}
 
 {% block inlineScripts %}
-  <script>{% include add_class %}</script>
+  {# место для инлайновых скриптов #}
 {% endblock %}

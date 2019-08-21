@@ -1,19 +1,16 @@
-<section>
-  <h2>{{ file_name | capitalize }}</h2>
-  <p>Оператор сложения иначе называют "бинарный плюс", выполняет сложение чисел, объединеняет строки, преобразует строки в числа.</p>
-  {% set example_id  = 'addition' %}
-  {% set numeration  = false %}
-  {% set split       = false %}
-  {% set html        = false %}
-  {% set njk         = false %}
-  {% set css         = false %}
-  {% set js          = true %}
-  {% set demo        = false %}
-  {% include codeExample %}
-</section>
+<p>Оператор сложения иначе называют "бинарный плюс", выполняет сложение чисел, объединеняет строки, преобразует строки в числа.</p>
+{% set example_id  = 'addition' %}
+{% set numeration  = false %}
+{% set split       = false %}
+{% set html        = false %}
+{% set njk         = false %}
+{% set css         = false %}
+{% set js          = true %}
+{% set demo        = false %}
+{% include codeExample %}
 
 <section>
-  <h2>Некоторые особенности бинарного плюса</h2>
+  <h2>Семь особенностей бинарного плюса</h2>
 
   <h3>1. Number + boolean</h3>
   <p>Когда оператор + находится между number и boolean, последний конвертируется в number.</p>

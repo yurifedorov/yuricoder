@@ -17,15 +17,8 @@
 {% block aside_left %}{% include aside_left %}{% endblock %}
 
 {% block main %}
-
-  <h1>Список методов JavaScript</h1>
-
-  <section class="list">
-    {% include 'parts/navigation/js_methods.njk' %}
-  </section>
-
   <section class="content">
-    <h2>{{file_name}}()</h2>
+    <h1>Метод {{file_name}}()</h1>
     <p>Отображает предупреждающее диалоговое окно.</p>
     {% set example_id = 'prompt_method' %}
     {% set numeration = true %}
@@ -37,14 +30,8 @@
     {% set demo       = false %}
     {% include codeExample %}
   </section>
-
 {% endblock %}
 
 {% block inlineScripts %}
-
-  <script>
-    let main = document.getElementsByTagName('main');
-    main[0].classList.add("main_two-columns");
-  </script>
-  
+  {# место для инлайновых скриптов #}
 {% endblock %}

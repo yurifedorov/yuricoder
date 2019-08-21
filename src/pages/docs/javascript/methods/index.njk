@@ -3,7 +3,7 @@
 {% set file_name   = 'methods' %}
 {% set category    = 'docs' %}
 {% set subcategory = 'javascript' %}
-{% set segment     = 'delete' %}
+{% set segment     = 'methods' %}
 {% set subsegment  = 'delete' %}
 
 {% block head %}
@@ -18,10 +18,6 @@
 
   <h1>Список методов JavaScript</h1>
 
-  <section class="list">
-    {% include 'parts/navigation/js_methods.njk' %}
-  </section>
-
   <section class="content">
     <p>контент загружается сюда</p>
   </section>
@@ -29,10 +25,5 @@
 {% endblock %}
 
 {% block inlineScripts %}
-
-  <script>
-    let main = document.getElementsByTagName('main');
-    main[0].classList.add("main_two-columns");
-  </script>
-  
+  {# место для инлайновых скриптов #}
 {% endblock %}

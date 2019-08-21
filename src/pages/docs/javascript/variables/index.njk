@@ -1,0 +1,29 @@
+{% extends "base.njk" %}
+
+{% set file_name   = 'index.html' %}
+{% set category    = 'docs' %}
+{% set subcategory = 'javascript' %}
+{% set segment     = 'variables' %}
+{% set subsegment  = '' %}
+
+{% block head %}
+  <title>All operators in JavaScript</title>
+  <meta name="description" content="List of all javascript operators with usage examples." />
+{% endblock %}
+
+{% block aside_top %}{% include aside_top %}{% endblock %}
+{% block aside_left %}{% include aside_left %}{% endblock %}
+
+{% block main %}
+
+  <h1>Переменные в JavaScript</h1>
+  
+  <section class="content">
+    <p>контент загружается сюда</p>
+  </section>
+
+{% endblock %}
+
+{% block inlineScripts %}
+  {# место для инлайновых скриптов #}
+{% endblock %}

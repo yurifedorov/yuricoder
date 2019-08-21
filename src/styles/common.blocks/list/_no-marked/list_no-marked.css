@@ -1,0 +1,19 @@
+.list_no-marked {
+  padding: 1px;
+}
+
+.list_no-marked > li {
+  list-style-type: none;
+  margin-bottom: 1px;
+  padding: 5px 15px;
+  background-color: white;
+}
+
+.list_no-marked > li:hover {
+  background-color: rgb(196, 238, 255);
+  cursor: pointer;
+}
+
+.list_no-marked > li > a {
+  text-decoration: none;
+}
