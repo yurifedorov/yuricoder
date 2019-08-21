@@ -262,10 +262,10 @@
     "link": "decrement"
   }, {
     "name": "+i",
-    "link": "unary-plus"
+    "link": "unary_plus"
   }, {
     "name": "-i",
-    "link": "unary-negation"
+    "link": "unary_negation"
   }, {
     "name": "!",
     "link": "logical_not"
