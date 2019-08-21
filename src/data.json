@@ -191,7 +191,7 @@
     "subcategories": [
       {
         "name": "простейший фильтр",
-        "link": "apps/filters/simplest-filter.html"
+        "link": "filters/simplest-filter.html"
       },
       {
         "name": "Подкатегория №2",
