@@ -4,13 +4,14 @@
 {% set category    = 'docs' %}
 {% set subcategory = 'javascript' %}
 {% set segment     = 'methods' %}
-{% set subsegment  = '' %}
+{% set subsegment  = 'confirm' %}
 
 {% block head %}
   <title>{{file_name}}() method in JavaScript</title>
   <meta name="description" content="Отображает диалог с сообщением, на которое пользователь должен ответить 'OK' или 'Отмена'." />
   <link rel="stylesheet" href="{{prism_css}}">
   <script src="{{prism_js}}" async></script>
+  <style>a[name="{{file_name}}"] {background: {{item_color}}}</style>
 {% endblock %}
 
 {% block aside_top %}{% include aside_top %}{% endblock %}

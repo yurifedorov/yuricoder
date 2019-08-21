@@ -7,17 +7,18 @@
 {% set subsegment  = 'conditional_operator' %}
 
 {% block head %}
-  <title>Conditional (ternary) operator in JavaScript</title>
-  <meta name="description" content="The logical AND operator returns true if both arguments are true, otherwise false." />
+  <title>Условный (тернарный) оператор в JavaScript</title>
+  <meta name="description" content="Единственный оператор в JavaScript, который принимает три операнда." />
   <link rel="stylesheet" href="{{prism_css}}">
   <script src="{{prism_js}}" async></script>
+  <style>a[name="{{file_name}}"] {background: {{item_color}}}</style>
 {% endblock %}
 
 {% block aside_top %}{% include aside_top %}{% endblock %}
 {% block aside_left %}{% include aside_left %}{% endblock %}
 
 {% block main %}
-  <h1>{{file_name | capitalize }}</h1>
+  <h1>Условный (тернарный) оператор</h1>
   <section class="content">{% include content %}</section>
 {% endblock %}
 

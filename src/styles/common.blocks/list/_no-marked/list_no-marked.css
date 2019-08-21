@@ -8,13 +8,14 @@
   background-color: white;
 }
 
-.list_no-marked > li:hover {
-  background-color: rgb(196, 238, 255);
-  cursor: pointer;
-}
-
 .list_no-marked > li > a {
   display: block;
   text-decoration: none;
   padding: 5px 15px;
+}
+
+.list_no-marked > li > a:hover {
+  background-color: black;
+  color: white;
+  cursor: pointer;
 }

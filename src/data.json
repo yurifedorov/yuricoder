@@ -354,13 +354,13 @@
 
   "methods": [{
     "name": "alert()",
-    "link": "alert.html"
+    "link": "alert"
   }, {
     "name": "prompt()",
-    "link": "prompt.html"
+    "link": "prompt"
   }, {
     "name": "confirm()",
-    "link": "confirm.html"
+    "link": "confirm"
   }],
 
   "nunjucks": [{
