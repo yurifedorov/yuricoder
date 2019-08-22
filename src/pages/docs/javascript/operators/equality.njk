@@ -7,8 +7,8 @@
 {% set subsegment  = 'equality' %}
 
 {% block head %}
-  <title>Equality operator in JavaScript</title>
-  <meta name="description" content="Оператор приводит операнды к одному типу, затем применяет строгое сравнение." />
+  <title>Оператор 'равно' в JS</title>
+  <meta name="description" content="Возвращает true, если операнды равны." />
   <link rel="stylesheet" href="{{prism_css}}">
   <script src="{{prism_js}}" async></script>
   <style>a[name="{{file_name}}"] {background: {{item_color}}}</style>
@@ -18,7 +18,7 @@
 {% block aside_left %}{% include aside_left %}{% endblock %}
 
 {% block main %}
-  <h1>{{file_name | capitalize }}</h1>
+  <h1>Равно</h1>
   <section class="content">{% include content %}</section>
 {% endblock %}
 
