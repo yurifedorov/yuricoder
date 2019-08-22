@@ -1,0 +1,23 @@
+{% extends "base.njk" %}
+
+{% set file_name   = 'git' %}
+{% set category    = 'docs' %}
+{% set subcategory = '' %}
+{% set segment     = '' %}
+{% set subsegment  = '' %}
+
+{% block head %}
+  <title>Справочник по Git</title>
+  <meta name="description" content="Мои заметки по использованию CSS." />
+{% endblock %}
+
+{% block aside_top %}{% include aside_top %}{% endblock %}
+{% block aside_left %}{% include aside_left %}{% endblock %}
+
+{% block main %}
+
+  <h1>Справочник по Git</h1>
+  <p>Мои заметки по использованию Git.</p>
+  {% include 'parts/navigation/git_docs.njk' %}
+
+{% endblock %}

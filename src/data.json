@@ -32,6 +32,9 @@
   }, {
     "name": "Gulp",
     "link": "#"
+  }, {
+    "name": "Git",
+    "link": "git"
   }],
 
   "html": [{
