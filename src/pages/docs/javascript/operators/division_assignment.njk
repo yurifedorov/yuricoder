@@ -11,16 +11,12 @@
   <meta name="description" content="Оператор делит переменную на значение правого операнда и присваивает результат переменной." />
   <link rel="stylesheet" href="{{prism_css}}">
   <script src="{{prism_js}}" async></script>
-  <style>a[name="{{file_name}}"] {background: {{item_color}}}</style>
+  <style>{% include highlight_item %}</style>
 {% endblock %}
 
 {% block aside_top %}{% include aside_top %}{% endblock %}
 {% block aside_left %}{% include aside_left %}{% endblock %}
-
-{% block main %}
-  <h1>{{file_name | capitalize }}</h1>
-  <section class="content">{% include content %}</section>
-{% endblock %}
+{% block main %}{% include content %}{% endblock %}
 
 {% block inlineScripts %}
   {# место для инлайновых скриптов #}

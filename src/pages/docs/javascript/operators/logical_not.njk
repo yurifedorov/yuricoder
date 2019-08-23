@@ -11,16 +11,12 @@
   <meta name="description" content="Оператор с одним аргументом, который сначала приводит значение к логическому типу true/false, затем возвращает его противоположное значение." />
   <link rel="stylesheet" href="{{prism_css}}">
   <script src="{{prism_js}}" async></script>
-  <style>a[name="{{file_name}}"] {background: {{item_color}}}</style>
+  <style>{% include highlight_item %}</style>
 {% endblock %}
 
 {% block aside_top %}{% include aside_top %}{% endblock %}
 {% block aside_left %}{% include aside_left %}{% endblock %}
-
-{% block main %}
-  <h1>Логическое НЕ</h1>
-  <section class="content">{% include content %}</section>
-{% endblock %}
+{% block main %}{% include content %}{% endblock %}
 
 {% block inlineScripts %}
   {# место для инлайновых скриптов #}
