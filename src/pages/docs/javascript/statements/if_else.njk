@@ -1,14 +1,14 @@
 {% extends "base.njk" %}
 
-{% set file_name   = 'alert' %}
+{% set file_name   = 'if_else' %}
 {% set category    = 'docs' %}
 {% set subcategory = 'javascript' %}
-{% set segment     = 'methods' %}
-{% set subsegment  = 'alert' %}
+{% set segment     = 'statements' %}
+{% set subsegment  = 'if_else' %}
 
 {% block head %}
-  <title>{{file_name}}() method in JavaScript</title>
-  <meta name="description" content="Отображает предупреждающее диалоговое окно." />
+  <title>Конструкция if...else в JavaScript</title>
+  <meta name="description" content="Выполняет инструкцию, если указанное условие выполняется true." />
   <link rel="stylesheet" href="{{prism_css}}">
   <script src="{{prism_js}}" async></script>
   <style>{% include highlight_item %}</style>

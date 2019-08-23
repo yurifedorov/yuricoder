@@ -11,27 +11,12 @@
   <meta name="description" content="Возвращает текст, введенный пользователем." />
   <link rel="stylesheet" href="{{prism_css}}">
   <script src="{{prism_js}}" async></script>
-  <style>a[name="{{file_name}}"] {background: {{item_color}}}</style>
+  <style>{% include highlight_item %}</style>
 {% endblock %}
 
 {% block aside_top %}{% include aside_top %}{% endblock %}
 {% block aside_left %}{% include aside_left %}{% endblock %}
-
-{% block main %}
-  <section class="content">
-    <h1>Метод <em>{{file_name}}()</em></h1>
-    <p>Отображает предупреждающее диалоговое окно.</p>
-    {% set example_id = 'prompt_method' %}
-    {% set numeration = true %}
-    {% set split      = false %}
-    {% set html       = false %}
-    {% set njk        = false %}
-    {% set css        = false %}
-    {% set js         = true %}
-    {% set demo       = false %}
-    {% include codeExample %}
-  </section>
-{% endblock %}
+{% block main %}{% include content %}{% endblock %}
 
 {% block inlineScripts %}
   {# место для инлайновых скриптов #}

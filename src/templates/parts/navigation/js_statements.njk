@@ -1,0 +1,5 @@
+<ul class='list_no-marked'>
+  {% for item in statements %}
+  <li><a name="{{item.link}}" href="{{item.link}}.html">{{item.name}}</a>
+  {% endfor %}
+</ul>

@@ -121,6 +121,10 @@
         "link": "methods"
       },
       {
+        "name": "statements",
+        "link": "statements"
+      },
+      {
         "name": "пункт 3",
         "link": "#"
       }
@@ -364,6 +368,17 @@
   }, {
     "name": "confirm()",
     "link": "confirm"
+  }],
+
+  "statements": [{
+    "name": "if",
+    "link": "if"
+  }, {
+    "name": "if...else",
+    "link": "if_else"
+  }, {
+    "name": "-",
+    "link": "#"
   }],
 
   "nunjucks": [{

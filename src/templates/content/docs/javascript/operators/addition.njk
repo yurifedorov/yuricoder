@@ -1,22 +1,7 @@
-<h1>Cложение (бинарный плюс)</h1>
-<p>Оператор <em>+</em> иначе называют "бинарный плюс", выполняет сложение чисел, объединеняет строки, преобразует строки в числа.</p>
-{% set example_id  = 'addition' %}
-{% set numeration  = false %}
-{% set split       = false %}
-{% set html        = false %}
-{% set njk         = false %}
-{% set css         = false %}
-{% set js          = true %}
-{% set demo        = false %}
-{% include codeExample %}
-
 <section>
-  <h2>Семь особенностей бинарного плюса</h2>
-
-  <h3><em>1</em> Number + boolean</h3>
-  <p>Когда оператор + находится между number и boolean, последний конвертируется в number.</p>
-  <p>При этом true конвертируется в 1, a false в 0.</p>
-  {% set example_id  = 'number_and_boolean' %}
+  <h1>Cложение (бинарный плюс)</h1>
+  <p>Оператор <em>+</em> иначе называют "бинарный плюс", выполняет сложение чисел, объединеняет строки, преобразует строки в числа.</p>
+  {% set example_id  = 'addition' %}
   {% set numeration  = false %}
   {% set split       = false %}
   {% set html        = false %}
@@ -25,92 +10,115 @@
   {% set js          = true %}
   {% set demo        = false %}
   {% include codeExample %}
-
-  <h3><em>2</em> Boolean + boolean</h3>
-  <p>Когда оператор + размещен между двумя булевыми значениями, они оба конвертируются в числа.</p>
-  {% set example_id  = 'boolean_and_boolean' %}
-  {% set numeration  = false %}
-  {% set split       = false %}
-  {% set html        = false %}
-  {% set njk         = false %}
-  {% set css         = false %}
-  {% set js          = true %}
-  {% set demo        = false %}
-  {% include codeExample %}
-
-  <h3><em>3</em> String + number</h3>
-  <p>Когда оператор + находится между string и number, это сконвертирует number или boolean в строку и свяжет их.</p>
-  <p>Операторы - наоборот преобразуют строки в числа (пример бинарного минуса)</p>
-  {% set example_id  = 'string_and_number' %}
-  {% set numeration  = false %}
-  {% set split       = false %}
-  {% set html        = false %}
-  {% set njk         = false %}
-  {% set css         = false %}
-  {% set js          = true %}
-  {% set demo        = false %}
-  {% include codeExample %}
-
-  <h3><em>4</em> Boolean + string</h3>
-  <p>Так-же как в прошлом примере boolean сконвертируется в string значение и свяжет его c другим string.</p>
-  {% set example_id  = 'string_and_boolean' %}
-  {% set numeration  = false %}
-  {% set split       = false %}
-  {% set html        = false %}
-  {% set njk         = false %}
-  {% set css         = false %}
-  {% set js          = true %}
-  {% set demo        = false %}
-  {% include codeExample %}
-
-  <h3><em>5</em> Порядок операций имеет значение</h3>
-  {% set example_id  = 'operations_order' %}
-  {% set numeration  = false %}
-  {% set split       = false %}
-  {% set html        = false %}
-  {% set njk         = false %}
-  {% set css         = false %}
-  {% set js          = true %}
-  {% set demo        = false %}
-  {% include codeExample %}
-  <p>В JS все операции выполняются слева направо, поэтому получаем следующее:</p>
-  <table>
-    <tr>
-      <td>21</td>
-      <td>сначала выполняется сложение 1 + 1 = 2, затем 2 + '1', в результате '2' сконвертируется в строку и произойдет конкатенация (21).</td>
-    </tr>
-    <tr>
-      <td>111</td>
-      <td>когда строчное значение на первом месте, происходит следующее: '1' + 1 = 11, затем '11' + 1 = '111'.</td>
-    </tr>
-  </table>
-
-  <h3><em>6</em> Как унарный минус влияет на результат</h3>
-  <p>Следуя логике из предыдущего примера, выражение '2' + 2 будет равно 22.</p>
-  <p>Все меняет <a href="unary-negation.html">унарный минус</a>, который сконвертирует строку в число и сделает его отрицательным -2 + 2 = 0.</p>
-  {% set example_id  = 'unary_minus_string_and_number' %}
-  {% set numeration  = false %}
-  {% set split       = false %}
-  {% set html        = false %}
-  {% set njk         = false %}
-  {% set css         = false %}
-  {% set js          = true %}
-  {% set demo        = false %}
-  {% include codeExample %}
-
-  <h3><em>7</em> Если унарный оператор минуса является строкой</h3>
-  <p>Значение наподобие 'giddyup' не может быть сконвертировано в число, то JavaScript возвращает NaN (англ. Not-a-Number, «нечисло»).</p>
-  {% set example_id  = 'unary_minus_nan' %}
-  {% set numeration  = false %}
-  {% set split       = false %}
-  {% set html        = false %}
-  {% set njk         = false %}
-  {% set css         = false %}
-  {% set js          = true %}
-  {% set demo        = false %}
-  {% include codeExample %}
-
 </section>
+
+
+<article>
+  <h2>Семь особенностей бинарного плюса</h2>
+  <section>
+    <h3><em>1</em> Number + boolean</h3>
+    <p>Когда оператор + находится между number и boolean, последний конвертируется в number. <br><br>При этом true конвертируется в 1, a false в 0.</p>
+    {% set example_id  = 'number_and_boolean' %}
+    {% set numeration  = false %}
+    {% set split       = false %}
+    {% set html        = false %}
+    {% set njk         = false %}
+    {% set css         = false %}
+    {% set js          = true %}
+    {% set demo        = false %}
+    {% include codeExample %}
+  </section>
+  <section>
+    <h3><em>2</em> Boolean + boolean</h3>
+    <p>Когда оператор + размещен между двумя булевыми значениями, они оба конвертируются в числа.</p>
+    {% set example_id  = 'boolean_and_boolean' %}
+    {% set numeration  = false %}
+    {% set split       = false %}
+    {% set html        = false %}
+    {% set njk         = false %}
+    {% set css         = false %}
+    {% set js          = true %}
+    {% set demo        = false %}
+    {% include codeExample %}
+  </section>
+  <section>
+    <h3><em>3</em> String + number</h3>
+    <p>Когда оператор + находится между string и number, это сконвертирует number или boolean в строку и свяжет их.</p>
+    <p>Операторы - наоборот преобразуют строки в числа (пример бинарного минуса)</p>
+    {% set example_id  = 'string_and_number' %}
+    {% set numeration  = false %}
+    {% set split       = false %}
+    {% set html        = false %}
+    {% set njk         = false %}
+    {% set css         = false %}
+    {% set js          = true %}
+    {% set demo        = false %}
+    {% include codeExample %}
+  </section>
+  <section>
+    <h3><em>4</em> Boolean + string</h3>
+    <p>Так-же как в прошлом примере boolean сконвертируется в string значение и свяжет его c другим string.</p>
+    {% set example_id  = 'string_and_boolean' %}
+    {% set numeration  = false %}
+    {% set split       = false %}
+    {% set html        = false %}
+    {% set njk         = false %}
+    {% set css         = false %}
+    {% set js          = true %}
+    {% set demo        = false %}
+    {% include codeExample %}
+  </section>
+  <section>
+    <h3><em>5</em> Порядок операций имеет значение</h3>
+    {% set example_id  = 'operations_order' %}
+    {% set numeration  = false %}
+    {% set split       = false %}
+    {% set html        = false %}
+    {% set njk         = false %}
+    {% set css         = false %}
+    {% set js          = true %}
+    {% set demo        = false %}
+    {% include codeExample %}
+    <p>В JS все операции выполняются слева направо, поэтому получаем следующее:</p>
+    <table>
+      <tr>
+        <td>21</td>
+        <td>сначала выполняется сложение 1 + 1 = 2, затем 2 + '1', в результате '2' сконвертируется в строку и произойдет конкатенация (21).</td>
+      </tr>
+      <tr>
+        <td>111</td>
+        <td>когда строчное значение на первом месте, происходит следующее: '1' + 1 = 11, затем '11' + 1 = '111'.</td>
+      </tr>
+    </table>
+  </section>
+  <section>
+    <h3><em>6</em> Как унарный минус влияет на результат</h3>
+    <p>Следуя логике из предыдущего примера, выражение '2' + 2 будет равно 22.</p>
+    <p>Все меняет <a href="unary-negation.html">унарный минус</a>, который сконвертирует строку в число и сделает его отрицательным -2 + 2 = 0.</p>
+    {% set example_id  = 'unary_minus_string_and_number' %}
+    {% set numeration  = false %}
+    {% set split       = false %}
+    {% set html        = false %}
+    {% set njk         = false %}
+    {% set css         = false %}
+    {% set js          = true %}
+    {% set demo        = false %}
+    {% include codeExample %}
+  </section>
+  <section>
+    <h3><em>7</em> Если унарный оператор минуса является строкой</h3>
+    <p>Значение наподобие 'giddyup' не может быть сконвертировано в число, то JavaScript возвращает NaN (англ. Not-a-Number, «нечисло»).</p>
+    {% set example_id  = 'unary_minus_nan' %}
+    {% set numeration  = false %}
+    {% set split       = false %}
+    {% set html        = false %}
+    {% set njk         = false %}
+    {% set css         = false %}
+    {% set js          = true %}
+    {% set demo        = false %}
+    {% include codeExample %}
+  </section>
+</article> 
 
 <hr>
 

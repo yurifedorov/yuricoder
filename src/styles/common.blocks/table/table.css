@@ -1,7 +1,7 @@
 table {
   width: calc(100% + var(--main_padding-right)); /* не трогать */
   border-collapse: collapse; /* не трогать */
-  margin: 5px 0 40px -10px; /* не трогать */
+  /*margin: 5px 0 40px -10px;*/ /* не трогать */
   font-size: 0.9em;
 }
 
