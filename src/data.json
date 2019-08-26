@@ -109,19 +109,19 @@
     "category": "Основы JavaScript",
     "subcategories": [
       {
-        "name": "variables",
+        "name": "переменные",
         "link": "variables"
       },
       {
-        "name": "operators",
+        "name": "операторы",
         "link": "operators"
       },
       {
-        "name": "methods",
+        "name": "методы",
         "link": "methods"
       },
       {
-        "name": "statements",
+        "name": "инструкции",
         "link": "statements"
       },
       {

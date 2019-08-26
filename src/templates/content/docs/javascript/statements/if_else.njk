@@ -1,3 +1,123 @@
 <h1>Конструкция <em>if...else</em></h1>
 
-<a href="http://uroki-javascript.ru/js/js_if_else.php">http://uroki-javascript.ru/js/js_if_else.php</a>
+<p>Код, находящийся в блоке if, выполняется если условие является true, если условие false, выполняется блок else.</p>
+
+<h2>Примеры</h2>
+<div class='columns columns_three'>
+  <section>
+    <h3>условие == false</h3>
+    {% set example_id  = 'if_else1' %}
+    {% set numeration  = false %}
+    {% set split       = false %}
+    {% set html        = false %}
+    {% set njk         = false %}
+    {% set css         = false %}
+    {% set js          = true %}
+    {% set demo        = false %}
+    {% include codeExample %}
+    <p>Выполняется инструкция <em>else</em> (условие false)</p>
+  </section>
+
+  <section>
+    <h3>условие == true</h3>
+    {% set example_id  = 'if_else2' %}
+    {% set numeration  = false %}
+    {% set split       = false %}
+    {% set html        = false %}
+    {% set njk         = false %}
+    {% set css         = false %}
+    {% set js          = true %}
+    {% set demo        = false %}
+    {% include codeExample %}
+    <p>Выполняется инструкция <em>if</em> (условие true)</p>
+  </section>
+
+  <section>
+    <h3>блок else отсутствует</h3>
+    {% set example_id  = 'if_else3' %}
+    {% set numeration  = false %}
+    {% set split       = false %}
+    {% set html        = false %}
+    {% set njk         = false %}
+    {% set css         = false %}
+    {% set js          = true %}
+    {% set demo        = false %}
+    {% include codeExample %}
+    <p>Ничего не произойдет (условие false и else не задан)</p>
+  </section>
+
+  <section>
+    <h3>несколько условий, где первое true</h3>
+    {% set example_id  = 'if_else4' %}
+    {% set numeration  = false %}
+    {% set split       = false %}
+    {% set html        = false %}
+    {% set njk         = false %}
+    {% set css         = false %}
+    {% set js          = true %}
+    {% set demo        = false %}
+    {% include codeExample %}
+    <p>Выполняется первая инструкция <em>if</em>, остальное игнорируется</p>
+  </section>
+
+  <section>
+    <h3>несколько условий, где второе true</h3>
+    {% set example_id  = 'if_else5' %}
+    {% set numeration  = false %}
+    {% set split       = false %}
+    {% set html        = false %}
+    {% set njk         = false %}
+    {% set css         = false %}
+    {% set js          = true %}
+    {% set demo        = false %}
+    {% include codeExample %}
+    <p>Выполняется вторая инструкция <em>if</em>, остальное игнорируется</p>
+  </section>
+
+  <section>
+    <h3>несколько условий, где оба false</h3>
+    {% set example_id  = 'if_else6' %}
+    {% set numeration  = false %}
+    {% set split       = false %}
+    {% set html        = false %}
+    {% set njk         = false %}
+    {% set css         = false %}
+    {% set js          = true %}
+    {% set demo        = false %}
+    {% include codeExample %}
+    <p>Оба условия false, выполняется <em>else</em></p>
+  </section>
+</div>
+
+<h2>Использование оператора <em>?</em></h2>
+<p>Оператор 'вопросительный знак' (или 'тернарный оператор') позволяет делать более короткую запись, когда нужно присвоить значение переменной в зависимости от условия.</p>
+<p>Два примера ниже выполняют одно и тоже, только во втором конструкция if...else заменена оператором <em>?</em></p>
+<div class='columns columns_two'>
+  <section>
+    <h3>длинная запись</h3>
+    {% set example_id  = 'uslovnyy_operator1' %}
+    {% set numeration  = true %}
+    {% set split       = false %}
+    {% set html        = false %}
+    {% set njk         = false %}
+    {% set css         = false %}
+    {% set js          = true %}
+    {% set demo        = false %}
+    {% include codeExample %}
+    <p>P.S. убрал объявление переменной <em>result</em>, думал будет ошибка вроде 'переменная не объявлена'</p>
+    <p>Но нет, все работает! Как это так это??</p>
+  </section>
+  <section>
+    <h3>короткая запись</h3>
+    {% set example_id  = 'uslovnyy_operator2' %}
+    {% set numeration  = true %}
+    {% set split       = false %}
+    {% set html        = false %}
+    {% set njk         = false %}
+    {% set css         = false %}
+    {% set js          = true %}
+    {% set demo        = false %}
+    {% include codeExample %}
+    <p>Сначала вычисляется условие: если оно истинно, тогда возвращается true, если ложно – false.</p>
+  </section>
+</div>
