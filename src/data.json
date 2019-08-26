@@ -121,7 +121,7 @@
         "link": "methods"
       },
       {
-        "name": "инструкции",
+        "name": "конструкции",
         "link": "statements"
       },
       {
@@ -376,6 +376,9 @@
   }, {
     "name": "if...else",
     "link": "if_else"
+  }, {
+    "name": "switch",
+    "link": "switch"
   }, {
     "name": "-",
     "link": "#"
