@@ -4,13 +4,13 @@ let num = Number(str);
 switch (num) {
   case 3:
     alert( 'почти угадал' );
-    break;
+    //break;
   case 4:
     alert( 'верно' );
-    break;
+    //break;
   case 5:
     alert( 'почти угадал' );
-    break;
+    //break;
   default:
     alert( "не верно" );
 }

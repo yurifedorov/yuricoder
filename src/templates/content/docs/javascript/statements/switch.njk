@@ -1,12 +1,14 @@
 <h1>Конструкция <em>switch</em></h1>
 
-<p>Внутри конструкции <em>switch</em> содержится один или более блоков <em>case</em>.</p>
+<p>Внутри конструкции 'switch' содержится один или более блоков 'case'.</p>
 
 <div class='columns columns_three'>
+
   <section>
     <h2>Синтаксис</h2>
+    <p>Конструкция включает в себя один или несколько блоков <em>case</em> и необезательный блок <em>default</em></p>
     {% set example_id  = 'switch_statement' %}
-    {% set numeration  = false %}
+    {% set numeration  = true %}
     {% set split       = false %}
     {% set html        = false %}
     {% set njk         = false %}
@@ -14,5 +16,73 @@
     {% set js          = true %}
     {% set demo        = false %}
     {% include codeExample %}
+    <h3>Что здесь происходит?</h3>
+    <table>
+      <tr>
+        <td>1</td>
+        <td>метод <a href="../methods/prompt.html">prompt()</a> возвращает string</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td><a href="#">Number(str)</a> преобразует string в number и сохряняет в переменной num</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>переменная <b>num</b> проверяется на строгое равенство каждому <em>case</em></td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>оператор <em>break</em> прерывает выполнение текущего цикла</td>
+      </tr>
+    </table>
   </section>
+
+  <section>
+    <h2>Не забывай про break</h2>
+    <p>Если <em>break</em> не задан, то инструкции будут выполнятся по очереди до конца switch</p>
+    {% set example_id  = 'switch_without_break' %}
+    {% set numeration  = true %}
+    {% set split       = false %}
+    {% set html        = false %}
+    {% set njk         = false %}
+    {% set css         = false %}
+    {% set js          = true %}
+    {% set demo        = false %}
+    {% include codeExample %}
+    <h3>Что произойдет теперь?</h3>
+    <p>Если ввести <b>'3'</b> то выполнение начнется с <b>'case 3'</b> и до конца, при этом все остальные проверки проигнорируются.</p>
+  </section>
+
+  <section>
+    <h2>Групировка case</h2>
+    <p>Блоки <em>case</em> с одинаковыми инструкциями можно объеденить в группы, что позволяет сделать код немного короче и гармоничнее</p>
+    {% set example_id  = 'switch_group' %}
+    {% set numeration  = true %}
+    {% set split       = false %}
+    {% set html        = false %}
+    {% set njk         = false %}
+    {% set css         = false %}
+    {% set js          = true %}
+    {% set demo        = false %}
+    {% include codeExample %}
+    <p>По факту такая возможность это последствие того, как switch работает без break.</p>
+  </section>
+
+  <section>
+    <h2>Проверяй тип значения!</h2>
+    <p>В switch/case проверка на равенство всегда строгая, а значит должен соответствовать и тип значения</p>
+    {% set example_id  = 'switch_value_type' %}
+    {% set numeration  = true %}
+    {% set split       = false %}
+    {% set html        = false %}
+    {% set njk         = false %}
+    {% set css         = false %}
+    {% set js          = true %}
+    {% set demo        = false %}
+    {% include codeExample %}
+    <h3>Что здесь не так?</h3>
+    <p>В текущих блоках <em>case</em> выполняется сверка чисел 3, 4 и 5, а метод <em>prompt()</em> возвращает строки '3', '4', '5' и тд - поэтому ничего не работает.</p>
+    <p>Чтобы решить проблему нужно просто преобразовать string в number с помощью <em>Number(str)</em></p>
+  </section>
+
 </div>

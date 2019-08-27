@@ -1,5 +1,5 @@
 let str = prompt('2 + 2 = ?', '');
-let num = Number(str);
+//let num = Number(str);
 
 switch (num) {
   case 3:
