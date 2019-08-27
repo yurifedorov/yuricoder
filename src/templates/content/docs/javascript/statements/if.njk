@@ -2,16 +2,22 @@
 
 <p>Код, находящийся в блоке if, выполняется только если условие является true.</p>
 
-{% set example_id  = 'if_statement' %}
-{% set numeration  = false %}
-{% set split       = false %}
-{% set html        = false %}
-{% set njk         = false %}
-{% set css         = false %}
-{% set js          = true %}
-{% set demo        = false %}
-{% include codeExample %}
+<div class="columns">
+  <section>
+    <h2>Синтаксис</h2>
+    {% set example_id  = 'if_statement' %}
+    {% set numeration  = false %}
+    {% set split       = false %}
+    {% set html        = false %}
+    {% set njk         = false %}
+    {% set css         = false %}
+    {% set js          = true %}
+    {% set demo        = false %}
+    {% include codeExample %}
 
-<p>Условие задается в круглых скобках (например, 2==2). Так-как условие true, выполняется инструкция заданная в фигурных скобках.</p>
+    <p>Условие задается в круглых скобках (например, 2==2). Так-как условие true, выполняется инструкция заданная в фигурных скобках.</p>
+    <b>Слово <em>if</em> пишется в нижнем регистре, <em>IF</em> вызовет ошибку.</b>
+  </section>
+</div>
 
-<b>Слово <em>if</em> пишется в нижнем регистре, <em>IF</em> вызовет ошибку.</b>
+
