@@ -9,21 +9,14 @@
 {% block head %}
   <title>Функции в JavaScript</title>
   <meta name="description" content="Базовые знания о функциях в JavaScript" />
+  <link rel="stylesheet" href="{{prism_css}}">
+  <script src="{{prism_js}}" async></script>
+  <style>{% include highlight_item %}</style>
 {% endblock %}
 
 {% block aside_top %}{% include aside_top %}{% endblock %}
 {% block aside_left %}{% include aside_left %}{% endblock %}
-
-{% block main %}
-
-  <h1>Функции в JavaScript</h1>
-
-  <section class="content">
-    <input type="search" placeholder='поиск не работает'>
-    <button>Найти</button>
-  </section>
-
-{% endblock %}
+{% block main %}{% include content %}{% endblock %}
 
 {% block inlineScripts %}
   {# место для инлайновых скриптов #}
