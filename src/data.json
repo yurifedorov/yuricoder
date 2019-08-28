@@ -149,6 +149,10 @@
     "category": "Все про html",
     "subcategories": [
       {
+        "name": "Document Object Model",
+        "link": "dom"
+      },
+      {
         "name": "атрибуты",
         "link": "attributes"
       },
