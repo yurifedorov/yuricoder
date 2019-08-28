@@ -1,0 +1,23 @@
+{% extends "base.njk" %}
+
+{% set file_name   = 'properties' %}
+{% set category    = 'docs' %}
+{% set subcategory = 'html' %}
+{% set segment     = 'properties' %}
+{% set subsegment  = '' %}
+
+{% block head %}
+  <title>HTML свойства</title>
+  <meta name="description" content="Что из себя представляют HTML свойства" />
+  <link rel="stylesheet" href="{{prism_css}}">
+  <script src="{{prism_js}}" async></script>
+  <style>{% include highlight_item %}</style>
+{% endblock %}
+
+{% block aside_top %}{% include aside_top %}{% endblock %}
+{% block aside_left %}{% include aside_left %}{% endblock %}
+{% block main %}{% include content %}{% endblock %}
+
+{% block inlineScripts %}
+  {# место для инлайновых скриптов #}
+{% endblock %}

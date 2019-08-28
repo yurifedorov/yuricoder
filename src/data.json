@@ -37,32 +37,6 @@
     "link": "git"
   }],
 
-  "html": [{
-    "category": "Теги",
-    "subcategories": [
-      {
-        "name": "пункт 1",
-        "link": "#"
-      },
-      {
-        "name": "пункт 2",
-        "link": "#"
-      }
-    ]
-  }, {
-    "category": "Атрибуты",
-    "subcategories": [
-      {
-        "name": "Подкатегория №1",
-        "link": "#"
-      },
-      {
-        "name": "Подкатегория №2",
-        "link": "#"
-      }
-    ]
-  }],
-
   "css": [{
     "category": "Компоненты веб-страницы",
     "subcategories": [
@@ -175,16 +149,16 @@
     "category": "Все про html",
     "subcategories": [
       {
-        "name": "мои заметки",
-        "link": "notes"
+        "name": "атрибуты",
+        "link": "attributes"
       },
       {
-        "name": "пункт 2",
-        "link": "#"
+        "name": "свойства",
+        "link": "properties"
       }
     ]
   }, {
-    "category": "Пункт 2",
+    "category": "мои заметки",
     "subcategories": [
       {
         "name": "Подкатегория №1",

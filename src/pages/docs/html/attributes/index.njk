@@ -1,0 +1,23 @@
+{% extends "base.njk" %}
+
+{% set file_name   = 'attributes' %}
+{% set category    = 'docs' %}
+{% set subcategory = 'html' %}
+{% set segment     = 'attributes' %}
+{% set subsegment  = '' %}
+
+{% block head %}
+  <title>HTML атрибуты</title>
+  <meta name="description" content="Для чего нужны HTML атрибуты" />
+  <link rel="stylesheet" href="{{prism_css}}">
+  <script src="{{prism_js}}" async></script>
+  <style>{% include highlight_item %}</style>
+{% endblock %}
+
+{% block aside_top %}{% include aside_top %}{% endblock %}
+{% block aside_left %}{% include aside_left %}{% endblock %}
+{% block main %}{% include content %}{% endblock %}
+
+{% block inlineScripts %}
+  {# место для инлайновых скриптов #}
+{% endblock %}
