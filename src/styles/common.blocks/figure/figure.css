@@ -1,0 +1,10 @@
+figure {
+  background: #eee; /* Цвет фона */
+  padding: 10px; /* Поля вокруг */
+  float: left; /* Блоки выстраиваются по горизонтали */
+  margin: 0 10px 10px 0; /* Отступы */
+ }
+ figcaption {
+   font-family: monospace;
+    font-size: 12px;
+ }

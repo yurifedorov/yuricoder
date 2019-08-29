@@ -149,7 +149,7 @@
     "category": "Все про html",
     "subcategories": [
       {
-        "name": "Document Object Model",
+        "name": "DOM",
         "link": "dom"
       },
       {
