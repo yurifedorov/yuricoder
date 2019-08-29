@@ -8,8 +8,13 @@
   grid-template-columns: 1fr 1fr 1fr;
 }
 
+.columns_col-2 {
+  grid-template-columns: 3fr 3fr !important;
+}
+
 .columns > section {
-  background-color: #dadada;
+  outline: 1px solid gray;
   padding: 20px;
   margin: 0;
+  margin-bottom: 10px;
 }

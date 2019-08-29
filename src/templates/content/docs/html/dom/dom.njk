@@ -2,61 +2,44 @@
 <a href="testing.html">testing</a>
 <p><em>DOM</em> - это модель документа, которая представляет содержимое страницы в виде объектов.</p>
 
-<div class='columns'>
-  <section>
-      <h2>Как выглядит HTML</h2>
-      <p>Пример простейшего HTML документа</p>
-      {% set example_id  = 'dom' %}
-      {% set numeration  = false %}
-      {% set split       = false %}
-      {% set html        = true %}
-      {% set njk         = false %}
-      {% set css         = false %}
-      {% set js          = false %}
-      {% set demo        = false %}
-      {% include codeExample %}
-  </section>
+<div class="columns">
   <section>
     <h2>Как выглядит DOM</h2>
     <p>DOM представаляет HTML документ в виде дерева тегов</p>
-    <div style="background: white">
+    <div style="box-shadow: 0px 0px 18px -4px black">
       <img src="../../../img/docs/html/dom/dom-tree.jpg" alt="DOM дерево">
     </div>
     <p><a href="http://software.hixie.ch/utilities/js/live-dom-viewer/">Live DOM Viewer</a> - здесь можно увидеть как формируется DOM</p>
   </section>
   <section>
+    <h2>Как выглядит HTML</h2>
+    <p>Простейшая HTML разметка</p>
+    {% set example_id  = 'dom' %}
+    {% set numeration  = false %}
+    {% set split       = false %}
+    {% set html        = true %}
+    {% set njk         = false %}
+    {% set css         = false %}
+    {% set js          = false %}
+    {% set demo        = false %}
+    {% include codeExample %}
+  </section>
+  <section>
     <h2>Как отрисовывает браузер</h2>
-    <div style="background: white">
+    <p>Это результат предыдущего примера</p>
+    <div style="box-shadow: 0px 0px 18px -4px black">
       <img src="../../../img/docs/html/dom/render.jpg" alt="рендер HTML в браузере">
     </div>
   </section>
 </div>
 
-<section>
-  <h2>Условные обозначения</h2>
-  <table>
-    <tr>
-      <td><em>html</em> <em>head</em> <em>title</em> <em>body</em> <em>p</em></td>
-      <td>теги являются узлами-элементами, которые могут иметь потомков</td>
-    </tr>
-    <tr>
-      <td><em>#text: any text</em></td>
-      <td>текстовые узлы, содержат в себе только строку текста и у него не может быть потомков</td>
-    </tr>
-    <tr>
-      <td><em>#text:</em></td>
-      <td>пустые текстовые узлы образуются из-за переноса строк и пробелов</td>
-    </tr>
-  </table>
-</section>
-
-<div class="columns">
+<div class="columns columns_col-2">
   <section>
     <h2>Выборка DOM элементов в консоли</h2>
     <p>Как быстро получить узел из Elements в Console?</p>
-    <p>Чтобы быстро открыть консоль находясь в режиме инпектирования, можно нажать <kbd>Esc</kbd></p>
+    <p>Чтобы быстро открыть консоль, находясь в режиме инпектирования, можно нажать <kbd>Esc</kbd></p>
     <figure>
-      <p><img src="../../../img/docs/html/dom/consol_selectors.gif" alt="выборка DOM в консоли"></p>
+      <img src="../../../img/docs/html/dom/consol_selectors.gif" alt="выборка DOM в консоли">
       <figcaption>Источник: <a href="https://habr.com/ru/post/254007/">https://habr.com/ru/post/254007/</a></figcaption>
     </figure>
     <table>
@@ -83,10 +66,141 @@
       </tr>
     </table>
   </section>
+  <section>
+    <h2>Автоисправление ошибок</h2>
+    <p>Браузер автоматически исправляет ошибки програмиста, поэтому DOM всегда корректный.</p>
+
+    <h3>Добавление забытых тегов</h3>
+    <p>Я забыл указать тег <em>body</em>, но в DOM дереве он есть.</p>
+    {% set example_id  = 'autocorrection1' %}
+    {% set numeration  = false %}
+    {% set split       = false %}
+    {% set html        = true %}
+    {% set njk         = false %}
+    {% set css         = false %}
+    {% set js          = false %}
+    {% set demo        = false %}
+    {% include codeExample %}
+    <div style="box-shadow: 0px 0px 18px -4px black">
+      <img src="../../../img/docs/html/dom/autocorrection1.jpg" alt="пример исправление 1">
+    </div>
+    <p>Если HTML-файл состоит из единственного слова "Hello world", браузер обернёт его в теги <em>html</em> и <em>body</em>, добавит необходимый тег <em>head</em></p>
+    <h3>Случай с необязательным тегом &lt;tbody&gt;</h3>
+    <p>Официально у таблиц не обязательно указывать тег <em>tbody</em>, но по стандарту DOM он должен быть.</p>
+    {% set example_id  = 'autocorrection2' %}
+    {% set numeration  = false %}
+    {% set split       = false %}
+    {% set html        = true %}
+    {% set njk         = false %}
+    {% set css         = false %}
+    {% set js          = false %}
+    {% set demo        = false %}
+    {% include codeExample %}
+    <div style="box-shadow: 0px 0px 18px -4px black">
+      <img src="../../../img/docs/html/dom/autocorrection2.jpg" alt="пример исправление 2">
+    </div>
+  </section>
 
 </div>
 
+<div class="columns columns_col-2">
 
+  <section>
+    <h2>Какие бывают типы узлов?</h2>
+    <p>Всего существует 12 типов узлов, вот их список:</p>
+    <table>
+      <tr>
+        <td>Код</td>
+        <td>Тип</td>
+        <td>Описание</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>ELEMENT_NODE</td>
+        <td>узел элемента</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>-</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>TEXT_NODE</td>
+        <td>текстовой узел</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>-</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>-</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td>-</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td>PROCESSING_INSTRUCTION_NODE</td>
+        <td>узел инструкции обработки</td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td>COMMENT_NODE</td>
+        <td>узел комментария</td>
+      </tr>
+      <tr>
+        <td>9</td>
+        <td>DOCUMENT_NODE</td>
+        <td>узел документа</td>
+      </tr>
+      <tr>
+        <td>10</td>
+        <td>DOCUMENT_TYPE_NODE</td>
+        <td>узел типа документа (doctype html)</td>
+      </tr>
+      <tr>
+        <td>11</td>
+        <td>DOCUMENT_FRAGMENT_NODE</td>
+        <td>узел фрагмента документа</td>
+      </tr>
+      <tr>
+        <td>12</td>
+        <td>-</td>
+        <td>-</td>
+      </tr>
+    </table>
+    <p>Определить тип узла можно с помощью свойства <em>nodeType</em>, он отобразит код типа</p>
+    <div style="box-shadow: 0px 0px 18px -4px black">
+      <img src="../../../img/docs/html/dom/node_type.jpg" alt="тип DOM узла">
+    </div>
+    <p><em>nodeName</em> отобразит имя узла</p>
+    <p><em>nodeValue</em> строку со значением узла</p>
+  </section>
+
+  <section>
+    <h2>Комментарии тоже часть DOM</h2>
+    <p>Добавляется узел <em>#comment</em> вместе с содержимым комментария</p>
+    {% set example_id  = 'dom_comments' %}
+    {% set numeration  = false %}
+    {% set split       = false %}
+    {% set html        = true %}
+    {% set njk         = false %}
+    {% set css         = false %}
+    {% set js          = false %}
+    {% set demo        = false %}
+    {% include codeExample %}
+    <div style="box-shadow: 0px 0px 18px -4px black">
+      <img src="../../../img/docs/html/dom/dom_comments.jpg" alt="пример исправление 2">
+    </div>
+  </section>
+
+</div>
 
 <section>
   <hr>
@@ -96,5 +210,6 @@
     <li><a href="https://learn.javascript.ru/dom-nodes">DOM дерево</a></li>
     <li><a href="https://proglib.io/p/what-is-dom/">Что такое DOM и чем не является?</a></li>
     <li><a href="https://habr.com/ru/post/254007/">15 советов и хитростей инструментов разработчика Chrome</a></li>
+    <li><a href="https://itchief.ru/lessons/javascript/javascript-dom-node-types">JavaScript - DOM: типы узлов</a></li>
   </ul>
 </section>
