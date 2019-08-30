@@ -1,1 +1,31 @@
 <h1>HTML свойства</h1>
+<p>Сканируя документ, браузер строит на его основании DOM. В этот момент HTML атрибуты элементов переводятся в соответствующие им DOM свойства</p>
+<p>Например, для приведенной ниже строки кода, будут созданы следующие DOM свойства: <em>id</em>, <em>className</em>, <em>src</em> и <em>alt</em></p>
+{% set example_id  = 'creating_properties' %}
+{% set numeration  = false %}
+{% set split       = false %}
+{% set html        = true %}
+{% set njk         = false %}
+{% set css         = false %}
+{% set js          = false %}
+{% set demo        = false %}
+{% include codeExample %}
+
+<p>Обращение к этим свойствам в JavaScript происходит следующим образом:</p>
+{% set example_id  = 'appeal_to_properties' %}
+{% set numeration  = false %}
+{% set split       = false %}
+{% set html        = false %}
+{% set njk         = false %}
+{% set css         = false %}
+{% set js          = true %}
+{% set demo        = false %}
+{% include codeExample %}
+
+<section>
+  <hr>
+  <h4>Источники знаний:</h4>
+  <ul>
+    <li><a href="https://itchief.ru/javascript/attributes-and-properties">Работа с HTML атрибутами и DOM свойствами в JavaScript</a></li>
+  </ul>
+</section>
