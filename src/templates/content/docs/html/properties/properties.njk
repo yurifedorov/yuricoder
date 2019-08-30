@@ -10,7 +10,7 @@
 {% set js          = false %}
 {% set demo        = false %}
 {% include codeExample %}
-<img id="logo" class="logo" src="{{images_dir}}logo.jpg" alt="логотип сайта">
+<img id="logo" class="logo" src="{{images_dir}}logo.jpg" alt="логотип сайта" style="display: none">
 
 <section>
   <h2>Обращение к свойствам</h2>
@@ -26,6 +26,39 @@
   {% include codeExample %}
   <img src="{{images_dir}}consol_log.jpg" alt="вывод в консоль данных об элементе">
 </section>
+
+<section>
+  <h2>Нюансы, которые нужно знать</h2>
+  <ol>
+    <li><b>Названия DOM-свойств не всегда соответствуют именам HTML-атрибутов</b></li>
+    <p>Например <em>className</em> отличается, потому-что <em>class</em> является ключевым словом в JavaScript, оно зарезервировано и не может использоваться.</p><br><br>
+    <li><b>В некоторых случаях DOM-свойства не создаются</b></li>
+    <p>Если у элемента нестандартный атрибут, то DOM свойство не создается.</p><br>
+    <p>Например у элемента <em>img</em> нет атрибута 'placeholder' и используя обращение <em>logoImg.src</em> в консоль выведется 'undefined'.</p>
+    <p>Но получить значения атрибута можно с помощью <em>myImg.getAttribute(name)</em></p>
+    {% set example_id  = 'nonstandard_attributes' %}
+    {% set numeration  = false %}
+    {% set split       = false %}
+    {% set html        = true %}
+    {% set njk         = false %}
+    {% set css         = false %}
+    {% set js          = false %}
+    {% set demo        = false %}
+    {% include codeExample %}
+    <img id="newLogo" src="{{images_dir}}logo.jpg" alt="текст alt" placeholder="logo" style="display: none">
+    {% set example_id  = 'appeal_to_nonstandard_attributes' %}
+    {% set numeration  = false %}
+    {% set split       = false %}
+    {% set html        = false %}
+    {% set njk         = false %}
+    {% set css         = false %}
+    {% set js          = true %}
+    {% set demo        = false %}
+    {% include codeExample %}
+    <img src="{{images_dir}}appeal_to_nonstandard_attributes.jpg" alt="обращение к нестандартным атрибутам">
+  </ol>
+</section>
+
 
 <section>
   <hr>
