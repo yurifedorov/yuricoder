@@ -10,6 +10,7 @@
 
 .columns_col-2 {
   grid-template-columns: 3fr 3fr !important;
+  margin-top: 40px;
 }
 
 .columns > section {
