@@ -1,7 +1,7 @@
-let logoImg = document.querySelector('#logo'); // получим элемент
+let logoImg = document.querySelector('#logo');
 
-// выведем в консоль DOM-свойства элемента
-console.log(logoImg.id); // "brand"
-console.log(logoImg.className); // "brand"
-console.log(logoImg.src); // "logo.png"
-console.log(logoImg.alt); // "логотип сайта"
+// вывод в консоль DOM-свойств элемента
+console.log(logoImg.id);
+console.log(logoImg.className);
+console.log(logoImg.src);
+console.log(logoImg.alt);

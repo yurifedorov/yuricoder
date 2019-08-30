@@ -10,17 +10,22 @@
 {% set js          = false %}
 {% set demo        = false %}
 {% include codeExample %}
+<img id="logo" class="logo" src="{{images_dir}}logo.jpg" alt="логотип сайта">
 
-<p>Обращение к этим свойствам в JavaScript происходит следующим образом:</p>
-{% set example_id  = 'appeal_to_properties' %}
-{% set numeration  = false %}
-{% set split       = false %}
-{% set html        = false %}
-{% set njk         = false %}
-{% set css         = false %}
-{% set js          = true %}
-{% set demo        = false %}
-{% include codeExample %}
+<section>
+  <h2>Обращение к свойствам</h2>
+  <p>Обращение к этим свойствам в JavaScript происходит следующим образом:</p>
+  {% set example_id  = 'appeal_to_properties' %}
+  {% set numeration  = false %}
+  {% set split       = false %}
+  {% set html        = false %}
+  {% set njk         = false %}
+  {% set css         = false %}
+  {% set js          = true %}
+  {% set demo        = false %}
+  {% include codeExample %}
+  <img src="{{images_dir}}consol_log.jpg" alt="вывод в консоль данных об элементе">
+</section>
 
 <section>
   <hr>

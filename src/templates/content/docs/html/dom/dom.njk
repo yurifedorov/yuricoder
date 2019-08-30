@@ -7,7 +7,7 @@
     <h2>Как выглядит DOM</h2>
     <p>DOM представаляет HTML документ в виде дерева тегов</p>
     <div style="box-shadow: 0px 0px 18px -4px black">
-      <img src="../../../img/docs/html/dom/dom-tree.jpg" alt="DOM дерево">
+      <img src="{{images_dir}}dom-tree.jpg" alt="DOM дерево">
     </div>
     <p><a href="http://software.hixie.ch/utilities/js/live-dom-viewer/">Live DOM Viewer</a> - здесь можно увидеть как формируется DOM</p>
   </section>
@@ -28,7 +28,7 @@
     <h2>Как отрисовывает браузер</h2>
     <p>Это результат предыдущего примера</p>
     <div style="box-shadow: 0px 0px 18px -4px black">
-      <img src="../../../img/docs/html/dom/render.jpg" alt="рендер HTML в браузере">
+      <img src="{{images_dir}}render.jpg" alt="рендер HTML в браузере">
     </div>
   </section>
 </div>
@@ -39,7 +39,7 @@
     <p>Как быстро получить узел из Elements в Console?</p>
     <p>Чтобы быстро открыть консоль, находясь в режиме инпектирования, можно нажать <kbd>Esc</kbd></p>
     <figure>
-      <img src="../../../img/docs/html/dom/consol_selectors.gif" alt="выборка DOM в консоли">
+      <img src="{{images_dir}}consol_selectors.gif" alt="выборка DOM в консоли">
       <figcaption>Источник: <a href="https://habr.com/ru/post/254007/">https://habr.com/ru/post/254007/</a></figcaption>
     </figure>
     <table>
@@ -82,7 +82,7 @@
     {% set demo        = false %}
     {% include codeExample %}
     <div style="box-shadow: 0px 0px 18px -4px black">
-      <img src="../../../img/docs/html/dom/autocorrection1.jpg" alt="пример исправление 1">
+      <img src="{{images_dir}}autocorrection1.jpg" alt="пример исправление 1">
     </div>
     <p>Если HTML-файл состоит из единственного слова "Hello world", браузер обернёт его в теги <em>html</em> и <em>body</em>, добавит необходимый тег <em>head</em></p>
     <h3>Случай с необязательным тегом &lt;tbody&gt;</h3>
@@ -97,7 +97,7 @@
     {% set demo        = false %}
     {% include codeExample %}
     <div style="box-shadow: 0px 0px 18px -4px black">
-      <img src="../../../img/docs/html/dom/autocorrection2.jpg" alt="пример исправление 2">
+      <img src="{{images_dir}}autocorrection2.jpg" alt="пример исправление 2">
     </div>
   </section>
 
@@ -177,7 +177,7 @@
     </table>
     <p>Определить тип узла можно с помощью свойства <em>nodeType</em>, он отобразит код типа</p>
     <div style="box-shadow: 0px 0px 18px -4px black">
-      <img src="../../../img/docs/html/dom/node_type.jpg" alt="тип DOM узла">
+      <img src="{{images_dir}}node_type.jpg" alt="тип DOM узла">
     </div>
     <p><em>nodeName</em> отобразит имя узла</p>
     <p><em>nodeValue</em> строку со значением узла</p>
@@ -196,7 +196,7 @@
     {% set demo        = false %}
     {% include codeExample %}
     <div style="box-shadow: 0px 0px 18px -4px black">
-      <img src="../../../img/docs/html/dom/dom_comments.jpg" alt="пример исправление 2">
+      <img src="{{images_dir}}dom_comments.jpg" alt="пример исправление 2">
     </div>
   </section>
 

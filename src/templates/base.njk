@@ -69,6 +69,7 @@
 {# Paths: site / category / subcategory / segment /  subsegment / file_name #}
 {% set example_dir = 'examples/' + category + '/' + subcategory + '/' + segment + '/' + subsegment + '/' %}
 {% set content     = 'content/' + category + '/' + subcategory + '/' + segment + '/' + file_name + '.njk' %}
+{% set images_dir  = '../../../img/' + category + '/' + subcategory + '/' + segment + '/' %}
 
 {# Navigation #}
 {% set js_operators  = 'parts/navigation/js_operators.njk' %}
