@@ -1,0 +1,26 @@
+{% extends "base.njk" %}
+
+{% set file_name   = 'optimization' %}
+{% set category    = 'docs' %}
+{% set subcategory = '' %}
+{% set segment     = '' %}
+{% set subsegment  = '' %}
+
+{% block head %}
+  <title>Руководство по оптимизации</title>
+  <meta name="description" content="Способы ускорения загрузки web-страниц" />
+{% endblock %}
+
+{% block aside_top %}{% include aside_top %}{% endblock %}
+{% block aside_left %}{% include aside_left %}{% endblock %}
+
+{% block main %}
+
+  <h1>Руководство по оптимизации</h1>
+  <p>Способы ускорения загрузки web-страниц.</p>
+  
+  <ul>
+    <li><a href="https://webkit.org/blog/8970/how-web-content-can-affect-power-usage/">Как фронтенд влияет на расход аккумулятора?</a></li>
+  </ul>
+    
+{% endblock %}

@@ -35,6 +35,9 @@
   }, {
     "name": "Git",
     "link": "git"
+  }, {
+    "name": "Optimization",
+    "link": "optimization"
   }],
 
   "css": [{
