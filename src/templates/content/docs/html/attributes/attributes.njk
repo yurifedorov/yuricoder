@@ -1,1 +1,59 @@
 <h1>HTML атрибуты</h1>
+<p>DOM-объекты и их свойства генерируется на основании html-тегов и их атрибутов.</p>
+<p>Например для тега <em>&lt;section id="news"&gt;</em> будет создано свойство <em>section.id="news"</em></p>
+
+{# для демонстрации примера (не удалять) #}
+<section id="news"></section>
+
+{% set example_id  = 'attributes' %}
+{% set numeration  = false %}
+{% set split       = false %}
+{% set html        = true %}
+{% set njk         = false %}
+{% set css         = false %}
+{% set js          = false %}
+{% set demo        = false %}
+{% include codeExample %}
+<img src="{{images_dir}}create_dom_properties.jpg" alt="создание DOM свойства">
+
+<div class="columns columns_col-2">
+  <section>
+    <h2>Метод <em>hasAttribute</em></h2>
+    <p>Проверяет налчие атрибута у элемента (тега), где в скобках указывается имя проверяемого атрибута.</p>
+    {% set example_id  = 'method_hasAttribute' %}
+    {% set numeration  = false %}
+    {% set split       = false %}
+    {% set html        = false %}
+    {% set njk         = false %}
+    {% set css         = false %}
+    {% set js          = true %}
+    {% set demo        = false %}
+    {% include codeExample %}
+    <img src="{{images_dir}}hasAttribute.jpg" alt="проверка наличия заданного атрибута">
+  </section>
+  <section>
+    <h2>Метод <em>getAttribute</em></h2>
+    <p>Проверяет значение атрибута, где в скобках так-же указывается имя проверяемого атрибута.</p>
+    {% set example_id  = 'method_getAttribute' %}
+    {% set numeration  = false %}
+    {% set split       = false %}
+    {% set html        = false %}
+    {% set njk         = false %}
+    {% set css         = false %}
+    {% set js          = true %}
+    {% set demo        = false %}
+    {% include codeExample %}
+    <img src="{{images_dir}}getAttribute.jpg" alt="проверка значения у атрибута">
+  </section>
+</div>
+
+
+
+<section>
+  <hr>
+  <h4>Источники знаний:</h4>
+  <ul>
+    <li><a href="https://learn.javascript.ru/dom-attributes-and-properties">Атрибуты и свойства</a></li>
+    <li><a href="http://code.mu/javascript/dom/hasAttribute.html">Метод hasAttribute (проверка наличия атрибута)</a></li>
+  </ul>
+</section>
