@@ -5,16 +5,19 @@
 {# для демонстрации примера (не удалять) #}
 <section id="news"></section>
 
-{% set example_id  = 'attributes' %}
-{% set numeration  = false %}
-{% set split       = false %}
-{% set html        = true %}
-{% set njk         = false %}
-{% set css         = false %}
-{% set js          = false %}
-{% set demo        = false %}
-{% include codeExample %}
-<img src="{{images_dir}}create_dom_properties.jpg" alt="создание DOM свойства">
+<div class="columns columns_col-2">
+  {% set example_id  = 'attributes' %}
+  {% set numeration  = false %}
+  {% set split       = false %}
+  {% set html        = true %}
+  {% set njk         = false %}
+  {% set css         = false %}
+  {% set js          = false %}
+  {% set demo        = false %}
+  {% include codeExample %}
+  <img src="{{images_dir}}create_dom_properties.jpg" alt="создание DOM свойства">
+</div>
+
 
 <div class="columns columns_col-2">
   <section>
@@ -45,10 +48,15 @@
     {% include codeExample %}
     <img src="{{images_dir}}getAttribute.jpg" alt="проверка значения у атрибута">
   </section>
+
   <section>
     <h2>Стандартные и нестандартные атрибуты</h2>
     <p>У html-тегов есть список стандартных для него атрибутов.</p>
     <p>Например, для элемента <em>&lt;section&gt;</em> доступны доступны <a href="https://www.w3.org/TR/html52/dom.html#global-attributes-2">глобальные атрибуты</a>:</p>
+    <p><em>accesskey</em> <em>class</em> <em>contenteditable</em> <em>dir</em> <em>draggable</em> <em>hidden</em> <em>id</em> <em>lang</em> <em>spellcheck</em> <em>style</em> <em>tabindex</em> <em>title</em> <em>translate</em></p>
+
+    <h3>Эксперимент</h3>
+    <p>Создам элемент <em>&lt;section&gt;</em> и пропишу в нем все глобальные атрибуты (которые являются стандартными) и один нестандартный атрибут.</p>
     {% set example_id  = 'global_attributes' %}
     {% set numeration  = false %}
     {% set split       = false %}
@@ -58,25 +66,19 @@
     {% set js          = false %}
     {% set demo        = false %}
     {% include codeExample %}
-    <ul>
-      <li>accesskey</li>
-      <li>class</li>
-      <li>contenteditable</li>
-      <li>dir</li>
-      <li>draggable</li>
-      <li>hidden</li>
-      <li>id</li>
-      <li>lang</li>
-      <li>spellcheck</li>
-      <li>style</li>
-      <li>tabindex</li>
-      <li>title</li>
-      <li>translate</li>
-    </ul>
+
+    {% set example_id  = 'global_attributes_test' %}
+    {% set numeration  = false %}
+    {% set split       = false %}
+    {% set html        = false %}
+    {% set njk         = false %}
+    {% set css         = false %}
+    {% set js          = true %}
+    {% set demo        = false %}
+    {% include codeExample %}
+
   </section>
 </div>
-
-
 
 <section>
   <hr>
@@ -87,3 +89,5 @@
     <li><a href="http://code.mu/javascript/dom/getAttribute.html">Метод getAttribute (проверка значения атрибута)</a></li>
   </ul>
 </section>
+
+<section accesskey="ok" class="ok" contenteditable="ok" dir="ok" draggable="ok" hidden="ok" id="ok" lang="ok" spellcheck="ok" style="ok" tabindex="ok" title="ok" translate="ok" non-standart-attr="ok">
