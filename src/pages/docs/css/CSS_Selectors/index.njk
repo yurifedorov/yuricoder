@@ -1,0 +1,23 @@
+{% extends "base.njk" %}
+
+{% set file_name   = 'CSS_Selectors' %}
+{% set category    = 'docs' %}
+{% set subcategory = 'css' %}
+{% set segment     = 'CSS_Selectors' %}
+{% set subsegment  = '' %}
+
+{% block head %}
+  <title>CSS селекторы</title>
+  <meta name="description" content="Список CSS-селекторов и их описание" />
+  <link rel="stylesheet" href="{{prism_css}}">
+  <script src="{{prism_js}}" async></script>
+  <style>{% include highlight_item %}</style>
+{% endblock %}
+
+{% block aside_top %}{% include aside_top %}{% endblock %}
+{% block aside_left %}{% include aside_left %}{% endblock %}
+{% block main %}{% include content %}{% endblock %}
+
+{% block inlineScripts %}
+  {# место для инлайновых скриптов #}
+{% endblock %}
