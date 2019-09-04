@@ -1,0 +1,205 @@
+<h1>Основы HTML</h1>
+<p><b>Hypertext Markup Language (HTML)</b> - не является языком программирования, он предназначин для разметки и дает понять браузеру как располагать элементы на странице.</p>
+<p>Исчерпывающее руководство: <a href="https://www.w3.org/TR/2017/REC-html52-20171214/">HTML 5.2 W3C Recommendation</a></p>
+
+<div class="columns columns_col-2">
+  <section>
+    <h2>HTML элемент</h2>
+    <p>Пример элемента <em>&lt;h1&gt;</em>, для обозначения заголовка верхнего уровня:</p>
+    {% set example_id  = 'element_structure' %}
+    {% set numeration  = false %}
+    {% set split       = false %}
+    {% set html        = true %}
+    {% set njk         = false %}
+    {% set css         = false %}
+    {% set js          = false %}
+    {% set demo        = false %}
+    {% include codeExample %}
+    <ul>
+      <li>открывающий тег <em>&lt;h1&gt;</em></li>
+      <li>закрывающий тег <em>&lt;/h1&gt;</em> </li>
+      <li>любой контент (текст)</li>
+    </ul>
+    <p>Все вместе это называется <em>Element</em></p>
+  </section>
+  <section>
+    <h2>Атрибуты HTML элемента</h2>
+    <p>Содержат дополнительную информацию, которая не видна при отображении страницы в браузере</p>
+    {% set example_id  = 'element_attribute' %}
+    {% set numeration  = false %}
+    {% set split       = false %}
+    {% set html        = true %}
+    {% set njk         = false %}
+    {% set css         = false %}
+    {% set js          = false %}
+    {% set demo        = false %}
+    {% include codeExample %}
+    <ul>
+      <li><em>class</em> - имя атрибута</li>
+      <li><em>title</em> - значение атрибута</li>
+    </ul>
+    <p>Теперь элемент <b>&lt;h1&gt;</b> имеет метку <b>'title'</b>, что позволит обратиться к нему в CSS и задать стилевое офермление.</p>
+    <p>Атрибутов много и для каждого тега есть список стандартных атрибутов.</p>
+    <p>Например исчерпывающая информация о элементе &lt;h1&gt; есть в <a href="https://www.w3.org/TR/2017/REC-html52-20171214/sections.html#the-h1-h2-h3-h4-h5-and-h6-elements">официальной спецификации</a></p>
+  </section>
+  <section>
+    <h2>Вложенность элементов</h2>
+    <p>Все элементы, кроме <b>&lt;html&gt;</b> могут быть вложенными.</p>
+    {% set example_id  = 'nesting' %}
+    {% set numeration  = false %}
+    {% set split       = false %}
+    {% set html        = true %}
+    {% set njk         = false %}
+    {% set css         = false %}
+    {% set js          = false %}
+    {% set demo        = false %}
+    {% include codeExample %}
+    <p>Вложенность отчетлива видна в DOM деревее, где <b>&lt;html&gt;</b> (родитель для всех), <b>&lt;head&gt;</b> и <b>&lt;body&gt;</b> - его прямые потомки, у которых тоже есть потомки <b>&lt;title&gt;</b>, <b>&lt;h1&gt;</b> и <b>&lt;p&gt;</b>.</p>
+    <img src="{{images_dir}}nesting.jpg" alt="пример исправление 2">
+  </section>
+  <section>
+    <h2>Пустые элементы</h2>
+    <p>Это элементы, которые не имеют контента.</p>
+    {% set example_id  = 'img' %}
+    {% set numeration  = false %}
+    {% set split       = false %}
+    {% set html        = true %}
+    {% set njk         = false %}
+    {% set css         = false %}
+    {% set js          = false %}
+    {% set demo        = false %}
+    {% include codeExample %}
+    <p>Элемент <b>&lt;img&gt;</b> не имеет контанта и закрывающего тега, он предназначен для вставки изображения</p>
+    <h3>Список пустых элементов</h3>
+    <table>
+      <tr>
+        <td><a href="#">&lt;!doctype&gt;</a></td>
+        <td>от англ. document type — тип документа</td>
+      </tr>
+      <tr>
+        <td><a href="https://www.w3.org/TR/2017/REC-html52-20171214/semantics-embedded-content.html#the-area-element">&lt;area&gt;</a></td>
+        <td>от англ. area — область, регион</td>
+      </tr>
+      <tr>
+        <td><a href="https://www.w3.org/TR/2017/REC-html52-20171214/document-metadata.html#the-base-element">&lt;base&gt;</a></td>
+        <td>от англ. base — база, основание</td>
+      </tr>
+      <tr>
+        <td><a href="https://www.w3.org/TR/2017/REC-html52-20171214/textlevel-semantics.html#the-br-element">&lt;br&gt;</a></td>
+        <td>от англ. line break — перенос строки</td>
+      </tr>
+      <tr>
+        <td><a href="https://www.w3.org/TR/2017/REC-html52-20171214/tabular-data.html#the-col-element">&lt;col&gt;</a></td>
+        <td>от англ. column — колонка</td>
+      </tr>
+      <tr>
+        <td><a href="https://www.w3.org/TR/2017/REC-html52-20171214/semantics-embedded-content.html#the-embed-element">&lt;embed&gt;</a></td>
+        <td>от англ. embed — вставить, внедрить</td>
+      </tr>
+      <tr>
+        <td><a href="https://www.w3.org/TR/2017/REC-html52-20171214/rendering.html#the-hr-element-rendering">&lt;hr&gt;</a></td>
+        <td>от англ. horizontal rule — горизонтальная линейка</td>
+      </tr>
+      <tr>
+        <td><a href="https://www.w3.org/TR/2017/REC-html52-20171214/semantics-embedded-content.html#the-img-element">&lt;img&gt;</a></td>
+        <td>от англ. image — изображение</td>
+      </tr>
+      <tr>
+        <td><a href="https://www.w3.org/TR/2017/REC-html52-20171214/sec-forms.html#the-input-element">&lt;input&gt;</a></td>
+        <td>от англ. input — ввод</td>
+      </tr>
+      <tr>
+        <td><a href="https://webref.ru/html/keygen">&lt;keygen&gt;</a></td>
+        <td><b>устарел и не используется</b></td>
+      </tr>
+      <tr>
+        <td><a href="https://www.w3.org/TR/2017/REC-html52-20171214/document-metadata.html#the-link-element">&lt;link&gt;</a></td>
+        <td>от англ. link — ссылка</td>
+      </tr>
+      <tr>
+        <td><a href="https://www.w3.org/TR/2017/REC-html52-20171214/document-metadata.html#the-meta-element">&lt;meta&gt;</a></td>
+        <td>от англ. metadata — метаданные</td>
+      </tr>
+      <tr>
+        <td><a href="https://www.w3.org/TR/2017/REC-html52-20171214/semantics-embedded-content.html#the-param-element">&lt;param&gt;</a></td>
+        <td>от англ. parameter — параметр</td>
+      </tr>
+      <tr>
+        <td><a href="https://www.w3.org/TR/2017/REC-html52-20171214/semantics-embedded-content.html#the-source-element">&lt;source&gt;</a></td>
+        <td>от англ. source — исходник</td>
+      </tr>
+      <tr>
+        <td><a href="https://www.w3.org/TR/2017/REC-html52-20171214/semantics-embedded-content.html#the-track-element">&lt;track&gt;</a></td>
+        <td>от англ. track — дорожка</td>
+      </tr>
+      <tr>
+        <td><a href="https://www.w3.org/TR/2017/REC-html52-20171214/textlevel-semantics.html#the-wbr-element">&lt;wbr&gt;</a></td>
+        <td>(от англ. word break — перенос слов)</td>
+      </tr>
+    </table> 
+  </section>
+  <section>
+    <h2>Базовая разметка</h2>
+    <p>Основа любой html страницы, так сказать самый минимум.</p>
+    {% set example_id  = 'basic_markup' %}
+    {% set numeration  = false %}
+    {% set split       = false %}
+    {% set html        = true %}
+    {% set njk         = false %}
+    {% set css         = false %}
+    {% set js          = false %}
+    {% set demo        = false %}
+    {% include codeExample %} 
+    <table>
+      <tr>
+        <td><em>&lt;!DOCTYPE html&gt;</em></td>
+        <td>просто должен быть</td>
+      </tr>
+      <tr>
+        <td><em>&lt;html&gt;</em></td>
+        <td>корневой элемент</td>
+      </tr>
+      <tr>
+        <td><em>&lt;head&gt;</em></td>
+        <td>контейнер для подключаемых стилей, мета-данных и много чего еще</td>
+      </tr>
+      <tr>
+        <td><em>&lt;body&gt;</em></td>
+        <td>содержит видимую часть html страницы: заголовки, абзацы, картинки, таблицы, списки и т.д.</td>
+      </tr>
+      <tr>
+        <td><em>&lt;meta&gt;</em></td>
+        <td>информация для браузера или поисковых систем</td>
+      </tr>
+      <tr>
+        <td><em>&lt;title&gt;</em></td>
+        <td>заголовок страницы, который отображается на вкладке браузера и в поисковиках</td>
+      </tr>
+    </table> 
+  </section>
+  <section>
+    <h2>Заголовки</h2>
+    <p>Всего в HTML 6 уровней заголовков (хотя обычно используется первые 3).</p>
+    <ol>
+      <li><em>&lt;h1&gt;</em> - главный заголовок (может быть только один на странице)</li>
+      <li><em>&lt;h2&gt;</em> - подзаголовок</li>
+      <li><em>&lt;h3&gt;</em> - под-подзаголовок</li>
+      <li><em>&lt;h4&gt;</em> - под-под-подзаголовок</li>
+      <li><em>&lt;h5&gt;</em> - под-под-под-подзаголовок</li>
+      <li><em>&lt;h6&gt;</em> - под-под-под-под-подзаголовок</li>
+    </ol>
+    <h3>Важно всегда соблюдать иерархию заголовков!</h3>
+    <p>Элемент <em>&lt;h1&gt;</em> является родителем для всех остальных заголовков.</p>
+    <p>Внутри секции с заголовком <em>&lt;h3&gt;</em> нельзя задать подзаголовки с <em>&lt;h2&gt;</em></p>
+    <p>Ниже пример <b>семантически неверной</b> расстановки заголовков:</p>
+    {% set example_id  = 'wrong' %}
+    {% set numeration  = false %}
+    {% set split       = false %}
+    {% set html        = true %}
+    {% set njk         = false %}
+    {% set css         = false %}
+    {% set js          = false %}
+    {% set demo        = false %}
+    {% include codeExample %} 
+  </section>
+</div>

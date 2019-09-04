@@ -1,0 +1,23 @@
+{% extends "base.njk" %}
+
+{% set file_name   = 'HTML_basics' %}
+{% set category    = 'docs' %}
+{% set subcategory = 'html' %}
+{% set segment     = 'HTML_basics' %}
+{% set subsegment  = '' %}
+
+{% block head %}
+  <title>Основы HTML</title>
+  <meta name="description" content="Что такое HTML на самом деле и для чего он нужен" />
+  <link rel="stylesheet" href="{{prism_css}}">
+  <script src="{{prism_js}}" async></script>
+  <style>{% include highlight_item %}</style>
+{% endblock %}
+
+{% block aside_top %}{% include aside_top %}{% endblock %}
+{% block aside_left %}{% include aside_left %}{% endblock %}
+{% block main %}{% include content %}{% endblock %}
+
+{% block inlineScripts %}
+  {# место для инлайновых скриптов #}
+{% endblock %}

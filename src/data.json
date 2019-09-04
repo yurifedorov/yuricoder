@@ -149,7 +149,23 @@
   }],
 
   "html_docs": [{
-    "category": "Все про html",
+    "category": "HTML",
+    "subcategories": [
+      {
+        "name": "Основы HTML",
+        "link": "HTML_basics"
+      },
+      {
+        "name": "item2",
+        "link": "#"
+      },
+      {
+        "name": "item3",
+        "link": "#"
+      }
+    ]
+  }, {
+    "category": "Несортированное",
     "subcategories": [
       {
         "name": "DOM",
@@ -162,18 +178,6 @@
       {
         "name": "свойства",
         "link": "properties"
-      }
-    ]
-  }, {
-    "category": "мои заметки",
-    "subcategories": [
-      {
-        "name": "Подкатегория №1",
-        "link": "#"
-      },
-      {
-        "name": "Подкатегория №2",
-        "link": "#"
       }
     ]
   }],
