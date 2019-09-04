@@ -2,8 +2,18 @@
 <p><b>Hypertext Markup Language (HTML)</b> - не является языком программирования, он предназначин для разметки и дает понять браузеру как располагать элементы на странице.</p>
 <p>Исчерпывающее руководство: <a href="https://www.w3.org/TR/2017/REC-html52-20171214/">HTML 5.2 W3C Recommendation</a></p>
 
+<h2>Содержание</h2>
+<ol>
+  <li><a href="#html_element">HTML элемент</a></li>
+  <li><a href="#attributes">атрибуты</a></li>
+  <li><a href="#nesting">вложенность элементов</a></li>
+  <li><a href="#empty_elements">пустые элементы</a></li>
+  <li><a href="#basic_markup">базовая разметка</a></li>
+  <li><a href="#titles">заголовки</a></li>
+  <li><a href="#favicon">фавиконка (favicon)</a></li>
+</ol>
 <div class="columns columns_col-2">
-  <section>
+  <section name="html_element" >
     <h2>HTML элемент</h2>
     <p>Пример элемента <em>&lt;h1&gt;</em>, для обозначения заголовка верхнего уровня:</p>
     {% set example_id  = 'element_structure' %}
@@ -22,7 +32,7 @@
     </ul>
     <p>Все вместе это называется <em>Element</em></p>
   </section>
-  <section>
+  <section id="attributes">
     <h2>Атрибуты HTML элемента</h2>
     <p>Содержат дополнительную информацию, которая не видна при отображении страницы в браузере</p>
     {% set example_id  = 'element_attribute' %}
@@ -42,7 +52,7 @@
     <p>Атрибутов много и для каждого тега есть список стандартных атрибутов.</p>
     <p>Например исчерпывающая информация о элементе &lt;h1&gt; есть в <a href="https://www.w3.org/TR/2017/REC-html52-20171214/sections.html#the-h1-h2-h3-h4-h5-and-h6-elements">официальной спецификации</a></p>
   </section>
-  <section>
+  <section id="nesting">
     <h2>Вложенность элементов</h2>
     <p>Все элементы, кроме <b>&lt;html&gt;</b> могут быть вложенными.</p>
     {% set example_id  = 'nesting' %}
@@ -57,7 +67,7 @@
     <p>Вложенность отчетлива видна в DOM деревее, где <b>&lt;html&gt;</b> (родитель для всех), <b>&lt;head&gt;</b> и <b>&lt;body&gt;</b> - его прямые потомки, у которых тоже есть потомки <b>&lt;title&gt;</b>, <b>&lt;h1&gt;</b> и <b>&lt;p&gt;</b>.</p>
     <img src="{{images_dir}}nesting.jpg" alt="пример исправление 2">
   </section>
-  <section>
+  <section id="empty_elements">
     <h2>Пустые элементы</h2>
     <p>Это элементы, которые не имеют контента.</p>
     {% set example_id  = 'img' %}
@@ -138,7 +148,7 @@
       </tr>
     </table> 
   </section>
-  <section>
+  <section id="basic_markup">
     <h2>Базовая разметка</h2>
     <p>Основа любой html страницы, так сказать самый минимум.</p>
     {% set example_id  = 'basic_markup' %}
@@ -177,7 +187,7 @@
       </tr>
     </table> 
   </section>
-  <section>
+  <section id="titles">
     <h2>Заголовки</h2>
     <p>Всего в HTML 6 уровней заголовков (хотя обычно используется первые 3).</p>
     <ol>
@@ -201,5 +211,19 @@
     {% set js          = false %}
     {% set demo        = false %}
     {% include codeExample %} 
+  </section>
+  <section id="favicon">
+    <h2>Фавиконка (favicon)</h2>
+    <p>Миниатюрный значек который находится на вкладке браузера рядом с названием страницы.</p>
+    {% set example_id  = 'favicon' %}
+    {% set numeration  = false %}
+    {% set split       = false %}
+    {% set html        = true %}
+    {% set njk         = false %}
+    {% set css         = false %}
+    {% set js          = false %}
+    {% set demo        = false %}
+    {% include codeExample %} 
+    <p>Бывают анимированные favicon - то .gif файлы, содержащие анимацию </p>
   </section>
 </div>
