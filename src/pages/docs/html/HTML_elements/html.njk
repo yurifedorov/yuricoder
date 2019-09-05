@@ -7,8 +7,8 @@
 {% set subsegment  = 'html' %}
 
 {% block head %}
-  <title>Элемент html</title>
-  <meta name="description" content="Элемент html" />
+  <title>Элемент &lt;{{file_name}}&gt;</title>
+  <meta name="description" content="Подробная информация об элементе &lt;{{file_name}}&gt;" />
   <link rel="stylesheet" href="{{prism_css}}">
   <script src="{{prism_js}}" async></script>
   <style>{% include highlight_item %}</style>
