@@ -1,0 +1,23 @@
+{% extends "base.njk" %}
+
+{% set file_name   = 'h1' %}
+{% set category    = 'docs' %}
+{% set subcategory = 'html' %}
+{% set segment     = 'HTML_elements' %}
+{% set subsegment  = 'h1' %}
+
+{% block head %}
+  <title>Элемент &lt;{{file_name}}&gt;</title>
+  <meta name="description" content="Подробная информация об элементе &lt;{{file_name}}&gt;" />
+  <link rel="stylesheet" href="{{prism_css}}">
+  <script src="{{prism_js}}" async></script>
+  <style>{% include highlight_item %}</style>
+{% endblock %}
+
+{% block aside_top %}{% include aside_top %}{% endblock %}
+{% block aside_left %}{% include aside_left %}{% endblock %}
+{% block main %}{% include content %}{% endblock %}
+
+{% block inlineScripts %}
+  {# место для инлайновых скриптов #}
+{% endblock %}
