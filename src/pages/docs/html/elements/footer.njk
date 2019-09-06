@@ -1,14 +1,14 @@
 {% extends "base.njk" %}
 
-{% set file_name   = 'CSS_Selectors' %}
+{% set file_name   = 'footer' %}
 {% set category    = 'docs' %}
-{% set subcategory = 'css' %}
-{% set segment     = 'CSS_Selectors' %}
-{% set subsegment  = '' %}
+{% set subcategory = 'html' %}
+{% set segment     = 'elements' %}
+{% set subsegment  = 'footer' %}
 
 {% block head %}
-  <title>CSS селекторы</title>
-  <meta name="description" content="Список CSS-селекторов и их описание" />
+  <title>Элемент &lt;{{file_name}}&gt;</title>
+  <meta name="description" content="Подробная информация об элементе &lt;{{file_name}}&gt;" />
   <link rel="stylesheet" href="{{prism_css}}">
   <script src="{{prism_js}}" async></script>
   <style>{% include highlight_item %}</style>

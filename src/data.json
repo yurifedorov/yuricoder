@@ -61,7 +61,7 @@
     "subcategories": [
       {
         "name": "Список селекторов",
-        "link": "CSS_Selectors"
+        "link": "selectors"
       },
       {
         "name": "Подкатегория №2",
@@ -157,7 +157,7 @@
       },
       {
         "name": "Список элементов (тегов)",
-        "link": "HTML_elements"
+        "link": "elements"
       },
       {
         "name": "item3",
