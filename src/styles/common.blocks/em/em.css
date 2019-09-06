@@ -6,3 +6,11 @@ em {
   font-style: normal;
   font-family: monospace;
 }
+
+em > a {
+  color: white;
+}
+
+em > a:hover {
+  background: green;
+}
