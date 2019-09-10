@@ -11,26 +11,7 @@
   <meta name="description" content="CSS селекторы по типу выбирают элементы по имени узла" />
   <link rel="stylesheet" href="{{prism_css}}">
   <script src="{{prism_js}}" async></script>
-  <style>{% include highlight_item %}</style>
-  <style>
-  {# стили для таблиц с селекторами #}
-  {# чтобы не захламлять внешний css #}
-  .selectors {
-    margin: 20px;
-  }
-
-  .selectors > a:hover {
-    background: yellow;
-  }
-
-  .selectors > table td:first-child {
-    background: wheat;
-    width: 15px;
-  }
-  .selectors > table td:nth-child(2) {
-    width: 200px;
-  }
-  </style>
+  <style>{% include selectors_style %}</style>
 {% endblock %}
 
 {% block aside_top %}{% include aside_top %}{% endblock %}

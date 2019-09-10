@@ -1,14 +1,14 @@
 {% extends "base.njk" %}
 
-{% set file_name   = 'selectors' %}
+{% set file_name   = 'attribute_selectors' %}
 {% set category    = 'docs' %}
 {% set subcategory = 'css' %}
 {% set segment     = 'selectors' %}
-{% set subsegment  = '' %}
+{% set subsegment  = 'attribute_selectors' %}
 
 {% block head %}
-  <title>CSS селекторы</title>
-  <meta name="description" content="Список CSS-селекторов и их описание" />
+  <title>Селекторы по атрибуту</title>
+  <meta name="description" content="Выбирают элементы по атрибуту" />
   <link rel="stylesheet" href="{{prism_css}}">
   <script src="{{prism_js}}" async></script>
   <style>{% include selectors_style %}</style>
