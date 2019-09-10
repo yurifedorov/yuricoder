@@ -22,5 +22,4 @@ table td {
 table td:first-child {
   padding: 5px 10px;
   background: wheat;
-  width: 120px;
 }
