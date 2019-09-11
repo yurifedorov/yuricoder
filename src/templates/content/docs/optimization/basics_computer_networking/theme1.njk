@@ -1,0 +1,96 @@
+<h1>Основные сетевые термины и сетевые модели</h1>
+
+<h2>Сетевые модели</h2>
+<p>Международная организация <a href="https://www.iso.org/home.html">ISO</a> (International Organization for Standartization) разработала <b>две</b> модели стандартизации:</p>
+<ul>
+  <li>модель OSI (эталонная)</li>
+  <li>модель TCP/IP (практическая)</li>
+</ul>
+<h3>OSI</h3>
+<p>Эталонная модель, которая состоит из <a href="https://www.iso.org/ics/35.100/x/">7 уровней</a>:</p>
+<table>
+  <tr>
+    <td><b>Levels</b> </td>
+    <td><b>Тип данных</b></td>
+    <td><b>Функции</b></td>
+    <td><b>Примеры</b></td>
+  </tr>
+  <tr>
+    <td>Application Layer</td>
+    <td>Protocol Data Units ("данные")</td>
+    <td>доступ к сетевым службам</td>
+    <td>HTTP, FTP, POP3, WebSocket</td>
+  </tr>
+  <tr>
+    <td>Presentation Layer</td>
+    <td>Protocol Data Units ("данные")</td>
+    <td>представление и шифрование данных</td>
+    <td>ASCII, EBCDIC</td>
+  </tr>
+  <tr>
+    <td>Session Layer</td>
+    <td>Protocol Data Units ("данные")</td>
+    <td>управление сеансом связи</td>
+    <td>RPC, PAP, L2TP</td>
+  </tr>
+  <tr>
+    <td>Transport Layer</td>
+    <td>сегменты (для TCP) / дейтаграммы (для UDP)</td>
+    <td>прямая связь между конечными пунктами и надёжность</td>
+    <td>TCP, UDP, SCTP, PORTS</td>
+  </tr>
+  <tr>
+    <td>Network Layer</td>
+    <td>IP пакеты (или просто "пакеты")</td>
+    <td>определение маршрута и логическая адресация</td>
+    <td>IPv4, IPv6, IPsec, AppleTalk</td>
+  </tr>
+  <tr>
+    <td>Data Link Layer</td>
+    <td>биты / кадры</td>
+    <td>физическая адресация</td>
+    <td>PPP, IEEE 802.22, Ethernet, DSL, ARP, сетевая карта.</td>
+  </tr>
+  <tr>
+    <td>Physical Layer</td>
+    <td>биты</td>
+    <td>работа со средой передачи, сигналами и двоичными данными</td>
+    <td>USB, кабель («витая пара», коаксиальный, оптоволоконный), радиоканал</td>
+  </tr>
+</table>
+
+<h4>Процесс перехода между уровнями</h4>
+<p>Переходы с верхнего уровня на нижний и обратно називаются <b>инкапсуляция</b> и <b>деинкапсуляция</b>.</p>
+<table>
+  <tr>
+    <td><b>процесс инкапсуляции</b></td>
+    <td><b>процесс деинкапсуляции</b></td>
+  </tr>
+  <tr>
+    <td>
+      <ol>
+        <li>Application Layer</li>
+        <li>Presentation Layer</li>
+        <li>Session Layer</li>
+        <li>Transport Layer</li>
+        <li>Network Layer</li>
+        <li>Data Link Layer</li>
+        <li>Physical Layer</li>
+      </ol>
+      <a href="https://habr.com/ru/post/307252/">https://habr.com/ru/post/307252/</a>
+    </td>
+    <td>
+      <small>все в обратной последовательности</small>
+      <ol>
+        <li>Physical Layer</li>
+        <li>Data Link Layer</li>
+        <li>Network Layer</li>
+        <li>Transport Layer</li>
+        <li>Session Layer</li>
+        <li>Presentation Layer</li>
+        <li>Application Layer</li>
+      </ol>
+      <a href="https://habr.com/ru/post/307252/">https://habr.com/ru/post/307252/</a>
+    </td>
+  </tr>
+</table>

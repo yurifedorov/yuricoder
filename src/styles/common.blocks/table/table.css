@@ -18,8 +18,3 @@ table td {
   border: 1px solid #eee;
   padding: 5px 20px 5px 10px;
 }
-
-table td:first-child {
-  padding: 5px 10px;
-  background: wheat;
-}

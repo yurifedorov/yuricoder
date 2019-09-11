@@ -1,0 +1,22 @@
+{% extends "base.njk" %}
+
+{% set file_name   = 'theme5' %}
+{% set category    = 'docs' %}
+{% set subcategory = 'optimization' %}
+{% set segment     = 'basics_computer_networking' %}
+{% set subsegment  = 'theme5' %}
+
+{% block head %}
+  <title>Понятие IP адресации, масок подсетей и их расчет</title>
+  <meta name="description" content="Подробно о IP адресации и масках подсетей" />
+  <link rel="stylesheet" href="{{prism_css}}">
+  <script src="{{prism_js}}" async></script>
+{% endblock %}
+
+{% block aside_top %}{% include aside_top %}{% endblock %}
+{% block aside_left %}{% include aside_left %}{% endblock %}
+{% block main %}{% include content %}{% endblock %}
+
+{% block inlineScripts %}
+  {# место для инлайновых скриптов #}
+{% endblock %}
