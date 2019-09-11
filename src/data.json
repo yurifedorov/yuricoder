@@ -515,6 +515,44 @@
     ]
   }],
 
+  "optimization": [{
+    "category": "Как устроен интернет",
+    "subcategories": [
+      {
+        "name": "Основы компьютерных сетей",
+        "link": "basics_computer_networking"
+      },
+      {
+        "name": "-",
+        "link": "#"
+      }
+    ]
+  }, {
+    "category": "item2",
+    "subcategories": [
+      {
+        "name": "-",
+        "link": "#"
+      },
+      {
+        "name": "-",
+        "link": "#"
+      }
+    ]
+  }, {
+    "category": "item2",
+    "subcategories": [
+      {
+        "name": "-",
+        "link": "#"
+      },
+      {
+        "name": "-",
+        "link": "#"
+      }
+    ]
+  }],
+
 
   "site_map": [{
     "section": [
