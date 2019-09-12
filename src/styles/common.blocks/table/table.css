@@ -12,9 +12,11 @@ table caption {
   text-indent: 10px;
   font-weight: bold;
   line-height: 2em;
+  background: black;
+  color: white;
 }
 
 table td {
-  border: 1px solid #eee;
+  border: 1px solid gray;
   padding: 5px 20px 5px 10px;
 }

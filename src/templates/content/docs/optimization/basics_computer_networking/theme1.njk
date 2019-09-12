@@ -1,13 +1,61 @@
 <h1>Основные сетевые термины и сетевые модели</h1>
 
+<section>
+  <h2>Что такое сеть?</h2>
+  <p><b>Сеть</b> - совокупность устройств и систем, которые соеденены друг с другом и общаются между собой.</p>
+
+  <table>
+    <caption>Компоненты сети</caption>
+    <tr>
+      <td><b>оконечные узлы</b></td>
+      <td><b>промежуточные устройства</b></td>
+      <td><b>сетевые среды</b> </td>
+    </tr>
+    <tr>
+      <td>
+        <p>устройства, которые передают и/или принимают какие-либо данные</p>
+        <ul>
+          <li>компьютеры</li>
+          <li>телефоны</li>
+          <li>сервера</li>
+          <li>телевизоры</li>
+          <li>и т.д.</li>
+        </ul>
+      </td>
+      <td>
+        <p>устройства, которые соединяют оконечные узлы между собой</p>
+        <ul>
+          <li>коммутаторы</li>
+          <li>концентраторы</li>
+          <li>модемы</li>
+          <li>маршрутизаторы (роутеры)</li>
+          <li>точки доступа Wi-Fi</li>
+        </ul>
+      </td>
+      <td>
+        <p>среды, в которых происходит непосредственная передача данных</p>
+        <ul>
+          <li>кабели медные (посредством электрических сигналов)</li>
+          <li>кабели оптоволоконные (посредством световых имульсов)</li>
+          <li>беспроводные устройства (посредством радиоволн)</li>
+          <li>сетевые карты</li>
+          <li>коннекторы</li>
+          <li>воздушная среда передачи</li>
+        </ul>
+      </td>
+    </tr>
+  </table>
+</section>
+
+
+
 <h2>Сетевые модели</h2>
-<p>Международная организация <a href="https://www.iso.org/home.html">ISO</a> (International Organization for Standartization) разработала <b>две</b> модели стандартизации:</p>
 <ul>
-  <li>модель OSI (эталонная)</li>
-  <li>модель TCP/IP (практическая)</li>
+  <li>модель OSI (эталонная модель, нужно знать как теорию)</li>
+  <li>модель TCP/IP (используется на практике)</li>
 </ul>
 <h3>OSI</h3>
-<p>Эталонная модель, которая состоит из <a href="https://www.iso.org/ics/35.100/x/">7 уровней</a>:</p>
+<p>Эталонная модель состоит из <a href="https://www.iso.org/ics/35.100/x/">7 уровней</a>:</p>
 <table>
   <tr>
     <td><b>Levels</b> </td>
@@ -59,38 +107,177 @@
   </tr>
 </table>
 
-<h4>Процесс перехода между уровнями</h4>
+<h4>Процесс взаимодействий</h4>
+<p>Например я хочу посетить сайт xxx.com, который расположен на удаленном сервере.</p>
 <p>Переходы с верхнего уровня на нижний и обратно називаются <b>инкапсуляция</b> и <b>деинкапсуляция</b>.</p>
-<table>
+<table id="osi_table">
+  <style>
+    #osi_table {margin-top: 40px;}
+    #osi_table td {border: none;}
+    #osi_table .osi_table_tittle {text-transform: uppercase; font-size: 20px;}
+    #osi_table_encapsulation td:before {content: '\2B07'; display: block; font-size: 40px;}
+    #osi_table_deencapsulation td:before {content: '\2B06'; display: block; font-size: 40px;}
+  </style>
   <tr>
-    <td><b>процесс инкапсуляции</b></td>
-    <td><b>процесс деинкапсуляции</b></td>
+    <td class="osi_table_tittle"><b>Клиент</b><br><small>посылает запрос</small></td>
+    <td class="osi_table_tittle"><b>Сервер</b><br><small>отправляет ответ</small></td>
   </tr>
   <tr>
-    <td>
-      <ol>
-        <li>Application Layer</li>
-        <li>Presentation Layer</li>
-        <li>Session Layer</li>
-        <li>Transport Layer</li>
-        <li>Network Layer</li>
-        <li>Data Link Layer</li>
-        <li>Physical Layer</li>
+    <td id="osi_table_encapsulation">
+      <ol class="list_no-marked">
+        <li>
+          <table>
+            <tr>
+              <td>
+                <h4>Application Layer</h4>
+                <p>dfgdfh</p>
+              </td>
+            </tr>
+          </table>
+        </li>
+        <li>
+          <table>
+            <tr>
+              <td>
+                <h4>Presentation Layer</h4>
+                <p>dfgdfh</p>
+              </td>
+            </tr>
+          </table>
+        </li>
+        <li>
+          <table>
+            <tr>
+              <td>
+                <h4>Session Layer</h4>
+                <p>dfgdfh</p>
+              </td>
+            </tr>
+          </table>
+        </li>
+        <li>
+          <table>
+            <tr>
+              <td>
+                <h4>Transport Layer</h4>
+                <p>dfgdfh</p>
+              </td>
+            </tr>
+          </table>
+        </li>
+        <li>
+          <table>
+            <tr>
+              <td>
+                <h4>Network Layer</h4>
+                <p>dfgdfh</p>
+              </td>
+            </tr>
+          </table>
+        </li>
+        <li>
+          <table>
+            <tr>
+              <td>
+                <h4>Data Link Layer</h4>
+                <p>dfgdfh</p>
+              </td>
+            </tr>
+          </table>
+        </li>
+        <li>
+          <table>
+            <tr>
+              <td>
+                <h4>Physical Layer</h4>
+                <p>dfgdfh</p>
+              </td>
+            </tr>
+          </table>
+        </li>
       </ol>
-      <a href="https://habr.com/ru/post/307252/">https://habr.com/ru/post/307252/</a>
     </td>
-    <td>
-      <small>все в обратной последовательности</small>
-      <ol>
-        <li>Physical Layer</li>
-        <li>Data Link Layer</li>
-        <li>Network Layer</li>
-        <li>Transport Layer</li>
-        <li>Session Layer</li>
-        <li>Presentation Layer</li>
-        <li>Application Layer</li>
+    <td id="osi_table_deencapsulation">
+      <ol class="list_no-marked">
+        <li>
+          <table>
+            <tr>
+              <td>
+                <h4>Application Layer</h4>
+                <p>dfgdfh</p>
+              </td>
+            </tr>
+          </table>
+        </li>
+        <li>
+          <table>
+            <tr>
+              <td>
+                <h4>Presentation Layer</h4>
+                <p>dfgdfh</p>
+              </td>
+            </tr>
+          </table>
+        </li>
+        <li>
+          <table>
+            <tr>
+              <td>
+                <h4>Session Layer</h4>
+                <p>dfgdfh</p>
+              </td>
+            </tr>
+          </table>
+        </li>
+        <li>
+          <table>
+            <tr>
+              <td>
+                <h4>Transport Layer</h4>
+                <p>dfgdfh</p>
+              </td>
+            </tr>
+          </table>
+        </li>
+        <li>
+          <table>
+            <tr>
+              <td>
+                <h4>Network Layer</h4>
+                <p>dfgdfh</p>
+              </td>
+            </tr>
+          </table>
+        </li>
+        <li>
+          <table>
+            <tr>
+              <td>
+                <h4>Data Link Layer</h4>
+                <p>dfgdfh</p>
+              </td>
+            </tr>
+          </table>
+        </li>
+        <li>
+          <table>
+            <tr>
+              <td>
+                <h4>Physical Layer</h4>
+                <p>dfgdfh</p>
+              </td>
+            </tr>
+          </table>
+        </li>
       </ol>
-      <a href="https://habr.com/ru/post/307252/">https://habr.com/ru/post/307252/</a>
     </td>
   </tr>
 </table>
+
+<section>
+  <h4>Источники знаний:</h4>
+  <ul>
+    <li><a href="https://habr.com/ru/post/307252/">Основы компьютерных сетей. Тема №1. Основные сетевые термины и сетевые модели</a></li>
+    <li><a href="https://ru.wikipedia.org/wiki/%D0%A1%D0%B5%D1%82%D0%B5%D0%B2%D0%B0%D1%8F_%D0%BC%D0%BE%D0%B4%D0%B5%D0%BB%D1%8C_OSI">Сетевая модель OSI</a></li>
+  </ul>
+</section>
