@@ -108,19 +108,20 @@
 </table>
 
 <h4>Процесс взаимодействий</h4>
-<p>Например я хочу посетить сайт xxx.com, который расположен на удаленном сервере.</p>
-<p>Переходы с верхнего уровня на нижний и обратно називаются <b>инкапсуляция</b> и <b>деинкапсуляция</b>.</p>
+<p>Пример клиента и сервера, который находится <b>в одной локальной сети</b>.</p>
 <table id="osi_table">
   <style>
     #osi_table {margin-top: 40px;}
     #osi_table td {border: none;}
-    #osi_table .osi_table_tittle {text-transform: uppercase; font-size: 20px;}
+    #osi_table h3 {text-transform: uppercase; font-size: 20px; margin-bottom:0}
+    .osi_table_bottom {font-size: 40px;}
+    #osi_table_encapsulation, #osi_table_deencapsulation {width: 50%;}
     #osi_table_encapsulation td:before {content: '\2B07'; display: block; font-size: 40px;}
     #osi_table_deencapsulation td:before {content: '\2B06'; display: block; font-size: 40px;}
   </style>
   <tr>
-    <td class="osi_table_tittle"><b>Клиент</b><br><small>посылает запрос</small></td>
-    <td class="osi_table_tittle"><b>Сервер</b><br><small>отправляет ответ</small></td>
+    <td class="osi_table_tittle"><h3>Клиент</h3><small>процесс инкапсуляции</small></td>
+    <td class="osi_table_tittle"><h3>Сервер</h3><small>процесс деинкапсуляции</small></td>
   </tr>
   <tr>
     <td id="osi_table_encapsulation">
@@ -130,7 +131,11 @@
             <tr>
               <td>
                 <h4>Application Layer</h4>
-                <p>dfgdfh</p>
+                <ul>
+                  <li>пользователь набирает адрес сайта</li>
+                  <li>используется <b>протокол HTTP</b></li>
+                  <li>упаковка и переход на следующий уровень</li>
+                </ul>
               </td>
             </tr>
           </table>
@@ -140,7 +145,11 @@
             <tr>
               <td>
                 <h4>Presentation Layer</h4>
-                <p>dfgdfh</p>
+                <ul>
+                  <li>данные структурируются</li>
+                  <li>данные приводятся в формат, который может быть прочитан на сервере</li>
+                  <li>упаковка и переход на следующий уровень</li>
+                </ul>
               </td>
             </tr>
           </table>
@@ -150,7 +159,9 @@
             <tr>
               <td>
                 <h4>Session Layer</h4>
-                <p>dfgdfh</p>
+                <ul>
+                  <li>создается сессия между компьютером и сервером</li>
+                </ul>
               </td>
             </tr>
           </table>
@@ -160,7 +171,13 @@
             <tr>
               <td>
                 <h4>Transport Layer</h4>
-                <p>dfgdfh</p>
+                <ul>
+                  <li>установление соединения и контроль за принятыми данными</li>
+                  <li>используется <b>протокол TCP</b> (требуется надежное соединение, т.к. это веб-сервер)</li>
+                  <li>указываем порт, на который будем стучаться и порт источника (чтобы сервер знал, куда отправлять ответ)</li>
+                  <li><b>стандартно — это 80 порт</b>, а не на почтовый сервер</li>
+                  <li>упаковка и переход на следующий уровень</li>
+                </ul>
               </td>
             </tr>
           </table>
@@ -170,7 +187,12 @@
             <tr>
               <td>
                 <h4>Network Layer</h4>
-                <p>dfgdfh</p>
+                <ul>
+                  <li>указывается, на какой адрес отправлять пакет</li>
+                  <li>адрес назначения: пусть адрес сервера будет <b>192.168.1.2</b></li>
+                  <li>адрес источника: пусть адрес компьютера <b>192.168.1.1</b></li>
+                  <li>упаковка и переход на следующий уровень</li>
+                </ul>
               </td>
             </tr>
           </table>
@@ -180,7 +202,12 @@
             <tr>
               <td>
                 <h4>Data Link Layer</h4>
-                <p>dfgdfh</p>
+                <ul>
+                  <li>добавляются физические адреса источника и назначения</li>
+                  <li><b>MAC-адрес компьютера</b></li>
+                  <li><b>MAC-адрес сервере</b></li>
+                </ul>
+                <p><b>!!!</b> если бы компьютер и сервер находились в разных сетях, то адресация работала по-другому</p>
               </td>
             </tr>
           </table>
@@ -190,7 +217,9 @@
             <tr>
               <td>
                 <h4>Physical Layer</h4>
-                <p>dfgdfh</p>
+                <ul>
+                  <li>полученные в биты конвертируются в электрические сигналы и отправляются на сервер (если это витая пара)</li>
+                </ul>
               </td>
             </tr>
           </table>
@@ -204,7 +233,12 @@
             <tr>
               <td>
                 <h4>Application Layer</h4>
-                <p>dfgdfh</p>
+                <ul>
+                  <li>-</li>
+                  <li>-</li>
+                  <li>-</li>
+                  <li>-</li>
+                </ul>
               </td>
             </tr>
           </table>
@@ -214,7 +248,12 @@
             <tr>
               <td>
                 <h4>Presentation Layer</h4>
-                <p>dfgdfh</p>
+                <ul>
+                  <li>-</li>
+                  <li>-</li>
+                  <li>-</li>
+                  <li>-</li>
+                </ul>
               </td>
             </tr>
           </table>
@@ -224,7 +263,12 @@
             <tr>
               <td>
                 <h4>Session Layer</h4>
-                <p>dfgdfh</p>
+                <ul>
+                  <li>-</li>
+                  <li>-</li>
+                  <li>-</li>
+                  <li>-</li>
+                </ul>
               </td>
             </tr>
           </table>
@@ -234,7 +278,12 @@
             <tr>
               <td>
                 <h4>Transport Layer</h4>
-                <p>dfgdfh</p>
+                <ul>
+                  <li>-</li>
+                  <li>-</li>
+                  <li>-</li>
+                  <li>-</li>
+                </ul>
               </td>
             </tr>
           </table>
@@ -244,7 +293,12 @@
             <tr>
               <td>
                 <h4>Network Layer</h4>
-                <p>dfgdfh</p>
+                <ul>
+                  <li>-</li>
+                  <li>-</li>
+                  <li>-</li>
+                  <li>-</li>
+                </ul>
               </td>
             </tr>
           </table>
@@ -254,7 +308,12 @@
             <tr>
               <td>
                 <h4>Data Link Layer</h4>
-                <p>dfgdfh</p>
+                <ul>
+                  <li>-</li>
+                  <li>-</li>
+                  <li>-</li>
+                  <li>-</li>
+                </ul>
               </td>
             </tr>
           </table>
@@ -264,13 +323,22 @@
             <tr>
               <td>
                 <h4>Physical Layer</h4>
-                <p>dfgdfh</p>
+                <ul>
+                  <li>-</li>
+                  <li>-</li>
+                  <li>-</li>
+                  <li>-</li>
+                </ul>
               </td>
             </tr>
           </table>
         </li>
       </ol>
     </td>
+  </tr>
+  <tr class="osi_table_bottom">
+    <td>далее процеес идет в обратном порядке &#10144;</td>
+    <td></td>
   </tr>
 </table>
 
