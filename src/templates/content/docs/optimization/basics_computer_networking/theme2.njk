@@ -10,65 +10,106 @@
   <tr>
     <td><b>протокол</b></td>
     <td><b>описание</b></td>
+    <td><b>используемый порт</b></td>
   </tr>
   <tr>
-    <td title="HyperText Transport Protocol">HTTP</td>
+    <td title="HyperText Transport Protocol"><a href="https://ru.wikipedia.org/wiki/HTTP">HTTP</a></td>
     <td>протокол передачи данных, используемый обычно для получения информации с веб-сайтов</td>
+    <td>80</td>
   </tr>
   <tr>
-    <td >DNS</td>
-    <td>компьютерная распределённая система для получения информации о доменах</td>
+    <td title="HyperText Transfer Protocol Secure"><a href="https://ru.wikipedia.org/wiki/HTTPS">HTTPS</a></td>
+    <td>расширение протокола HTTP для поддержки шифрования в целях повышения безопасности</td>
+    <td>443</td>
   </tr>
   <tr>
-    <td title="Dynamic Host Configuration Protocol">DHCP</td>
+    <td title="Domain Name System"><a href="https://ru.wikipedia.org/wiki/DNS">DNS</a></td>
+    <td>система для получения информации о доменах</td>
+    <td>53</td>
+  </tr>
+  <tr>
+    <td title="Dynamic Host Configuration Protocol"><a href="https://ru.wikipedia.org/wiki/DHCP">DHCP</a></td>
     <td> сетевой протокол, позволяющий сетевым устройствам автоматически получать IP-адрес и другие параметры, необходимые для работы в сети TCP/IP</td>
+    <td>67, 68</td>
   </tr>
   <tr>
-    <td>SSH</td>
-    <td>-</td>
+    <td title="Simple Mail Transfer Protocol"><a href="https://ru.wikipedia.org/wiki/SMTP">SMTP</a></td>
+    <td>простой протокол передачи почты</td>
+    <td>25, 587</td>
   </tr>
   <tr>
-    <td>SMTP</td>
-    <td>-</td>
+    <td title="Simple Mail Transfer Protocol"><a href="https://ru.wikipedia.org/wiki/SMTP">SMTPS</a></td>
+    <td style="color: gray;">SMTP через SSL (устаревший)</td>
+    <td>465</td>
   </tr>
   <tr>
     <td>SNMP</td>
+    <td>-</td>
     <td>-</td>
   </tr>
   <tr>
     <td>SCP</td>
     <td>-</td>
+    <td>-</td>
   </tr>
   <tr>
     <td>SMB</td>
     <td>-</td>
-  </tr>
-  <tr>
-    <td>FTP</td>
     <td>-</td>
   </tr>
   <tr>
-    <td>POP3</td>
-    <td>-</td>
+    <td title="File Transfer Protocol"><a href="https://ru.wikipedia.org/wiki/FTP">FTP</a></td>
+    <td>протокол передачи файлов по сети, является одним из старейших прикладных протоколов</td>
+    <td title="21 (для команд), 20 (для данных)">21, 20</td>
   </tr>
   <tr>
-    <td>Telnet</td>
-    <td>-</td>
+    <td title="Trivial File Transfer Protocol"><a href="https://ru.wikipedia.org/wiki/Trivial_File_Transfer_Protocol">TFTP</a></td>
+    <td>простой протокол передачи файлов (в отличие от FTP, не содержит возможностей аутентификации)</td>
+    <td>69</td>
   </tr>
   <tr>
-    <td>TFTP</td>
-    <td>-</td>
+    <td title="Post Office Protocol Version 3"><a href="https://ru.wikipedia.org/wiki/POP3">POP3</a></td>
+    <td>протокол, используемый клиентами электронной почты для получения почты с удалённого сервера по TCP-соединению</td>
+    <td>110</td>
+  </tr>
+  <tr>
+    <td>POP3S</td>
+    <td>расширенная версия POP3 с предварительной установкой SSL/TLS соединения</td>
+    <td>995</td>
+  </tr>
+  <tr>
+    <td title="Internet Message Access Protocol"><a href="https://ru.wikipedia.org/wiki/IMAP">IMAP</a></td>
+    <td>протокол доступа к электронной почте (более умный и посложнее, чем POP3)</td>
+    <td>143</td>
+  </tr>
+  <tr>
+    <td>IMAPS</td>
+    <td>расширенная версия IMAP с предварительной установкой SSL/TLS соединения</td>
+    <td>993</td>
+  </tr>
+  <tr>
+    <td title="teletype network"><a href="https://ru.wikipedia.org/wiki/Telnet">Telnet</a></td>
+    <td>не шифрует трафик</td>
+    <td>23</td>
+  </tr>
+  <tr>
+    <td title="Secure Shell"><a href="https://ru.wikipedia.org/wiki/SSH">SSH</a></td>
+    <td>шифрует трафик (в отличии от Telnet)</td>
+    <td>22</td>
   </tr>
   <tr>
     <td>NFS</td>
+    <td>-</td>
     <td>-</td>
   </tr>
   <tr>
     <td>RTSP</td>
     <td>-</td>
+    <td>-</td>
   </tr>
   <tr>
     <td>BGP</td>
+    <td>-</td>
     <td>-</td>
   </tr>
 </table>
