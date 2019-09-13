@@ -64,43 +64,43 @@
     <td><b>Примеры</b></td>
   </tr>
   <tr>
-    <td>Application Layer</td>
-    <td>Protocol Data Units ("данные")</td>
+    <td><em>7</em> <a href="#">Application Layer</a> </td>
+    <td title="Protocol Data Units">PDU (данные)</td>
     <td>доступ к сетевым службам</td>
     <td>HTTP, FTP, POP3, WebSocket</td>
   </tr>
   <tr>
-    <td>Presentation Layer</td>
-    <td>Protocol Data Units ("данные")</td>
+    <td><em>6</em> <a href="#">Presentation Layer</a> </td>
+    <td title="Protocol Data Units">PDU (данные)</td>
     <td>представление и шифрование данных</td>
     <td>ASCII, EBCDIC</td>
   </tr>
   <tr>
-    <td>Session Layer</td>
-    <td>Protocol Data Units ("данные")</td>
+    <td><em>5</em> <a href="#">Session Layer</a> </td>
+    <td title="Protocol Data Units">PDU (данные)</td>
     <td>управление сеансом связи</td>
     <td>RPC, PAP, L2TP</td>
   </tr>
   <tr>
-    <td>Transport Layer</td>
+    <td><em>4</em> <a href="#">Transport Layer</a> </td>
     <td>сегменты (для TCP) / дейтаграммы (для UDP)</td>
     <td>прямая связь между конечными пунктами и надёжность</td>
     <td>TCP, UDP, SCTP, PORTS</td>
   </tr>
   <tr>
-    <td>Network Layer</td>
+    <td><em>3</em> <a href="#">Network Layer</a> </td>
     <td>IP пакеты (или просто "пакеты")</td>
     <td>определение маршрута и логическая адресация</td>
     <td>IPv4, IPv6, IPsec, AppleTalk</td>
   </tr>
   <tr>
-    <td>Data Link Layer</td>
+    <td><em>2</em> <a href="#">Data Link Layer</a> </td>
     <td>биты / кадры</td>
     <td>физическая адресация</td>
     <td>PPP, IEEE 802.22, Ethernet, DSL, ARP, сетевая карта.</td>
   </tr>
   <tr>
-    <td>Physical Layer</td>
+    <td><em>1</em> <a href="#">Physical Layer</a></td>
     <td>биты</td>
     <td>работа со средой передачи, сигналами и двоичными данными</td>
     <td>USB, кабель («витая пара», коаксиальный, оптоволоконный), радиоканал</td>
@@ -111,17 +111,17 @@
 <p>Пример клиента и сервера, который находится <b>в одной локальной сети</b>.</p>
 <table id="osi_table">
   <style>
-    #osi_table {margin-top: 40px;}
+    #osi_table {margin-top: 60px;}
     #osi_table td {border: none;}
-    #osi_table h3 {text-transform: uppercase; font-size: 20px; margin-bottom:0}
-    .osi_table_bottom {font-size: 40px;}
+    #osi_table h3 {text-transform: uppercase; text-align: center; font-size: 35px; margin: 0;}
+    .osi_table_layer {box-shadow: 2px 2px 10px -4px #000; padding: 15px; height: 120px;}
     #osi_table_encapsulation, #osi_table_deencapsulation {width: 50%;}
-    #osi_table_encapsulation td:before {content: '\2B07'; display: block; font-size: 40px;}
-    #osi_table_deencapsulation td:before {content: '\2B06'; display: block; font-size: 40px;}
+    #osi_table_encapsulation td:before {content: '\2B07'; text-align: center; display: block; font-size: 60px;}
+    #osi_table_deencapsulation td:before {content: '\2B06'; text-align: center; display: block; font-size: 60px;}
   </style>
   <tr>
-    <td class="osi_table_tittle"><h3>Клиент</h3><small>процесс инкапсуляции</small></td>
-    <td class="osi_table_tittle"><h3>Сервер</h3><small>процесс деинкапсуляции</small></td>
+    <td class="osi_table_tittle"><h3>Клиент</h3></td>
+    <td class="osi_table_tittle"><h3>Сервер</h3></td>
   </tr>
   <tr>
     <td id="osi_table_encapsulation">
@@ -130,12 +130,14 @@
           <table>
             <tr>
               <td>
+                <div class="osi_table_layer">
                 <h4>Application Layer</h4>
-                <ul>
-                  <li>пользователь набирает адрес сайта</li>
-                  <li>используется <b>протокол HTTP</b></li>
-                  <li>упаковка и переход на следующий уровень</li>
-                </ul>
+                  <ul>
+                    <li>пользователь набирает адрес сайта</li>
+                    <li>используется <b>протокол HTTP</b></li>
+                    <li>упаковка и переход на следующий уровень</li>
+                  </ul>
+                </div>
               </td>
             </tr>
           </table>
@@ -144,12 +146,14 @@
           <table>
             <tr>
               <td>
+                <div class="osi_table_layer">
                 <h4>Presentation Layer</h4>
-                <ul>
-                  <li>данные структурируются</li>
-                  <li>данные приводятся в формат, который может быть прочитан на сервере</li>
-                  <li>упаковка и переход на следующий уровень</li>
-                </ul>
+                  <ul>
+                    <li>данные структурируются</li>
+                    <li>данные приводятся в формат, который может быть прочитан на сервере</li>
+                    <li>упаковка и переход на следующий уровень</li>
+                  </ul>
+                </div>
               </td>
             </tr>
           </table>
@@ -158,10 +162,12 @@
           <table>
             <tr>
               <td>
-                <h4>Session Layer</h4>
-                <ul>
-                  <li>создается сессия между компьютером и сервером</li>
-                </ul>
+                <div class="osi_table_layer">
+                  <h4>Session Layer</h4>
+                  <ul>
+                    <li>создается сессия между компьютером и сервером</li>
+                  </ul>
+                </div>
               </td>
             </tr>
           </table>
@@ -170,14 +176,16 @@
           <table>
             <tr>
               <td>
-                <h4>Transport Layer</h4>
-                <ul>
-                  <li>установление соединения и контроль за принятыми данными</li>
-                  <li>используется <b>протокол TCP</b> (требуется надежное соединение, т.к. это веб-сервер)</li>
-                  <li>указываем порт, на который будем стучаться и порт источника (чтобы сервер знал, куда отправлять ответ)</li>
-                  <li><b>стандартно — это 80 порт</b>, а не на почтовый сервер</li>
-                  <li>упаковка и переход на следующий уровень</li>
-                </ul>
+                <div class="osi_table_layer">
+                  <h4>Transport Layer</h4>
+                  <ul>
+                    <li>установление соединения и контроль за принятыми данными</li>
+                    <li>используется <b>протокол TCP</b> (требуется надежное соединение, т.к. это веб-сервер)</li>
+                    <li>указываем порт, на который будем стучаться и порт источника (чтобы сервер знал, куда отправлять ответ)</li>
+                    <li><b>стандартно — это 80 порт</b>, а не на почтовый сервер</li>
+                    <li>упаковка и переход на следующий уровень</li>
+                  </ul>
+                </div>
               </td>
             </tr>
           </table>
@@ -186,13 +194,15 @@
           <table>
             <tr>
               <td>
-                <h4>Network Layer</h4>
-                <ul>
-                  <li>указывается, на какой адрес отправлять пакет</li>
-                  <li>адрес назначения: пусть адрес сервера будет <b>192.168.1.2</b></li>
-                  <li>адрес источника: пусть адрес компьютера <b>192.168.1.1</b></li>
-                  <li>упаковка и переход на следующий уровень</li>
-                </ul>
+                <div class="osi_table_layer">
+                  <h4>Network Layer</h4>
+                  <ul>
+                    <li>указывается, на какой адрес отправлять пакет</li>
+                    <li>адрес назначения: пусть адрес сервера будет <b>192.168.1.2</b></li>
+                    <li>адрес источника: пусть адрес компьютера <b>192.168.1.1</b></li>
+                    <li>упаковка и переход на следующий уровень</li>
+                  </ul>
+                </div>
               </td>
             </tr>
           </table>
@@ -201,13 +211,14 @@
           <table>
             <tr>
               <td>
+                <div class="osi_table_layer">
                 <h4>Data Link Layer</h4>
-                <ul>
-                  <li>добавляются физические адреса источника и назначения</li>
-                  <li><b>MAC-адрес компьютера</b></li>
-                  <li><b>MAC-адрес сервере</b></li>
-                </ul>
-                <p><b>!!!</b> если бы компьютер и сервер находились в разных сетях, то адресация работала по-другому</p>
+                  <ul>
+                    <li>добавляются физические адреса источника и назначения</li>
+                    <li><b>MAC-адрес</b> компьютера</li>
+                    <li><b>MAC-адрес</b> сервера</li>
+                  </ul>
+                </div>
               </td>
             </tr>
           </table>
@@ -216,11 +227,13 @@
           <table>
             <tr>
               <td>
-                <h4>Physical Layer</h4>
-                <ul>
-                  <li>полученные биты конвертируются в электрические сигналы и отправляются на сервер (если это витая пара)</li>
-                  <li>далее какое-то время сигнал идет по проводам</li>
-                </ul>
+                <div class="osi_table_layer">
+                  <h4>Physical Layer</h4>
+                  <ul>
+                    <li>полученные биты конвертируются в электрические сигналы и отправляются на сервер (если это витая пара)</li>
+                    <li>далее какое-то время сигнал идет по проводам</li>
+                  </ul>
+                </div>
               </td>
             </tr>
           </table>
@@ -233,13 +246,12 @@
           <table>
             <tr>
               <td>
-                <h4>Application Layer</h4>
-                <ul>
-                  <li>-</li>
-                  <li>-</li>
-                  <li>-</li>
-                  <li>-</li>
-                </ul>
+                <div class="osi_table_layer">
+                  <h4>Application Layer</h4>
+                  <ul>
+                    <li>приложения или сервисы понимают, что надо выполнить</li>
+                  </ul>
+                </div>
               </td>
             </tr>
           </table>
@@ -248,13 +260,12 @@
           <table>
             <tr>
               <td>
-                <h4>Presentation Layer</h4>
-                <ul>
-                  <li>-</li>
-                  <li>-</li>
-                  <li>-</li>
-                  <li>-</li>
+                <div class="osi_table_layer">
+                  <h4>Presentation Layer</h4>
+                  <ul>
+                    <li>видит, как все должно быть структурировано и приводит информацию в читабельный вид</li>
                 </ul>
+                </div>
               </td>
             </tr>
           </table>
@@ -263,13 +274,12 @@
           <table>
             <tr>
               <td>
-                <h4>Session Layer</h4>
-                <ul>
-                  <li>-</li>
-                  <li>-</li>
-                  <li>-</li>
-                  <li>-</li>
-                </ul>
+                <div class="osi_table_layer">
+                  <h4>Session Layer</h4>
+                  <ul>
+                    <li>происходит установление сеанса между компьютером и сервером</li>
+                  </ul>
+                </div>
               </td>
             </tr>
           </table>
@@ -278,13 +288,14 @@
           <table>
             <tr>
               <td>
-                <h4>Transport Layer</h4>
-                <ul>
-                  <li>-</li>
-                  <li>-</li>
-                  <li>-</li>
-                  <li>-</li>
-                </ul>
+                <div class="osi_table_layer">
+                  <h4>Transport Layer</h4>
+                  <ul>
+                    <li>проверяется порт назначения (не адрес)</li>
+                    <li>по номеру порта, выясняется какому приложению или сервису адресованы данные</li>
+                    <li>если это веб-сервер, то номер порта <b>80</b></li>
+                  </ul>
+                </div>
               </td>
             </tr>
           </table>
@@ -293,13 +304,13 @@
           <table>
             <tr>
               <td>
-                <h4>Network Layer</h4>
-                <ul>
-                  <li>-</li>
-                  <li>-</li>
-                  <li>-</li>
-                  <li>-</li>
-                </ul>
+                <div class="osi_table_layer">
+                  <h4>Network Layer</h4>
+                  <ul>
+                    <li>проверяется <b>IP-адрес</b> назначения</li>
+                    <li>если он верен, данные поднимаются выше</li>
+                  </ul>
+                </div>
               </td>
             </tr>
           </table>
@@ -308,12 +319,14 @@
           <table>
             <tr>
               <td>
-                <h4>Data Link Layer</h4>
-                <ul>
-                  <li>проверяется MAC-адрес назначения (ему ли это адресовано)</li>
-                  <li>если да, то проверяется кадр на целостность и отсутствие ошибок</li>
-                  <li>если все прекрасно и данные целы, он передает их вышестоящему уровню</li>
-                </ul>
+                <div class="osi_table_layer">
+                  <h4>Data Link Layer</h4>
+                  <ul>
+                    <li>проверяется <b>MAC-адрес</b> назначения (ему ли это адресовано)</li>
+                    <li>если да, то проверяется кадр на целостность и отсутствие ошибок</li>
+                    <li>если все прекрасно и данные целы, он передает их вышестоящему уровню</li>
+                  </ul>
+                </div>
               </td>
             </tr>
           </table>
@@ -322,11 +335,13 @@
           <table>
             <tr>
               <td>
-                <h4>Physical Layer</h4>
-                <ul>
-                  <li>электрический сигнал подошел к серверному железу</li>
-                  <li>сингнал конвертируются в понятную битовую последовательность для канального уровня</li>
-                </ul>
+                <div class="osi_table_layer">
+                  <h4>Physical Layer</h4>
+                  <ul>
+                    <li>электрический сигнал подошел к серверному железу</li>
+                    <li>сингнал конвертируются в понятную битовую последовательность для канального уровня</li>
+                  </ul>
+                </div>
               </td>
             </tr>
           </table>

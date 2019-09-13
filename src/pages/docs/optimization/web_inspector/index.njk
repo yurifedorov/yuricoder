@@ -1,0 +1,22 @@
+{% extends "base.njk" %}
+
+{% set file_name   = 'web_inspector' %}
+{% set category    = 'docs' %}
+{% set subcategory = 'optimization' %}
+{% set segment     = 'web_inspector' %}
+{% set subsegment  = '' %}
+
+{% block head %}
+  <title>Веб-инспектор</title>
+  <meta name="description" content="Подробно о веб-инспекторе Google Chrome" />
+  <link rel="stylesheet" href="{{prism_css}}">
+  <script src="{{prism_js}}" async></script>
+{% endblock %}
+
+{% block aside_top %}{% include aside_top %}{% endblock %}
+{% block aside_left %}{% include aside_left %}{% endblock %}
+{% block main %}{% include content %}{% endblock %}
+
+{% block inlineScripts %}
+  {# место для инлайновых скриптов #}
+{% endblock %}

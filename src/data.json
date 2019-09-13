@@ -528,11 +528,11 @@
       }
     ]
   }, {
-    "category": "item2",
+    "category": "Инструменты Google Chrome",
     "subcategories": [
       {
-        "name": "-",
-        "link": "#"
+        "name": "Веб-инспектор",
+        "link": "web_inspector"
       },
       {
         "name": "-",
@@ -540,7 +540,7 @@
       }
     ]
   }, {
-    "category": "item2",
+    "category": "item3",
     "subcategories": [
       {
         "name": "-",
