@@ -4,7 +4,7 @@ table {
   border-collapse: collapse; /* не трогать */
   /*margin: 5px 0 40px -10px;*/ /* не трогать */
   font-size: 0.9em;
-  margin-bottom: 10px;
+  margin: 10px 0 30px 0;
 }
 
 table caption {

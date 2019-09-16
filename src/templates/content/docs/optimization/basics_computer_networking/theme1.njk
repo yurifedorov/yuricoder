@@ -54,56 +54,89 @@
   <li>модель OSI (эталонная модель, нужно знать как теорию)</li>
   <li>модель TCP/IP (используется на практике)</li>
 </ul>
-<h3>OSI</h3>
-<p>Эталонная модель состоит из <a href="https://www.iso.org/ics/35.100/x/">7 уровней</a>:</p>
 <table>
+<caption>Модель OSI</caption>
   <tr>
-    <td><b>Levels</b> </td>
+    <td><b>Layer</b> </td>
     <td><b>Тип данных</b></td>
     <td><b>Функции</b></td>
     <td><b>Примеры</b></td>
   </tr>
   <tr>
-    <td><em>7</em> <a href="#">Application Layer</a> </td>
-    <td title="Protocol Data Units">PDU (данные)</td>
+    <td><em>7</em> Application</td>
+    <td title="Protocol Data Units">PDU</td>
     <td>доступ к сетевым службам</td>
-    <td>HTTP, FTP, POP3, WebSocket</td>
+    <td>HTTP, HTTPS, FTP, POP3, WebSocket</td>
   </tr>
   <tr>
-    <td><em>6</em> <a href="#">Presentation Layer</a> </td>
-    <td title="Protocol Data Units">PDU (данные)</td>
+    <td><em>6</em> Presentation</td>
+    <td title="Protocol Data Units">PDU</td>
     <td>представление и шифрование данных</td>
     <td>ASCII, EBCDIC</td>
   </tr>
   <tr>
-    <td><em>5</em> <a href="#">Session Layer</a> </td>
-    <td title="Protocol Data Units">PDU (данные)</td>
+    <td><em>5</em> Session</td>
+    <td title="Protocol Data Units">PDU</td>
     <td>управление сеансом связи</td>
     <td>RPC, PAP, L2TP</td>
   </tr>
   <tr>
-    <td><em>4</em> <a href="#">Transport Layer</a> </td>
+    <td><em>4</em> Transport</td>
     <td>сегменты (для TCP) / дейтаграммы (для UDP)</td>
     <td>прямая связь между конечными пунктами и надёжность</td>
-    <td>TCP, UDP, SCTP, PORTS</td>
+    <td>TCP, UDP</td>
   </tr>
   <tr>
-    <td><em>3</em> <a href="#">Network Layer</a> </td>
-    <td>IP пакеты (или просто "пакеты")</td>
+    <td><em>3</em> Network</td>
+    <td>пакеты</td>
     <td>определение маршрута и логическая адресация</td>
     <td>IPv4, IPv6, IPsec, AppleTalk</td>
   </tr>
   <tr>
-    <td><em>2</em> <a href="#">Data Link Layer</a> </td>
+    <td><em>2</em> Data Link</td>
     <td>биты / кадры</td>
     <td>физическая адресация</td>
     <td>PPP, IEEE 802.22, Ethernet, DSL, ARP, сетевая карта.</td>
   </tr>
   <tr>
-    <td><em>1</em> <a href="#">Physical Layer</a></td>
+    <td><em>1</em> Physical</td>
     <td>биты</td>
     <td>работа со средой передачи, сигналами и двоичными данными</td>
     <td>USB, кабель («витая пара», коаксиальный, оптоволоконный), радиоканал</td>
+  </tr>
+</table>
+
+<table>
+<caption>Модель TCP/IP</caption>
+  <tr>
+    <td><b>Layer</b> </td>
+    <td><b>Тип данных</b></td>
+    <td><b>Функции</b></td>
+    <td><b>Примеры</b></td>
+  </tr>
+  <tr>
+    <td><em>4</em> Application</td>
+    <td title="Protocol Data Units">PDU</td>
+    <td>доступ к сетевым службам, шифрование, управление сеансом связи</td>
+    <td>HTTP, HTTPS, FTP, POP3, WebSocket</td>
+  </tr>
+  <tr>
+    <td><em>3</em> Transport</td>
+    <td>сегменты (для TCP) / дейтаграммы (для UDP)</td>
+    <td>прямая связь между конечными пунктами и надёжность</td>
+    <td>TCP, UDP</td>
+  </tr>
+  <tr>
+    <td><em>2</em> Internet</td>
+    <td>пакеты</td>
+    <td>определение маршрута и логическая адресация</td>
+    <td>IPv4, IPv6, IPsec, AppleTalk</td>
+  </tr>
+  <tr>
+    <td><em>1</em> Link or Network Interface</td>
+    <td>биты</td>
+    <td>работа со средой передачи, сигналами и двоичными данными</td>
+    <td>Ethernet, USB, кабель («витая пара», коаксиальный, оптоволоконный), радиоканал</td>
   </tr>
 </table>
 
