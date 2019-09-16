@@ -1,0 +1,22 @@
+{% extends "base.njk" %}
+
+{% set file_name   = 'https' %}
+{% set category    = 'docs' %}
+{% set subcategory = 'optimization' %}
+{% set segment     = 'basics_computer_networking' %}
+{% set subsegment  = 'https' %}
+
+{% block head %}
+  <title>HTTPS протокол</title>
+  <meta name="description" content="Подробно о протоколе HTTPS" />
+  <link rel="stylesheet" href="{{prism_css}}">
+  <script src="{{prism_js}}" async></script>
+{% endblock %}
+
+{% block aside_top %}{% include aside_top %}{% endblock %}
+{% block aside_left %}{% include aside_left %}{% endblock %}
+{% block main %}{% include content %}{% endblock %}
+
+{% block inlineScripts %}
+  {# место для инлайновых скриптов #}
+{% endblock %}
