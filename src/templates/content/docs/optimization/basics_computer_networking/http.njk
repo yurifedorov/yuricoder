@@ -1,4 +1,79 @@
 <h1>HTTP</h1>
+<p>Протокол уровня <b>Application</b> для передачи данных между веб-сервером и браузером.</p>
+<table>
+  <caption>Официальная документация</caption>
+  <tr style="background: #dadada;">
+    <td><b>имя</b></td>
+    <td><b>тема</b></td>
+    <td><b>обновления</b></td>
+    <td><b>примечания</b></td>
+  </tr>
+  <tr>
+    <td><a href="https://www.w3.org/Protocols/rfc2616/rfc2616">RFC 2616</a></td>
+    <td>Hypertext Transfer Protocol -- HTTP/1.1</td>
+    <td>7230-7237</td>
+    <td>устарел</td>
+  </tr>
+  <tr>
+    <td><a href="https://tools.ietf.org/html/rfc7230">RFC 7230</a></td>
+    <td>Hypertext Transfer Protocol (HTTP/1.1): Message Syntax and Routing</td>
+    <td><a href="https://tools.ietf.org/html/rfc2817">2817</a>, <a href="https://tools.ietf.org/html/rfc2818">2818</a></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td><a href="https://tools.ietf.org/html/rfc7237">RFC 7237</a></td>
+    <td>Initial Hypertext Transfer Protocol (HTTP) Method Registrations</td>
+    <td>-</td>
+    <td></td>
+  </tr>
+</table>
+
+<table>
+  <caption>Участники</caption>
+  <tr style="background: #dadada;">
+    <td><b>роль</b></td>
+    <td><b>задача</b></td>
+    <td><b>основные реализации</b></td>
+  </tr>
+  <tr>
+    <td><b>клиент</b></td>
+    <td>отправка запроса</td>
+    <td>браузеры (user agent)</td>
+  </tr>
+  <tr>
+    <td><b>исходный сервер</b> (origin server)</td>
+    <td>обработка запроса</td>
+    <td><b>Apache</b>, Internet Information Services (IIS), <b>nginx</b>, Google Web Server, lighttpd</td>
+  </tr>
+  <tr>
+    <td><b>прокси</b></td>
+    <td title="для выполнения транспортных служб">посредник для выполнения транспортных служб</td>
+    <td>Squid, UserGate, Multiproxy, Naviscope, nginx</td>
+  </tr>
+</table>
+
+<section>
+  <h2>Содержание</h2>
+  <ul>
+    <li><a href="#http_basic">Основы HTTP</a></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+</section>
+
+<section id="http_basic">
+  <h2>Основы HTTP</h2>
+  <ul>
+    <li>позволяет общаться системам с различной архитектурой и конфигурацией сети</li>
+    <li>считается протоколом без запоминания состояния</li>
+    <li>для транспортировки сообщений обычно служит протокол <b>TCP</b> (протокол транспортного уровня из набора TCP/IP)</li>
+    <li>гарантирует доставку передаваемых пакетов данных в нужной последовательности, но трафик при этом может быть весьма неравномерен, так как пакеты испытывают всевозможные задержки)</li>
+    <li>порт 80 (по умолчанию), но могут использоваться и другие порты</li>
+    <li>кроме стандартизованных в RFC заголовков, можно добавлять и отправлять собственные специализированные заголовки</li>
+  </ul>
+</section>
+
 
 <section>
   <h4>Источники знаний:</h4>
