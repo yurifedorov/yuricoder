@@ -1,35 +1,25 @@
 <h1>HTTP</h1>
-<p>Протокол уровня <b>Application</b> для передачи данных между веб-сервером и браузером.</p>
+<b>Все описанной на этой странице выдержки из официальной документации по HTTP/1.1, переведенной на русский <a href="https://rfc2.ru/2068.rfc">RFC 2068 [RUS]</a>. <br><br> <b>Является конспектом для личного пользования!</b> </b>
 <table>
   <caption>Официальная документация</caption>
   <tr style="background: #dadada;">
     <td><b>имя</b></td>
     <td><b>тема</b></td>
-    <td><b>обновления</b></td>
-    <td><b>примечания</b></td>
+    <td><b>переводы</b></td>
   </tr>
   <tr>
-    <td><a href="https://www.w3.org/Protocols/rfc2616/rfc2616">RFC 2616</a></td>
-    <td>Hypertext Transfer Protocol -- HTTP/1.1</td>
-    <td>7230-7237</td>
-    <td>устарел</td>
-  </tr>
-  <tr>
-    <td><a href="https://tools.ietf.org/html/rfc7230">RFC 7230</a></td>
-    <td>Hypertext Transfer Protocol (HTTP/1.1): Message Syntax and Routing</td>
-    <td><a href="https://tools.ietf.org/html/rfc2817">2817</a>, <a href="https://tools.ietf.org/html/rfc2818">2818</a></td>
+    <td><a href="https://tools.ietf.org/html/rfc1945">RFC 1945</a></td>
+    <td>HTTP/1.0</td>
     <td></td>
   </tr>
   <tr>
-    <td><a href="https://tools.ietf.org/html/rfc7237">RFC 7237</a></td>
-    <td>Initial Hypertext Transfer Protocol (HTTP) Method Registrations</td>
-    <td>-</td>
-    <td></td>
+    <td><a href="https://www.w3.org/Protocols/rfc2068/rfc2068">RFC 2068</a></td>
+    <td>HTTP/1.1</td>
+    <td style="background: yellow;"><a href="https://rfc2.ru/2068.rfc">RFC 2068 [RUS]</a></td>
   </tr>
   <tr>
     <td><a href="https://tools.ietf.org/html/rfc7540">RFC 7540</a></td>
-    <td>Hypertext Transfer Protocol Version 2 (HTTP/2)</td>
-    <td>-</td>
+    <td>HTTP/2</td>
     <td style="background: yellow;"><a href="http://book.itep.ru/4/45/http2.htm">RFC 7540 [RUS]</a></td>
   </tr>
 </table>
@@ -58,21 +48,49 @@
   </tr>
 </table>
 
-<section>
+<section class="toc">
   <h2>Содержание</h2>
-  <ul>
-    <li><a href="#http_basic">Основы HTTP</a></li>
-    <li></li>
-    <li></li>
-    <li></li>
-  </ul>
+  <details class="toc__section">
+    <summary>1. Введение</summary>
+    <ul>
+      <li><a href="#">1.1. Цель</a>
+      <li><a href="#">1.2. Требования</a>
+      <li><a href="#">1.3. Терминология</a>
+      <li><a href="#">1.4. Общее описание</a>
+    </ul>
+  </details>
+  <details class="toc__section">
+    <summary>2. Письменные соглашения и обобщенная грамматика</summary>
+    <ul>
+      <li><a href="#">2.1. Увеличенная нормальная запись Бекуса-Наура (BNF)</a>
+      <li><a href="#">2.2. Основные правила</a>
+    </ul>
+  </details>
+  <details class="toc__section">
+    <summary>3. Параметры протокола</summary>
+    <ul>
+      <li><a href="#">3.1. Версия HTTP</a>
+      <li>
+        <details>
+          <summary>3.2. Универсальные Идентификаторы Ресурсов (URI)</summary>
+          <ul>
+            <li><a href="#">3.2.1. Общий синтаксис</a>
+            <li><a href="#">3.2.2. HTTP URL</a>
+            <li><a href="#">3.2.3. Сравнение URI</a>
+          </ul>
+        </details>
+      </li>
+      <li><a href="#">3.4. Кодовые таблицы (character sets)</a>
+      <li><a href="#">3.5. Кодирование содержимого (content codings)</a>
+      <li><a href="#">3.6. Кодирование передачи (transfer codings)</a>
+      <li><a href="#">3.7. Медиа типы (Media Types)</a>
+      <li><a href="#">3.8. Лексемы программ (Product Tokens)</a>
+    </ul>
+  </details>
 </section>
 
-<section id="http_basic">
-  <h2>Основы HTTP</h2>
-
-  <p>Темы, освещенные в статье <a href="https://code.tutsplus.com/tutorials/http-the-protocol-every-web-developer-must-know-part-1--net-31177?ec_unit=translation-info-language">HTTP: The Protocol Every Web Developer Must Know - Part 1</a></p>
   <ul>
+    <li><em>1.3.</em> <a href="#terminology">терминология</a> </li>
     <li><a href="#http_versions">версии HTTP</a></li>
     <li><a href="#url">URL-адреса</a></li>
     <li>методы</li>
@@ -82,10 +100,6 @@
     <li>Формат сообщений ответа</li>
     <li>инструменты для просмотра сетевого трафика по HTTP</li>
     <li>использование HTTP во фреймворках и библиотеках</li>
-  </ul>
-
-  <p>Темы, освещенные в статье <a href="https://code.tutsplus.com/tutorials/http-the-protocol-every-web-developer-must-know-part-2--net-31155?ec_unit=translation-info-language">HTTP: The Protocol Every Web Developer Must Know - Part 2</a></p>
-  <ul>
     <li>соединения HTTP</li>
     <li>реализация соединения на стороне сервера</li>
     <li>идентификация и аутентификация</li>
@@ -93,6 +107,125 @@
     <li>кэширование</li>
   </ul>
 
+</section>
+
+<section id="terminology">
+  <style>#terminology td:first-child {background: #eee;}</style>
+  <h2>1.3. Терминология</h2>
+  <table>
+    <tr>
+      <td><b>connection</b> (соединение)</td>
+      <td>виртуальный канал транспортого уровня, установленный между двумя программами с целью связи</td>
+    </tr>
+    <tr>
+      <td><b>message</b> (сообщение)</td>
+      <td>основной модуль HTTP связи, состоящей из структурной последовательности октетов, соответствующих синтаксису, определенному в <a href="#">разделе 4</a>  и передаваемых по соединению</td>
+    </tr>
+    <tr>
+      <td><b>request</b> (запрос)</td>
+      <td>любое HTTP сообщение, содержащее запрос, определяемый в <a href="#">разделе 5</a></td>
+    </tr>
+    <tr>
+      <td><b>response</b> (ответ)</td>
+      <td>любое HTTP сообщение, содержащее ответ, определяемый в <a href="#">разделе 5</a></td>
+    </tr>
+    <tr>
+      <td><b>resource</b> (ресурс)</td>
+      <td>сетевой объект данных или сервис, который может быть идентифицирован URI, определеляемым в <a href="#">разделе 3.2</a></td>
+    </tr>
+    <tr>
+      <td><b>entity</b> (объект)</td>
+      <td>объект состоит из метаинформации в форме полей заголовка объекта и содержания в форме тела объекта, как описано в <a href="">разделе 7</a></td>
+    </tr>
+    <tr>
+      <td><b>representation</b> (представление)</td>
+      <td>объект включенный в ответ, и подчиняющийся обсуждению содержимого (Content Negotiation), что описано в <a href="">разделе 12</a></td>
+    </tr>
+    <tr>
+      <td><b>content negotiation</b> (обсуждение содержимого)</td>
+      <td>механизм для выбора соответствующего представления во время обслуживания запроса, как описано в <a href="#">разделе 12</a></td>
+    </tr>
+    <tr>
+      <td><b>variant</b> (вариант)</td>
+      <td>ресурс может иметь одно, или несколько представлений, связанных с ним в данный момент (каждое из этих представлений называется "вариант")</td>
+    </tr>
+    <tr>
+      <td><b>client</b> (клиент)</td>
+      <td>программа, которая устанавливает соединения с целью посылки запросов</td>
+    </tr>
+    <tr>
+      <td><b>user agent</b> (агент пользователя)</td>
+      <td>клиент, который инициирует запрос. Как правило браузеры, редакторы, роботы (spiders), или другие инструментальные средства пользователя.</td>
+    </tr>
+    <tr>
+      <td><b>server</b> (сервер)</td>
+      <td>приложение, которое слушает соединения, принимает запросы на обслуживание и посылает ответы</td>
+    </tr>
+    <tr>
+      <td><b>origin server</b> (первоначальный сервер)</td>
+      <td>сервер, на котором данный ресурс постоянно находится или должен быть создан</td>
+    </tr>
+    <tr>
+      <td><b>proxy</b> (прокси-сервер)</td>
+      <td>программа-посредник, которая действует и как сервер, и как клиент с целью создания запросов от имени других клиентов</td>
+    </tr>
+    <tr>
+      <td><b>gateway</b> (шлюз)</td>
+      <td>сервер, который действует как посредник для некоторого другого сервера.</td>
+    </tr>
+    <tr>
+      <td><b>tunnel</b> (туннель)</td>
+      <td>программа-посредник, которая поддерживает соединение</td>
+    </tr>
+    <tr>
+      <td><b>cache</b> (кэш)</td>
+      <td>локальная память, в которой программа хранит сообщения ответов, и в которой располагается подсистема, управляющая хранением, поиском и стиранием сообщений</td>
+    </tr>
+    <tr>
+      <td><b>cachable</b> (кэшируемый)</td>
+      <td>ответ является кэшируемым, если кэшу разрешено сохранить копию ответного сообщения для использования при ответе на последующие запросы</td>
+    </tr>
+    <tr>
+      <td><b>first-hand</b> (непосредственный)</td>
+      <td>ответ считается непосредственным, если он приходит непосредственно от первоначального сервера без ненужной задержки, возможно через один или несколько прокси-серверов</td>
+    </tr>
+    <tr>
+      <td><b>explicit expiration time</b> (точное время устаревания)</td>
+      <td>время, определенное первоначальным сервером и показывающее кэшу, когда объект больше не может быть возвращен кэшем клиенту без дополнительной проверки правильности</td>
+    </tr>
+    <tr>
+      <td><b>heuristic expiration time</b> (эвристическое время устаревания)</td>
+      <td>время устаревания, назначенное кэшем, если не указано точное время устаревания</td>
+    </tr>
+    <tr>
+      <td><b>age</b> (возраст)</td>
+      <td>возраст ответа - время, прошедшее с момента отсылки, или успешной проверки ответа первоначальным сервером</td>
+    </tr>
+    <tr>
+      <td><b>freshness lifetime</b> (время жизни)</td>
+      <td>отрезок времени между порождением ответа и временем устаревания</td>
+    </tr>
+    <tr>
+      <td><b>fresh</b> (свежий)</td>
+      <td>ответ считается свежим, если его возраст еще <b>не превысил</b> время жизни.</td>
+    </tr>
+    <tr>
+      <td><b>stale</b> (просроченный)</td>
+      <td>ответ считается просроченным, если его возраст <b>превысил</b> время жизни.</td>
+    </tr>
+    <tr>
+      <td><b>semantically transparent</b> (семантически прозрачный)</td>
+      <td>говорят, что кэш ведет себя "семантически прозрачным" образом в отношении специфического ответа, когда использование кэша не влияет ни на клиента запроса, ни на первоначальный сервер, но повышает эффективность</td>
+    </tr>
+    <tr>
+      <td><b>validator</b> (указатель правильности)</td>
+      <td>элемент протокола (например, метка объекта или Last-Modified time), который используется, чтобы выяснить, является ли находящаяся в кэше копия эквивалентом объекта</td>
+    </tr>
+    <tr>
+      <td><b>eng</b> (rus)</td>
+      <td>-</td>
+    </tr>
+  </table>
 </section>
 
 <section id="http_versions">
@@ -104,19 +237,33 @@
     </tr>
     <tr>
       <td>HTTP/0.9</td>
-      <td>был предложен в марте 1991 года Тимом Бернерсом-Ли</td>
+      <td>простой протокол для передачи необработанных данных через интернет</td>
     </tr>
     <tr>
       <td>HTTP/1.0</td>
-      <td></td>
+      <td>
+        <b>улучшения:</b>
+        <ul>
+          <li>MIME-подобный формат для сообщений, содержащий метаинформацию о передаваемых данных</li>
+        </ul>
+        <b>недостатки:</b>
+        <ul>
+          <li>плохо учитывал особенности работы с прокси-серверами (hierarchical proxies);</li>
+          <li>кэшированием;</li>
+          <li>постоянными соединениями;</li>
+          <li>виртуальными хостами (virtual hosts);</li>
+        </ul>
+      </td>
     </tr>
     <tr>
       <td>HTTP/1.1</td>
-      <td>используется с 1999 года</td>
+      <td>
+        <p>cодержит более строгие требования, чем HTTP/1.0, гарантирующие надежную реализацию возможностей.</p>
+      </td>
     </tr>
     <tr>
       <td>HTTP/2</td>
-      <td><b>увеличивает</b> скорость загрузки страницы</td>
+      <td>современный протокол, позволяет <b>увеличить</b> скорость загрузки страницы</td>
     </tr>
   </table>
   <h4>Подробнее об HTTP/2</h4>
@@ -139,5 +286,6 @@
     <li><a href="https://code.tutsplus.com/ru/tutorials/http-the-protocol-every-web-developer-must-know-part-1--net-31177">HTTP: Протокол, который должен знать каждый веб-разработчик (Часть 1)</a></li>
     <li><a href="https://code.tutsplus.com/ru/tutorials/http-the-protocol-every-web-developer-must-know-part-2--net-31155">HTTP: Протокол, который должен знать каждый веб-разработчик (Часть 2)</a></li>
     <li><a href="https://habr.com/ru/post/215117/">Простым языком об HTTP</a></li>
+    <li><a href="https://rfc2.ru/">Русские переводы RFC</a></li>
   </ul>
 </section>

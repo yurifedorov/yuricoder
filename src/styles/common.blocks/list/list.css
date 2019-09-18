@@ -1,12 +1,3 @@
 .list {
-  font-size: 1.2em;
-}
-
-.list > li {
-  list-style-type: square;
-}
-
-.list > li > a {
-  text-decoration: none;
-  cursor: pointer;
+  background: #eee;
 }

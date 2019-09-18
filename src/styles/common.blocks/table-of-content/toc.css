@@ -1,0 +1,32 @@
+.toc {
+  padding: 1px;
+}
+
+.toc summary {
+  width: fit-content;  /* блок раскрывается при щелчке по кнопке, а не по всей строке */
+  line-height: 30px;
+  margin-bottom: 1px;
+}
+
+.toc__section > summary {
+  padding: 0 5px;
+}
+
+.toc > details ul {
+  padding-inline-start: 0;
+  margin: 0;
+}
+
+.toc li {
+  width: 100%;
+  line-height: 30px;
+  list-style-type: none;
+}
+
+.toc__section li {
+  padding-left: 20px;
+}
+
+.toc a {
+  text-decoration: none;
+}
