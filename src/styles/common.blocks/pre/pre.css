@@ -1,0 +1,7 @@
+pre {
+    width: 700px; /* временно, иначе aside_left уходит вверх */
+    outline: 1px solid;
+    padding: 20px;
+    margin-bottom: 40px;
+    overflow: auto;
+  }
