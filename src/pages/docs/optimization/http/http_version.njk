@@ -1,0 +1,20 @@
+{% extends "base.njk" %}
+
+{% set file_name   = 'http_version' %}
+{% set category    = 'docs' %}
+{% set subcategory = 'optimization' %}
+{% set segment     = 'http' %}
+{% set subsegment  = 'http_version' %}
+
+{% block head %}
+  <title>Версия HTTP</title>
+  <meta name="description" content="Подробно о версиях HTTP" />
+{% endblock %}
+
+{% block aside_top %}{% include aside_top %}{% endblock %}
+{% block aside_left %}{% include aside_left %}{% endblock %}
+{% block main %}{% include content %}{% endblock %}
+
+{% block inlineScripts %}
+  {# место для инлайновых скриптов #}
+{% endblock %}
