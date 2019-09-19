@@ -4,6 +4,7 @@
   background: rgb(233, 230, 230); /* временно */
   display: none;
   z-index: 3; /* должен быть выше чем у .aside_top */
+  padding: 20px;
 }
 
 .LG > .aside_left {

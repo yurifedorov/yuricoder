@@ -25,6 +25,11 @@
 
 .toc__section li {
   padding-left: 20px;
+  font-size: 0.9em;
+}
+
+.toc__section li:hover {
+  background: rgba(0, 0, 0, 0.1);
 }
 
 .toc a {
