@@ -30,11 +30,204 @@
           </ul>
         </details>
       </li>
+      <li>
+        <details>
+          <summary>3.3. Форматы даты/времени</summary>
+          <ul>
+            <li><a href="#">3.3.1. Полная дата</a>
+            <li><a href="#">3.3.2. Разность секунд (delta seconds)</a>
+          </ul>
+        </details>
+      </li>
       <li><a href="#">3.4. Кодовые таблицы (character sets)</a>
       <li><a href="#">3.5. Кодирование содержимого (content codings)</a>
       <li><a href="#">3.6. Кодирование передачи (transfer codings)</a>
-      <li><a href="#">3.7. Медиа типы (Media Types)</a>
+      <li>
+        <details>
+          <summary>3.7. Медиа типы (Media Types)</summary>
+          <ul>
+            <li><a href="#">3.7.1. Канонизация и предопределенные значения типа text</a>
+            <li><a href="#">3.7.2. Типы Multipart</a>
+          </ul>
+        </details>
+      </li>
       <li><a href="#">3.8. Лексемы программ (Product Tokens)</a>
+      <li><a href="#">3.9. Качественные значения (Quality Values)</a>
+      <li><a href="#">3.10. Метки языков (Language Tags)</a>
+      <li><a href="#">3.11. Метки объектов (Entity Tags)</a>
+      <li><a href="#">3.12. Единицы измерения диапазонов (Range Units)</a>
+    </ul>
+  </details>
+  <details class="toc__section">
+    <summary>4. HTTP сообщение (HTTP Message)</summary>
+    <ul>
+      <li><a href="#">4.1. Типы сообщений</a>
+      <li><a href="#">4.2. Заголовки сообщений</a>
+      <li><a href="#">4.3. Тело cообщения</a>
+      <li><a href="#">4.4. Длина сообщения</a>
+      <li><a href="#">4.5. Общие поля заголовка</a>
+    </ul>
+  </details>
+  <details class="toc__section">
+    <summary>5. Запрос (Request)</summary>
+    <ul>
+      <li>
+        <details>
+          <summary>5.1. Строка запроса (Request-Line)</summary>
+          <ul>
+            <li><a href="#">5.1.1. Метод (Method)</a>
+            <li><a href="#">5.1.2. Запрашиваемый URI (Request-URI)</a>
+          </ul>
+        </details>
+      </li>
+      <li><a href="#">5.2. Ресурс, идентифицируемый запросом</a>
+      <li><a href="#">5.3. Поля заголовка запроса</a>
+    </ul>
+  </details>
+  <details class="toc__section">
+    <summary>6. Ответ (Response)</summary>
+    <ul>
+      <li>
+        <details>
+          <summary>6.1. Строка состояния (Status-Line)</summary>
+          <ul>
+            <li><a href="#">6.1.1. Код состояния и поясняющая фраза</a>
+          </ul>
+        </details>
+      </li>
+      <li><a href="#">6.2. Поля заголовка ответа</a>
+    </ul>
+  </details>
+  <details class="toc__section">
+    <summary>7. Объект (Entity)</summary>
+    <ul>
+      <li><a href="#">7.1. Поля заголовка объекта</a></li>
+      <li>
+        <details>
+          <summary>7.2. Тело объекта</summary>
+          <ul>
+            <li><a href="#">7.2.1. Тип (Type)</a>
+            <li><a href="#">7.2.2. Длина (Length)</a>
+          </ul>
+        </details>
+      </li>
+    </ul>
+  </details>
+  <details class="toc__section">
+    <summary>8. Соединения (Connections)</summary>
+    <ul>
+      <li>
+        <details>
+          <summary>8.1. Постоянные соединения (Persistent Connections)</summary>
+          <ul>
+            <li><a href="#">8.1.1. Цель</a>
+            <li><a href="#">8.1.2. Общее описание</a>
+            <li><a href="#">8.1.3. Прокси-сервера (Proxy Servers)</a>
+            <li><a href="#">8.1.4. Практические cоглашения</a>
+          </ul>
+        </details>
+      </li>
+      <li><a href="#">8.2. Требования к передаче сообщений</a>
+    </ul>
+  </details>
+  <details class="toc__section">
+    <summary>9. Определения методов (Method Definitions)</summary>
+    <ul>
+      <li>
+        <details>
+          <summary>9.1. Безопасные и Idempotent Методы</summary>
+          <ul>
+            <li><a href="#">9.1.1. Безопасные методы</a>
+            <li><a href="#">9.1.2. Idempotent методы (Idempotent Methods)е</a>
+          </ul>
+        </details>
+      </li>
+      <li><a href="#">9.2. OPTIONS</a>
+      <li><a href="#">9.3. GET</a>
+      <li><a href="#">9.4. HEAD</a>
+      <li><a href="#">9.5. POST</a>
+      <li><a href="#">9.6. PUT</a>
+      <li><a href="#">9.7. DELETE</a>
+      <li><a href="#">9.8. TRACE</a>
+    </ul>
+  </details>
+  <details class="toc__section">
+    <summary>10. Описания кодов состояния</summary>
+    <ul>
+      <li>
+        <details>
+          <summary>10.1. 1xx — Информационные коды</summary>
+          <ul>
+            <li><a href="#">10.1.1. 100 Continue</a>
+            <li><a href="#">10.1.2. 101 Switching Protocols</a>
+          </ul>
+        </details>
+      </li>
+      <li>
+        <details>
+          <summary>10.2. 2xx — Успешные коды</summary>
+          <ul>
+            <li><a href="#">10.2.1. 200 ОК</a>
+            <li><a href="#">10.2.2. 201 Created</a>
+            <li><a href="#">10.2.3. 202 Accepted</a>
+            <li><a href="#">10.2.4. 203 Non-Authoritative Information</a>
+            <li><a href="#">10.2.5. 204 No Content</a>
+            <li><a href="#">10.2.6. 205 Reset Content</a>
+            <li><a href="#">10.2.7. 206 Partial Content</a>
+          </ul>
+        </details>
+      </li>
+      <li>
+        <details>
+          <summary>10.3. 3xx — Коды перенаправления</summary>
+          <ul>
+            <li><a href="#">10.3.1. 300 Multiple Choices</a>
+            <li><a href="#">10.3.2. 301 Moved Permanently</a>
+            <li><a href="#">10.3.3. 302 Moved Temporarily</a>
+            <li><a href="#">10.3.4. 303 See Other</a>
+            <li><a href="#">10.3.5. 304 Not Modified</a>
+            <li><a href="#">10.3.6. 305 Use Proxy</a>
+          </ul>
+        </details>
+      </li>
+      <li>
+        <details>
+          <summary>10.4. 4xx — Коды ошибок клиента</summary>
+          <ul>
+            <li><a href="#">10.4.1. 400 Bad Request</a>
+            <li><a href="#">10.4.2. 401 Unauthorized</a>
+            <li><a href="#">10.4.3. 402 Payment Required</a>
+            <li><a href="#">10.4.4. 403 Forbidden</a>
+            <li><a href="#">10.4.5. 404 Not Found</a>
+            <li><a href="#">10.4.6. 405 Method Not Allowed</a>
+            <li><a href="#">10.4.7. 406 Not Acceptable</a>
+            <li><a href="#">10.4.8. 407 Proxy Authentication Required</a>
+            <li><a href="#">10.4.9. 408 Request Timeout</a>
+            <li><a href="#">10.4.10. 409 Conflict</a>
+            <li><a href="#">10.4.11. 410 Gone</a>
+            <li><a href="#">10.4.12. 411 Length Required</a>
+            <li><a href="#">10.4.13. 412 Precondition Failed</a>
+            <li><a href="#">10.4.14. 413 Request Entity Too Large</a>
+            <li><a href="#">10.4.15. 414 Request-URI Too Long</a>
+            <li><a href="#">10.4.16. 415 Unsupported Media Type</a>
+          </ul>
+        </details>
+      </li>
+      <li>
+        <details>
+          <summary>10.5. 5xx — Коды ошибок сервера</summary>
+          <ul>
+            <li><a href="#">10.5.1. 500 Internal Server Error</a>
+            <li><a href="#">10.5.2. 501 Not Implemented</a>
+            <li><a href="#">10.5.3. 502 Bad Gateway</a>
+            <li><a href="#">10.5.4. 503 Service Unavailable</a>
+            <li><a href="#">10.5.5. 504 Gateway Timeout</a>
+            <li><a href="#">10.5.6. 505 HTTP Version Not Supported</a>
+          </ul>
+        </details>
+      </li>
     </ul>
   </details>
 </section>
+
+<p>to be continued... <a href="https://rfc2.ru/2068.rfc">look here</a></p>

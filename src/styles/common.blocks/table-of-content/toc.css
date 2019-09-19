@@ -2,6 +2,10 @@
   padding: 1px;
 }
 
+.toc > h2 {
+  margin-top: 0;
+}
+
 .toc summary {
   width: fit-content;  /* блок раскрывается при щелчке по кнопке, а не по всей строке */
   line-height: 30px;
@@ -18,7 +22,6 @@
 }
 
 .toc li {
-  width: 100%;
   line-height: 30px;
   list-style-type: none;
 }

@@ -1,19 +1,20 @@
 {% extends "base.njk" %}
 
-{# variables #}
-{% set title = 'about me' %}
-
-{# ===================================== #}
+{% set file_name   = 'about' %}
+{% set category    = '' %}
+{% set subcategory = '' %}
+{% set segment     = '' %}
+{% set subsegment  = '' %}
 
 {% block head %}
-  <title>Yuri Fedorov - {{ title | capitalize }}</title>
-  <meta name="description" content="Я люблю создавать красивые и удобные сайты для людей" />
+  <title>About me</title>
+  <meta name="description" content="About me" />
 {% endblock %}
 
-{% block main %}
+{% block aside_top %}{% include aside_top %}{% endblock %}
+{% block aside_left %}{% include aside_left %}{% endblock %}
+{% block main %}{# include content #}{% endblock %}
 
-  <h1>{{title | capitalize }}</h1>
-  <p>Я люблю создавать красивые и удобные сайты для людей</p>
-  <p>Далеко-далеко за словесными горами в стране гласных, и согласных живут рыбные тексты. Свой текстами последний власти рукопись осталось запятой предупреждал возвращайся рекламных скатился свою? Снова сбить над, путь пунктуация всемогущая злых ведущими?</p>
-
+{% block inlineScripts %}
+  {# место для инлайновых скриптов #}
 {% endblock %}
