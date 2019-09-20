@@ -3,76 +3,42 @@
 <h1>1.4. Общее описание</h1>
 <p><b>Протокол HTTP</b> - это протокол запросов/ответов</p>
 
-<table>
-    <caption>запрос клиента (request), содержит:</caption>
+<table name="code">
+    <caption>Пример HTTP запроса для получения простой HTML страницы</caption>
     <tr>
-        <td>метод запроса</td>
-        <td>например GET</td>
+      <td>запрос</td>
+      <td>ответ</td>
     </tr>
     <tr>
-        <td>URI</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>версию протокола</td>
-        <td>например HTTP/1.1</td>
-    </tr>
-    <tr>
-        <td>MIME-подобное сообщение</td>
-        <td>информация о сервере, метаинформация объекта, и возможно тело запроса, по соединению</td>
+        <td>
+        <pre>
+        GET /test.html HTTP/1.1
+        User-Agent: Mozilla/4.0 (compatible; MSIE5.01; Windows NT)
+        Host: www.mysite.com
+        Accept-Language: ru-ru
+        Accept-Encoding: gzip, deflate
+        Connection: Keep-Alive
+        </pre>
+        </td>
+        <td>
+          <pre>
+          HTTP/1.1 200 OK
+          Date: Mon, 27 Jul 2009 12:28:53 GMT
+          Server: Apache/2.2.14 (Win32)
+          Last-Modified: Wed, 22 Jul 2009 19:15:56 GMT
+          Content-Length: 88
+          Content-Type: text/html
+          Connection: Closed
+
+          &lt;html&gt;
+            &lt;body&gt;
+              &lt;h1&gt;Hello, World!&lt;/h1&gt;
+            &lt;/body&gt;
+          &lt;/html&gt;
+          </pre>
+        </td>
     </tr>
 </table>
-<pre>
-HTTP/1.1 304 Not Modified
-Date: Thu, 19 Sep 2019 19:26:23 GMT
-Via: 1.1 varnish
-Cache-Control: max-age=600
-ETag: W/"5d83bebb-c3f"
-Expires: Thu, 19 Sep 2019 19:23:00 GMT
-Age: 14
-Connection: keep-alive
-X-Served-By: cache-mxp19830-MXP
-X-Cache: HIT
-X-Cache-Hits: 1
-X-Timer: S1568921184.888692,VS0,VE24
-Vary: Accept-Encoding
-X-Fastly-Request-ID: ff52a7942b68faa09a3e13ee30d818026da52625
-</pre>
-
-<table>
-    <caption>ответ сервера (response), содержит:</caption>
-    <tr>
-        <td>версию протокола сообщения</td>
-        <td>например: GET</td>
-    </tr>
-    <tr>
-        <td>код успешного выполнения или код ошибки</td>
-        <td>например: 200 OK или 404 Not Found</td>
-    </tr>
-    <tr>
-        <td>MIME-подобное сообщение</td>
-        <td>информация о сервере, метаинформация объекта, и, возможно, тело объекта</td>
-    </tr>
-</table>
-<pre>
-GET / HTTP/1.1
-Host: yuricoder.dev
-Connection: keep-alive
-Cache-Control: max-age=0
-Upgrade-Insecure-Requests: 1
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36
-Sec-Fetch-Mode: navigate
-Sec-Fetch-User: ?1
-DNT: 1
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
-Sec-Fetch-Site: none
-Accept-Encoding: gzip, deflate, br
-Accept-Language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7
-If-None-Match: W/"5d83bebb-c3f"
-If-Modified-Since: Thu, 19 Sep 2019 17:45:31 GMT
-</pre>
-
-
 
 <p>Связь между HTTP и MIME описана в разделе <a href="#">19.4. Различия между HTTP и MIME объектами</a></p>
 
