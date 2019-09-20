@@ -16,10 +16,14 @@ table caption {
   color: white;
 }
 
+table td {
+  border: 1px solid black;
+  padding: 5px 20px 5px 10px;
+}
+
 table[name="code"] td {
   width: 50%;
   border: 1px solid white;
-  padding: 5px 20px 5px 10px;
   background: #2d2d2d;
   color: white;
 }

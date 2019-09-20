@@ -1,0 +1,20 @@
+{% extends "base.njk" %}
+
+{% set file_name   = 'url_general_syntax' %}
+{% set category    = 'docs' %}
+{% set subcategory = 'optimization' %}
+{% set segment     = 'http' %}
+{% set subsegment  = 'url_general_syntax' %}
+
+{% block head %}
+  <title>3.2.1. Общий синтаксис</title>
+  <meta name="description" content="Синтаксис URL" />
+{% endblock %}
+
+{% block aside_top %}{% include aside_top %}{% endblock %}
+{% block aside_left %}{% include aside_left %}{% endblock %}
+{% block main %}{% include content %}{% endblock %}
+
+{% block inlineScripts %}
+  {# место для инлайновых скриптов #}
+{% endblock %}
