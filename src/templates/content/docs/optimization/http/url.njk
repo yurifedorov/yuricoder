@@ -5,11 +5,6 @@
 <section id="general_syntax">
 </section>
 <h2>3.2.1. Общий синтаксис</h2>
-<img src="https://cdn.tutsplus.com/net/authors/jeremymcpeak/http1-url-structure.png" alt="url syntax">
-
-<br>
-<br>
-
 <table>
   <caption>Строение URL</caption>
   <tr>
@@ -48,16 +43,27 @@
 
 <section id="http_url">
   <h2>3.2.2. HTTP URL</h2>
-  <p>"HTTP" схема используется для доступа к сетевым ресурсам при помощи протокола HTTP.</p>
+  <blockquote>
+    <p>HTTP схема используется для доступа к сетевым ресурсам при помощи протокола HTTP.</p>
+    <cite><a href="https://rfc2.ru/2068.rfc/print#p3.2.2">пункт 3.2.2.</a> спецификации RFC 2068</cite>
+  </blockquote>
+  <h3>Синтаксис</h3>
   <pre>
   http_URL       = "http:" "//" host [ ":" port ] [ abs_path ]
 
-  host           = <допустимое доменное имя машины
+  host           =  допустимое доменное имя машины
                     или IP адрес (в точечно-десятичной форме),
-                    как определено в разделе 2.1 RFC 1123>
+                    как определено в разделе 2.1 RFC 1123
 
   port           = *DIGIT
   </pre>
+  <h3>Запомнить</h3>
+  <ul>
+    <li>если <em>port</em> пуст или не задан - используется порт <em>80</em></li>
+    <li>ресурс размещеный на сервере, ожидает TCP соединения на порте <em>port</em>, компьютера <em>host</em> , и запрашиваемый URI ресурса <em>abs_path</em></li>
+    <li>использования IP адресов в URL <em class="should">следует</em> избегать, когда это возможно</li>
+    <li>eсли <em>abs_path</em> не представлен в URL, он <em class="must">должен</em> рассматриваться как <em>"/"</em> при вычислении <a href="#">Request-URI</a> (раздел 5.1.2).</li>
+  </ul>
 </section>
 
 <section id="url_comparison">
@@ -69,5 +75,6 @@
   <h4>Источники знаний:</h4>
   <ul>
     <li><a href="https://wiki.rookee.ru/url/">https://wiki.rookee.ru/url/</a></li>
+    <li><a href="http://old.istu.ru/files/material-static/1668/tspd-lect-02.pdf">Точечно-десятичное представление IP адреса</a> <em>PDF</em></li>
   </ul>
 </section>

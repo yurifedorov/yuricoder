@@ -1,10 +1,24 @@
 em {
   padding: 0 8px;
-  border-radius: 5px;
-  background: black;
-  color: white;
+  border-radius: 2px;
+  background: #dadada;
   font-style: normal;
   font-family: monospace;
+}
+
+em[class="must"] {
+  background: tomato;
+  text-transform: uppercase;
+}
+
+em[class="should"] {
+  background: lightgreen;
+  text-transform: uppercase;
+}
+
+em[class="may"] {
+  background: #dadada;
+  text-transform: uppercase;
 }
 
 em > a {

@@ -23,15 +23,20 @@ table td {
 
 table[name="code"] td {
   width: 50%;
+  line-height: 30px;
   border: 1px solid white;
-  background: #2d2d2d;
-  color: white;
+  background: #efefef;
 }
 
-table td > pre {
-  margin-top: -5px; /* переопределение padding <td> */
-  margin-right: -20px; /* переопределение padding <td> */
-  margin-bottom: -5px; /* переопределение padding <td> */
-  margin-left: -10px; /* переопределение padding <td> */
+table[name="code"] tr:first-child > td {
+  text-align: center;
+  background: #dadada;
+}
+
+table[name="code"] td > pre {
+  margin-top: 0; /* переопределение padding <td> */
+  margin-bottom: 0; /* переопределение padding <td> */
   padding: 15px;
+  box-shadow: none;
+  border-radius: 0;
 }
