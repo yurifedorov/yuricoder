@@ -1,0 +1,73 @@
+{% include warning_rfc2068 %}
+
+<h1>3.2. Универсальные Идентификаторы Ресурсов (URI)</h1>
+
+<section id="general_syntax">
+</section>
+<h2>3.2.1. Общий синтаксис</h2>
+<img src="https://cdn.tutsplus.com/net/authors/jeremymcpeak/http1-url-structure.png" alt="url syntax">
+
+<br>
+<br>
+
+<table>
+  <caption>Строение URL</caption>
+  <tr>
+    <td>protocol</td>
+    <td>HTTP или HTTPS</td>
+  </tr>
+  <tr>
+    <td>host</td>
+    <td>www.yuricoder.com</td>
+  </tr>
+  <tr>
+    <td>port</td>
+    <td>по умолчанию 80 (или 443 для HTTPS)</td>
+  </tr>
+  <tr>
+    <td>resource path</td>
+    <td>это локальный путь к ресурсу на сервере</td>
+  </tr>
+  <tr>
+    <td>query</td>
+    <td>отображается если метод запроса GET</td>
+  </tr>
+</table>
+
+<table>
+  <caption>URL бывает двух видов</caption>
+  <tr>
+    <td>absolute</td>
+    <td>scheme://domain/</td>
+  </tr>
+  <tr>
+    <td>relative</td>
+    <td>/path/resource</td>
+  </tr>
+</table>
+
+<section id="http_url">
+  <h2>3.2.2. HTTP URL</h2>
+  <p>"HTTP" схема используется для доступа к сетевым ресурсам при помощи протокола HTTP.</p>
+  <pre>
+  http_URL       = "http:" "//" host [ ":" port ] [ abs_path ]
+
+  host           = <допустимое доменное имя машины
+                    или IP адрес (в точечно-десятичной форме),
+                    как определено в разделе 2.1 RFC 1123>
+
+  port           = *DIGIT
+  </pre>
+</section>
+
+<section id="url_comparison">
+  <h2>3.2.3. Сравнение URI</h2>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur voluptatem ratione minus sint, excepturi magnam unde, quos architecto reiciendis recusandae ipsam consequuntur? Temporibus expedita nemo dolorem tenetur alias similique consectetur!</p>
+</section>
+
+<section class="link-list">
+  <h4>Источники знаний:</h4>
+  <ul>
+    <li><a href="https://wiki.rookee.ru/url/">https://wiki.rookee.ru/url/</a></li>
+  </ul>
+</section>
