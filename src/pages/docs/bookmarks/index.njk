@@ -1,0 +1,22 @@
+{% extends "base.njk" %}
+
+{% set file_name   = 'bookmarks' %}
+{% set category    = 'docs' %}
+{% set subcategory = 'bookmarks' %}
+{% set segment     = '' %}
+{% set subsegment  = '' %}
+
+{% block head %}
+  <title>Мои закладки</title>
+  <meta name="description" content="Полезная информация, которую необходимо изучить" />
+{% endblock %}
+
+{% block aside_top %}{% include aside_top %}{% endblock %}
+{% block aside_left %}{% include aside_left %}{% endblock %}
+
+{% block main %}
+
+  <h1>Мои закладки</h1>
+  {% include 'parts/navigation/bookmarks.njk' %}
+
+{% endblock %}
