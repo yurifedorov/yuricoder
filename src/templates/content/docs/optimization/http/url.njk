@@ -3,43 +3,44 @@
 <h1>3.2. Универсальные Идентификаторы Ресурсов (URI)</h1>
 
 <section id="general_syntax">
-</section>
-<h2>3.2.1. Общий синтаксис</h2>
-<table>
-  <caption>Строение URL</caption>
-  <tr>
-    <td>protocol</td>
-    <td>HTTP или HTTPS</td>
-  </tr>
-  <tr>
-    <td>host</td>
-    <td>www.yuricoder.com</td>
-  </tr>
-  <tr>
-    <td>port</td>
-    <td>по умолчанию 80 (или 443 для HTTPS)</td>
-  </tr>
-  <tr>
-    <td>resource path</td>
-    <td>это локальный путь к ресурсу на сервере</td>
-  </tr>
-  <tr>
-    <td>query</td>
-    <td>отображается если метод запроса GET</td>
-  </tr>
-</table>
+  <h2>3.2.1. Общий синтаксис</h2>
+  <p>Части, которые могут входить в URL описаны в <a href="https://rfc2.ru/2068.rfc/8#p3.2.1">пункте 3.2.1.</a> спецификации RFC 2068</p>
+  <pre>
+  URI         = ( absoluteURI | relativeURI ) [ "#" fragment ]
 
-<table>
-  <caption>URL бывает двух видов</caption>
-  <tr>
-    <td>absolute</td>
-    <td>scheme://domain/</td>
-  </tr>
-  <tr>
-    <td>relative</td>
-    <td>/path/resource</td>
-  </tr>
-</table>
+  absoluteURI = scheme ":" *( uchar | reserved )
+
+  relativeURI = net_path | abs_path | rel_path
+
+  net_path    = "//" net_loc [ abs_path ]
+  abs_path    = "/" rel_path
+  rel_path    = [ path ] [ ";" params ] [ "?" query ]
+
+  path        = fsegment *( "/" segment )
+  fsegment    = 1*pchar
+  segment     = *pchar
+
+  params      = param *( ";" param )
+  param       = *( pchar | "/" )
+
+  scheme      = 1*( ALPHA | DIGIT | "+" | "-" | "." )
+  net_loc     = *( pchar | ";" | "?" )
+
+  query       = *( uchar | reserved )
+  fragment    = *( uchar | reserved )
+
+  pchar       = uchar | ":" | "@" | "&" | "=" | "+"
+  uchar       = unreserved | escape
+  unreserved  = ALPHA | DIGIT | safe | extra | national
+
+  escape      = "%" HEX HEX
+  reserved    = ";" | "/" | "?" | ":" | "@" | "&" | "=" | "+"
+  extra       = "!" | "*" | "'" | "(" | ")" | ","
+  safe        = "$" | "-" | "_" | "."
+  unsafe      = CTL | SP | <"> | "#" | "%" | "<" | ">"
+  national    = <любой OCTET за исключением ALPHA, DIGIT, reserved, extra, safe, и unsafe>
+  </pre>
+</section>
 
 <section id="http_url">
   <h2>3.2.2. HTTP URL</h2>
@@ -65,12 +66,19 @@
     <li><em>host</em> - это компьютер, где расположены страницы сайта</li>
     <li><em>abs_path</em> - путь к запрашиваемому ресурсу</li>
     <li><em class="should">should</em> использования IP адресов в URL <b>СЛЕДУЕТ</b> избегать, когда это возможно</li>
-    <li><em class="must">must</em> eсли <em>abs_path</em> не представлен в URL, он <b>ДОЛЖЕН</b> рассматриваться как <em>"/"</em> при вычислении <a href="#">Request-URI</a> (раздел 5.1.2).</li>
+    <li><em class="must">must</em> eсли "abs_path" не представлен в URL, он <b>ДОЛЖЕН</b> рассматриваться как "/" при вычислении <a href="#">Request-URI</a> (раздел 5.1.2).</li>
   </ul>
 </section>
 
 <section id="url_comparison">
   <h2>3.2.3. Сравнение URI</h2>
+  <h3>Запомнить</h3>
+  <ul>
+    <li>порт, который пуст или не указан, эквивалентен заданному по умолчанию порту для этого URI</li>
+    <li><em class="must">must</em> cравнение имен хостов <b>ДОЛЖНО</b> производиться без учета регистра</li>
+    <li><em class="must">must</em> cравнение имен схем <b>ДОЛЖНО</b> производиться без учета регистра</li>
+    <li>пустой <em>abs_path</em> эквивалентен "/"</li>
+  </ul>
 
   <p>Cледующие три URI эквивалентны:</p>
   <pre>
