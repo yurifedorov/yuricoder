@@ -1,7 +1,3 @@
 ul, ol {
   background: transparent;
 }
-
-ul > li, ol > li {
-  margin-top: 15px;
-}
