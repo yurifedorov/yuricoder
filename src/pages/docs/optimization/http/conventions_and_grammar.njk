@@ -1,0 +1,20 @@
+{% extends "base.njk" %}
+
+{% set file_name   = 'conventions_and_grammar' %}
+{% set category    = 'docs' %}
+{% set subcategory = 'optimization' %}
+{% set segment     = 'http' %}
+{% set subsegment  = 'conventions_and_grammar' %}
+
+{% block head %}
+  <title>2. Письменные соглашения и обобщенная грамматика</title>
+  <meta name="description" content="Синтаксис URL" />
+{% endblock %}
+
+{% block aside_top %}{% include aside_top %}{% endblock %}
+{% block aside_left %}{% include aside_left %}{% endblock %}
+{% block main %}{% include content %}{% endblock %}
+
+{% block inlineScripts %}
+  {# место для инлайновых скриптов #}
+{% endblock %}

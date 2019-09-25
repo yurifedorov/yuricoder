@@ -11,3 +11,7 @@ pre {
 	padding: 10px;
 	color: #333;
 }
+
+pre a {
+  color: #333;
+}
