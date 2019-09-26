@@ -8,23 +8,21 @@
 
 <h2>План действий</h2>
 <ul>
-  <li>определиться со списком исследуемых версий <em class="tip" data-tip="completed">&#10004;</em></li>
+  <li>определиться со списком исследуемых версий <em class="tip" data-tip-text="completed">&#10004;</em></li>
   <li>создать тестовую веб-страницу для экспериментов</li>
 </ul>
 
 <section>
   <h2>Версии протоколов</h2>
 
-  <table>
+  <table id="table_web-protocols">
     <caption>Различия версий</caption>
-    <tr style="background: #dadada; font-weight: bold;">
+    <tr>
       <td>Особенности</td>
       <td>HTTP</td>
       <td>HTTP/0.9</td>
       <td>HTTP/1.0</td>
       <td>HTTP/1.1</td>
-      <td>SPDY/1.0</td>
-      <td>SPDY/2.0</td>
       <td>HTTP/2</td>
       <td>HTTP/3</td>
     </tr>
@@ -34,8 +32,6 @@
       <td>1991</td>
       <td>1996</td>
       <td>1997</td>
-      <td>2009</td>
-      <td>2012</td>
       <td>2015</td>
       <td>2018</td>
     </tr>
@@ -45,76 +41,71 @@
       <td>Tim Berners-Lee</td>
       <td>IETF</td>
       <td>IETF</td>
-      <td>Google</td>
-      <td>Google</td>
       <td>IETF</td>
-      <td><em class="tip" data-tip="версия: gQUIC">Google</em> / <em class="tip" data-tip="версия: QUIC">IETF</em></td>
+      <td class="tip" data-tip-text="gQUIC (Google) / QUIC (IETF)">Google / IETF</td>
     </tr>
     <tr>
-      <td>мультиплексированные потоки</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-      <td>?</td>
-      <td>?</td>
-      <td><em class="tip" data-tip="#">&#10004;</em></td>
-      <td> </td>
+      <td>браузерная поддержка</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td class="tip" data-tip-text="Сan I Use">95.6%</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><a href="#multiplexing">мультиплексированные потоки</a></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td class="tip tip_highlight" data-tip-text="есть">&#10004;</td>
+      <td></td>
     </tr>
     <tr>
       <td>server push</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-      <td>?</td>
-      <td>?</td>
-      <td><em class="tip" data-tip="#">&#10004;</em></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td class="tip tip_highlight" data-tip-text="есть">&#10004;</td>
       <td> </td>
     </tr>
     <tr>
       <td>двоичный протокол</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-      <td>?</td>
-      <td>?</td>
-      <td><em class="tip" data-tip="#">&#10004;</em></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td class="tip tip_highlight" data-tip-text="есть">&#10004;</td>
       <td> </td>
     </tr>
     <tr>
-      <td>приоритезация потоков</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-      <td><em class="tip" data-tip="введена">&#10004;</em></td>
-      <td><em class="tip" data-tip="введена">&#10004;</em></td>
-      <td><em class="tip" data-tip="улучшена">&#10004;</em></td>
+      <td><a href="#threads-prioritization">приоритезация потоков</a></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td class="tip tip_highlight" data-tip-text="улучшена">&#10004;</td>
       <td> </td>
     </tr>
     <tr>
-      <td>сжатие заголовков</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-      <td><em class="tip" data-tip="введено">&#10004;</em></td>
-      <td><em class="tip" data-tip="введено">&#10004;</em></td>
-      <td><em class="tip" data-tip="улучшено">&#10004;</em></td>
+      <td><a href="#header-compression">сжатие заголовков</a></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td class="tip tip_highlight" data-tip-text="улучшено">&#10004;</td>
       <td> </td>
     </tr>
     <tr>
       <td>наличие SSL обязательно</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-      <td><em class="tip" data-tip="необходим SSL">&#10004;</em></td>
-      <td><em class="tip" data-tip="необходим SSL">&#10004;</em></td>
-      <td> </td>
-      <td> </td>
+      <td class="tip" data-tip-text="SSL не требуется, но рекомендуется"></td>
+      <td class="tip" data-tip-text="SSL не требуется, но рекомендуется"></td>
+      <td class="tip" data-tip-text="SSL не требуется, но рекомендуется"></td>
+      <td class="tip" data-tip-text="SSL не требуется, но рекомендуется"></td>
+      <td class="tip" data-tip-text="SSL не требуется, но рекомендуется"></td>
+      <td></td>
     </tr>
     <tr>
       <td>скорость шифрования</td>
@@ -123,16 +114,64 @@
       <td>медленно</td>
       <td>медленно</td>
       <td>быстро</td>
-      <td>быстро</td>
-      <td>еще быстрее</td>
       <td> </td>
     </tr>
   </table>
+
+  {# модальное окно "мультиплексирование" #}
+  <div id="multiplexing" class="modal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title">Мультиплексированные потоки</h3>
+          <a href="#close" title="Close" class="close">×</a>
+        </div>
+        <div class="modal-body">    
+          <p>Позволяют браузеру выполнять множество запросов в рамках одного TCP-соединения</p>
+          <img src="{{images_dir}}/multiplexing.jpg" alt="multiplexing">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {# модальное окно "приоритезация потоков" #}
+  <div id="threads-prioritization" class="modal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title">Приоритезация потоков</h3>
+          <a href="#close" title="Close" class="close">×</a>
+        </div>
+        <div class="modal-body">    
+          <p>Позволяет клиенту отдавать предпочтения конкретным потокам данных</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {# модальное окно "сжатие заголовков" #}
+  <div id="header-compression" class="modal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title">Сжатие заголовков</h3>
+          <a href="#close" title="Close" class="close">×</a>
+        </div>
+        <div class="modal-body">    
+          <p>Если веб-сайт содержит много медиа-контента, то клиент отправляет кучу практически одинаковых фреймов с заголовками, что увеличивает задержку и приводит к избыточному потреблению не бесконечных сетевых ресурсов</p>
+          <p>В HTTP/2 это решается с помощью сжатия большого количества избыточных фреймов с заголовками. Сжатие осуществляется с помощью алгоритма HPACK, это простой и безопасный метод. Клиент и сервер хранят список заголовков, использовавшихся в предыдущих запросах.</p>
+          <img src="{{images_dir}}/header-compression.jpg" alt="header-compression">
+        </div>
+      </div>
+    </div>
+  </div>
+
 </section>
 
 <section class="link-list">
   <h4>Источники знаний:</h4>
   <ul>
+    <li><a href="https://habr.com/ru/company/selectel/blog/278167/">HTTP/2 готовимся к переходу</a></li>
     <li><a href="https://habr.com/ru/company/nix/blog/304518/">Как HTTP/2 сделает веб быстрее</a></li>
     <li><a href="https://habr.com/ru/post/438810/">HTTP/3: от корней до кончиков</a></li>
     <li><a href="https://habr.com/ru/news/t/468297/">В Chrome Canary добавили поддержку протокола HTTP/3</a></li>

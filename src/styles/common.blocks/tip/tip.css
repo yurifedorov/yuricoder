@@ -1,23 +1,30 @@
-.tip[data-tip] {
+.tip {
   position: relative;
-  background: wheat;
-  border: 1px solid #fc0;
-  padding: 0 5px;
-  font-family: inherit;
+  background: cornsilk;
 }
 
-.tip[data-tip]:hover {
+.tip:hover {
   background: #fc0;
-  cursor: pointer;
+  cursor: help;
 }
 
-.tip[data-tip]:hover::after {
-  content: attr(data-tip);
+.tip[data-tip-text]:hover::after {
+  content: attr(data-tip-text);
   position: absolute;
   border: 1px solid #fc0;
   width: max-content;
   padding: 3px 6px;
   background: #fffea1;
   font-weight: 100;
-  top: -26px;
+  top: -30px;
+  right: -20px;
 }
+
+.tip[data-tip-image]:hover::after {
+  background: red;
+  content: url(../http);
+  position: absolute;
+}
+
+.tip_highlight { background: chartreuse; }
+.tip_highlight:hover { background: lime; }

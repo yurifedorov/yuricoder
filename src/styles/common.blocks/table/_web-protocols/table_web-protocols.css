@@ -1,0 +1,12 @@
+#table_web-protocols { 
+  background: white 
+}
+
+#table_web-protocols tr:first-child { 
+  font-weight: bold; 
+}
+
+#table_web-protocols td:nth-child(n+2):nth-child(-n+9) { 
+  text-align: center; 
+  width: 150px;
+}
