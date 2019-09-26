@@ -1,0 +1,19 @@
+b[data-tip] {
+  position: relative;
+}
+
+b[data-tip]:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+b[data-tip]:hover::after {
+  content: attr(data-tip);
+  position: absolute;
+  border: 1px solid #fc0;
+  width: max-content;
+  padding: 3px 6px;
+  background: #fffea1;
+  font-weight: 100;
+  top: -26px;
+}

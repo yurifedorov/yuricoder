@@ -543,11 +543,11 @@
       }
     ]
   }, {
-    "category": "item3",
+    "category": "Исследования",
     "subcategories": [
       {
-        "name": "-",
-        "link": "#"
+        "name": "Сравнение версий HTTP",
+        "link": "http_comparison"
       },
       {
         "name": "-",
