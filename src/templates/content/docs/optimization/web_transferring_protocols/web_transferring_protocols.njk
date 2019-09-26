@@ -1,4 +1,4 @@
-<h1>Сравнение версий HTTP</h1>
+<h1>Сравнение протоколов передачи веб-контента</h1>
 
 <h2>Цели</h2>
 <ul>
@@ -18,7 +18,7 @@
   <table>
     <caption>Различия версий</caption>
     <tr style="background: #dadada; font-weight: bold;">
-      <td></td>
+      <td>Особенности</td>
       <td>HTTP</td>
       <td>HTTP/0.9</td>
       <td>HTTP/1.0</td>
@@ -47,19 +47,85 @@
       <td>IETF</td>
       <td>Google</td>
       <td>Google</td>
-      <td>Google</td>
+      <td>IETF</td>
       <td><em class="tip" data-tip="версия: gQUIC">Google</em> / <em class="tip" data-tip="версия: QUIC">IETF</em></td>
     </tr>
     <tr>
-      <td>item3</td>
-      <td>-</td>
-      <td>-</td>
-      <td>-</td>
-      <td>-</td>
-      <td>-</td>
-      <td>-</td>
-      <td>-</td>
-      <td>-</td>
+      <td>мультиплексированные потоки</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td>+</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>server push</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td>+</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>двоичный протокол</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td>+</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>приоритезация потоков</td>
+      <td>нет</td>
+      <td>нет</td>
+      <td>нет</td>
+      <td>нет</td>
+      <td>введена</td>
+      <td>введена</td>
+      <td>улучшена</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>сжатие заголовков</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td>+</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>наличие SSL</td>
+      <td>рекомендуется</td>
+      <td>рекомендуется</td>
+      <td>рекомендуется</td>
+      <td>рекомендуется</td>
+      <td>необходим SSL</td>
+      <td>необходим SSL</td>
+      <td>рекомендуется</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>скорость шифрования</td>
+      <td>медленно</td>
+      <td>медленно</td>
+      <td>медленно</td>
+      <td>медленно</td>
+      <td>быстро</td>
+      <td>быстро</td>
+      <td>еще быстрее</td>
+      <td> </td>
     </tr>
   </table>
 </section>

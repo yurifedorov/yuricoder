@@ -8,7 +8,6 @@
 
 .tip[data-tip]:hover {
   background: #fc0;
-  text-decoration: underline;
   cursor: pointer;
 }
 
