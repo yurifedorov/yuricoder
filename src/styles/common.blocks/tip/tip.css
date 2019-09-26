@@ -1,13 +1,17 @@
-b[data-tip] {
+.tip[data-tip] {
   position: relative;
+  background: wheat;
+  border: 1px solid #fc0;
+  padding: 0 3px;
 }
 
-b[data-tip]:hover {
+.tip[data-tip]:hover {
+  background: #fc0;
   text-decoration: underline;
   cursor: pointer;
 }
 
-b[data-tip]:hover::after {
+.tip[data-tip]:hover::after {
   content: attr(data-tip);
   position: absolute;
   border: 1px solid #fc0;

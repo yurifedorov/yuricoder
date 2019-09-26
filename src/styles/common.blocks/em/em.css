@@ -21,6 +21,10 @@ em[class="may"] {
   text-transform: uppercase;
 }
 
+em[class="green"] {
+  background: chartreuse;
+}
+
 em > a {
   color: white;
 }
