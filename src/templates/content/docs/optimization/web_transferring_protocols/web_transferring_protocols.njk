@@ -8,7 +8,7 @@
 
 <h2>План действий</h2>
 <ul>
-  <li>определиться со списком исследуемых версий <em class="green">&#10004;</em></li>
+  <li>определиться со списком исследуемых версий <em class="tip" data-tip="completed">&#10004;</em></li>
   <li>создать тестовую веб-страницу для экспериментов</li>
 </ul>
 
@@ -17,14 +17,16 @@
 
   <table>
     <caption>Различия версий</caption>
-    <tr style="background: #dadada;">
+    <tr style="background: #dadada; font-weight: bold;">
       <td></td>
       <td>HTTP</td>
       <td>HTTP/0.9</td>
       <td>HTTP/1.0</td>
       <td>HTTP/1.1</td>
-      <td><em class="tip" data-tip="основан на SPDY">HTTP/2</em></td>
-      <td><em class="tip" data-tip="основан на QUIC">HTTP/3</em></td>
+      <td>SPDY/1.0</td>
+      <td>SPDY/2.0</td>
+      <td>HTTP/2</td>
+      <td>HTTP/3</td>
     </tr>
     <tr>
       <td>год выпуска</td>
@@ -32,6 +34,8 @@
       <td>1991</td>
       <td>1996</td>
       <td>1997</td>
+      <td>2009</td>
+      <td>2012</td>
       <td>2015</td>
       <td>2018</td>
     </tr>
@@ -41,6 +45,8 @@
       <td>Tim Berners-Lee</td>
       <td>IETF</td>
       <td>IETF</td>
+      <td>Google</td>
+      <td>Google</td>
       <td>Google</td>
       <td><em class="tip" data-tip="версия: gQUIC">Google</em> / <em class="tip" data-tip="версия: QUIC">IETF</em></td>
     </tr>
@@ -52,6 +58,17 @@
       <td>-</td>
       <td>-</td>
       <td>-</td>
+      <td>-</td>
+      <td>-</td>
     </tr>
   </table>
+</section>
+
+<section class="link-list">
+  <h4>Источники знаний:</h4>
+  <ul>
+    <li><a href="https://habr.com/ru/company/nix/blog/304518/">Как HTTP/2 сделает веб быстрее</a></li>
+    <li><a href="https://habr.com/ru/post/438810/">HTTP/3: от корней до кончиков</a></li>
+    <li><a href="https://habr.com/ru/news/t/468297/">В Chrome Canary добавили поддержку протокола HTTP/3</a></li>
+  </ul>
 </section>

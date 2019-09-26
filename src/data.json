@@ -546,8 +546,8 @@
     "category": "Исследования",
     "subcategories": [
       {
-        "name": "Сравнение версий HTTP",
-        "link": "http_comparison"
+        "name": "Сравнение протоколов передачи веб-контента",
+        "link": "web_transferring_protocols"
       },
       {
         "name": "-",
