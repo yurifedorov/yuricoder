@@ -1,0 +1,9 @@
+.bookmarks {
+  background: transparent;
+}
+
+.bookmarks li {
+  background: silver;
+  outline: 1px solid white;
+  padding: 10px;
+}
