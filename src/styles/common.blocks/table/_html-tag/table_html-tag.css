@@ -1,0 +1,7 @@
+.table_html-tag {
+  background: transparent;
+}
+
+.table_html-tag td:first-child { 
+  width: 130px;
+}
