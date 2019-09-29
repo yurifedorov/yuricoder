@@ -114,11 +114,11 @@
       }
     ]
   }, {
-    "category": "Пункт 2",
+    "category": "ООП",
     "subcategories": [
       {
-        "name": "Подкатегория №1",
-        "link": "#"
+        "name": "oop_test",
+        "link": "oop"
       },
       {
         "name": "Подкатегория №2",

@@ -1,0 +1,27 @@
+{% extends "base.njk" %}
+
+{# variables #}
+{% set title       = 'oop' %}
+{% set category    = 'docs' %}
+{% set subcategory = 'javascript' %}
+{% set segment     = 'oop' %}
+{% set subsegment  = '' %}
+
+{# ===================================== #}
+
+{% block head %}
+  <title>ООП</title>
+  <meta name="description" content="Изучаю ООП" />
+  <script src="../../../scripts/oop_test.js" async></script>
+{% endblock %}
+
+{% block aside_top %}{% include aside_top %}{% endblock %}
+{% block aside_left %}{% include aside_left %}{% endblock %}
+
+{% block main %}
+
+  <h1>ООП</h1>
+  <a href="http://old.code.mu/books/javascript/oop/">http://old.code.mu/books/javascript/oop/</a><br>
+  <a href="https://learn.javascript.ru/private-protected-properties-methods">https://learn.javascript.ru/private-protected-properties-methods</a>
+
+{% endblock %}
