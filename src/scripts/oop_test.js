@@ -1,39 +1,10 @@
 class Tank {
-	constructor(ammunition) {
-		this.ammunition = ammunition;
-	}
-
-	fireTo() {
-		//Перед выстрелом проверяем снаряды:
-		if (this.canFire()) {
-			this.ammunition = this.ammunition - 1;
-		}
-	}
-
-	//Вспомогательный метод для проверки снарядов:
-	canFire(ammunition) {
-		if (ammunition > 0) {
-			return true;
-		} else {
-			return false;
-		}
-	}
+  /* содержимое класса */
 }
 
-let tank = new Tank(10);
-alert(tank.ammunition);
+let tank = new Tank;
+let animal = new Animal; 
 
-tank.fireTo(10, 20);
-alert(tank.ammunition);
-
-tank.fireTo(10, 20);
-alert(tank.ammunition);
-
-tank.fireTo(10, 20);
-alert(tank.ammunition);
-
-tank.fireTo(10, 20);
-alert(tank.ammunition);
-
-tank.fireTo(10, 20);
-alert(tank.ammunition);
+if (typeof animal == 'object') {
+  alert('123');
+}

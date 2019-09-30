@@ -92,6 +92,10 @@
     "category": "Основы JavaScript",
     "subcategories": [
       {
+        "name": "типы",
+        "link": "types"
+      },
+      {
         "name": "переменные",
         "link": "variables"
       },

@@ -1,0 +1,23 @@
+{% extends "base.njk" %}
+
+{% set file_name   = 'types' %}
+{% set category    = 'docs' %}
+{% set subcategory = 'javascript' %}
+{% set segment     = 'types' %}
+{% set subsegment  = '' %}
+
+{% block head %}
+  <title>Типы в JavaScript</title>
+  <meta name="description" content="Список типов в JavaScript." />
+  <link rel="stylesheet" href="{{prism_css}}">
+  <script src="{{prism_js}}" async></script>
+  <style>{% include highlight_item %}</style>
+{% endblock %}
+
+{% block aside_top %}{% include aside_top %}{% endblock %}
+{% block aside_left %}{% include aside_left %}{% endblock %}
+{% block main %}{% include content %}{% endblock %}
+
+{% block inlineScripts %}
+  {# место для инлайновых скриптов #}
+{% endblock %}

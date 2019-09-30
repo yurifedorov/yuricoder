@@ -1,0 +1,44 @@
+<h1>Типизация в программировании</h1>
+<p>Типизация бывает <b>статическая</b>  или <b>динамическая</b>, их отличия в следующем:</p>
+<table>
+  <tr>
+    <td style="width: 50%;">статическая</td>
+    <td style="width: 50%;">динамическая</td>
+  </tr>
+  <tr>
+    <td>
+      {% set example_id  = 'static_typing' %}
+      {% set numeration  = false %}
+      {% set split       = false %}
+      {% set html        = false %}
+      {% set njk         = false %}
+      {% set css         = false %}
+      {% set js          = true %}
+      {% set demo        = false %}
+      {% include codeExample %}
+      <ul>
+        <li>переменная связывается с типом в момент объявления</li>
+        <li>переменные привязаны к типам</li>
+        <li>тип не может быть изменён позже</li>
+      </ul>
+      <p>Пример языка: <em>Java</em></p>
+    </td>
+    <td>
+      {% set example_id  = 'dynamic_typing' %}
+      {% set numeration  = false %}
+      {% set split       = false %}
+      {% set html        = false %}
+      {% set njk         = false %}
+      {% set css         = false %}
+      {% set js          = true %}
+      {% set demo        = false %}
+      {% include codeExample %}
+      <ul>
+        <li>переменная связывается с типом в момент присваивания</li>
+        <li>переменные не привязаны к типам</li>
+        <li>в различных участках программы одна и та же переменная может принимать значения разных типов</li>
+      </ul>
+      <p>Пример языка: <em>JavaScript</em></p>
+    </td>
+  </tr>
+</table>

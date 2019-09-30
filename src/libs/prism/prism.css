@@ -1,5 +1,5 @@
-/* PrismJS 1.16.0
-https://prismjs.com/download.html#themes=prism-tomorrow&languages=markup+css+clike+javascript+markup-templating+json+django&plugins=line-numbers+toolbar+previewers+normalize-whitespace+copy-to-clipboard */
+/* PrismJS 1.17.1
+https://prismjs.com/download.html#themes=prism-tomorrow&languages=markup+css+clike+javascript+markup-templating+java+json+django&plugins=line-numbers+toolbar+previewers+normalize-whitespace+copy-to-clipboard */
 /**
  * prism.js tomorrow night eighties for JavaScript, CoffeeScript, CSS and HTML
  * Based on https://github.com/chriskempson/tomorrow-theme
@@ -178,6 +178,12 @@ div.code-toolbar > .toolbar {
 }
 
 div.code-toolbar:hover > .toolbar {
+	opacity: 1;
+}
+
+/* Separate line b/c rules are thrown out if selector is invalid.
+   IE11 and old Edge versions don't support :focus-within. */
+div.code-toolbar:focus-within > .toolbar {
 	opacity: 1;
 }
 
