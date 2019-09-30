@@ -1,0 +1,20 @@
+{% extends "base.njk" %}
+
+{% set file_name   = 'user_experience' %}
+{% set category    = 'docs' %}
+{% set subcategory = 'user_experience' %}
+{% set segment     = '' %}
+{% set subsegment  = '' %}
+
+{% block head %}
+  <title>UX наблюдения</title>
+  <meta name="description" content="Случаи из реальной жизни, связанные с User Experience" />
+{% endblock %}
+
+{% block aside_top %}{% include aside_top %}{% endblock %}
+{% block aside_left %}{% include aside_left %}{% endblock %}
+{% block main %}{% include content %}{% endblock %}
+
+{% block inlineScripts %}
+  {# место для инлайновых скриптов #}
+{% endblock %}
