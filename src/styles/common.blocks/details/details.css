@@ -3,6 +3,23 @@ details > summary {
   outline-style: none;  /* удалить обводку при фокусе */
   cursor: pointer;
   color: blue;
+  line-height: 30px;
+}
+
+details > ul {
+  padding-inline-start: 0;
+} 
+
+details li {
+  width: 140px;
+  background: #eee;
+  margin-bottom: 5px;
+  padding: 5px 10px;
+  list-style-type: none;
+}
+
+details li em {
+  float: right;
 }
 
 details > div {

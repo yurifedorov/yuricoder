@@ -10,3 +10,7 @@
 .LG > .aside_left {
   display: block;
 }
+
+.aside_left ul {
+  padding-inline-start: 0;
+}
