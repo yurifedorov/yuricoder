@@ -1,16 +1,15 @@
 .XL .columns {
   display: grid;
   grid-gap: 10px;
-  grid-template-columns: 1fr 1fr;
-}
-
-.XXL .columns {
-  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .columns_col-2 {
   grid-template-columns: 3fr 3fr !important;
   margin-top: 40px;
+}
+
+.columns_col-3 {
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .columns > section {

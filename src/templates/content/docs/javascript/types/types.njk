@@ -11,34 +11,127 @@
 {% include codeExample %}
 <p>Сначала значение переменной <b>x</b> было string, потом стало number.</p>
 
-<section>
-  <h2>Основные типы в JS</h2>
-  <ol>
-    <li><em>number</em> для чисел</li>
-    <li><em>string</em> для строк</li>
-    <li><em>boolean</em> для true/false</li>
-    <li><em>null</em> для неизвестных значений</li>
-    <li><em>undefined</em> для неприсвоенных значений</li>
-    <li><em>object</em> для более сложных структур данных</li>
-    <li><em>symbol</em> для уникальных идентификаторов</li>
-  </ol>
-</section>
+<div class="columns columns_col-2">
+  <section>
+    <h2>Основные типы в JS</h2>
+    <ol>
+      <li><em>number</em> для чисел</li>
+      <li><em>string</em> для строк</li>
+      <li><em>boolean</em> для true/false</li>
+      <li><em>null</em> для неизвестных значений</li>
+      <li><em>undefined</em> для неприсвоенных значений</li>
+      <li><em>object</em> для более сложных структур данных</li>
+      <li><em>symbol</em> для уникальных идентификаторов</li>
+    </ol>
+  </section>
+  <section>
+    <h2>Оператор typeof</h2>
+    <p>Оператор <em>typeof</em> возвращает тип аргумента</p>
+    {% set example_id  = '_typeof' %}
+    {% set numeration  = false %}
+    {% set split       = false %}
+    {% set html        = false %}
+    {% set njk         = false %}
+    {% set css         = false %}
+    {% set js          = true %}
+    {% set demo        = false %}
+    {% include codeExample %}
+  </section>
+</div>
 
-<section>
-  <h2>Оператор typeof</h2>
-  <p>Оператор <em>typeof</em> возвращает тип аргумента</p>
-  {% set example_id  = '_typeof' %}
-  {% set numeration  = false %}
-  {% set split       = false %}
-  {% set html        = false %}
-  {% set njk         = false %}
-  {% set css         = false %}
-  {% set js          = true %}
-  {% set demo        = false %}
-  {% include codeExample %}
-</section>
-
-
+<div class="columns columns_col-3">
+  <section>
+    <h2>number</h2>
+    {% set example_id  = 'number_type' %}
+    {% set numeration  = false %}
+    {% set split       = false %}
+    {% set html        = false %}
+    {% set njk         = false %}
+    {% set css         = false %}
+    {% set js          = true %}
+    {% set demo        = false %}
+    {% include codeExample %}
+    <a href="https://learn.javascript.ru/types#chislo">https://learn.javascript.ru/types#chislo</a><br>
+    <a href="https://learn.javascript.ru/number">https://learn.javascript.ru/number</a>
+  </section>
+  <section>
+    <h2>string</h2>
+    {% set example_id  = 'string_type' %}
+    {% set numeration  = false %}
+    {% set split       = false %}
+    {% set html        = false %}
+    {% set njk         = false %}
+    {% set css         = false %}
+    {% set js          = true %}
+    {% set demo        = false %}
+    {% include codeExample %}
+    <p>Встраивать что-либо в <em>${…}</em> можно только в обратных кавычках <em>` `</em></p>
+    <a href="https://learn.javascript.ru/types#stroka">https://learn.javascript.ru/types#stroka</a><br>
+    <a href="https://learn.javascript.ru/string">https://learn.javascript.ru/string</a>
+  </section>
+  <section>
+    <h2>boolean</h2>
+    {% set example_id  = 'boolean_type' %}
+    {% set numeration  = false %}
+    {% set split       = false %}
+    {% set html        = false %}
+    {% set njk         = false %}
+    {% set css         = false %}
+    {% set js          = true %}
+    {% set demo        = false %}
+    {% include codeExample %}
+    <a href="https://learn.javascript.ru/types#bulevyy-logicheskiy-tip">https://learn.javascript.ru/types#bulevyy-logicheskiy-tip</a><br>
+    <a href="https://learn.javascript.ru/logical-operators">https://learn.javascript.ru/logical-operators</a>
+  </section>
+  <section>
+    <h2>null</h2>
+    {% set example_id  = 'null_type' %}
+    {% set numeration  = false %}
+    {% set split       = false %}
+    {% set html        = false %}
+    {% set njk         = false %}
+    {% set css         = false %}
+    {% set js          = true %}
+    {% set demo        = false %}
+    {% include codeExample %}
+  </section>
+  <section>
+    <h2>undefined</h2>
+    {% set example_id  = 'undefined_type' %}
+    {% set numeration  = false %}
+    {% set split       = false %}
+    {% set html        = false %}
+    {% set njk         = false %}
+    {% set css         = false %}
+    {% set js          = true %}
+    {% set demo        = false %}
+    {% include codeExample %}
+  </section>
+  <section>
+    <h2>object</h2>
+    {% set example_id  = 'object_type' %}
+    {% set numeration  = false %}
+    {% set split       = false %}
+    {% set html        = false %}
+    {% set njk         = false %}
+    {% set css         = false %}
+    {% set js          = true %}
+    {% set demo        = false %}
+    {% include codeExample %}
+  </section>
+  <section>
+    <h2>symbol</h2>
+    {% set example_id  = 'symbol_type' %}
+    {% set numeration  = false %}
+    {% set split       = false %}
+    {% set html        = false %}
+    {% set njk         = false %}
+    {% set css         = false %}
+    {% set js          = true %}
+    {% set demo        = false %}
+    {% include codeExample %}
+  </section>
+</div>
 
 <section>
   <hr>
