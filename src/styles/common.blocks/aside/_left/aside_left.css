@@ -11,6 +11,20 @@
   display: block;
 }
 
+
+/* это по идее должно быть не здесь */
 .aside_left ul {
+  min-width: 200px;
   padding-inline-start: 0;
+}
+
+.aside_left ul > li {
+  background: #eee;
+  margin-bottom: 5px;
+  padding: 5px 10px;
+  list-style-type: none;
+}
+
+details li em {
+  float: right;
 }

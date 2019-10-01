@@ -1,0 +1,38 @@
+{% extends "base.njk" %}
+
+{% set file_name   = 'loops' %}
+{% set category    = 'docs' %}
+{% set subcategory = 'javascript' %}
+{% set segment     = 'loops' %}
+{% set subsegment  = '' %}
+
+{% block head %}
+  <title>Циклы в JavaScript</title>
+  <meta name="description" content="Описание циклов в JavaScript" />
+{% endblock %}
+
+{% block aside_top %}{% include aside_top %}{% endblock %}
+{% block aside_left %}{% include aside_left %}{% endblock %}
+
+{% block main %}
+
+  <h1>Циклы в JavaScript</h1>
+
+  <section class="content">
+    <input type="search" placeholder='поиск не работает'>
+    <button>Найти</button>
+  </section>
+
+  <section>
+    <hr>
+    <h4>Источники знаний:</h4>
+    <ul>
+      <li><a href="https://learn.javascript.ru/while-for">https://learn.javascript.ru/while-for</a></li>
+    </ul>
+  </section>
+
+{% endblock %}
+
+{% block inlineScripts %}
+  {# место для инлайновых скриптов #}
+{% endblock %}
