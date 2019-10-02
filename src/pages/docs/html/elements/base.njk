@@ -1,13 +1,13 @@
 {% extends "base.njk" %}
 
-{% set file_name   = 'base' %}
+{% set document    = 'base' %}
 {% set category    = 'docs' %}
 {% set subcategory = 'html' %}
 {% set segment     = 'elements' %}
 {% set subsegment  = 'base' %}
 
 {% block head %}
-  <title>Элемент &lt;{{file_name}}&gt;</title>
+  <title>Элемент &lt;{{document}}&gt;</title>
   <meta name="description" content="Элемент title" />
   <link rel="stylesheet" href="{{prism_css}}">
   <script src="{{prism_js}}" async></script>

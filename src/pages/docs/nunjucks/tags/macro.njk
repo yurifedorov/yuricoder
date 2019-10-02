@@ -1,14 +1,11 @@
 {% extends "base.njk" %}
 
-{# СТРОГОЕ СООТВЕТСТВИЕ С ИМЕНАМИ В ФАЙЛОВОЙ СИСТЕМЕ #}
-{# URL: site / category / subcategory / segment / subsegment / #}
-{% set title          = 'macro' %}
-{% set category       = 'docs' %}
-{% set subcategory    = 'nunjucks' %}
-{% set segment        = 'теги' %}
-{% set subsegment_del = 'delete' %}
+{% set document    = 'macro' %}
+{% set category    = 'docs' %}
+{% set subcategory = 'nunjucks' %}
+{% set segment     = 'теги' %}
+{% set subsegment  = '' %}
 
-{# <head> #}
 {% block head %}
   <title>Макросы в Nunjucks</title>
   <meta name="description" content="Макросы позволяют определить повторно используемые фрагменты." />

@@ -1,14 +1,11 @@
 {% extends "base.njk" %}
 
-{# СТРОГОЕ СООТВЕТСТВИЕ С ИМЕНАМИ В ФАЙЛОВОЙ СИСТЕМЕ #}
-{# URL: site / category / subcategory / segment / subsegment / #}
-{% set title          = 'set' %}
-{% set category       = 'docs' %}
-{% set subcategory    = 'nunjucks' %}
-{% set segment        = 'теги' %}
-{% set subsegment_del = 'delete' %}
+{% set document    = 'set' %}
+{% set category    = 'docs' %}
+{% set subcategory = 'nunjucks' %}
+{% set segment     = 'теги' %}
+{% set subsegment  = '' %}
 
-{# <head> #}
 {% block head %}
   <title>Переменные в Nunjucks</title>
   <meta name="description" content="Тег 'set' позволяет создавать и изменять переменную." />

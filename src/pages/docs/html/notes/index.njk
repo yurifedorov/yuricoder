@@ -1,16 +1,10 @@
 {% extends "base.njk" %}
 
-{# variables #}
-{% set title           = 'HTML заметки' %}
-{% set category        = 'docs' %}
-{% set subcategory     = 'html' %}
-{% set segment_del     = 'delete' %}
-{% set subsegment_del  = 'delete' %}
-
-{# путь к примерам code-example-beta [НЕ УДАЛЯТЬ] #}
-{% set example_dir    = 'examples/javascript/operators/' %}
-
-{# ===================================== #}
+{% set document    = 'HTML заметки' %}
+{% set category    = 'docs' %}
+{% set subcategory = 'html' %}
+{% set segment     = '' %}
+{% set subsegment  = '' %}
 
 {% block head %}
   <title>Identity operator in JavaScript</title>

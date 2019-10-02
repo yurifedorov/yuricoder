@@ -1,13 +1,11 @@
 {% extends "base.njk" %}
 
-{# variables #}
-{% set title        = 'html' %}
-{% set category     = 'docs' %}
-{% set subcategory_del = 'delete' %}
-{% set segment_del  = 'delete' %}
-{% set subsegment_del  = 'delete' %}
+{% set document    = 'html' %}
+{% set category    = 'docs' %}
+{% set subcategory = '' %}
+{% set segment     = '' %}
+{% set subsegment  = '' %}
 
-{# ===================================== #}
 
 {% block head %}
   <title>Справочник по HTML</title>

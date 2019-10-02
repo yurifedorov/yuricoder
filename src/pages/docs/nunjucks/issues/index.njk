@@ -1,18 +1,16 @@
 {% extends "base.njk" %}
 
-{% set file_name   = 'issues' %}
+{% set document   = 'issues' %}
 {% set category    = 'docs' %}
 {% set subcategory = 'nunjucks' %}
 {% set segment     = 'issues' %}
 {% set subsegment  = '' %}
 
-{# <head> #}
 {% block head %}
   <title>{{ title | capitalize }} при использовании Nunjucks</title>
   <meta name="description" content="Неприятные ситуации в процессе работы с шаблонизатором Nunjucks" />
 {% endblock %}
 
-{# <body> #}
 {% block main %}
 
   <h1>Проблемы при использовании</h1>

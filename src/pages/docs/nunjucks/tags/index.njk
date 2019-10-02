@@ -1,14 +1,11 @@
 {% extends "base.njk" %}
 
-{# СТРОГОЕ СООТВЕТСТВИЕ С ИМЕНАМИ В ФАЙЛОВОЙ СИСТЕМЕ #}
-{# URL: site / category / subcategory / segment / subsegment / #}
-{% set title          = 'теги' %}
-{% set category       = 'docs' %}
-{% set subcategory    = 'nunjucks' %}
-{% set segment_del    = 'delete' %}
-{% set subsegment_del = 'delete' %}
+{% set document    = 'теги' %}
+{% set category    = 'docs' %}
+{% set subcategory = 'nunjucks' %}
+{% set segment     = '' %}
+{% set subsegment  = '' %}
 
-{# <head> #}
 {% block head %}
   <title>Список тегов встроенных в Nunjucks</title>
   <meta name="description" content="Список специальных блоков, выполяющих операции над разделами шаблона." />

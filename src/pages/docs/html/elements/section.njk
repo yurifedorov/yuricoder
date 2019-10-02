@@ -1,14 +1,14 @@
 {% extends "base.njk" %}
 
-{% set file_name   = 'section' %}
+{% set document    = 'section' %}
 {% set category    = 'docs' %}
 {% set subcategory = 'html' %}
 {% set segment     = 'elements' %}
 {% set subsegment  = 'section' %}
 
 {% block head %}
-  <title>Элемент &lt;{{file_name}}&gt;</title>
-  <meta name="description" content="Подробная информация об элементе &lt;{{file_name}}&gt;" />
+  <title>Элемент &lt;{{document}}&gt;</title>
+  <meta name="description" content="Подробная информация об элементе &lt;{{document}}&gt;" />
   <link rel="stylesheet" href="{{prism_css}}">
   <script src="{{prism_js}}" async></script>
   <style>{% include highlight_item %}</style>
