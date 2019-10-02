@@ -2,7 +2,7 @@
   flex: 0 0 var(--asideRight-width); /* не трогать */
   order: 4; /* не трогать */
   margin-top: calc(0px - var(--asideTop-height)); /* не трогать */
-  background: #eee; /* временно */
+  background: pink; /* временно */
   display: none;
   z-index: 3; /* должен быть выше чем у .aside_top */
 }

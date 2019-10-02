@@ -8,4 +8,17 @@
 {% set js          = true %}
 {% set demo        = false %}
 {% include codeExample %}
-<a href="https://learn.javascript.ru/object">https://learn.javascript.ru/object</a>
+
+{# источники знаний #}
+{% set link_1 = 'https://learn.javascript.ru/object' %}
+{% set name_1 = 'link1' %}
+{% set link_2 = 'https://learn.javascript.ru/object' %}
+{% set name_2 = 'link2' %}
+{% include 'parts/blocks/knowledge_source.njk' %}
+
+<section class="link-list">
+  <h4>Источники знаний:</h4>
+  <ul>
+    <a href="https://learn.javascript.ru/object">https://learn.javascript.ru/object</a>
+  </ul>
+</section>

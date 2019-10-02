@@ -14,7 +14,7 @@
 
 /* это по идее должно быть не здесь */
 .aside_left ul {
-  min-width: 200px;
+  min-width: 250px;
   padding-inline-start: 0;
 }
 
@@ -25,6 +25,6 @@
   list-style-type: none;
 }
 
-details li em {
+.aside_left li em {
   float: right;
 }

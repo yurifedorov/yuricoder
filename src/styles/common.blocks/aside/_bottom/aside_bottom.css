@@ -1,0 +1,5 @@
+.aside_bottom {
+  background: green;
+  flex: 4 100%; /* не трогать */
+  order: 4; /* не трогать */
+}

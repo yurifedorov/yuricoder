@@ -41,14 +41,16 @@
 #}
 
 {# blocks #}
-{% set aside_top       = 'parts/blocks/aside-top.njk' %} {# ?? #}
-{% set aside_left      = 'parts/blocks/aside-left.njk' %} {# ?? #}
-{% set aside_right     = 'parts/blocks/aside-right.njk' %} {# ?? #}
-{% set section         = 'parts/blocks/section.njk' %} {# ?? #}
-{% set split           = 'parts/blocks/split-example.njk' %}
-{% set codeExample     = 'parts/blocks/code-example.njk' %} {# 16 #}
-{% set codeExecuted    = 'parts/blocks/code-executed.njk' %} {# ?? #}
-{% set warning_rfc2068 = 'parts/blocks/warning_rfc2068.njk' %} {# ?? #}
+{% set aside_top        = 'parts/blocks/aside-top.njk' %} {# ?? #}
+{% set aside_left       = 'parts/blocks/aside-left.njk' %} {# ?? #}
+{% set aside_right      = 'parts/blocks/aside-right.njk' %} {# ?? #}
+{% set aside_bottom      = 'parts/blocks/aside-bottom.njk' %} {# ?? #}
+{% set section          = 'parts/blocks/section.njk' %} {# ?? #}
+{% set split            = 'parts/blocks/split-example.njk' %}
+{% set codeExample      = 'parts/blocks/code-example.njk' %} {# 16 #}
+{% set codeExecuted     = 'parts/blocks/code-executed.njk' %} {# ?? #}
+{% set warning_rfc2068  = 'parts/blocks/warning_rfc2068.njk' %} {# ?? #}
+{% set knowledge_source = 'parts/blocks/knowledge_source.njk' %} {# ?? #}
 
 
 {# blocks (beta) #}
@@ -83,6 +85,7 @@
 {% set html_elements = 'parts/navigation/html_elements.njk' %}
 {% set css_selectors = 'parts/navigation/css_selectors.njk' %}
 {% set http_contents = 'parts/navigation/http_contents.njk' %}
+{% set breadcrumbs   = 'parts/navigation/breadcrumbs.njk' %}
 
 
 {# ================================================================================== #}
@@ -111,6 +114,8 @@
     <main data-observe-resizes>
       {% block main %} {# контент #} {% endblock %}
     </main>
+
+    {% block aside_bottom %} {# контент #} {% endblock %}
 
     <footer>
       <i>footer</i>

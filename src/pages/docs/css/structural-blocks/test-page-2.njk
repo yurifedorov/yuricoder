@@ -90,4 +90,15 @@
     </table>
   </section>
 
+  <section>
+    {% from "macros/feedback-macro.njk" import feedback_form %}
+    {{ feedback_form('feedback.php', 'POST') }}
+  </section>
+
+  <section>
+    {% from "macros/tile-macro.njk" import tile %}
+    {{ tile('category', 'docs') }}
+    {{ tile('pass', type='password') }}
+  </section>
+
 {% endblock %}
