@@ -1,8 +1,7 @@
 <aside class="aside_left">
 
-  {% if document  == 'javascript' %}{% include js_docs %}{% endif %}
+  {% if document or subcategory  == 'javascript' %}{% include js_docs %}{% endif %}
   {% if segment   == 'types' %}{% include js_types %}{% endif %}
-  {% if segment   == 'operators' %}{% include js_operators %}{% endif %}
   {% if segment   == 'methods' %}{% include js_methods %}{% endif %}
   {% if segment   == 'statements' %}{% include js_statements %}{% endif %}
   {% if segment   == 'elements' %}{% include html_elements %}{% endif %}

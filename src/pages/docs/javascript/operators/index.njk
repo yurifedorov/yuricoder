@@ -1,6 +1,6 @@
 {% extends "base.njk" %}
 
-{% set document    = 'index.html' %}
+{% set document    = 'operators' %}
 {% set category    = 'docs' %}
 {% set subcategory = 'javascript' %}
 {% set segment     = 'operators' %}
@@ -13,16 +13,9 @@
 
 {% block aside_top %}{% include aside_top %}{% endblock %}
 {% block aside_left %}{% include aside_left %}{% endblock %}
-
-{% block main %}
-
-  <h1>Операторы в JavaScript</h1>
-  <section class="content">
-    <input type="search" placeholder='поиск не работает'>
-    <button>Найти</button>
-  </section>
-
-{% endblock %}
+{% block aside_right %}{% include aside_right %}{% endblock %}
+{# block aside_bottom %}{% include aside_bottom %}{% endblock #}
+{% block main %}{% include content %}{% endblock %}
 
 {% block inlineScripts %}
   {# место для инлайновых скриптов #}
