@@ -1,5 +1,6 @@
 .aside_bottom {
-  background: green;
+  border-top: 1px solid #000;
   flex: 4 100%; /* не трогать */
   order: 4; /* не трогать */
+  padding: 20px;
 }

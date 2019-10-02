@@ -1,0 +1,10 @@
+.related-links {
+  padding-inline-start: 0;
+}
+
+.related-links > li {
+  background: #eee;
+  list-style-type: none;
+  padding: 5px 10px;
+  margin-bottom: 2px;
+}
