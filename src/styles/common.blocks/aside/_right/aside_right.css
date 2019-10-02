@@ -1,10 +1,9 @@
 .aside_right {
   flex: 0 0 var(--asideRight-width); /* не трогать */
   order: 4; /* не трогать */
-  margin-top: calc(0px - var(--asideTop-height)); /* не трогать */
   background: pink; /* временно */
   display: none;
-  z-index: 3; /* должен быть выше чем у .aside_top */
+  z-index: 1; /* должен быть выше чем у .aside_top */
 }
 
 .LG > .aside_right {

@@ -1,6 +1,4 @@
 <section class="link-list">
   <h4>Источники знаний:</h4>
-  <ul>
-    <a href="{{link}}">{{name}}</a>
-  </ul>
+  {% if file_name == 'object' %}{% include related_links %}{% endif %}
 </section>

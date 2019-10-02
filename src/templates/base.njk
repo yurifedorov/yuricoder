@@ -72,9 +72,11 @@
 {% set split_js                = '/libs/split-js/split-min.js' %} {# 4 #}
 
 {# Paths: site / category / subcategory / segment /  subsegment / file_name #}
-{% set example_dir = 'examples/' + category + '/' + subcategory + '/' + segment + '/' + subsegment + '/' %}
-{% set content     = 'content/' + category + '/' + subcategory + '/' + segment + '/' + file_name + '.njk' %}
-{% set images_dir  = '../../../img/' + category + '/' + subcategory + '/' + segment + '/' %}
+{% set example_dir   = 'examples/'      + category + '/' + subcategory + '/' + segment + '/' + subsegment + '/' %}
+{% set content       = 'content/'       + category + '/' + subcategory + '/' + segment + '/' + file_name + '.njk' %}
+{% set images_dir    = '../../../img/'  + category + '/' + subcategory + '/' + segment + '/' %}
+{% set related_links = 'related_links/' + category + '/' + subcategory + '/' + segment + '/' + file_name + '.njk' %}
+{% set content       = 'content/'       + category + '/' + subcategory + '/' + segment + '/' + file_name + '.njk' %}
 
 {# Navigation #}
 {% set js_docs       = 'parts/navigation/js_docs.njk' %}
@@ -110,12 +112,13 @@
     {% block aside_top %} {# контент #} {% endblock %}
     {% block aside_left %} {# строго перед 'main' #} {% endblock %}
     {% block aside_right %} {# строго после 'main' #} {% endblock %}
+    {% block aside_bottom %} {# контент #} {% endblock %}
 
     <main data-observe-resizes>
       {% block main %} {# контент #} {% endblock %}
     </main>
 
-    {% block aside_bottom %} {# контент #} {% endblock %}
+    
 
     <footer>
       <i>footer</i>
