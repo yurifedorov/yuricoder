@@ -1,6 +1,6 @@
 {% extends "base.njk" %}
 
-{% set document    = '' %}
+{% set document    = 'docs' %}
 {% set category    = '' %}
 {% set subcategory = '' %}
 {% set segment     = '' %}
@@ -10,6 +10,8 @@
   <title>Web Technology Reference</title>
   <meta name="description" content="These are my personal notes on web technologies. Everything written here is based on official documentation and my personal experience." />
 {% endblock %}
+
+{% block aside_top %}{% include aside_top %}{% endblock %}
 
 {% block main %}
 

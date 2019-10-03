@@ -1,10 +1,10 @@
 {# навигационная цепочка ("хлебные крошки") #}
 
 <ul class="breadcrumbs">
-  <li class="breadcrumbs__item "><a href="/{{path}}">home</a>
-  <li class="breadcrumbs__item {{ category_del }}"><a href="{{path}}../..">{{ category }}</a>
-  <li class="breadcrumbs__item {{ subcategory_del }}"><a href="{{path}}../">{{ subcategory }}</a>
-  <li class="breadcrumbs__item {{ segment_del }}"><a href="{{path}}./">{{ segment }}</a>
-  <li class="breadcrumbs__item {{ subsegment_del }}"><a href="./">{{ subsegment }}</a>
-  <li class="breadcrumbs__item "><span>{{ title }}</span>
+  {# показывать всегда #} <li><a href="../../../">home</a>
+  {% if category    %}    <li><a href="../">{{ category }}</a>  {% endif %}
+  {% if subcategory %}    <li><a href="../">{{ subcategory }}</a>  {% endif %}
+  {% if segment     %}    <li><a href="../">{{ segment }}</a>      {% endif %}
+  {% if subsegment  %}    <li><a href="../">{{ subsegment }}</a>   {% endif %}
+  {# показывать всегда #} <li><span>{{ document }}</span>
 </ul>

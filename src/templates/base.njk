@@ -101,6 +101,10 @@
     <link href="/img/favicon.jpg" rel="icon" type="image/svg+xml">
     <link rel="stylesheet" href="/style.min.css">
     {% block head %} {# дополнительные ресурсы #} {% endblock %}
+
+    {# перелинковка #}
+    {% if category == true %}<base href="../">{% endif %}
+
   </head>
 
   <body data-observe-resizes>
