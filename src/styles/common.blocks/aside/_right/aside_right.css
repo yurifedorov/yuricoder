@@ -1,9 +1,9 @@
 .aside_right {
-  flex: 0 0 var(--asideRight-width); /* не трогать */
+  flex: var(--asideLeft-width) 0 0; /* не трогать */
   order: 4; /* не трогать */
-  background: pink; /* временно */
+  background: rgb(233, 230, 230); /* временно */
   display: none;
-  z-index: 1; /* должен быть выше чем у .aside_top */
+  z-index: 3; /* должен быть выше чем у .aside_top */
   padding: 20px;
 }
 
@@ -11,26 +11,21 @@
   display: block;
 }
 
+
 /* это по идее должно быть не здесь */
 .aside_right ul {
-  min-width: 100px;
+  min-width: 250px;
   padding-inline-start: 0;
 }
 
 .aside_right ul > li {
   background: #eee;
-  list-style-type: none;
   margin-bottom: 5px;
-}
-
-.aside_right li > a {
-  text-decoration: none;
-  display: block;
-  background: white;
-  text-align: center;
-  padding: 5px;
+  padding: 5px 10px;
+  list-style-type: none;
 }
 
 .aside_right li em {
   float: right;
 }
+
