@@ -284,31 +284,6 @@
     {"name":"canvas"}
   ],
 
-  "methods": [{
-    "name": "alert()",
-    "link": "alert"
-  }, {
-    "name": "prompt()",
-    "link": "prompt"
-  }, {
-    "name": "confirm()",
-    "link": "confirm"
-  }],
-
-  "statements": [{
-    "name": "if",
-    "link": "if"
-  }, {
-    "name": "if...else",
-    "link": "if_else"
-  }, {
-    "name": "switch",
-    "link": "switch"
-  }, {
-    "name": "-",
-    "link": "#"
-  }],
-
   "nunjucks": [{
     "category": "Шаблоны",
     "subcategories": [

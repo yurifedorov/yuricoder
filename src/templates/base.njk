@@ -103,8 +103,7 @@
     {% block head %} {# дополнительные ресурсы #} {% endblock %}
 
     {# перелинковка #}
-    {% if subcategory == true %}<base href="../">{% endif %}
-    {% if segment == true %}<base href="../../">{% endif %}
+    {% if segment %}<base href="/{{category}}/{{subcategory}}/">{% endif %}
 
   </head>
 
