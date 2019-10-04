@@ -11,4 +11,7 @@
 
 .related-links a {
   font-size: auto;
+  border-left: 1px solid grey;
+  padding-left: 5px;
+  text-decoration: none;
 }

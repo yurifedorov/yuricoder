@@ -21,7 +21,6 @@
 .aside_right ul > li {
   background: #eee;
   margin-bottom: 5px;
-  padding: 5px 10px;
   list-style-type: none;
 }
 
@@ -29,3 +28,17 @@
   float: right;
 }
 
+.aside_right a {
+  display: inline-block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 5px 10px;
+}
+
+.aside_right a:hover {
+  background: #fff;
+}
+
+.aside_right a > em {
+  line-height: 20px;
+}

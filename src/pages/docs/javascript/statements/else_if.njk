@@ -1,13 +1,13 @@
 {% extends "base.njk" %}
 
-{% set document    = 'if_else' %}
+{% set document    = 'else_if' %}
 {% set category    = 'docs' %}
 {% set subcategory = 'javascript' %}
 {% set segment     = 'statements' %}
-{% set subsegment  = 'if_else' %}
+{% set subsegment  = 'else_if' %}
 
 {% block head %}
-  <title>Конструкция if...else в JavaScript</title>
+  <title>Конструкция else...if в JavaScript</title>
   <meta name="description" content="Выполняет инструкцию, если указанное условие выполняется true." />
   <link rel="stylesheet" href="{{prism_css}}">
   <script src="{{prism_js}}" async></script>
@@ -17,7 +17,7 @@
 {% block aside_top %}{% include aside_top %}{% endblock %}
 {% block aside_left %}{% include aside_left %}{% endblock %}
 {% block aside_right %}{% include aside_right %}{% endblock %}
-{# block aside_bottom %}{% include aside_bottom %}{% endblock #}
+{% block aside_bottom %}{% include aside_bottom %}{% endblock %}
 {% block main %}{% include content %}{% endblock %}
 
 
