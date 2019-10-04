@@ -21,8 +21,18 @@
 .aside_left ul > li {
   background: #eee;
   margin-bottom: 5px;
-  padding: 5px 10px;
   list-style-type: none;
+}
+
+.aside_left a {
+  display: inline-block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 5px 10px;
+}
+
+.aside_left a:hover {
+  background: #fff;
 }
 
 .aside_left li em {

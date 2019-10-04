@@ -24,10 +24,6 @@
   list-style-type: none;
 }
 
-.aside_right li em {
-  float: right;
-}
-
 .aside_right a {
   display: inline-block;
   width: 100%;
@@ -37,6 +33,10 @@
 
 .aside_right a:hover {
   background: #fff;
+}
+
+.aside_right li em {
+  float: right;
 }
 
 .aside_right a > em {

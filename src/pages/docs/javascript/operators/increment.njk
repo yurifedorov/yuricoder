@@ -7,7 +7,7 @@
 {% set subsegment  = 'increment' %}
 
 {% block head %}
-  <title>Оператор 'инкремент' в JS</title>
+  <title>Оператор инкремента в JS</title>
   <meta name="description" content="Оператор инкремента увеличивает значение переменной на единицу." />
   <link rel="stylesheet" href="{{prism_css}}">
   <script src="{{prism_js}}" async></script>
@@ -17,7 +17,7 @@
 {% block aside_top %}{% include aside_top %}{% endblock %}
 {% block aside_left %}{% include aside_left %}{% endblock %}
 {% block aside_right %}{% include aside_right %}{% endblock %}
-{# block aside_bottom %}{% include aside_bottom %}{% endblock #}
+{% block aside_bottom %}{% include aside_bottom %}{% endblock %}
 {% block main %}{% include content %}{% endblock %}
 
 {% block inlineScripts %}

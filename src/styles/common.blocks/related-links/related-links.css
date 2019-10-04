@@ -3,15 +3,26 @@
 }
 
 .related-links > li {
-  background: #eee;
+  line-height: 20px;
   list-style-type: none;
-  padding: 5px 10px;
   margin-bottom: 2px;
 }
 
 .related-links a {
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 0 10px;
+  line-height: 16px;
   font-size: auto;
   border-left: 1px solid grey;
   padding-left: 5px;
   text-decoration: none;
+}
+
+.related-links a:hover {
+  background: #eee;
+}
+
+.related-links img {
+  padding: 1px;
 }
