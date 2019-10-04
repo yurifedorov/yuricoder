@@ -74,7 +74,8 @@
 {# Paths: site / category / subcategory / segment /  subsegment / file_name #}
 {% set example_dir   = 'examples/'      + category + '/' + subcategory + '/' + segment + '/' + subsegment + '/' %}
 {% set content       = 'content/'       + category + '/' + subcategory + '/' + segment + '/' + document + '.njk' %}
-{% set images_dir    = '../../../img/'  + category + '/' + subcategory + '/' + segment + '/' %}
+{% set images_dir    = '/img/'  + category + '/' + subcategory + '/' + segment + '/' %}
+{% set icons_dir     = '/img/icons' %}
 {% set related_links = 'related_links/' + category + '/' + subcategory + '/' + segment + '/' + document + '.njk' %}
 {% set content       = 'content/'       + category + '/' + subcategory + '/' + segment + '/' + document + '.njk' %}
 
@@ -88,6 +89,11 @@
 {% set css_selectors = 'parts/navigation/css_selectors.njk' %}
 {% set http_contents = 'parts/navigation/http_contents.njk' %}
 {% set breadcrumbs   = 'parts/navigation/breadcrumbs.njk' %}
+
+{# icons #}
+{% set learn_javascript_icon = 'parts/icons/learn_javascript_icon.njk' %}
+{% set medium_icon           = 'parts/icons/medium_icon.njk' %}
+{% set habr_icon             = 'parts/icons/habr_icon.njk' %}
 
 
 {# ================================================================================== #}
