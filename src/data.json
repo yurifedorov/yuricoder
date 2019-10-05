@@ -46,48 +46,6 @@
     "link": "user_experience"
   }],
 
-  "css": [{
-    "category": "Компоненты веб-страницы",
-    "subcategories": [
-      {
-        "name": "structural blocks",
-        "link": "structural-blocks"
-      },
-      {
-        "name": "lists",
-        "link": "lists"
-      },
-      {
-        "name": "tile",
-        "link": "tile"
-      }
-    ]
-  }, {
-    "category": "Селекторы",
-    "subcategories": [
-      {
-        "name": "Список селекторов",
-        "link": "selectors"
-      },
-      {
-        "name": "Подкатегория №2",
-        "link": "#"
-      }
-    ]
-  }, {
-    "category": "Псевдоклассы",
-    "subcategories": [
-      {
-        "name": "Подкатегория №1",
-        "link": "#"
-      },
-      {
-        "name": "Подкатегория №2",
-        "link": "#"
-      }
-    ]
-  }],
-
   "html_docs": [{
     "category": "HTML",
     "subcategories": [

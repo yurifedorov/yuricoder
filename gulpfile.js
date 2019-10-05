@@ -126,7 +126,7 @@ gulp.task('nunjucks', function() {
 
 gulp.task('img', function() {
     return gulp.src([
-        'src/img/**/*.+(jpg|png|svg|gif)'
+        'src/img/**/*.+(jpg|png|svg|gif|ico)'
     ])
       .pipe(gulp.dest('dist/img'))
       .pipe(browserSync.reload({stream: true})); // дублируется в каждом таске (исправить!)

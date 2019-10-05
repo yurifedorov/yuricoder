@@ -2,7 +2,7 @@
 
 {% set document    = 'user_experience' %}
 {% set category    = 'docs' %}
-{% set subcategory = 'user_experience' %}
+{% set subcategory = '' %}
 {% set segment     = '' %}
 {% set subsegment  = '' %}
 
@@ -13,7 +13,16 @@
 
 {% block aside_top %}{% include aside_top %}{% endblock %}
 {% block aside_left %}{% include aside_left %}{% endblock %}
-{% block main %}{% include content %}{% endblock %}
+
+{% block main %}
+  <h1>UX наблюдения</h1>
+  <p>Случаи из реальной жизни, связанные с User Experience</p>
+
+  <dl>
+    <dt>Всплывающие сообщения</dt>
+    <dd>Пользователь сначала tap-tap в любом месте экрана с целью убрать уведомление. А уж потом жмут крестик. Но ход мыслей у всех разный. Кто-то может наоборот искать крестик. <b>Вывод: лучше оставить оба метода скрытия.</b></dd>
+  </dl>
+{% endblock %}
 
 {% block inlineScripts %}
   {# место для инлайновых скриптов #}

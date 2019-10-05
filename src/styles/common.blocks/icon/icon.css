@@ -1,4 +1,5 @@
 .icon {
   margin-right: 5px;
   cursor: help;
+  width: 16px; /* не трогать */
 }

@@ -1,6 +1,8 @@
 <aside class="aside aside_left">
 
 {# js_docs #}         {% if document == 'javascript' or subcategory == 'javascript' %}{% include js_docs %}{% endif %}
+{# js_docs #}         {% if document == 'css'        or subcategory == 'css' %}{% include css_docs %}{% endif %}
+
 {# html_elements  #}  {% if segment   == 'elements' %}{% include html_elements %}{% endif %}
 {# css_selectors #}   {% if segment   == 'selectors' %}{% include css_selectors %}{% endif %}
 {# http_contents #}   {% if segment   == 'http' %}{% include http_contents %}{% endif %}
