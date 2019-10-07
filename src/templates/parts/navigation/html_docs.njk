@@ -1,12 +1,17 @@
 <ul>
-  {% for item in html_docs %}
   <details>
-    <summary>{{item.category}}</summary>
+    <summary>HTML</summary>
     <ul>
-    {% for subitem in item.subcategories %}
-      <li><a href="{{subitem.link}}">{{subitem.name}}</a></li>
-    {% endfor %}
+      <li><a href="HTML_basics">Основы HTML</a></li>
+      <li><a href="elements">Список элементов (тегов)</a></li>
     </ul>
   </details>
-  {% endfor %}
+  <details>
+    <summary>Несортированное</summary>
+    <ul>
+      <li><a href="dom">DOM</a></li>
+      <li><a href="attributes">attributes</a></li>
+      <li><a href="properties">свойства</a></li>
+    </ul>
+  </details>
 </ul>

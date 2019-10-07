@@ -1,10 +1,10 @@
 {% extends "base.njk" %}
 
-{% set document    = 'h2' %}
+{% set document    = 'a' %}
 {% set category    = 'docs' %}
 {% set subcategory = 'html' %}
 {% set segment     = 'elements' %}
-{% set subsegment  = 'h2' %}
+{% set subsegment  = 'a' %}
 
 {% block head %}
   <title>Элемент &lt;{{document}}&gt;</title>
@@ -17,7 +17,7 @@
 {% block aside_top %}{% include aside_top %}{% endblock %}
 {% block aside_left %}{% include aside_left %}{% endblock %}
 {% block aside_right %}{% include aside_right %}{% endblock %}
-{# block aside_bottom %}{% include aside_bottom %}{% endblock #}
+{% block aside_bottom %}{% include aside_bottom %}{% endblock %}
 {% block main %}{% include content %}{% endblock %}
 
 {% block inlineScripts %}
