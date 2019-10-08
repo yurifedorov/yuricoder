@@ -44,15 +44,14 @@
 {% block aside_top %}{% include aside_top %}{% endblock %}
 {% block aside_left %}{% include aside_left %}{% endblock %}
 
-{# <body> #}
 {% block main %}
 
-  <h1>codeExample - ТЕСТЫ</h1>
+  <h1>codeExample - TEST</h1>
 
   <div class="wrapper_grid">
-{#
+
     <section>
-      <h4>Код (с нумерацией строк)</h4>
+      <h4>Code (with line numbering)</h4>
       {% set example_id = 'example1' %}
       {% set numeration = true %}
       {% set split      = false %}
@@ -61,9 +60,13 @@
       {% set css        = false %}
       {% set js         = true %}
       {% set demo       = false %}
-      {% include codeExample_beta %}
-    </section>
+      {% include codeExample %}
 
+      <p style="color: red;">Cannot reproduce JS example with function because function () that is used to run the example contains another function inside.</p>
+
+    </section>
+    
+    {#
     <section>
       <h4>Код (без нумерациии строк)</h4>
       {% set example_id = 'example2' %}
@@ -74,11 +77,12 @@
       {% set css        = false %}
       {% set js         = true %}
       {% set demo       = false %}
-      {% include codeExample_beta %}
+      {% include codeExample %}
     </section>
-
+    #}
   </div>
-
+  
+  {#
   <div class="wrapper_grid">
 
     <section>
@@ -91,7 +95,7 @@
       {% set css        = true %}
       {% set js         = true %}
       {% set demo       = 'example3-demo.njk' %}
-      {% include codeExample_beta %}
+      {% include codeExample %}
     </section>
 
     <section>
@@ -104,7 +108,7 @@
       {% set css        = true %}
       {% set js         = true %}
       {% set demo       = 'example4-demo.njk' %}
-      {% include codeExample_beta %}
+      {% include codeExample %}
     </section>
 
   </div>
@@ -121,7 +125,7 @@
       {% set css        = true %}
       {% set js         = true %}
       {% set demo       = 'example5-demo.njk' %}
-      {% include codeExample_beta %}
+      {% include codeExample %}
     </section>
 
     <section>
@@ -134,20 +138,20 @@
       {% set css        = true %}
       {% set js         = false %}
       {% set demo       = 'example6-demo.njk' %}
-      {% include codeExample_beta %}
+      {% include codeExample %}
     </section>
-#}
+
   </div>
 
-  <br>
-  <hr>
+  #}
 
+  {#
   <h2>Список нерешенных задач:</h2>
   <ol>
     <li>* на iPad класс .code отображается криво</li>
     <li>** можно создать только один split-блок на странице (причина: в файле split_init аргументами функции Split являются идентификаторы '#box-1', '#box-2', '#box-3'). Когда на странице появляется второй split блок - то идентификаторы дублируются.</li>
   </ol>
-
+  #}
 
 
 {% endblock %}

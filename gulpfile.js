@@ -54,6 +54,14 @@ gulp.task('scripts', function (cb) {
     );
   });
 
+  gulp.task('examples', function() {
+    return gulp.src([
+        'src/templates/examples/**/*.+(html|njk|css|js)'
+    ])
+      .pipe(gulp.dest('dist/examples'))
+      .pipe(browserSync.reload({stream: true})); // дублируется в каждом таске (исправить!)
+});
+
   gulp.task('compress-libs', function (cb) {
     // 1. сжатие всех скриптов библиотек
     // 2. добавление суффикса .min
@@ -139,6 +147,7 @@ gulp.task('watch', function(cb) {
         'compress-libs',
         'inline-scripts',
         'nunjucks',
+        'examples',
         'img',
         'browser-sync'
     )(cb);
@@ -170,5 +179,6 @@ gulp.task('deploy',  gulp.series(
     'compress-libs',
     'inline-scripts',
     'nunjucks',
-    'img'
+    'img',
+    'examples'
 ));
