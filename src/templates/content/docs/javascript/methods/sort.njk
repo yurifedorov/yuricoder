@@ -1,0 +1,40 @@
+<h1>Метод <em>{{document}}()</em></h1>
+<p>Сортирует массив, меняя в нём порядок элементов.</p>
+{% set example_id = 'sort_method' %}
+{% set numeration = true %}
+{% set split      = false %}
+{% set html       = false %}
+{% set njk        = false %}
+{% set css        = false %}
+{% set js         = true %}
+{% set demo       = false %}
+{% include codeExample %}
+<p>Было <em>[ a, с, b ]</em> стало <em>[ a, b, c ]</em> - метод <em>sort()</em> отсортировал элементы в нужном порядке.</p>
+<p>По умолчанию элементы сортируются как строки в соответствии с <a href="https://ru.wikipedia.org/wiki/%D0%9B%D0%B5%D0%BA%D1%81%D0%B8%D0%BA%D0%BE%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D0%BF%D0%BE%D1%80%D1%8F%D0%B4%D0%BE%D0%BA">лексикографическим порядоком</a> (то есть сортирувка по-алфавиту)</p>
+
+<section>
+  <h2>Сортировка чисел</h2>
+  {% set example_id = 'sort_number' %}
+  {% set numeration = true %}
+  {% set split      = false %}
+  {% set html       = false %}
+  {% set njk        = false %}
+  {% set css        = false %}
+  {% set js         = true %}
+  {% set demo       = false %}
+  {% include codeExample %}
+  Было <em>[ 1, 2, 14 ]</em> стало <em>[ 1, 14, 2 ]</em> - элементы отсортировались в <b>неправильном</b> порядке.
+  <p>Все потому что при сравнении элементы-числа преобразовались в строки и согласно лексикографическому порядку <em>2 > 14</em></p>
+  <h3>Собственный порядок сортировки</h3>
+  <p>Нужно предоставить функцию в качестве аргумента <em>arr.sort()</em>:</p>
+  {% set example_id = 'sort_method_custom_order' %}
+  {% set numeration = true %}
+  {% set split      = false %}
+  {% set html       = false %}
+  {% set njk        = false %}
+  {% set css        = false %}
+  {% set js         = true %}
+  {% set demo       = false %}
+  {% include codeExample %}
+  <p style="color: red">Не воиспроизвести пример js с функцией, т.к. для запуска примера используется function() {...} и внутри нее создается другаю функция</p>
+</section>

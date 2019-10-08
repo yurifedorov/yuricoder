@@ -1,14 +1,14 @@
 {% extends "base.njk" %}
 
-{% set document    = 'prompt' %}
+{% set document    = 'sort' %}
 {% set category    = 'docs' %}
 {% set subcategory = 'javascript' %}
 {% set segment     = 'methods' %}
-{% set subsegment  = 'prompt' %}
+{% set subsegment  = 'sort' %}
 
 {% block head %}
   <title>Метод {{document}}() в JavaScript</title>
-  <meta name="description" content="Возвращает текст, введенный пользователем." />
+  <meta name="description" content="Метод {{document}} сортирует элементы массива." />
   <link rel="stylesheet" href="{{prism_css}}">
   <script src="{{prism_js}}" async></script>
   <style>{% include highlight_item %}</style>
@@ -17,7 +17,7 @@
 {% block aside_top %}{% include aside_top %}{% endblock %}
 {% block aside_left %}{% include aside_left %}{% endblock %}
 {% block aside_right %}{% include aside_right %}{% endblock %}
-{# block aside_bottom %}{% include aside_bottom %}{% endblock #}
+{% block aside_bottom %}{% include aside_bottom %}{% endblock %}
 {% block main %}{% include content %}{% endblock %}
 
 {% block inlineScripts %}
