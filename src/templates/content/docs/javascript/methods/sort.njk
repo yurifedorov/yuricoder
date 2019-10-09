@@ -26,7 +26,7 @@
   Было <em>[ 1, 2, 14 ]</em> стало <em>[ 1, 14, 2 ]</em> - элементы отсортировались в <b>неправильном</b> порядке.
   <p>Все потому что при сравнении элементы-числа преобразовались в строки и согласно лексикографическому порядку <em>2 > 14</em></p>
   <h3>Собственный порядок сортировки</h3>
-  <p>Нужно предоставить функцию в качестве аргумента <em>arr.sort()</em>:</p>
+  <p>Нужно предоставить функцию в качестве аргумента <em>arr.sort(function)</em>:</p>
   {% set example_id = 'sort_method_custom_order' %}
   {% set numeration = true %}
   {% set split      = false %}
@@ -36,5 +36,24 @@
   {% set js         = true %}
   {% set demo       = false %}
   {% include codeExample %}
-  <p style="color: red">Не воиспроизвести пример js с функцией, т.к. для запуска примера используется function() {...} и внутри нее создается другаю функция</p>
+</section>
+
+<section>
+  <h2>Array Sort Comparison</h2>
+  
+  {% set example_id = 'sort_comparison' %}
+  {% set numeration = true %}
+  {% set split      = false %}
+  {% set html       = false %}
+  {% set njk        = false %}
+  {% set css        = false %}
+  {% set js         = true %}
+  {% set demo       = false %}
+  {% include codeExample %}
+  <small>JavaScript knowledge quizzes by <a href="https://quiz.typeofnan.dev/array-sort-comparison/">Nick Scialli</a></small>
+
+  <h2>Объяснение</h2>
+  <p>Во-первых, метод <em>sort()</em> сортирует исходный массив, а также возвращает ссылку на этот массив. Это означает, что когда мы пишем <em>arr2.sort()</em>, объект массива <em>arr2</em> сортируется.</p>
+  <p>Однако, порядок сортировки массива не имеет значения при сравнении объектов. Поскольку <em>arr1.sort()</em> и <em>arr1</em> указывают на один и тот же объект в памяти, первый тест на равенство возвращает <em>true</em>. Это верно и для второго сравнения: <em>arr2.sort()</em> и <em>arr2</em> указывают на один и тот же объект в памяти.</p>
+  <p>В третьем тесте порядок сортировки <em>arr1.sort()</em> и <em>arr2.sort()</em> одинаков; однако они все еще указывают на разные объекты в памяти. Таким образом, третий тест оценивается как <em>false</em>.</p>
 </section>
