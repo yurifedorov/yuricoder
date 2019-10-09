@@ -26,9 +26,5 @@ em[class="green"] {
 }
 
 em > a {
-  color: white;
-}
-
-em > a:hover {
-  background: green;
+  text-decoration: none;
 }

@@ -1,14 +1,14 @@
 {% extends "base.njk" %}
 
-{% set document    = 'number' %}
+{% set document    = 'boolean' %}
 {% set category    = 'docs' %}
 {% set subcategory = 'javascript' %}
-{% set segment     = 'types' %}
-{% set subsegment  = 'number' %}
+{% set segment     = 'global_objects' %}
+{% set subsegment  = 'boolean' %}
 
 {% block head %}
-  <title>Тип number в JavaScript</title>
-  <meta name="description" content="Подробно о типе number в JavaScript" />
+  <title>Тип boolean в JavaScript</title>
+  <meta name="description" content="Подробно о типе boolean в JavaScript" />
   <link rel="stylesheet" href="{{prism_css}}">
   <script src="{{prism_js}}" async></script>
 {% endblock %}
@@ -18,6 +18,7 @@
 {% block aside_right %}{% include aside_right %}{% endblock %}
 {% block aside_bottom %}{% include aside_bottom %}{% endblock %}
 {% block main %}{% include content %}{% endblock %}
+
 
 
 {% block inlineScripts %}

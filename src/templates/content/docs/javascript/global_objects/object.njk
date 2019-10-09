@@ -1,1 +1,27 @@
-<h1>Object</h1>
+<h1>object</h1>
+{% set example_id  = 'object_type' %}
+{% set numeration  = false %}
+{% set split       = false %}
+{% set html        = false %}
+{% set njk         = false %}
+{% set css         = false %}
+{% set js          = true %}
+{% set demo        = false %}
+{% include codeExample %}
+
+<section>
+  <h2>A Set of Objects</h2>
+  {% set example_id  = 'set_of_objects' %}
+  {% set numeration  = false %}
+  {% set split       = false %}
+  {% set html        = false %}
+  {% set njk         = false %}
+  {% set css         = false %}
+  {% set js          = true %}
+  {% set demo        = false %}
+  {% include codeExample %}
+  <small>JavaScript knowledge quizzes by <a href="https://quiz.typeofnan.dev/array-sort-comparison/">Nick Scialli</a></small>
+
+  <h2>Объяснение</h2>
+  <p>Хотя это верно, объект <em>Set</em> удалит дубликаты, но два значения, с помощью которых мы создаем наш <em>Set</em>, являются ссылками на разные объекты в памяти, несмотря на наличие идентичных пар ключ-значение. По той же причине <em>{ a: 1 } === { a: 1 }</em> является <em>false</em>.</p>
+</section>
