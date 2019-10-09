@@ -1,17 +1,14 @@
 {% extends "base.njk" %}
 
-{% set document    = 'string' %}
+{% set document    = 'global_objects' %}
 {% set category    = 'docs' %}
 {% set subcategory = 'javascript' %}
-{% set segment     = 'types' %}
-{% set subsegment  = 'string' %}
+{% set segment     = 'global_objects' %}
+{% set subsegment  = '' %}
 
 {% block head %}
-  <title>Тип string в JavaScript</title>
-  <meta name="description" content="Подробно о типе string в JavaScript" />
-  <link rel="stylesheet" href="{{prism_css}}">
-  <script src="{{prism_js}}" async></script>
-  <style>{% include highlight_item %}</style>
+  <title>Глобальные объекты в JS</title>
+  <meta name="description" content="Список всех стандартных встроенных объектов в JavaScript." />
 {% endblock %}
 
 {% block aside_top %}{% include aside_top %}{% endblock %}
@@ -19,7 +16,6 @@
 {% block aside_right %}{% include aside_right %}{% endblock %}
 {% block aside_bottom %}{% include aside_bottom %}{% endblock %}
 {% block main %}{% include content %}{% endblock %}
-
 
 {% block inlineScripts %}
   {# место для инлайновых скриптов #}
