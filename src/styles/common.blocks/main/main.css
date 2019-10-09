@@ -1,28 +1,20 @@
 /* тег <main> только один на странице, поэтому для чистоты html-кода использую селектор тега (вместо создания класса) */
 
 main {
-    position: relative; /* зависимость с .link-list */
-    flex: 1; /* не трогать */
-    order: 3; /* не трогать */
-    min-height: 100vh; /* если контента мало, то footer остается внизу */
-    box-sizing: border-box; /* не трогать! */
-    padding-left: var(--main_padding-left);
-    padding-right: var(--main_padding-right);
-    padding-bottom: 20px;
+  flex: 1; /* не трогать */
+  order: 3; /* не трогать */
+  min-height: 100vh; /* если контента мало, то footer остается внизу */
+  box-sizing: border-box; /* не трогать! */
+  padding-left: var(--main_padding-left);
+  padding-right: var(--main_padding-right);
+  padding-bottom: 20px;
 }
 
 main > b {
-    display: block;
-    background: wheat;
-    padding: 20px;
-    margin: 20px 0;
-    border-radius: 7px;
-    font-weight: 200;
-}
-
-/* полезные ссылки внизу страницы */
-main > .link-list {
-    margin-top: 20px;
-    padding: 20px;
-    border-top: 3px solid;
+  display: block;
+  background: wheat;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 7px;
+  font-weight: 200;
 }

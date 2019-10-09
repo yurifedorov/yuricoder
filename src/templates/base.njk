@@ -60,11 +60,8 @@
 {# scripts #}
 {% set ContainerQueries = 'parts/scripts/resize-observer-min.js' %} {# 3 #}
 {% set split_init       = 'parts/scripts/split_init.mjs' %} {# 5 #}
+{% set highlight_item   = 'parts/scripts/highlight_item.js' %} {# подсветка пункта меню #}
 {% set add_class        = 'parts/scripts/add_class.js' %} {# -- #}
-
-{# styles #}
-{% set highlight_item   = 'parts/styles/highlight_item.njk' %} {# -- #}
-{% set selectors_style  = 'parts/styles/selectors_style.njk' %} {# -- #}
 
 {# Libs #}
 {% set prism_js                = '/libs/prism/prism-min.js' %} {# 6 #}
@@ -119,7 +116,7 @@
 
     {# перелинковка #}
     {% if segment %}<base href="/{{category}}/{{subcategory}}/">{% endif %}
-
+    
   </head>
 
   <body data-observe-resizes>
@@ -147,8 +144,11 @@
 
     {# инлайновые скрипты для ВСЕХ страниц #}
     <script>{% include ContainerQueries %}</script>
+    {# скипт для выделения пунктов меню (только для страниц, содержащих меню) #}
+    {# if subcategory %}<script>{% include highlight_item %}</script>{% endif #}
 
-    {# дополнительные инлайновые скрипты #}
+
+    {# если идея с 'if' сработает то от 'block inlineScripts' можно отказаться и удалить с дочерних шаблонов #}
     {% block inlineScripts %} {% endblock %}
 
   </body>
