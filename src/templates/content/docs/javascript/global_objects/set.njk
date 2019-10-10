@@ -1,0 +1,30 @@
+<h1>Set</h1>
+<p><em>set</em> - это хранилище для множества значений любого типа, при этом каждое значение может присутствовать только в <b>одном экземпляре</b>.</p>
+{% set example_id  = 'set' %}
+{% set numeration  = false %}
+{% set split       = false %}
+{% set html        = false %}
+{% set njk         = false %}
+{% set css         = false %}
+{% set js          = true %}
+{% set demo        = false %}
+{% include codeExample %}
+<p>Не смотря на то, что посещений было <b>5</b> (John зашел дважды), <em>set</em> посчитал только <b>4</b>.</p>
+
+<section>
+  <h2>A Set of Objects</h2>
+  {% set example_id  = 'set_of_objects' %}
+  {% set numeration  = false %}
+  {% set split       = false %}
+  {% set html        = false %}
+  {% set njk         = false %}
+  {% set css         = false %}
+  {% set js          = true %}
+  {% set demo        = false %}
+  {% include codeExample %}
+  <small>JavaScript knowledge quizzes by <a href="https://quiz.typeofnan.dev/array-sort-comparison/">Nick Scialli</a></small>
+
+  <h2>Объяснение</h2>
+  <p>Несмотря на наличие идентичных пар ключ-значение (<b> a: 1 </b> и <b> a: 1</b>), эти значения являются ссылками на разные объекты в памяти.</p>
+  <p>По этой причине <em>{ a: 1 } === { a: 1 }</em> является <em>false</em>.</p>
+</section>
