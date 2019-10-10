@@ -1,0 +1,25 @@
+{% extends "base.njk" %}
+
+{% set document    = 'garbage_collection' %}
+{% set category    = 'docs' %}
+{% set subcategory = 'javascript' %}
+{% set segment     = 'memory_management' %}
+{% set subsegment  = 'garbage_collection' %}
+
+{% block head %}
+  <title>Сборка мусора в JavaScript</title>
+  <meta name="description" content="О том, как происходит сборка мусора в JavaScript" />
+  <link rel="stylesheet" href="{{prism_css}}">
+  <script src="{{prism_js}}" async></script>
+{% endblock %}
+
+{% block aside_top %}{% include aside_top %}{% endblock %}
+{% block aside_left %}{% include aside_left %}{% endblock %}
+{% block aside_right %}{% include aside_right %}{% endblock %}
+{% block aside_bottom %}{% include aside_bottom %}{% endblock %}
+{% block main %}{% include content %}{% endblock %}
+
+
+{% block inlineScripts %}
+  {# место для инлайновых скриптов #}
+{% endblock %}

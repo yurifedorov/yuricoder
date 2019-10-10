@@ -29,6 +29,7 @@
   width: 100%;
   box-sizing: border-box;
   padding: 5px 10px;
+  text-decoration: none;
 }
 
 .aside_right a:hover {
@@ -37,6 +38,7 @@
 
 .aside_right li em {
   float: right;
+  margin-left: 10px; /* чтобы не прилипало к тексту ссылки */
 }
 
 .aside_right a > em {

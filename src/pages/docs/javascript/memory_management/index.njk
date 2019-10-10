@@ -1,0 +1,22 @@
+{% extends "base.njk" %}
+
+{% set document    = 'memory_management' %}
+{% set category    = 'docs' %}
+{% set subcategory = 'javascript' %}
+{% set segment     = 'memory_management' %}
+{% set subsegment  = '' %}
+
+{% block head %}
+  <title>Управление памятью в JavaScript</title>
+  <meta name="description" content="О том как в JavaScript происходит управление памятью" />
+{% endblock %}
+
+{% block aside_top %}{% include aside_top %}{% endblock %}
+{% block aside_left %}{% include aside_left %}{% endblock %}
+{% block aside_right %}{% include aside_right %}{% endblock %}
+{% block aside_bottom %}{% include aside_bottom %}{% endblock %}
+{% block main %}{% include content %}{% endblock %}
+
+{% block inlineScripts %}
+  {# место для инлайновых скриптов #}
+{% endblock %}
