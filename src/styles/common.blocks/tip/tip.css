@@ -9,6 +9,7 @@
 }
 
 .tip[data-tip-text]:hover::after {
+  color: black;
   content: attr(data-tip-text);
   position: absolute;
   border: 1px solid #fc0;
