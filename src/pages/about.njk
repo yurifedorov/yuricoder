@@ -12,9 +12,5 @@
 {% endblock %}
 
 {% block aside_top %}{% include aside_top %}{% endblock %}
-{% block aside_left %}{% include aside_left %}{% endblock %}
-{% block main %}{# include content #}{% endblock %}
-
-{% block inlineScripts %}
-  {# место для инлайновых скриптов #}
-{% endblock %}
+{# block aside_left %}{% include aside_left %}{% endblock #}
+{% block main %}{% include content %}{% endblock %}
