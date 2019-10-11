@@ -1,0 +1,36 @@
+<h1>Styles for lists</h1>
+<p>Примеры оформления списков с помощью CSS и БЭМ.</p>
+
+<div class="wrapper_grid">
+
+  <section>
+    <h2>default</h2>
+    <p>Вариант без стилей</p>
+    {% set example_id = 'list_default' %}
+    {% set numeration = false %}
+    {% set split      = false %}
+    {% set html       = true %}
+    {% set njk        = false %}
+    {% set css        = true %}
+    {% set js         = false %}
+    {% set demo       = 'list_default-demo.njk' %}
+    {% include codeExample %}
+  </section>
+
+  <section>
+    <h2>.list</h2>
+    <p>Для незначительных изменений (размер шрифта, тип маркеров и т.д.)</p>
+    {% set example_id = 'list_custom' %}
+    {% set numeration = false %}
+    {% set split      = false %}
+    {% set html       = true %}
+    {% set njk        = false %}
+    {% set css        = true %}
+    {% set js         = false %}
+    {% set demo       = 'list_custom-demo.njk' %}
+    {% include codeExample %}
+  </section>
+
+  <p>Закрывающий тег <b>&lt;/li&gt;</b> можно не писать, если другой элемент <b>&lt;li&gt;</b> следует сразу за предыдущим или если нет содержания в элементе, в который вложен тег.</p>
+
+</div>

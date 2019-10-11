@@ -1,17 +1,16 @@
 {% extends "base.njk" %}
 
-{% set document    = 'lists' %}
+{% set document    = 'checklist' %}
 {% set category    = 'docs' %}
 {% set subcategory = 'css' %}
 {% set segment     = 'lists' %}
-{% set subsegment  = '' %}
+{% set subsegment  = 'checklist' %}
 
 {% block head %}
-  <title>Styling lists using the BEM methodology</title>
-  <meta name="description" content="Примеры оформления списков с помощью CSS и БЭМ." />
+  <title>list_checklist</title>
+  <meta name="description" content="Модификатор _checklist." />
   <link rel="stylesheet" href="{{prism_css}}">
   <script src="{{prism_js}}" async></script>
-  <script src="{{split_js}}" async></script>
 {% endblock %}
 
 {% block aside_top %}{% include aside_top %}{% endblock %}
@@ -21,6 +20,5 @@
 {% block main %}{% include content %}{% endblock %}
 
 {% block inlineScripts %}
-  {# инлайновые скрипты для этой страницы #}
-  <script>{% include split_init %}</script>
+  {# место для инлайновых скриптов #}
 {% endblock %}
