@@ -6,11 +6,11 @@
 {% set segment     = 'articles' %}
 {% set subsegment  = 'template-inheritance' %}
 
+{% set syntax_highlight = true %}
+
 {% block head %}
   <title>Наследование шаблонов в Nunjucks</title>
   <meta name="description" content="Самая сильная сторона Nunjucks - это возможность создавать шаблоны для каждого отдельно взятого компонента веб-сайта." />
-  <link rel="stylesheet" href="{{prism_css}}">
-  <script src="{{prism_js}}" async></script>
 {% endblock %}
 
 {% block aside_top %}{% include aside_top %}{% endblock %}

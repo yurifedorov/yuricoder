@@ -6,11 +6,11 @@
 {% set segment     = 'web_inspector' %}
 {% set subsegment  = '' %}
 
+{% set syntax_highlight = true %}
+
 {% block head %}
   <title>Веб-инспектор</title>
   <meta name="description" content="Подробно о веб-инспекторе Google Chrome" />
-  <link rel="stylesheet" href="{{prism_css}}">
-  <script src="{{prism_js}}" async></script>
 {% endblock %}
 
 {% block aside_top %}{% include aside_top %}{% endblock %}

@@ -6,11 +6,11 @@
 {% set segment     = 'methods' %}
 {% set subsegment  = 'prompt' %}
 
+{% set syntax_highlight = true %}
+
 {% block head %}
   <title>Метод {{document}}() в JavaScript</title>
   <meta name="description" content="Возвращает текст, введенный пользователем." />
-  <link rel="stylesheet" href="{{prism_css}}">
-  <script src="{{prism_js}}" async></script>
 {% endblock %}
 
 {% block aside_top %}{% include aside_top %}{% endblock %}

@@ -6,11 +6,11 @@
 {% set segment        = 'articles' %}
 {% set subsegment     = 'static-site-with-nunjucks' %}
 
+{% set syntax_highlight = true %}
+
 {% block head %}
   <title>Cборка статического сайта с Nunjucks</title>
   <meta name="description" content="Как Nunjucks собирает веб-страницы? Пример сборки простого сайта из двух страниц с одинаковым 'хедером' и 'футером'." />
-  <link rel="stylesheet" href="{{prism_css}}">
-  <script src="{{prism_js}}" async></script>
 {% endblock %}
 
 {% block aside_top %}{% include aside_top %}{% endblock %}

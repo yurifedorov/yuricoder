@@ -6,11 +6,11 @@
 {% set segment     = 'operators' %}
 {% set subsegment  = 'less_than_or_equal' %}
 
+{% set syntax_highlight = true %}
+
 {% block head %}
   <title>Оператор 'меньше или равно' в JS</title>
   <meta name="description" content="Оператор 'меньше' возвращает true, если левый операнд меньше или равен правому операнду или false если наоборот." />
-  <link rel="stylesheet" href="{{prism_css}}">
-  <script src="{{prism_js}}" async></script>
 {% endblock %}
 
 {% block aside_top %}{% include aside_top %}{% endblock %}

@@ -6,11 +6,11 @@
 {% set segment     = 'operators' %}
 {% set subsegment  = 'logical_not' %}
 
+{% set syntax_highlight = true %}
+
 {% block head %}
   <title>Оператор 'логическое НЕ' в JS</title>
   <meta name="description" content="Оператор с одним аргументом, который сначала приводит значение к логическому типу true/false, затем возвращает его противоположное значение." />
-  <link rel="stylesheet" href="{{prism_css}}">
-  <script src="{{prism_js}}" async></script>
 {% endblock %}
 
 {% block aside_top %}{% include aside_top %}{% endblock %}

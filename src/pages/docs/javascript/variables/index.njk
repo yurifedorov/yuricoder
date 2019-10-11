@@ -6,57 +6,13 @@
 {% set segment     = 'variables' %}
 {% set subsegment  = '' %}
 
+{% set syntax_highlight = true %}
+
 {% block head %}
   <title>Переменные в JavaScript</title>
   <meta name="description" content="Как объявить переменную в JS и зачем это нужно." />
-  <link rel="stylesheet" href="{{prism_css}}">
-  <script src="{{prism_js}}" async></script>
 {% endblock %}
 
 {% block aside_top %}{% include aside_top %}{% endblock %}
 {% block aside_left %}{% include aside_left %}{% endblock %}
-
-{% block main %}
-
-  <h1>Переменные в JavaScript</h1>
-  
-  <section class="content">
-    <p>Переменные нужны для хранения информации, с которой в дальнейшем будет работать JS-приложение.</p>
-    <p>Для объявления переменной используется ключевое слово <em>let</em>.</p>
-    {% set example_id = 'let_keyword' %}
-    {% set numeration = true %}
-    {% set split      = false %}
-    {% set html       = false %}
-    {% set njk        = false %}
-    {% set css        = false %}
-    {% set js         = true %}
-    {% set demo       = false %}
-    {% include codeExample %}
-    <table>
-      <tr>
-        <td>1.</td>
-        <td>объявлена переменная с именем 'storage'</td>
-      </tr>
-      <tr>
-        <td>2.</td>
-        <td>с помощью оператора <em>=</em> в нее помещены данные</td>
-      </tr>
-      <tr>
-        <td>3.</td>
-        <td>с помощью <em>alert()</em> переменная выводится на экран</td>
-      </tr>
-    </table>
-  </section>
-
-  <b>Существует еще устаревшее ключевое слово <em>var</em>, работает оно <a href="https://learn.javascript.ru/var">по-другому</a>.</b>
-
-  <section>
-    <h2>Список зарезервированных слов</h2>
-    <p>Эти слова нельзя использовать в качестве имён переменных, потому что они используются самим языком.</p>
-    <ol>
-      <li>break</li>
-      <li>case</li>
-      <li>продолжить... <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Lexical_grammar#%D0%9A%D0%BB%D1%8E%D1%87%D0%B5%D0%B2%D1%8B%D0%B5_%D1%81%D0%BB%D0%BE%D0%B2%D0%B0">список</a></li>
-    </ol>
-  </section>
-{% endblock %}
+{% block main %}{% include content %}{% endblock %}

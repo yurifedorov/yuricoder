@@ -6,12 +6,12 @@
 {% set segment     = 'templates' %}
 {% set subsegment  = 'split' %}
 
+{% set syntax_highlight = true %}
+
 {% block head %}
   <title>Управление шириной блоков с помощью мыши (split)</title>
   <meta name="description" content="Блок, состоящий нескольких контейнеров, где каждый из них можно сузить/расширить." />
   <link rel="stylesheet" href="/beta.min.css">
-  <link rel="stylesheet" href="{{prism_css}}">
-  <script src="{{prism_js}}" async></script>
 {% endblock %}
 
 {% block aside_top %}{% include aside_top %}{% endblock %}

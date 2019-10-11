@@ -6,39 +6,12 @@
 {% set segment     = 'templates' %}
 {% set subsegment  = 'code-example' %}
 
+{% set syntax_highlight = true %}
+
 {% block head %}
   <title>Демонстрация примеров кода на сайте</title>
   <meta name="description" content="Все необходимое для вывода примеров html, js, css и других примеров кода." />
-  <link rel="stylesheet" href="{{prism_css}}">
-  <script src="{{prism_js}}" async></script>
   <script src="{{split_js}}" async></script>
-  <style>
-  /* только для этой страницы */
-  .wrapper_grid {
-    display: grid;
-  }
-
-  .XL > .wrapper_grid {
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 20px;
-  }
-
-  .wrapper_grid > section {
-    background: #eee;
-    padding: 0 1em 5px 1em;
-    margin-top: 10px;
-  }
-
-  .wrapper_grid > section > h4 {
-    margin-top: 7px;
-    margin-bottom: 7px;
-  }
-
-  .XL > .wrapper_grid > section {
-    margin-left: 0;
-    margin-right: 0;
-  }
-  </style>
 {% endblock %}
 
 {% block aside_top %}{% include aside_top %}{% endblock %}
@@ -48,7 +21,6 @@
 
   <h1>codeExample - TEST</h1>
 
-  <div class="wrapper_grid">
 
     <section>
       <h4>Code (with line numbering)</h4>
@@ -77,10 +49,9 @@
       {% include codeExample %}
     </section>
     #}
-  </div>
+
   
   {#
-  <div class="wrapper_grid">
 
     <section>
       <h4>Код (с нумерацией строк) + Toolbar</h4>
@@ -108,9 +79,6 @@
       {% include codeExample %}
     </section>
 
-  </div>
-
-  <div class="wrapper_grid">
 
     <section>
       <h4>Код (с нумерацией строк) + Toolbar + Responsive Демо</h4>
@@ -137,8 +105,6 @@
       {% set demo       = 'example6-demo.njk' %}
       {% include codeExample %}
     </section>
-
-  </div>
 
   #}
 

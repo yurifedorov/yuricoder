@@ -6,11 +6,11 @@
 {% set segment     = 'elements' %}
 {% set subsegment  = 'a' %}
 
+{% set syntax_highlight = true %}
+
 {% block head %}
   <title>Элемент &lt;{{document}}&gt;</title>
   <meta name="description" content="Подробная информация об элементе &lt;{{document}}&gt;" />
-  <link rel="stylesheet" href="{{prism_css}}">
-  <script src="{{prism_js}}" async></script>
 {% endblock %}
 
 {% block aside_top %}{% include aside_top %}{% endblock %}
