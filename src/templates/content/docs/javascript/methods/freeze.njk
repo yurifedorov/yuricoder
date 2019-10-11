@@ -1,1 +1,15 @@
-<h1>Метод <em>Object.freeze()</em></h1>
+<h1>Object.freeze()</h1>
+<p>Метод, который "замораживает" объект и запрещает <b>добавление</b>, <b>удаление</b> и <b>изменение</b> свойств.</p>
+<p><em>object.freeze()</em> возвращает замороженный объект.</p>
+<b>Действие это метода НЕОБРАТИМО, так как объект с неизменяемыми свойствами нельзя снова сделать расширяемым.</b>
+
+
+{% set example_id = 'freeze_method' %}
+{% set numeration = true %}
+{% set split      = false %}
+{% set html       = false %}
+{% set njk        = false %}
+{% set css        = false %}
+{% set js         = true %}
+{% set demo       = false %}
+{% include codeExample %}
