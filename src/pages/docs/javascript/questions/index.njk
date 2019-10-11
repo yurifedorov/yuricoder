@@ -1,0 +1,22 @@
+{% extends "base.njk" %}
+
+{% set document    = 'questions' %}
+{% set category    = 'docs' %}
+{% set subcategory = 'javascript' %}
+{% set segment     = 'questions' %}
+{% set subsegment  = '' %}
+
+{% block head %}
+  <title>Вопросы по JavaScript</title>
+  <meta name="description" content="Вопросы для прокачки навыков в JavaScript." />
+{% endblock %}
+
+{% block aside_top %}{% include aside_top %}{% endblock %}
+{% block aside_left %}{% include aside_left %}{% endblock %}
+{% block aside_right %}{% include aside_right %}{% endblock %}
+{% block aside_bottom %}{% include aside_bottom %}{% endblock %}
+{% block main %}{% include content %}{% endblock %}
+
+{% block inlineScripts %}
+  {# место для инлайновых скриптов #}
+{% endblock %}

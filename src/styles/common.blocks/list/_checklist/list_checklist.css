@@ -1,0 +1,36 @@
+.list_checklist {
+  background: transparent;
+}
+
+/* это по идее должно быть не здесь */
+.list_checklist ul {
+  min-width: 250px;
+  padding-inline-start: 0;
+}
+
+.list_checklist ul > li {
+  background: #eee;
+  margin-bottom: 5px;
+  list-style-type: none;
+}
+
+.list_checklist a {
+  display: inline-block;
+  width: max-content;
+  box-sizing: border-box;
+  text-decoration: none;
+  margin-left: 10px;
+}
+
+.list_checklist a:hover {
+  background: #fff;
+}
+
+.list_checklist li em {
+  float: left;
+  margin-left: 10px; /* чтобы не прилипало к тексту ссылки */
+}
+
+.list_checklist a > em {
+  line-height: 20px;
+}
