@@ -20,8 +20,8 @@
   {% set js          = true %}
   {% set demo        = false %}
   {% include codeExample %}
+  
   <small>JavaScript knowledge quizzes by <a href="https://quiz.typeofnan.dev/deep-object-mutability/">Nick Scialli</a></small>
-  <h3>Объяснение</h3>
-  <p><em><a href="methods/freeze.html">Object.freeze</a></em> will perform a shallow freeze on an object, but will not protect deep properties from being mutated. In this example, we would not be able to mutate <em>user.age</em>, but we have no problem mutating <em>user.pet.name</em>. If we feel we need to protect an object from being mutated "all the way down," we could recursively apply <em>Object.freeze</em> or use an existing "deep freeze" library.</p>
+  <h3><em class="tip tip_red" data-tip-text="пока не понятно почему результат 'Daffodil' ">&#10007;</em> Объяснение</h3>
   <p><em><a href="methods/freeze.html">Object.freeze</a></em> выполнит поверхностное замораживание объекта, но не защитит глубокие свойства от изменения. В этом примере мы не сможем мутировать <em>user.age</em>, но у нас нет проблем с мутированием <em>user.pet.name</em>. Если мы чувствуем, что нам нужно защитить объект от мутации "полностью вниз", мы можем рекурсивно применить <em>Object.freeze</em> или использовать существующую библиотеку "deep freeze".</p>
 </section>
