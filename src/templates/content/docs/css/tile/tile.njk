@@ -1,0 +1,124 @@
+<h1>Tile</h1>
+<p>Блок, содержащий элементы строго квадратной формы</p>
+<img src="/img/docs/css/tile/tile.png" alt="">
+
+
+<h2>Варианты реализации:</h2>
+<ul class="tile tile_flip">
+  <li>
+    <!-- лицевая сторона -->
+    <div class="front">
+      <a>.tile_flip</a>
+    </div>
+    <!-- обратная сторона -->
+    <div class="back">
+      <a href="tile/tile_flip.html">подробнее</a>
+    </div>
+  </li>
+</ul>
+
+<h2>Процесс верстки</h2>
+<section>
+  <h3>Контейнер</h3>
+  <p>Плитка по сути является списком элементов квадратной формы (другие формы тут не рассматриваю).</p>
+  
+  {# Примемер контейнера для блока "плитка" #}
+  {% set example_id = 'tile-container' %}
+  {% set numeration = false %}
+  {% set split      = false %}
+  {% set html       = true %}
+  {% set njk        = false %}
+  {% set css        = true %}
+  {% set js         = false %}
+  {% include codeExample %}
+
+  <p>В качестве контейнера я использовал тег <b>&lt;ul&gt;</b>, в котором теги <b>&lt;li&gt;</b> являются квадратными плитками.</p>
+  <ol>
+    <li>для <b>&lt;ul&gt;</b> задаю класс <b>.tile</b></li>
+    <li>делаю грид-контейнер</li>
+    <li>сбрасываю дефолтные стили для &lt;ul&gt;</li>
+  </ol>
+  <p id="tile">За компановку элементов отвечает свойство <kbd>grid-template-columns</kbd>.</p>
+  <p>На этом все...</p>
+</section>
+
+<section>
+  <h3>Элементы</h3>
+  <p>Здесь я не стал придерживаться <a href="https://ru.bem.info/methodology/quick-start/#%D1%8D%D0%BB%D0%B5%D0%BC%D0%B5%D0%BD%D1%82">правил БЭМ</a> и использовал селектор <kbd>.tile > li</kbd> (вместо <kbd>.tile__item</kbd>). Пунктов (плиток) может быть много и мне не хотелось раздувать html этим классом, добавляя его к каждому &lt;li&gt;.</p>
+  
+  {# Примемер элемента блока "плитка" #}
+  {% set example_id = 'tile__item' %}
+  {% set numeration = false %}
+  {% set split      = true %}
+  {% set html       = true %}
+  {% set njk        = false %}
+  {% set css        = true %}
+  {% set js         = false %}
+  {% set demo       = 'tile__item-demo.njk' %}
+  {% include codeExample %}
+
+  <p>Для того чтобы <b>&lt;li&gt;</b> принял форму квадрата нужно выставить высоту на 0 и задать отступ в 100% от ширины родителя элемента:</p>
+  <ul>
+    <li><kbd>height: 0</kbd></li>
+    <li><kbd>padding-bottom: 100%</kbd></li>
+  </ul>
+  <q>При указании 'padding' в процентах, значение считается от ширины родителя элемента <small>(узнал на <a href="https://webref.ru/css/padding-bottom">webref.ru</a>)</small></q>
+  
+  <p>Чтобы все потомки позиционировались относительно своего &lt;li&gt; контейнера добавлю:</p>
+  <ul>
+    <li><kbd>position: relative</kbd></li>
+  </ul>
+  <p>Все остальные свойства - это визуальная составляющая.</p>
+  <p>Для позиционирования содержимого я обернул текст одним из тегов (&lt;p&gt;, &lt;a&gt; и т.д.) и настроил:</p>
+  <ul>
+    <li><kbd>position: absolute</kbd> для выравнивания по вертикали</li>
+    <li><kbd>text-align: center</kbd> для выравнивания по горизонтали</li>
+  </ul>
+  <p><b>НО! столкнулся с проблемой</b>: при увеличении высоты &lt;li&gt;, контент визуально уже не по-центру.</p>
+  <p>Увеличение происходит из-за свойств, которые менять нельзя:</p>
+  <ol>
+    <li><kbd>padding-bottom: 100%</kbd> (для придания квадратной формы)</li>
+    <li><kbd><a href="#tile">grid-template-columns</a></kbd> (для компановки элементов)</li>
+  </ol>
+  <p>Решение нашел на <a href="https://www.w3.org/Style/Examples/007/center.ru.html#vertical3">w3.org</a>:</p>
+  <p>Для <b>&lt;li&gt;</b> добавил:</p>
+  <ul>
+    <li><kbd>display: flex</kbd></li>
+    <li><kbd>justify-content: center</kbd></li>
+  </ul>    
+  <p>Для потомков <b>&lt;li&gt;</b> добавил:</p>
+  <ul>
+    <li><kbd>margin: 0</kbd> уберет дефолтный отступ у <b>&lt;p&gt;</b></li>
+    <li><kbd>top: 50%</kbd> поместит элемент посередине контейнера.</li>
+  </ul>
+  <p>Тогда верхняя граница текстового блока будет строго по центру, но при этом сам текст будет смещен ниже.</p>
+  <p>Исправляется легко: <kbd>transform</kbd> может приподнять текст на 50% от своей высоты вот так:</p>
+  <ul>
+    <li><kbd>transform: translate(0, -50%)</kbd> переместит элемент вверх на половину своей собственной высоты.</li>
+  </ul>
+</section>
+
+<section>
+  <h3>Когда весь элемент является ссылкой</h3>
+  <p>Сделать ссылкой непосредственно элемент-плитку <b>&lt;li&gt;</b> можно путем растягивания <b>&lt;a&gt;</b> на всю площадь родителя.</p>
+  {% set example_id = 'full-size-link' %}
+  {% set numeration = false %}
+  {% set split      = false %}
+  {% set html       = true %}
+  {% set njk        = false %}
+  {% set css        = true %}
+  {% set js         = false %}
+  {% set demo       = 'full-size-link-demo.njk' %}
+  {% include codeExample %}
+  <p>Вначале хотел использовать селектор <kbd>.tile a</kbd>, но в таком случае абсолютно все ссылки растянутся.</p>
+  <p>Чтобы сохранить возможность добавления, в рамках одно контейнера <kbd>.tile</kbd>, разных видов ссылок я добавил к &lt;a&gt; класс <kbd>.link_stretch</kbd> со следующими свойствами:</p>
+  <ul>
+    <li>отменяю вертикальное выравнивание, заданное для обычных ссылок: <kbd>top: 0</kbd> и <kbd>transform: translate(0, 0)</kbd></li>
+    <li>добавляю <kbd>right: 0</kbd>, <kbd>bottom: 0</kbd> и <kbd>left: 0</kbd> (растягиваю ссылку на всю площадь родителя)</li>
+    <li>выравниваю текст по центру (по-вертикали) с помощью <kbd>padding-top: 50%</kbd>, но вижу что текст смещен вниз и чтобы это исправить использую функцию <b>calc</b> <kbd>padding-top: calc(50% - 0.7em)</kbd></li>
+    <li>убрал подчеркивание <kbd>text-decoration: none</kbd></li>
+  </ul>
+  <q>Почему именно <b>0.7em</b>, a не <b>1em</b>?? Не знаю, но так мне показалось ровнее</q>
+  <p><b>!!!</b> Пока проблема только одна - если символов много и текст становится в две строки, то снова съезжает вниз. Пока не нашел решение адаптивного выравнивания исходя из количества строк.</p>
+  <p>Хотел бы я сделать так - если стока одна, то <kbd>padding-top: calc(50% - 0.7em)</kbd>, если две строки <kbd>padding-top: calc(50% - 1.4em)</kbd>, но это невозможно.</p>
+</section>

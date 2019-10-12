@@ -1,5 +1,8 @@
 {% extends "base.njk" %}
 
+{% set title       = 'CSS селекторы' %}
+{% set description = 'Список CSS-селекторов и их описание' %}
+
 {% set document    = 'selectors' %}
 {% set category    = 'docs' %}
 {% set subcategory = 'css' %}
@@ -7,11 +10,6 @@
 {% set subsegment  = '' %}
 
 {% set syntax_highlight = true %}
-
-{% block head %}
-  <title>CSS селекторы</title>
-  <meta name="description" content="Список CSS-селекторов и их описание" />
-{% endblock %}
 
 {% block aside_top %}{% include aside_top %}{% endblock %}
 {% block aside_left %}{% include aside_left %}{% endblock %}

@@ -1,15 +1,13 @@
 {% extends "base.njk" %}
 
+{% set title       = 'Справочник по JavaScript' %}
+{% set description = 'Мои заметки по языку JavaScript. Выдержки из официальной документации, применение на практике' %}
+
 {% set document    = 'javascript' %}
 {% set category    = 'docs' %}
 {% set subcategory = '' %}
 {% set segment     = '' %}
 {% set subsegment  = '' %}
-
-{% block head %}
-  <title>Справочник по JavaScript</title>
-  <meta name="description" content="Мои заметки по языку JavaScript. Выдержки из официальной документации, применение на практике." />
-{% endblock %}
 
 {% block aside_top %}{% include aside_top %}{% endblock %}
 {% block aside_left %}{% include aside_left %}{% endblock %}

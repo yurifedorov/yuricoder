@@ -1,5 +1,8 @@
 {% extends "base.njk" %}
 
+{% set title       = 'Стилизация списков с использованием методологии BEM' %}
+{% set description = 'Примеры оформления списков с помощью CSS и БЭМ' %}
+
 {% set document    = 'lists' %}
 {% set category    = 'docs' %}
 {% set subcategory = 'css' %}
@@ -7,12 +10,6 @@
 {% set subsegment  = '' %}
 
 {% set syntax_highlight = true %}
-
-{% block head %}
-  <title>Styling lists using the BEM methodology</title>
-  <meta name="description" content="Примеры оформления списков с помощью CSS и БЭМ." />
-  <script src="{{split_js}}" async></script>
-{% endblock %}
 
 {% block aside_top %}{% include aside_top %}{% endblock %}
 {% block aside_left %}{% include aside_left %}{% endblock %}

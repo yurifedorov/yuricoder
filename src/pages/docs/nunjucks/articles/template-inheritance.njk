@@ -1,5 +1,8 @@
 {% extends "base.njk" %}
 
+{% set title       = 'Наследование шаблонов в Nunjucks' %}
+{% set description = 'Самая сильная сторона Nunjucks - это возможность создавать шаблоны для каждого отдельно взятого компонента веб-сайта' %}
+
 {% set document   = 'template-inheritance' %}
 {% set category    = 'docs' %}
 {% set subcategory = 'nunjucks' %}
@@ -7,11 +10,6 @@
 {% set subsegment  = 'template-inheritance' %}
 
 {% set syntax_highlight = true %}
-
-{% block head %}
-  <title>Наследование шаблонов в Nunjucks</title>
-  <meta name="description" content="Самая сильная сторона Nunjucks - это возможность создавать шаблоны для каждого отдельно взятого компонента веб-сайта." />
-{% endblock %}
 
 {% block aside_top %}{% include aside_top %}{% endblock %}
 {% block aside_left %}{% include aside_left %}{% endblock %}

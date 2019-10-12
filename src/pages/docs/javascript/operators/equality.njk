@@ -1,5 +1,8 @@
 {% extends "base.njk" %}
 
+{% set title       = 'Оператор равно в JS' %}
+{% set description = 'Возвращает true, если операнды равны' %}
+
 {% set document    = 'equality' %}
 {% set category    = 'docs' %}
 {% set subcategory = 'javascript' %}
@@ -7,11 +10,6 @@
 {% set subsegment  = 'equality' %}
 
 {% set syntax_highlight = true %}
-
-{% block head %}
-  <title>Оператор 'равно' в JS</title>
-  <meta name="description" content="Возвращает true, если операнды равны." />
-{% endblock %}
 
 {% block aside_top %}{% include aside_top %}{% endblock %}
 {% block aside_left %}{% include aside_left %}{% endblock %}

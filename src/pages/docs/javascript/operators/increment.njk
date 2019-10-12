@@ -1,5 +1,8 @@
 {% extends "base.njk" %}
 
+{% set title       = 'Оператор инкремента в JS' %}
+{% set description = 'Оператор инкремента увеличивает значение переменной на единицу' %}
+
 {% set document    = 'increment' %}
 {% set category    = 'docs' %}
 {% set subcategory = 'javascript' %}
@@ -7,11 +10,6 @@
 {% set subsegment  = 'increment' %}
 
 {% set syntax_highlight = true %}
-
-{% block head %}
-  <title>Оператор инкремента в JS</title>
-  <meta name="description" content="Оператор инкремента увеличивает значение переменной на единицу." />
-{% endblock %}
 
 {% block aside_top %}{% include aside_top %}{% endblock %}
 {% block aside_left %}{% include aside_left %}{% endblock %}

@@ -1,5 +1,8 @@
 {% extends "base.njk" %}
 
+{% set title       = 'Оператор запятая в JS' %}
+{% set description = 'Позволяет перечислять выражения, разделяя их этой самой запятой' %}
+
 {% set document    = 'comma' %}
 {% set category    = 'docs' %}
 {% set subcategory = 'javascript' %}
@@ -7,11 +10,6 @@
 {% set subsegment  = 'comma' %}
 
 {% set syntax_highlight = true %}
-
-{% block head %}
-  <title>Оператор 'запятая' в JS</title>
-  <meta name="description" content="Позволяет перечислять выражения, разделяя их этой самой запятой." />
-{% endblock %}
 
 {% block aside_top %}{% include aside_top %}{% endblock %}
 {% block aside_left %}{% include aside_left %}{% endblock %}

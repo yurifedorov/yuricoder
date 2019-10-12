@@ -1,5 +1,8 @@
 {% extends "base.njk" %}
 
+{% set title       = 'Комбинаторы' %}
+{% set description = 'Особый вид селекторов' %}
+
 {% set document    = 'combinators' %}
 {% set category    = 'docs' %}
 {% set subcategory = 'css' %}
@@ -7,11 +10,6 @@
 {% set subsegment  = 'combinators' %}
 
 {% set syntax_highlight = true %}
-
-{% block head %}
-  <title>Комбинаторы</title>
-  <meta name="description" content="Особый вид селекторов" />
-{% endblock %}
 
 {% block aside_top %}{% include aside_top %}{% endblock %}
 {% block aside_left %}{% include aside_left %}{% endblock %}

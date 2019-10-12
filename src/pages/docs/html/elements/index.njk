@@ -1,5 +1,8 @@
 {% extends "base.njk" %}
 
+{% set title       = 'Список HTML элементов' %}
+{% set description = 'Подробно о каждом html элементе' %}
+
 {% set document    = 'elements' %}
 {% set category    = 'docs' %}
 {% set subcategory = 'html' %}
@@ -7,11 +10,6 @@
 {% set subsegment  = '' %}
 
 {% set syntax_highlight = true %}
-
-{% block head %}
-  <title>Список HTML элементов</title>
-  <meta name="description" content="Подробно о каждом html элементе" />
-{% endblock %}
 
 {% block aside_top %}{% include aside_top %}{% endblock %}
 {% block aside_left %}{% include aside_left %}{% endblock %}

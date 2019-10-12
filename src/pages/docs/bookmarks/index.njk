@@ -1,5 +1,8 @@
 {% extends "base.njk" %}
 
+{% set title       = 'Мои закладки' %}
+{% set description = 'Полезная информация, которую необходимо изучить' %}
+
 {% set document    = 'bookmarks' %}
 {% set category    = 'docs' %}
 {% set subcategory = '' %}
@@ -7,11 +10,6 @@
 {% set subsegment  = '' %}
 
 {% set syntax_highlight = false %}
-
-{% block head %}
-  <title>Мои закладки</title>
-  <meta name="description" content="Полезная информация, которую необходимо изучить" />
-{% endblock %}
 
 {% block aside_top %}{% include aside_top %}{% endblock %}
 {% block aside_left %}{% include aside_left %}{% endblock %}

@@ -1,5 +1,8 @@
 {% extends "base.njk" %}
 
+{% set title       = 'ООП' %}
+{% set description = 'Про ООП' %}
+
 {% set document    = 'oop' %}
 {% set category    = 'docs' %}
 {% set subcategory = 'javascript' %}
@@ -7,12 +10,6 @@
 {% set subsegment  = '' %}
 
 {% set syntax_highlight = false %}
-
-{% block head %}
-  <title>ООП</title>
-  <meta name="description" content="Изучаю ООП" />
-  <script src="../../../scripts/oop_test.js" async></script>
-{% endblock %}
 
 {% block aside_top %}{% include aside_top %}{% endblock %}
 {% block aside_left %}{% include aside_left %}{% endblock %}

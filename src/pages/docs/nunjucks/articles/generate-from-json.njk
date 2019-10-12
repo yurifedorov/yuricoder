@@ -1,5 +1,8 @@
 {% extends "base.njk" %}
 
+{% set title       = 'Цикл for в nunjucks' %}
+{% set description = 'Пример использования встроенного блока for для генерации HTML-разметки' %}
+
 {% set document    = 'цикл for в nunjucks' %}
 {% set category    = 'docs' %}
 {% set subcategory = 'nunjucks' %}
@@ -7,11 +10,6 @@
 {% set subsegment  = '' %}
 
 {% set syntax_highlight = true %}
-
-{% block head %}
-  <title>Цикл for в nunjucks</title>
-  <meta name="description" content="Пример использования встроенного блока 'for' для генерации HTML-разметки" />
-{% endblock %}
 
 {% block aside_top %}{% include aside_top %}{% endblock %}
 {% block aside_left %}{% include aside_left %}{% endblock %}

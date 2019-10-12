@@ -1,5 +1,8 @@
 {% extends "base.njk" %}
 
+{% set title       = 'Управление памятью в JavaScript' %}
+{% set description = 'О том как в JavaScript происходит управление памятью' %}
+
 {% set document    = 'memory_management' %}
 {% set category    = 'docs' %}
 {% set subcategory = 'javascript' %}
@@ -7,11 +10,6 @@
 {% set subsegment  = '' %}
 
 {% set syntax_highlight = false %}
-
-{% block head %}
-  <title>Управление памятью в JavaScript</title>
-  <meta name="description" content="О том как в JavaScript происходит управление памятью" />
-{% endblock %}
 
 {% block aside_top %}{% include aside_top %}{% endblock %}
 {% block aside_left %}{% include aside_left %}{% endblock %}

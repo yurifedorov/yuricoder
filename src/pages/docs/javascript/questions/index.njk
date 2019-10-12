@@ -1,5 +1,8 @@
 {% extends "base.njk" %}
 
+{% set title       = 'Вопросы по JavaScript' %}
+{% set description = 'Вопросы для прокачки навыков в JavaScript' %}
+
 {% set document    = 'questions' %}
 {% set category    = 'docs' %}
 {% set subcategory = 'javascript' %}
@@ -7,11 +10,6 @@
 {% set subsegment  = '' %}
 
 {% set syntax_highlight = false %}
-
-{% block head %}
-  <title>Вопросы по JavaScript</title>
-  <meta name="description" content="Вопросы для прокачки навыков в JavaScript." />
-{% endblock %}
 
 {% block aside_top %}{% include aside_top %}{% endblock %}
 {% block aside_left %}{% include aside_left %}{% endblock %}

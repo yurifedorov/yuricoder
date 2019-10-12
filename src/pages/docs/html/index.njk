@@ -1,5 +1,8 @@
 {% extends "base.njk" %}
 
+{% set title       = 'Справочник по HTML' %}
+{% set description = 'Мои заметки по HTML. Выдержки из официальной документации, применение на практике.' %}
+
 {% set document    = 'html' %}
 {% set category    = 'docs' %}
 {% set subcategory = '' %}
@@ -7,12 +10,6 @@
 {% set subsegment  = '' %}
 
 {% set syntax_highlight = false %}
-
-
-{% block head %}
-  <title>Справочник по HTML</title>
-  <meta name="description" content="Мои заметки по HTML. Выдержки из официальной документации, применение на практике." />
-{% endblock %}
 
 {% block aside_top %}{% include aside_top %}{% endblock %}
 {% block aside_left %}{% include aside_left %}{% endblock %}

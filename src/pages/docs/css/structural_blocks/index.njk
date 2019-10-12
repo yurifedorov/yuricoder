@@ -1,5 +1,8 @@
 {% extends "base.njk" %}
 
+{% set title       = 'Основные структурные блоки сайта' %}
+{% set description = 'Описание основных частей веб-страницы и способы их реализации' %}
+
 {% set document    = 'structural_blocks' %}
 {% set category    = 'docs' %}
 {% set subcategory = 'css' %}
@@ -7,11 +10,6 @@
 {% set subsegment  = '' %}
 
 {% set syntax_highlight = false %}
-
-{% block head %}
-  <title>Основные структурные блоки сайта</title>
-  <meta name="description" content="Описание основных частей веб-страницы и способы их реализации" />
-{% endblock %}
 
 {% block aside_top %}{% include aside_top %}{% endblock %}
 {% block aside_left %}{% include aside_left %}{% endblock %}

@@ -1,5 +1,8 @@
 {% extends "base.njk" %}
 
+{% set title       = 'Переменные в Nunjucks' %}
+{% set description = 'Тег set позволяет создавать и изменять переменную' %}
+
 {% set document    = 'set' %}
 {% set category    = 'docs' %}
 {% set subcategory = 'nunjucks' %}
@@ -7,11 +10,6 @@
 {% set subsegment  = '' %}
 
 {% set syntax_highlight = true %}
-
-{% block head %}
-  <title>Переменные в Nunjucks</title>
-  <meta name="description" content="Тег 'set' позволяет создавать и изменять переменную." />
-{% endblock %}
 
 {% block aside_top %}{% include aside_top %}{% endblock %}
 {% block aside_left %}{% include aside_left %}{% endblock %}

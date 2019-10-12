@@ -1,5 +1,8 @@
 {% extends "base.njk" %}
 
+{% set title       = 'Селекторы по классу' %}
+{% set description = 'Выбирают элементы по классу' %}
+
 {% set document    = 'class_selectors' %}
 {% set category    = 'docs' %}
 {% set subcategory = 'css' %}
@@ -7,11 +10,6 @@
 {% set subsegment  = 'class_selectors' %}
 
 {% set syntax_highlight = true %}
-
-{% block head %}
-  <title>Селекторы по классу</title>
-  <meta name="description" content="Выбирают элементы по классу" />
-{% endblock %}
 
 {% block aside_top %}{% include aside_top %}{% endblock %}
 {% block aside_left %}{% include aside_left %}{% endblock %}

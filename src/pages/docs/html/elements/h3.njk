@@ -1,5 +1,8 @@
 {% extends "base.njk" %}
 
+{% set title       = 'Элемент <h3> в HTML' %}
+{% set description = 'Подробная информация об элементе <h3>' %}
+
 {% set document    = 'h3' %}
 {% set category    = 'docs' %}
 {% set subcategory = 'html' %}
@@ -7,11 +10,6 @@
 {% set subsegment  = 'h3' %}
 
 {% set syntax_highlight = true %}
-
-{% block head %}
-  <title>Элемент &lt;{{document}}&gt;</title>
-  <meta name="description" content="Подробная информация об элементе &lt;{{document}}&gt;" />
-{% endblock %}
 
 {% block aside_top %}{% include aside_top %}{% endblock %}
 {% block aside_left %}{% include aside_left %}{% endblock %}

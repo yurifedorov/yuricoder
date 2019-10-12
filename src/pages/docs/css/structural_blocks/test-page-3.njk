@@ -1,27 +1,20 @@
 {% extends "base.njk" %}
 
-{# variables #}
-{% set title        = 'test-page-3' %}
-{% set category     = 'справочник' %}
-{% set subcategory  = 'технологии' %}
-{% set segment      = 'css' %}
-{% set subsegment   = 'структурные блоки' %}
-{% set path         = '../' %}
-{% set directory    = 'examples/docs/javascript/operators/' %}
+{% set title       = 'test-page-3' %}
+{% set description = 'test-page-3' %}
+
+{% set document    = 'test-page-3' %}
+{% set category    = 'docs' %}
+{% set subcategory = 'css' %}
+{% set segment     = 'structural_blocks' %}
+{% set subsegment  = '' %}
 
 {% set syntax_highlight = false %}
 
-{% block head %}
-  <title>test-page-3</title>
-  <meta name="description" content="test-page-3" />
-  <link rel="stylesheet" href="{{prism_css}}">
-  <script src="{{prism_js}}" async></script>
-{% endblock %}
+{% block aside_top %}{# include aside_top #}{% endblock %}
+{% block aside_left %}{# include aside_left #}{% endblock %}
+{% block aside_right %}{# include aside_right #}{% endblock %}
+{% block aside_bottom %}{# include aside_bottom #}{% endblock %}
 
-{% block aside_top %}{% include aside_top %}{% endblock %}
-{% block aside_left %}{% include aside_left %}{% endblock %}
-{% block aside_right %}{% include aside_right %}{% endblock %}
-{% block aside_bottom %}{% include aside_bottom %}{% endblock %}
-
-{% block main %}контент <br> контент <br> контент <br> контент <br> контент{% endblock %}
+{% block main %}{# include content #}{% endblock %}
 

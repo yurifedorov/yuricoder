@@ -1,5 +1,8 @@
 {% extends "base.njk" %}
 
+{% set title       = 'Оператор строго равно в JS' %}
+{% set description = 'Оператор возвращает true, если операнды строго равны. В отличии от обычного оператора равно, он не не приводит операнды к одному типу' %}
+
 {% set document    = 'identity' %}
 {% set category    = 'docs' %}
 {% set subcategory = 'javascript' %}
@@ -7,11 +10,6 @@
 {% set subsegment  = 'identity' %}
 
 {% set syntax_highlight = true %}
-
-{% block head %}
-  <title>Оператор 'строго равно' в JS</title>
-  <meta name="description" content="Оператор возвращает true, если операнды строго равны. В отличии от обычного оператора 'равно', он не не приводит операнды к одному типу. " />
-{% endblock %}
 
 {% block aside_top %}{% include aside_top %}{% endblock %}
 {% block aside_left %}{% include aside_left %}{% endblock %}

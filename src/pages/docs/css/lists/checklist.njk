@@ -1,5 +1,8 @@
 {% extends "base.njk" %}
 
+{% set title       = 'list_checklist' %}
+{% set description = 'Модификатор _checklist' %}
+
 {% set document    = 'checklist' %}
 {% set category    = 'docs' %}
 {% set subcategory = 'css' %}
@@ -7,11 +10,6 @@
 {% set subsegment  = 'checklist' %}
 
 {% set syntax_highlight = true %}
-
-{% block head %}
-  <title>list_checklist</title>
-  <meta name="description" content="Модификатор _checklist." />
-{% endblock %}
 
 {% block aside_top %}{% include aside_top %}{% endblock %}
 {% block aside_left %}{% include aside_left %}{% endblock %}

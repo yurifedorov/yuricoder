@@ -1,5 +1,8 @@
 {% extends "base.njk" %}
 
+{% set title       = 'Список тегов встроенных в Nunjucks' %}
+{% set description = 'Список специальных блоков, выполяющих операции над разделами шаблона' %}
+
 {% set document    = 'теги' %}
 {% set category    = 'docs' %}
 {% set subcategory = 'nunjucks' %}
@@ -7,11 +10,6 @@
 {% set subsegment  = '' %}
 
 {% set syntax_highlight = false %}
-
-{% block head %}
-  <title>Список тегов встроенных в Nunjucks</title>
-  <meta name="description" content="Список специальных блоков, выполяющих операции над разделами шаблона." />
-{% endblock %}
 
 {% block aside_top %}{% include aside_top %}{% endblock %}
 {% block aside_left %}{% include aside_left %}{% endblock %}

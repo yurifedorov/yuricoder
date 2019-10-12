@@ -1,21 +1,15 @@
 {% extends "base.njk" %}
 
-{# variables #}
-{% set title        = 'test-page-2' %}
-{% set category     = 'справочник' %}
-{% set subcategory  = 'технологии' %}
-{% set segment      = 'css' %}
-{% set subsegment   = 'структурные блоки' %}
-{% set path         = '../' %}
+{% set title       = 'test-page-2' %}
+{% set description = 'test-page-2' %}
+
+{% set document    = 'test-page-2' %}
+{% set category    = 'docs' %}
+{% set subcategory = 'css' %}
+{% set segment     = 'structural_blocks' %}
+{% set subsegment  = '' %}
 
 {% set syntax_highlight = false %}
-
-{% block head %}
-  <title>test-page-2</title>
-  <meta name="description" content="test-page-2" />
-  <link rel="stylesheet" href="{{prism_css}}">
-  <script src="{{prism_js}}" async></script>
-{% endblock %}
 
 {% block aside_top %}{% include aside_top %}{% endblock %}
 {% block aside_left %}{% include aside_left %}{% endblock %}

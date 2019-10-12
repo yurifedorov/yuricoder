@@ -1,5 +1,8 @@
 {% extends "base.njk" %}
 
+{% set title       = 'DOM (Document Object Model)' %}
+{% set description = 'Что такое Document Object Model' %}
+
 {% set document    = 'dom' %}
 {% set category    = 'docs' %}
 {% set subcategory = 'html' %}
@@ -7,11 +10,6 @@
 {% set subsegment  = '' %}
 
 {% set syntax_highlight = true %}
-
-{% block head %}
-  <title>DOM (Document Object Model)</title>
-  <meta name="description" content="Что такое Document Object Model" />
-{% endblock %}
 
 {% block aside_top %}{% include aside_top %}{% endblock %}
 {% block aside_left %}{% include aside_left %}{% endblock %}

@@ -1,5 +1,8 @@
 {% extends "base.njk" %}
 
+{% set title       = '>Оператор унарный плюс в JS' %}
+{% set description = 'Оператор унарного плюса преобразует строковое значение в числовое' %}
+
 {% set document    = 'unary_plus' %}
 {% set category    = 'docs' %}
 {% set subcategory = 'javascript' %}
@@ -7,11 +10,6 @@
 {% set subsegment  = 'unary_plus' %}
 
 {% set syntax_highlight = true %}
-
-{% block head %}
-  <title>Оператор 'унарный плюс' в JS</title>
-  <meta name="description" content="Оператор унарного плюса преобразует строковое значение в числовое." />
-{% endblock %}
 
 {% block aside_top %}{% include aside_top %}{% endblock %}
 {% block aside_left %}{% include aside_left %}{% endblock %}

@@ -1,5 +1,8 @@
 {% extends "base.njk" %}
 
+{% set title       = 'Основы HTML' %}
+{% set description = 'Что такое HTML на самом деле и для чего он нужен' %}
+
 {% set document    = 'HTML_basics' %}
 {% set category    = 'docs' %}
 {% set subcategory = 'html' %}
@@ -7,11 +10,6 @@
 {% set subsegment  = '' %}
 
 {% set syntax_highlight = true %}
-
-{% block head %}
-  <title>Основы HTML</title>
-  <meta name="description" content="Что такое HTML на самом деле и для чего он нужен" />
-{% endblock %}
 
 {% block aside_top %}{% include aside_top %}{% endblock %}
 {% block aside_left %}{% include aside_left %}{% endblock %}

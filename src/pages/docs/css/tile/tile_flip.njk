@@ -17,29 +17,7 @@
 
 {% block aside_top %}{% include aside_top %}{% endblock %}
 {% block aside_left %}{% include aside_left %}{% endblock %}
-
-{% block main %}
-
-  <h1>.tile_flip (модификатор)</h1>
-  <p>Модификатор <b>flip</b> добавляет возможность переворачивать элементы при наведении мышы.</p>
-  <p>Добавляя модификатор <b>_flip</b>, все элементы содержащие контейнер <b>.back</b> станут переворачиватся при наведении курсора (в примере ниже - это третий элемент).</p>
-
-  {% set example_id = 'tile_flip' %}
-  {% set numeration = false %}
-  {% set split      = true %}
-  {% set html       = true %}
-  {% set njk        = false %}
-  {% set css        = true %}
-  {% set js         = false %}
-  {% set demo       = 'tile_flip-demo.njk' %}
-  {% include codeExample %}
-
-  <h2>Полезные ссылки</h2>
-  <ul>
-    <li><a href="https://freefrontend.com/css-flip-cards/">16 CSS Flip Cards</a></li>
-  </ul>
- 
-{% endblock %}
+{% block main %}{% include content %}{% endblock %}
 
 {% block inlineScripts %}
   <script>{% include split_init %}</script>

@@ -1,5 +1,8 @@
 {% extends "base.njk" %}
 
+{% set title       = 'Селекторы по атрибуту' %}
+{% set description = 'Выбирают элементы по атрибуту' %}
+
 {% set document    = 'attribute_selectors' %}
 {% set category    = 'docs' %}
 {% set subcategory = 'css' %}
@@ -7,11 +10,6 @@
 {% set subsegment  = 'attribute_selectors' %}
 
 {% set syntax_highlight = true %}
-
-{% block head %}
-  <title>Селекторы по атрибуту</title>
-  <meta name="description" content="Выбирают элементы по атрибуту" />
-{% endblock %}
 
 {% block aside_top %}{% include aside_top %}{% endblock %}
 {% block aside_left %}{% include aside_left %}{% endblock %}

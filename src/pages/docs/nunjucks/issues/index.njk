@@ -1,5 +1,8 @@
 {% extends "base.njk" %}
 
+{% set title       = 'Проблемы при использовании Nunjucks' %}
+{% set description = 'Неприятные ситуации в процессе работы с шаблонизатором Nunjucks' %}
+
 {% set document   = 'issues' %}
 {% set category    = 'docs' %}
 {% set subcategory = 'nunjucks' %}
@@ -7,11 +10,6 @@
 {% set subsegment  = '' %}
 
 {% set syntax_highlight = false %}
-
-{% block head %}
-  <title>{{ title | capitalize }} при использовании Nunjucks</title>
-  <meta name="description" content="Неприятные ситуации в процессе работы с шаблонизатором Nunjucks" />
-{% endblock %}
 
 {% block main %}
 
