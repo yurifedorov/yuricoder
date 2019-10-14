@@ -1,0 +1,38 @@
+<h1>Оформление навигации</h1>
+
+<div class="grid grid_col-3">
+
+  <section>
+    <h2>HTML</h2>
+    {% set example_id = 'nav_default' %}
+    {% set numeration = false %}
+    {% set split      = false %}
+    {% set html       = true %}
+    {% set njk        = false %}
+    {% set css        = false %}
+    {% set js         = false %}
+    {% include codeExample %}
+  </section>
+
+  <section>
+    <h2>css</h2>
+    {% set example_id = 'nav_default' %}
+    {% set numeration = false %}
+    {% set split      = false %}
+    {% set html       = false %}
+    {% set njk        = false %}
+    {% set css        = true %}
+    {% set js         = false %}
+    {% include codeExample %}
+  </section>
+
+  <section>
+    <h2>Result</h2>
+    <nav>
+      <a href="">item-1</a>
+      <a href="">item-2</a>
+      <a href="">item-3</a>
+    </nav>
+  </section>
+
+</div>

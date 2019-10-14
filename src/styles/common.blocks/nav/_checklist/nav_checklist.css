@@ -1,0 +1,34 @@
+.nav_checklist {
+  background: transparent;
+}
+
+.nav_checklist > a {
+  display: block;
+  background: #eee;
+  padding: 5px 5px 5px 20px;
+  margin-bottom: 5px;
+  line-height: 30px;
+}
+
+.nav_checklist > a:hover {
+  background: #fff;
+}
+
+.nav_checklist > a::after {
+  width: 30px;
+  float: right;
+  content: '\00A0';
+  background: #fff;
+  outline: 1px solid gray;
+  text-align: center;
+}
+
+.nav_checklist > a[data-completed]::after {
+  content: '\2714';
+  background: greenyellow;
+}
+
+.nav_checklist > a[data-uncompleted]::after {
+  content: '\2718';
+  background: tomato;
+}

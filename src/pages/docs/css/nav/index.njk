@@ -1,0 +1,18 @@
+{% extends "base.njk" %}
+
+{% set title       = 'Оформление навигации в CSS' %}
+{% set description = 'Модификации навигационных списков' %}
+
+{% set document    = 'nav' %}
+{% set category    = 'docs' %}
+{% set subcategory = 'css' %}
+{% set segment     = 'nav' %}
+{% set subsegment  = '' %}
+
+{% set syntax_highlight = true %}
+
+{% block aside_top %}{% include aside_top %}{% endblock %}
+{% block aside_left %}{% include aside_left %}{% endblock %}
+{% block aside_right %}{% include aside_right %}{% endblock %}
+{# block aside_bottom %}{% include aside_bottom %}{% endblock #}
+{% block main %}{% include content %}{% endblock %}
