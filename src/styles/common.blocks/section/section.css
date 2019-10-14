@@ -3,7 +3,6 @@ section {
 }
 
 main > section {
-  background: rgba(0, 0, 0, 0.05); /* временно, только для section внутри main */
   padding: 5px 10px;
   border-bottom: 20px solid white;
 }

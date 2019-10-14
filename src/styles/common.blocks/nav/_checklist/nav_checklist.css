@@ -4,19 +4,21 @@
 
 .nav_checklist > a {
   display: block;
+  text-decoration: none;
   background: #eee;
-  padding: 5px 5px 5px 20px;
+  padding: 5px 20px 5px 5px;
   margin-bottom: 5px;
   line-height: 30px;
 }
 
 .nav_checklist > a::after {
   width: 30px;
-  float: right;
+  float: left;
   content: '\00A0';
   background: #fff;
   outline: 1px solid gray;
   text-align: center;
+  margin-right: 10px;
 }
 
 .nav_checklist > a[data-completed]::after {
