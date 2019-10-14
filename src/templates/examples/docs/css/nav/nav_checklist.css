@@ -10,10 +10,6 @@
   line-height: 30px;
 }
 
-.nav_checklist > a:hover {
-  background: #fff;
-}
-
 .nav_checklist > a::after {
   width: 30px;
   float: right;
