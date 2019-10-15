@@ -1,6 +1,6 @@
 <h1>Вызов функций</h1>
 
-<p>Вызов производится по имени функции:</p>
+<p>Вызов производится по <b>имени</b> функции:</p>
 
 {% set example_id  = 'call_syntax' %}
 {% set numeration  = false %}
@@ -11,3 +11,38 @@
 {% set js          = true %}
 {% set demo        = false %}
 {% include codeExample %}
+
+<p>О выборе имен для функции написано <a href="https://learn.javascript.ru/function-basics#function-naming">здесь</a></p>
+
+<section>
+  <h2>Область видимости функции</h2>
+
+  {% set example_id  = 'call_function_declaration' %}
+  {% set numeration  = false %}
+  {% set split       = false %}
+  {% set html        = false %}
+  {% set njk         = false %}
+  {% set css         = false %}
+  {% set js          = true %}
+  {% set demo        = false %}
+  {% include codeExample %}
+
+  {% set example_id  = 'call_function_expression' %}
+  {% set numeration  = false %}
+  {% set split       = false %}
+  {% set html        = false %}
+  {% set njk         = false %}
+  {% set css         = false %}
+  {% set js          = true %}
+  {% set demo        = false %}
+  {% include codeExample %}
+
+</section>
+
+
+
+<br>
+<br>
+<br>
+<a href="functions/declaration.html#function-declaration">function-declaration</a> <br>
+<a href="functions/declaration.html#function-expression">function-expression</a>

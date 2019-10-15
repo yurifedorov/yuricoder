@@ -1,5 +1,2 @@
-function funcName() {
-  alert('This is function body!');
-}
-
-funcName(); // вызов функции
+function funcName() { /* тело функции */ }
+funcName(); // вызов функции по имени
