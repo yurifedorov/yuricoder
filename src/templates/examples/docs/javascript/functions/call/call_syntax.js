@@ -1,2 +1,4 @@
-function funcName() { /* тело функции */ }
+function funcName() { 
+  alert('test')
+ }
 funcName(); // вызов функции по имени

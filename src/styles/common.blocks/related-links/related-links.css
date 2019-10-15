@@ -26,3 +26,13 @@
 .related-links img {
   padding: 1px;
 }
+
+/* для ссылок с атрибутом data-icon */
+.related-links a[data-icon] {
+  background: yellow;
+}
+
+/* для ссылок с атрибутом data-icon, который имеет значение 'mdn' */
+.related-links a[data-icon="mdn"] {
+  background: red;
+}
