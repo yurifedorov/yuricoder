@@ -1,15 +1,25 @@
 .related-links > a {
   display: block;
   line-height: 20px;
-  background: pink;
+  margin-bottom: 5px;
+  text-decoration: none;
 }
 
-.related-links > a[data-icon]::before {
+a[data-icon]::before {
+  display: inline-block; 
   width: 20px;
   content: '\00A0';
   background-size: cover;
+  margin-right: 5px;
 }
 
-.related-links > a[data-icon="mdn"]::before {
-  content: url('img/icons/mdn.png');
-}
+a[data-icon="mdn"]::before { background-image: url('img/icons/mdn.png'); }
+a[data-icon="learn-js"]::before { background-image: url('img/icons/learn-javascript.jpg'); }
+a[data-icon="habr"]::before { background-image: url('img/icons/habr.jpg'); }
+a[data-icon="css-tricks"]::before { background-image: url('img/icons/css-tricks.ico'); }
+a[data-icon="w3c"]::before { background-image: url('img/icons/w3c.ico'); }
+a[data-icon="medium"]::before { background-image: url('img/icons/medium.jpg'); }
+a[data-icon="basicweb"]::before { background-image: url('img/icons/basicweb.png'); }
+a[data-icon="quiz-typeofnan"]::before { background-image: url('img/icons/quiz-typeofnan.png'); }
+a[data-icon="webformyself"]::before { background-image: url('img/icons/webformyself.ico'); }
+a[data-icon="webref"]::before { background-image: url('img/icons/webref.ico'); }
