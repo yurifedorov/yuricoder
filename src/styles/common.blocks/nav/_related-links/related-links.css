@@ -1,0 +1,15 @@
+.related-links > a {
+  display: block;
+  line-height: 20px;
+  background: pink;
+}
+
+.related-links > a[data-icon]::before {
+  width: 20px;
+  content: '\00A0';
+  background-size: cover;
+}
+
+.related-links > a[data-icon="mdn"]::before {
+  content: url('img/icons/mdn.png');
+}

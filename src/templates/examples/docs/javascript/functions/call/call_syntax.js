@@ -1,4 +1,4 @@
-function funcName() { 
+function runCall() { 
   alert('test')
  }
-funcName(); // вызов функции по имени
+ runCall(); // вызов функции по имени

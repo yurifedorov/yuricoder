@@ -1,7 +1,9 @@
 <aside class="aside aside_bottom">
 
   {% if category == 'docs' %}
-  <ul class="related-links">{% include related_links %}</ul>
+    <nav class="related-links">
+      {% include related_links %}
+    </nav>
   {% endif %}
 
 </aside>
