@@ -125,7 +125,9 @@
         </pre>
         {% else %}{# иначе вывести без класса "line-numbers" #}
         <pre>
+          {% if running %}{# вывести кнопку запуска если running=true #}
           <button class="run-js" title="Run" onclick="{{example_id}}()"></button>
+          {% endif %}
           <code class="language-js">{% include example_dir + example_id + '.js' %}</code>
           {# вывести содержимое js в тег script, для возможности выполнения (для примеров без нумерации) #}
           <script>function {{example_id}}() { {% include example_dir + example_id + '.js' %}
