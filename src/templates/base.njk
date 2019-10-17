@@ -70,11 +70,10 @@
 
 {# Paths: site / category / subcategory / segment /  subsegment / file_name #}
 {% set example_dir      = 'examples/'      + category + '/' + subcategory + '/' + segment + '/' + subsegment + '/' %}
-{% set content          = 'content/'       + category + '/' + subcategory + '/' + segment + '/' + subsegment + '/' %}
+{% set content          = 'content/'       + category + '/' + subcategory + '/' + segment + '/' + subsegment + '/' + document + '.njk' %}
 {% set images_dir       = '/img/'          + category + '/' + subcategory + '/' + segment + '/' %}
 {% set icons_dir        = '/img/icons' %}
 {% set related_links    = 'related_links/' + category + '/' + subcategory + '/' + segment + '/' + document + '.njk' %}
-{% set content          = 'content/'       + category + '/' + subcategory + '/' + segment + '/' + document + '.njk' %}
 
 {# Navigation #}
 {% set html_docs            = 'parts/navigation/html_docs.njk' %}
