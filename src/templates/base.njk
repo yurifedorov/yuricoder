@@ -70,6 +70,7 @@
 
 {# Paths: site / category / subcategory / segment /  subsegment / file_name #}
 {% set example_dir      = 'examples/'      + category + '/' + subcategory + '/' + segment + '/' + subsegment + '/' %}
+{# ПОПРОБОВАТЬ ТАК:     = 'content/'       + category + '/' + subcategory + '/' + segment + '/' + subsegment + '/' | а в дочернем шаблоне {% include document + 'njk' %} #}
 {% set content          = 'content/'       + category + '/' + subcategory + '/' + segment + '/' + subsegment + '/' + document + '.njk' %}
 {% set images_dir       = '/img/'          + category + '/' + subcategory + '/' + segment + '/' %}
 {% set icons_dir        = '/img/icons' %}
