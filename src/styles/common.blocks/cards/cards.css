@@ -1,0 +1,13 @@
+.cards {
+  background: chartreuse;
+  list-style-type: none;
+  padding-inline-start: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+}
+
+.cards > li {
+  background: pink;
+  min-height: 150px;
+}
