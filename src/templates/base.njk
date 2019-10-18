@@ -44,7 +44,7 @@
 {% set aside_top        = 'parts/blocks/aside-top.njk' %} {# ?? #}
 {% set aside_left       = 'parts/blocks/aside-left.njk' %} {# ?? #}
 {% set aside_right      = 'parts/blocks/aside-right.njk' %} {# ?? #}
-{% set aside_bottom      = 'parts/blocks/aside-bottom.njk' %} {# ?? #}
+{% set aside_bottom     = 'parts/blocks/aside-bottom.njk' %} {# ?? #}
 {% set section          = 'parts/blocks/section.njk' %} {# ?? #}
 {% set split            = 'parts/blocks/split-example.njk' %}
 {% set codeExample      = 'parts/blocks/code-example.njk' %} {# 16 #}
@@ -68,13 +68,22 @@
 {% set prism_css        = '/libs/prism/prism-min.css' %} {# 7 #}
 {% set split_js         = '/libs/split-js/split-min.js' %} {# 4 #}
 
-{# Paths: site / category / subcategory / segment /  subsegment / file_name #}
-{% set example_dir      = 'examples/'      + category + '/' + subcategory + '/' + segment + '/' + subsegment + '/' %}
-{# ПОПРОБОВАТЬ ТАК:     = 'content/'       + category + '/' + subcategory + '/' + segment + '/' + subsegment + '/' | а в дочернем шаблоне {% include document + 'njk' %} #}
-{% set content          = 'content/'       + category + '/' + subcategory + '/' + segment + '/' + subsegment + '/' + document + '.njk' %}
-{% set images_dir       = '/img/'          + category + '/' + subcategory + '/' + segment + '/' %}
-{% set icons_dir        = '/img/icons' %}
-{% set related_links    = 'related_links/' + category + '/' + subcategory + '/' + segment + '/' + document + '.njk' %}
+
+{# Paths: ... / category / subcategory / segment / subsegment / ... #}
+{% set path = category + '/' + subcategory + '/' + segment + '/' + subsegment + '/' %}
+
+{% set example_dir    = 'examples/' + path  %}
+{% set content_dir    = 'content/'  + path %}
+{% set images_dir     = 'img/'      + path %}
+{% set links_dir      = 'links/'    + path %}
+
+{% set icons_dir      = '/img/icons' %}
+
+
+{% set content        = content_dir + document + '.njk' %}
+{% set links          = links_dir + document + '.njk' %}
+
+
 
 {# Navigation #}
 {% set html_docs            = 'parts/navigation/html_docs.njk' %}
@@ -132,8 +141,6 @@
     <main data-observe-resizes>
       {% block main %} {# контент #} {% endblock %}
     </main>
-
-    
 
     <footer>
       <i>footer</i>
