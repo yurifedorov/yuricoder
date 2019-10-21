@@ -5,7 +5,7 @@
 
 {% set document    = 'bookmarks' %}
 {% set category    = 'docs' %}
-{% set subcategory = '' %}
+{% set subcategory = 'bookmarks' %}
 {% set segment     = '' %}
 {% set subsegment  = '' %}
 
@@ -13,10 +13,4 @@
 
 {% block aside_top %}{% include aside_top %}{% endblock %}
 {% block aside_left %}{% include aside_left %}{% endblock %}
-
-{% block main %}
-
-  <h1>Мои закладки</h1>
-  {% include 'parts/navigation/bookmarks.njk' %}
-
-{% endblock %}
+{% block main %}{% include content %}{% endblock %}

@@ -1,8 +1,9 @@
 <aside class="aside aside_left">
 
-{# html_docs #}       {% if document == 'html' or subcategory == 'html' %}{% include html_docs %}{% endif %}
-{# js_docs #}         {% if document == 'javascript' or subcategory == 'javascript' %}{% include js_docs %}{% endif %}
-{# css_docs #}        {% if document == 'css'        or subcategory == 'css' %}{% include css_docs %}{% endif %}
-{# http_contents #}   {% if segment   == 'http' %}{% include http_contents %}{% endif %}
+{# html_docs #}       {% if document    == 'html' or subcategory == 'html' %}{% include html_docs %}{% endif %}
+{# js_docs #}         {% if document    == 'javascript' or subcategory == 'javascript' %}{% include js_docs %}{% endif %}
+{# css_docs #}        {% if document    == 'css'        or subcategory == 'css' %}{% include css_docs %}{% endif %}
+{# http_contents #}   {% if segment     == 'http' %}{% include http_contents %}{% endif %}
+{# http_contents #}   {% if subcategory == 'bookmarks' %}{% include bookmarks %}{% endif %}
   
 </aside>

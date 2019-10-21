@@ -5,5 +5,7 @@
   {% if category    %} <li> <a href="../">{{ category }}</a>                               {% endif %}
   {% if subcategory %} <li> <a href="../{{ subcategory }}">{{ subcategory }}</a>           {% endif %}
   {% if subsegment  %} <li> <a href="../{{ subcategory }}/{{ segment }}">{{ segment }}</a> {% endif %}
-  {# show always #}    <li> <span>{{ document }}</span>
+  
+  {# ДОДЕЛАТЬ! #}    <li hidden> <span>{{ document }}</span>
+
 </ul>
