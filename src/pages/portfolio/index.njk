@@ -1,20 +1,25 @@
 {% extends "base.njk" %}
 
-{# variables #}
-{% set title = 'портфолио' %}
+{% set document    = 'portfolio' %}
+{% set category    = '' %}
+{% set subcategory = '' %}
+{% set segment     = '' %}
+{% set subsegment  = '' %}
 
-{# ===================================== #}
+{% set syntax_highlight = false %}
 
 {% block head %}
-  <title>Yuri Fedorov - {{ title | capitalize }}</title>
-  <meta name="description" content="Работы Юрия Федорова, веб-разработчика из Санкт-Петербурга" />
+  <title>Portfolio</title>
+  <meta name="description" content="My works" />
 {% endblock %}
 
+{% block aside_top %}{% include aside_top %}{% endblock %}
+{# block aside_left %}{% include aside_left %}{% endblock #}
 {% block main %}
 
-  <h1>{{ title | capitalize }}</h1>
-  <p>Мои веб-проекты</p>
+  <h1>Portfolio</h1>
 
+  <h1>{{ title | capitalize }}</h1>
   <ul class="tile">
     {% for category in portfolio %}
     <li>

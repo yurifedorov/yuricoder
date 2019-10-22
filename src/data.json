@@ -1,14 +1,14 @@
 {
 
   "portfolio": [{
-    "name": "шиномонтаж",
-    "link": "tire-fitting"
+    "name": "Work №1",
+    "link": "work1"
   }, {
-    "name": "Работа №2",
-    "link": "#"
+    "name": "Work №2",
+    "link": "work2"
   }, {
-    "name": "Работа №3",
-    "link": "#"
+    "name": "Work №3",
+    "link": "work3"
   }],
 
   "docs": [{
