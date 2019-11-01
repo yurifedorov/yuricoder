@@ -1,0 +1,451 @@
+
+
+ 
+
+
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+
+
+
+ 
+
+
+
+ 
+ 
+ 
+ 
+
+
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html lang="en" data-observe-resizes>
+
+  <head>
+    <title>Стилизация списков с использованием методологии BEM</title>
+    <meta name="description" content="Примеры оформления списков с помощью CSS и БЭМ" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="/img/favicon.jpg" rel="icon" type="image/svg+xml">
+    <link rel="stylesheet" href="/style.min.css">
+    
+    
+    <base href="/docs/css/">
+
+    
+    
+      <link rel="stylesheet" href="/libs/prism/prism-min.css">
+      <script src="/libs/prism/prism-min.js" async></script>
+    
+
+  </head>
+
+  <body data-observe-resizes>
+    <header>
+      <a href="/index.html" class="logo"></a>
+      <input type="checkbox" id="nav-toggle" hidden>
+<label for="nav-toggle" class="nav__toggle" onclick></label>
+<nav class="nav nav_main">
+  <ul>
+    <li><a href="/about.html">About me</a>
+    <li><a href="/portfolio/">Works</a>
+    <li><a href="/docs/">Docs</a>
+  </ul>
+</nav>
+    </header>
+    
+    <aside class="aside aside_top">
+  
+
+<ul class="breadcrumbs">
+      <li> <a href="/">home</a>
+   <li> <a href="../">docs</a>                               
+   <li> <a href="../css">css</a>           
+  
+  
+      <li> <span>lists</span>
+
+</ul>
+</aside>
+    <aside class="aside aside_left">
+
+       
+         
+        <ul>
+  <details>
+    <summary>Компоненты веб-страницы</summary>
+    <ul>
+      <li><a href="structural_blocks">structural blocks</a></li>
+      <li><a href="lists">lists</a></li>
+      <li><a href="tile">tile</a></li>
+      <li><a href="nav">nav</a></li>
+    </ul>
+  </details>
+  <details>
+    <summary>Селекторы</summary>
+    <ul>
+      <li><a href="selectors">список селекторов</a></li>
+    </ul>
+  </details>
+</ul>
+   
+  
+</aside>
+    <aside class="aside aside_right">
+
+         
+           
+             
+           
+          
+      
+   
+
+              <section>
+  <h3>Модификаторы</h3>
+  <ul>
+    <li><a href="lists/checklist.html">_checklist</a></li>
+  </ul>
+</section>
+                
+          
+  
+</aside>
+      
+
+    <main data-observe-resizes>
+      <h1>Оформление списков</h1>
+<p>Примеры оформления списков с помощью CSS и БЭМ.</p>
+
+<div class="wrapper_grid">
+
+  <section>
+    <h2>default</h2>
+    <p>Вариант без стилей</p>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+<div class="code-example">
+
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+    
+    
+    
+    <style>input[name=button]:checked ~ #list_default-html-code {z-index: 2;}</style>
+
+    
+    
+    <input type="radio" name="button" id="list_default-html-checkbox">
+    <label for="list_default-html-checkbox" onclick>HTML</label>
+    
+
+    <div id="list_default-html-code" class="code">
+      
+      
+        
+        <pre>
+          <code class="language-html">
+&lt;ul&gt;
+  &lt;li&gt;item-1&lt;/li&gt;
+  &lt;li&gt;item-2&lt;/li&gt;
+  &lt;li&gt;item-3&lt;/li&gt;
+  &lt;li&gt;item-4&lt;/li&gt;
+  &lt;li&gt;item-5&lt;/li&gt;
+  &lt;li&gt;item-6&lt;/li&gt;
+  &lt;li&gt;item-7&lt;/li&gt;
+  &lt;li&gt;item-8&lt;/li&gt;
+&lt;/ul&gt;
+</code>
+        </pre>
+        
+      
+    </div>
+  
+
+  
+  
+  
+
+  
+  
+  
+    
+    
+    
+    <style>[id='list_default-css-checkbox']:checked ~ #list_default-css-code {z-index: 2;}</style>
+    
+    
+    
+    <input type="radio" name="button" id="list_default-css-checkbox">
+    <label for="list_default-css-checkbox" onclick>CSS</label>
+    
+
+    <div id="list_default-css-code" class="code">
+      
+      
+        
+        <pre>
+          <code class="language-css">/* без стилей */</code>
+        </pre>
+        
+      
+    </div>
+  
+
+  
+  
+  
+
+  
+  
+    
+    
+    
+    
+    <style>[id='list_default-demo-checkbox']:checked ~ #list_default-demo {z-index: 2;}</style>
+    <input type="radio" name="button" id="list_default-demo-checkbox">
+    <label for="list_default-demo-checkbox" class="demo_button" onclick>DEMO</label>
+    
+    
+      <div id="list_default-demo" class="demo">
+        <ul>
+  <li>item-1
+  <li>item-2
+  <li>item-3
+  <li>item-4
+  <li>item-5
+  <li>item-6
+  <li>item-7
+  <li>item-8
+</ul>
+      </div>
+    
+    
+    
+  
+
+</div>
+  </section>
+
+  <section>
+    <h2>.list</h2>
+    <p>Для незначительных изменений (размер шрифта, тип маркеров и т.д.)</p>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+<div class="code-example">
+
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+    
+    
+    
+    <style>input[name=button]:checked ~ #list_custom-html-code {z-index: 2;}</style>
+
+    
+    
+    <input type="radio" name="button" id="list_custom-html-checkbox">
+    <label for="list_custom-html-checkbox" onclick>HTML</label>
+    
+
+    <div id="list_custom-html-code" class="code">
+      
+      
+        
+        <pre>
+          <code class="language-html">
+&lt;ul class="list"&gt;
+  &lt;li&gt;item-1
+  &lt;li&gt;item-2
+  &lt;li&gt;item-3
+  &lt;li&gt;item-4
+  &lt;li&gt;item-5
+  &lt;li&gt;item-6
+  &lt;li&gt;item-7
+  &lt;li&gt;item-8
+&lt;/ul&gt;
+</code>
+        </pre>
+        
+      
+    </div>
+  
+
+  
+  
+  
+
+  
+  
+  
+    
+    
+    
+    <style>[id='list_custom-css-checkbox']:checked ~ #list_custom-css-code {z-index: 2;}</style>
+    
+    
+    
+    <input type="radio" name="button" id="list_custom-css-checkbox">
+    <label for="list_custom-css-checkbox" onclick>CSS</label>
+    
+
+    <div id="list_custom-css-code" class="code">
+      
+      
+        
+        <pre>
+          <code class="language-css">.list {
+  font-size: 1.2em;
+}
+
+.list > li {
+  list-style-type: square;
+}</code>
+        </pre>
+        
+      
+    </div>
+  
+
+  
+  
+  
+
+  
+  
+    
+    
+    
+    
+    <style>[id='list_custom-demo-checkbox']:checked ~ #list_custom-demo {z-index: 2;}</style>
+    <input type="radio" name="button" id="list_custom-demo-checkbox">
+    <label for="list_custom-demo-checkbox" class="demo_button" onclick>DEMO</label>
+    
+    
+      <div id="list_custom-demo" class="demo">
+        <ul class="list">
+  <li>item-1
+  <li>item-2
+  <li>item-3
+  <li>item-4
+  <li>item-5
+  <li>item-6
+  <li>item-7
+  <li>item-8
+</ul>
+      </div>
+    
+    
+    
+  
+
+</div>
+  </section>
+
+  <p>Закрывающий тег <b>&lt;/li&gt;</b> можно не писать, если другой элемент <b>&lt;li&gt;</b> следует сразу за предыдущим или если нет содержания в элементе, в который вложен тег.</p>
+
+</div>
+    </main>
+
+    <footer>
+      <i>footer</i>
+      <i>footer</i>
+      <i>footer</i>
+    </footer>
+
+    
+    <script>!function(){var e,t,s,r={SM:384,MD:576,LG:768,XL:960,XXL:1440};function a(){for(var e,t=new ResizeObserver(function(e){e.forEach(function(e){if(e.target.updateBreakpoints)e.target.updateBreakpoints(e.contentRect.width);else{var t=e.target.dataset.breakpoints?JSON.parse(e.target.dataset.breakpoints):r;0===e.width?e.target.dataset.observing=!1:e.target.dataset.observing=!0,Object.keys(t).forEach(function(s){var r=t[s];e.contentRect.width>=r?e.target.classList.add(s):e.target.classList.remove(s)})}})}),s=document.querySelectorAll("[data-observe-resizes]"),a=0;e=s[a];a++)t.observe(e);function i(){return"object"==typeof Reflect?Reflect.construct(HTMLElement,[],i):HTMLElement.call(this)||this}new MutationObserver(function(e){e.forEach(function(e){var s,r;s=e.addedNodes,r=t.observe.bind(t),s&&[].slice.call(s).forEach(function(e){if(1===e.nodeType){var t=[].slice.call(e.querySelectorAll("[data-observe-resizes]"));e.hasAttribute("data-observe-resizes")&&t.push(e);for(var s,a=0;s=t[a];a++)r(s)}})})}).observe(document.body,{childList:!0,subtree:!0}),i.prototype=Object.create(HTMLElement.prototype,{constructor:{value:i},connectedCallback:{value:function(){var e=this.getAttribute("breakpoints");this.breakpoints=e?JSON.parse(e):r,t.observe(this),this.setAttribute("observing","")}},updateBreakpoints:{value:function(e){for(var t in e>0?this.setAttribute("observing",""):this.removeAttribute("observing"),this.breakpoints){e>=this.breakpoints[t]?this.classList.add(t):this.classList.remove(t)}}}}),self.customElements.define("responsive-container",i)}"undefined"!=typeof ResizeObserver&&"undefined"!=typeof customElements||!matchMedia("(min-width: "+r.SM+"px)").matches?a():(e="/scripts/polyfills.js",t=a,(s=document.createElement("script")).src=e,s.onload=t,document.head.appendChild(s))}();</script>
+    
+    
+
+
+    
+     
+
+  </body>
+
+</html>

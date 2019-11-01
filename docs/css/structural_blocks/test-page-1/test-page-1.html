@@ -1,0 +1,203 @@
+
+
+ 
+
+
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+
+
+
+ 
+
+
+
+ 
+ 
+ 
+ 
+
+
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html lang="en" data-observe-resizes>
+
+  <head>
+    <title>test-page-1</title>
+    <meta name="description" content="test-page-1" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="/img/favicon.jpg" rel="icon" type="image/svg+xml">
+    <link rel="stylesheet" href="/style.min.css">
+    
+    
+    <base href="/docs/css/">
+
+    
+    
+
+  </head>
+
+  <body data-observe-resizes>
+    <header>
+      <a href="/index.html" class="logo"></a>
+      <input type="checkbox" id="nav-toggle" hidden>
+<label for="nav-toggle" class="nav__toggle" onclick></label>
+<nav class="nav nav_main">
+  <ul>
+    <li><a href="/about.html">About me</a>
+    <li><a href="/portfolio/">Works</a>
+    <li><a href="/docs/">Docs</a>
+  </ul>
+</nav>
+    </header>
+    
+      
+      
+      
+      
+
+    <main data-observe-resizes>
+      
+
+  <section class="banner" name="hero">
+    <h1>Заголовок h1</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo iusto nostrum at ipsum aut ipsa suscipit ab omnis ad unde</p>
+  </section>
+  
+  <section>
+    <h2>Заголовок секции</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda vitae quos dolorum aliquid quasi fugit neque quo minima omnis hic rerum, eligendi autem quaerat. Saepe earum consequatur deleniti quam ipsum.</p>
+    <ul>
+        <li>пункт-1</li>
+        <li>пункт-2</li>
+        <li>пункт-3</li>
+    </ul>
+    <h3>Подзаголовок</h3>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut, adipisci? Nesciunt obcaecati, incidunt sed explicabo debitis eos ab voluptate dolorum dolore eveniet saepe quisquam, quidem, maxime provident odit minima quo?</p>
+  </section>
+
+  <section>
+    <h2>Заголовок секции</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda vitae quos dolorum aliquid quasi fugit neque quo minima omnis hic rerum, eligendi autem quaerat. Saepe earum consequatur deleniti quam ipsum.</p>
+    <h3>Подзаголовок</h3>
+    <p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Первую своего снова маленький его пор дорогу? Ведущими бросил коварных имени даже, взобравшись меня пунктуация. Всемогущая все ручеек путь заглавных?</p>
+  </section>
+
+  <section>
+    <h2>codeExample</h2>
+    <p>Блок для примаеров кода (требуется библиотека prism.js)</p>
+
+  </section>
+
+  <section>
+    <table>
+      <caption>таблица: цифры + текст</caption>
+      <tr>
+        <td>2</td>
+        <td>сложение двух числел</td>
+      </tr>
+      <tr>
+        <td>11</td>
+        <td>объединение двух строк</td>
+      </tr>
+      <tr>
+        <td>11</td>
+        <td>если один из аргументов является строкой, то второй будет также преобразован к строке <b>*</b></td>
+      </tr>
+      <tr>
+        <td>0</td>
+        <td>другие операторы наоборот преобразуют строки в числа</td>
+      </tr>
+    </table>
+  </section>
+
+  <section>
+    <table>
+      <caption>таблица: текст + текст</caption>
+      <tr>
+        <td>текст</td>
+        <td>простая страница</td>
+      </tr>
+      <tr>
+        <td>текст</td>
+        <td>страница с левым aside</td>
+      </tr>
+      <tr>
+        <td>текст</td>
+        <td>страница с левым и правым aside</td>
+      </tr>
+    </table>
+  </section>
+
+
+    </main>
+
+    <footer>
+      <i>footer</i>
+      <i>footer</i>
+      <i>footer</i>
+    </footer>
+
+    
+    <script>!function(){var e,t,s,r={SM:384,MD:576,LG:768,XL:960,XXL:1440};function a(){for(var e,t=new ResizeObserver(function(e){e.forEach(function(e){if(e.target.updateBreakpoints)e.target.updateBreakpoints(e.contentRect.width);else{var t=e.target.dataset.breakpoints?JSON.parse(e.target.dataset.breakpoints):r;0===e.width?e.target.dataset.observing=!1:e.target.dataset.observing=!0,Object.keys(t).forEach(function(s){var r=t[s];e.contentRect.width>=r?e.target.classList.add(s):e.target.classList.remove(s)})}})}),s=document.querySelectorAll("[data-observe-resizes]"),a=0;e=s[a];a++)t.observe(e);function i(){return"object"==typeof Reflect?Reflect.construct(HTMLElement,[],i):HTMLElement.call(this)||this}new MutationObserver(function(e){e.forEach(function(e){var s,r;s=e.addedNodes,r=t.observe.bind(t),s&&[].slice.call(s).forEach(function(e){if(1===e.nodeType){var t=[].slice.call(e.querySelectorAll("[data-observe-resizes]"));e.hasAttribute("data-observe-resizes")&&t.push(e);for(var s,a=0;s=t[a];a++)r(s)}})})}).observe(document.body,{childList:!0,subtree:!0}),i.prototype=Object.create(HTMLElement.prototype,{constructor:{value:i},connectedCallback:{value:function(){var e=this.getAttribute("breakpoints");this.breakpoints=e?JSON.parse(e):r,t.observe(this),this.setAttribute("observing","")}},updateBreakpoints:{value:function(e){for(var t in e>0?this.setAttribute("observing",""):this.removeAttribute("observing"),this.breakpoints){e>=this.breakpoints[t]?this.classList.add(t):this.classList.remove(t)}}}}),self.customElements.define("responsive-container",i)}"undefined"!=typeof ResizeObserver&&"undefined"!=typeof customElements||!matchMedia("(min-width: "+r.SM+"px)").matches?a():(e="/scripts/polyfills.js",t=a,(s=document.createElement("script")).src=e,s.onload=t,document.head.appendChild(s))}();</script>
+    
+    
+
+
+    
+     
+
+  </body>
+
+</html>

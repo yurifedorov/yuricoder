@@ -1,0 +1,479 @@
+
+
+ 
+
+
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+
+
+
+ 
+
+
+
+ 
+ 
+ 
+ 
+
+
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html lang="en" data-observe-resizes>
+
+  <head>
+    <title></title>
+    <meta name="description" content="" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="/img/favicon.jpg" rel="icon" type="image/svg+xml">
+    <link rel="stylesheet" href="/style.min.css">
+    
+    
+    <base href="/docs/optimization/">
+
+    
+    
+
+  </head>
+
+  <body data-observe-resizes>
+    <header>
+      <a href="/index.html" class="logo"></a>
+      <input type="checkbox" id="nav-toggle" hidden>
+<label for="nav-toggle" class="nav__toggle" onclick></label>
+<nav class="nav nav_main">
+  <ul>
+    <li><a href="/about.html">About me</a>
+    <li><a href="/portfolio/">Works</a>
+    <li><a href="/docs/">Docs</a>
+  </ul>
+</nav>
+    </header>
+    
+    <aside class="aside aside_top">
+  
+
+<ul class="breadcrumbs">
+      <li> <a href="/">home</a>
+   <li> <a href="../">docs</a>                               
+   <li> <a href="../optimization">optimization</a>           
+   <li> <a href="../optimization/http">http</a> 
+  
+      <li> <span>url</span>
+
+</ul>
+</aside>
+    <aside class="aside aside_left">
+
+       
+         
+        
+   <section class="toc">
+  <h2>Содержание</h2>
+  <details class="toc__section">
+    <summary>1. Введение</summary>
+    <ul>
+      <li><a href="purpose.html">1.1. Цель</a>
+      <li><a href="requirements.html">1.2. Требования</a>
+      <li><a href="terminology.html">1.3. Терминология</a>
+      <li><a href="overall_operation.html">1.4. Общее описание</a>
+    </ul>
+  </details>
+  <details class="toc__section">
+    <summary>2. Письменные соглашения и обобщенная грамматика</summary>
+    <ul>
+      <li><a href="conventions_and_grammar.html#augmented_bnf">2.1. Увеличенная нормальная запись Бекуса-Наура (BNF)</a>
+      <li><a href="conventions_and_grammar.html#basic_rules">2.2. Основные правила</a>
+    </ul>
+  </details>
+  <details class="toc__section">
+    <summary>3. Параметры протокола</summary>
+    <ul>
+      <li><a href="http_version.html">3.1. Версия HTTP</a>
+      <li>
+        <details>
+          <summary>3.2. Универсальные Идентификаторы Ресурсов (URI)</summary>
+          <ul>
+            <li><a href="url.html#general_syntax">3.2.1. Общий синтаксис</a>
+            <li><a href="url.html#http_url">3.2.2. HTTP URL</a>
+            <li><a href="url.html#url_comparison">3.2.3. Сравнение URI</a>
+          </ul>
+        </details>
+      </li>
+      <li>
+        <details>
+          <summary>3.3. Форматы даты/времени</summary>
+          <ul>
+            <li><a href="#">3.3.1. Полная дата</a>
+            <li><a href="#">3.3.2. Разность секунд (delta seconds)</a>
+          </ul>
+        </details>
+      </li>
+      <li><a href="#">3.4. Кодовые таблицы (character sets)</a>
+      <li><a href="#">3.5. Кодирование содержимого (content codings)</a>
+      <li><a href="#">3.6. Кодирование передачи (transfer codings)</a>
+      <li>
+        <details>
+          <summary>3.7. Медиа типы (Media Types)</summary>
+          <ul>
+            <li><a href="#">3.7.1. Канонизация и предопределенные значения типа text</a>
+            <li><a href="#">3.7.2. Типы Multipart</a>
+          </ul>
+        </details>
+      </li>
+      <li><a href="#">3.8. Лексемы программ (Product Tokens)</a>
+      <li><a href="#">3.9. Качественные значения (Quality Values)</a>
+      <li><a href="#">3.10. Метки языков (Language Tags)</a>
+      <li><a href="#">3.11. Метки объектов (Entity Tags)</a>
+      <li><a href="#">3.12. Единицы измерения диапазонов (Range Units)</a>
+    </ul>
+  </details>
+  <details class="toc__section">
+    <summary>4. HTTP сообщение (HTTP Message)</summary>
+    <ul>
+      <li><a href="#">4.1. Типы сообщений</a>
+      <li><a href="#">4.2. Заголовки сообщений</a>
+      <li><a href="#">4.3. Тело cообщения</a>
+      <li><a href="#">4.4. Длина сообщения</a>
+      <li><a href="#">4.5. Общие поля заголовка</a>
+    </ul>
+  </details>
+  <details class="toc__section">
+    <summary>5. Запрос (Request)</summary>
+    <ul>
+      <li>
+        <details>
+          <summary>5.1. Строка запроса (Request-Line)</summary>
+          <ul>
+            <li><a href="#">5.1.1. Метод (Method)</a>
+            <li><a href="#">5.1.2. Запрашиваемый URI (Request-URI)</a>
+          </ul>
+        </details>
+      </li>
+      <li><a href="#">5.2. Ресурс, идентифицируемый запросом</a>
+      <li><a href="#">5.3. Поля заголовка запроса</a>
+    </ul>
+  </details>
+  <details class="toc__section">
+    <summary>6. Ответ (Response)</summary>
+    <ul>
+      <li>
+        <details>
+          <summary>6.1. Строка состояния (Status-Line)</summary>
+          <ul>
+            <li><a href="#">6.1.1. Код состояния и поясняющая фраза</a>
+          </ul>
+        </details>
+      </li>
+      <li><a href="#">6.2. Поля заголовка ответа</a>
+    </ul>
+  </details>
+  <details class="toc__section">
+    <summary>7. Объект (Entity)</summary>
+    <ul>
+      <li><a href="#">7.1. Поля заголовка объекта</a></li>
+      <li>
+        <details>
+          <summary>7.2. Тело объекта</summary>
+          <ul>
+            <li><a href="#">7.2.1. Тип (Type)</a>
+            <li><a href="#">7.2.2. Длина (Length)</a>
+          </ul>
+        </details>
+      </li>
+    </ul>
+  </details>
+  <details class="toc__section">
+    <summary>8. Соединения (Connections)</summary>
+    <ul>
+      <li>
+        <details>
+          <summary>8.1. Постоянные соединения (Persistent Connections)</summary>
+          <ul>
+            <li><a href="#">8.1.1. Цель</a>
+            <li><a href="#">8.1.2. Общее описание</a>
+            <li><a href="#">8.1.3. Прокси-сервера (Proxy Servers)</a>
+            <li><a href="#">8.1.4. Практические cоглашения</a>
+          </ul>
+        </details>
+      </li>
+      <li><a href="#">8.2. Требования к передаче сообщений</a>
+    </ul>
+  </details>
+  <details class="toc__section">
+    <summary>9. Определения методов (Method Definitions)</summary>
+    <ul>
+      <li>
+        <details>
+          <summary>9.1. Безопасные и Idempotent Методы</summary>
+          <ul>
+            <li><a href="methods.html#safe_methods">9.1.1. Безопасные методы</a>
+            <li><a href="methods.html#idempotent_methods">9.1.2. Idempotent методы</a>
+          </ul>
+        </details>
+      </li>
+      <li><a href="methods.html#options">9.2. OPTIONS</a>
+      <li><a href="methods.html#get">9.3. GET</a>
+      <li><a href="methods.html#head">9.4. HEAD</a>
+      <li><a href="methods.html#post">9.5. POST</a>
+      <li><a href="methods.html#put">9.6. PUT</a>
+      <li><a href="methods.html#delete">9.7. DELETE</a>
+      <li><a href="methods.html#trace">9.8. TRACE</a>
+    </ul>
+  </details>
+  <details class="toc__section">
+    <summary>10. Описания кодов состояния</summary>
+    <ul>
+      <li>
+        <details>
+          <summary>10.1. 1xx — Информационные коды</summary>
+          <ul>
+            <li><a href="status_code_definitions.html#informational-1xx">10.1.1. 100 Continue</a>
+            <li><a href="status_code_definitions.html#informational-1xx">10.1.2. 101 Switching Protocols</a>
+          </ul>
+        </details>
+      </li>
+      <li>
+        <details>
+          <summary>10.2. 2xx — Успешные коды</summary>
+          <ul>
+            <li><a href="status_code_definitions.html#successful-2xx">10.2.1. 200 ОК</a>
+            <li><a href="status_code_definitions.html#successful-2xx">10.2.2. 201 Created</a>
+            <li><a href="status_code_definitions.html#successful-2xx">10.2.3. 202 Accepted</a>
+            <li><a href="status_code_definitions.html#successful-2xx">10.2.4. 203 Non-Authoritative Information</a>
+            <li><a href="status_code_definitions.html#successful-2xx">10.2.5. 204 No Content</a>
+            <li><a href="status_code_definitions.html#successful-2xx">10.2.6. 205 Reset Content</a>
+            <li><a href="status_code_definitions.html#successful-2xx">10.2.7. 206 Partial Content</a>
+          </ul>
+        </details>
+      </li>
+      <li>
+        <details>
+          <summary>10.3. 3xx — Коды перенаправления</summary>
+          <ul>
+            <li><a href="status_code_definitions.html#redirection-3xx">10.3.1. 300 Multiple Choices</a>
+            <li><a href="status_code_definitions.html#redirection-3xx">10.3.2. 301 Moved Permanently</a>
+            <li><a href="status_code_definitions.html#redirection-3xx">10.3.3. 302 Moved Temporarily</a>
+            <li><a href="status_code_definitions.html#redirection-3xx">10.3.4. 303 See Other</a>
+            <li><a href="status_code_definitions.html#redirection-3xx">10.3.5. 304 Not Modified</a>
+            <li><a href="status_code_definitions.html#redirection-3xx">10.3.6. 305 Use Proxy</a>
+          </ul>
+        </details>
+      </li>
+      <li>
+        <details>
+          <summary>10.4. 4xx — Коды ошибок клиента</summary>
+          <ul>
+            <li><a href="status_code_definitions.html#client_error-4xx">10.4.1. 400 Bad Request</a>
+            <li><a href="status_code_definitions.html#client_error-4xx">10.4.2. 401 Unauthorized</a>
+            <li><a href="status_code_definitions.html#client_error-4xx">10.4.3. 402 Payment Required</a>
+            <li><a href="status_code_definitions.html#client_error-4xx">10.4.4. 403 Forbidden</a>
+            <li><a href="status_code_definitions.html#client_error-4xx">10.4.5. 404 Not Found</a>
+            <li><a href="status_code_definitions.html#client_error-4xx">10.4.6. 405 Method Not Allowed</a>
+            <li><a href="status_code_definitions.html#client_error-4xx">10.4.7. 406 Not Acceptable</a>
+            <li><a href="status_code_definitions.html#client_error-4xx">10.4.8. 407 Proxy Authentication Required</a>
+            <li><a href="status_code_definitions.html#client_error-4xx">10.4.9. 408 Request Timeout</a>
+            <li><a href="status_code_definitions.html#client_error-4xx">10.4.10. 409 Conflict</a>
+            <li><a href="status_code_definitions.html#client_error-4xx">10.4.11. 410 Gone</a>
+            <li><a href="status_code_definitions.html#client_error-4xx">10.4.12. 411 Length Required</a>
+            <li><a href="status_code_definitions.html#client_error-4xx">10.4.13. 412 Precondition Failed</a>
+            <li><a href="status_code_definitions.html#client_error-4xx">10.4.14. 413 Request Entity Too Large</a>
+            <li><a href="status_code_definitions.html#client_error-4xx">10.4.15. 414 Request-URI Too Long</a>
+            <li><a href="status_code_definitions.html#client_error-4xx">10.4.16. 415 Unsupported Media Type</a>
+          </ul>
+        </details>
+      </li>
+      <li>
+        <details>
+          <summary>10.5. 5xx — Коды ошибок сервера</summary>
+          <ul>
+            <li><a href="status_code_definitions.html#server_error-5xx">10.5.1. 500 Internal Server Error</a>
+            <li><a href="status_code_definitions.html#server_error-5xx">10.5.2. 501 Not Implemented</a>
+            <li><a href="status_code_definitions.html#server_error-5xx">10.5.3. 502 Bad Gateway</a>
+            <li><a href="status_code_definitions.html#server_error-5xx">10.5.4. 503 Service Unavailable</a>
+            <li><a href="status_code_definitions.html#server_error-5xx">10.5.5. 504 Gateway Timeout</a>
+            <li><a href="status_code_definitions.html#server_error-5xx">10.5.6. 505 HTTP Version Not Supported</a>
+          </ul>
+        </details>
+      </li>
+    </ul>
+  </details>
+</section>
+
+<p>to be continued... <a href="https://rfc2.ru/2068.rfc">look here</a></p>
+  
+</aside>
+      
+      
+
+    <main data-observe-resizes>
+      <b>&#x1F6A8; Это не перевод <b><a href="https://www.w3.org/Protocols/rfc2068/rfc2068">официальной документации</a></b>, а просто мои заметки.</b>
+
+<h1>3.2. Универсальные Идентификаторы Ресурсов (URI)</h1>
+
+<section id="general_syntax">
+  <h2>3.2.1. Общий синтаксис</h2>
+  <p>Части, которые могут входить в URL описаны в <a href="https://rfc2.ru/2068.rfc/8#p3.2.1">пункте 3.2.1.</a> спецификации RFC 2068</p>
+  <pre>
+  URI         = ( absoluteURI | relativeURI ) [ "#" fragment ]
+
+  absoluteURI = scheme ":" *( uchar | reserved )
+
+  relativeURI = net_path | abs_path | rel_path
+
+  net_path    = "//" net_loc [ abs_path ]
+  abs_path    = "/" rel_path
+  rel_path    = [ path ] [ ";" params ] [ "?" query ]
+
+  path        = fsegment *( "/" segment )
+  fsegment    = 1*pchar
+  segment     = *pchar
+
+  params      = param *( ";" param )
+  param       = *( pchar | "/" )
+
+  scheme      = 1*( ALPHA | DIGIT | "+" | "-" | "." )
+  net_loc     = *( pchar | ";" | "?" )
+
+  query       = *( uchar | reserved )
+  fragment    = *( uchar | reserved )
+
+  pchar       = uchar | ":" | "@" | "&" | "=" | "+"
+  uchar       = unreserved | escape
+  unreserved  = ALPHA | DIGIT | safe | extra | national
+
+  escape      = "%" HEX HEX
+  reserved    = ";" | "/" | "?" | ":" | "@" | "&" | "=" | "+"
+  extra       = "!" | "*" | "'" | "(" | ")" | ","
+  safe        = "$" | "-" | "_" | "."
+  unsafe      = CTL | SP | <"> | "#" | "%" | "<" | ">"
+  national    = <любой OCTET за исключением ALPHA, DIGIT, reserved, extra, safe, и unsafe>
+  </pre>
+</section>
+
+<section id="http_url">
+  <h2>3.2.2. HTTP URL</h2>
+  <blockquote>
+    <p>HTTP схема используется для доступа к сетевым ресурсам при помощи протокола HTTP.</p>
+    <cite><a href="https://rfc2.ru/2068.rfc/print#p3.2.2">пункт 3.2.2.</a> спецификации RFC 2068</cite>
+  </blockquote>
+  <h3>Синтаксис</h3>
+  <pre>
+  http_URL  = "http:" "//" host [ ":" port ] [ abs_path ]
+
+  host      = допустимое доменное имя машины
+              или IP адрес (в точечно-десятичной форме),
+              как определено в разделе <a href="https://rfc2.ru/1123.rfc/print#p2.1">2.1 RFC 1123</a> 
+
+  port      = *DIGIT
+  </pre>
+  
+  <h3>Запомнить</h3>
+  <ul>
+    <li><em>DIGIT</em> - любая US-ASCII цифра от 1 до 9 (в этом случае номер порта)</li>
+    <li><em>port</em> - если пуст или не задан - используется порт <em>80</em></li>
+    <li><em>host</em> - это компьютер, где расположены страницы сайта</li>
+    <li><em>abs_path</em> - путь к запрашиваемому ресурсу</li>
+    <li><em class="should">should</em> использования IP адресов в URL <b>СЛЕДУЕТ</b> избегать, когда это возможно</li>
+    <li><em class="must">must</em> eсли "abs_path" не представлен в URL, он <b>ДОЛЖЕН</b> рассматриваться как "/" при вычислении <a href="#">Request-URI</a> (раздел 5.1.2).</li>
+  </ul>
+</section>
+
+<section id="url_comparison">
+  <h2>3.2.3. Сравнение URI</h2>
+  <h3>Запомнить</h3>
+  <ul>
+    <li>порт, который пуст или не указан, эквивалентен заданному по умолчанию порту для этого URI</li>
+    <li><em class="must">must</em> cравнение имен хостов <b>ДОЛЖНО</b> производиться без учета регистра</li>
+    <li><em class="must">must</em> cравнение имен схем <b>ДОЛЖНО</b> производиться без учета регистра</li>
+    <li>пустой <em>abs_path</em> эквивалентен "/"</li>
+  </ul>
+
+  <p>Cледующие три URI эквивалентны:</p>
+  <pre>
+  http://abc.com:80/~smith/home.html
+  http://ABC.com/%7Esmith/home.html
+  http://ABC.com:/%7esmith/home.html
+  </pre>
+
+</section>
+
+<section class="link-list">
+  <h4>Источники знаний:</h4>
+  <ul>
+    <li><a href="https://wiki.rookee.ru/url/">https://wiki.rookee.ru/url/</a></li>
+    <li><a href="http://old.istu.ru/files/material-static/1668/tspd-lect-02.pdf">Точечно-десятичное представление IP адреса</a> <em>PDF</em></li>
+  </ul>
+</section>
+    </main>
+
+    <footer>
+      <i>footer</i>
+      <i>footer</i>
+      <i>footer</i>
+    </footer>
+
+    
+    <script>!function(){var e,t,s,r={SM:384,MD:576,LG:768,XL:960,XXL:1440};function a(){for(var e,t=new ResizeObserver(function(e){e.forEach(function(e){if(e.target.updateBreakpoints)e.target.updateBreakpoints(e.contentRect.width);else{var t=e.target.dataset.breakpoints?JSON.parse(e.target.dataset.breakpoints):r;0===e.width?e.target.dataset.observing=!1:e.target.dataset.observing=!0,Object.keys(t).forEach(function(s){var r=t[s];e.contentRect.width>=r?e.target.classList.add(s):e.target.classList.remove(s)})}})}),s=document.querySelectorAll("[data-observe-resizes]"),a=0;e=s[a];a++)t.observe(e);function i(){return"object"==typeof Reflect?Reflect.construct(HTMLElement,[],i):HTMLElement.call(this)||this}new MutationObserver(function(e){e.forEach(function(e){var s,r;s=e.addedNodes,r=t.observe.bind(t),s&&[].slice.call(s).forEach(function(e){if(1===e.nodeType){var t=[].slice.call(e.querySelectorAll("[data-observe-resizes]"));e.hasAttribute("data-observe-resizes")&&t.push(e);for(var s,a=0;s=t[a];a++)r(s)}})})}).observe(document.body,{childList:!0,subtree:!0}),i.prototype=Object.create(HTMLElement.prototype,{constructor:{value:i},connectedCallback:{value:function(){var e=this.getAttribute("breakpoints");this.breakpoints=e?JSON.parse(e):r,t.observe(this),this.setAttribute("observing","")}},updateBreakpoints:{value:function(e){for(var t in e>0?this.setAttribute("observing",""):this.removeAttribute("observing"),this.breakpoints){e>=this.breakpoints[t]?this.classList.add(t):this.classList.remove(t)}}}}),self.customElements.define("responsive-container",i)}"undefined"!=typeof ResizeObserver&&"undefined"!=typeof customElements||!matchMedia("(min-width: "+r.SM+"px)").matches?a():(e="/scripts/polyfills.js",t=a,(s=document.createElement("script")).src=e,s.onload=t,document.head.appendChild(s))}();</script>
+    
+    
+
+
+    
+     
+
+  </body>
+
+</html>

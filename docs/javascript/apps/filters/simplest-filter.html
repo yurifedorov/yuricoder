@@ -1,0 +1,718 @@
+
+
+ 
+
+
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+
+
+
+ 
+
+
+
+ 
+ 
+ 
+ 
+
+
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html lang="en" data-observe-resizes>
+
+  <head>
+    <title>Простейший фильтр на JavaScript</title>
+    <meta name="description" content="Список всех операторов JavaScript с примерами использования" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="/img/favicon.jpg" rel="icon" type="image/svg+xml">
+    <link rel="stylesheet" href="/style.min.css">
+    
+    
+    <base href="/docs/javascript/">
+
+    
+    
+      <link rel="stylesheet" href="/libs/prism/prism-min.css">
+      <script src="/libs/prism/prism-min.js" async></script>
+    
+
+  </head>
+
+  <body data-observe-resizes>
+    <header>
+      <a href="/index.html" class="logo"></a>
+      <input type="checkbox" id="nav-toggle" hidden>
+<label for="nav-toggle" class="nav__toggle" onclick></label>
+<nav class="nav nav_main">
+  <ul>
+    <li><a href="/about.html">About me</a>
+    <li><a href="/portfolio/">Works</a>
+    <li><a href="/docs/">Docs</a>
+  </ul>
+</nav>
+    </header>
+    
+    <aside class="aside aside_top">
+  
+
+<ul class="breadcrumbs">
+      <li> <a href="/">home</a>
+   <li> <a href="../">docs</a>                               
+   <li> <a href="../javascript">javascript</a>           
+   <li> <a href="../javascript/apps">apps</a> 
+  
+      <li> <span>simplest-filter</span>
+
+</ul>
+</aside>
+    <aside class="aside aside_left">
+
+       
+         <ul>
+  <details>
+    <summary>Основы JavaScript</summary>
+    <nav class="nav_checklist">
+      <a href="variables" data-completed>variables</a>
+      <a href="types" data-uncompleted>types</a>
+      <a href="operators" data-uncompleted>operators</a>
+      <a href="loops" data-uncompleted>loops</a>
+      <a href="methods" data-uncompleted>methods</a>
+      <a href="statements" data-uncompleted>statements</a>
+      <a href="functions" data-uncompleted>functions</a>
+      <a href="global_objects" data-uncompleted>global objects</a>
+      <a href="memory_management" data-uncompleted>memory management</a>
+    </nav>
+  </details>
+  <details>
+    <summary>ООП</summary>
+    <ul>
+      <li><a href="oop">oop_test</a></li>
+    </ul>
+  </details>
+  <details>
+    <summary>Вопросы</summary>
+    <ul>
+      <li><a href="questions">questions</a></li>
+    </ul>
+  </details>
+</ul>
+        
+   
+  
+</aside>
+      
+      
+
+    <main data-observe-resizes>
+      
+
+  <h1>Простейший фильтр на JavaScript</h1>
+  <p>Задача следующая: разобраться как работает пройстейший фильтр, написанный на чистом JS.</p>
+  <p>Нашел на <a href="https://habr.com/ru/post/342922/">хабре</a> полезную статью, где описывается процесс создания и представлен рабочий пример:</p>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+<div class="code-example">
+
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+    
+    
+    
+    <style>input[name=button]:checked ~ #simplest_filter-html-code {z-index: 2;}</style>
+
+    
+    
+    <input type="radio" name="button" id="simplest_filter-html-checkbox">
+    <label for="simplest_filter-html-checkbox" onclick>HTML</label>
+    
+
+    <div id="simplest_filter-html-code" class="code">
+      
+      
+        
+        <pre class="line-numbers">
+          <code class="language-html">
+&lt;input type="text" id="search"&gt;
+&lt;ul id="results"&gt;
+  &lt;!-- здесь появляются результаты --&gt;
+&lt;/ul&gt;
+</code>
+        </pre>
+        
+      
+    </div>
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+    
+    
+    
+    <style>[id='simplest_filter-js-checkbox']:checked ~ #simplest_filter-js-code {z-index: 2;}</style>
+
+    
+    
+      <input type="radio" name="button" id="simplest_filter-js-checkbox">
+      <label for="simplest_filter-js-checkbox" class="js-button" onclick>JS</label>
+    
+
+    <div id="simplest_filter-js-code" class="code">
+      
+      
+        
+        <pre class="line-numbers">
+          <button class="run-js" title="Run" onclick="simplest_filter()"></button>
+          <code class="language-js">let list = ['JavaScript','Kotlin','Rust','PHP','Ruby','Java','MarkDown','Python','C++','Fortran','Assembler']
+const result = document.getElementById('results')
+renderList(list,result)
+function filter(val,list){
+console.time('test')
+  return list.filter(i=>(~i.indexOf(val)))
+};
+function renderList(_list=[],el=document.body){
+	el.innerHTML='';
+  _list.forEach(i=>{
+    let new_el = document.createElement('li')
+    new_el.innerHTML=i
+    el.appendChild(new_el)
+  })
+  console.timeEnd('test')
+}
+document.getElementById('search').addEventListener('input',e=>renderList(filter(e.target.value,list),result))</code>
+          
+          <script>function simplest_filter() { let list = ['JavaScript','Kotlin','Rust','PHP','Ruby','Java','MarkDown','Python','C++','Fortran','Assembler']
+const result = document.getElementById('results')
+renderList(list,result)
+function filter(val,list){
+console.time('test')
+  return list.filter(i=>(~i.indexOf(val)))
+};
+function renderList(_list=[],el=document.body){
+	el.innerHTML='';
+  _list.forEach(i=>{
+    let new_el = document.createElement('li')
+    new_el.innerHTML=i
+    el.appendChild(new_el)
+  })
+  console.timeEnd('test')
+}
+document.getElementById('search').addEventListener('input',e=>renderList(filter(e.target.value,list),result))
+}</script>
+        </pre>
+        
+      
+    </div>
+  
+
+  
+  
+    
+    
+    
+    
+    <style>[id='simplest_filter-demo-checkbox']:checked ~ #simplest_filter-demo {z-index: 2;}</style>
+    <input type="radio" name="button" id="simplest_filter-demo-checkbox">
+    <label for="simplest_filter-demo-checkbox" class="demo_button" onclick>DEMO</label>
+    
+    
+      <div id="simplest_filter-demo" class="demo">
+        <input type="text" id="search">
+<ul id="results">
+
+</ul>
+<script>let list = ['JavaScript','Kotlin','Rust','PHP','Ruby','Java','MarkDown','Python','C++','Fortran','Assembler']
+const result = document.getElementById('results')
+renderList(list,result)
+function filter(val,list){
+console.time('test')
+  return list.filter(i=>(~i.indexOf(val)))
+};
+function renderList(_list=[],el=document.body){
+	el.innerHTML='';
+  _list.forEach(i=>{
+    let new_el = document.createElement('li')
+    new_el.innerHTML=i
+    el.appendChild(new_el)
+  })
+  console.timeEnd('test')
+}
+document.getElementById('search').addEventListener('input',e=>renderList(filter(e.target.value,list),result))</script>
+      </div>
+    
+    
+    
+  
+
+</div>
+
+
+  <h2>Подробный разбор JS кода</h2>
+  <p>Радует тот факт, что результаты генерируются в JS коде (функция <b>renderList</b>), от этого HTML максимально короткий (только <b>input</b> и пустой блок списка).</p>
+
+  <h3>Функция для отрисовки списка</h3>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+<div class="code-example">
+
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+    
+    
+    
+    <style>[id='simplest_filter_render_function-js-checkbox']:checked ~ #simplest_filter_render_function-js-code {z-index: 2;}</style>
+
+    
+    
+
+    <div id="simplest_filter_render_function-js-code" class="code">
+      
+      
+        
+        <pre class="line-numbers">
+          <button class="run-js" title="Run" onclick="simplest_filter_render_function()"></button>
+          <code class="language-js">function renderList(_list=[],el=document.body){
+	el.innerHTML='';
+  _list.forEach(i=>{
+    let new_el = document.createElement('li')
+    new_el.innerHTML=i
+    el.appendChild(new_el)
+  })
+  console.timeEnd('test')
+}</code>
+          
+          <script>function simplest_filter_render_function() { function renderList(_list=[],el=document.body){
+	el.innerHTML='';
+  _list.forEach(i=>{
+    let new_el = document.createElement('li')
+    new_el.innerHTML=i
+    el.appendChild(new_el)
+  })
+  console.timeEnd('test')
+}
+}</script>
+        </pre>
+        
+      
+    </div>
+  
+
+  
+  
+
+</div>
+
+  <table>
+    <tr>
+      <td><b>строка</b></td>
+      <td><b>описание</b></td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>функция принимает два аргумента: массив <b>_list</b> с элементами и элемент DOM-дерева, в который нужно нарисовать список (если первый аргумент не задан, то мы говорим функции, что это пустой массив).</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>очищаем родительский элемент перед рендером, добавляем строку <b>el.innerHTML=' ';</b></td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>метод <b>forEach()</b> выполняет указанную функцию один раз для каждого элемента в массиве. <small><a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach">подробнее на MDN</a></small></td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>директива <b>let</b> объявляет переменную с областью видимости, ограниченной текущим блоком кода (в данном примере создаем переменную с именем <b>new_el</b>). <small><a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Statements/let">подробнее на MDN</a></small> <br>затем создаем DOM-узел <b>document.createElement('li')</b> и присваиваиваем переменной <b>new_el</b>.</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>добавляем внутрь этого узла сам элемент</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>добавляем его в конец нашего родительского элемента</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>закрываем цикл <b>forEach</b></td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>метод <b>console.timeEnd()</b> завершает работу таймера и отображает в консоли время (в миллисекундах), прошедшее с момента запуска таймера (<b>'test'</b> - это текстовая метка, отображаемая в консоли). <br>для запуска таймера используется метод <b>console.time('test');</b><br><small><a href="https://developer.mozilla.org/ru/docs/Web/API/Console/time">подробнее на MDN</a></small></td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>закрываем функцию <b>renderList</b></td>
+    </tr>
+    <tr>
+  </table>
+
+  <q>Нижнее подчеркивание перед именем массива <b>_list=[ ]</b> это просто общепринятое соглашение об именовании <small>(узнал тут <a href="http://www.codeharmony.ru/materials/69">9 сбивающих с толку соглашений об именовании</a>)</small></q>
+  <br>
+  <br>
+  <h3>Функция для фильтрации</h3>
+  <p>Функция на вход берет подстроку (запрос пользователя) и массив всех элементов, а на выходе выдает массив отфильтрованных элементов.</p>
+  <p>Вариант №1, который можно укоротить:</p>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+<div class="code-example">
+
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+    
+    
+    
+    <style>[id='simplest_filter_function_filter-js-checkbox']:checked ~ #simplest_filter_function_filter-js-code {z-index: 2;}</style>
+
+    
+    
+
+    <div id="simplest_filter_function_filter-js-code" class="code">
+      
+      
+        
+        <pre class="line-numbers">
+          <button class="run-js" title="Run" onclick="simplest_filter_function_filter()"></button>
+          <code class="language-js">function filter(val,list){
+let result=[];
+  list.forEach(i=>{
+    if(i.indexOf(val)!=-1)
+      result.push(i)
+  })
+return result;
+}</code>
+          
+          <script>function simplest_filter_function_filter() { function filter(val,list){
+let result=[];
+  list.forEach(i=>{
+    if(i.indexOf(val)!=-1)
+      result.push(i)
+  })
+return result;
+}
+}</script>
+        </pre>
+        
+      
+    </div>
+  
+
+  
+  
+
+</div>
+
+  <p>Более подробно описано <a href="https://habr.com/ru/post/342922/">на хабре</a></p>
+  <table>
+    <tr>
+      <td><b>строка</b></td>
+      <td><b>описание</b></td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>заменяем <b>if</b> на тернарный оператор, вот так: <pre>(i.indexOf(val)!=-1)?result.push(i):'';</pre></td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>используя <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#.7E_.28Bitwise_NOT.29">побитовое отрицание</a> <b>~i</b> можно сделать так: <pre>(~i.indexOf(val))?result.push(i):'';</pre></td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>вместо <b>forEach</b> можно использовать метод для перебора массива <b>filter</b> (он появился в ES6) <pre>return list.filter(i=>(~i.indexOf(val)))</pre></td>
+    </tr>
+  </table>
+
+  <p>Более красивый вариант:</p>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+<div class="code-example">
+
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+    
+    
+    
+    <style>[id='simplest_filter_function_filter_short-js-checkbox']:checked ~ #simplest_filter_function_filter_short-js-code {z-index: 2;}</style>
+
+    
+    
+
+    <div id="simplest_filter_function_filter_short-js-code" class="code">
+      
+      
+        
+        <pre class="line-numbers">
+          <button class="run-js" title="Run" onclick="simplest_filter_function_filter_short()"></button>
+          <code class="language-js">function filter(val,list){
+  console.time('test')
+    return list.filter(i=>(~i.indexOf(val)))
+  };</code>
+          
+          <script>function simplest_filter_function_filter_short() { function filter(val,list){
+  console.time('test')
+    return list.filter(i=>(~i.indexOf(val)))
+  };
+}</script>
+        </pre>
+        
+      
+    </div>
+  
+
+  
+  
+
+</div>
+
+  <h3>Обработчик</h3>
+  <p>Берем отфильтрованный массив и кидаем его как аргумент для рендера.</p>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+<div class="code-example">
+
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+    
+    
+    
+    <style>[id='simplest_filter_handler-js-checkbox']:checked ~ #simplest_filter_handler-js-code {z-index: 2;}</style>
+
+    
+    
+
+    <div id="simplest_filter_handler-js-code" class="code">
+      
+      
+        
+        <pre class="line-numbers">
+          <button class="run-js" title="Run" onclick="simplest_filter_handler()"></button>
+          <code class="language-js">document.getElementById('search').addEventListener('input',e=>renderList(filter(e.target.value,list),result))</code>
+          
+          <script>function simplest_filter_handler() { document.getElementById('search').addEventListener('input',e=>renderList(filter(e.target.value,list),result))
+}</script>
+        </pre>
+        
+      
+    </div>
+  
+
+  
+  
+
+</div>
+
+
+    </main>
+
+    <footer>
+      <i>footer</i>
+      <i>footer</i>
+      <i>footer</i>
+    </footer>
+
+    
+    <script>!function(){var e,t,s,r={SM:384,MD:576,LG:768,XL:960,XXL:1440};function a(){for(var e,t=new ResizeObserver(function(e){e.forEach(function(e){if(e.target.updateBreakpoints)e.target.updateBreakpoints(e.contentRect.width);else{var t=e.target.dataset.breakpoints?JSON.parse(e.target.dataset.breakpoints):r;0===e.width?e.target.dataset.observing=!1:e.target.dataset.observing=!0,Object.keys(t).forEach(function(s){var r=t[s];e.contentRect.width>=r?e.target.classList.add(s):e.target.classList.remove(s)})}})}),s=document.querySelectorAll("[data-observe-resizes]"),a=0;e=s[a];a++)t.observe(e);function i(){return"object"==typeof Reflect?Reflect.construct(HTMLElement,[],i):HTMLElement.call(this)||this}new MutationObserver(function(e){e.forEach(function(e){var s,r;s=e.addedNodes,r=t.observe.bind(t),s&&[].slice.call(s).forEach(function(e){if(1===e.nodeType){var t=[].slice.call(e.querySelectorAll("[data-observe-resizes]"));e.hasAttribute("data-observe-resizes")&&t.push(e);for(var s,a=0;s=t[a];a++)r(s)}})})}).observe(document.body,{childList:!0,subtree:!0}),i.prototype=Object.create(HTMLElement.prototype,{constructor:{value:i},connectedCallback:{value:function(){var e=this.getAttribute("breakpoints");this.breakpoints=e?JSON.parse(e):r,t.observe(this),this.setAttribute("observing","")}},updateBreakpoints:{value:function(e){for(var t in e>0?this.setAttribute("observing",""):this.removeAttribute("observing"),this.breakpoints){e>=this.breakpoints[t]?this.classList.add(t):this.classList.remove(t)}}}}),self.customElements.define("responsive-container",i)}"undefined"!=typeof ResizeObserver&&"undefined"!=typeof customElements||!matchMedia("(min-width: "+r.SM+"px)").matches?a():(e="/scripts/polyfills.js",t=a,(s=document.createElement("script")).src=e,s.onload=t,document.head.appendChild(s))}();</script>
+    
+    
+
+
+    
+     
+
+  </body>
+
+</html>

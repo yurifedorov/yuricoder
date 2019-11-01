@@ -1,0 +1,823 @@
+
+
+ 
+
+
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+
+
+
+ 
+
+
+
+ 
+ 
+ 
+ 
+
+
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html lang="en" data-observe-resizes>
+
+  <head>
+    <title>Объявления функций</title>
+    <meta name="description" content="Способы объявления функций в JavaScript" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="/img/favicon.jpg" rel="icon" type="image/svg+xml">
+    <link rel="stylesheet" href="/style.min.css">
+    
+    
+    <base href="/docs/javascript/">
+
+    
+    
+      <link rel="stylesheet" href="/libs/prism/prism-min.css">
+      <script src="/libs/prism/prism-min.js" async></script>
+    
+
+  </head>
+
+  <body data-observe-resizes>
+    <header>
+      <a href="/index.html" class="logo"></a>
+      <input type="checkbox" id="nav-toggle" hidden>
+<label for="nav-toggle" class="nav__toggle" onclick></label>
+<nav class="nav nav_main">
+  <ul>
+    <li><a href="/about.html">About me</a>
+    <li><a href="/portfolio/">Works</a>
+    <li><a href="/docs/">Docs</a>
+  </ul>
+</nav>
+    </header>
+    
+    <aside class="aside aside_top">
+  
+
+<ul class="breadcrumbs">
+      <li> <a href="/">home</a>
+   <li> <a href="../">docs</a>                               
+   <li> <a href="../javascript">javascript</a>           
+   <li> <a href="../javascript/functions">functions</a> 
+  
+      <li> <span>definition</span>
+
+</ul>
+</aside>
+    <aside class="aside aside_left">
+
+       
+         <ul>
+  <details>
+    <summary>Основы JavaScript</summary>
+    <nav class="nav_checklist">
+      <a href="variables" data-completed>variables</a>
+      <a href="types" data-uncompleted>types</a>
+      <a href="operators" data-uncompleted>operators</a>
+      <a href="loops" data-uncompleted>loops</a>
+      <a href="methods" data-uncompleted>methods</a>
+      <a href="statements" data-uncompleted>statements</a>
+      <a href="functions" data-uncompleted>functions</a>
+      <a href="global_objects" data-uncompleted>global objects</a>
+      <a href="memory_management" data-uncompleted>memory management</a>
+    </nav>
+  </details>
+  <details>
+    <summary>ООП</summary>
+    <ul>
+      <li><a href="oop">oop_test</a></li>
+    </ul>
+  </details>
+  <details>
+    <summary>Вопросы</summary>
+    <ul>
+      <li><a href="questions">questions</a></li>
+    </ul>
+  </details>
+</ul>
+        
+   
+  
+</aside>
+    <aside class="aside aside_right">
+
+         
+           
+             
+           <h3>Терминология</h3>
+
+<nav class="nav_checklist">
+  <a href="functions/definition" data-uncompleted>definition</a>
+  <a href="functions/call" data-uncompleted>сalling</a>
+  <a href="functions/hoisting">hoisting</a>
+  <a href="functions/scope">scope</a>
+  <a href="functions/stack">function stack</a>
+  <a href="functions/closures">closures</a>
+  <a href="functions/name_conflicts">name conflicts</a>
+  <a href="functions/arguments">arguments</a>
+  <a href="functions/parameters">parameters</a>
+  <a href="functions/arrow_functions">arrow functions</a>
+  <a href="functions/this">this</a>
+  <a href="functions/throw">throw</a>
+  <a href="memory_management/garbage_collection" data-completed>garbage collector</a>
+</nav>
+          
+      
+   
+
+              
+                
+          
+  
+</aside>
+    <aside class="aside aside_bottom">
+
+  
+    <h4>Учебные материалы</h4>
+    <nav class="related-links">
+      <a data-icon="learn-js" href="https://learn.javascript.ru/function-basics#obyavlenie-funktsii">Объявление функции</a>
+<a data-icon href="http://langtoday.com/?p=303">Разные способы определения функций в JavaScript (это сумасшествие!)</a>
+<a  data-icon href="http://kangax.github.io/nfe/">Named function expressions demystified (by Juriy "kangax" Zaytsev)</a>
+    </nav>
+  
+
+</aside>
+
+    <main data-observe-resizes>
+      <h1>Объявление функций</h1>
+<p>Здесь я попытаюсь понять какие бывают способы объявления функций, когда лучше использовать тот или иной способ, а так-же прочие тонкости.</p>
+
+<section>
+  <h2>Способы объявления</h2>
+
+  <ul class="cards">
+    <li><h3>method #1</h3>
+<small>объявление функции</small>
+
+
+
+
+
+<div class="code-example">
+
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+    
+    
+    
+    <style>[id='method_1-js-checkbox']:checked ~ #method_1-js-code {z-index: 2;}</style>
+
+    
+    
+
+    <div id="method_1-js-code" class="code">
+      
+      
+        
+        <pre>
+          
+          <code class="language-js">function A() {
+  /* тело функции */
+};</code>
+          
+          <script>function method_1() { function A() {
+  /* тело функции */
+};
+}</script>
+        </pre>
+        
+      
+    </div>
+  
+
+  
+  
+
+</div></li>
+    <li><h3>method #2</h3>
+<small>функциональное выражение</small>
+
+
+
+
+
+<div class="code-example">
+
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+    
+    
+    
+    <style>[id='method_2-js-checkbox']:checked ~ #method_2-js-code {z-index: 2;}</style>
+
+    
+    
+
+    <div id="method_2-js-code" class="code">
+      
+      
+        
+        <pre>
+          
+          <code class="language-js">var B = function() {
+  /* тело функции */
+};</code>
+          
+          <script>function method_2() { var B = function() {
+  /* тело функции */
+};
+}</script>
+        </pre>
+        
+      
+    </div>
+  
+
+  
+  
+
+</div></li>
+    <li><h3>method #3</h3>
+<small>функциональное выражение с группирующими операторами</small>
+
+
+
+
+
+<div class="code-example">
+
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+    
+    
+    
+    <style>[id='method_3-js-checkbox']:checked ~ #method_3-js-code {z-index: 2;}</style>
+
+    
+    
+
+    <div id="method_3-js-code" class="code">
+      
+      
+        
+        <pre>
+          
+          <code class="language-js">var C = (function() {
+  /* тело функции */
+});</code>
+          
+          <script>function method_3() { var C = (function() {
+  /* тело функции */
+});
+}</script>
+        </pre>
+        
+      
+    </div>
+  
+
+  
+  
+
+</div></li>
+    <li><h3>method #4</h3>
+<small>именованное функциональное выражение</small>
+
+
+
+
+
+<div class="code-example">
+
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+    
+    
+    
+    <style>[id='method_4-js-checkbox']:checked ~ #method_4-js-code {z-index: 2;}</style>
+
+    
+    
+
+    <div id="method_4-js-code" class="code">
+      
+      
+        
+        <pre>
+          
+          <code class="language-js">var D = function foo() {
+  /* тело функции */
+};</code>
+          
+          <script>function method_4() { var D = function foo() {
+  /* тело функции */
+};
+}</script>
+        </pre>
+        
+      
+    </div>
+  
+
+  
+  
+
+</div></li>
+    <li><h3>method #5</h3>
+<small>немедленно исполняемое функциональное выражение (IIFE), которое возвращает функцию</small>
+
+
+
+
+
+<div class="code-example">
+
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+    
+    
+    
+    <style>[id='method_5-js-checkbox']:checked ~ #method_5-js-code {z-index: 2;}</style>
+
+    
+    
+
+    <div id="method_5-js-code" class="code">
+      
+      
+        
+        <pre>
+          
+          <code class="language-js">var E = (function(){
+  return function() {
+    /* тело функции */
+  }
+})();</code>
+          
+          <script>function method_5() { var E = (function(){
+  return function() {
+    /* тело функции */
+  }
+})();
+}</script>
+        </pre>
+        
+      
+    </div>
+  
+
+  
+  
+
+</div></li>
+    <li><h3>method #6</h3>
+<small>конструктор Function</small>
+
+
+
+
+
+<div class="code-example">
+
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+    
+    
+    
+    <style>[id='method_6-js-checkbox']:checked ~ #method_6-js-code {z-index: 2;}</style>
+
+    
+    
+
+    <div id="method_6-js-code" class="code">
+      
+      
+        
+        <pre>
+          
+          <code class="language-js">var F = new Function();</code>
+          
+          <script>function method_6() { var F = new Function();
+}</script>
+        </pre>
+        
+      
+    </div>
+  
+
+  
+  
+
+</div></li>
+    <li><h3>method #7</h3>
+<small>особый случай: конструктор объекта</small>
+
+
+
+
+
+<div class="code-example">
+
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+    
+    
+    
+    <style>[id='method_7-js-checkbox']:checked ~ #method_7-js-code {z-index: 2;}</style>
+
+    
+    
+
+    <div id="method_7-js-code" class="code">
+      
+      
+        
+        <pre>
+          
+          <code class="language-js">var G = new function() {
+  /* тело функции */
+};</code>
+          
+          <script>function method_7() { var G = new function() {
+  /* тело функции */
+};
+}</script>
+        </pre>
+        
+      
+    </div>
+  
+
+  
+  
+
+</div></li>
+  </ul>
+
+</section>
+
+
+<section id="function-definition">
+  <h2>Function definition</h2>
+  <p>через ключевое слово 'function'</p>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+<div class="code-example">
+
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+    
+    
+    
+    <style>[id='function_definition-js-checkbox']:checked ~ #function_definition-js-code {z-index: 2;}</style>
+
+    
+    
+
+    <div id="function_definition-js-code" class="code">
+      
+      
+        
+        <pre>
+          
+          <code class="language-js">function funcName(arg) { // parameter (arg)
+  alert('Phone: ' + arg);
+}
+
+funcName('+7-111-11-11'); // Phone: +7-111-11-11</code>
+          
+          <script>function function_definition() { function funcName(arg) { // parameter (arg)
+  alert('Phone: ' + arg);
+}
+
+funcName('+7-111-11-11'); // Phone: +7-111-11-11
+}</script>
+        </pre>
+        
+      
+    </div>
+  
+
+  
+  
+
+</div>
+  <p>При вызове функции <em>funcName()</em>, значения в скобках копируются в локальную переменную <em>arg</em>, затем используются в теле функции.</p>
+</section>
+
+<section id="function-expression">
+  <h2>Function expressions</h2>
+  <p>в виде выражения</p>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+<div class="code-example">
+
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+    
+    
+    
+    <style>[id='function_expression-js-checkbox']:checked ~ #function_expression-js-code {z-index: 2;}</style>
+
+    
+    
+
+    <div id="function_expression-js-code" class="code">
+      
+      
+        
+        <pre>
+          
+          <code class="language-js">let funcName = function(arg) { return 'Phone: ' + arg; };
+let phone = funcName('+7-111-11-11');
+
+alert(phone); // 'Phone: +7-111-11-11</code>
+          
+          <script>function function_expression() { let funcName = function(arg) { return 'Phone: ' + arg; };
+let phone = funcName('+7-111-11-11');
+
+alert(phone); // 'Phone: +7-111-11-11
+}</script>
+        </pre>
+        
+      
+    </div>
+  
+
+  
+  
+
+</div>
+</section>
+    </main>
+
+    <footer>
+      <i>footer</i>
+      <i>footer</i>
+      <i>footer</i>
+    </footer>
+
+    
+    <script>!function(){var e,t,s,r={SM:384,MD:576,LG:768,XL:960,XXL:1440};function a(){for(var e,t=new ResizeObserver(function(e){e.forEach(function(e){if(e.target.updateBreakpoints)e.target.updateBreakpoints(e.contentRect.width);else{var t=e.target.dataset.breakpoints?JSON.parse(e.target.dataset.breakpoints):r;0===e.width?e.target.dataset.observing=!1:e.target.dataset.observing=!0,Object.keys(t).forEach(function(s){var r=t[s];e.contentRect.width>=r?e.target.classList.add(s):e.target.classList.remove(s)})}})}),s=document.querySelectorAll("[data-observe-resizes]"),a=0;e=s[a];a++)t.observe(e);function i(){return"object"==typeof Reflect?Reflect.construct(HTMLElement,[],i):HTMLElement.call(this)||this}new MutationObserver(function(e){e.forEach(function(e){var s,r;s=e.addedNodes,r=t.observe.bind(t),s&&[].slice.call(s).forEach(function(e){if(1===e.nodeType){var t=[].slice.call(e.querySelectorAll("[data-observe-resizes]"));e.hasAttribute("data-observe-resizes")&&t.push(e);for(var s,a=0;s=t[a];a++)r(s)}})})}).observe(document.body,{childList:!0,subtree:!0}),i.prototype=Object.create(HTMLElement.prototype,{constructor:{value:i},connectedCallback:{value:function(){var e=this.getAttribute("breakpoints");this.breakpoints=e?JSON.parse(e):r,t.observe(this),this.setAttribute("observing","")}},updateBreakpoints:{value:function(e){for(var t in e>0?this.setAttribute("observing",""):this.removeAttribute("observing"),this.breakpoints){e>=this.breakpoints[t]?this.classList.add(t):this.classList.remove(t)}}}}),self.customElements.define("responsive-container",i)}"undefined"!=typeof ResizeObserver&&"undefined"!=typeof customElements||!matchMedia("(min-width: "+r.SM+"px)").matches?a():(e="/scripts/polyfills.js",t=a,(s=document.createElement("script")).src=e,s.onload=t,document.head.appendChild(s))}();</script>
+    
+    
+
+
+    
+     
+
+  </body>
+
+</html>

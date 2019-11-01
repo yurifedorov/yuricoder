@@ -1,0 +1,514 @@
+
+
+ 
+
+
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+
+
+
+ 
+
+
+
+ 
+ 
+ 
+ 
+
+
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html lang="en" data-observe-resizes>
+
+  <head>
+    <title>Cборка статического сайта с Nunjucks</title>
+    <meta name="description" content="Как Nunjucks собирает веб-страницы? Пример сборки простого сайта из двух страниц с одинаковым хедером и футером" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="/img/favicon.jpg" rel="icon" type="image/svg+xml">
+    <link rel="stylesheet" href="/style.min.css">
+    
+    
+    <base href="/docs/nunjucks/">
+
+    
+    
+      <link rel="stylesheet" href="/libs/prism/prism-min.css">
+      <script src="/libs/prism/prism-min.js" async></script>
+    
+
+  </head>
+
+  <body data-observe-resizes>
+    <header>
+      <a href="/index.html" class="logo"></a>
+      <input type="checkbox" id="nav-toggle" hidden>
+<label for="nav-toggle" class="nav__toggle" onclick></label>
+<nav class="nav nav_main">
+  <ul>
+    <li><a href="/about.html">About me</a>
+    <li><a href="/portfolio/">Works</a>
+    <li><a href="/docs/">Docs</a>
+  </ul>
+</nav>
+    </header>
+    
+    <aside class="aside aside_top">
+  
+
+<ul class="breadcrumbs">
+      <li> <a href="/">home</a>
+   <li> <a href="../">docs</a>                               
+   <li> <a href="../nunjucks">nunjucks</a>           
+   <li> <a href="../nunjucks/articles">articles</a> 
+  
+      <li> <span>static-site-with-nunjucks</span>
+
+</ul>
+</aside>
+    <aside class="aside aside_left">
+
+       
+         
+        
+   
+  
+</aside>
+      
+      
+
+    <main data-observe-resizes>
+      
+
+  <h1>Cборка статического сайта с Nunjucks</h1>
+  <p>Благодаря <a href="template-inheritance.html">наследованию шаблонов</a> можно собрать неограниченное число статических страниц с в одном стиле.</p>
+  <p>Ниже привожу простейший пример, где есть шаблон (base.njk) с общими частями кода и две страницы с уникальным контетом.</p>
+
+  
+  <section class="section">
+    <h2>Примеры страниц и код шаблонов </h2>
+    <p>Верхняя и нижняя часть формируется из base.njk, а контент для страниц "прайс лист" и "контакты" извлекается из дочерних шаблонов.</p>
+
+    <h3>base.njk</h3>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+<div class="code-example">
+
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+
+  
+  
+  
+    
+    
+    
+    <style>[id='base_code-njk-checkbox']:checked ~ #base_code-njk-code {z-index: 2;}</style>
+    
+    
+    
+
+    <div id="base_code-njk-code" class="code">
+      
+      
+        
+        <pre class="line-numbers">
+          <code class="language-jinja2">
+
+&lt;html lang="en">
+  &lt;head>
+    &lt;meta charset="UTF-8">
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0">
+    &lt;meta http-equiv="X-UA-Compatible" content="ie=edge">
+    &lt;link href="favicon.svg" rel="icon" type="image/svg+xml">
+    &lt;link rel="stylesheet" href="style.min.css">
+    {# Все что выше этой строки относится ко всем страницам сайта #}
+    {% block head %} {# это пригодится позже #} {% endblock %}
+  &lt;/head>
+  &lt;body>
+    &lt;header> {# общий header#} &lt;/header>
+    {% block main %} {# контент из дочерних шаблонов #} {% endblock %}
+    &lt;footer> {# общий footer#} &lt;/footer>
+  &lt;/body>
+&lt;/html>
+
+</code>
+        </pre>
+        
+      
+    </div>
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+
+</div>
+
+    <h3>page-1</h3>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+<div class="code-example">
+
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+
+  
+  
+  
+    
+    
+    
+    <style>[id='page1_code-njk-checkbox']:checked ~ #page1_code-njk-code {z-index: 2;}</style>
+    
+    
+    
+    <input type="radio" name="button" id="page1_code-njk-checkbox">
+    <label for="page1_code-njk-checkbox" onclick>NJK</label>
+    
+
+    <div id="page1_code-njk-code" class="code">
+      
+      
+        
+        <pre class="line-numbers">
+          <code class="language-jinja2">
+
+
+{% extends "base.njk" %}
+
+{% block main %}
+&lt;h1>Прайс лист&lt;/h1>
+&lt;table>
+  &lt;tr>&lt;td>Виды работ&lt;/td>&lt;td>Стоимость&lt;/td>&lt;/tr>
+  &lt;tr>&lt;td>Строительство фундамента&lt;/td>&lt;td>&lt;b>2500$&lt;/b></td>&lt;/tr>
+  &lt;tr>&lt;td>Монтаж стен и перекрытий&lt;/td>&lt;td>&lt;b>4000$&lt;/b>&lt;/td>&lt;/tr>
+  &lt;tr>&lt;td>Кровельные работы&lt;/td>&lt;td>&lt;b>3000$&lt;/b>&lt;/td>&lt;/tr>
+&lt;/table>
+{% endblock %}
+
+
+</code>
+        </pre>
+        
+      
+    </div>
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+    
+    
+    
+    
+    <style>[id='page1_code-demo-checkbox']:checked ~ #page1_code-demo {z-index: 2;}</style>
+    <input type="radio" name="button" id="page1_code-demo-checkbox">
+    <label for="page1_code-demo-checkbox" class="demo_button" onclick>DEMO</label>
+    
+    
+      <div id="page1_code-demo" class="demo">
+        <html lang="en" data-observe-resizes>
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="/img/favicon.jpg" rel="icon" type="image/svg+xml">
+    <link rel="stylesheet" href="/style.min.css">
+    
+
+
+  </head>
+
+  <body>
+    <header class='header-test'>header задан в base.njk</header>
+      
+      
+      
+
+    <main data-observe-resizes class='main-test'>
+      
+<h1>Прайс лист</h1>
+<table>
+  <tr><td>Виды работ</td><td>Стоимость</td></tr>
+  <tr><td>Строительство фундамента</td><td><b>2500$</b></td></tr>
+  <tr><td>Монтаж стен и перекрытий</td><td><b>4000$</b></td></tr>
+  <tr><td>Кровельные работы</td><td><b>3000$</b></td></tr>
+</table>
+
+    </main>
+
+    <footer class='footer-test'>footer задан в base.njk</footer>
+  </body>
+
+</html>
+      </div>
+    
+    
+    
+  
+
+</div>
+
+    <h3>page-2</h3>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+<div class="code-example">
+
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+
+  
+  
+  
+    
+    
+    
+    <style>[id='page2_code-njk-checkbox']:checked ~ #page2_code-njk-code {z-index: 2;}</style>
+    
+    
+    
+    <input type="radio" name="button" id="page2_code-njk-checkbox">
+    <label for="page2_code-njk-checkbox" onclick>NJK</label>
+    
+
+    <div id="page2_code-njk-code" class="code">
+      
+      
+        
+        <pre class="line-numbers">
+          <code class="language-jinja2">
+
+
+{% extends "base.njk" %}
+
+{% block main %}
+&lt;h1>Контакты</h1>
+&lt;p>0-000-000-00-00</b>
+&lt;p>post@example.com</p>
+{% endblock %}
+
+
+</code>
+        </pre>
+        
+      
+    </div>
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+    
+    
+    
+    
+    <style>[id='page2_code-demo-checkbox']:checked ~ #page2_code-demo {z-index: 2;}</style>
+    <input type="radio" name="button" id="page2_code-demo-checkbox">
+    <label for="page2_code-demo-checkbox" class="demo_button" onclick>DEMO</label>
+    
+    
+      <div id="page2_code-demo" class="demo">
+        <html lang="en" data-observe-resizes>
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="/img/favicon.jpg" rel="icon" type="image/svg+xml">
+    <link rel="stylesheet" href="/style.min.css">
+    
+
+
+  </head>
+
+  <body>
+    <header class='header-test'>header задан в base.njk</header>
+      
+      
+      
+
+    <main data-observe-resizes class='main-test'>
+      
+<h1>Контакты</h1>
+<p>0-000-000-00-00</b>
+<p>post@example.com</p>
+
+
+
+    </main>
+
+    <footer class='footer-test'>footer задан в base.njk</footer>
+  </body>
+
+</html>
+      </div>
+    
+    
+    
+  
+
+</div>
+
+  </section>
+
+  <section class="section">
+    <h2>Процесс сборки страниц</h2>
+    <p>Есть шаблон base.njk и два дочерних page1, page2.</p>
+    <img src="/img/docs/tools/nunjucks/build-process.gif" alt="процесс сборки страниц в nunjucks">
+    <ol class="list">
+      <li>nunjucks начинает сканирование шаблонов 'page1' и 'page2'</li>
+      <li>находит тег 'extends', указанный в самом начале</li>
+      <li>строит базовую разметку согласно 'base.njk'</li>
+      <li>извлекает контент из дочерних шаблонов</li>
+      <li>завершает работу</li>
+    </ol>
+    <p>Как результат, мы имееи две html-страницы <b>page1.html</b> и <b>page2.html</b> (страниц может быть любое количество).</p>
+  </section>
+  
+
+    </main>
+
+    <footer>
+      <i>footer</i>
+      <i>footer</i>
+      <i>footer</i>
+    </footer>
+
+    
+    <script>!function(){var e,t,s,r={SM:384,MD:576,LG:768,XL:960,XXL:1440};function a(){for(var e,t=new ResizeObserver(function(e){e.forEach(function(e){if(e.target.updateBreakpoints)e.target.updateBreakpoints(e.contentRect.width);else{var t=e.target.dataset.breakpoints?JSON.parse(e.target.dataset.breakpoints):r;0===e.width?e.target.dataset.observing=!1:e.target.dataset.observing=!0,Object.keys(t).forEach(function(s){var r=t[s];e.contentRect.width>=r?e.target.classList.add(s):e.target.classList.remove(s)})}})}),s=document.querySelectorAll("[data-observe-resizes]"),a=0;e=s[a];a++)t.observe(e);function i(){return"object"==typeof Reflect?Reflect.construct(HTMLElement,[],i):HTMLElement.call(this)||this}new MutationObserver(function(e){e.forEach(function(e){var s,r;s=e.addedNodes,r=t.observe.bind(t),s&&[].slice.call(s).forEach(function(e){if(1===e.nodeType){var t=[].slice.call(e.querySelectorAll("[data-observe-resizes]"));e.hasAttribute("data-observe-resizes")&&t.push(e);for(var s,a=0;s=t[a];a++)r(s)}})})}).observe(document.body,{childList:!0,subtree:!0}),i.prototype=Object.create(HTMLElement.prototype,{constructor:{value:i},connectedCallback:{value:function(){var e=this.getAttribute("breakpoints");this.breakpoints=e?JSON.parse(e):r,t.observe(this),this.setAttribute("observing","")}},updateBreakpoints:{value:function(e){for(var t in e>0?this.setAttribute("observing",""):this.removeAttribute("observing"),this.breakpoints){e>=this.breakpoints[t]?this.classList.add(t):this.classList.remove(t)}}}}),self.customElements.define("responsive-container",i)}"undefined"!=typeof ResizeObserver&&"undefined"!=typeof customElements||!matchMedia("(min-width: "+r.SM+"px)").matches?a():(e="/scripts/polyfills.js",t=a,(s=document.createElement("script")).src=e,s.onload=t,document.head.appendChild(s))}();</script>
+    
+    
+
+
+    
+     
+
+  </body>
+
+</html>

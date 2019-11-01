@@ -1,0 +1,601 @@
+
+
+ 
+
+
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+
+
+
+ 
+
+
+
+ 
+ 
+ 
+ 
+
+
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html lang="en" data-observe-resizes>
+
+  <head>
+    <title>DOM (Document Object Model)</title>
+    <meta name="description" content="Что такое Document Object Model" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="/img/favicon.jpg" rel="icon" type="image/svg+xml">
+    <link rel="stylesheet" href="/style.min.css">
+    
+    
+    <base href="/docs/html/">
+
+    
+    
+      <link rel="stylesheet" href="/libs/prism/prism-min.css">
+      <script src="/libs/prism/prism-min.js" async></script>
+    
+
+  </head>
+
+  <body data-observe-resizes>
+    <header>
+      <a href="/index.html" class="logo"></a>
+      <input type="checkbox" id="nav-toggle" hidden>
+<label for="nav-toggle" class="nav__toggle" onclick></label>
+<nav class="nav nav_main">
+  <ul>
+    <li><a href="/about.html">About me</a>
+    <li><a href="/portfolio/">Works</a>
+    <li><a href="/docs/">Docs</a>
+  </ul>
+</nav>
+    </header>
+    
+    <aside class="aside aside_top">
+  
+
+<ul class="breadcrumbs">
+      <li> <a href="/">home</a>
+   <li> <a href="../">docs</a>                               
+   <li> <a href="../html">html</a>           
+  
+  
+      <li> <span>dom</span>
+
+</ul>
+</aside>
+    <aside class="aside aside_left">
+
+       <ul>
+  <details>
+    <summary>HTML</summary>
+    <ul>
+      <li><a href="HTML_basics">Основы HTML</a></li>
+      <li><a href="elements">Список элементов (тегов)</a></li>
+    </ul>
+  </details>
+  <details>
+    <summary>Несортированное</summary>
+    <ul>
+      <li><a href="dom">DOM</a></li>
+      <li><a href="attributes">attributes</a></li>
+      <li><a href="properties">свойства</a></li>
+      <li><a href="notes">notes</a></li>
+    </ul>
+  </details>
+</ul>
+         
+        
+   
+  
+</aside>
+      
+      
+
+    <main data-observe-resizes>
+      <h1>DOM (Document Object Model)</h1>
+<a href="dom/testing.html">testing</a>
+<p><em>DOM</em> - это модель документа, которая представляет содержимое страницы в виде объектов.</p>
+
+<div class="columns">
+  <section>
+    <h2>Как выглядит DOM</h2>
+    <p>DOM представаляет HTML документ в виде дерева тегов</p>
+    <img src="img/docs/html/dom//dom-tree.jpg" alt="DOM дерево">
+    <p><a href="http://software.hixie.ch/utilities/js/live-dom-viewer/">Live DOM Viewer</a> - здесь можно увидеть как формируется DOM</p>
+  </section>
+  <section>
+    <h2>Как выглядит HTML</h2>
+    <p>Простейшая HTML разметка</p>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+<div class="code-example">
+
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+    
+    
+    
+    <style>input[name=button]:checked ~ #dom-html-code {z-index: 2;}</style>
+
+    
+    
+
+    <div id="dom-html-code" class="code">
+      
+      
+        
+        <pre>
+          <code class="language-html">
+&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;заголовок&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;заголовок&lt;/h1&gt;
+    &lt;p&gt;какой-то текст&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code>
+        </pre>
+        
+      
+    </div>
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+
+</div>
+  </section>
+  <section>
+    <h2>Как отрисовывает браузер</h2>
+    <p>Это результат предыдущего примера</p>
+    <img src="img/docs/html/dom//render.jpg" alt="рендер HTML в браузере">
+  </section>
+</div>
+
+<div class="columns columns_col-2">
+  <section>
+    <h2>Выборка DOM элементов в консоли</h2>
+    <p>Как быстро получить узел из Elements в Console?</p>
+    <p>Чтобы быстро открыть консоль, находясь в режиме инпектирования, можно нажать <kbd>Esc</kbd></p>
+    <figure>
+      <img src="img/docs/html/dom//consol_selectors.gif" alt="выборка DOM в консоли">
+      <figcaption>Источник: <a href="https://habr.com/ru/post/254007/">https://habr.com/ru/post/254007/</a></figcaption>
+    </figure>
+    <table>
+      <caption>Некоторые комманды</caption>
+      <tr>
+        <td>$ ('DIV')</td>
+        <td>выделит первый элемент DIV на странице</td>
+      </tr>
+      <tr>
+        <td>$$ ('DIV')</td>
+        <td>веведет список всех DIV-ов на странице</td>
+      </tr>
+      <tr>
+        <td>$0</td>
+        <td>выделит последний элемент, выбранный во вкладке Elements</td>
+      </tr>
+      <tr>
+        <td>$1</td>
+        <td>выделит предпоследний элемент, выбранный во вкладке Elements</td>
+      </tr>
+      <tr>
+        <td>$0.style.background = 'red'</td>
+        <td>сделает выбраный элемент красным</td>
+      </tr>
+    </table>
+  </section>
+  <section>
+    <h2>Автоисправление ошибок</h2>
+    <p>Браузер автоматически исправляет ошибки програмиста, поэтому DOM всегда корректный.</p>
+
+    <h3>Добавление забытых тегов</h3>
+    <p>Я забыл указать тег <em>body</em>, но в DOM дереве он есть.</p>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+<div class="code-example">
+
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+    
+    
+    
+    <style>input[name=button]:checked ~ #autocorrection1-html-code {z-index: 2;}</style>
+
+    
+    
+
+    <div id="autocorrection1-html-code" class="code">
+      
+      
+        
+        <pre>
+          <code class="language-html">
+&lt;!doctype html&gt;
+&lt;html&gt;
+  Hello, world!
+&lt;/html&gt;
+</code>
+        </pre>
+        
+      
+    </div>
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+
+</div>
+    <img src="img/docs/html/dom//autocorrection1.jpg" alt="пример исправление 1">
+    <p>Если HTML-файл состоит из единственного слова "Hello world", браузер обернёт его в теги <em>html</em> и <em>body</em>, добавит необходимый тег <em>head</em></p>
+    <h3>Случай с необязательным тегом &lt;tbody&gt;</h3>
+    <p>Официально у таблиц не обязательно указывать тег <em>tbody</em>, но по стандарту DOM он должен быть.</p>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+<div class="code-example">
+
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+    
+    
+    
+    <style>input[name=button]:checked ~ #autocorrection2-html-code {z-index: 2;}</style>
+
+    
+    
+
+    <div id="autocorrection2-html-code" class="code">
+      
+      
+        
+        <pre>
+          <code class="language-html">
+&lt;table&gt;
+  &lt;tr&gt;
+    &lt;td&gt;пункт 1&lt;/td&gt;
+    &lt;td&gt;пункт 2&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+</code>
+        </pre>
+        
+      
+    </div>
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+
+</div>
+    <img src="img/docs/html/dom//autocorrection2.jpg" alt="пример исправление 2">
+  </section>
+
+</div>
+
+<div class="columns columns_col-2">
+
+  <section>
+    <h2>Какие бывают типы узлов?</h2>
+    <p>Всего существует 12 типов узлов, вот их список:</p>
+    <table>
+      <tr>
+        <td>Код</td>
+        <td>Тип</td>
+        <td>Описание</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>ELEMENT_NODE</td>
+        <td>узел элемента</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>-</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>TEXT_NODE</td>
+        <td>текстовой узел</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>-</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>-</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td>-</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td>PROCESSING_INSTRUCTION_NODE</td>
+        <td>узел инструкции обработки</td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td>COMMENT_NODE</td>
+        <td>узел комментария</td>
+      </tr>
+      <tr>
+        <td>9</td>
+        <td>DOCUMENT_NODE</td>
+        <td>узел документа</td>
+      </tr>
+      <tr>
+        <td>10</td>
+        <td>DOCUMENT_TYPE_NODE</td>
+        <td>узел типа документа (doctype html)</td>
+      </tr>
+      <tr>
+        <td>11</td>
+        <td>DOCUMENT_FRAGMENT_NODE</td>
+        <td>узел фрагмента документа</td>
+      </tr>
+      <tr>
+        <td>12</td>
+        <td>-</td>
+        <td>-</td>
+      </tr>
+    </table>
+    <p>Определить тип узла можно с помощью свойства <em>nodeType</em>, он отобразит код типа</p>
+    <img src="img/docs/html/dom//node_type.jpg" alt="тип DOM узла">
+    <p><em>nodeName</em> отобразит имя узла</p>
+    <p><em>nodeValue</em> строку со значением узла</p>
+  </section>
+
+  <section>
+    <h2>Комментарии тоже часть DOM</h2>
+    <p>Добавляется узел <em>#comment</em> вместе с содержимым комментария</p>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+<div class="code-example">
+
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+    
+    
+    
+    <style>input[name=button]:checked ~ #dom_comments-html-code {z-index: 2;}</style>
+
+    
+    
+
+    <div id="dom_comments-html-code" class="code">
+      
+      
+        
+        <pre>
+          <code class="language-html">
+&lt;!doctype html&gt;
+&lt;html&gt;
+  Hello, world!
+  &lt;!-- коментарий --&gt;
+&lt;/html&gt;
+</code>
+        </pre>
+        
+      
+    </div>
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+
+</div>
+    <img src="img/docs/html/dom//dom_comments.jpg" alt="пример исправление 2">
+  </section>
+
+</div>
+
+<section>
+  <hr>
+  <h4>Источники знаний:</h4>
+  <ul>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction">What is the DOM?</a></li>
+    <li><a href="https://learn.javascript.ru/dom-nodes">DOM дерево</a></li>
+    <li><a href="https://proglib.io/p/what-is-dom/">Что такое DOM и чем не является?</a></li>
+    <li><a href="https://habr.com/ru/post/254007/">15 советов и хитростей инструментов разработчика Chrome</a></li>
+    <li><a href="https://itchief.ru/lessons/javascript/javascript-dom-node-types">JavaScript - DOM: типы узлов</a></li>
+  </ul>
+</section>
+    </main>
+
+    <footer>
+      <i>footer</i>
+      <i>footer</i>
+      <i>footer</i>
+    </footer>
+
+    
+    <script>!function(){var e,t,s,r={SM:384,MD:576,LG:768,XL:960,XXL:1440};function a(){for(var e,t=new ResizeObserver(function(e){e.forEach(function(e){if(e.target.updateBreakpoints)e.target.updateBreakpoints(e.contentRect.width);else{var t=e.target.dataset.breakpoints?JSON.parse(e.target.dataset.breakpoints):r;0===e.width?e.target.dataset.observing=!1:e.target.dataset.observing=!0,Object.keys(t).forEach(function(s){var r=t[s];e.contentRect.width>=r?e.target.classList.add(s):e.target.classList.remove(s)})}})}),s=document.querySelectorAll("[data-observe-resizes]"),a=0;e=s[a];a++)t.observe(e);function i(){return"object"==typeof Reflect?Reflect.construct(HTMLElement,[],i):HTMLElement.call(this)||this}new MutationObserver(function(e){e.forEach(function(e){var s,r;s=e.addedNodes,r=t.observe.bind(t),s&&[].slice.call(s).forEach(function(e){if(1===e.nodeType){var t=[].slice.call(e.querySelectorAll("[data-observe-resizes]"));e.hasAttribute("data-observe-resizes")&&t.push(e);for(var s,a=0;s=t[a];a++)r(s)}})})}).observe(document.body,{childList:!0,subtree:!0}),i.prototype=Object.create(HTMLElement.prototype,{constructor:{value:i},connectedCallback:{value:function(){var e=this.getAttribute("breakpoints");this.breakpoints=e?JSON.parse(e):r,t.observe(this),this.setAttribute("observing","")}},updateBreakpoints:{value:function(e){for(var t in e>0?this.setAttribute("observing",""):this.removeAttribute("observing"),this.breakpoints){e>=this.breakpoints[t]?this.classList.add(t):this.classList.remove(t)}}}}),self.customElements.define("responsive-container",i)}"undefined"!=typeof ResizeObserver&&"undefined"!=typeof customElements||!matchMedia("(min-width: "+r.SM+"px)").matches?a():(e="/scripts/polyfills.js",t=a,(s=document.createElement("script")).src=e,s.onload=t,document.head.appendChild(s))}();</script>
+    
+    
+
+
+    
+     
+
+  </body>
+
+</html>

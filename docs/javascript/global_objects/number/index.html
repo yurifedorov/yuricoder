@@ -1,0 +1,412 @@
+
+
+ 
+
+
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+
+
+
+ 
+
+
+
+ 
+ 
+ 
+ 
+
+
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html lang="en" data-observe-resizes>
+
+  <head>
+    <title>Тип number в JavaScript</title>
+    <meta name="description" content="Подробно о типе number в JavaScript" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="/img/favicon.jpg" rel="icon" type="image/svg+xml">
+    <link rel="stylesheet" href="/style.min.css">
+    
+    
+    <base href="/docs/javascript/">
+
+    
+    
+      <link rel="stylesheet" href="/libs/prism/prism-min.css">
+      <script src="/libs/prism/prism-min.js" async></script>
+    
+
+  </head>
+
+  <body data-observe-resizes>
+    <header>
+      <a href="/index.html" class="logo"></a>
+      <input type="checkbox" id="nav-toggle" hidden>
+<label for="nav-toggle" class="nav__toggle" onclick></label>
+<nav class="nav nav_main">
+  <ul>
+    <li><a href="/about.html">About me</a>
+    <li><a href="/portfolio/">Works</a>
+    <li><a href="/docs/">Docs</a>
+  </ul>
+</nav>
+    </header>
+    
+    <aside class="aside aside_top">
+  
+
+<ul class="breadcrumbs">
+      <li> <a href="/">home</a>
+   <li> <a href="../">docs</a>                               
+   <li> <a href="../javascript">javascript</a>           
+   <li> <a href="../javascript/global_objects">global_objects</a> 
+  
+      <li> <span>number</span>
+
+</ul>
+</aside>
+    <aside class="aside aside_left">
+
+       
+         <ul>
+  <details>
+    <summary>Основы JavaScript</summary>
+    <nav class="nav_checklist">
+      <a href="variables" data-completed>variables</a>
+      <a href="types" data-uncompleted>types</a>
+      <a href="operators" data-uncompleted>operators</a>
+      <a href="loops" data-uncompleted>loops</a>
+      <a href="methods" data-uncompleted>methods</a>
+      <a href="statements" data-uncompleted>statements</a>
+      <a href="functions" data-uncompleted>functions</a>
+      <a href="global_objects" data-uncompleted>global objects</a>
+      <a href="memory_management" data-uncompleted>memory management</a>
+    </nav>
+  </details>
+  <details>
+    <summary>ООП</summary>
+    <ul>
+      <li><a href="oop">oop_test</a></li>
+    </ul>
+  </details>
+  <details>
+    <summary>Вопросы</summary>
+    <ul>
+      <li><a href="questions">questions</a></li>
+    </ul>
+  </details>
+</ul>
+        
+   
+  
+</aside>
+    <aside class="aside aside_right">
+
+         
+           
+             
+           
+          
+      <input type="search" placeholder="сделать поиск">
+
+<section>
+  <h4>Значения</h4>
+  <nav class="nav_checklist">
+    <a href="#">Infinity</a>
+    <a href="#">NaN</a>
+    <a href="global_objects/undefined" data-completed>undefined</a>
+    <a href="global_objects/null" data-completed>null</a>
+  </nav>
+</section>
+
+<section>
+  <h4>Функции</h4>
+  <nav class="nav_checklist">
+    <a href="#">eval()</a>
+    <a href="#">uneval()</a>
+    <a href="#">isFinite()</a>
+    <a href="#">isNaN()</a>
+    <a href="#">parseFloat()</a>
+    <a href="#">parseInt()</a>
+    <a href="#">decodeURI()</a>
+    <a href="#">decodeURIComponent()</a>
+    <a href="#">encodeURI()</a>
+    <a href="#">encodeURIComponent()</a>
+  </nav>
+</section>
+
+<section>
+  <h4>Фундаментальные объекты</h4>
+  <nav class="nav_checklist">
+    <a href="global_objects/object" data-completed>Object</a>
+    <a href="#">Function</a></li>
+    <a href="global_objects/boolean" data-completed>Boolean</a>
+    <a href="global_objects/symbol" data-completed>Symbol</a>
+    <a href="#">Error</a>
+    <a href="#">EvalError</a>
+    <a href="#">InternalError</a>
+    <a href="#">RangeError</a>
+    <a href="#">ReferenceError</a>
+    <a href="#">SyntaxError</a>
+    <a href="#">TypeError</a>
+    <a href="#">URIErro</a>
+  </nav>
+</section>
+
+<section>
+  <h4>Числа и даты</h4>
+  <nav class="nav_checklist">
+    <a href="global_objects/number" data-completed>Number</a>
+    <a href="#">Math</a>
+    <a href="#">Date</a>
+  </nav>
+</section>
+
+<section>
+  <h4>Обработка текста</h4>
+  <nav class="nav_checklist">
+    <a href="global_objects/string" data-completed>String</a>
+    <a href="#">RegExp</a>
+  </nav>
+</section>
+
+<section>
+  <h4>Индексированные коллекции</h4>
+  <nav class="nav_checklist">
+    <a href="#">Array</a>
+    <a href="#">Int8Array</a>
+    <a href="#">Uint8Array</a>
+    <a href="#">Uint8ClampedArray</a>
+    <a href="#">Int16Array</a>
+    <a href="#">Uint16Array</a>
+    <a href="#">Int32Array</a>
+    <a href="#">Uint32Array</a>
+    <a href="#">Float32Array</a>
+    <a href="#">Float64Array</a>
+  </nav>
+</section>
+
+<section>
+  <h4>Индексированные коллекции</h4>
+  <nav class="nav_checklist">
+    <a href="#">Map</a>
+    <a href="global_objects/set" data-completed>Set</a>
+    <a href="#">WeakMap</a>
+    <a href="#">WeakSet</a>
+  </nav>
+</section>
+
+<section>
+  <h4>Структурированные данные</h4>
+  <nav class="nav_checklist">
+    <a href="#">ArrayBuffer</a>
+    <a href="#">DataView</a>
+    <a href="#">JSON</a>
+  </nav>
+</section>
+
+<section>
+  <h4>Объекты управляющих абстракций</h4>
+  <nav class="nav_checklist">
+    <a href="#">Promise</a>
+  </nav>
+</section>
+
+<section>
+  <h4>Рефлексия</h4>
+  <nav class="nav_checklist">
+    <a href="#">Reflect</a>
+    <a href="#">Proxy</a>
+  </nav>
+</section>
+
+<section>
+  <h4>Интернационализация</h4>
+  <nav class="nav_checklist">
+    <a href="#">Intl</a>
+    <a href="#">Intl.Collator</a>
+    <a href="#">Intl.DateTimeFormat</a>
+    <a href="#">Intl.NumberFormat</a>
+  </nav>
+</section>
+
+<section>
+  <h4>Нестандартные объекты</h4>
+  <nav class="nav_checklist">
+    <a href="#">Generator</a>
+    <a href="#">Iterator</a>
+    <a href="#">ParallelArray</a>
+    <a href="#">StopIteration</a>
+  </nav>
+</section>
+   
+
+              
+                
+          
+  
+</aside>
+    <aside class="aside aside_bottom">
+
+  
+    <h4>Учебные материалы</h4>
+    <nav class="related-links">
+      <a data-icon="mdn" href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>
+<a data-icon="learn-js" href="https://learn.javascript.ru/number">Числа</a>
+    </nav>
+  
+
+</aside>
+
+    <main data-observe-resizes>
+      <h1>number</h1>
+
+
+
+
+
+
+
+
+
+
+
+<div class="code-example">
+
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+    
+    
+    
+    <style>[id='number_type-js-checkbox']:checked ~ #number_type-js-code {z-index: 2;}</style>
+
+    
+    
+
+    <div id="number_type-js-code" class="code">
+      
+      
+        
+        <pre>
+          
+          <code class="language-js">let n = 123; // целое число
+n = 12.345; // число с плавающей точкой
+
+/* специальные числовые значения Infinity и NaN */
+alert( 1 / 0 ); // Infinity
+alert( Infinity ); // Infinity
+alert( "не число" / 2 ); // NaN
+alert( "не число" / 2 + 5 ); // NaN</code>
+          
+          <script>function number_type() { let n = 123; // целое число
+n = 12.345; // число с плавающей точкой
+
+/* специальные числовые значения Infinity и NaN */
+alert( 1 / 0 ); // Infinity
+alert( Infinity ); // Infinity
+alert( "не число" / 2 ); // NaN
+alert( "не число" / 2 + 5 ); // NaN
+}</script>
+        </pre>
+        
+      
+    </div>
+  
+
+  
+  
+
+</div>
+    </main>
+
+    <footer>
+      <i>footer</i>
+      <i>footer</i>
+      <i>footer</i>
+    </footer>
+
+    
+    <script>!function(){var e,t,s,r={SM:384,MD:576,LG:768,XL:960,XXL:1440};function a(){for(var e,t=new ResizeObserver(function(e){e.forEach(function(e){if(e.target.updateBreakpoints)e.target.updateBreakpoints(e.contentRect.width);else{var t=e.target.dataset.breakpoints?JSON.parse(e.target.dataset.breakpoints):r;0===e.width?e.target.dataset.observing=!1:e.target.dataset.observing=!0,Object.keys(t).forEach(function(s){var r=t[s];e.contentRect.width>=r?e.target.classList.add(s):e.target.classList.remove(s)})}})}),s=document.querySelectorAll("[data-observe-resizes]"),a=0;e=s[a];a++)t.observe(e);function i(){return"object"==typeof Reflect?Reflect.construct(HTMLElement,[],i):HTMLElement.call(this)||this}new MutationObserver(function(e){e.forEach(function(e){var s,r;s=e.addedNodes,r=t.observe.bind(t),s&&[].slice.call(s).forEach(function(e){if(1===e.nodeType){var t=[].slice.call(e.querySelectorAll("[data-observe-resizes]"));e.hasAttribute("data-observe-resizes")&&t.push(e);for(var s,a=0;s=t[a];a++)r(s)}})})}).observe(document.body,{childList:!0,subtree:!0}),i.prototype=Object.create(HTMLElement.prototype,{constructor:{value:i},connectedCallback:{value:function(){var e=this.getAttribute("breakpoints");this.breakpoints=e?JSON.parse(e):r,t.observe(this),this.setAttribute("observing","")}},updateBreakpoints:{value:function(e){for(var t in e>0?this.setAttribute("observing",""):this.removeAttribute("observing"),this.breakpoints){e>=this.breakpoints[t]?this.classList.add(t):this.classList.remove(t)}}}}),self.customElements.define("responsive-container",i)}"undefined"!=typeof ResizeObserver&&"undefined"!=typeof customElements||!matchMedia("(min-width: "+r.SM+"px)").matches?a():(e="/scripts/polyfills.js",t=a,(s=document.createElement("script")).src=e,s.onload=t,document.head.appendChild(s))}();</script>
+    
+    
+
+
+    
+     
+
+  </body>
+
+</html>

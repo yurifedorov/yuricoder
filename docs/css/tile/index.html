@@ -1,0 +1,687 @@
+
+
+ 
+
+
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+
+
+
+ 
+
+
+
+ 
+ 
+ 
+ 
+
+
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html lang="en" data-observe-resizes>
+
+  <head>
+    <title>Создание плитки с помощью HTML и CSS</title>
+    <meta name="description" content="Варианты реализации элементов плитки с помощью CSS и HTML" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="/img/favicon.jpg" rel="icon" type="image/svg+xml">
+    <link rel="stylesheet" href="/style.min.css">
+    
+    
+    <base href="/docs/css/">
+
+    
+    
+      <link rel="stylesheet" href="/libs/prism/prism-min.css">
+      <script src="/libs/prism/prism-min.js" async></script>
+    
+
+  </head>
+
+  <body data-observe-resizes>
+    <header>
+      <a href="/index.html" class="logo"></a>
+      <input type="checkbox" id="nav-toggle" hidden>
+<label for="nav-toggle" class="nav__toggle" onclick></label>
+<nav class="nav nav_main">
+  <ul>
+    <li><a href="/about.html">About me</a>
+    <li><a href="/portfolio/">Works</a>
+    <li><a href="/docs/">Docs</a>
+  </ul>
+</nav>
+    </header>
+    
+    <aside class="aside aside_top">
+  
+
+<ul class="breadcrumbs">
+      <li> <a href="/">home</a>
+   <li> <a href="../">docs</a>                               
+   <li> <a href="../css">css</a>           
+  
+  
+      <li> <span>tile</span>
+
+</ul>
+</aside>
+    <aside class="aside aside_left">
+
+       
+         
+        <ul>
+  <details>
+    <summary>Компоненты веб-страницы</summary>
+    <ul>
+      <li><a href="structural_blocks">structural blocks</a></li>
+      <li><a href="lists">lists</a></li>
+      <li><a href="tile">tile</a></li>
+      <li><a href="nav">nav</a></li>
+    </ul>
+  </details>
+  <details>
+    <summary>Селекторы</summary>
+    <ul>
+      <li><a href="selectors">список селекторов</a></li>
+    </ul>
+  </details>
+</ul>
+   
+  
+</aside>
+      
+      
+
+    <main data-observe-resizes>
+      <h1>Tile</h1>
+<p>Блок, содержащий элементы строго квадратной формы</p>
+<img src="/img/docs/css/tile/tile.png" alt="">
+
+
+<h2>Варианты реализации:</h2>
+<ul class="tile tile_flip">
+  <li>
+    <!-- лицевая сторона -->
+    <div class="front">
+      <a>.tile_flip</a>
+    </div>
+    <!-- обратная сторона -->
+    <div class="back">
+      <a href="tile/tile_flip.html">подробнее</a>
+    </div>
+  </li>
+</ul>
+
+<h2>Процесс верстки</h2>
+<section>
+  <h3>Контейнер</h3>
+  <p>Плитка по сути является списком элементов квадратной формы (другие формы тут не рассматриваю).</p>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+<div class="code-example">
+
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+    
+    
+    
+    <style>input[name=button]:checked ~ #tile-container-html-code {z-index: 2;}</style>
+
+    
+    
+
+    <div id="tile-container-html-code" class="code">
+      
+      
+        
+        <pre>
+          <code class="language-html">
+&lt;ul class="tile"&gt;
+  &lt;li&gt;item&lt;/li&gt;
+  &lt;li&gt;item&lt;/li&gt;
+  &lt;li&gt;item&lt;/li&gt;
+  &lt;li&gt;item&lt;/li&gt;
+  &lt;li&gt;item&lt;/li&gt;
+&lt;/ul&gt;
+</code>
+        </pre>
+        
+      
+    </div>
+  
+
+  
+  
+  
+
+  
+  
+  
+    
+    
+    
+    <style>[id='tile-container-css-checkbox']:checked ~ #tile-container-css-code {z-index: 2;}</style>
+    
+    
+    
+
+    <div id="tile-container-css-code" class="code">
+      
+      
+        
+        <pre>
+          <code class="language-css">.tile {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(var(--tile-size), 1fr));
+  grid-gap: 10px;
+  margin-block-start: 0; /* reset */
+  margin-block-end: 0; /* reset */
+  padding-inline-start: 0; /* reset */
+  list-style-type: none; /* reset */
+}</code>
+        </pre>
+        
+      
+    </div>
+  
+
+  
+  
+  
+
+  
+  
+
+</div>
+
+  <p>В качестве контейнера я использовал тег <b>&lt;ul&gt;</b>, в котором теги <b>&lt;li&gt;</b> являются квадратными плитками.</p>
+  <ol>
+    <li>для <b>&lt;ul&gt;</b> задаю класс <b>.tile</b></li>
+    <li>делаю грид-контейнер</li>
+    <li>сбрасываю дефолтные стили для &lt;ul&gt;</li>
+  </ol>
+  <p id="tile">За компановку элементов отвечает свойство <kbd>grid-template-columns</kbd>.</p>
+  <p>На этом все...</p>
+</section>
+
+<section>
+  <h3>Элементы</h3>
+  <p>Здесь я не стал придерживаться <a href="https://ru.bem.info/methodology/quick-start/#%D1%8D%D0%BB%D0%B5%D0%BC%D0%B5%D0%BD%D1%82">правил БЭМ</a> и использовал селектор <kbd>.tile > li</kbd> (вместо <kbd>.tile__item</kbd>). Пунктов (плиток) может быть много и мне не хотелось раздувать html этим классом, добавляя его к каждому &lt;li&gt;.</p>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+<div class="code-example">
+
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+    
+    
+    
+    <style>input[name=button]:checked ~ #tile__item-html-code {z-index: 2;}</style>
+
+    
+    
+    <input type="radio" name="button" id="tile__item-html-checkbox">
+    <label for="tile__item-html-checkbox" onclick>HTML</label>
+    
+
+    <div id="tile__item-html-code" class="code">
+      
+      
+        
+        <pre>
+          <code class="language-html">
+&lt;ul class="tile"&gt;
+  &lt;li&gt;&lt;p&gt;обычный text&lt;/p&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;обычный link&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#" class="link_stretch"&gt;link_stretch&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;
+    &lt;a href="#" class="link_stretch">&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;обычный text&lt;/p&gt;
+    &lt;button&gt;button&lt;/button&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+
+</code>
+        </pre>
+        
+      
+    </div>
+  
+
+  
+  
+  
+
+  
+  
+  
+    
+    
+    
+    <style>[id='tile__item-css-checkbox']:checked ~ #tile__item-css-code {z-index: 2;}</style>
+    
+    
+    
+    <input type="radio" name="button" id="tile__item-css-checkbox">
+    <label for="tile__item-css-checkbox" onclick>CSS</label>
+    
+
+    <div id="tile__item-css-code" class="code">
+      
+      
+        
+        <pre>
+          <code class="language-css">.tile > li {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  height: 0;
+  padding-bottom: 100%;
+  background: #eee;
+  outline: 1px solid #dadada;
+}
+
+.tile > li > p,
+.tile > li > a {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  text-align: center;
+}
+
+.tile > li > p {
+  background: pink;
+}
+
+.tile > li > a {
+  background: yellow;
+}
+
+.tile > li > button {
+  position: absolute;
+  bottom: 15%;
+}</code>
+        </pre>
+        
+      
+    </div>
+  
+
+  
+  
+  
+
+  
+  
+    
+    
+    
+    
+    <style>[id='tile__item-demo-checkbox']:checked ~ #tile__item-demo {z-index: 2;}</style>
+    <input type="radio" name="button" id="tile__item-demo-checkbox">
+    <label for="tile__item-demo-checkbox" class="demo_button" onclick>DEMO</label>
+    
+    
+      <div id="tile__item-demo" class="demo">
+          <ul class="tile">
+    <li><p>обычный text</p></li>
+    <li><a href="#">обычный link</a></li>
+    <li><a href="#" class="link_stretch">link_stretch</a></li>
+    <li>
+      <a href="#" class="link_stretch"></a>
+    </li>
+    <li>
+      <p>обычный text</p>
+      <button>button</button>
+    </li>
+  </ul>
+      </div>
+    
+    
+    
+    <div id="tile__item-demo" class="demo split-parent">
+      <div id="box-1" data-observe-resizes>
+          <ul class="tile">
+    <li><p>обычный text</p></li>
+    <li><a href="#">обычный link</a></li>
+    <li><a href="#" class="link_stretch">link_stretch</a></li>
+    <li>
+      <a href="#" class="link_stretch"></a>
+    </li>
+    <li>
+      <p>обычный text</p>
+      <button>button</button>
+    </li>
+  </ul>
+      </div>
+    </div>
+    
+  
+
+</div>
+
+  <p>Для того чтобы <b>&lt;li&gt;</b> принял форму квадрата нужно выставить высоту на 0 и задать отступ в 100% от ширины родителя элемента:</p>
+  <ul>
+    <li><kbd>height: 0</kbd></li>
+    <li><kbd>padding-bottom: 100%</kbd></li>
+  </ul>
+  <q>При указании 'padding' в процентах, значение считается от ширины родителя элемента <small>(узнал на <a href="https://webref.ru/css/padding-bottom">webref.ru</a>)</small></q>
+  
+  <p>Чтобы все потомки позиционировались относительно своего &lt;li&gt; контейнера добавлю:</p>
+  <ul>
+    <li><kbd>position: relative</kbd></li>
+  </ul>
+  <p>Все остальные свойства - это визуальная составляющая.</p>
+  <p>Для позиционирования содержимого я обернул текст одним из тегов (&lt;p&gt;, &lt;a&gt; и т.д.) и настроил:</p>
+  <ul>
+    <li><kbd>position: absolute</kbd> для выравнивания по вертикали</li>
+    <li><kbd>text-align: center</kbd> для выравнивания по горизонтали</li>
+  </ul>
+  <p><b>НО! столкнулся с проблемой</b>: при увеличении высоты &lt;li&gt;, контент визуально уже не по-центру.</p>
+  <p>Увеличение происходит из-за свойств, которые менять нельзя:</p>
+  <ol>
+    <li><kbd>padding-bottom: 100%</kbd> (для придания квадратной формы)</li>
+    <li><kbd><a href="#tile">grid-template-columns</a></kbd> (для компановки элементов)</li>
+  </ol>
+  <p>Решение нашел на <a href="https://www.w3.org/Style/Examples/007/center.ru.html#vertical3">w3.org</a>:</p>
+  <p>Для <b>&lt;li&gt;</b> добавил:</p>
+  <ul>
+    <li><kbd>display: flex</kbd></li>
+    <li><kbd>justify-content: center</kbd></li>
+  </ul>    
+  <p>Для потомков <b>&lt;li&gt;</b> добавил:</p>
+  <ul>
+    <li><kbd>margin: 0</kbd> уберет дефолтный отступ у <b>&lt;p&gt;</b></li>
+    <li><kbd>top: 50%</kbd> поместит элемент посередине контейнера.</li>
+  </ul>
+  <p>Тогда верхняя граница текстового блока будет строго по центру, но при этом сам текст будет смещен ниже.</p>
+  <p>Исправляется легко: <kbd>transform</kbd> может приподнять текст на 50% от своей высоты вот так:</p>
+  <ul>
+    <li><kbd>transform: translate(0, -50%)</kbd> переместит элемент вверх на половину своей собственной высоты.</li>
+  </ul>
+</section>
+
+<section>
+  <h3>Когда весь элемент является ссылкой</h3>
+  <p>Сделать ссылкой непосредственно элемент-плитку <b>&lt;li&gt;</b> можно путем растягивания <b>&lt;a&gt;</b> на всю площадь родителя.</p>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+<div class="code-example">
+
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+    
+    
+    
+    <style>input[name=button]:checked ~ #full-size-link-html-code {z-index: 2;}</style>
+
+    
+    
+    <input type="radio" name="button" id="full-size-link-html-checkbox">
+    <label for="full-size-link-html-checkbox" onclick>HTML</label>
+    
+
+    <div id="full-size-link-html-code" class="code">
+      
+      
+        
+        <pre>
+          <code class="language-html">
+&lt;ul class="tile"&gt;
+  &lt;li&gt;&lt;a href="#"&gt;link&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#" class="link_stretch"&gt;link&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;link&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</code>
+        </pre>
+        
+      
+    </div>
+  
+
+  
+  
+  
+
+  
+  
+  
+    
+    
+    
+    <style>[id='full-size-link-css-checkbox']:checked ~ #full-size-link-css-code {z-index: 2;}</style>
+    
+    
+    
+    <input type="radio" name="button" id="full-size-link-css-checkbox">
+    <label for="full-size-link-css-checkbox" onclick>CSS</label>
+    
+
+    <div id="full-size-link-css-code" class="code">
+      
+      
+        
+        <pre>
+          <code class="language-css">.tile > li > .link_stretch {
+  transform: translate(0, 0);
+  right: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  padding-top: calc(50% - 0.7em);
+  text-decoration: none;
+}</code>
+        </pre>
+        
+      
+    </div>
+  
+
+  
+  
+  
+
+  
+  
+    
+    
+    
+    
+    <style>[id='full-size-link-demo-checkbox']:checked ~ #full-size-link-demo {z-index: 2;}</style>
+    <input type="radio" name="button" id="full-size-link-demo-checkbox">
+    <label for="full-size-link-demo-checkbox" class="demo_button" onclick>DEMO</label>
+    
+    
+      <div id="full-size-link-demo" class="demo">
+        <ul class="tile">
+  <li><a href="#">link</a></li>
+  <li><a href="#" class="link_stretch">link_stretch</a></li>
+  <li><a href="#" class="link_stretch">link_stretch <br>+ строка</a></li>
+</ul>
+      </div>
+    
+    
+    
+  
+
+</div>
+  <p>Вначале хотел использовать селектор <kbd>.tile a</kbd>, но в таком случае абсолютно все ссылки растянутся.</p>
+  <p>Чтобы сохранить возможность добавления, в рамках одно контейнера <kbd>.tile</kbd>, разных видов ссылок я добавил к &lt;a&gt; класс <kbd>.link_stretch</kbd> со следующими свойствами:</p>
+  <ul>
+    <li>отменяю вертикальное выравнивание, заданное для обычных ссылок: <kbd>top: 0</kbd> и <kbd>transform: translate(0, 0)</kbd></li>
+    <li>добавляю <kbd>right: 0</kbd>, <kbd>bottom: 0</kbd> и <kbd>left: 0</kbd> (растягиваю ссылку на всю площадь родителя)</li>
+    <li>выравниваю текст по центру (по-вертикали) с помощью <kbd>padding-top: 50%</kbd>, но вижу что текст смещен вниз и чтобы это исправить использую функцию <b>calc</b> <kbd>padding-top: calc(50% - 0.7em)</kbd></li>
+    <li>убрал подчеркивание <kbd>text-decoration: none</kbd></li>
+  </ul>
+  <q>Почему именно <b>0.7em</b>, a не <b>1em</b>?? Не знаю, но так мне показалось ровнее</q>
+  <p><b>!!!</b> Пока проблема только одна - если символов много и текст становится в две строки, то снова съезжает вниз. Пока не нашел решение адаптивного выравнивания исходя из количества строк.</p>
+  <p>Хотел бы я сделать так - если стока одна, то <kbd>padding-top: calc(50% - 0.7em)</kbd>, если две строки <kbd>padding-top: calc(50% - 1.4em)</kbd>, но это невозможно.</p>
+</section>
+    </main>
+
+    <footer>
+      <i>footer</i>
+      <i>footer</i>
+      <i>footer</i>
+    </footer>
+
+    
+    <script>!function(){var e,t,s,r={SM:384,MD:576,LG:768,XL:960,XXL:1440};function a(){for(var e,t=new ResizeObserver(function(e){e.forEach(function(e){if(e.target.updateBreakpoints)e.target.updateBreakpoints(e.contentRect.width);else{var t=e.target.dataset.breakpoints?JSON.parse(e.target.dataset.breakpoints):r;0===e.width?e.target.dataset.observing=!1:e.target.dataset.observing=!0,Object.keys(t).forEach(function(s){var r=t[s];e.contentRect.width>=r?e.target.classList.add(s):e.target.classList.remove(s)})}})}),s=document.querySelectorAll("[data-observe-resizes]"),a=0;e=s[a];a++)t.observe(e);function i(){return"object"==typeof Reflect?Reflect.construct(HTMLElement,[],i):HTMLElement.call(this)||this}new MutationObserver(function(e){e.forEach(function(e){var s,r;s=e.addedNodes,r=t.observe.bind(t),s&&[].slice.call(s).forEach(function(e){if(1===e.nodeType){var t=[].slice.call(e.querySelectorAll("[data-observe-resizes]"));e.hasAttribute("data-observe-resizes")&&t.push(e);for(var s,a=0;s=t[a];a++)r(s)}})})}).observe(document.body,{childList:!0,subtree:!0}),i.prototype=Object.create(HTMLElement.prototype,{constructor:{value:i},connectedCallback:{value:function(){var e=this.getAttribute("breakpoints");this.breakpoints=e?JSON.parse(e):r,t.observe(this),this.setAttribute("observing","")}},updateBreakpoints:{value:function(e){for(var t in e>0?this.setAttribute("observing",""):this.removeAttribute("observing"),this.breakpoints){e>=this.breakpoints[t]?this.classList.add(t):this.classList.remove(t)}}}}),self.customElements.define("responsive-container",i)}"undefined"!=typeof ResizeObserver&&"undefined"!=typeof customElements||!matchMedia("(min-width: "+r.SM+"px)").matches?a():(e="/scripts/polyfills.js",t=a,(s=document.createElement("script")).src=e,s.onload=t,document.head.appendChild(s))}();</script>
+    
+    
+
+
+    
+    
+  
+  <script>switch (true) {
+  case (window.matchMedia("(min-width: 1900px)").matches):
+	// 3 элемента
+	var box1 = document.getElementById('box-1');
+	var box2 = box1.cloneNode(true);
+	var box3 = box1.cloneNode(true);
+	box1.parentNode.insertBefore(box2, box1.nextSibling);
+	box1.parentNode.insertBefore(box3, box2.nextSibling);
+	box2.id = "box-2";
+	box3.id = "box-3";
+	Split(['#box-1', '#box-2', '#box-3'], {
+		sizes: [320, 768, 490],
+		gutterSize: 2,
+		elementStyle: function (dimension, size, gutterSize) {return {'width': 'calc(' + size + 'px - ' + gutterSize + 'px + 1px)',}},
+		gutterStyle: function (dimension, gutterSize) {return {'width': gutterSize + 'px',}}
+	})
+	break;
+
+  case (window.matchMedia("(min-width: 1024px)").matches):
+	// 2 элемента
+	var box1 = document.getElementById('box-1');
+	var box2 = box1.cloneNode(true);
+	box1.parentNode.insertBefore(box2, box1.nextSibling);
+	box2.id = "box-2";
+	Split(['#box-1', '#box-2'], {
+		sizes: [320, 768],
+		gutterSize: 2,
+		elementStyle: function (dimension, size, gutterSize) {return {'width': 'calc(' + size + 'px - ' + gutterSize + 'px + 1px)',}},
+		gutterStyle: function (dimension, gutterSize) {return {'width': gutterSize + 'px',}}
+	})
+	break;
+	
+  default:
+	// 1 элемент
+	Split(['#box-1'], {sizes: [102],})}</script>
+
+
+  </body>
+
+</html>

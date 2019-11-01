@@ -1,0 +1,562 @@
+
+
+ 
+
+
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+
+
+
+ 
+
+
+
+ 
+ 
+ 
+ 
+
+
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html lang="en" data-observe-resizes>
+
+  <head>
+    <title>HTML атрибуты</title>
+    <meta name="description" content="Для чего нужны HTML атрибуты" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="/img/favicon.jpg" rel="icon" type="image/svg+xml">
+    <link rel="stylesheet" href="/style.min.css">
+    
+    
+    <base href="/docs/html/">
+
+    
+    
+      <link rel="stylesheet" href="/libs/prism/prism-min.css">
+      <script src="/libs/prism/prism-min.js" async></script>
+    
+
+  </head>
+
+  <body data-observe-resizes>
+    <header>
+      <a href="/index.html" class="logo"></a>
+      <input type="checkbox" id="nav-toggle" hidden>
+<label for="nav-toggle" class="nav__toggle" onclick></label>
+<nav class="nav nav_main">
+  <ul>
+    <li><a href="/about.html">About me</a>
+    <li><a href="/portfolio/">Works</a>
+    <li><a href="/docs/">Docs</a>
+  </ul>
+</nav>
+    </header>
+    
+    <aside class="aside aside_top">
+  
+
+<ul class="breadcrumbs">
+      <li> <a href="/">home</a>
+   <li> <a href="../">docs</a>                               
+   <li> <a href="../html">html</a>           
+  
+  
+      <li> <span>attributes</span>
+
+</ul>
+</aside>
+    <aside class="aside aside_left">
+
+       <ul>
+  <details>
+    <summary>HTML</summary>
+    <ul>
+      <li><a href="HTML_basics">Основы HTML</a></li>
+      <li><a href="elements">Список элементов (тегов)</a></li>
+    </ul>
+  </details>
+  <details>
+    <summary>Несортированное</summary>
+    <ul>
+      <li><a href="dom">DOM</a></li>
+      <li><a href="attributes">attributes</a></li>
+      <li><a href="properties">свойства</a></li>
+      <li><a href="notes">notes</a></li>
+    </ul>
+  </details>
+</ul>
+         
+        
+   
+  
+</aside>
+      
+      
+
+    <main data-observe-resizes>
+      <h1>HTML атрибуты</h1>
+<p>DOM-объекты и их свойства генерируется на основании html-тегов и их атрибутов.</p>
+<p>Например для тега <em>&lt;section id="news"&gt;</em> будет создано свойство <em>section.id="news"</em></p>
+
+
+<section id="news"></section>
+
+<div class="columns columns_col-2">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+<div class="code-example">
+
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+    
+    
+    
+    <style>input[name=button]:checked ~ #attributes-html-code {z-index: 2;}</style>
+
+    
+    
+
+    <div id="attributes-html-code" class="code">
+      
+      
+        
+        <pre>
+          <code class="language-html">
+&lt;section id="news"&gt;
+</code>
+        </pre>
+        
+      
+    </div>
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+
+</div>
+  <img src="img/docs/html/attributes//create_dom_properties.jpg" alt="создание DOM свойства">
+</div>
+
+
+<div class="columns columns_col-2">
+  <section>
+    <h2>Метод <em>hasAttribute</em></h2>
+    <p>Проверяет налчие атрибута у элемента (тега), где в скобках указывается имя проверяемого атрибута.</p>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+<div class="code-example">
+
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+    
+    
+    
+    <style>[id='method_hasAttribute-js-checkbox']:checked ~ #method_hasAttribute-js-code {z-index: 2;}</style>
+
+    
+    
+
+    <div id="method_hasAttribute-js-code" class="code">
+      
+      
+        
+        <pre>
+          
+          <code class="language-js">let elem = document.querySelector('#news');
+console.log(elem.hasAttribute('id'));</code>
+          
+          <script>function method_hasAttribute() { let elem = document.querySelector('#news');
+console.log(elem.hasAttribute('id'));
+}</script>
+        </pre>
+        
+      
+    </div>
+  
+
+  
+  
+
+</div>
+    <img src="img/docs/html/attributes//hasAttribute.jpg" alt="проверка наличия заданного атрибута">
+  </section>
+  <section>
+    <h2>Метод <em>getAttribute</em></h2>
+    <p>Проверяет значение атрибута, где в скобках так-же указывается имя проверяемого атрибута.</p>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+<div class="code-example">
+
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+    
+    
+    
+    <style>[id='method_getAttribute-js-checkbox']:checked ~ #method_getAttribute-js-code {z-index: 2;}</style>
+
+    
+    
+
+    <div id="method_getAttribute-js-code" class="code">
+      
+      
+        
+        <pre>
+          
+          <code class="language-js">let elem = document.querySelector('#news');
+console.log(elem.getAttribute('id'));</code>
+          
+          <script>function method_getAttribute() { let elem = document.querySelector('#news');
+console.log(elem.getAttribute('id'));
+}</script>
+        </pre>
+        
+      
+    </div>
+  
+
+  
+  
+
+</div>
+    <img src="img/docs/html/attributes//getAttribute.jpg" alt="проверка значения у атрибута">
+  </section>
+
+  <section>
+    <h2>Стандартные и нестандартные атрибуты</h2>
+    <p>У html-тегов есть список стандартных для него атрибутов.</p>
+    <p>Например, для элемента <em>&lt;section&gt;</em> доступны доступны <a href="https://www.w3.org/TR/html52/dom.html#global-attributes-2">глобальные атрибуты</a>:</p>
+    <p><em>accesskey</em> <em>class</em> <em>contenteditable</em> <em>dir</em> <em>draggable</em> <em>hidden</em> <em>id</em> <em>lang</em> <em>spellcheck</em> <em>style</em> <em>tabindex</em> <em>title</em> <em>translate</em></p>
+
+    <h3>Эксперимент</h3>
+    <p>Создам элемент <em>&lt;section&gt;</em> и пропишу в нем все глобальные атрибуты (которые являются стандартными) и один нестандартный атрибут.</p>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+<div class="code-example">
+
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+    
+    
+    
+    <style>input[name=button]:checked ~ #global_attributes-html-code {z-index: 2;}</style>
+
+    
+    
+
+    <div id="global_attributes-html-code" class="code">
+      
+      
+        
+        <pre>
+          <code class="language-html">
+&lt;section accesskey="ok" class="ok" contenteditable="ok" dir="ok" draggable="ok" hidden="ok" id="ok" lang="ok" spellcheck="ok" style="ok" tabindex="ok" title="ok" translate="ok" non-standart-attr="ok"&gt;
+</code>
+        </pre>
+        
+      
+    </div>
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+
+</div>
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+<div class="code-example">
+
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+    
+    
+    
+    <style>[id='global_attributes_test-js-checkbox']:checked ~ #global_attributes_test-js-code {z-index: 2;}</style>
+
+    
+    
+
+    <div id="global_attributes_test-js-code" class="code">
+      
+      
+        
+        <pre>
+          
+          <code class="language-js">let elem = document.querySelector('#ok');
+
+console.log(elem.hasAttribute('accesskey'));
+console.log(elem.hasAttribute('class'));
+console.log(elem.hasAttribute('contenteditable'));
+console.log(elem.hasAttribute('dir'));
+console.log(elem.hasAttribute('draggable'));
+console.log(elem.hasAttribute('hidden'));
+console.log(elem.hasAttribute('id'));
+console.log(elem.hasAttribute('lang'));
+console.log(elem.hasAttribute('spellcheck'));
+console.log(elem.hasAttribute('style'));
+console.log(elem.hasAttribute('tabindex'));
+console.log(elem.hasAttribute('title'));
+console.log(elem.hasAttribute('translate'));
+console.log(elem.hasAttribute('non-standart-attr')); // false</code>
+          
+          <script>function global_attributes_test() { let elem = document.querySelector('#ok');
+
+console.log(elem.hasAttribute('accesskey'));
+console.log(elem.hasAttribute('class'));
+console.log(elem.hasAttribute('contenteditable'));
+console.log(elem.hasAttribute('dir'));
+console.log(elem.hasAttribute('draggable'));
+console.log(elem.hasAttribute('hidden'));
+console.log(elem.hasAttribute('id'));
+console.log(elem.hasAttribute('lang'));
+console.log(elem.hasAttribute('spellcheck'));
+console.log(elem.hasAttribute('style'));
+console.log(elem.hasAttribute('tabindex'));
+console.log(elem.hasAttribute('title'));
+console.log(elem.hasAttribute('translate'));
+console.log(elem.hasAttribute('non-standart-attr')); // false
+}</script>
+        </pre>
+        
+      
+    </div>
+  
+
+  
+  
+
+</div>
+
+  </section>
+</div>
+
+<section>
+  <hr>
+  <h4>Источники знаний:</h4>
+  <ul>
+    <li><a href="https://learn.javascript.ru/dom-attributes-and-properties">Атрибуты и свойства</a></li>
+    <li><a href="http://code.mu/javascript/dom/hasAttribute.html">Метод hasAttribute (проверка наличия атрибута)</a></li>
+    <li><a href="http://code.mu/javascript/dom/getAttribute.html">Метод getAttribute (проверка значения атрибута)</a></li>
+ </ul>
+</section>
+
+<section accesskey="ok" class="ok" contenteditable="ok" dir="ok" draggable="ok" hidden="ok" id="ok" lang="ok" spellcheck="ok" style="ok" tabindex="ok" title="ok" translate="ok" non-standart-attr="ok">
+    </main>
+
+    <footer>
+      <i>footer</i>
+      <i>footer</i>
+      <i>footer</i>
+    </footer>
+
+    
+    <script>!function(){var e,t,s,r={SM:384,MD:576,LG:768,XL:960,XXL:1440};function a(){for(var e,t=new ResizeObserver(function(e){e.forEach(function(e){if(e.target.updateBreakpoints)e.target.updateBreakpoints(e.contentRect.width);else{var t=e.target.dataset.breakpoints?JSON.parse(e.target.dataset.breakpoints):r;0===e.width?e.target.dataset.observing=!1:e.target.dataset.observing=!0,Object.keys(t).forEach(function(s){var r=t[s];e.contentRect.width>=r?e.target.classList.add(s):e.target.classList.remove(s)})}})}),s=document.querySelectorAll("[data-observe-resizes]"),a=0;e=s[a];a++)t.observe(e);function i(){return"object"==typeof Reflect?Reflect.construct(HTMLElement,[],i):HTMLElement.call(this)||this}new MutationObserver(function(e){e.forEach(function(e){var s,r;s=e.addedNodes,r=t.observe.bind(t),s&&[].slice.call(s).forEach(function(e){if(1===e.nodeType){var t=[].slice.call(e.querySelectorAll("[data-observe-resizes]"));e.hasAttribute("data-observe-resizes")&&t.push(e);for(var s,a=0;s=t[a];a++)r(s)}})})}).observe(document.body,{childList:!0,subtree:!0}),i.prototype=Object.create(HTMLElement.prototype,{constructor:{value:i},connectedCallback:{value:function(){var e=this.getAttribute("breakpoints");this.breakpoints=e?JSON.parse(e):r,t.observe(this),this.setAttribute("observing","")}},updateBreakpoints:{value:function(e){for(var t in e>0?this.setAttribute("observing",""):this.removeAttribute("observing"),this.breakpoints){e>=this.breakpoints[t]?this.classList.add(t):this.classList.remove(t)}}}}),self.customElements.define("responsive-container",i)}"undefined"!=typeof ResizeObserver&&"undefined"!=typeof customElements||!matchMedia("(min-width: "+r.SM+"px)").matches?a():(e="/scripts/polyfills.js",t=a,(s=document.createElement("script")).src=e,s.onload=t,document.head.appendChild(s))}();</script>
+    
+    
+
+
+    
+     
+
+  </body>
+
+</html>

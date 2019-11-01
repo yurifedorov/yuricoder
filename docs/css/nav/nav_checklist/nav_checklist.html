@@ -1,0 +1,362 @@
+
+
+ 
+
+
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+
+
+
+ 
+
+
+
+ 
+ 
+ 
+ 
+
+
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html lang="en" data-observe-resizes>
+
+  <head>
+    <title>Навигация с модификатором checklist</title>
+    <meta name="description" content="Навигация в виде чеклиста" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="/img/favicon.jpg" rel="icon" type="image/svg+xml">
+    <link rel="stylesheet" href="/style.min.css">
+    
+    
+    <base href="/docs/css/">
+
+    
+    
+      <link rel="stylesheet" href="/libs/prism/prism-min.css">
+      <script src="/libs/prism/prism-min.js" async></script>
+    
+
+  </head>
+
+  <body data-observe-resizes>
+    <header>
+      <a href="/index.html" class="logo"></a>
+      <input type="checkbox" id="nav-toggle" hidden>
+<label for="nav-toggle" class="nav__toggle" onclick></label>
+<nav class="nav nav_main">
+  <ul>
+    <li><a href="/about.html">About me</a>
+    <li><a href="/portfolio/">Works</a>
+    <li><a href="/docs/">Docs</a>
+  </ul>
+</nav>
+    </header>
+    
+    <aside class="aside aside_top">
+  
+
+<ul class="breadcrumbs">
+      <li> <a href="/">home</a>
+   <li> <a href="../">docs</a>                               
+   <li> <a href="../css">css</a>           
+   <li> <a href="../css/nav">nav</a> 
+  
+      <li> <span>nav_checklist</span>
+
+</ul>
+</aside>
+    <aside class="aside aside_left">
+
+       
+         
+        <ul>
+  <details>
+    <summary>Компоненты веб-страницы</summary>
+    <ul>
+      <li><a href="structural_blocks">structural blocks</a></li>
+      <li><a href="lists">lists</a></li>
+      <li><a href="tile">tile</a></li>
+      <li><a href="nav">nav</a></li>
+    </ul>
+  </details>
+  <details>
+    <summary>Селекторы</summary>
+    <ul>
+      <li><a href="selectors">список селекторов</a></li>
+    </ul>
+  </details>
+</ul>
+   
+  
+</aside>
+    <aside class="aside aside_right">
+
+         
+           
+             
+           
+          
+      
+   
+
+              
+                <a href="nav">default</a>
+
+<section>
+  <h3>Модификаторы</h3>
+  <ul>
+    <li><a href="nav/nav_checklist.html">_checklist</a></li>
+  </ul>
+</section>
+          
+  
+</aside>
+      
+
+    <main data-observe-resizes>
+      <h1>Модификатор <em>_checklist</em></h1>
+
+<div class="grid grid_col-3">
+
+  <section>
+    <h2>HTML</h2>
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+<div class="code-example">
+
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+    
+    
+    
+    <style>input[name=button]:checked ~ #nav_checklist-html-code {z-index: 2;}</style>
+
+    
+    
+
+    <div id="nav_checklist-html-code" class="code">
+      
+      
+        
+        <pre>
+          <code class="language-html">&lt;nav class="nav_checklist"&gt;
+  &lt;a href="#" data-completed&gt;item-1&lt;/a&gt;
+  &lt;a href="#" data-uncompleted&gt;item-2&lt;/a&gt;
+  &lt;a href="#"&gt;item-3&lt;/a&gt;
+&lt;/nav&gt;</code>
+        </pre>
+        
+      
+    </div>
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+
+</div>
+  </section>
+
+  <section>
+    <h2>css</h2>
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+<div class="code-example">
+
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+    
+    
+    
+    <style>[id='nav_checklist-css-checkbox']:checked ~ #nav_checklist-css-code {z-index: 2;}</style>
+    
+    
+    
+
+    <div id="nav_checklist-css-code" class="code">
+      
+      
+        
+        <pre class="line-numbers">
+          <code class="language-css">.nav_checklist {
+  background: transparent;
+}
+
+.nav_checklist > a {
+  display: block;
+  text-decoration: none;
+  background: #eee;
+  padding: 5px 20px 5px 5px;
+  margin-bottom: 5px;
+  line-height: 30px;
+}
+
+.nav_checklist > a::after {
+  width: 30px;
+  float: left;
+  content: '\00A0';
+  background: #fff;
+  outline: 1px solid gray;
+  text-align: center;
+  margin-right: 10px;
+}
+
+.nav_checklist > a[data-completed]::after {
+  content: '\2714';
+  background: greenyellow;
+}
+
+.nav_checklist > a[data-uncompleted]::after {
+  content: '\2718';
+  background: tomato;
+}</code>
+        </pre>
+        
+      
+    </div>
+  
+
+  
+  
+  
+
+  
+  
+
+</div>
+  </section>
+
+  <section>
+    <h2>Result</h2>
+    <nav class="nav_checklist">
+      <a href="#" data-completed>item-1</a>
+      <a href="#" data-uncompleted>item-2</a>
+      <a href="#">item-3</a>
+    </nav>
+  </section>
+
+</div>
+    </main>
+
+    <footer>
+      <i>footer</i>
+      <i>footer</i>
+      <i>footer</i>
+    </footer>
+
+    
+    <script>!function(){var e,t,s,r={SM:384,MD:576,LG:768,XL:960,XXL:1440};function a(){for(var e,t=new ResizeObserver(function(e){e.forEach(function(e){if(e.target.updateBreakpoints)e.target.updateBreakpoints(e.contentRect.width);else{var t=e.target.dataset.breakpoints?JSON.parse(e.target.dataset.breakpoints):r;0===e.width?e.target.dataset.observing=!1:e.target.dataset.observing=!0,Object.keys(t).forEach(function(s){var r=t[s];e.contentRect.width>=r?e.target.classList.add(s):e.target.classList.remove(s)})}})}),s=document.querySelectorAll("[data-observe-resizes]"),a=0;e=s[a];a++)t.observe(e);function i(){return"object"==typeof Reflect?Reflect.construct(HTMLElement,[],i):HTMLElement.call(this)||this}new MutationObserver(function(e){e.forEach(function(e){var s,r;s=e.addedNodes,r=t.observe.bind(t),s&&[].slice.call(s).forEach(function(e){if(1===e.nodeType){var t=[].slice.call(e.querySelectorAll("[data-observe-resizes]"));e.hasAttribute("data-observe-resizes")&&t.push(e);for(var s,a=0;s=t[a];a++)r(s)}})})}).observe(document.body,{childList:!0,subtree:!0}),i.prototype=Object.create(HTMLElement.prototype,{constructor:{value:i},connectedCallback:{value:function(){var e=this.getAttribute("breakpoints");this.breakpoints=e?JSON.parse(e):r,t.observe(this),this.setAttribute("observing","")}},updateBreakpoints:{value:function(e){for(var t in e>0?this.setAttribute("observing",""):this.removeAttribute("observing"),this.breakpoints){e>=this.breakpoints[t]?this.classList.add(t):this.classList.remove(t)}}}}),self.customElements.define("responsive-container",i)}"undefined"!=typeof ResizeObserver&&"undefined"!=typeof customElements||!matchMedia("(min-width: "+r.SM+"px)").matches?a():(e="/scripts/polyfills.js",t=a,(s=document.createElement("script")).src=e,s.onload=t,document.head.appendChild(s))}();</script>
+    
+    
+
+
+    
+     
+
+  </body>
+
+</html>

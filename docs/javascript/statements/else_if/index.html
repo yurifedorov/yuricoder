@@ -1,0 +1,835 @@
+
+
+ 
+
+
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+
+
+
+ 
+
+
+
+ 
+ 
+ 
+ 
+
+
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html lang="en" data-observe-resizes>
+
+  <head>
+    <title>Конструкция else...if в JavaScript</title>
+    <meta name="description" content="Выполняет инструкцию, если указанное условие выполняется true" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="/img/favicon.jpg" rel="icon" type="image/svg+xml">
+    <link rel="stylesheet" href="/style.min.css">
+    
+    
+    <base href="/docs/javascript/">
+
+    
+    
+      <link rel="stylesheet" href="/libs/prism/prism-min.css">
+      <script src="/libs/prism/prism-min.js" async></script>
+    
+
+  </head>
+
+  <body data-observe-resizes>
+    <header>
+      <a href="/index.html" class="logo"></a>
+      <input type="checkbox" id="nav-toggle" hidden>
+<label for="nav-toggle" class="nav__toggle" onclick></label>
+<nav class="nav nav_main">
+  <ul>
+    <li><a href="/about.html">About me</a>
+    <li><a href="/portfolio/">Works</a>
+    <li><a href="/docs/">Docs</a>
+  </ul>
+</nav>
+    </header>
+    
+    <aside class="aside aside_top">
+  
+
+<ul class="breadcrumbs">
+      <li> <a href="/">home</a>
+   <li> <a href="../">docs</a>                               
+   <li> <a href="../javascript">javascript</a>           
+   <li> <a href="../javascript/statements">statements</a> 
+  
+      <li> <span>else_if</span>
+
+</ul>
+</aside>
+    <aside class="aside aside_left">
+
+       
+         <ul>
+  <details>
+    <summary>Основы JavaScript</summary>
+    <nav class="nav_checklist">
+      <a href="variables" data-completed>variables</a>
+      <a href="types" data-uncompleted>types</a>
+      <a href="operators" data-uncompleted>operators</a>
+      <a href="loops" data-uncompleted>loops</a>
+      <a href="methods" data-uncompleted>methods</a>
+      <a href="statements" data-uncompleted>statements</a>
+      <a href="functions" data-uncompleted>functions</a>
+      <a href="global_objects" data-uncompleted>global objects</a>
+      <a href="memory_management" data-uncompleted>memory management</a>
+    </nav>
+  </details>
+  <details>
+    <summary>ООП</summary>
+    <ul>
+      <li><a href="oop">oop_test</a></li>
+    </ul>
+  </details>
+  <details>
+    <summary>Вопросы</summary>
+    <ul>
+      <li><a href="questions">questions</a></li>
+    </ul>
+  </details>
+</ul>
+        
+   
+  
+</aside>
+    <aside class="aside aside_right">
+
+         
+           
+             
+           
+          <nav class="nav_checklist">
+  <a href="statements/if" data-completed>if</a>
+  <a href="statements/else_if" data-completed>else...if</a>
+  <a href="statements/switch" data-completed>switch</a>
+</nav>
+      
+   
+
+              
+                
+          
+  
+</aside>
+    <aside class="aside aside_bottom">
+
+  
+    <h4>Учебные материалы</h4>
+    <nav class="related-links">
+      <a data-icon="learn-js" href="https://learn.javascript.ru/ifelse#neskolko-usloviy-else-if">Несколько условий: «else if»</a>
+    </nav>
+  
+
+</aside>
+
+    <main data-observe-resizes>
+      <h1>Конструкция <em>else...if</em></h1>
+
+<p>Код, находящийся в блоке if, выполняется если условие является true, если условие false, выполняется блок else.</p>
+
+<h2>Примеры</h2>
+<div class='columns'>
+  <section>
+    <h3>условие == false</h3>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+<div class="code-example">
+
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+    
+    
+    
+    <style>[id='else_if1-js-checkbox']:checked ~ #else_if1-js-code {z-index: 2;}</style>
+
+    
+    
+
+    <div id="else_if1-js-code" class="code">
+      
+      
+        
+        <pre>
+          
+          <code class="language-js">if (1==2) {
+  alert('условие');
+} else {
+  alert('else');
+}</code>
+          
+          <script>function else_if1() { if (1==2) {
+  alert('условие');
+} else {
+  alert('else');
+}
+}</script>
+        </pre>
+        
+      
+    </div>
+  
+
+  
+  
+
+</div>
+    <p>Выполняется инструкция <em>else</em> (условие false)</p>
+  </section>
+
+  <section>
+    <h3>условие == true</h3>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+<div class="code-example">
+
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+    
+    
+    
+    <style>[id='else_if2-js-checkbox']:checked ~ #else_if2-js-code {z-index: 2;}</style>
+
+    
+    
+
+    <div id="else_if2-js-code" class="code">
+      
+      
+        
+        <pre>
+          
+          <code class="language-js">if (2==2) {
+  alert('условие');
+} else {
+  alert('else');
+}</code>
+          
+          <script>function else_if2() { if (2==2) {
+  alert('условие');
+} else {
+  alert('else');
+}
+}</script>
+        </pre>
+        
+      
+    </div>
+  
+
+  
+  
+
+</div>
+    <p>Выполняется инструкция <em>if</em> (условие true)</p>
+  </section>
+
+  <section>
+    <h3>блок else отсутствует</h3>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+<div class="code-example">
+
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+    
+    
+    
+    <style>[id='else_if3-js-checkbox']:checked ~ #else_if3-js-code {z-index: 2;}</style>
+
+    
+    
+
+    <div id="else_if3-js-code" class="code">
+      
+      
+        
+        <pre>
+          
+          <code class="language-js">if (1==2) {
+  alert('условие');
+}</code>
+          
+          <script>function else_if3() { if (1==2) {
+  alert('условие');
+}
+}</script>
+        </pre>
+        
+      
+    </div>
+  
+
+  
+  
+
+</div>
+    <p>Ничего не произойдет (условие false и else не задан)</p>
+  </section>
+
+  <section>
+    <h3>несколько условий, где первое true</h3>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+<div class="code-example">
+
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+    
+    
+    
+    <style>[id='else_if4-js-checkbox']:checked ~ #else_if4-js-code {z-index: 2;}</style>
+
+    
+    
+
+    <div id="else_if4-js-code" class="code">
+      
+      
+        
+        <pre>
+          
+          <code class="language-js">if (2 == 2) {
+  alert('условие1'); // выполняется
+} else if (4 == 4) {
+  alert('условие2'); // игнорируется
+} else {
+  alert('else'); // игнорируется
+}</code>
+          
+          <script>function else_if4() { if (2 == 2) {
+  alert('условие1'); // выполняется
+} else if (4 == 4) {
+  alert('условие2'); // игнорируется
+} else {
+  alert('else'); // игнорируется
+}
+}</script>
+        </pre>
+        
+      
+    </div>
+  
+
+  
+  
+
+</div>
+    <p>Выполняется первая инструкция <em>if</em>, остальное игнорируется</p>
+  </section>
+
+  <section>
+    <h3>несколько условий, где второе true</h3>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+<div class="code-example">
+
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+    
+    
+    
+    <style>[id='else_if5-js-checkbox']:checked ~ #else_if5-js-code {z-index: 2;}</style>
+
+    
+    
+
+    <div id="else_if5-js-code" class="code">
+      
+      
+        
+        <pre>
+          
+          <code class="language-js">if (1 == 2) {
+  alert('условие1'); // false
+} else if (4 == 4) {
+  alert('условие2'); // выполняется
+} else {
+  alert('else'); // игнорируется
+}</code>
+          
+          <script>function else_if5() { if (1 == 2) {
+  alert('условие1'); // false
+} else if (4 == 4) {
+  alert('условие2'); // выполняется
+} else {
+  alert('else'); // игнорируется
+}
+}</script>
+        </pre>
+        
+      
+    </div>
+  
+
+  
+  
+
+</div>
+    <p>Выполняется вторая инструкция <em>if</em>, остальное игнорируется</p>
+  </section>
+
+  <section>
+    <h3>несколько условий, где оба false</h3>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+<div class="code-example">
+
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+    
+    
+    
+    <style>[id='else_if6-js-checkbox']:checked ~ #else_if6-js-code {z-index: 2;}</style>
+
+    
+    
+
+    <div id="else_if6-js-code" class="code">
+      
+      
+        
+        <pre>
+          
+          <code class="language-js">if (1 == 2) {
+  alert('условие1'); // false
+} else if (2 == 4) {
+  alert('условие2'); // false
+} else {
+  alert('else'); // выполняется
+}</code>
+          
+          <script>function else_if6() { if (1 == 2) {
+  alert('условие1'); // false
+} else if (2 == 4) {
+  alert('условие2'); // false
+} else {
+  alert('else'); // выполняется
+}
+}</script>
+        </pre>
+        
+      
+    </div>
+  
+
+  
+  
+
+</div>
+    <p>Оба условия false, выполняется <em>else</em></p>
+  </section>
+</div>
+
+<h2>Использование оператора <em>?</em></h2>
+<p>Оператор 'вопросительный знак' (или 'тернарный оператор') позволяет делать более короткую запись, когда нужно присвоить значение переменной в зависимости от условия.</p>
+<p>Два примера ниже выполняют одно и тоже, только во втором конструкция if...else заменена оператором <em>?</em></p>
+<div class='columns'>
+  <section>
+    <h3>длинная запись</h3>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+<div class="code-example">
+
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+    
+    
+    
+    <style>[id='uslovnyy_operator1-js-checkbox']:checked ~ #uslovnyy_operator1-js-code {z-index: 2;}</style>
+
+    
+    
+
+    <div id="uslovnyy_operator1-js-code" class="code">
+      
+      
+        
+        <pre class="line-numbers">
+          <button class="run-js" title="Run" onclick="uslovnyy_operator1()"></button>
+          <code class="language-js">// let result;
+let au_capital = prompt('Столица Австралии?', '');
+if (au_capital == 'Канберра') {
+  result = true;
+} else {
+  result = false;
+}
+alert(result);</code>
+          
+          <script>function uslovnyy_operator1() { // let result;
+let au_capital = prompt('Столица Австралии?', '');
+if (au_capital == 'Канберра') {
+  result = true;
+} else {
+  result = false;
+}
+alert(result);
+}</script>
+        </pre>
+        
+      
+    </div>
+  
+
+  
+  
+
+</div>
+    <p>P.S. убрал объявление переменной <em>result</em>, думал будет ошибка вроде 'переменная не объявлена'</p>
+    <p>Но нет, все работает! Как это так это??</p>
+  </section>
+  <section>
+    <h3>короткая запись</h3>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+<div class="code-example">
+
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+    
+    
+    
+    <style>[id='uslovnyy_operator2-js-checkbox']:checked ~ #uslovnyy_operator2-js-code {z-index: 2;}</style>
+
+    
+    
+
+    <div id="uslovnyy_operator2-js-code" class="code">
+      
+      
+        
+        <pre class="line-numbers">
+          <button class="run-js" title="Run" onclick="uslovnyy_operator2()"></button>
+          <code class="language-js">let au_capital = prompt('Столица Австралии?', '');
+let result = (au_capital == 'Канберра') ? true : false;
+alert(result);</code>
+          
+          <script>function uslovnyy_operator2() { let au_capital = prompt('Столица Австралии?', '');
+let result = (au_capital == 'Канберра') ? true : false;
+alert(result);
+}</script>
+        </pre>
+        
+      
+    </div>
+  
+
+  
+  
+
+</div>
+    <p>Сначала вычисляется условие: если оно истинно, тогда возвращается true, если ложно – false.</p>
+  </section>
+</div>
+    </main>
+
+    <footer>
+      <i>footer</i>
+      <i>footer</i>
+      <i>footer</i>
+    </footer>
+
+    
+    <script>!function(){var e,t,s,r={SM:384,MD:576,LG:768,XL:960,XXL:1440};function a(){for(var e,t=new ResizeObserver(function(e){e.forEach(function(e){if(e.target.updateBreakpoints)e.target.updateBreakpoints(e.contentRect.width);else{var t=e.target.dataset.breakpoints?JSON.parse(e.target.dataset.breakpoints):r;0===e.width?e.target.dataset.observing=!1:e.target.dataset.observing=!0,Object.keys(t).forEach(function(s){var r=t[s];e.contentRect.width>=r?e.target.classList.add(s):e.target.classList.remove(s)})}})}),s=document.querySelectorAll("[data-observe-resizes]"),a=0;e=s[a];a++)t.observe(e);function i(){return"object"==typeof Reflect?Reflect.construct(HTMLElement,[],i):HTMLElement.call(this)||this}new MutationObserver(function(e){e.forEach(function(e){var s,r;s=e.addedNodes,r=t.observe.bind(t),s&&[].slice.call(s).forEach(function(e){if(1===e.nodeType){var t=[].slice.call(e.querySelectorAll("[data-observe-resizes]"));e.hasAttribute("data-observe-resizes")&&t.push(e);for(var s,a=0;s=t[a];a++)r(s)}})})}).observe(document.body,{childList:!0,subtree:!0}),i.prototype=Object.create(HTMLElement.prototype,{constructor:{value:i},connectedCallback:{value:function(){var e=this.getAttribute("breakpoints");this.breakpoints=e?JSON.parse(e):r,t.observe(this),this.setAttribute("observing","")}},updateBreakpoints:{value:function(e){for(var t in e>0?this.setAttribute("observing",""):this.removeAttribute("observing"),this.breakpoints){e>=this.breakpoints[t]?this.classList.add(t):this.classList.remove(t)}}}}),self.customElements.define("responsive-container",i)}"undefined"!=typeof ResizeObserver&&"undefined"!=typeof customElements||!matchMedia("(min-width: "+r.SM+"px)").matches?a():(e="/scripts/polyfills.js",t=a,(s=document.createElement("script")).src=e,s.onload=t,document.head.appendChild(s))}();</script>
+    
+    
+
+
+    
+     
+
+  </body>
+
+</html>

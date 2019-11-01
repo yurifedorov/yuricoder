@@ -1,0 +1,515 @@
+
+
+ 
+
+
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+
+
+
+ 
+
+
+
+ 
+ 
+ 
+ 
+
+
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html lang="en" data-observe-resizes>
+
+  <head>
+    <title>Set в JavaScript</title>
+    <meta name="description" content="Подробно про объект Set в JavaScript" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="/img/favicon.jpg" rel="icon" type="image/svg+xml">
+    <link rel="stylesheet" href="/style.min.css">
+    
+    
+    <base href="/docs/javascript/">
+
+    
+    
+      <link rel="stylesheet" href="/libs/prism/prism-min.css">
+      <script src="/libs/prism/prism-min.js" async></script>
+    
+
+  </head>
+
+  <body data-observe-resizes>
+    <header>
+      <a href="/index.html" class="logo"></a>
+      <input type="checkbox" id="nav-toggle" hidden>
+<label for="nav-toggle" class="nav__toggle" onclick></label>
+<nav class="nav nav_main">
+  <ul>
+    <li><a href="/about.html">About me</a>
+    <li><a href="/portfolio/">Works</a>
+    <li><a href="/docs/">Docs</a>
+  </ul>
+</nav>
+    </header>
+    
+    <aside class="aside aside_top">
+  
+
+<ul class="breadcrumbs">
+      <li> <a href="/">home</a>
+   <li> <a href="../">docs</a>                               
+   <li> <a href="../javascript">javascript</a>           
+   <li> <a href="../javascript/global_objects">global_objects</a> 
+  
+      <li> <span>set</span>
+
+</ul>
+</aside>
+    <aside class="aside aside_left">
+
+       
+         <ul>
+  <details>
+    <summary>Основы JavaScript</summary>
+    <nav class="nav_checklist">
+      <a href="variables" data-completed>variables</a>
+      <a href="types" data-uncompleted>types</a>
+      <a href="operators" data-uncompleted>operators</a>
+      <a href="loops" data-uncompleted>loops</a>
+      <a href="methods" data-uncompleted>methods</a>
+      <a href="statements" data-uncompleted>statements</a>
+      <a href="functions" data-uncompleted>functions</a>
+      <a href="global_objects" data-uncompleted>global objects</a>
+      <a href="memory_management" data-uncompleted>memory management</a>
+    </nav>
+  </details>
+  <details>
+    <summary>ООП</summary>
+    <ul>
+      <li><a href="oop">oop_test</a></li>
+    </ul>
+  </details>
+  <details>
+    <summary>Вопросы</summary>
+    <ul>
+      <li><a href="questions">questions</a></li>
+    </ul>
+  </details>
+</ul>
+        
+   
+  
+</aside>
+    <aside class="aside aside_right">
+
+         
+           
+             
+           
+          
+      <input type="search" placeholder="сделать поиск">
+
+<section>
+  <h4>Значения</h4>
+  <nav class="nav_checklist">
+    <a href="#">Infinity</a>
+    <a href="#">NaN</a>
+    <a href="global_objects/undefined" data-completed>undefined</a>
+    <a href="global_objects/null" data-completed>null</a>
+  </nav>
+</section>
+
+<section>
+  <h4>Функции</h4>
+  <nav class="nav_checklist">
+    <a href="#">eval()</a>
+    <a href="#">uneval()</a>
+    <a href="#">isFinite()</a>
+    <a href="#">isNaN()</a>
+    <a href="#">parseFloat()</a>
+    <a href="#">parseInt()</a>
+    <a href="#">decodeURI()</a>
+    <a href="#">decodeURIComponent()</a>
+    <a href="#">encodeURI()</a>
+    <a href="#">encodeURIComponent()</a>
+  </nav>
+</section>
+
+<section>
+  <h4>Фундаментальные объекты</h4>
+  <nav class="nav_checklist">
+    <a href="global_objects/object" data-completed>Object</a>
+    <a href="#">Function</a></li>
+    <a href="global_objects/boolean" data-completed>Boolean</a>
+    <a href="global_objects/symbol" data-completed>Symbol</a>
+    <a href="#">Error</a>
+    <a href="#">EvalError</a>
+    <a href="#">InternalError</a>
+    <a href="#">RangeError</a>
+    <a href="#">ReferenceError</a>
+    <a href="#">SyntaxError</a>
+    <a href="#">TypeError</a>
+    <a href="#">URIErro</a>
+  </nav>
+</section>
+
+<section>
+  <h4>Числа и даты</h4>
+  <nav class="nav_checklist">
+    <a href="global_objects/number" data-completed>Number</a>
+    <a href="#">Math</a>
+    <a href="#">Date</a>
+  </nav>
+</section>
+
+<section>
+  <h4>Обработка текста</h4>
+  <nav class="nav_checklist">
+    <a href="global_objects/string" data-completed>String</a>
+    <a href="#">RegExp</a>
+  </nav>
+</section>
+
+<section>
+  <h4>Индексированные коллекции</h4>
+  <nav class="nav_checklist">
+    <a href="#">Array</a>
+    <a href="#">Int8Array</a>
+    <a href="#">Uint8Array</a>
+    <a href="#">Uint8ClampedArray</a>
+    <a href="#">Int16Array</a>
+    <a href="#">Uint16Array</a>
+    <a href="#">Int32Array</a>
+    <a href="#">Uint32Array</a>
+    <a href="#">Float32Array</a>
+    <a href="#">Float64Array</a>
+  </nav>
+</section>
+
+<section>
+  <h4>Индексированные коллекции</h4>
+  <nav class="nav_checklist">
+    <a href="#">Map</a>
+    <a href="global_objects/set" data-completed>Set</a>
+    <a href="#">WeakMap</a>
+    <a href="#">WeakSet</a>
+  </nav>
+</section>
+
+<section>
+  <h4>Структурированные данные</h4>
+  <nav class="nav_checklist">
+    <a href="#">ArrayBuffer</a>
+    <a href="#">DataView</a>
+    <a href="#">JSON</a>
+  </nav>
+</section>
+
+<section>
+  <h4>Объекты управляющих абстракций</h4>
+  <nav class="nav_checklist">
+    <a href="#">Promise</a>
+  </nav>
+</section>
+
+<section>
+  <h4>Рефлексия</h4>
+  <nav class="nav_checklist">
+    <a href="#">Reflect</a>
+    <a href="#">Proxy</a>
+  </nav>
+</section>
+
+<section>
+  <h4>Интернационализация</h4>
+  <nav class="nav_checklist">
+    <a href="#">Intl</a>
+    <a href="#">Intl.Collator</a>
+    <a href="#">Intl.DateTimeFormat</a>
+    <a href="#">Intl.NumberFormat</a>
+  </nav>
+</section>
+
+<section>
+  <h4>Нестандартные объекты</h4>
+  <nav class="nav_checklist">
+    <a href="#">Generator</a>
+    <a href="#">Iterator</a>
+    <a href="#">ParallelArray</a>
+    <a href="#">StopIteration</a>
+  </nav>
+</section>
+   
+
+              
+                
+          
+  
+</aside>
+    <aside class="aside aside_bottom">
+
+  
+    <h4>Учебные материалы</h4>
+    <nav class="related-links">
+      <a data-icon="mdn" href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Set">Set</a>
+<a data-icon="learn-js" href="https://learn.javascript.ru/set-map#set">Set</a>
+    </nav>
+  
+
+</aside>
+
+    <main data-observe-resizes>
+      <h1>Set</h1>
+<p><em>set</em> - это хранилище для множества значений любого типа, при этом каждое значение может присутствовать только в <b>одном экземпляре</b>.</p>
+
+
+
+
+
+
+
+
+
+
+
+<div class="code-example">
+
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+    
+    
+    
+    <style>[id='set-js-checkbox']:checked ~ #set-js-code {z-index: 2;}</style>
+
+    
+    
+
+    <div id="set-js-code" class="code">
+      
+      
+        
+        <pre>
+          
+          <code class="language-js">'use strict';
+
+let set = new Set();
+
+let alex = {name: "Alex"};
+let bob = {name: "Bob"};
+let mike = {name: "Mike"};
+let john = {name: "John"};
+
+// посещения, некоторые пользователи заходят много раз
+set.add(alex);
+set.add(bob);
+set.add(mike);
+set.add(john);
+set.add(john); // John зашел 2 раз
+
+// set сохраняет только уникальные значения
+alert( set.size ); // 4
+
+set.forEach( user => alert(user.name ) ); // Alex, Bob, Mike, John</code>
+          
+          <script>function set() { 'use strict';
+
+let set = new Set();
+
+let alex = {name: "Alex"};
+let bob = {name: "Bob"};
+let mike = {name: "Mike"};
+let john = {name: "John"};
+
+// посещения, некоторые пользователи заходят много раз
+set.add(alex);
+set.add(bob);
+set.add(mike);
+set.add(john);
+set.add(john); // John зашел 2 раз
+
+// set сохраняет только уникальные значения
+alert( set.size ); // 4
+
+set.forEach( user => alert(user.name ) ); // Alex, Bob, Mike, John
+}</script>
+        </pre>
+        
+      
+    </div>
+  
+
+  
+  
+
+</div>
+<p>Не смотря на то, что посещений было <b>5</b> (John зашел дважды), <em>set</em> посчитал только <b>4</b>.</p>
+
+<section id="set-of-objects">
+  <h2>A Set of Objects</h2>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+<div class="code-example">
+
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+    
+    
+    
+    <style>[id='set_of_objects-js-checkbox']:checked ~ #set_of_objects-js-code {z-index: 2;}</style>
+
+    
+    
+
+    <div id="set_of_objects-js-code" class="code">
+      
+      
+        
+        <pre>
+          
+          <code class="language-js">const mySet = new Set([{ a: 1 }, { a: 1 }]);
+const result = [...mySet];
+console.log(result); // (2) [{…}, {…}]</code>
+          
+          <script>function set_of_objects() { const mySet = new Set([{ a: 1 }, { a: 1 }]);
+const result = [...mySet];
+console.log(result); // (2) [{…}, {…}]
+}</script>
+        </pre>
+        
+      
+    </div>
+  
+
+  
+  
+
+</div>
+  <small>JavaScript knowledge quizzes by <a href="https://quiz.typeofnan.dev/array-sort-comparison/">Nick Scialli</a></small>
+
+  <h3><em class="tip tip_red" data-tip-text="пока не понятно">&#10007;</em> Объяснение</h3>
+  <p>Несмотря на наличие идентичных пар ключ-значение (<b> a: 1 </b> и <b> a: 1</b>), эти значения являются <em class="tip tip_red" data-tip-text="пока не понял что это значит">ссылками на разные объекты в памяти</em>.</p>
+  <p>По этой причине <em>{ a: 1 } === { a: 1 }</em> является <em>false</em>.</p>
+  <a href="questions">назад к списку вопросов</a>
+</section>
+    </main>
+
+    <footer>
+      <i>footer</i>
+      <i>footer</i>
+      <i>footer</i>
+    </footer>
+
+    
+    <script>!function(){var e,t,s,r={SM:384,MD:576,LG:768,XL:960,XXL:1440};function a(){for(var e,t=new ResizeObserver(function(e){e.forEach(function(e){if(e.target.updateBreakpoints)e.target.updateBreakpoints(e.contentRect.width);else{var t=e.target.dataset.breakpoints?JSON.parse(e.target.dataset.breakpoints):r;0===e.width?e.target.dataset.observing=!1:e.target.dataset.observing=!0,Object.keys(t).forEach(function(s){var r=t[s];e.contentRect.width>=r?e.target.classList.add(s):e.target.classList.remove(s)})}})}),s=document.querySelectorAll("[data-observe-resizes]"),a=0;e=s[a];a++)t.observe(e);function i(){return"object"==typeof Reflect?Reflect.construct(HTMLElement,[],i):HTMLElement.call(this)||this}new MutationObserver(function(e){e.forEach(function(e){var s,r;s=e.addedNodes,r=t.observe.bind(t),s&&[].slice.call(s).forEach(function(e){if(1===e.nodeType){var t=[].slice.call(e.querySelectorAll("[data-observe-resizes]"));e.hasAttribute("data-observe-resizes")&&t.push(e);for(var s,a=0;s=t[a];a++)r(s)}})})}).observe(document.body,{childList:!0,subtree:!0}),i.prototype=Object.create(HTMLElement.prototype,{constructor:{value:i},connectedCallback:{value:function(){var e=this.getAttribute("breakpoints");this.breakpoints=e?JSON.parse(e):r,t.observe(this),this.setAttribute("observing","")}},updateBreakpoints:{value:function(e){for(var t in e>0?this.setAttribute("observing",""):this.removeAttribute("observing"),this.breakpoints){e>=this.breakpoints[t]?this.classList.add(t):this.classList.remove(t)}}}}),self.customElements.define("responsive-container",i)}"undefined"!=typeof ResizeObserver&&"undefined"!=typeof customElements||!matchMedia("(min-width: "+r.SM+"px)").matches?a():(e="/scripts/polyfills.js",t=a,(s=document.createElement("script")).src=e,s.onload=t,document.head.appendChild(s))}();</script>
+    
+    
+
+
+    
+     
+
+  </body>
+
+</html>

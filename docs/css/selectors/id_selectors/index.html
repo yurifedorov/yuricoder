@@ -1,0 +1,680 @@
+
+
+ 
+
+
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+
+
+
+ 
+
+
+
+ 
+ 
+ 
+ 
+
+
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html lang="en" data-observe-resizes>
+
+  <head>
+    <title>Селекторы по ID</title>
+    <meta name="description" content="CSS селекторы по id выбирают элементы по уникальному идентификатору" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="/img/favicon.jpg" rel="icon" type="image/svg+xml">
+    <link rel="stylesheet" href="/style.min.css">
+    
+    
+    <base href="/docs/css/">
+
+    
+    
+      <link rel="stylesheet" href="/libs/prism/prism-min.css">
+      <script src="/libs/prism/prism-min.js" async></script>
+    
+
+  </head>
+
+  <body data-observe-resizes>
+    <header>
+      <a href="/index.html" class="logo"></a>
+      <input type="checkbox" id="nav-toggle" hidden>
+<label for="nav-toggle" class="nav__toggle" onclick></label>
+<nav class="nav nav_main">
+  <ul>
+    <li><a href="/about.html">About me</a>
+    <li><a href="/portfolio/">Works</a>
+    <li><a href="/docs/">Docs</a>
+  </ul>
+</nav>
+    </header>
+    
+    <aside class="aside aside_top">
+  
+
+<ul class="breadcrumbs">
+      <li> <a href="/">home</a>
+   <li> <a href="../">docs</a>                               
+   <li> <a href="../css">css</a>           
+   <li> <a href="../css/selectors">selectors</a> 
+  
+      <li> <span>id_selectors</span>
+
+</ul>
+</aside>
+    <aside class="aside aside_left">
+
+       
+         
+        <ul>
+  <details>
+    <summary>Компоненты веб-страницы</summary>
+    <ul>
+      <li><a href="structural_blocks">structural blocks</a></li>
+      <li><a href="lists">lists</a></li>
+      <li><a href="tile">tile</a></li>
+      <li><a href="nav">nav</a></li>
+    </ul>
+  </details>
+  <details>
+    <summary>Селекторы</summary>
+    <ul>
+      <li><a href="selectors">список селекторов</a></li>
+    </ul>
+  </details>
+</ul>
+   
+  
+</aside>
+    <aside class="aside aside_right">
+
+         
+           
+             
+           
+          
+      
+   
+
+              
+                
+          <div class="selectors">
+  <table id="type_selectors">
+    <caption>Селекторы по элементу</caption>
+      <tr>
+        <td>01</td>
+        <td><a href="selectors/type_selectors">div</a></td>
+        <td>выберет все <b>div</b></td>
+      </tr>
+  </table>
+
+  <table id="class_selectors">
+    <caption>Селекторы по классу</caption>
+    <tr>
+      <td>01</td>
+      <td><a href="selectors/class_selectors">.class</a></td>
+      <td>description</td>
+    </tr>
+  </table>
+
+  <table id="id_selectors">
+    <caption>Селекторы по идентификатору</caption>
+    <tr>
+      <td>01</td>
+      <td><a href="selectors/id_selectors">#id</a></td>
+      <td>description</td>
+    </tr>
+  </table>
+
+  <table id="universal_selectors">
+    <caption>Универсальные селекторы</caption>
+    <tr>
+      <td>01</td>
+      <td><a href="selectors/universal_selectors">*</a></td>
+      <td>description</td>
+    </tr>
+    <tr>
+      <td>02</td>
+      <td>ns|*</td>
+      <td>description</td>
+    </tr>
+    <tr>
+      <td>03</td>
+      <td>*|*</td>
+      <td>description</td>
+    </tr>
+    <tr>
+      <td>04</td>
+      <td>|*</td>
+      <td>description</td>
+    </tr>
+  </table>
+
+  <table id="attribute_selectors">
+    <caption>Селекторы по атрибуту</caption>
+    <tr>
+      <td>01</td>
+      <td><a href="selectors/attribute_selectors">a[title]</a></td>
+      <td>выберет все элементы <b>a</b> с атрибутом <b>tittle</b></td>
+    </tr>
+    <tr>
+      <td>02</td>
+      <td>a[href="https://example.org"]</td>
+      <td>description</td>
+    </tr>
+    <tr>
+      <td>03</td>
+      <td>a[data-filetype="image"]</td>
+      <td>description</td>
+    </tr>
+    <tr>
+      <td>04</td>
+      <td>a[href*="example"]</td>
+      <td>description</td>
+    </tr>
+    <tr>
+      <td>05</td>
+      <td>a[href$=".jpg"]</td>
+      <td>description</td>
+    </tr>
+    <tr>
+      <td>06</td>
+      <td>a[class~="logo"]</td>
+      <td>description</td>
+    </tr>
+    <tr>
+      <td>07</td>
+      <td>a[href^="http"]</td>
+      <td>description</td>
+    </tr>
+  </table>
+
+  <table id="combinators">
+    <caption>Комбинаторы</caption>
+    <tr>
+      <td>01</td>
+      <td>ul + li</td>
+      <td>description</td>
+    </tr>
+    <tr>
+      <td>02</td>
+      <td>p ~ span</td>
+      <td>description</td>
+    </tr>
+    <tr>
+      <td>03</td>
+      <td>ul > li</td>
+      <td>выберет все прямые <b>li</b> у маркированного списка</td>
+    </tr>
+    <tr>
+      <td>04</td>
+      <td>ol#cities > li</td>
+      <td>выберет все прямые <b>li</b> у нумерованного списка с <b>id="cities"</b></td>
+    </tr>
+    <tr>
+      <td>05</td>
+      <td>div span</td>
+      <td>description</td>
+    </tr>
+  </table>
+
+  <table id="pseudo-classes">
+    <caption>Селекторы псевдоклассов</caption>
+    <tr>
+      <td>01</td>
+      <td>:active</td>
+      <td>description</td>
+    </tr>
+    <tr>
+      <td>02</td>
+      <td>:any-link</td>
+      <td>description</td>
+    </tr>
+    <tr>
+      <td>03</td>
+      <td>:blank</td>
+      <td>description</td>
+    </tr>
+    <tr>
+      <td>04</td>
+      <td>:checked</td>
+      <td>description</td>
+    </tr>
+    <tr>
+      <td>05</td>
+      <td>:current</td>
+      <td>description</td>
+    </tr>
+    <tr>
+      <td>06</td>
+      <td>:default</td>
+      <td>description</td>
+    </tr>
+    <tr>
+      <td>07</td>
+      <td>:defined</td>
+      <td>description</td>
+    </tr>
+    <tr>
+      <td>08</td>
+      <td>:dir()</td>
+      <td>description</td>
+    </tr>
+    <tr>
+      <td>09</td>
+      <td>:disabled</td>
+      <td>description</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>:drop</td>
+      <td>description</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>:empty</td>
+      <td>description</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>:enabled</td>
+      <td>description</td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>:first</td>
+      <td>description</td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td>:first-child</td>
+      <td>description</td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td>:first-of-type</td>
+      <td>description</td>
+    </tr>
+    <tr>
+      <td>16</td>
+      <td>:fullscreen</td>
+      <td>description</td>
+    </tr>
+    <tr>
+      <td>17</td>
+      <td>:future</td>
+      <td>description</td>
+    </tr>
+    <tr>
+      <td>18</td>
+      <td>:focus</td>
+      <td>description</td>
+    </tr>
+    <tr>
+      <td>19</td>
+      <td>:focus-visible</td>
+      <td>description</td>
+    </tr>
+    <tr>
+      <td>20</td>
+      <td>:focus-within</td>
+      <td>description</td>
+    </tr>
+    <tr>
+      <td>21</td>
+      <td>:has()</td>
+      <td>description</td>
+    </tr>
+    <tr>
+      <td>22</td>
+      <td>:host</td>
+      <td>description</td>
+    </tr>
+    <tr>
+      <td>23</td>
+      <td>:host()</td>
+      <td>description</td>
+    </tr>
+    <tr>
+      <td>24</td>
+      <td>:host-context()</td>
+      <td>description</td>
+    </tr>
+    <tr>
+      <td>25</td>
+      <td>:hover</td>
+      <td>description</td>
+    </tr>
+    <tr>
+      <td>26</td>
+      <td>:indeterminate</td>
+      <td>description</td>
+    </tr>
+    <tr>
+      <td>27</td>
+      <td>:in-range</td>
+      <td>description</td>
+    </tr>
+    <tr>
+      <td>28</td>
+      <td>:invalid</td>
+      <td>description</td>
+    </tr>
+    <tr>
+      <td>29</td>
+      <td>:is()</td>
+      <td>description</td>
+    </tr>
+    <tr>
+      <td>30</td>
+      <td>:lang()</td>
+      <td>description</td>
+    </tr>
+    <tr>
+      <td>31</td>
+      <td>:last-child</td>
+      <td>description</td>
+    </tr>
+    <tr>
+      <td>32</td>
+      <td>:last-of-type</td>
+      <td>description</td>
+    </tr>
+    <tr>
+      <td>33</td>
+      <td>:left</td>
+      <td>description</td>
+    </tr>
+    <tr>
+      <td>34</td>
+      <td>:link</td>
+      <td>description</td>
+    </tr>
+    <tr>
+      <td>35</td>
+      <td>:local-link</td>
+      <td>description</td>
+    </tr>
+    <tr>
+      <td>36</td>
+      <td>:not()</td>
+      <td>description</td>
+    </tr>
+    <tr>
+      <td>37</td>
+      <td>:nth-child()</td>
+      <td>description</td>
+    </tr>
+    <tr>
+      <td>38</td>
+      <td>:nth-col()</td>
+      <td>description</td>
+    </tr>
+    <tr>
+      <td>39</td>
+      <td>:nth-last-child()</td>
+      <td>description</td>
+    </tr>
+    <tr>
+      <td>40</td>
+      <td>:nth-last-col()</td>
+      <td>description</td>
+    </tr>
+    <tr>
+      <td>41</td>
+      <td>:nth-last-of-type()</td>
+      <td>description</td>
+    </tr>
+    <tr>
+      <td>42</td>
+      <td>:nth-of-type()</td>
+      <td>description</td>
+    </tr>
+    <tr>
+      <td>43</td>
+      <td>:only-child</td>
+      <td>description</td>
+    </tr>
+    <tr>
+      <td>44</td>
+      <td>:only-of-type</td>
+      <td>description</td>
+    </tr>
+    <tr>
+      <td>45</td>
+      <td>:optional</td>
+      <td>description</td>
+    </tr>
+    <tr>
+      <td>46</td>
+      <td>:out-of-range</td>
+      <td>description</td>
+    </tr>
+    <tr>
+      <td>47</td>
+      <td>:past</td>
+      <td>description</td>
+    </tr>
+    <tr>
+      <td>48</td>
+      <td>:placeholder-shown</td>
+      <td>description</td>
+    </tr>
+    <tr>
+      <td>49</td>
+      <td>:read-only</td>
+      <td>description</td>
+    </tr>
+    <tr>
+      <td>50</td>
+      <td>:read-write</td>
+      <td>description</td>
+    </tr>
+    <tr>
+      <td>51</td>
+      <td>:required</td>
+      <td>description</td>
+    </tr>
+    <tr>
+      <td>52</td>
+      <td>:right</td>
+      <td>description</td>
+    </tr>
+    <tr>
+      <td>53</td>
+      <td>:root</td>
+      <td>description</td>
+    </tr>
+    <tr>
+      <td>54</td>
+      <td>:scope</td>
+      <td>description</td>
+    </tr>
+    <tr>
+      <td>55</td>
+      <td>:target</td>
+      <td>description</td>
+    </tr>
+    <tr>
+      <td>56</td>
+      <td>:target-within</td>
+      <td>description</td>
+    </tr>
+    <tr>
+      <td>57</td>
+      <td>:user-invalid</td>
+      <td>description</td>
+    </tr>
+    <tr>
+      <td>58</td>
+      <td>:valid</td>
+      <td>description</td>
+    </tr>
+    <tr>
+      <td>59</td>
+      <td>:visited</td>
+      <td>description</td>
+    </tr>
+    <tr>
+      <td>60</td>
+      <td>:where()</td>
+      <td>description</td>
+    </tr>
+  </table>
+
+  <table id="pseudo-elements">
+    <caption>Селекторы псевдоэлементов</caption>
+    <tr>
+      <td>01</td>
+      <td>::before</td>
+      <td>description</td>
+    </tr>
+    <tr>
+      <td>02</td>
+      <td>::after</td>
+      <td>description</td>
+    </tr>
+    <tr>
+      <td>03</td>
+      <td>::cue</td>
+      <td>description</td>
+    </tr>
+    <tr>
+      <td>04</td>
+      <td>::cue-region()</td>
+      <td>description</td>
+    </tr>
+    <tr>
+      <td>05</td>
+      <td>::backdrop</td>
+      <td>description</td>
+    </tr>
+    <tr>
+      <td>06</td>
+      <td>::first-letter</td>
+      <td>description</td>
+    </tr>
+    <tr>
+      <td>07</td>
+      <td>::first-line</td>
+      <td>description</td>
+    </tr>
+    <tr>
+      <td>08</td>
+      <td>::grammar-error</td>
+      <td>description</td>
+    </tr>
+    <tr>
+      <td>09</td>
+      <td>::marker</td>
+      <td>description</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>::part()</td>
+      <td>description</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>::placeholder</td>
+      <td>description</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>::selection</td>
+      <td>description</td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>::slotted()</td>
+      <td>description</td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td>::spelling-error</td>
+      <td>description</td>
+    </tr>
+  </table>
+</div>
+  
+</aside>
+      
+
+    <main data-observe-resizes>
+      <h1>Селекторы по ID</h1>
+    </main>
+
+    <footer>
+      <i>footer</i>
+      <i>footer</i>
+      <i>footer</i>
+    </footer>
+
+    
+    <script>!function(){var e,t,s,r={SM:384,MD:576,LG:768,XL:960,XXL:1440};function a(){for(var e,t=new ResizeObserver(function(e){e.forEach(function(e){if(e.target.updateBreakpoints)e.target.updateBreakpoints(e.contentRect.width);else{var t=e.target.dataset.breakpoints?JSON.parse(e.target.dataset.breakpoints):r;0===e.width?e.target.dataset.observing=!1:e.target.dataset.observing=!0,Object.keys(t).forEach(function(s){var r=t[s];e.contentRect.width>=r?e.target.classList.add(s):e.target.classList.remove(s)})}})}),s=document.querySelectorAll("[data-observe-resizes]"),a=0;e=s[a];a++)t.observe(e);function i(){return"object"==typeof Reflect?Reflect.construct(HTMLElement,[],i):HTMLElement.call(this)||this}new MutationObserver(function(e){e.forEach(function(e){var s,r;s=e.addedNodes,r=t.observe.bind(t),s&&[].slice.call(s).forEach(function(e){if(1===e.nodeType){var t=[].slice.call(e.querySelectorAll("[data-observe-resizes]"));e.hasAttribute("data-observe-resizes")&&t.push(e);for(var s,a=0;s=t[a];a++)r(s)}})})}).observe(document.body,{childList:!0,subtree:!0}),i.prototype=Object.create(HTMLElement.prototype,{constructor:{value:i},connectedCallback:{value:function(){var e=this.getAttribute("breakpoints");this.breakpoints=e?JSON.parse(e):r,t.observe(this),this.setAttribute("observing","")}},updateBreakpoints:{value:function(e){for(var t in e>0?this.setAttribute("observing",""):this.removeAttribute("observing"),this.breakpoints){e>=this.breakpoints[t]?this.classList.add(t):this.classList.remove(t)}}}}),self.customElements.define("responsive-container",i)}"undefined"!=typeof ResizeObserver&&"undefined"!=typeof customElements||!matchMedia("(min-width: "+r.SM+"px)").matches?a():(e="/scripts/polyfills.js",t=a,(s=document.createElement("script")).src=e,s.onload=t,document.head.appendChild(s))}();</script>
+    
+    
+
+
+    
+     
+
+  </body>
+
+</html>

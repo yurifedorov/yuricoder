@@ -1,0 +1,175 @@
+
+
+ 
+
+
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+
+
+
+ 
+
+
+
+ 
+ 
+ 
+ 
+
+
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html lang="en" data-observe-resizes>
+
+  <head>
+    <title></title>
+    <meta name="description" content="" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="/img/favicon.jpg" rel="icon" type="image/svg+xml">
+    <link rel="stylesheet" href="/style.min.css">
+    
+    
+    <base href="/docs/optimization/">
+
+    
+    
+      <link rel="stylesheet" href="/libs/prism/prism-min.css">
+      <script src="/libs/prism/prism-min.js" async></script>
+    
+
+  </head>
+
+  <body data-observe-resizes>
+    <header>
+      <a href="/index.html" class="logo"></a>
+      <input type="checkbox" id="nav-toggle" hidden>
+<label for="nav-toggle" class="nav__toggle" onclick></label>
+<nav class="nav nav_main">
+  <ul>
+    <li><a href="/about.html">About me</a>
+    <li><a href="/portfolio/">Works</a>
+    <li><a href="/docs/">Docs</a>
+  </ul>
+</nav>
+    </header>
+    
+    <aside class="aside aside_top">
+  
+
+<ul class="breadcrumbs">
+      <li> <a href="/">home</a>
+   <li> <a href="../">docs</a>                               
+   <li> <a href="../optimization">optimization</a>           
+  
+  
+      <li> <span>basics_computer_networking</span>
+
+</ul>
+</aside>
+    <aside class="aside aside_left">
+
+       
+         
+        
+   
+  
+</aside>
+      
+      
+
+    <main data-observe-resizes>
+      <h1>Основы компьютерных сетей</h1>
+<p>Отличная серия образовательных статей c хабра от пользователя под ником <a href="https://habr.com/ru/users/solid_93/">@solid_93</a></p>
+<h2>Темы</h2>
+<ul>
+  <li><a href="theme1.html">Тема №1. Основные сетевые термины и сетевые модели</a></li>
+  <li><a href="theme2.html">Тема №2. Протоколы верхнего уровня</a></li>
+  <li><a href="theme3.html">Тема №3. Протоколы нижних уровней (транспортного, сетевого и канального)</a></li>
+  <li><a href="theme4.html">Тема №4. Сетевые устройства и виды применяемых кабелей</a></li>
+  <li><a href="theme5.html">Тема №5. Понятие IP адресации, масок подсетей и их расчет</a></li>
+  <li><a href="theme6.html">Тема №6. Понятие VLAN, Trunk и протоколы VTP и DTP</a></li>
+  <li><a href="theme7.html">Тема №7. Протокол связующего дерева: STP</a></li>
+  <li><a href="theme8.html">Тема №8. Протокол агрегирования каналов: Etherchannel</a></li>
+</ul>
+<p>К сожалению на этом серия статей закончилась, а жаль... последующие темы придется изучать самостоятельно</p>
+<ul>
+  <li><a href="#">Маршрутизация: статическая и динамическая на примере RIP, OSPF и EIGRP.</a></li>
+  <li><a href="#">Трансляция сетевых адресов: NAT и PAT.</a></li>
+  <li><a href="#">Протоколы резервирования первого перехода: FHRP.</a></li>
+  <li><a href="#">Безопасность компьютерных сетей и виртуальные частные сети: VPN.</a></li>
+  <li><a href="#">Глобальные сети и используемые протоколы: PPP, HDLC, Frame Relay.</a></li>
+  <li><a href="#">Введение в IPv6, конфигурация и маршрутизация.</a></li>
+  <li><a href="#">Сетевое управление и мониторинг сети.</a></li>
+</ul>
+    </main>
+
+    <footer>
+      <i>footer</i>
+      <i>footer</i>
+      <i>footer</i>
+    </footer>
+
+    
+    <script>!function(){var e,t,s,r={SM:384,MD:576,LG:768,XL:960,XXL:1440};function a(){for(var e,t=new ResizeObserver(function(e){e.forEach(function(e){if(e.target.updateBreakpoints)e.target.updateBreakpoints(e.contentRect.width);else{var t=e.target.dataset.breakpoints?JSON.parse(e.target.dataset.breakpoints):r;0===e.width?e.target.dataset.observing=!1:e.target.dataset.observing=!0,Object.keys(t).forEach(function(s){var r=t[s];e.contentRect.width>=r?e.target.classList.add(s):e.target.classList.remove(s)})}})}),s=document.querySelectorAll("[data-observe-resizes]"),a=0;e=s[a];a++)t.observe(e);function i(){return"object"==typeof Reflect?Reflect.construct(HTMLElement,[],i):HTMLElement.call(this)||this}new MutationObserver(function(e){e.forEach(function(e){var s,r;s=e.addedNodes,r=t.observe.bind(t),s&&[].slice.call(s).forEach(function(e){if(1===e.nodeType){var t=[].slice.call(e.querySelectorAll("[data-observe-resizes]"));e.hasAttribute("data-observe-resizes")&&t.push(e);for(var s,a=0;s=t[a];a++)r(s)}})})}).observe(document.body,{childList:!0,subtree:!0}),i.prototype=Object.create(HTMLElement.prototype,{constructor:{value:i},connectedCallback:{value:function(){var e=this.getAttribute("breakpoints");this.breakpoints=e?JSON.parse(e):r,t.observe(this),this.setAttribute("observing","")}},updateBreakpoints:{value:function(e){for(var t in e>0?this.setAttribute("observing",""):this.removeAttribute("observing"),this.breakpoints){e>=this.breakpoints[t]?this.classList.add(t):this.classList.remove(t)}}}}),self.customElements.define("responsive-container",i)}"undefined"!=typeof ResizeObserver&&"undefined"!=typeof customElements||!matchMedia("(min-width: "+r.SM+"px)").matches?a():(e="/scripts/polyfills.js",t=a,(s=document.createElement("script")).src=e,s.onload=t,document.head.appendChild(s))}();</script>
+    
+    
+
+
+    
+     
+
+  </body>
+
+</html>

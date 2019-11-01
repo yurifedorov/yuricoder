@@ -1,0 +1,468 @@
+
+
+ 
+
+
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+
+
+
+ 
+
+
+
+ 
+ 
+ 
+ 
+
+
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html lang="en" data-observe-resizes>
+
+  <head>
+    <title></title>
+    <meta name="description" content="" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="/img/favicon.jpg" rel="icon" type="image/svg+xml">
+    <link rel="stylesheet" href="/style.min.css">
+    
+    
+    <base href="/docs/nunjucks/">
+
+    
+    
+      <link rel="stylesheet" href="/libs/prism/prism-min.css">
+      <script src="/libs/prism/prism-min.js" async></script>
+    
+
+  </head>
+
+  <body data-observe-resizes>
+    <header>
+      <a href="/index.html" class="logo"></a>
+      <input type="checkbox" id="nav-toggle" hidden>
+<label for="nav-toggle" class="nav__toggle" onclick></label>
+<nav class="nav nav_main">
+  <ul>
+    <li><a href="/about.html">About me</a>
+    <li><a href="/portfolio/">Works</a>
+    <li><a href="/docs/">Docs</a>
+  </ul>
+</nav>
+    </header>
+    
+    <aside class="aside aside_top">
+  
+
+<ul class="breadcrumbs">
+      <li> <a href="/">home</a>
+   <li> <a href="../">docs</a>                               
+   <li> <a href="../nunjucks">nunjucks</a>           
+   <li> <a href="../nunjucks/templates">templates</a> 
+  
+      <li> <span>code-example</span>
+
+</ul>
+</aside>
+    <aside class="aside aside_left">
+
+       
+         
+        
+   
+  
+</aside>
+      
+      
+
+    <main data-observe-resizes>
+      
+
+  <h1>codeExample</h1>
+  <p>Шаблон для демонстрации html, js, css и прочих примеров кода.</p>
+  <a href="templates/code-example/code-example-test.html">ТЕСТЫ</a>
+
+  <section>
+    <h4></h4>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+<div class="code-example">
+
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+
+  
+  
+  
+    
+    
+    
+    <style>[id='code_example-njk-checkbox']:checked ~ #code_example-njk-code {z-index: 2;}</style>
+    
+    
+    
+    <input type="radio" name="button" id="code_example-njk-checkbox">
+    <label for="code_example-njk-checkbox" onclick>NJK</label>
+    
+
+    <div id="code_example-njk-code" class="code">
+      
+      
+        
+        <pre class="line-numbers">
+          <code class="language-jinja2">
+&lt;div class="code-example"&gt;
+  {% if html %}
+    {% if demo %}
+      &lt;style&gt;input[name=button]:checked ~ #{{example_id}}-html-code {z-index: 2;}&lt;/style&gt;
+      &lt;input type="radio" name="button" id="{{example_id}}-html-checkbox"&gt;
+      &lt;label for="{{example_id}}-html-checkbox" onclick&gt;HTML&lt;/label&gt;
+    {% endif %}
+    &lt;div id="{{example_id}}-html-code" class="code"&gt;
+      {% if html %}
+        {% if numeration %}
+        &lt;pre class="line-numbers"&gt;
+          &lt;code class="language-html"&gt;{% include example_dir + example_id + '.html' %}&lt;/code&gt;
+        &lt;/pre&gt;
+        {% else %}
+        &lt;pre&gt;
+          &lt;code class="language-html"&gt;{% include example_dir + example_id + '.html' %}&lt;/code&gt;
+        &lt;/pre&gt;
+        {% endif %}
+      {% endif %}
+    &lt;/div&gt;
+  {% endif %}
+
+  {% if njk %}
+    {% if demo %}
+      &lt;style&gt;[id='{{example_id}}-njk-checkbox']:checked ~ #{{example_id}}-njk-code {z-index: 2;}&lt;/style&gt;
+      &lt;input type="radio" name="button" id="{{example_id}}-njk-checkbox"&gt;
+      &lt;label for="{{example_id}}-njk-checkbox" onclick&gt;NJK&lt;/label&gt;
+    {% endif %}
+    &lt;div id="{{example_id}}-njk-code" class="code"&gt;
+      {% if njk %}
+        {% if numeration %}
+        &lt;pre class="line-numbers"&gt;
+          &lt;code class="language-jinja2"&gt;{% include example_dir + example_id + '.njk' %}&lt;/code&gt;
+        &lt;/pre&gt;
+        {% else %}
+        &lt;pre&gt;
+          &lt;code class="language-jinja2"&gt;{% include example_dir + example_id + '.njk' %}&lt;/code&gt;
+        &lt;/pre&gt;
+        {% endif %}
+      {% endif %}
+    &lt;/div&gt;
+  {% endif %}
+
+  {% if css %}
+    {% if demo %}
+      &lt;style&gt;[id='{{example_id}}-css-checkbox']:checked ~ #{{example_id}}-css-code {z-index: 2;}&lt;/style&gt;
+      &lt;input type="radio" name="button" id="{{example_id}}-css-checkbox"&gt;
+      &lt;label for="{{example_id}}-css-checkbox" onclick>CSS&lt;/label&gt;
+    {% endif %}
+    &lt;div id="{{example_id}}-css-code" class="code"&gt;
+      {% if css %}
+        {% if numeration %}
+        &lt;pre class="line-numbers"&gt;
+          &lt;code class="language-css"&gt;{% include example_dir + example_id + '.css' %}&lt;/code&gt;
+        &lt;/pre&gt;
+        {% else %}
+        &lt;pre&gt;
+          &lt;code class="language-css"&gt;{% include example_dir + example_id + '.css' %}&lt;/code&gt;
+        &lt;/pre&gt;
+        {% endif %}
+      {% endif %}
+    &lt;/div&gt;
+  {% endif %}
+
+  {% if js %}
+    {% if demo %}
+      &lt;style&gt;[id='{{example_id}}-js-checkbox']:checked ~ #{{example_id}}-js-code {z-index: 2;}&lt;/style&gt;
+      &lt;input type="radio" name="button" id="{{example_id}}-js-checkbox"&gt;
+      &lt;label for="{{example_id}}-js-checkbox" class="js-button" onclick&gt;JS&lt;/label&gt;
+    {% endif %}
+    &lt;div id="{{example_id}}-js-code" class="code"&gt;
+      &lt;span class="run-js" title="Run" onclick="{{example_id}}()"&gt;&lt;/span&gt;
+      {% if js %}
+        {% if numeration %}
+        &lt;pre class="line-numbers"&gt;
+          &lt;code class="language-js"&gt;{% include example_dir + example_id + '.js' %}&lt;/code&gt;
+          &lt;script&gt;function {{example_id}}() { {% include example_dir + example_id + '.js' %}
+}&lt;/script&gt;
+        &lt;/pre&gt;
+        {% else %}
+        &lt;pre&gt;
+          &lt;code class="language-js"&gt;{% include example_dir + example_id + '.js' %}&lt;/code&gt;
+          &lt;script&gt;function {{example_id}}() { {% include example_dir + example_id + '.js' %}
+}&lt;/script&gt;
+        &lt;/pre&gt;
+        {% endif %}
+      {% endif %}
+    &lt;/div&gt;
+  {% endif %}
+
+  {% if demo %}
+    &lt;style&gt;[id='{{example_id}}-demo-checkbox']:checked ~ #{{example_id}}-demo {z-index: 2;}&lt;/style&gt;
+    &lt;input type="radio" name="button" id="{{example_id}}-demo-checkbox"&gt;
+    &lt;label for="{{example_id}}-demo-checkbox" class="demo_button" onclick>DEMO&lt;/label&gt;
+
+    {% if demo %}
+      &lt;div id="{{example_id}}-demo" class="demo"&gt;
+        {% include example_dir + demo %}
+      &lt;/div&gt;
+    {% endif %}
+
+    {% if demo and split %}
+    &lt;div id="{{example_id}}-demo" class="demo split-parent"&gt;
+      &lt;div id="box-1" data-observe-resizes&gt;
+        {% include example_dir + demo %}
+      &lt;/div&gt;
+    &lt;/div&gt;
+    {% endif %}
+
+  {% endif %}
+
+&lt;/div&gt;
+</code>
+        </pre>
+        
+      
+    </div>
+  
+
+  
+  
+  
+    
+    
+    
+    <style>[id='code_example-css-checkbox']:checked ~ #code_example-css-code {z-index: 2;}</style>
+    
+    
+    
+    <input type="radio" name="button" id="code_example-css-checkbox">
+    <label for="code_example-css-checkbox" onclick>CSS</label>
+    
+
+    <div id="code_example-css-code" class="code">
+      
+      
+        
+        <pre class="line-numbers">
+          <code class="language-css">.code-example {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 табов равной ширины */
+  grid-template-rows: auto auto max-content;
+  grid-gap: 1px 2px;
+  margin-left: -10px;
+  margin-right: -10px;
+  box-sizing: border-box;
+}
+
+.code-example pre[class*=language-] {
+  margin: 0;
+}
+
+.prism-previewer {
+  z-index: 2;
+}
+
+.code-example > label {
+  background: black;
+  color: white;
+  padding: 7px 10px;
+  text-align: left;
+  height: 20px;
+  cursor: pointer;
+}
+
+.code-example > label[class="demo_button"] {
+  grid-column: 5;
+}
+
+.code-example > label:hover {
+  background: silver;
+  color: black;
+}
+
+input[name=button] {
+  display: none;
+  z-index: 99;
+  grid-row: 2;
+}
+
+.code-example > label[class="js-button"] {
+  position: relative;
+  min-width: 50px;
+  text-align: left;
+}
+
+.run-js {
+  position: absolute;
+  top: 4;
+  right: 4;
+  bottom: 4;
+  padding: 3px 7px;
+  box-sizing: border-box;
+  background: white;
+  color: black;
+  opacity: 0.6;
+  transition: 1s;
+}
+
+.run-js:after {
+  content: '\0025B6';
+}
+
+.run-js:hover{
+  background: black;
+  color: white;
+  opacity: 1;
+}
+
+input[name=button]:checked + label {
+  background: orange;
+}
+
+.code {
+  display: grid;
+  grid-column: 1 / -1;
+  grid-row: 3;
+  background: #2d2d2d;
+  overflow-x: auto;
+  z-index: 0;
+}
+
+.demo {
+  grid-column: 1 / -1;
+  grid-row: 3;
+  overflow-x: auto;
+  padding: 0 10px;
+  background: white;
+  border: 1px solid;
+  z-index: 1;
+}</code>
+        </pre>
+        
+      
+    </div>
+  
+
+  
+  
+  
+
+  
+  
+    
+    
+    
+    
+    <style>[id='code_example-demo-checkbox']:checked ~ #code_example-demo {z-index: 2;}</style>
+    <input type="radio" name="button" id="code_example-demo-checkbox">
+    <label for="code_example-demo-checkbox" class="demo_button" onclick>DEMO</label>
+    
+    
+      <div id="code_example-demo" class="demo">
+        в этом примере demo отсутствует
+      </div>
+    
+    
+    
+  
+
+</div>
+  </section>
+
+
+    </main>
+
+    <footer>
+      <i>footer</i>
+      <i>footer</i>
+      <i>footer</i>
+    </footer>
+
+    
+    <script>!function(){var e,t,s,r={SM:384,MD:576,LG:768,XL:960,XXL:1440};function a(){for(var e,t=new ResizeObserver(function(e){e.forEach(function(e){if(e.target.updateBreakpoints)e.target.updateBreakpoints(e.contentRect.width);else{var t=e.target.dataset.breakpoints?JSON.parse(e.target.dataset.breakpoints):r;0===e.width?e.target.dataset.observing=!1:e.target.dataset.observing=!0,Object.keys(t).forEach(function(s){var r=t[s];e.contentRect.width>=r?e.target.classList.add(s):e.target.classList.remove(s)})}})}),s=document.querySelectorAll("[data-observe-resizes]"),a=0;e=s[a];a++)t.observe(e);function i(){return"object"==typeof Reflect?Reflect.construct(HTMLElement,[],i):HTMLElement.call(this)||this}new MutationObserver(function(e){e.forEach(function(e){var s,r;s=e.addedNodes,r=t.observe.bind(t),s&&[].slice.call(s).forEach(function(e){if(1===e.nodeType){var t=[].slice.call(e.querySelectorAll("[data-observe-resizes]"));e.hasAttribute("data-observe-resizes")&&t.push(e);for(var s,a=0;s=t[a];a++)r(s)}})})}).observe(document.body,{childList:!0,subtree:!0}),i.prototype=Object.create(HTMLElement.prototype,{constructor:{value:i},connectedCallback:{value:function(){var e=this.getAttribute("breakpoints");this.breakpoints=e?JSON.parse(e):r,t.observe(this),this.setAttribute("observing","")}},updateBreakpoints:{value:function(e){for(var t in e>0?this.setAttribute("observing",""):this.removeAttribute("observing"),this.breakpoints){e>=this.breakpoints[t]?this.classList.add(t):this.classList.remove(t)}}}}),self.customElements.define("responsive-container",i)}"undefined"!=typeof ResizeObserver&&"undefined"!=typeof customElements||!matchMedia("(min-width: "+r.SM+"px)").matches?a():(e="/scripts/polyfills.js",t=a,(s=document.createElement("script")).src=e,s.onload=t,document.head.appendChild(s))}();</script>
+    
+    
+
+
+    
+     
+
+  </body>
+
+</html>

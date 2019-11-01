@@ -1,0 +1,272 @@
+
+
+ 
+
+
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+
+
+
+ 
+
+
+
+ 
+ 
+ 
+ 
+
+
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html lang="en" data-observe-resizes>
+
+  <head>
+    <title></title>
+    <meta name="description" content="" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="/img/favicon.jpg" rel="icon" type="image/svg+xml">
+    <link rel="stylesheet" href="/style.min.css">
+    
+    
+    <base href="/docs/optimization/">
+
+    
+    
+
+  </head>
+
+  <body data-observe-resizes>
+    <header>
+      <a href="/index.html" class="logo"></a>
+      <input type="checkbox" id="nav-toggle" hidden>
+<label for="nav-toggle" class="nav__toggle" onclick></label>
+<nav class="nav nav_main">
+  <ul>
+    <li><a href="/about.html">About me</a>
+    <li><a href="/portfolio/">Works</a>
+    <li><a href="/docs/">Docs</a>
+  </ul>
+</nav>
+    </header>
+    
+    <aside class="aside aside_top">
+  
+
+<ul class="breadcrumbs">
+      <li> <a href="/">home</a>
+   <li> <a href="../">docs</a>                               
+   <li> <a href="../optimization">optimization</a>           
+   <li> <a href="../optimization/basics_computer_networking">basics_computer_networking</a> 
+  
+      <li> <span>theme2</span>
+
+</ul>
+</aside>
+    <aside class="aside aside_left">
+
+       
+         
+        
+   
+  
+</aside>
+      
+      
+
+    <main data-observe-resizes>
+      <h1>Протоколы верхнего уровня</h1>
+<p>Фактически сейчас используется упрощенная сетевая модель <b>TCP/IP</b>, которая в отличии от <b>OSI</b> состоит из 4-х уровней: <i>application</i>, <i>transport</i>, <i>internet</i> и <i>link or network interface</i>.</p>
+<img src="https://www.secplicity.org/wp-content/uploads/2019/02/osi_vs_tcpip.png" alt="OSI vs TCP/IP">
+<ul>
+  <li><b>Application Layer</b> - компетенция програмистов</li>
+  <li><b>Data Flow Layer</b> - компетенция системных администраторов</li>
+</ul>
+<table>
+  <caption>Список протоколов уровня Application</caption>
+  <tr>
+    <td><b>протокол</b></td>
+    <td><b>описание</b></td>
+    <td><b>используемые порты</b></td>
+  </tr>
+  <tr>
+    <td title="HyperText Transport Protocol"><a href="./../http">HTTP</a></td>
+    <td>протокол передачи данных, используемый обычно для получения информации с веб-сайтов</td>
+    <td>80</td>
+  </tr>
+  <tr>
+    <td title="HyperText Transfer Protocol Secure"><a href="https.html">HTTPS</a></td>
+    <td>расширение протокола HTTP для поддержки шифрования в целях повышения безопасности</td>
+    <td>443</td>
+  </tr>
+  <tr>
+    <td title="Domain Name System">DNS</td>
+    <td>система для получения информации о доменах</td>
+    <td>53</td>
+  </tr>
+  <tr>
+    <td title="Dynamic Host Configuration Protocol">DHCP</td>
+    <td> сетевой протокол, позволяющий сетевым устройствам автоматически получать IP-адрес и другие параметры, необходимые для работы в сети TCP/IP</td>
+    <td>67, 68</td>
+  </tr>
+  <tr>
+    <td title="Simple Mail Transfer Protocol">SMTP</td>
+    <td>простой протокол передачи почты</td>
+    <td>25, 587</td>
+  </tr>
+  <tr>
+    <td title="Simple Mail Transfer Protocol">SMTPS</td>
+    <td style="color: gray;">SMTP через SSL (устаревший)</td>
+    <td>465</td>
+  </tr>
+  <tr>
+    <td>SNMP</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td>SCP</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td>SMB</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td title="File Transfer Protocol">FTP</td>
+    <td>протокол передачи файлов по сети, является одним из старейших прикладных протоколов</td>
+    <td title="21 (для команд), 20 (для данных)">21, 20</td>
+  </tr>
+  <tr>
+    <td title="Trivial File Transfer Protocol">TFTP</td>
+    <td>простой протокол передачи файлов (в отличие от FTP, не содержит возможностей аутентификации)</td>
+    <td>69</td>
+  </tr>
+  <tr>
+    <td title="Post Office Protocol Version 3">POP3</td>
+    <td>протокол, используемый клиентами электронной почты для получения почты с удалённого сервера по TCP-соединению</td>
+    <td>110</td>
+  </tr>
+  <tr>
+    <td>POP3S</td>
+    <td>расширенная версия POP3 с предварительной установкой SSL/TLS соединения</td>
+    <td>995</td>
+  </tr>
+  <tr>
+    <td title="Internet Message Access Protocol">IMAP</td>
+    <td>протокол доступа к электронной почте (более умный и посложнее, чем POP3)</td>
+    <td>143</td>
+  </tr>
+  <tr>
+    <td>IMAPS</td>
+    <td>расширенная версия IMAP с предварительной установкой SSL/TLS соединения</td>
+    <td>993</td>
+  </tr>
+  <tr>
+    <td title="teletype network">Telnet</td>
+    <td>не шифрует трафик</td>
+    <td>23</td>
+  </tr>
+  <tr>
+    <td title="Secure Shell">SSH</td>
+    <td>шифрует трафик (в отличии от Telnet)</td>
+    <td>22</td>
+  </tr>
+  <tr>
+    <td>NFS</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td>RTSP</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td>BGP</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+</table>
+<small><em><a href="https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers">Список номеров портов TCP и UDP</a></em></small>
+
+<section class="link-list">
+  <h4>Источники знаний:</h4>
+  <ul>
+    <li><a href="https://habr.com/ru/post/307714/">Основы компьютерных сетей. Тема №2. Протоколы верхнего уровня</a></li>
+  </ul>
+</section>
+    </main>
+
+    <footer>
+      <i>footer</i>
+      <i>footer</i>
+      <i>footer</i>
+    </footer>
+
+    
+    <script>!function(){var e,t,s,r={SM:384,MD:576,LG:768,XL:960,XXL:1440};function a(){for(var e,t=new ResizeObserver(function(e){e.forEach(function(e){if(e.target.updateBreakpoints)e.target.updateBreakpoints(e.contentRect.width);else{var t=e.target.dataset.breakpoints?JSON.parse(e.target.dataset.breakpoints):r;0===e.width?e.target.dataset.observing=!1:e.target.dataset.observing=!0,Object.keys(t).forEach(function(s){var r=t[s];e.contentRect.width>=r?e.target.classList.add(s):e.target.classList.remove(s)})}})}),s=document.querySelectorAll("[data-observe-resizes]"),a=0;e=s[a];a++)t.observe(e);function i(){return"object"==typeof Reflect?Reflect.construct(HTMLElement,[],i):HTMLElement.call(this)||this}new MutationObserver(function(e){e.forEach(function(e){var s,r;s=e.addedNodes,r=t.observe.bind(t),s&&[].slice.call(s).forEach(function(e){if(1===e.nodeType){var t=[].slice.call(e.querySelectorAll("[data-observe-resizes]"));e.hasAttribute("data-observe-resizes")&&t.push(e);for(var s,a=0;s=t[a];a++)r(s)}})})}).observe(document.body,{childList:!0,subtree:!0}),i.prototype=Object.create(HTMLElement.prototype,{constructor:{value:i},connectedCallback:{value:function(){var e=this.getAttribute("breakpoints");this.breakpoints=e?JSON.parse(e):r,t.observe(this),this.setAttribute("observing","")}},updateBreakpoints:{value:function(e){for(var t in e>0?this.setAttribute("observing",""):this.removeAttribute("observing"),this.breakpoints){e>=this.breakpoints[t]?this.classList.add(t):this.classList.remove(t)}}}}),self.customElements.define("responsive-container",i)}"undefined"!=typeof ResizeObserver&&"undefined"!=typeof customElements||!matchMedia("(min-width: "+r.SM+"px)").matches?a():(e="/scripts/polyfills.js",t=a,(s=document.createElement("script")).src=e,s.onload=t,document.head.appendChild(s))}();</script>
+    
+    
+
+
+    
+     
+
+  </body>
+
+</html>

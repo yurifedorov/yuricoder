@@ -1,0 +1,624 @@
+
+
+ 
+
+
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+
+
+
+ 
+
+
+
+ 
+ 
+ 
+ 
+
+
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html lang="en" data-observe-resizes>
+
+  <head>
+    <title>Конструкция switch в JavaScript</title>
+    <meta name="description" content="Конструкция включает в себя один или несколько блоков case и необезательный блок default" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="/img/favicon.jpg" rel="icon" type="image/svg+xml">
+    <link rel="stylesheet" href="/style.min.css">
+    
+    
+    <base href="/docs/javascript/">
+
+    
+    
+      <link rel="stylesheet" href="/libs/prism/prism-min.css">
+      <script src="/libs/prism/prism-min.js" async></script>
+    
+
+  </head>
+
+  <body data-observe-resizes>
+    <header>
+      <a href="/index.html" class="logo"></a>
+      <input type="checkbox" id="nav-toggle" hidden>
+<label for="nav-toggle" class="nav__toggle" onclick></label>
+<nav class="nav nav_main">
+  <ul>
+    <li><a href="/about.html">About me</a>
+    <li><a href="/portfolio/">Works</a>
+    <li><a href="/docs/">Docs</a>
+  </ul>
+</nav>
+    </header>
+    
+    <aside class="aside aside_top">
+  
+
+<ul class="breadcrumbs">
+      <li> <a href="/">home</a>
+   <li> <a href="../">docs</a>                               
+   <li> <a href="../javascript">javascript</a>           
+   <li> <a href="../javascript/statements">statements</a> 
+  
+      <li> <span>switch</span>
+
+</ul>
+</aside>
+    <aside class="aside aside_left">
+
+       
+         <ul>
+  <details>
+    <summary>Основы JavaScript</summary>
+    <nav class="nav_checklist">
+      <a href="variables" data-completed>variables</a>
+      <a href="types" data-uncompleted>types</a>
+      <a href="operators" data-uncompleted>operators</a>
+      <a href="loops" data-uncompleted>loops</a>
+      <a href="methods" data-uncompleted>methods</a>
+      <a href="statements" data-uncompleted>statements</a>
+      <a href="functions" data-uncompleted>functions</a>
+      <a href="global_objects" data-uncompleted>global objects</a>
+      <a href="memory_management" data-uncompleted>memory management</a>
+    </nav>
+  </details>
+  <details>
+    <summary>ООП</summary>
+    <ul>
+      <li><a href="oop">oop_test</a></li>
+    </ul>
+  </details>
+  <details>
+    <summary>Вопросы</summary>
+    <ul>
+      <li><a href="questions">questions</a></li>
+    </ul>
+  </details>
+</ul>
+        
+   
+  
+</aside>
+    <aside class="aside aside_right">
+
+         
+           
+             
+           
+          <nav class="nav_checklist">
+  <a href="statements/if" data-completed>if</a>
+  <a href="statements/else_if" data-completed>else...if</a>
+  <a href="statements/switch" data-completed>switch</a>
+</nav>
+      
+   
+
+              
+                
+          
+  
+</aside>
+    <aside class="aside aside_bottom">
+
+  
+    <h4>Учебные материалы</h4>
+    <nav class="related-links">
+      <a data-icon="learn-js" href="https://learn.javascript.ru/switch">Конструкция "switch"</a>
+    </nav>
+  
+
+</aside>
+
+    <main data-observe-resizes>
+      <h1>Конструкция <em>switch</em></h1>
+
+<div class='columns'>
+
+  <section>
+    <h2>Синтаксис</h2>
+    <p>Конструкция включает в себя один или несколько блоков <em>case</em> и необезательный блок <em>default</em></p>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+<div class="code-example">
+
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+    
+    
+    
+    <style>[id='switch_statement-js-checkbox']:checked ~ #switch_statement-js-code {z-index: 2;}</style>
+
+    
+    
+
+    <div id="switch_statement-js-code" class="code">
+      
+      
+        
+        <pre class="line-numbers">
+          <button class="run-js" title="Run" onclick="switch_statement()"></button>
+          <code class="language-js">let str = prompt('2 + 2 = ?', '');
+let num = Number(str);
+
+switch (num) {
+  case 3:
+    alert( 'почти угадал' );
+    break;
+  case 4:
+    alert( 'верно' );
+    break;
+  case 5:
+    alert( 'почти угадал' );
+    break;
+  default:
+    alert( "не верно" );
+}</code>
+          
+          <script>function switch_statement() { let str = prompt('2 + 2 = ?', '');
+let num = Number(str);
+
+switch (num) {
+  case 3:
+    alert( 'почти угадал' );
+    break;
+  case 4:
+    alert( 'верно' );
+    break;
+  case 5:
+    alert( 'почти угадал' );
+    break;
+  default:
+    alert( "не верно" );
+}
+}</script>
+        </pre>
+        
+      
+    </div>
+  
+
+  
+  
+
+</div>
+    <h3>Что здесь происходит?</h3>
+    <table>
+      <tr>
+        <td>1</td>
+        <td>метод <a href="../methods/prompt.html">prompt()</a> возвращает string</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td><a href="#">Number(str)</a> преобразует string в number и сохряняет в переменной num</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>переменная <b>num</b> проверяется на строгое равенство каждому <em>case</em></td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>оператор <em>break</em> прерывает выполнение текущего цикла</td>
+      </tr>
+    </table>
+  </section>
+
+  <section>
+    <h2>Не забывай про break!</h2>
+    <p>Если <em>break</em> не задан, то инструкции будут выполнятся по очереди до конца switch</p>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+<div class="code-example">
+
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+    
+    
+    
+    <style>[id='switch_without_break-js-checkbox']:checked ~ #switch_without_break-js-code {z-index: 2;}</style>
+
+    
+    
+
+    <div id="switch_without_break-js-code" class="code">
+      
+      
+        
+        <pre class="line-numbers">
+          <button class="run-js" title="Run" onclick="switch_without_break()"></button>
+          <code class="language-js">let str = prompt('2 + 2 = ?', '');
+let num = Number(str);
+
+switch (num) {
+  case 3:
+    alert( 'почти угадал' );
+    //break;
+  case 4:
+    alert( 'верно' );
+    //break;
+  case 5:
+    alert( 'почти угадал' );
+    //break;
+  default:
+    alert( "не верно" );
+}</code>
+          
+          <script>function switch_without_break() { let str = prompt('2 + 2 = ?', '');
+let num = Number(str);
+
+switch (num) {
+  case 3:
+    alert( 'почти угадал' );
+    //break;
+  case 4:
+    alert( 'верно' );
+    //break;
+  case 5:
+    alert( 'почти угадал' );
+    //break;
+  default:
+    alert( "не верно" );
+}
+}</script>
+        </pre>
+        
+      
+    </div>
+  
+
+  
+  
+
+</div>
+    <h3>Что произойдет теперь?</h3>
+    <p>Если ввести <b>'3'</b> то выполнение начнется с <b>'case 3'</b> и до конца, при этом все остальные проверки проигнорируются.</p>
+  </section>
+
+  <section>
+    <h2>Групировка case</h2>
+    <p>Блоки <em>case</em> с одинаковыми инструкциями можно объеденить в группы, что позволяет сделать код немного короче и гармоничнее</p>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+<div class="code-example">
+
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+    
+    
+    
+    <style>[id='switch_group-js-checkbox']:checked ~ #switch_group-js-code {z-index: 2;}</style>
+
+    
+    
+
+    <div id="switch_group-js-code" class="code">
+      
+      
+        
+        <pre class="line-numbers">
+          <button class="run-js" title="Run" onclick="switch_group()"></button>
+          <code class="language-js">let str = prompt('2 + 2 = ?', '');
+let num = Number(str);
+
+switch (num) {
+  case 3:
+  case 5:
+    alert( 'почти угадал' );
+    break;
+  case 4:
+    alert( 'верно' );
+    break;
+  default:
+    alert( "не верно" );
+}</code>
+          
+          <script>function switch_group() { let str = prompt('2 + 2 = ?', '');
+let num = Number(str);
+
+switch (num) {
+  case 3:
+  case 5:
+    alert( 'почти угадал' );
+    break;
+  case 4:
+    alert( 'верно' );
+    break;
+  default:
+    alert( "не верно" );
+}
+}</script>
+        </pre>
+        
+      
+    </div>
+  
+
+  
+  
+
+</div>
+    <p>По факту такая возможность это последствие того, как switch работает без break.</p>
+  </section>
+
+  <section>
+    <h2>Проверяй тип значения!</h2>
+    <p>В switch/case проверка на равенство всегда строгая, а значит должен соответствовать и тип значения</p>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+<div class="code-example">
+
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+    
+    
+    
+    <style>[id='switch_value_type-js-checkbox']:checked ~ #switch_value_type-js-code {z-index: 2;}</style>
+
+    
+    
+
+    <div id="switch_value_type-js-code" class="code">
+      
+      
+        
+        <pre class="line-numbers">
+          <button class="run-js" title="Run" onclick="switch_value_type()"></button>
+          <code class="language-js">let str = prompt('2 + 2 = ?', '');
+//let num = Number(str);
+
+switch (num) {
+  case 3:
+    alert( 'почти угадал' );
+    break;
+  case 4:
+    alert( 'верно' );
+    break;
+  case 5:
+    alert( 'почти угадал' );
+    break;
+  default:
+    alert( "не верно" );
+}</code>
+          
+          <script>function switch_value_type() { let str = prompt('2 + 2 = ?', '');
+//let num = Number(str);
+
+switch (num) {
+  case 3:
+    alert( 'почти угадал' );
+    break;
+  case 4:
+    alert( 'верно' );
+    break;
+  case 5:
+    alert( 'почти угадал' );
+    break;
+  default:
+    alert( "не верно" );
+}
+}</script>
+        </pre>
+        
+      
+    </div>
+  
+
+  
+  
+
+</div>
+    <h3>Что здесь не так?</h3>
+    <p>В текущих блоках <em>case</em> выполняется сверка чисел 3, 4 и 5, а метод <em>prompt()</em> возвращает строки '3', '4', '5' и тд - поэтому ничего не работает.</p>
+    <p>Чтобы решить проблему нужно просто преобразовать string в number с помощью <em>Number(str)</em></p>
+  </section>
+
+</div>
+    </main>
+
+    <footer>
+      <i>footer</i>
+      <i>footer</i>
+      <i>footer</i>
+    </footer>
+
+    
+    <script>!function(){var e,t,s,r={SM:384,MD:576,LG:768,XL:960,XXL:1440};function a(){for(var e,t=new ResizeObserver(function(e){e.forEach(function(e){if(e.target.updateBreakpoints)e.target.updateBreakpoints(e.contentRect.width);else{var t=e.target.dataset.breakpoints?JSON.parse(e.target.dataset.breakpoints):r;0===e.width?e.target.dataset.observing=!1:e.target.dataset.observing=!0,Object.keys(t).forEach(function(s){var r=t[s];e.contentRect.width>=r?e.target.classList.add(s):e.target.classList.remove(s)})}})}),s=document.querySelectorAll("[data-observe-resizes]"),a=0;e=s[a];a++)t.observe(e);function i(){return"object"==typeof Reflect?Reflect.construct(HTMLElement,[],i):HTMLElement.call(this)||this}new MutationObserver(function(e){e.forEach(function(e){var s,r;s=e.addedNodes,r=t.observe.bind(t),s&&[].slice.call(s).forEach(function(e){if(1===e.nodeType){var t=[].slice.call(e.querySelectorAll("[data-observe-resizes]"));e.hasAttribute("data-observe-resizes")&&t.push(e);for(var s,a=0;s=t[a];a++)r(s)}})})}).observe(document.body,{childList:!0,subtree:!0}),i.prototype=Object.create(HTMLElement.prototype,{constructor:{value:i},connectedCallback:{value:function(){var e=this.getAttribute("breakpoints");this.breakpoints=e?JSON.parse(e):r,t.observe(this),this.setAttribute("observing","")}},updateBreakpoints:{value:function(e){for(var t in e>0?this.setAttribute("observing",""):this.removeAttribute("observing"),this.breakpoints){e>=this.breakpoints[t]?this.classList.add(t):this.classList.remove(t)}}}}),self.customElements.define("responsive-container",i)}"undefined"!=typeof ResizeObserver&&"undefined"!=typeof customElements||!matchMedia("(min-width: "+r.SM+"px)").matches?a():(e="/scripts/polyfills.js",t=a,(s=document.createElement("script")).src=e,s.onload=t,document.head.appendChild(s))}();</script>
+    
+    
+
+
+    
+     
+
+  </body>
+
+</html>

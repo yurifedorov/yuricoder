@@ -1,0 +1,415 @@
+
+
+ 
+
+
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+
+
+
+ 
+
+
+
+ 
+ 
+ 
+ 
+
+
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html lang="en" data-observe-resizes>
+
+  <head>
+    <title>Оператор инкремента в JS</title>
+    <meta name="description" content="Оператор инкремента увеличивает значение переменной на единицу" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="/img/favicon.jpg" rel="icon" type="image/svg+xml">
+    <link rel="stylesheet" href="/style.min.css">
+    
+    
+    <base href="/docs/javascript/">
+
+    
+    
+      <link rel="stylesheet" href="/libs/prism/prism-min.css">
+      <script src="/libs/prism/prism-min.js" async></script>
+    
+
+  </head>
+
+  <body data-observe-resizes>
+    <header>
+      <a href="/index.html" class="logo"></a>
+      <input type="checkbox" id="nav-toggle" hidden>
+<label for="nav-toggle" class="nav__toggle" onclick></label>
+<nav class="nav nav_main">
+  <ul>
+    <li><a href="/about.html">About me</a>
+    <li><a href="/portfolio/">Works</a>
+    <li><a href="/docs/">Docs</a>
+  </ul>
+</nav>
+    </header>
+    
+    <aside class="aside aside_top">
+  
+
+<ul class="breadcrumbs">
+      <li> <a href="/">home</a>
+   <li> <a href="../">docs</a>                               
+   <li> <a href="../javascript">javascript</a>           
+   <li> <a href="../javascript/operators">operators</a> 
+  
+      <li> <span>increment</span>
+
+</ul>
+</aside>
+    <aside class="aside aside_left">
+
+       
+         <ul>
+  <details>
+    <summary>Основы JavaScript</summary>
+    <nav class="nav_checklist">
+      <a href="variables" data-completed>variables</a>
+      <a href="types" data-uncompleted>types</a>
+      <a href="operators" data-uncompleted>operators</a>
+      <a href="loops" data-uncompleted>loops</a>
+      <a href="methods" data-uncompleted>methods</a>
+      <a href="statements" data-uncompleted>statements</a>
+      <a href="functions" data-uncompleted>functions</a>
+      <a href="global_objects" data-uncompleted>global objects</a>
+      <a href="memory_management" data-uncompleted>memory management</a>
+    </nav>
+  </details>
+  <details>
+    <summary>ООП</summary>
+    <ul>
+      <li><a href="oop">oop_test</a></li>
+    </ul>
+  </details>
+  <details>
+    <summary>Вопросы</summary>
+    <ul>
+      <li><a href="questions">questions</a></li>
+    </ul>
+  </details>
+</ul>
+        
+   
+  
+</aside>
+    <aside class="aside aside_right">
+
+         
+           <input type="search" placeholder="сделать поиск">
+
+<ul>
+  <li><a href="operators/addition"><em>+</em><span title="сложение">addition</span></a></li>
+  <li><a href="operators/subtraction"><em>-</em><span title="вычитание">subtraction</span></a></li>
+  <li><a href="operators/division"><em>/</em><span title="деление">division</span></a></li>
+  <li><a href="operators/multiplication"><em>*</em><span title="умножение">multiplication</span></a></li>
+  <li><a href="operators/remainder"><em>%</em><span title="остаток от деления">remainder</span></a></li>
+  <li><a href="operators/exponentiation"><em>**</em><span title="возведение в степень">exponentiation</span></a></li>
+  <li><a href="operators/increment"><em>i++</em><span title="инкремент">increment</span></a></li>
+  <li><a href="operators/decrement"><em>i--</em><span title="декремент">decrement</span></a></li>
+  <li><a href="operators/unary_plus">+i</a></li>
+  <li><a href="operators/unary_negation">-i</a></li>
+  <li><a href="operators/logical_not">!</a></li>
+  <li><a href="operators/greater_than">></a></li>
+  <li><a href="operators/less_than"><</a></li>
+  <li><a href="operators/greater_than_or_equal">>=</a></li>
+  <li><a href="operators/less_than_or_equal"><=</a></li>
+  <li><a href="operators/equality">==</a></li>
+  <li><a href="operators/inequality">!=</a></li>
+  <li><a href="operators/identity">===</a></li>
+  <li><a href="operators/nonidentity">!==</a></li>
+  <li><a href="operators/bitwise_and">&</a></li>
+  <li><a href="operators/bitwise_or">|</a></li>
+  <li><a href="operators/bitwise_xor">^</a></li>
+  <li><a href="operators/logical_and">&&</a></li>
+  <li><a href="operators/logical_or">||</a></li>
+  <li><a href="operators/conditional_operator">?</a></li>
+  <li><a href="operators/assignment">=</a></li>
+  <li><a href="operators/multiplication_assignment">*=</a></li>
+  <li><a href="operators/division_assignment">/=</a></li>
+  <li><a href="operators/remainder_assignment">%=</a></li>
+  <li><a href="operators/addition_assignment">+=</a></li>
+  <li><a href="operators/subtraction_assignment">-=</a></li>
+  <li><a href="operators/left_shift_assignment"> <<= </a></li>
+  <li><a href="operators/right_shift_assignment"> >>= </a></li>
+  <li><a href="operators/unsigned_right_shift_assignment"> >>>= </a></li>
+  <li><a href="operators/bitwise_and_assignment">&=</a></li>
+  <li><a href="operators/bitwise_xor_assignment">^=</a></li>
+  <li><a href="operators/bitwise_or_assignment">|=</a></li>
+  <li><a href="operators/comma">,</a></li>
+</ul>
+             
+           
+          
+      
+   
+
+              
+                
+          
+  
+</aside>
+    <aside class="aside aside_bottom">
+
+  
+    <h4>Учебные материалы</h4>
+    <nav class="related-links">
+      <a data-icon="learn-js" href="https://learn.javascript.ru/operators#inkrement-dekrement">Инкремент/декремент</a>
+    </nav>
+  
+
+</aside>
+
+    <main data-observe-resizes>
+      <h1>Инкремент</h1>
+<p>Увеличивает значение на 1, существуют два вида инкремента и действуют они по-разному.</p>
+
+<section>
+  <h2>Postfix increment</h2>
+  <p>Увеличивает значение на 1, но при этом возвращает старое значение.</p>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+<div class="code-example">
+
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+    
+    
+    
+    <style>[id='postfix_increment-js-checkbox']:checked ~ #postfix_increment-js-code {z-index: 2;}</style>
+
+    
+    
+
+    <div id="postfix_increment-js-code" class="code">
+      
+      
+        
+        <pre>
+          
+          <code class="language-js">i = 1;
+a = i++;
+alert(a); // 1
+alert(i); // 2</code>
+          
+          <script>function postfix_increment() { i = 1;
+a = i++;
+alert(a); // 1
+alert(i); // 2
+}</script>
+        </pre>
+        
+      
+    </div>
+  
+
+  
+  
+
+</div>
+  <table>
+    <tr>
+      <td>1</td>
+      <td>значение <b>i</b> увелилось на 1 и сохранилось в <b>a</b> , а вывелось старое</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>в качестве проверки выводим <b>i</b> и видим, что значение действительно увеличилось</td>
+    </tr>
+  </table>
+</section>
+
+<section>
+  <h2>Prefix increment</h2>
+  <p>Увеличивает значение на 1 и возвращает новое значение.</p>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+<div class="code-example">
+
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+    
+    
+    
+    <style>[id='prefix_increment-js-checkbox']:checked ~ #prefix_increment-js-code {z-index: 2;}</style>
+
+    
+    
+
+    <div id="prefix_increment-js-code" class="code">
+      
+      
+        
+        <pre>
+          
+          <code class="language-js">var i = 1;
+var a = ++i;
+alert(a); // 2
+alert(i); // 2</code>
+          
+          <script>function prefix_increment() { var i = 1;
+var a = ++i;
+alert(a); // 2
+alert(i); // 2
+}</script>
+        </pre>
+        
+      
+    </div>
+  
+
+  
+  
+
+</div>
+  <table>
+    <tr>
+      <td>2</td>
+      <td>значение <b>i</b> увелилось на 1 и сохранилось в <b>a</b> , вывелось уже измененное</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>в качестве проверки выводим <b>i</b> и видим, что значение действительно увеличилось</td>
+    </tr>
+  </table>
+</section>
+
+<b>Инкремент/декремент можно применить только к переменной: 5++ даст ошибку.</b>
+    </main>
+
+    <footer>
+      <i>footer</i>
+      <i>footer</i>
+      <i>footer</i>
+    </footer>
+
+    
+    <script>!function(){var e,t,s,r={SM:384,MD:576,LG:768,XL:960,XXL:1440};function a(){for(var e,t=new ResizeObserver(function(e){e.forEach(function(e){if(e.target.updateBreakpoints)e.target.updateBreakpoints(e.contentRect.width);else{var t=e.target.dataset.breakpoints?JSON.parse(e.target.dataset.breakpoints):r;0===e.width?e.target.dataset.observing=!1:e.target.dataset.observing=!0,Object.keys(t).forEach(function(s){var r=t[s];e.contentRect.width>=r?e.target.classList.add(s):e.target.classList.remove(s)})}})}),s=document.querySelectorAll("[data-observe-resizes]"),a=0;e=s[a];a++)t.observe(e);function i(){return"object"==typeof Reflect?Reflect.construct(HTMLElement,[],i):HTMLElement.call(this)||this}new MutationObserver(function(e){e.forEach(function(e){var s,r;s=e.addedNodes,r=t.observe.bind(t),s&&[].slice.call(s).forEach(function(e){if(1===e.nodeType){var t=[].slice.call(e.querySelectorAll("[data-observe-resizes]"));e.hasAttribute("data-observe-resizes")&&t.push(e);for(var s,a=0;s=t[a];a++)r(s)}})})}).observe(document.body,{childList:!0,subtree:!0}),i.prototype=Object.create(HTMLElement.prototype,{constructor:{value:i},connectedCallback:{value:function(){var e=this.getAttribute("breakpoints");this.breakpoints=e?JSON.parse(e):r,t.observe(this),this.setAttribute("observing","")}},updateBreakpoints:{value:function(e){for(var t in e>0?this.setAttribute("observing",""):this.removeAttribute("observing"),this.breakpoints){e>=this.breakpoints[t]?this.classList.add(t):this.classList.remove(t)}}}}),self.customElements.define("responsive-container",i)}"undefined"!=typeof ResizeObserver&&"undefined"!=typeof customElements||!matchMedia("(min-width: "+r.SM+"px)").matches?a():(e="/scripts/polyfills.js",t=a,(s=document.createElement("script")).src=e,s.onload=t,document.head.appendChild(s))}();</script>
+    
+    
+
+
+    
+     
+
+  </body>
+
+</html>
